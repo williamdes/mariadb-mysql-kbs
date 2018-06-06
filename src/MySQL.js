@@ -90,3 +90,58 @@ parsePage(
     writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);
 });
 
+
+parsePage(
+    KB_URL+'innodb-parameters.html',
+    (data, url)=> {
+        let page = {
+            url: url,
+            name: 'innodb-parameters',
+            data: data,
+        };
+    writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);
+});
+
+parsePage(
+    KB_URL+'performance-schema-system-variables.html',
+    (data, url)=> {
+        let page = {
+            url: url,
+            name: 'performance-schema-system-variables',
+            data: data,
+        };
+    writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);
+});
+
+parsePage(
+    KB_URL+'x-plugin-system-variables-options.html',
+    (data, url)=> {
+        let page = {
+            url: url,
+            name: 'x-plugin-system-variables-options',
+            data: data,
+        };
+    writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);
+});
+
+parsePage(
+    KB_URL+'replication-options-binary-log.html',
+    (data, url)=> {
+        let page = {
+            url: url,
+            name: 'replication-options-binary-log',
+            data: data,
+        };
+    writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);
+});
+
+parsePage(
+    KB_URL+'pluggable-authentication-system-variables.html',
+    (data, url)=> {
+        let page = {
+            url: url,
+            name: 'pluggable-authentication-system-variables',
+            data: data,
+        };
+    writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);
+});

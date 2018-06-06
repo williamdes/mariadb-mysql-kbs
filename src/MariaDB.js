@@ -172,3 +172,32 @@ custom.forEach(cu => {
         writeJSON(path.join(__dirname, "../", "data", "mariadb-"+page.name+".json"), page);
     });
 });
+
+const status = [
+    'server',
+    'galera-cluster',
+    'aria-server',
+    'cassandra',
+    'mroonga',
+    'spider-server',
+    'sphinx',
+    'tokudb',
+    'xtradbinnodb-server',
+    'replication-and-binary-log',
+    'oqgraph-system-and'
+];
+status.forEach(statusName => {
+    console.log("Parsing : ", statusName);
+    console.log("URL : "+KB_URL+statusName+'-status-variables/');
+    parsePage(
+        KB_URL+statusName+'-status-variables/',
+        (data, url)=> {
+            let page = {
+                url: url,
+                name: statusName+'-status-variables',
+                data: data,
+            };
+        writeJSON(path.join(__dirname, "../", "data", "mariadb-"+page.name+".json"), page);
+    });
+
+});

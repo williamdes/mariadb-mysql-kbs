@@ -65,6 +65,9 @@ function parsePage(url, cbSuccess) {
                             doc.range = {};
                         doc.range.to = parseFloat(value.textContent.trim());
                         break;
+                    case 'command-line format':
+                        doc.cli = value.textContent.trim();
+                        break;
                 }
             }
             //console.log(tbody.innerHTML);

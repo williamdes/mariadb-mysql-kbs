@@ -89,6 +89,9 @@ function parsePage(url, cbSuccess) {
                                     doc.range = { from: parseFloat(doc.range[0]), to: doc.range[1] };
 
                                     break;
+                                case 'commandline:':
+                                    doc.cli = elementDescr.parentNode.textContent.toLowerCase().replace("commandline: ","").trim();
+                                    break;
                                 default:
                                     //console.log(elementDescr.innerHTML);
                                     break;

@@ -1,0 +1,886 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/tokudb-status-variables/",
+  "name": "tokudb-status-variables",
+  "data": [
+    {
+      "id": "tokudb_basement_deserialization_fixed_key",
+      "name": "Tokudb_basement_deserialization_fixed_key",
+      "type": "number of deserialized basement nodes where all keys were the same size. this leaves the basement in an optimal format  for in-memory workloads."
+    },
+    {
+      "id": "tokudb_basement_deserialization_variable_key",
+      "name": "Tokudb_basement_deserialization_variable_key",
+      "type": "number of deserialized basement nodes where all keys had different size keys, which are not eligible for in-memory optimization."
+    },
+    {
+      "id": "tokudb_basements_decompressed_for_write",
+      "name": "Tokudb_basements_decompressed_for_write",
+      "type": "number of basement nodes decompressed for write operations."
+    },
+    {
+      "id": "tokudb_basements_decompressed_prefetch",
+      "name": "Tokudb_basements_decompressed_prefetch",
+      "type": "number of basement nodes decompressed by a prefetch thread. see"
+    },
+    {
+      "id": "tokudb_basements_decompressed_prelocked_range",
+      "name": "Tokudb_basements_decompressed_prelocked_range",
+      "type": "number of basement nodes aggressively decompressed by queries."
+    },
+    {
+      "id": "tokudb_basements_decompressed_target_query",
+      "name": "Tokudb_basements_decompressed_target_query",
+      "type": "number of basement nodes decompressed for queries"
+    },
+    {
+      "id": "tokudb_basements_fetched_for_write",
+      "name": "Tokudb_basements_fetched_for_write",
+      "type": "number of basement nodes fetched for writes off the disk."
+    },
+    {
+      "id": "tokudb_basements_fetched_for_write_bytes",
+      "name": "Tokudb_basements_fetched_for_write_bytes",
+      "type": "total basement node bytes fetched for writes off the disk."
+    },
+    {
+      "id": "tokudb_basements_fetched_for_write_seconds",
+      "name": "Tokudb_basements_fetched_for_write_seconds",
+      "type": "time in seconds spent waiting for io while fetching basement nodes from disk for writes."
+    },
+    {
+      "id": "tokudb_basements_fetched_prefetch",
+      "name": "Tokudb_basements_fetched_prefetch",
+      "type": "number of basement nodes fetched off the disk by a prefetch thread."
+    },
+    {
+      "id": "tokudb_basements_fetched_prefetch_bytes",
+      "name": "Tokudb_basements_fetched_prefetch_bytes",
+      "type": "total basement node bytes fetched off the disk by a prefetch thread.."
+    },
+    {
+      "id": "tokudb_basements_fetched_prefetch_seconds",
+      "name": "Tokudb_basements_fetched_prefetch_seconds",
+      "type": "time in seconds spent waiting for io while fetching off the disk by a prefetch thread."
+    },
+    {
+      "id": "tokudb_basements_fetched_prelocked_range",
+      "name": "Tokudb_basements_fetched_prelocked_range",
+      "type": "number of basement nodes aggressively fetched from disk."
+    },
+    {
+      "id": "tokudb_basements_fetched_prelocked_range_bytes",
+      "name": "Tokudb_basements_fetched_prelocked_range_bytes",
+      "type": "total basement node bytes aggressively fetched off the disk."
+    },
+    {
+      "id": "tokudb_basements_fetched_prelocked_range_seconds",
+      "name": "Tokudb_basements_fetched_prelocked_range_seconds",
+      "type": "time in seconds spent waiting for io while aggressively fetching basement nodes from disk."
+    },
+    {
+      "id": "tokudb_basements_fetched_target_query",
+      "name": "Tokudb_basements_fetched_target_query",
+      "type": "number of basement nodes fetched for queries off the disk."
+    },
+    {
+      "id": "tokudb_basements_fetched_target_query_bytes",
+      "name": "Tokudb_basements_fetched_target_query_bytes",
+      "type": "total basement node bytes fetched for queries off the disk."
+    },
+    {
+      "id": "tokudb_basements_fetched_target_query_seconds",
+      "name": "Tokudb_basements_fetched_target_query_seconds",
+      "type": "time in seconds spent waiting for io while fetching basement nodes from disk for queries."
+    },
+    {
+      "id": "tokudb_broadcase_messages_injected_at_root",
+      "name": "Tokudb_broadcase_messages_injected_at_root",
+      "type": "number of broadcast messages injected at root."
+    },
+    {
+      "id": "tokudb_buffers_decompressed_for_write",
+      "name": "Tokudb_buffers_decompressed_for_write",
+      "type": "number of buffers decompressed for writes."
+    },
+    {
+      "id": "tokudb_buffers_decompressed_prefetch",
+      "name": "Tokudb_buffers_decompressed_prefetch",
+      "type": "number of buffers decompressed by a prefetch thread."
+    },
+    {
+      "id": "tokudb_buffers_decompressed_prelocked_range",
+      "name": "Tokudb_buffers_decompressed_prelocked_range",
+      "type": "number of buffers decompressed for queries."
+    },
+    {
+      "id": "tokudb_buffers_decompressed_target_query",
+      "name": "Tokudb_buffers_decompressed_target_query",
+      "type": "number of buffers aggressively decompressed by queries."
+    },
+    {
+      "id": "tokudb_buffers_fetched_for_write",
+      "name": "Tokudb_buffers_fetched_for_write",
+      "type": "number of buffers fetched for write off the disk."
+    },
+    {
+      "id": "tokudb_buffers_fetched_for_write_bytes",
+      "name": "Tokudb_buffers_fetched_for_write_bytes",
+      "type": "total buffer bytes fetched for writes off the disk."
+    },
+    {
+      "id": "tokudb_buffers_fetched_for_write_seconds",
+      "name": "Tokudb_buffers_fetched_for_write_seconds",
+      "type": "time in seconds spent waiting for io while fetching buffers from disk for writes."
+    },
+    {
+      "id": "tokudb_buffers_fetched_prefetch",
+      "name": "Tokudb_buffers_fetched_prefetch",
+      "type": "number of buffers fetched for queries off the disk by a prefetch thread."
+    },
+    {
+      "id": "tokudb_buffers_fetched_prefetch_bytes",
+      "name": "Tokudb_buffers_fetched_prefetch_bytes",
+      "type": "total buffer bytes fetched for queries off the disk by a prefetch thread."
+    },
+    {
+      "id": "tokudb_buffers_fetched_prefetch_seconds",
+      "name": "Tokudb_buffers_fetched_prefetch_seconds",
+      "type": "time in seconds spent waiting for io while fetching buffers from disk for queries by a prefetch thread."
+    },
+    {
+      "id": "tokudb_buffers_fetched_prelocked_range",
+      "name": "Tokudb_buffers_fetched_prelocked_range",
+      "type": "number of buffers aggressively fetched for queries off the disk."
+    },
+    {
+      "id": "tokudb_buffers_fetched_prelocked_range_bytes",
+      "name": "Tokudb_buffers_fetched_prelocked_range_bytes",
+      "type": "total buffer bytes aggressively fetched for queries off the disk."
+    },
+    {
+      "id": "tokudb_buffers_fetched_prelocked_range_seconds",
+      "name": "Tokudb_buffers_fetched_prelocked_range_seconds",
+      "type": "time in seconds spent waiting for io while aggressively fetching buffers from disk for queries."
+    },
+    {
+      "id": "tokudb_buffers_fetched_target_query",
+      "name": "Tokudb_buffers_fetched_target_query",
+      "type": "number of buffers fetched for queries off the disk."
+    },
+    {
+      "id": "tokudb_buffers_fetched_target_query_bytes",
+      "name": "Tokudb_buffers_fetched_target_query_bytes",
+      "type": "total buffer bytes fetched for queries off the disk."
+    },
+    {
+      "id": "tokudb_buffers_fetched_target_query_seconds",
+      "name": "Tokudb_buffers_fetched_target_query_seconds",
+      "type": "time in seconds spent waiting for io while fetching buffers from disk for queries."
+    },
+    {
+      "id": "tokudb_cachetable_cleaner_executions",
+      "name": "Tokudb_cachetable_cleaner_executions",
+      "type": "number of times the cleaner thread loop has executed."
+    },
+    {
+      "id": "tokudb_cachetable_cleaner_iterations",
+      "name": "Tokudb_cachetable_cleaner_iterations",
+      "type": "number of cleaner operations performed each cleaner period."
+    },
+    {
+      "id": "tokudb_cachetable_cleaner_period",
+      "name": "Tokudb_cachetable_cleaner_period",
+      "type": "time in seconds between the end of a group of cleaner operations and the beginning of the next. the tokudb cleaner thread runs in the background, optimizing indexes and performing work not needing to be done by the client thread."
+    },
+    {
+      "id": "tokudb_cachetable_evictions",
+      "name": "Tokudb_cachetable_evictions",
+      "type": "number of blocks evicted from the cache."
+    },
+    {
+      "id": "tokudb_cachetable_long_wait_pressure_count",
+      "name": "Tokudb_cachetable_long_wait_pressure_count",
+      "type": "number of times a thread was stalled for more than one second due to cache pressure."
+    },
+    {
+      "id": "tokudb_cachetable_long_wait_pressure_time",
+      "name": "Tokudb_cachetable_long_wait_pressure_time",
+      "type": "time in microseconds spent waiting for more than one second for cache pressure to ease."
+    },
+    {
+      "id": "tokudb_cachetable_miss",
+      "name": "Tokudb_cachetable_miss",
+      "type": "number of times the system failed to access data in the internal cache."
+    },
+    {
+      "id": "tokudb_cachetable_miss_time",
+      "name": "Tokudb_cachetable_miss_time",
+      "type": "total time in microseconds spent waiting for disk reads (when the cache could not supply the data) to finish."
+    },
+    {
+      "id": "tokudb_cachetable_prefetches",
+      "name": "Tokudb_cachetable_prefetches",
+      "type": "total number of times that a block of memory was prefetched into the database cache. this happens when it's determined that a block of memory is likely to be accessed by the application."
+    },
+    {
+      "id": "tokudb_cachetable_size_cachepressure",
+      "name": "Tokudb_cachetable_size_cachepressure",
+      "type": "size in bytes of data causing cache pressure, or the sum of the buffers and workdone counters."
+    },
+    {
+      "id": "tokudb_cachetable_size_cloned",
+      "name": "Tokudb_cachetable_size_cloned",
+      "type": "memory in bytes currently used for cloned nodes. dirty nodes are cloned before serialization/compression during checkpoint operations, after which they are written to disk and the memory freed for re-use."
+    },
+    {
+      "id": "tokudb_cachetable_size_current",
+      "name": "Tokudb_cachetable_size_current",
+      "type": "size in bytes of the uncompressed data in the cache."
+    },
+    {
+      "id": "tokudb_cachetable_size_leaf",
+      "name": "Tokudb_cachetable_size_leaf",
+      "type": "size in bytes of the leaf nodes in the cache."
+    },
+    {
+      "id": "tokudb_cachetable_size_limit",
+      "name": "Tokudb_cachetable_size_limit",
+      "type": "size in bytes of the uncompressed data that could fit in the cache."
+    },
+    {
+      "id": "tokudb_cachetable_size_nonleaf",
+      "name": "Tokudb_cachetable_size_nonleaf",
+      "type": "size in bytes of the nonleaf nodes in the cache."
+    },
+    {
+      "id": "tokudb_cachetable_size_rollback",
+      "name": "Tokudb_cachetable_size_rollback",
+      "type": "size in bytes of the rollback nodes in the cache."
+    },
+    {
+      "id": "tokudb_cachetable_size_writing",
+      "name": "Tokudb_cachetable_size_writing",
+      "type": "size in bytes currently queued to be written to disk."
+    },
+    {
+      "id": "tokudb_cachetable_wait_pressure_count",
+      "name": "Tokudb_cachetable_wait_pressure_count",
+      "type": "number of times a thread was stalled due to cache pressure."
+    },
+    {
+      "id": "tokudb_cachetable_wait_pressure_time",
+      "name": "Tokudb_cachetable_wait_pressure_time",
+      "type": "time in microseconds spent waiting for cache pressure to ease."
+    },
+    {
+      "id": "tokudb_checkpoint_begin_time",
+      "name": "Tokudb_checkpoint_begin_time",
+      "type": "cumulative time in microseconds needed to mark all dirty nodes as pending a checkpoint."
+    },
+    {
+      "id": "tokudb_checkpoint_duration",
+      "name": "Tokudb_checkpoint_duration",
+      "type": "time in seconds needed to complete all checkpoints."
+    },
+    {
+      "id": "tokudb_checkpoint_duration_last",
+      "name": "Tokudb_checkpoint_duration_last",
+      "type": "time in seconds needed to complete the last checkpoint."
+    },
+    {
+      "id": "tokudb_checkpoint_failed",
+      "name": "Tokudb_checkpoint_failed",
+      "type": "total number of checkpoints failed."
+    },
+    {
+      "id": "tokudb_checkpoint_last_began",
+      "name": "Tokudb_checkpoint_last_began",
+      "type": "date and time the most recent checkpoint began, for example"
+    },
+    {
+      "id": "tokudb_checkpoint_last_complete_began",
+      "name": "Tokudb_checkpoint_last_complete_began",
+      "type": "date and time the last complete checkpoint started."
+    },
+    {
+      "id": "tokudb_checkpoint_last_complete_ended",
+      "name": "Tokudb_checkpoint_last_complete_ended",
+      "type": "date and time the last complete checkpoint ended."
+    },
+    {
+      "id": "tokudb_checkpoint_long_begin_count",
+      "name": "Tokudb_checkpoint_long_begin_count",
+      "type": "number of long checkpoint begins (checkpoint begins taking more than 1 second)."
+    },
+    {
+      "id": "tokudb_checkpoint_long_begin_time",
+      "name": "Tokudb_checkpoint_long_begin_time",
+      "type": "total time in microseconds of long checkpoint begins (checkpoint begins taking more than 1 second)."
+    },
+    {
+      "id": "tokudb_checkpoint_period",
+      "name": "Tokudb_checkpoint_period",
+      "type": "time in seconds between the end of one automatic checkpoint and the beginning of the next."
+    },
+    {
+      "id": "tokudb_checkpoint_taken",
+      "name": "Tokudb_checkpoint_taken",
+      "type": "total number of checkpoints taken."
+    },
+    {
+      "id": "tokudb_cursor_skip_deleted_leaf_entry",
+      "name": "Tokudb_cursor_skip_deleted_leaf_entry",
+      "type": "deleted leaf entries skipped during a range scan."
+    },
+    {
+      "id": "tokudb_db_closes",
+      "name": "Tokudb_db_closes",
+      "type": "number of db_close operations."
+    },
+    {
+      "id": "tokudb_db_open_current",
+      "name": "Tokudb_db_open_current",
+      "type": "number of databases currently open."
+    },
+    {
+      "id": "tokudb_db_open_max",
+      "name": "Tokudb_db_open_max",
+      "type": "maximum of number of databases open at the same time."
+    },
+    {
+      "id": "tokudb_db_opens",
+      "name": "Tokudb_db_opens",
+      "type": "number of db_open operations."
+    },
+    {
+      "id": "tokudb_descriptor_set",
+      "name": "Tokudb_descriptor_set",
+      "type": "number of times a descriptor was updated when the entire dictionary was updated."
+    },
+    {
+      "id": "tokudb_dictionary_broadcast_updates",
+      "name": "Tokudb_dictionary_broadcast_updates",
+      "type": "number of successful broadcast updates (an update that affects all rows in a dictionary)."
+    },
+    {
+      "id": "tokudb_dictionary_updates",
+      "name": "Tokudb_dictionary_updates",
+      "type": "total number of rows updated in all primary and secondary indexes that have been done with a separate recovery log entry per index."
+    },
+    {
+      "id": "tokudb_filesystem_fsync_num",
+      "name": "Tokudb_filesystem_fsync_num",
+      "type": "total number of times the database has flushed the operating system’s file buffers to\ndisk."
+    },
+    {
+      "id": "tokudb_filesystem_fsync_time",
+      "name": "Tokudb_filesystem_fsync_time",
+      "type": "total time in microseconds used to fsync to disk."
+    },
+    {
+      "id": "tokudb_filesystem_long_fsync_num",
+      "name": "Tokudb_filesystem_long_fsync_num",
+      "type": "total number of times the database has flushed the operating system’s file buffers to\ndisk when the operation took more than one second."
+    },
+    {
+      "id": "tokudb_filesystem_long_fsync_time",
+      "name": "Tokudb_filesystem_long_fsync_time",
+      "type": "total time in microseconds used to fsync to disk when the operation took more than one second."
+    },
+    {
+      "id": "tokudb_filesystem_threads_blocked_by_full_disk",
+      "name": "Tokudb_filesystem_threads_blocked_by_full_disk",
+      "type": "number of threads currently blocked due to attempting to write to a full disk. a warning appears in the"
+    },
+    {
+      "id": "tokudb_leaf_compression_to_memory_seconds",
+      "name": "Tokudb_leaf_compression_to_memory_seconds",
+      "type": "time in seconds spent on compressing leaf nodes."
+    },
+    {
+      "id": "tokudb_leaf_decompression_to_memory_seconds",
+      "name": "Tokudb_leaf_decompression_to_memory_seconds",
+      "type": "time in seconds spent on decompressing leaf nodes."
+    },
+    {
+      "id": "tokudb_leaf_deserialization_to_memory_seconds",
+      "name": "Tokudb_leaf_deserialization_to_memory_seconds",
+      "type": "time in seconds spent on deserializing leaf nodes."
+    },
+    {
+      "id": "tokudb_leaf_node_compression_ratio",
+      "name": "Tokudb_leaf_node_compression_ratio",
+      "type": "ratio of uncompressed bytes in-memory to compressed bytes on-disk for leaf nodes."
+    },
+    {
+      "id": "tokudb_leaf_node_full_evictions",
+      "name": "Tokudb_leaf_node_full_evictions",
+      "type": "number of times a full leaf node was evicted from the cache."
+    },
+    {
+      "id": "tokudb_leaf_node_full_evictions_bytes",
+      "name": "Tokudb_leaf_node_full_evictions_bytes",
+      "type": "total bytes freed when a full leaf node was evicted from the cache."
+    },
+    {
+      "id": "tokudb_leaf_node_partial_evictions",
+      "name": "Tokudb_leaf_node_partial_evictions",
+      "type": "number of times part of a leaf node (a partition) was evicted from the cache."
+    },
+    {
+      "id": "tokudb_leaf_node_partial_evictions_bytes",
+      "name": "Tokudb_leaf_node_partial_evictions_bytes",
+      "type": "total bytes freed when part of a leaf node (a partition) was evicted from the cache."
+    },
+    {
+      "id": "tokudb_leaf_nodes_created",
+      "name": "Tokudb_leaf_nodes_created",
+      "type": "total number of leaf nodes created."
+    },
+    {
+      "id": "tokudb_leaf_nodes_destroyed",
+      "name": "Tokudb_leaf_nodes_destroyed",
+      "type": "total number of leaf nodes destroyed."
+    },
+    {
+      "id": "tokudb_leaf_nodes_flushed_checkpoint",
+      "name": "Tokudb_leaf_nodes_flushed_checkpoint",
+      "type": "number of leaf nodes flushed to disk as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_leaf_nodes_flushed_checkpoint_bytes",
+      "name": "Tokudb_leaf_nodes_flushed_checkpoint_bytes",
+      "type": "size in bytes of leaf nodes flushed to disk as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_leaf_nodes_flushed_checkpoint_seconds",
+      "name": "Tokudb_leaf_nodes_flushed_checkpoint_seconds",
+      "type": "time in seconds spent waiting for io while writing leaf nodes flushed to disk as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_leaf_nodes_flushed_checkpoint_uncompressed_bytes",
+      "name": "Tokudb_leaf_nodes_flushed_checkpoint_uncompressed_bytes",
+      "type": "size in uncompressed bytes of leaf nodes flushed to disk as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_leaf_nodes_flushed_not_checkpoint",
+      "name": "Tokudb_leaf_nodes_flushed_not_checkpoint",
+      "type": "number of leaf nodes flushed to disk not as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_leaf_nodes_flushed_not_checkpoint_bytes",
+      "name": "Tokudb_leaf_nodes_flushed_not_checkpoint_bytes",
+      "type": "size in bytes of leaf nodes flushed to disk not as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_leaf_nodes_flushed_not_checkpoint_seconds",
+      "name": "Tokudb_leaf_nodes_flushed_not_checkpoint_seconds",
+      "type": "time in seconds spent waiting for io while writing leaf nodes flushed to disk not as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_leaf_nodes_flushed_not_checkpoint_uncompressed_bytes",
+      "name": "Tokudb_leaf_nodes_flushed_not_checkpoint_uncompressed_bytes",
+      "type": "size in uncompressed bytes of leaf nodes flushed to disk not as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_leaf_serialization_to_memory_seconds",
+      "name": "Tokudb_leaf_serialization_to_memory_seconds",
+      "type": "time in seconds spent on serializing leaf nodes."
+    },
+    {
+      "id": "tokudb_loader_num_created",
+      "name": "Tokudb_loader_num_created",
+      "type": "number of times a loader has been created."
+    },
+    {
+      "id": "tokudb_loader_num_current",
+      "name": "Tokudb_loader_num_current",
+      "type": "number of currently existing loaders."
+    },
+    {
+      "id": "tokudb_loader_num_max",
+      "name": "Tokudb_loader_num_max",
+      "type": "maximum number of loaders that existed at one time."
+    },
+    {
+      "id": "tokudb_locktree_escalation_num",
+      "name": "Tokudb_locktree_escalation_num",
+      "type": "number of times the locktree needed reduce its memory footprint by running lock escalation."
+    },
+    {
+      "id": "tokudb_locktree_escalation_seconds",
+      "name": "Tokudb_locktree_escalation_seconds",
+      "type": "time in seconds spent performing locktree escalation."
+    },
+    {
+      "id": "tokudb_locktree_latest_post_escalation_memory_size",
+      "name": "Tokudb_locktree_latest_post_escalation_memory_size",
+      "type": "memory size in bytes of the locktree after most recent locktree escalation."
+    },
+    {
+      "id": "tokudb_locktree_long_wait_count",
+      "name": "Tokudb_locktree_long_wait_count",
+      "type": "number of times of more than one second duration that a lock could not be acquired as a result of a conflict with another transaction."
+    },
+    {
+      "id": "tokudb_locktree_long_wait_escalation_count",
+      "name": "Tokudb_locktree_long_wait_escalation_count",
+      "type": "number of times a client thread waited for more than one second for lock escalation to free up memory."
+    },
+    {
+      "id": "tokudb_locktree_long_wait_escalation_time",
+      "name": "Tokudb_locktree_long_wait_escalation_time",
+      "type": "time in microseconds of long waits (more than one second) for lock escalation to free up memory."
+    },
+    {
+      "id": "tokudb_locktree_long_wait_time",
+      "name": "Tokudb_locktree_long_wait_time",
+      "type": "total time in microseconds spent by clients waiting for more than one second for a lock conflict to be resolved."
+    },
+    {
+      "id": "tokudb_locktree_memory_size",
+      "name": "Tokudb_locktree_memory_size",
+      "type": "memory in bytes currently being used by the locktree."
+    },
+    {
+      "id": "tokudb_locktree_memory_size_limit",
+      "name": "Tokudb_locktree_memory_size_limit",
+      "type": "maximum memory in bytes the locktree can use."
+    },
+    {
+      "id": "tokudb_locktree_open_current",
+      "name": "Tokudb_locktree_open_current",
+      "type": "number of currently open locktrees."
+    },
+    {
+      "id": "tokudb_locktree_pending_lock_requests",
+      "name": "Tokudb_locktree_pending_lock_requests",
+      "type": "number of requests waiting for a lock to be granted."
+    },
+    {
+      "id": "tokudb_locktree_sto_eligible_num",
+      "name": "Tokudb_locktree_sto_eligible_num",
+      "type": "number of locktrees eligible for single transaction optimizations."
+    },
+    {
+      "id": "tokudb_locktree_sto_ended_num",
+      "name": "Tokudb_locktree_sto_ended_num",
+      "type": "total number of times a single transaction optimization completed early as a result of another transaction beginning."
+    },
+    {
+      "id": "tokudb_locktree_sto_ended_seconds",
+      "name": "Tokudb_locktree_sto_ended_seconds",
+      "type": "time in seconds spent ending single transaction optimizations."
+    },
+    {
+      "id": "tokudb_locktree_timeout_count",
+      "name": "Tokudb_locktree_timeout_count",
+      "type": "number of times a lock request timed out."
+    },
+    {
+      "id": "tokudb_locktree_wait_count",
+      "name": "Tokudb_locktree_wait_count",
+      "type": "number of times a lock could not be acquired as a result of a conflict with another transaction."
+    },
+    {
+      "id": "tokudb_locktree_wait_escalation_count",
+      "name": "Tokudb_locktree_wait_escalation_count",
+      "type": "number of times a client thread has waited on lock escalation. lock escalation is run on a background thread when the sum of the acquired lock sizes reaches the lock tree limit."
+    },
+    {
+      "id": "tokudb_locktree_wait_escalation_time",
+      "name": "Tokudb_locktree_wait_escalation_time",
+      "type": "time in microseconds that a client thread spent waiting for lock escalation."
+    },
+    {
+      "id": "tokudb_locktree_wait_time",
+      "name": "Tokudb_locktree_wait_time",
+      "type": "total time in microseconds spent by clients waiting for a lock conflict to be resolved."
+    },
+    {
+      "id": "tokudb_logger_wait_long",
+      "name": "Tokudb_logger_wait_long",
+      "type": ""
+    },
+    {
+      "id": "tokudb_logger_writes",
+      "name": "Tokudb_logger_writes",
+      "type": "number of times the logger has written to disk."
+    },
+    {
+      "id": "tokudb_logger_writes_bytes",
+      "name": "Tokudb_logger_writes_bytes",
+      "type": "total bytes the logger has written to disk."
+    },
+    {
+      "id": "tokudb_logger_writes_seconds",
+      "name": "Tokudb_logger_writes_seconds",
+      "type": "time in seconds spent waiting for io while writing logs to disk."
+    },
+    {
+      "id": "tokudb_logger_writes_uncompressed_bytes",
+      "name": "Tokudb_logger_writes_uncompressed_bytes",
+      "type": "total uncompressed bytes the logger has written to disk."
+    },
+    {
+      "id": "tokudb_mem_estimated_maximum_memory_footprint",
+      "name": "Tokudb_mem_estimated_maximum_memory_footprint",
+      "type": ""
+    },
+    {
+      "id": "tokudb_messages_flushed_from_h1_to_leaves_bytes",
+      "name": "Tokudb_messages_flushed_from_h1_to_leaves_bytes",
+      "type": "total bytes of the messages flushed from h1 nodes to leaves."
+    },
+    {
+      "id": "tokudb_messages_ignored_by_leaf_due_to_msn",
+      "name": "Tokudb_messages_ignored_by_leaf_due_to_msn",
+      "type": "number of messages ignored by a leaf because it had already been applied."
+    },
+    {
+      "id": "tokudb_messages_in_trees_estimate_bytes",
+      "name": "Tokudb_messages_in_trees_estimate_bytes",
+      "type": "estimate of the total bytes of messages currently in trees."
+    },
+    {
+      "id": "tokudb_messages_injected_at_root",
+      "name": "Tokudb_messages_injected_at_root",
+      "type": "number of messages injected at root."
+    },
+    {
+      "id": "tokudb_messages_injected_at_root_bytes",
+      "name": "Tokudb_messages_injected_at_root_bytes",
+      "type": "total bytes of messages injected at root for all trees."
+    },
+    {
+      "id": "tokudb_nonleaf_compression_to_memory_seconds",
+      "name": "Tokudb_nonleaf_compression_to_memory_seconds",
+      "type": "time in seconds spent on compressing non-leaf nodes."
+    },
+    {
+      "id": "tokudb_nonleaf_decompression_to_memory_seconds",
+      "name": "Tokudb_nonleaf_decompression_to_memory_seconds",
+      "type": "time in seconds spent on decompressing non-leaf nodes."
+    },
+    {
+      "id": "tokudb_nonleaf_deserialization_to_memory_seconds",
+      "name": "Tokudb_nonleaf_deserialization_to_memory_seconds",
+      "type": "time in seconds spent on deserializing non-leaf nodes."
+    },
+    {
+      "id": "tokudb_nonleaf_node_compression_ratio",
+      "name": "Tokudb_nonleaf_node_compression_ratio",
+      "type": "ratio of uncompressed bytes in-memory to compressed bytes on-disk for nonleaf nodes."
+    },
+    {
+      "id": "tokudb_nonleaf_node_full_evictions",
+      "name": "Tokudb_nonleaf_node_full_evictions",
+      "type": "number of times a full non-leaf node was evicted from the cache."
+    },
+    {
+      "id": "tokudb_nonleaf_node_full_evictions_bytes",
+      "name": "Tokudb_nonleaf_node_full_evictions_bytes",
+      "type": "total bytes freed when a full non-leaf node was evicted from the cache."
+    },
+    {
+      "id": "tokudb_nonleaf_node_partial_evictions",
+      "name": "Tokudb_nonleaf_node_partial_evictions",
+      "type": "number of times part of a non-leaf node (a partition) was evicted from the cache."
+    },
+    {
+      "id": "tokudb_nonleaf_node_partial_evictions_bytes",
+      "name": "Tokudb_nonleaf_node_partial_evictions_bytes",
+      "type": "total bytes freed when part of a non-leaf node (a partition) was evicted from the cache."
+    },
+    {
+      "id": "tokudb_nonleaf_nodes_created",
+      "name": "Tokudb_nonleaf_nodes_created",
+      "type": "total number of non-leaf nodes created."
+    },
+    {
+      "id": "tokudb_nonleaf_nodes_destroyed",
+      "name": "Tokudb_nonleaf_nodes_destroyed",
+      "type": "total number of non-leaf nodes destroyed."
+    },
+    {
+      "id": "tokudb_nonleaf_nodes_flushed_to_disk_checkpoint",
+      "name": "Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint",
+      "type": "number of non-leaf nodes flushed to disk  as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_bytes",
+      "name": "Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_bytes",
+      "type": "size in bytes of non-leaf nodes flushed to disk  as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_seconds",
+      "name": "Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_seconds",
+      "type": "time in seconds spent waiting for io while writing non-leaf nodes flushed to disk as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_uncompressed_bytes",
+      "name": "Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_uncompressed_bytes",
+      "type": "size in uncompressed bytes of non-leaf nodes flushed to disk as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint",
+      "name": "Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint",
+      "type": "number of non-leaf nodes flushed to disk not as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_bytes",
+      "name": "Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_bytes",
+      "type": "size in bytes of non-leaf nodes flushed to disk not as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_seconds",
+      "name": "Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_seconds",
+      "type": "time in seconds spent waiting for io while writing non-leaf nodes flushed to disk not as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_uncompressed_bytes",
+      "name": "Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_uncompressed_bytes",
+      "type": "size in uncompressed bytes of non-leaf nodes flushed to disk not as part of a checkpoint."
+    },
+    {
+      "id": "tokudb_nonleaf_serialization_to_memory_seconds",
+      "name": "Tokudb_nonleaf_serialization_to_memory_seconds",
+      "type": "time in seconds spent on serializing nonleaf nodes."
+    },
+    {
+      "id": "tokudb_overall_node_compression_ratio",
+      "name": "Tokudb_overall_node_compression_ratio",
+      "type": "ratio of uncompressed bytes in-memory to compressed bytes on-disk for all nodes."
+    },
+    {
+      "id": "tokudb_pivots_fetched_for_query",
+      "name": "Tokudb_pivots_fetched_for_query",
+      "type": "total number of pivot nodes fetched for queries."
+    },
+    {
+      "id": "tokudb_pivots_fetched_for_query_bytes",
+      "name": "Tokudb_pivots_fetched_for_query_bytes",
+      "type": "number of bytes of pivot nodes fetched for queries."
+    },
+    {
+      "id": "tokudb_pivots_fetched_for_query_seconds",
+      "name": "Tokudb_pivots_fetched_for_query_seconds",
+      "type": "time in seconds spent waiting for io while fetching pivot nodes for queries."
+    },
+    {
+      "id": "tokudb_pivots_fetched_for_prefetch",
+      "name": "Tokudb_pivots_fetched_for_prefetch",
+      "type": "total number of pivot nodes fetched by a prefetch thread."
+    },
+    {
+      "id": "tokudb_pivots_fetched_for_prefetch_bytes",
+      "name": "Tokudb_pivots_fetched_for_prefetch_bytes",
+      "type": "number of bytes of pivot nodes fetched by a prefetch thread."
+    },
+    {
+      "id": "tokudb_pivots_fetched_for_prefetch_seconds",
+      "name": "Tokudb_pivots_fetched_for_prefetch_seconds",
+      "type": "time in seconds spent waiting for io while fetching pivot nodes by a prefetch thread."
+    },
+    {
+      "id": "tokudb_pivots_fetched_for_write",
+      "name": "Tokudb_pivots_fetched_for_write",
+      "type": "total number of pivot nodes fetched for writes."
+    },
+    {
+      "id": "tokudb_pivots_fetched_for_write_bytes",
+      "name": "Tokudb_pivots_fetched_for_write_bytes",
+      "type": "number of bytes of pivot nodes fetched for writes."
+    },
+    {
+      "id": "tokudb_pivots_fetched_for_write_seconds",
+      "name": "Tokudb_pivots_fetched_for_write_seconds",
+      "type": "time in seconds spent waiting for io while fetching pivot nodes for writes."
+    },
+    {
+      "id": "tokudb_promotion_h1_roots_injected_into",
+      "name": "Tokudb_promotion_h1_roots_injected_into",
+      "type": "number of times a message stopped at a root with a height of 1."
+    },
+    {
+      "id": "tokudb_promotion_injections_at_depth_0",
+      "name": "Tokudb_promotion_injections_at_depth_0",
+      "type": "number of times a message stopped at a depth of zero."
+    },
+    {
+      "id": "tokudb_promotion_injections_at_depth_1",
+      "name": "Tokudb_promotion_injections_at_depth_1",
+      "type": "number of times a message stopped at a depth of one."
+    },
+    {
+      "id": "tokudb_promotion_injections_at_depth_2",
+      "name": "Tokudb_promotion_injections_at_depth_2",
+      "type": "number of times a message stopped at a depth of two."
+    },
+    {
+      "id": "tokudb_promotion_injections_at_depth_3",
+      "name": "Tokudb_promotion_injections_at_depth_3",
+      "type": "number of times a message stopped at a depth of three."
+    },
+    {
+      "id": "tokudb_promotion_injections_lower_than_depth_3",
+      "name": "Tokudb_promotion_injections_lower_than_depth_3",
+      "type": "number of times a message stopped at a depth of greater than three."
+    },
+    {
+      "id": "tokudb_promotion_leaf_roots_injected_into",
+      "name": "Tokudb_promotion_leaf_roots_injected_into",
+      "type": "number of times a message stopped at a root with a height of 0."
+    },
+    {
+      "id": "tokudb_promotion_roots_split",
+      "name": "Tokudb_promotion_roots_split",
+      "type": "number of times the root split during promotion."
+    },
+    {
+      "id": "tokudb_promotion_stopped_after_locking_child",
+      "name": "Tokudb_promotion_stopped_after_locking_child",
+      "type": "number of times a message stopped before a locked child."
+    },
+    {
+      "id": "tokudb_promotion_stopped_at_height_1",
+      "name": "Tokudb_promotion_stopped_at_height_1",
+      "type": "number of times a message stopped due to reaching a height of one."
+    },
+    {
+      "id": "tokudb_promotion_stopped_child_locked_or_not_in_memory",
+      "name": "Tokudb_promotion_stopped_child_locked_or_not_in_memory",
+      "type": "number of times a message stopped due to being unable to cheaply access (locked or not stored in memory) a child."
+    },
+    {
+      "id": "tokudb_promotion_stopped_child_not_fully_in_memory",
+      "name": "Tokudb_promotion_stopped_child_not_fully_in_memory",
+      "type": "number of times a message stopped due to being unable to cheaply access (not fully stored in memory) a child."
+    },
+    {
+      "id": "tokudb_promotion_stopped_nonempty_buffer",
+      "name": "Tokudb_promotion_stopped_nonempty_buffer",
+      "type": "number of times a message stopped due to reaching a buffer that wasn't empty."
+    },
+    {
+      "id": "tokudb_txn_aborts",
+      "name": "Tokudb_txn_aborts",
+      "type": "number of transactions that have been aborted."
+    },
+    {
+      "id": "tokudb_txn_begin",
+      "name": "Tokudb_txn_begin",
+      "type": "number of transactions that have been started."
+    },
+    {
+      "id": "tokudb_txn_begin_read_only",
+      "name": "Tokudb_txn_begin_read_only",
+      "type": "number of read-only transactions that have been started."
+    },
+    {
+      "id": "tokudb_txn_commits",
+      "name": "Tokudb_txn_commits",
+      "type": "number of transactions that have been committed."
+    }
+  ]
+}

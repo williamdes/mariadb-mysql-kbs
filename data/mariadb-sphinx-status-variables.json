@@ -1,0 +1,66 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/sphinx-status-variables/",
+  "name": "sphinx-status-variables",
+  "data": [
+    {
+      "id": "sphinx_error",
+      "name": "Sphinx_error",
+      "type": "see",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "sphinx_time",
+      "name": "Sphinx_time",
+      "type": "see",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "sphinx_total",
+      "name": "Sphinx_total",
+      "type": "see",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "sphinx_total_found",
+      "name": "Sphinx_total_found",
+      "type": "see",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "sphinx_word_count",
+      "name": "Sphinx_word_count",
+      "type": "see",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "sphinx_words",
+      "name": "Sphinx_words",
+      "type": "see",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    }
+  ]
+}

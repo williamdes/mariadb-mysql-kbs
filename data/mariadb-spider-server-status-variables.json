@@ -1,0 +1,46 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/spider-server-status-variables/",
+  "name": "spider-server-status-variables",
+  "data": [
+    {
+      "id": "spider_direct_aggregate",
+      "name": "Spider_direct_aggregate",
+      "type": "",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "spider_direct_order_limit",
+      "name": "Spider_direct_order_limit",
+      "type": "",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "spider_mon_table_cache_version",
+      "name": "Spider_mon_table_cache_version",
+      "type": "",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "spider_mon_table_cache_version_req",
+      "name": "Spider_mon_table_cache_version_req",
+      "type": "",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    }
+  ]
+}

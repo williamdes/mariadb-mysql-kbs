@@ -1,0 +1,176 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/",
+  "name": "galera-cluster-status-variables",
+  "data": [
+    {
+      "id": "wsrep_apply_oooe",
+      "name": "wsrep_apply_oooe",
+      "type": "how often writesets have been applied out of order, an indicators of parallelization efficiency."
+    },
+    {
+      "id": "wsrep_apply_oool",
+      "name": "wsrep_apply_oool",
+      "type": "how often writesets with a higher sequence number were applied before ones with a lower sequence number, implying slow writesets."
+    },
+    {
+      "id": "wsrep_cert_deps_distance",
+      "name": "wsrep_cert_deps_distance",
+      "type": "average distance between the highest and the lowest sequence numbers that can possibly be applied in parallel, or the potential degree of parallelization."
+    },
+    {
+      "id": "wsrep_cluster_conf_id",
+      "name": "wsrep_cluster_conf_id",
+      "type": "total number of cluster membership changes that have taken place."
+    },
+    {
+      "id": "wsrep_cluster_size",
+      "name": "wsrep_cluster_size",
+      "type": "number of nodes currently in the cluster."
+    },
+    {
+      "id": "wsrep_cluster_state_uuid",
+      "name": "wsrep_cluster_state_uuid",
+      "type": "uuid state of the cluster. if it matches the value in"
+    },
+    {
+      "id": "wsrep_cluster_status",
+      "name": "wsrep_cluster_status",
+      "type": "cluster component status. possible values are"
+    },
+    {
+      "id": "wsrep_connected",
+      "name": "wsrep_connected",
+      "type": "whether or not mariadb is connected to the wsrep provider. possible values are"
+    },
+    {
+      "id": "wsrep_flow_control_paused",
+      "name": "wsrep_flow_control_paused",
+      "type": "the fraction of time since the last flush status command that replication was paused due to flow control."
+    },
+    {
+      "id": "wsrep_flow_control_paused_ns",
+      "name": "wsrep_flow_control_paused_ns",
+      "type": "the total time spent in a paused state measured in nanoseconds."
+    },
+    {
+      "id": "wsrep_flow_control_recv",
+      "name": "wsrep_flow_control_recv",
+      "type": "number of fc_pause events received as well as sent since the most recent status query."
+    },
+    {
+      "id": "wsrep_flow_control_sent",
+      "name": "wsrep_flow_control_sent",
+      "type": "number of fc_pause events sent since the most recent status query"
+    },
+    {
+      "id": "wsrep_gcomm_uuid",
+      "name": "wsrep_gcomm_uuid",
+      "type": "the uuid assigned to the node."
+    },
+    {
+      "id": "wsrep_last_committed",
+      "name": "wsrep_last_committed",
+      "type": "sequence number of the most recently committed transaction."
+    },
+    {
+      "id": "wsrep_local_bf_aborts",
+      "name": "wsrep_local_bf_aborts",
+      "type": "total number of local transactions aborted by slave transactions while being executed"
+    },
+    {
+      "id": "wsrep_local_cert_failures",
+      "name": "wsrep_local_cert_failures",
+      "type": "total number of local transactions that failed the certification test."
+    },
+    {
+      "id": "wsrep_local_commits",
+      "name": "wsrep_local_commits",
+      "type": "total number of local transactions committed on the node."
+    },
+    {
+      "id": "wsrep_local_index",
+      "name": "wsrep_local_index",
+      "type": "the node's index in the cluster. the index is zero-based."
+    },
+    {
+      "id": "wsrep_local_recv_queue",
+      "name": "wsrep_local_recv_queue",
+      "type": "current length of the receive queue, which is the number of writesets waiting to be applied."
+    },
+    {
+      "id": "wsrep_local_recv_queue_avg",
+      "name": "wsrep_local_recv_queue_avg",
+      "type": "average length of the receive queue since the most recent status query. if this value is noticeably larger than zero, the node is likely to be overloaded, and cannot apply the writesets as quickly as they arrive, resulting in replication throttling."
+    },
+    {
+      "id": "wsrep_local_replays",
+      "name": "wsrep_local_replays",
+      "type": "total number of transaction replays due to asymmetric lock granularity."
+    },
+    {
+      "id": "wsrep_local_send_queue",
+      "name": "wsrep_local_send_queue",
+      "type": "current length of the send queue, which is the number of writesets waiting to be sent."
+    },
+    {
+      "id": "wsrep_local_send_queue_avg",
+      "name": "wsrep_local_send_queue_avg",
+      "type": "average length of the send queue since the most recent status query. if this value is noticeably larger than zero, there is most likely network throughput or replication throttling issues."
+    },
+    {
+      "id": "wsrep_local_state_uuid",
+      "name": "wsrep_local_state_uuid",
+      "type": "the node's uuid state. if it matches the value in"
+    },
+    {
+      "id": "wsrep_protocol_version",
+      "name": "wsrep_protocol_version",
+      "type": "the wsrep protocol version being used."
+    },
+    {
+      "id": "wsrep_provider_name",
+      "name": "wsrep_provider_name",
+      "type": "the name of the provider. the default is \"galera\"."
+    },
+    {
+      "id": "wsrep_provider_vendor",
+      "name": "wsrep_provider_vendor",
+      "type": "the vendor string."
+    },
+    {
+      "id": "wsrep_provider_version",
+      "name": "wsrep_provider_version",
+      "type": "the version number of the galera wsrep provider"
+    },
+    {
+      "id": "wsrep_ready",
+      "name": "wsrep_ready",
+      "type": "whether or not the galera wsrep provider is ready. possible values are"
+    },
+    {
+      "id": "wsrep_received",
+      "name": "wsrep_received",
+      "type": "total number of writesets received from other nodes."
+    },
+    {
+      "id": "wsrep_received_bytes",
+      "name": "wsrep_received_bytes",
+      "type": "total size in bytes of all writesets received from other nodes."
+    },
+    {
+      "id": "wsrep_replicated",
+      "name": "wsrep_replicated",
+      "type": "total number of writesets replicated to other nodes."
+    },
+    {
+      "id": "wsrep_replicated_bytes",
+      "name": "wsrep_replicated_bytes",
+      "type": "total size in bytes of all writesets replicated to other nodes."
+    },
+    {
+      "id": "wsrep_thread_count",
+      "name": "wsrep_thread_count",
+      "type": "total number of wsrep (applier/rollbacker) threads."
+    }
+  ]
+}

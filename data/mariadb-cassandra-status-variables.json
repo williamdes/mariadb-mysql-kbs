@@ -1,0 +1,86 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/cassandra-status-variables/",
+  "name": "cassandra-status-variables",
+  "data": [
+    {
+      "id": "cassandra_multiget_keys_scanned",
+      "name": "Cassandra_multiget_keys_scanned",
+      "type": "number of keys we've made lookups for.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "cassandra_multiget_reads",
+      "name": "Cassandra_multiget_reads",
+      "type": "number of read operations.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "cassandra_multiget_rows_read",
+      "name": "Cassandra_multiget_rows_read",
+      "type": "number of rows actually read.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "cassandra_network_exceptions",
+      "name": "Cassandra_network_exceptions",
+      "type": "number of network exceptions.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "cassandra_row_insert_batches",
+      "name": "Cassandra_row_insert_batches",
+      "type": "number of insert batches performed.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "cassandra_row_inserts",
+      "name": "Cassandra_row_inserts",
+      "type": "number of rows inserted.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "cassandra_timeout_exceptions",
+      "name": "Cassandra_timeout_exceptions",
+      "type": "number of timeout exceptions we got from cassandra.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "cassandra_unavailable_exceptions",
+      "name": "Cassandra_unavailable_exceptions",
+      "type": "number of unavailable exceptions we got from cassandra.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/replication-and-binary-log-status-variables/",
+  "name": "replication-and-binary-log-status-variables",
+  "data": [
+    {
+      "id": "binlog_bytes_written",
+      "name": "Binlog_bytes_written",
+      "type": "the number of bytes written to the",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "binlog_cache_disk_use",
+      "name": "Binlog_cache_disk_use",
+      "type": "number of transactions which used a temporary disk cache because they could not fit in the regular",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "binlog_cache_use",
+      "name": "Binlog_cache_use",
+      "type": "number of transaction which used the regular",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "binlog_commits",
+      "name": "Binlog_commits",
+      "type": "total number of transactions committed to the binary log.",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "binlog_group_commit_trigger_count",
+      "name": "Binlog_group_commit_trigger_count",
+      "type": "total number of group commits triggered because of the number of binary log commits in the group reached the limit set by the variable",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "binlog_group_commit_trigger_lock_wait",
+      "name": "Binlog_group_commit_trigger_lock_wait",
+      "type": "total number of group commits triggered because a binary log commit was being delayed because of a lock wait where the lock was held by a prior binary log commit. when this happens the later binary log commit is placed in the next group commit. see",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "binlog_group_commit_trigger_timeout",
+      "name": "Binlog_group_commit_trigger_timeout",
+      "type": "total number of group commits triggered because of the time since the first binary log commit reached the limit set by the variable",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "binlog_group_commits",
+      "name": "Binlog_group_commits",
+      "type": "total number of group commits done to the binary log. see",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "binlog_snapshot_file",
+      "name": "Binlog_snapshot_file",
+      "type": "the binary log file. unlike",
+      "scope": [
+        "global"
+      ],
+      "dataType": "string"
+    },
+    {
+      "id": "binlog_snapshot_position",
+      "name": "Binlog_snapshot_position",
+      "type": "the binary log position. unlike",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "binlog_stmt_cache_disk_use",
+      "name": "Binlog_stmt_cache_disk_use",
+      "type": "number of non-transaction statements which used a temporary disk cache because they could not fit in the regular",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "binlog_stmt_cache_use",
+      "name": "Binlog_stmt_cache_use",
+      "type": "number of non-transaction statement which used the regular",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_change_master",
+      "name": "Com_change_master",
+      "type": "number of",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_show_master_status",
+      "name": "Com_show_master_status",
+      "type": "number of",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_show_new_master",
+      "name": "Com_show_new_master",
+      "type": "",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_show_slave_hosts",
+      "name": "Com_show_slave_hosts",
+      "type": "number of",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_show_slave_status",
+      "name": "Com_show_slave_status",
+      "type": "number of",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_slave_start",
+      "name": "Com_slave_start",
+      "type": "number of",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_slave_stop",
+      "name": "Com_slave_stop",
+      "type": "number of",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_start_all_slaves",
+      "name": "Com_start_all_slaves",
+      "type": "number of",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_start_slave",
+      "name": "Com_start_slave",
+      "type": "number of",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_stop_all_slaves",
+      "name": "Com_stop_all_slaves",
+      "type": "number of",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "com_stop_slave",
+      "name": "Com_stop_slave",
+      "type": "number of",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "master_gtid_wait_count",
+      "name": "Master_gtid_wait_count",
+      "type": "number of times master_gtid_wait called.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "master_gtid_wait_time",
+      "name": "Master_gtid_wait_time",
+      "type": "total number of time spent in master_gtid_wait.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "master_gtid_wait_timeouts",
+      "name": "Master_gtid_wait_timeouts",
+      "type": "number of timeouts occurring in master_gtid_wait.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_status",
+      "name": "Rpl_status",
+      "type": "for showing the status of fail-safe replication. removed in mysql 5.6, still present in"
+    },
+    {
+      "id": "rpl_transactions_multi_engine",
+      "name": "Rpl_transactions_multi_engine",
+      "type": "number of replicated transactions that involved changes in multiple (transactional) storage engines, before considering the update of",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "slave_connections",
+      "name": "Slave_connections",
+      "type": "",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "slave_heartbeat_period",
+      "name": "Slave_heartbeat_period",
+      "type": "time in seconds that a heartbeat packet is requested from the master by a slave.",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "slave_open_temp_tables",
+      "name": "Slave_open_temp_tables",
+      "type": "number of temporary tables the slave has open.",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "slave_received_heartbeats",
+      "name": "Slave_received_heartbeats",
+      "type": "number of heartbeats the slave has received from the master.",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "slave_retried_transactions",
+      "name": "Slave_retried_transactions",
+      "type": "number of times the slave has retried transactions since the server started.",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "slave_running",
+      "name": "Slave_running",
+      "type": "whether the slave is running (both i/o and sql threads running) or not.",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "slave_skipped_errors",
+      "name": "Slave_skipped_errors",
+      "type": "the number of times a slave has skipped errors defined by",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "slaves_connected",
+      "name": "Slaves_connected",
+      "type": "number of slaves connected.",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "slaves_running",
+      "name": "Slaves_running",
+      "type": "number of slave sql threads running.",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "transactions_gtid_foreign_engine",
+      "name": "Transactions_gtid_foreign_engine",
+      "type": "number of replicated transactions where the update of the",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    },
+    {
+      "id": "transactions_multi_engine",
+      "name": "Transactions_multi_engine",
+      "type": "number of transactions that changed data in multiple (transactional) storage engines. if this is significantly larger than",
+      "scope": [
+        "global"
+      ],
+      "dataType": "numeric"
+    }
+  ]
+}

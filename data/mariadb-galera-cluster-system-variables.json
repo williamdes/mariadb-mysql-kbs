@@ -1,0 +1,615 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/",
+  "name": "galera-cluster-system-variables",
+  "data": [
+    {
+      "id": "wsrep_auto_increment_control",
+      "name": "wsrep_auto_increment_control",
+      "type": "if set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "ON"
+      ]
+    },
+    {
+      "id": "wsrep_causal_reads",
+      "name": "wsrep_causal_reads",
+      "type": "if set to",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_certify_nonpk",
+      "name": "wsrep_certify_nonPK",
+      "type": "when set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "ON"
+      ]
+    },
+    {
+      "id": "wsrep_cluster_address",
+      "name": "wsrep_cluster_address",
+      "type": "the addresses of cluster nodes to connect to when starting up, for example",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string"
+    },
+    {
+      "id": "wsrep_cluster_name",
+      "name": "wsrep_cluster_name",
+      "type": "the name of the cluster. nodes cannot connect to clusters with a different name, so needs to be identical on all nodes in the same cluster.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": [
+        "my_wsrep_cluster"
+      ]
+    },
+    {
+      "id": "wsrep_convert_lock_to_trx",
+      "name": "wsrep_convert_LOCK_to_trx",
+      "type": "converts",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_data_home_dir",
+      "name": "wsrep_data_home_dir",
+      "type": "directory where wsrep provider will store its internal files.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "wsrep_dbug_option",
+      "name": "wsrep_dbug_option",
+      "type": "used to pass the dbug options to the wsrep provider.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string"
+    },
+    {
+      "id": "wsrep_debug",
+      "name": "wsrep_debug",
+      "type": "when set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_desync",
+      "name": "wsrep_desync",
+      "type": "when set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_dirty_reads",
+      "name": "wsrep_dirty_reads",
+      "type": "by default, when not synchronized with the group (",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ],
+      "validValues": [
+        "ON",
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_drupal_282555_workaround",
+      "name": "wsrep_drupal_282555_workaround",
+      "type": "if set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_forced_binlog_format",
+      "name": "wsrep_forced_binlog_format",
+      "type": "a",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "default": [
+        "NONE"
+      ],
+      "dataType": "enum",
+      "validValues": [
+        "STATEMENT",
+        "ROW",
+        "MIXED",
+        "NONE"
+      ]
+    },
+    {
+      "id": "wsrep_gtid_domain_id",
+      "name": "wsrep_gtid_domain_id",
+      "type": "when",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "0"
+      ],
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "wsrep_gtid_mode",
+      "name": "wsrep_gtid_mode",
+      "type": "automatically update the (joiner) node's",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_load_data_splitting",
+      "name": "wsrep_load_data_splitting",
+      "type": "if set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "ON"
+      ]
+    },
+    {
+      "id": "wsrep_log_conflicts",
+      "name": "wsrep_log_conflicts",
+      "type": "if set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_max_ws_rows",
+      "name": "wsrep_max_ws_rows",
+      "type": "maximum permitted number of rows per writeset. before",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [],
+      "range": {
+        "from": 0,
+        "to": 1048576
+      }
+    },
+    {
+      "id": "wsrep_max_ws_size",
+      "name": "wsrep_max_ws_size",
+      "type": "maximum permitted size in bytes per writeset. writesets exceeding this will be rejected. note that versions from and before",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [],
+      "range": {
+        "from": 1024,
+        "to": 2147483647
+      }
+    },
+    {
+      "id": "wsrep_mysql_replication_bundle",
+      "name": "wsrep_mysql_replication_bundle",
+      "type": "determines the number of replication events that are grouped together.  experimental implementation aimed to assist with bottlenecks when a single slave faces a large commit time delay. if set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "numeric",
+      "default": [
+        "0"
+      ],
+      "range": {
+        "from": 0,
+        "to": 1000
+      }
+    },
+    {
+      "id": "wsrep_node_address",
+      "name": "wsrep_node_address",
+      "type": "specifies the node's network address, in the format",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string",
+      "default": [
+        "eth0"
+      ]
+    },
+    {
+      "id": "wsrep_node_incoming_address",
+      "name": "wsrep_node_incoming_address",
+      "type": "this is the address from which the node listens for client connections. if an address is not specified or it's set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string",
+      "default": [
+        "AUTO"
+      ]
+    },
+    {
+      "id": "wsrep_node_name",
+      "name": "wsrep_node_name",
+      "type": "name of this node. this name can be used in",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "wsrep_notify_cmd",
+      "name": "wsrep_notify_cmd",
+      "type": "command to be executed each time the node state or the cluster membership changes. can be used for raising an alarm, configuring load balancers and so on. see the",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "wsrep_on",
+      "name": "wsrep_on",
+      "type": "whether or not wsrep replication is enabled. if set to",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF",
+        "ON"
+      ],
+      "validValues": [
+        "ON",
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_osu_method",
+      "name": "wsrep_OSU_method",
+      "type": "online schema upgrade method. the default is",
+      "scope": [
+        "global",
+        "session (since"
+      ],
+      "dynamic": true,
+      "dataType": "enum",
+      "default": [
+        "TOI"
+      ],
+      "validValues": [
+        "TOI",
+        "RSU"
+      ]
+    },
+    {
+      "id": "wsrep_patch_version",
+      "name": "wsrep_patch_version",
+      "type": "wsrep patch version, for example",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "wsrep_provider",
+      "name": "wsrep_provider",
+      "type": "location of the wsrep library.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "wsrep_provider_options",
+      "name": "wsrep_provider_options",
+      "type": "semicolon (;) separated list of wsrep options (see",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "wsrep_recover",
+      "name": "wsrep_recover",
+      "type": "used for recovering the global transaction id. if set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_reject_queries",
+      "name": "wsrep_reject_queries",
+      "type": "variable to set to reject queries from client connections, useful for maintenance. the node continues to apply write-sets, but an",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "enum",
+      "default": [
+        "NONE"
+      ],
+      "validValues": [
+        "NONE",
+        "ALL",
+        "ALL_KILL"
+      ]
+    },
+    {
+      "id": "wsrep_replicate_myisam",
+      "name": "wsrep_replicate_myisam",
+      "type": "whether or not dml updates for",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "default": [
+        "OFF"
+      ],
+      "dataType": "boolean",
+      "validValues": [
+        "ON",
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_restart_slave",
+      "name": "wsrep_restart_slave",
+      "type": "if set to on, the replication slave is restarted automatically, when node joins back to cluster.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "default": [
+        "OFF"
+      ],
+      "dataType": "boolean"
+    },
+    {
+      "id": "wsrep_retry_autocommit",
+      "name": "wsrep_retry_autocommit",
+      "type": "number of times autocommited queries will be retried due to cluster-wide conflicts before returning an error to the client. if set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "numeric",
+      "default": [
+        "1"
+      ],
+      "range": {
+        "from": 0,
+        "to": 10000
+      }
+    },
+    {
+      "id": "wsrep_slave_fk_checks",
+      "name": "wsrep_slave_FK_checks",
+      "type": "if set to on (the default), the applier slave thread performs foreign key constraint checks.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": []
+    },
+    {
+      "id": "wsrep_slave_threads",
+      "name": "wsrep_slave_threads",
+      "type": "number of threads used for applying slave writesets in parallel. galera parallel replication is only applied to transactions when safe to do so. if changed from the default (",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "1"
+      ],
+      "range": {
+        "from": 1,
+        "to": 512
+      }
+    },
+    {
+      "id": "wsrep_slave_uk_checks",
+      "name": "wsrep_slave_UK_checks",
+      "type": "if set to on, the applier slave thread performs secondary index uniqueness checks.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": []
+    },
+    {
+      "id": "wsrep_sst_auth",
+      "name": "wsrep_sst_auth",
+      "type": "username and password of the user to use for replication. unused if",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "wsrep_sst_donor",
+      "name": "wsrep_sst_donor",
+      "type": "comma-separated list (from 5.5.33) or name (as per",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "wsrep_sst_donor_rejects_queries",
+      "name": "wsrep_sst_donor_rejects_queries",
+      "type": "if set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "wsrep_sst_method",
+      "name": "wsrep_sst_method",
+      "type": "method used for taking the state snapshot transfer (sst). the command",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": [
+        "rsync"
+      ],
+      "validValues": [
+        "rsync",
+        "mysqldump",
+        "xtrabackup",
+        "xtrabackup-v2",
+        "mariabackup"
+      ]
+    },
+    {
+      "id": "wsrep_sst_receive_address",
+      "name": "wsrep_sst_receive_address",
+      "type": "this is the address where other nodes (donor) in the cluster connect to in order to send the state-transfer updates. if an address is not specified or its set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": [
+        "AUTO"
+      ]
+    },
+    {
+      "id": "wsrep_start_position",
+      "name": "wsrep_start_position",
+      "type": "uuid sequence number.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": [
+        " 00000000-0000-0000-0000-000000000000:-1"
+      ]
+    },
+    {
+      "id": "wsrep_sync_wait",
+      "name": "wsrep_sync_wait",
+      "type": "setting this variable ensures causality checks will take place before executing an operation of the type specified by the value, ensuring that the statement is executed on a fully synced node. while the check is taking place, new queries are blocked on the node to allow the server to catch up with all updates made in the cluster up to the point where the check was begun. once reached, the original query is executed on the node. this can result in higher latency. note that when",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "0"
+      ],
+      "range": {
+        "from": null
+      }
+    }
+  ]
+}

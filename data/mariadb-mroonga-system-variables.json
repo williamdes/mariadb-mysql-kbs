@@ -1,0 +1,286 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/",
+  "name": "mroonga-system-variables",
+  "data": [
+    {
+      "id": "mroonga_action_on_fulltext_query_error",
+      "name": "mroonga_action_on_fulltext_query_error",
+      "type": "action to take when encountering a mroonga fulltext error.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "enum",
+      "default": [
+        "ERROR_AND_LOG"
+      ]
+    },
+    {
+      "id": "mroonga_boolean_mode_syntax_flags",
+      "name": "mroonga_boolean_mode_syntax_flags",
+      "type": "flags to customize syntax in boolean mode searches. available flags:",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "enum",
+      "default": [
+        "DEFAULT"
+      ]
+    },
+    {
+      "id": "mroonga_database_path_prefix",
+      "name": "mroonga_database_path_prefix",
+      "type": "the database path prefix.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "mroonga_default_parser",
+      "name": "mroonga_default_parser",
+      "type": "the fulltext default parser, for example",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": [
+        "TokenBigram"
+      ]
+    },
+    {
+      "id": "mroonga_default_tokenizer",
+      "name": "mroonga_default_tokenizer",
+      "type": "the fulltext default parser, for example",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": [
+        "TokenBigram"
+      ]
+    },
+    {
+      "id": "mroonga_default_wrapper_engine",
+      "name": "mroonga_default_wrapper_engine",
+      "type": "the default engine for wrapper mode.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "mroonga_dry_write",
+      "name": "mroonga_dry_write",
+      "type": "if set to",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "off"
+      ]
+    },
+    {
+      "id": "mroonga_enable_operations_recording",
+      "name": "mroonga_enable_operations_recording",
+      "type": "whether recording operations for recovery to the groonga database is enabled (default) or not. requires reopening the database with",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "ON"
+      ]
+    },
+    {
+      "id": "mroonga_enable_optimization",
+      "name": "mroonga_enable_optimization",
+      "type": "if set to",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "on"
+      ]
+    },
+    {
+      "id": "mroonga_libgroonga_embedded",
+      "name": "mroonga_libgroonga_embedded",
+      "type": "whether libgroonga is embedded or not.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "boolean",
+      "default": [
+        "ON"
+      ]
+    },
+    {
+      "id": "mroonga_libgroonga_support_zlib",
+      "name": "mroonga_libgroonga_support_zlib",
+      "type": "whether libgroonga supports zlib or not.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "boolean",
+      "default": [
+        "ON"
+      ]
+    },
+    {
+      "id": "mroonga_libgroonga_support_zstd",
+      "name": "mroonga_libgroonga_support_zstd",
+      "type": "whether libgroonga supports zstd or not.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "mroonga_libgroonga_version",
+      "name": "mroonga_libgroonga_version",
+      "type": "groonga library version.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string"
+    },
+    {
+      "id": "mroonga_lock_timeout",
+      "name": "mroonga_lock_timeout",
+      "type": "lock timeout used in groonga.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "900000"
+      ],
+      "range": {
+        "from": -1,
+        "to": 2147483647
+      }
+    },
+    {
+      "id": "mroonga_log_file",
+      "name": "mroonga_log_file",
+      "type": "name and path of the mroonga log file.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": [
+        "groonga.log"
+      ]
+    },
+    {
+      "id": "mroonga_log_level",
+      "name": "mroonga_log_level",
+      "type": "mroonga log file output level, which determines what is logged. valid levels include:",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "enum",
+      "default": [
+        "NOTICE"
+      ]
+    },
+    {
+      "id": "mroonga_match_escalation_threshold",
+      "name": "mroonga_match_escalation_threshold",
+      "type": "the threshold to determine whether the match method is escalated.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "0"
+      ],
+      "range": {
+        "from": -1,
+        "to": 9223372036854776000
+      }
+    },
+    {
+      "id": "mroonga_max_n_records_for_estimate",
+      "name": "mroonga_max_n_records_for_estimate",
+      "type": "the max number of records to estimate the number of matched records",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "1000"
+      ],
+      "range": {
+        "from": -1,
+        "to": 2147483647
+      }
+    },
+    {
+      "id": "mroonga_query_log_file",
+      "name": "mroonga_query_log_file",
+      "type": "query log file for mroonga.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "mroonga_vector_column_delimiter",
+      "name": "mroonga_vector_column_delimiter",
+      "type": "delimiter to use when outputting a vector column. the default is a white space.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": [
+        " "
+      ]
+    },
+    {
+      "id": "mroonga_version",
+      "name": "mroonga_version",
+      "type": "mroonga version",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string"
+    }
+  ]
+}

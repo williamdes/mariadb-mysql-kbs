@@ -1,0 +1,132 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/cassandra/cassandra-system-variables/",
+  "name": "cassandra-system-variables",
+  "data": [
+    {
+      "id": "cassandra_default_thrift_host",
+      "name": "cassandra_default_thrift_host",
+      "type": "host to connect to, if not specified on per-table basis.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "string"
+    },
+    {
+      "id": "cassandra_failure_retries",
+      "name": "cassandra_failure_retries",
+      "type": "number of times to retry on timeout/unavailable failures.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "3"
+      ],
+      "validValues": [
+        "1",
+        "1073741824"
+      ]
+    },
+    {
+      "id": "cassandra_insert_batch_size",
+      "name": "cassandra_insert_batch_size",
+      "type": "insert batch size.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "100"
+      ],
+      "validValues": [
+        "1",
+        "1073741824"
+      ]
+    },
+    {
+      "id": "cassandra_multiget_batch_size",
+      "name": "cassandra_multiget_batch_size",
+      "type": "batched key access batch size.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "100"
+      ],
+      "validValues": [
+        "1",
+        "1073741824"
+      ]
+    },
+    {
+      "id": "cassandra_read_consistency",
+      "name": "cassandra_read_consistency",
+      "type": "consistency to use for reading. see",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "default": [
+        "ONE"
+      ],
+      "validValues": [
+        "ONE",
+        "TWO",
+        "THREE",
+        "ANY",
+        "ALL",
+        "QUORUM",
+        "EACH_QUORUM",
+        "LOCAL_QUORUM",
+        "\n"
+      ]
+    },
+    {
+      "id": "cassandra_rnd_batch_size",
+      "name": "cassandra_rnd_batch_size",
+      "type": "full table scan batch size.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "default": [
+        "10000"
+      ],
+      "validValues": [
+        "1",
+        "1073741824"
+      ]
+    },
+    {
+      "id": "cassandra_write_consistency",
+      "name": "cassandra_write_consistency",
+      "type": "consistency to use for writing. see",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "default": [
+        "ONE"
+      ],
+      "validValues": [
+        "ONE",
+        "TWO",
+        "THREE",
+        "ANY",
+        "ALL",
+        "QUORUM",
+        "EACH_QUORUM",
+        "LOCAL_QUORUM",
+        "\n"
+      ]
+    }
+  ]
+}

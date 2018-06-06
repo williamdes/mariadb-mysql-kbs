@@ -1,0 +1,199 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/",
+  "name": "connect-system-variables",
+  "data": [
+    {
+      "id": "connect_class_path",
+      "name": "connect_class_path",
+      "type": "java class path",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "connect_conv_size",
+      "name": "connect_conv_size",
+      "type": "the size of the",
+      "scope": [
+        "session (>"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "8192"
+      ],
+      "range": {
+        "from": 0,
+        "to": 65500
+      }
+    },
+    {
+      "id": "connect_enable_mongo",
+      "name": "connect_enable_mongo",
+      "type": "enable the",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": false,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "connect_exact_info",
+      "name": "connect_exact_info",
+      "type": "whether the connect engine should return an exact record number value to information queries. it is off by default because this information can take a very long time for large variable record length tables or for remote tables, especially if the remote server is not available. it can be set to on when exact values are desired, for instance when querying the repartition of rows in a partition table.",
+      "scope": [
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "connect_indx_map",
+      "name": "connect_indx_map",
+      "type": "enable file mapping for index files. to accelerate the indexing process, connect makes an index structure in memory from the index file. this can be done by reading the index file or using it as if it was in memory by “file mapping”. set to 0 (file read, the default) or 1 (file mapping).",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "boolean",
+      "default": [
+        "OFF"
+      ]
+    },
+    {
+      "id": "connect_java_wrapper",
+      "name": "connect_java_wrapper",
+      "type": "java wrapper.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": [
+        "wrappers/JdbcInterface"
+      ]
+    },
+    {
+      "id": "connect_json_grp_size",
+      "name": "connect_json_grp_size",
+      "type": "max number of rows for json aggregate functions.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "10"
+      ],
+      "range": {
+        "from": 1,
+        "to": 2147483647
+      }
+    },
+    {
+      "id": "connect_json_null",
+      "name": "connect_json_null",
+      "type": "representation of json null values.",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "string",
+      "default": [
+        "<null>"
+      ]
+    },
+    {
+      "id": "connect_jvm_path",
+      "name": "connect_jvm_path",
+      "type": "path to jvm library.",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "dataType": "string",
+      "default": []
+    },
+    {
+      "id": "connect_type_conv",
+      "name": "connect_type_conv",
+      "type": "determines the handling of",
+      "scope": [
+        "session (>"
+      ],
+      "dynamic": true,
+      "dataType": "enum",
+      "validValues": [
+        "NO",
+        "YES",
+        "SKIP"
+      ],
+      "default": [
+        "YES",
+        "NO"
+      ]
+    },
+    {
+      "id": "connect_use_tempfile",
+      "name": "connect_use_tempfile",
+      "type": "",
+      "scope": [
+        "session"
+      ],
+      "dynamic": true,
+      "dataType": "enum",
+      "default": [
+        "AUTO"
+      ]
+    },
+    {
+      "id": "connect_work_size",
+      "name": "connect_work_size",
+      "type": "size of the connect work area used for memory allocation. permits allocating a larger memory sub-allocation space when dealing with very large if sub-allocation fails. if the specified value is too big and memory allocation fails, the size of the work area remains but the variable value is not modified and should be reset.",
+      "scope": [
+        "global",
+        "session (session-only from connect 1.03.005)"
+      ],
+      "dynamic": true,
+      "dataType": "numeric",
+      "default": [
+        "67108864"
+      ],
+      "range": {
+        "from": 4194304,
+        "to": "upwards, depending on the physical memory size"
+      }
+    },
+    {
+      "id": "connect_xtrace",
+      "name": "connect_xtrace",
+      "type": "console trace value. set to",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "dataType": "set",
+      "default": [
+        "0"
+      ],
+      "validValues": [],
+      "range": {
+        "from": 0,
+        "to": 2147483647
+      }
+    }
+  ]
+}

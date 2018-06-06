@@ -1,0 +1,96 @@
+{
+  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/semisynchronous-replication-plugin-status-variables/",
+  "name": "semisynchronous-replication-plugin-status-variables",
+  "data": [
+    {
+      "id": "rpl_semi_sync_master_clients",
+      "name": "Rpl_semi_sync_master_clients",
+      "type": "number of semisynchronous slaves.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_net_avg_wait_time",
+      "name": "Rpl_semi_sync_master_net_avg_wait_time",
+      "type": "average time the master waited for a slave to reply, in microseconds.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_net_wait_time",
+      "name": "Rpl_semi_sync_master_net_wait_time",
+      "type": "total time the master waited for slave replies, in microseconds.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_net_waits",
+      "name": "Rpl_semi_sync_master_net_waits",
+      "type": "total number of times the master waited for slave replies.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_no_times",
+      "name": "Rpl_semi_sync_master_no_times",
+      "type": "number of times the master turned off semisynchronous replication.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_no_tx",
+      "name": "Rpl_semi_sync_master_no_tx",
+      "type": "number of commits that have not been successfully acknowledged by a slave.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_status",
+      "name": "Rpl_semi_sync_master_status",
+      "type": "whether or not semisynchronous replication is currently operating on the master. the value will be",
+      "dataType": "boolean"
+    },
+    {
+      "id": "rpl_semi_sync_master_timefunc_failures",
+      "name": "Rpl_semi_sync_master_timefunc_failures",
+      "type": "number of times the master failed when calling a time function, such as gettimeofday().",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_tx_avg_wait_time",
+      "name": "Rpl_semi_sync_master_tx_avg_wait_time",
+      "type": "average time the master waited for each transaction, in microseconds.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_tx_wait_time",
+      "name": "Rpl_semi_sync_master_tx_wait_time",
+      "type": "total time the master waited for transactions, in microseconds.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_tx_waits",
+      "name": "Rpl_semi_sync_master_tx_waits",
+      "type": "total number of times the master waited for transactions.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_wait_pos_backtraverse",
+      "name": "Rpl_semi_sync_master_wait_pos_backtraverse",
+      "type": "total number of times the master waited for an event that had binary coordinates lower than previous events waited for. occurs if the order in which transactions start waiting for a reply is different from the order in which their binary log events were written.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_wait_sessions",
+      "name": "Rpl_semi_sync_master_wait_sessions",
+      "type": "number of sessions that are currently waiting for slave replies.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_master_yes_tx",
+      "name": "Rpl_semi_sync_master_yes_tx",
+      "type": "number of commits that have been successfully acknowledged by a slave.",
+      "dataType": "numeric"
+    },
+    {
+      "id": "rpl_semi_sync_slave_status",
+      "name": "Rpl_semi_sync_slave_status",
+      "type": "whether or not semisynchronous replication is currently operating on the slave.",
+      "dataType": "boolean"
+    }
+  ]
+}

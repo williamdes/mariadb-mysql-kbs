@@ -184,7 +184,11 @@ const status = [
     'tokudb',
     'xtradbinnodb-server',
     'replication-and-binary-log',
-    'oqgraph-system-and'
+    'oqgraph-system-and',
+    'thread-pool-system-and',
+    'ssltls',
+    'mariadb-audit-plugin',
+    'semisynchronous-replication-plugin'
 ];
 status.forEach(statusName => {
     console.log("Parsing : ", statusName);
@@ -201,3 +205,26 @@ status.forEach(statusName => {
     });
 
 });
+
+
+const systemVariables = [
+    'xtradbinnodb-server',
+    'mariadb-audit-plugin'
+];
+
+systemVariables.forEach(systemVariableName => {
+    console.log("Parsing : ", systemVariableName);
+    console.log("URL : "+KB_URL+systemVariableName+'-system-variables/');
+    parsePage(
+        KB_URL+systemVariableName+'-system-variables/',
+        (data, url)=> {
+            let page = {
+                url: url,
+                name: systemVariableName+'-system-variables',
+                data: data,
+            };
+        writeJSON(path.join(__dirname, "../", "data", "mariadb-"+page.name+".json"), page);
+    });
+
+});
+

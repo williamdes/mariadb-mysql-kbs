@@ -6,6 +6,7 @@
       "id": "wsrep_auto_increment_control",
       "name": "wsrep_auto_increment_control",
       "type": "if set to",
+      "cli": "--wsrep-auto-increment-control[={0|1}]",
       "scope": [
         "global"
       ],
@@ -17,6 +18,7 @@
       "id": "wsrep_causal_reads",
       "name": "wsrep_causal_reads",
       "type": "if set to",
+      "cli": "--wsrep-causal-reads[={0|1}]",
       "scope": [
         "global",
         "session"
@@ -29,6 +31,7 @@
       "id": "wsrep_certify_nonpk",
       "name": "wsrep_certify_nonPK",
       "type": "when set to",
+      "cli": "--wsrep-certify-nonpk[={0|1}]",
       "scope": [
         "global"
       ],
@@ -40,6 +43,7 @@
       "id": "wsrep_cluster_address",
       "name": "wsrep_cluster_address",
       "type": "the addresses of cluster nodes to connect to when starting up, for example",
+      "cli": "--wsrep-cluster-address=value",
       "scope": [
         "global"
       ],
@@ -50,6 +54,7 @@
       "id": "wsrep_cluster_name",
       "name": "wsrep_cluster_name",
       "type": "the name of the cluster. nodes cannot connect to clusters with a different name, so needs to be identical on all nodes in the same cluster.",
+      "cli": "--wsrep-cluster-name=value",
       "scope": [
         "global"
       ],
@@ -61,6 +66,7 @@
       "id": "wsrep_convert_lock_to_trx",
       "name": "wsrep_convert_LOCK_to_trx",
       "type": "converts",
+      "cli": "--wsrep-convert-lock-to-trx[={0|1}]",
       "scope": [
         "global"
       ],
@@ -72,6 +78,7 @@
       "id": "wsrep_data_home_dir",
       "name": "wsrep_data_home_dir",
       "type": "directory where wsrep provider will store its internal files.",
+      "cli": "--wsrep-data-home-dir=value",
       "scope": [
         "global"
       ],
@@ -82,6 +89,7 @@
       "id": "wsrep_dbug_option",
       "name": "wsrep_dbug_option",
       "type": "used to pass the dbug options to the wsrep provider.",
+      "cli": "--wsrep-dbug-option=value",
       "scope": [
         "global"
       ],
@@ -92,6 +100,7 @@
       "id": "wsrep_debug",
       "name": "wsrep_debug",
       "type": "when set to",
+      "cli": "--wsrep-debug[={0|1}]",
       "scope": [
         "global"
       ],
@@ -103,6 +112,7 @@
       "id": "wsrep_desync",
       "name": "wsrep_desync",
       "type": "when set to",
+      "cli": "--wsrep-desync[={0|1}]",
       "scope": [
         "global"
       ],
@@ -114,6 +124,7 @@
       "id": "wsrep_dirty_reads",
       "name": "wsrep_dirty_reads",
       "type": "by default, when not synchronized with the group (",
+      "cli": "--wsrep-dirty-reads[={0|1}]",
       "scope": [
         "global",
         "session"
@@ -130,6 +141,7 @@
       "id": "wsrep_drupal_282555_workaround",
       "name": "wsrep_drupal_282555_workaround",
       "type": "if set to",
+      "cli": "--wsrep-drupal-282555-workaround[={0|1}]",
       "scope": [
         "global"
       ],
@@ -141,6 +153,7 @@
       "id": "wsrep_forced_binlog_format",
       "name": "wsrep_forced_binlog_format",
       "type": "a",
+      "cli": "--wsrep-forced-binlog-format=value",
       "scope": [
         "global"
       ],
@@ -158,6 +171,7 @@
       "id": "wsrep_gtid_domain_id",
       "name": "wsrep_gtid_domain_id",
       "type": "when",
+      "cli": "--wsrep-gtid-domain-id=#",
       "scope": [
         "global"
       ],
@@ -173,6 +187,7 @@
       "id": "wsrep_gtid_mode",
       "name": "wsrep_gtid_mode",
       "type": "automatically update the (joiner) node's",
+      "cli": "--wsrep-gtid-mode[={0|1}]",
       "scope": [
         "global"
       ],
@@ -184,6 +199,7 @@
       "id": "wsrep_load_data_splitting",
       "name": "wsrep_load_data_splitting",
       "type": "if set to",
+      "cli": "--wsrep-load-data-splitting[={0|1}]",
       "scope": [
         "global"
       ],
@@ -195,6 +211,7 @@
       "id": "wsrep_log_conflicts",
       "name": "wsrep_log_conflicts",
       "type": "if set to",
+      "cli": "--wsrep-log-conflicts[={0|1}]",
       "scope": [
         "global"
       ],
@@ -206,6 +223,7 @@
       "id": "wsrep_max_ws_rows",
       "name": "wsrep_max_ws_rows",
       "type": "maximum permitted number of rows per writeset. before",
+      "cli": "--wsrep-max-ws-rows=#",
       "scope": [
         "global"
       ],
@@ -220,6 +238,7 @@
       "id": "wsrep_max_ws_size",
       "name": "wsrep_max_ws_size",
       "type": "maximum permitted size in bytes per writeset. writesets exceeding this will be rejected. note that versions from and before",
+      "cli": "--wsrep-max-ws-size=#",
       "scope": [
         "global"
       ],
@@ -234,6 +253,7 @@
       "id": "wsrep_mysql_replication_bundle",
       "name": "wsrep_mysql_replication_bundle",
       "type": "determines the number of replication events that are grouped together.  experimental implementation aimed to assist with bottlenecks when a single slave faces a large commit time delay. if set to",
+      "cli": "--wsrep-mysql-replication-bundle=#",
       "scope": [
         "global"
       ],
@@ -249,6 +269,7 @@
       "id": "wsrep_node_address",
       "name": "wsrep_node_address",
       "type": "specifies the node's network address, in the format",
+      "cli": "--wsrep-node-address=value",
       "scope": [
         "global"
       ],
@@ -260,6 +281,7 @@
       "id": "wsrep_node_incoming_address",
       "name": "wsrep_node_incoming_address",
       "type": "this is the address from which the node listens for client connections. if an address is not specified or it's set to",
+      "cli": "--wsrep-node-incoming-address=value",
       "scope": [
         "global"
       ],
@@ -271,6 +293,7 @@
       "id": "wsrep_node_name",
       "name": "wsrep_node_name",
       "type": "name of this node. this name can be used in",
+      "cli": "--wsrep-node-name=value",
       "scope": [
         "global"
       ],
@@ -281,6 +304,7 @@
       "id": "wsrep_notify_cmd",
       "name": "wsrep_notify_cmd",
       "type": "command to be executed each time the node state or the cluster membership changes. can be used for raising an alarm, configuring load balancers and so on. see the",
+      "cli": "--wsrep-notify-command=value",
       "scope": [
         "global"
       ],
@@ -291,6 +315,7 @@
       "id": "wsrep_on",
       "name": "wsrep_on",
       "type": "whether or not wsrep replication is enabled. if set to",
+      "cli": "--wsrep-on[={0|1}]",
       "scope": [
         "global",
         "session"
@@ -307,6 +332,7 @@
       "id": "wsrep_osu_method",
       "name": "wsrep_OSU_method",
       "type": "online schema upgrade method. the default is",
+      "cli": "--wsrep-osu-method[=value]",
       "scope": [
         "global",
         "session (since"
@@ -323,6 +349,7 @@
       "id": "wsrep_patch_version",
       "name": "wsrep_patch_version",
       "type": "wsrep patch version, for example",
+      "cli": "none",
       "scope": [
         "global"
       ],
@@ -333,6 +360,7 @@
       "id": "wsrep_provider",
       "name": "wsrep_provider",
       "type": "location of the wsrep library.",
+      "cli": "--wsrep-provider=value",
       "scope": [
         "global"
       ],
@@ -343,6 +371,7 @@
       "id": "wsrep_provider_options",
       "name": "wsrep_provider_options",
       "type": "semicolon (;) separated list of wsrep options (see",
+      "cli": "--wsrep-provider-options=value",
       "scope": [
         "global"
       ],
@@ -353,6 +382,7 @@
       "id": "wsrep_recover",
       "name": "wsrep_recover",
       "type": "used for recovering the global transaction id. if set to",
+      "cli": "--wsrep-recover[={0|1}]",
       "scope": [
         "global"
       ],
@@ -364,6 +394,7 @@
       "id": "wsrep_reject_queries",
       "name": "wsrep_reject_queries",
       "type": "variable to set to reject queries from client connections, useful for maintenance. the node continues to apply write-sets, but an",
+      "cli": "--wsrep-reject-queries[=value]",
       "scope": [
         "global"
       ],
@@ -380,6 +411,7 @@
       "id": "wsrep_replicate_myisam",
       "name": "wsrep_replicate_myisam",
       "type": "whether or not dml updates for",
+      "cli": "--wsrep-replicate-myisam[={0|1}]",
       "scope": [
         "global"
       ],
@@ -395,6 +427,7 @@
       "id": "wsrep_restart_slave",
       "name": "wsrep_restart_slave",
       "type": "if set to on, the replication slave is restarted automatically, when node joins back to cluster.",
+      "cli": "--wsrep-restart-slave[={0|1}]",
       "scope": [
         "global"
       ],
@@ -406,6 +439,7 @@
       "id": "wsrep_retry_autocommit",
       "name": "wsrep_retry_autocommit",
       "type": "number of times autocommited queries will be retried due to cluster-wide conflicts before returning an error to the client. if set to",
+      "cli": "--wsrep-retry-autocommit=value",
       "scope": [
         "global"
       ],
@@ -421,6 +455,7 @@
       "id": "wsrep_slave_fk_checks",
       "name": "wsrep_slave_FK_checks",
       "type": "if set to on (the default), the applier slave thread performs foreign key constraint checks.",
+      "cli": "--wsrep-slave-fk-checks[={0|1}]",
       "scope": [
         "global"
       ],
@@ -431,6 +466,7 @@
       "id": "wsrep_slave_threads",
       "name": "wsrep_slave_threads",
       "type": "number of threads used for applying slave writesets in parallel. galera parallel replication is only applied to transactions when safe to do so. if changed from the default (",
+      "cli": "--wsrep-slave-threads=#",
       "scope": [
         "global"
       ],
@@ -446,6 +482,7 @@
       "id": "wsrep_slave_uk_checks",
       "name": "wsrep_slave_UK_checks",
       "type": "if set to on, the applier slave thread performs secondary index uniqueness checks.",
+      "cli": "--wsrep-slave-uk-checks[={0|1}]",
       "scope": [
         "global"
       ],
@@ -456,6 +493,7 @@
       "id": "wsrep_sst_auth",
       "name": "wsrep_sst_auth",
       "type": "username and password of the user to use for replication. unused if",
+      "cli": "--wsrep-sst-auth=value",
       "scope": [
         "global"
       ],
@@ -466,6 +504,7 @@
       "id": "wsrep_sst_donor",
       "name": "wsrep_sst_donor",
       "type": "comma-separated list (from 5.5.33) or name (as per",
+      "cli": "--wsrep-sst-donor=value",
       "scope": [
         "global"
       ],
@@ -476,6 +515,7 @@
       "id": "wsrep_sst_donor_rejects_queries",
       "name": "wsrep_sst_donor_rejects_queries",
       "type": "if set to",
+      "cli": "--wsrep-sst-donor-rejects-queries[={0|1}]",
       "scope": [
         "global"
       ],
@@ -487,6 +527,7 @@
       "id": "wsrep_sst_method",
       "name": "wsrep_sst_method",
       "type": "method used for taking the state snapshot transfer (sst). the command",
+      "cli": "--wsrep-sst-method=value",
       "scope": [
         "global"
       ],
@@ -505,6 +546,7 @@
       "id": "wsrep_sst_receive_address",
       "name": "wsrep_sst_receive_address",
       "type": "this is the address where other nodes (donor) in the cluster connect to in order to send the state-transfer updates. if an address is not specified or its set to",
+      "cli": "--wsrep-sst-receive-address=value",
       "scope": [
         "global"
       ],
@@ -516,6 +558,7 @@
       "id": "wsrep_start_position",
       "name": "wsrep_start_position",
       "type": "uuid sequence number.",
+      "cli": "--wsrep-start-position=value",
       "scope": [
         "global"
       ],
@@ -527,6 +570,7 @@
       "id": "wsrep_sync_wait",
       "name": "wsrep_sync_wait",
       "type": "setting this variable ensures causality checks will take place before executing an operation of the type specified by the value, ensuring that the statement is executed on a fully synced node. while the check is taking place, new queries are blocked on the node to allow the server to catch up with all updates made in the cluster up to the point where the check was begun. once reached, the original query is executed on the node. this can result in higher latency. note that when",
+      "cli": "--wsrep-sync-wait=#",
       "scope": [
         "global",
         "session"

@@ -6,6 +6,7 @@
       "id": "key_buffer_size",
       "name": "key_buffer_size",
       "type": "size of the buffer for the index blocks used by myisam tables and shared for all threads. see",
+      "cli": "--key-buffer-size=#",
       "scope": [
         "global"
       ],
@@ -21,6 +22,7 @@
       "id": "key_cache_age_threshold",
       "name": "key_cache_age_threshold",
       "type": "the lower the setting, the more quickly buffers move from the hot key cache sublist to the warm sublist.",
+      "cli": "--key-cache-age-threshold=#",
       "scope": [
         "global"
       ],
@@ -36,6 +38,7 @@
       "id": "key_cache_block_size",
       "name": "key_cache_block_size",
       "type": "",
+      "cli": "--key-cache-block-size=#",
       "scope": [
         "global"
       ],
@@ -51,6 +54,7 @@
       "id": "key_cache_division_limit",
       "name": "key_cache_division_limit",
       "type": "percentage to use for the warm key cache buffer list (the remainder is allocated between the hot and cold caches).",
+      "cli": "--key-cache-division-limit=#",
       "scope": [
         "global"
       ],
@@ -66,6 +70,7 @@
       "id": "key_cache_file_hash_size",
       "name": "key_cache_file_hash_size",
       "type": "number of hash buckets for open and changed files. if you have many myisam files open you should increase this for faster flushing of changes. a good value is probably 1/10th of the number of possible open myisam files.",
+      "cli": "--key-cache-file-hash-size=#",
       "scope": [
         "global"
       ],
@@ -81,6 +86,7 @@
       "id": "key_cache_segments",
       "name": "key_cache_segments",
       "type": "numeric",
+      "cli": "--key-cache-segments=#",
       "scope": [
         "global"
       ],
@@ -95,6 +101,7 @@
       "id": "myisam_block_size",
       "name": "myisam_block_size",
       "type": "block size to be used for myisam index pages.",
+      "cli": "--myisam-block-size=#",
       "scope": [
         "global"
       ],
@@ -106,6 +113,7 @@
       "id": "myisam_data_pointer_size",
       "name": "myisam_data_pointer_size",
       "type": "size in bytes of the default pointer, used in a",
+      "cli": "--myisam-data-pointer-size=#",
       "scope": [
         "global"
       ],
@@ -126,6 +134,7 @@
       "id": "myisam_max_sort_file_size",
       "name": "myisam_max_sort_file_size",
       "type": "maximum size in bytes of the temporary file used while recreating a myisam index. if the this size is exceeded, the slower process of using the key cache is done instead.",
+      "cli": "--myisam-max-sort-file-size=#",
       "scope": [
         "global"
       ],
@@ -136,6 +145,7 @@
       "id": "myisam_mmap_size",
       "name": "myisam_mmap_size",
       "type": "maximum memory in bytes that can be used for memory mapping compressed myisam files. too high a value may result in swapping if there are many compressed myisam tables.",
+      "cli": "--myisam-mmap-size=#",
       "scope": [
         "global",
         "session"
@@ -147,6 +157,7 @@
       "id": "myisam_recover_options",
       "name": "myisam_recover_options",
       "type": "myisam recovery mode. multiple options can be selected, comma-delimited. using no argument is equivalent to specifying",
+      "cli": "--myisam-recover-options[=name]",
       "scope": [
         "global"
       ],
@@ -165,6 +176,7 @@
       "id": "myisam_repair_threads",
       "name": "myisam_repair_threads",
       "type": "if set to more than",
+      "cli": "--myisam-repair-threads=#",
       "scope": [
         "global",
         "session"
@@ -177,6 +189,7 @@
       "id": "myisam_sort_buffer_size",
       "name": "myisam_sort_buffer_size",
       "type": "size in bytes of the buffer allocated when creating or sorting indexes on a myisam table.",
+      "cli": "--myisam-sort-buffer-size=#",
       "scope": [
         "global",
         "session"
@@ -193,6 +206,7 @@
       "id": "myisam_stats_method",
       "name": "myisam_stats_method",
       "type": "determines how nulls are treated for",
+      "cli": "--myisam-stats-method=name",
       "scope": [
         "global",
         "session"
@@ -210,6 +224,7 @@
       "id": "myisam_use_mmap",
       "name": "myisam_use_mmap",
       "type": "if set to",
+      "cli": "--myisam-use-mmap",
       "scope": [
         "global"
       ],

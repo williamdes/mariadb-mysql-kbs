@@ -1110,6 +1110,7 @@
       "id": "spider_skip_parallel_search",
       "name": "spider_skip_parallel_search",
       "type": "whether to skip parallel search by specific conditions.",
+      "cli": "--spider-skip-parallel-search=#",
       "scope": [
         "session"
       ],
@@ -1139,6 +1140,7 @@
       "id": "spider_store_last_crd",
       "name": "spider_store_last_crd",
       "type": "stores last crd result in the system table.",
+      "cli": "--spider-store-last-crd=#",
       "scope": [
         "global"
       ],
@@ -1153,6 +1155,7 @@
       "id": "spider_store_last_sts",
       "name": "spider_store_last_sts",
       "type": "stores last sts result into system table.",
+      "cli": "--spider-store-last-sts=#",
       "scope": [
         "global"
       ],
@@ -1267,6 +1270,7 @@
       "id": "spider_table_crd_thread_count",
       "name": "spider_table_crd_thread_count",
       "type": "static thread count of table crd.",
+      "cli": "--spider-table-crd-thread-count=#",
       "scope": [
         "global"
       ],
@@ -1297,6 +1301,7 @@
       "id": "spider_table_sts_thread_count",
       "name": "spider_table_sts_thread_count",
       "type": "static thread count of table sts.",
+      "cli": "--spider-table-sts-thread-count=#",
       "scope": [
         "global"
       ],

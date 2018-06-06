@@ -4,6 +4,7 @@
   "data": [
     {
       "id": "replication-options",
+      "cli": "--server-id=#",
       "name": "server_id",
       "scope": [
         "global"
@@ -26,6 +27,7 @@
     },
     {
       "id": "option_mysqld_show-slave-auth-info",
+      "cli": "--show-slave-auth-info",
       "type": "boolean",
       "default": "false"
     },
@@ -129,6 +131,7 @@
     },
     {
       "id": "option_mysqld_log-slave-updates",
+      "cli": "--log-slave-updates",
       "name": "log_slave_updates",
       "scope": [
         "global"
@@ -138,14 +141,17 @@
     },
     {
       "id": "option_mysqld_master-info-file",
+      "cli": "--master-info-file=file_name",
       "type": "file name",
       "default": "master.info"
     },
     {
-      "id": "option_mysqld_master-retry-count"
+      "id": "option_mysqld_master-retry-count",
+      "cli": "--master-retry-count=#"
     },
     {
       "id": "option_mysqld_max-relay-log-size",
+      "cli": "--max-relay-log-size=#",
       "name": "max_relay_log_size",
       "scope": [
         "global"
@@ -160,6 +166,7 @@
     },
     {
       "id": "option_mysqld_relay-log",
+      "cli": "--relay-log=file_name",
       "name": "relay_log",
       "scope": [
         "global"
@@ -169,6 +176,7 @@
     },
     {
       "id": "option_mysqld_relay-log-index",
+      "cli": "--relay-log-index=file_name",
       "name": "relay_log_index",
       "scope": [
         "global"
@@ -178,11 +186,13 @@
     },
     {
       "id": "option_mysqld_relay-log-info-file",
+      "cli": "--relay-log-info-file=file_name",
       "type": "file name",
       "default": "relay-log.info"
     },
     {
       "id": "option_mysqld_relay-log-purge",
+      "cli": "--relay-log-purge",
       "name": "relay_log_purge",
       "scope": [
         "global"
@@ -193,11 +203,13 @@
     },
     {
       "id": "option_mysqld_relay-log-recovery",
+      "cli": "--relay-log-recovery",
       "type": "boolean",
       "default": "false"
     },
     {
       "id": "option_mysqld_relay-log-space-limit",
+      "cli": "--relay-log-space-limit=#",
       "name": "relay_log_space_limit",
       "scope": [
         "global"
@@ -206,39 +218,48 @@
     },
     {
       "id": "option_mysqld_replicate-do-db",
+      "cli": "--replicate-do-db=name",
       "type": "string"
     },
     {
       "id": "option_mysqld_replicate-ignore-db",
+      "cli": "--replicate-ignore-db=name",
       "type": "string"
     },
     {
       "id": "option_mysqld_replicate-do-table",
+      "cli": "--replicate-do-table=name",
       "type": "string"
     },
     {
       "id": "option_mysqld_replicate-ignore-table",
+      "cli": "--replicate-ignore-table=name",
       "type": "string"
     },
     {
       "id": "option_mysqld_replicate-rewrite-db",
+      "cli": "--replicate-rewrite-db=old_name->new_name",
       "type": "string"
     },
     {
       "id": "option_mysqld_replicate-same-server-id",
+      "cli": "--replicate-same-server-id",
       "type": "boolean",
       "default": "false"
     },
     {
       "id": "option_mysqld_replicate-wild-do-table",
+      "cli": "--replicate-wild-do-table=name",
       "type": "string"
     },
     {
       "id": "option_mysqld_replicate-wild-ignore-table",
+      "cli": "--replicate-wild-ignore-table=name",
       "type": "string"
     },
     {
       "id": "option_mysqld_report-host",
+      "cli": "--report-host=host_name",
       "name": "report_host",
       "scope": [
         "global"
@@ -248,6 +269,7 @@
     },
     {
       "id": "option_mysqld_report-password",
+      "cli": "--report-password=name",
       "name": "report_password",
       "scope": [
         "global"
@@ -257,6 +279,7 @@
     },
     {
       "id": "option_mysqld_report-port",
+      "cli": "--report-port=#",
       "name": "report_port",
       "scope": [
         "global"
@@ -271,6 +294,7 @@
     },
     {
       "id": "option_mysqld_report-user",
+      "cli": "--report-user=name",
       "name": "report_user",
       "scope": [
         "global"
@@ -280,6 +304,7 @@
     },
     {
       "id": "option_mysqld_slave-checkpoint-group",
+      "cli": "--slave-checkpoint-group=#",
       "type": "integer",
       "default": "512",
       "range": {
@@ -289,6 +314,7 @@
     },
     {
       "id": "option_mysqld_slave-checkpoint-period",
+      "cli": "--slave-checkpoint-period=#",
       "type": "integer",
       "default": "300",
       "range": {
@@ -298,6 +324,7 @@
     },
     {
       "id": "option_mysqld_slave-parallel-workers",
+      "cli": "--slave-parallel-workers=#",
       "type": "integer",
       "default": "0",
       "range": {
@@ -307,6 +334,7 @@
     },
     {
       "id": "option_mysqld_slave-pending-jobs-size-max",
+      "cli": "--slave-pending-jobs-size-max=#",
       "type": "integer",
       "default": "16m",
       "range": {
@@ -316,11 +344,13 @@
     },
     {
       "id": "option_mysqld_skip-slave-start",
+      "cli": "--skip-slave-start",
       "type": "boolean",
       "default": "false"
     },
     {
       "id": "option_mysqld_slave_compressed_protocol",
+      "cli": "--slave-compressed-protocol",
       "name": "slave_compressed_protocol",
       "scope": [
         "global"
@@ -331,6 +361,7 @@
     },
     {
       "id": "option_mysqld_slave-load-tmpdir",
+      "cli": "--slave-load-tmpdir=dir_name",
       "name": "slave_load_tmpdir",
       "scope": [
         "global"
@@ -341,6 +372,7 @@
     },
     {
       "id": "option_mysqld_slave-max-allowed-packet",
+      "cli": "--slave-max-allowed-packet=#",
       "type": "integer",
       "default": "1073741824",
       "range": {
@@ -350,6 +382,7 @@
     },
     {
       "id": "option_mysqld_slave-net-timeout",
+      "cli": "--slave-net-timeout=#",
       "name": "slave_net_timeout",
       "scope": [
         "global"
@@ -363,6 +396,7 @@
     },
     {
       "id": "option_mysqld_slave-parallel-type",
+      "cli": "--slave-parallel-type=type",
       "type": "enumeration",
       "default": "database",
       "validValues": [
@@ -372,6 +406,7 @@
     },
     {
       "id": "option_mysqld_slave-rows-search-algorithms",
+      "cli": "--slave-rows-search-algorithms=list",
       "type": "set",
       "validValues": [
         "TABLE_SCAN,INDEX_SCAN",
@@ -382,6 +417,7 @@
     },
     {
       "id": "option_mysqld_slave-skip-errors",
+      "cli": "--slave-skip-errors=name",
       "name": "slave_skip_errors",
       "scope": [
         "global"
@@ -398,6 +434,7 @@
     },
     {
       "id": "option_mysqld_slave-sql-verify-checksum",
+      "cli": "--slave-sql-verify-checksum=value",
       "type": "boolean",
       "default": "1",
       "validValues": [
@@ -407,6 +444,7 @@
     },
     {
       "id": "option_mysqld_abort-slave-event-count",
+      "cli": "--abort-slave-event-count=#",
       "type": "integer",
       "default": "0",
       "range": {
@@ -415,11 +453,13 @@
     },
     {
       "id": "option_mysqld_disconnect-slave-event-count",
+      "cli": "--disconnect-slave-event-count=#",
       "type": "integer",
       "default": "0"
     },
     {
       "id": "option_mysqld_master-info-repository",
+      "cli": "--master-info-repository=FILE|TABLE",
       "type": "string",
       "validValues": [
         "FILE",
@@ -428,6 +468,7 @@
     },
     {
       "id": "option_mysqld_relay-log-info-repository",
+      "cli": "--relay-log-info-repository=FILE|TABLE",
       "type": "string",
       "validValues": [
         "FILE",
@@ -436,6 +477,7 @@
     },
     {
       "id": "sysvar_init_slave",
+      "cli": "--init-slave=name",
       "name": "init_slave",
       "scope": [
         "global"
@@ -455,6 +497,7 @@
     },
     {
       "id": "sysvar_master_info_repository",
+      "cli": "--master-info-repository=FILE|TABLE",
       "name": "master_info_repository",
       "scope": [
         "global"
@@ -468,6 +511,7 @@
     },
     {
       "id": "sysvar_max_relay_log_size",
+      "cli": "--max-relay-log-size=#",
       "name": "max_relay_log_size",
       "scope": [
         "global"
@@ -482,6 +526,7 @@
     },
     {
       "id": "sysvar_relay_log",
+      "cli": "--relay-log=file_name",
       "name": "relay_log",
       "scope": [
         "global"
@@ -501,6 +546,7 @@
     },
     {
       "id": "sysvar_relay_log_index",
+      "cli": "--relay-log-index",
       "name": "relay_log_index",
       "scope": [
         "global"
@@ -511,6 +557,7 @@
     },
     {
       "id": "sysvar_relay_log_info_file",
+      "cli": "--relay-log-info-file=file_name",
       "name": "relay_log_info_file",
       "scope": [
         "global"
@@ -534,6 +581,7 @@
     },
     {
       "id": "sysvar_relay_log_purge",
+      "cli": "--relay-log-purge",
       "name": "relay_log_purge",
       "scope": [
         "global"
@@ -544,6 +592,7 @@
     },
     {
       "id": "sysvar_relay_log_recovery",
+      "cli": "--relay-log-recovery",
       "name": "relay_log_recovery",
       "scope": [
         "global"
@@ -554,6 +603,7 @@
     },
     {
       "id": "sysvar_relay_log_space_limit",
+      "cli": "--relay-log-space-limit=#",
       "name": "relay_log_space_limit",
       "scope": [
         "global"
@@ -562,6 +612,7 @@
     },
     {
       "id": "sysvar_report_host",
+      "cli": "--report-host=host_name",
       "name": "report_host",
       "scope": [
         "global"
@@ -571,6 +622,7 @@
     },
     {
       "id": "sysvar_report_password",
+      "cli": "--report-password=name",
       "name": "report_password",
       "scope": [
         "global"
@@ -580,6 +632,7 @@
     },
     {
       "id": "sysvar_report_port",
+      "cli": "--report-port=#",
       "name": "report_port",
       "scope": [
         "global"
@@ -594,6 +647,7 @@
     },
     {
       "id": "sysvar_report_user",
+      "cli": "--report-user=name",
       "name": "report_user",
       "scope": [
         "global"
@@ -603,6 +657,7 @@
     },
     {
       "id": "sysvar_rpl_read_size",
+      "cli": "--rpl-read-size=#",
       "name": "rpl_read_size",
       "scope": [
         "global"
@@ -637,6 +692,7 @@
     },
     {
       "id": "sysvar_rpl_stop_slave_timeout",
+      "cli": "--rpl-stop-slave-timeout=seconds",
       "name": "rpl_stop_slave_timeout",
       "scope": [
         "global"
@@ -651,6 +707,7 @@
     },
     {
       "id": "sysvar_slave_allow_batching",
+      "cli": "--slave-allow-batching",
       "name": "slave_allow_batching",
       "scope": [
         "global"
@@ -661,6 +718,7 @@
     },
     {
       "id": "sysvar_slave_checkpoint_group",
+      "cli": "--slave-checkpoint-group=#",
       "name": "slave_checkpoint_group=#",
       "scope": [
         "global"
@@ -675,6 +733,7 @@
     },
     {
       "id": "sysvar_slave_checkpoint_period",
+      "cli": "--slave-checkpoint-period=#",
       "name": "slave_checkpoint_period=#",
       "scope": [
         "global"
@@ -689,6 +748,7 @@
     },
     {
       "id": "sysvar_slave_compressed_protocol",
+      "cli": "--slave-compressed-protocol",
       "name": "slave_compressed_protocol",
       "scope": [
         "global"
@@ -699,6 +759,7 @@
     },
     {
       "id": "sysvar_slave_exec_mode",
+      "cli": "--slave-exec-mode=mode",
       "name": "slave_exec_mode",
       "scope": [
         "global"
@@ -713,6 +774,7 @@
     },
     {
       "id": "sysvar_slave_load_tmpdir",
+      "cli": "--slave-load-tmpdir=dir_name",
       "name": "slave_load_tmpdir",
       "scope": [
         "global"
@@ -737,6 +799,7 @@
     },
     {
       "id": "sysvar_slave_net_timeout",
+      "cli": "--slave-net-timeout=#",
       "name": "slave_net_timeout",
       "scope": [
         "global"
@@ -750,6 +813,7 @@
     },
     {
       "id": "sysvar_slave_parallel_type",
+      "cli": "--slave-parallel-type=type",
       "type": "enumeration",
       "default": "database",
       "validValues": [
@@ -759,6 +823,7 @@
     },
     {
       "id": "sysvar_slave_parallel_workers",
+      "cli": "--slave-parallel-workers=#",
       "name": "slave_parallel_workers",
       "scope": [
         "global"
@@ -787,6 +852,7 @@
     },
     {
       "id": "sysvar_slave_preserve_commit_order",
+      "cli": "--slave-preserve-commit-order=value",
       "name": "slave_preserve_commit_order",
       "scope": [
         "global"
@@ -816,6 +882,7 @@
     },
     {
       "id": "sysvar_slave_skip_errors",
+      "cli": "--slave-skip-errors=name",
       "name": "slave_skip_errors",
       "scope": [
         "global"
@@ -846,6 +913,7 @@
     },
     {
       "id": "sysvar_slave_transaction_retries",
+      "cli": "--slave-transaction-retries=#",
       "name": "slave_transaction_retries",
       "scope": [
         "global"
@@ -854,6 +922,7 @@
     },
     {
       "id": "sysvar_slave_type_conversions",
+      "cli": "--slave-type-conversions=set",
       "name": "slave_type_conversions",
       "scope": [
         "global"
@@ -879,6 +948,7 @@
     },
     {
       "id": "sysvar_sync_master_info",
+      "cli": "--sync-master-info=#",
       "name": "sync_master_info",
       "scope": [
         "global"
@@ -887,6 +957,7 @@
     },
     {
       "id": "sysvar_sync_relay_log",
+      "cli": "--sync-relay-log=#",
       "name": "sync_relay_log",
       "scope": [
         "global"
@@ -895,6 +966,7 @@
     },
     {
       "id": "sysvar_sync_relay_log_info",
+      "cli": "--sync-relay-log-info=#",
       "name": "sync_relay_log_info",
       "scope": [
         "global"
@@ -902,15 +974,18 @@
       "dynamic": true
     },
     {
-      "id": "option_mysqld_binlog-row-event-max-size"
+      "id": "option_mysqld_binlog-row-event-max-size",
+      "cli": "--binlog-row-event-max-size=#"
     },
     {
       "id": "option_mysqld_binlog-rows-query-log-events",
+      "cli": "--binlog-rows-query-log-events",
       "type": "boolean",
       "default": "false"
     },
     {
       "id": "option_mysqld_log-bin",
+      "cli": "--log-bin",
       "name": "log_bin",
       "scope": [
         "global"
@@ -920,10 +995,12 @@
     },
     {
       "id": "option_mysqld_log-bin-index",
+      "cli": "--log-bin-index=file_name",
       "type": "file name"
     },
     {
       "id": "option_mysqld_log-bin-trust-function-creators",
+      "cli": "--log-bin-trust-function-creators",
       "name": "log_bin_trust_function_creators",
       "scope": [
         "global"
@@ -934,6 +1011,7 @@
     },
     {
       "id": "option_mysqld_log-bin-use-v1-row-events",
+      "cli": "--log-bin-use-v1-row-events[={0|1}]",
       "name": "log_bin_use_v1_row_events",
       "scope": [
         "global"
@@ -944,14 +1022,17 @@
     },
     {
       "id": "option_mysqld_binlog-do-db",
+      "cli": "--binlog-do-db=name",
       "type": "string"
     },
     {
       "id": "option_mysqld_binlog-ignore-db",
+      "cli": "--binlog-ignore-db=name",
       "type": "string"
     },
     {
       "id": "option_mysqld_binlog-checksum",
+      "cli": "--binlog-checksum=type",
       "type": "string",
       "default": "crc32",
       "validValues": [
@@ -961,21 +1042,25 @@
     },
     {
       "id": "option_mysqld_master-verify-checksum",
+      "cli": "--master-verify-checksum=name",
       "type": "boolean",
       "default": "off"
     },
     {
       "id": "option_mysqld_max-binlog-dump-events",
+      "cli": "--max-binlog-dump-events=#",
       "type": "integer",
       "default": "0"
     },
     {
       "id": "option_mysqld_sporadic-binlog-dump-fail",
+      "cli": "--sporadic-binlog-dump-fail",
       "type": "boolean",
       "default": "false"
     },
     {
       "id": "sysvar_binlog_cache_size",
+      "cli": "--binlog-cache-size=#",
       "name": "binlog_cache_size",
       "scope": [
         "global"
@@ -998,6 +1083,7 @@
     },
     {
       "id": "sysvar_binlog_direct_non_transactional_updates",
+      "cli": "--binlog-direct-non-transactional-updates[=value]",
       "name": "binlog_direct_non_transactional_updates",
       "scope": [
         "global",
@@ -1009,6 +1095,7 @@
     },
     {
       "id": "sysvar_binlog_error_action",
+      "cli": "--binlog-error-action[=value]",
       "name": "binlog_error_action",
       "scope": [
         "global"
@@ -1023,6 +1110,7 @@
     },
     {
       "id": "sysvar_binlog_expire_logs_seconds",
+      "cli": "--binlog-expire-logs-seconds=#",
       "name": "binlog_expire_logs_seconds",
       "scope": [
         "global"
@@ -1031,6 +1119,7 @@
     },
     {
       "id": "sysvar_binlog_format",
+      "cli": "--binlog-format=format",
       "name": "binlog_format",
       "scope": [
         "global",
@@ -1047,6 +1136,7 @@
     },
     {
       "id": "sysvar_binlog_group_commit_sync_delay",
+      "cli": "--binlog-group-commit-sync-delay=#",
       "name": "binlog_group_commit_sync_delay",
       "scope": [
         "global"
@@ -1061,6 +1151,7 @@
     },
     {
       "id": "sysvar_binlog_group_commit_sync_no_delay_count",
+      "cli": "--binlog-group-commit-sync-no-delay-count=#",
       "name": "binlog_group_commit_sync_no_delay_count",
       "scope": [
         "global"
@@ -1099,6 +1190,7 @@
     },
     {
       "id": "sysvar_binlog_row_image",
+      "cli": "--binlog-row-image=image_type",
       "name": "binlog_row_image=image_type",
       "scope": [
         "global",
@@ -1115,6 +1207,7 @@
     },
     {
       "id": "sysvar_binlog_row_metadata",
+      "cli": "--binlog-row-metadata=metadata_type",
       "name": "binlog_row_metadata=metadata_type",
       "scope": [
         "global"
@@ -1129,6 +1222,7 @@
     },
     {
       "id": "sysvar_binlog_row_value_options",
+      "cli": "--binlog-row-value-options=#",
       "name": "binlog_row_value_options",
       "scope": [
         "global",
@@ -1143,6 +1237,7 @@
     },
     {
       "id": "sysvar_binlog_rows_query_log_events",
+      "cli": "--binlog-rows-query-log-events",
       "name": "binlog_rows_query_log_events",
       "scope": [
         "global",
@@ -1154,6 +1249,7 @@
     },
     {
       "id": "sysvar_binlog_stmt_cache_size",
+      "cli": "--binlog-stmt-cache-size=#",
       "name": "binlog_stmt_cache_size",
       "scope": [
         "global"
@@ -1162,6 +1258,7 @@
     },
     {
       "id": "sysvar_binlog_transaction_dependency_tracking",
+      "cli": "--binlog-transaction-dependency-tracking=value",
       "name": "binlog_transaction_dependency_tracking",
       "scope": [
         "global"
@@ -1177,6 +1274,7 @@
     },
     {
       "id": "sysvar_binlog_transaction_dependency_history_size",
+      "cli": "--binlog-transaction-dependency-history-size=#",
       "name": "binlog_transaction_dependency_history_size",
       "scope": [
         "global"
@@ -1191,6 +1289,7 @@
     },
     {
       "id": "sysvar_expire_logs_days",
+      "cli": "--expire-logs-days=#",
       "name": "expire_logs_days",
       "scope": [
         "global"
@@ -1225,6 +1324,7 @@
     },
     {
       "id": "sysvar_log_bin_trust_function_creators",
+      "cli": "--log-bin-trust-function-creators",
       "name": "log_bin_trust_function_creators",
       "scope": [
         "global"
@@ -1235,6 +1335,7 @@
     },
     {
       "id": "sysvar_log_bin_use_v1_row_events",
+      "cli": "--log-bin-use-v1-row-events[={0|1}]",
       "name": "log_bin_use_v1_row_events",
       "scope": [
         "global"
@@ -1245,6 +1346,7 @@
     },
     {
       "id": "sysvar_log_builtin_as_identified_by_password",
+      "cli": "--log-builtin-as-identified-by-password[={OFF|ON}]",
       "name": "log_builtin_as_identified_by_password",
       "scope": [
         "global"
@@ -1255,6 +1357,7 @@
     },
     {
       "id": "sysvar_log_slave_updates",
+      "cli": "--log-slave-updates",
       "name": "log_slave_updates",
       "scope": [
         "global"
@@ -1284,6 +1387,7 @@
     },
     {
       "id": "sysvar_max_binlog_cache_size",
+      "cli": "--max-binlog-cache-size=#",
       "name": "max_binlog_cache_size",
       "scope": [
         "global"
@@ -1298,6 +1402,7 @@
     },
     {
       "id": "sysvar_max_binlog_size",
+      "cli": "--max-binlog-size=#",
       "name": "max_binlog_size",
       "scope": [
         "global"
@@ -1312,6 +1417,7 @@
     },
     {
       "id": "sysvar_max_binlog_stmt_cache_size",
+      "cli": "--max-binlog-stmt-cache-size=#",
       "name": "max_binlog_stmt_cache_size",
       "scope": [
         "global"
@@ -1343,6 +1449,7 @@
     },
     {
       "id": "sysvar_sync_binlog",
+      "cli": "--sync-binlog=#",
       "name": "sync_binlog",
       "scope": [
         "global"
@@ -1357,6 +1464,7 @@
     },
     {
       "id": "sysvar_transaction_write_set_extraction",
+      "cli": "--transaction-write-set-extraction=[value]",
       "name": "transaction_write_set_extraction",
       "scope": [
         "global",
@@ -1373,6 +1481,7 @@
     },
     {
       "id": "option_mysqld_enforce-gtid-consistency",
+      "cli": "--enforce-gtid-consistency[=value]",
       "name": "enforce_gtid_consistency",
       "scope": [
         "global"
@@ -1388,6 +1497,7 @@
     },
     {
       "id": "option_mysqld_executed-gtids-compression-period",
+      "cli": "--executed-gtids-compression-period=#",
       "type": "integer",
       "default": "1000",
       "range": {
@@ -1397,6 +1507,7 @@
     },
     {
       "id": "option_mysqld_gtid-mode",
+      "cli": "--gtid-mode=MODE",
       "name": "gtid_mode",
       "scope": [
         "global"
@@ -1413,6 +1524,7 @@
     },
     {
       "id": "option_mysqld_gtid-executed-compression-period",
+      "cli": "--gtid-executed-compression-period=#",
       "type": "integer",
       "default": "1000",
       "range": {
@@ -1422,6 +1534,7 @@
     },
     {
       "id": "sysvar_binlog_gtid_simple_recovery",
+      "cli": "--binlog-gtid-simple-recovery",
       "name": "binlog_gtid_simple_recovery",
       "scope": [
         "global"
@@ -1432,6 +1545,7 @@
     },
     {
       "id": "sysvar_enforce_gtid_consistency",
+      "cli": "--enforce-gtid-consistency[=value]",
       "name": "enforce_gtid_consistency",
       "scope": [
         "global"
@@ -1535,6 +1649,7 @@
     },
     {
       "id": "sysvar_simplified_binlog_gtid_recovery",
+      "cli": "--simplified-binlog-gtid-recovery",
       "name": "simplified_binlog_gtid_recovery",
       "scope": [
         "global"

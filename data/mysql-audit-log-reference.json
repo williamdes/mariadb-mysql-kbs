@@ -1,0 +1,218 @@
+{
+  "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html",
+  "name": "audit-log-reference",
+  "data": [
+    {
+      "id": "option_mysqld_audit-log",
+      "cli": "--audit-log[=value]",
+      "type": "enumeration",
+      "default": "on",
+      "validValues": [
+        "ON",
+        "OFF",
+        "FORCE",
+        "FORCE_PLUS_PERMANENT"
+      ]
+    },
+    {
+      "id": "sysvar_audit_log_buffer_size",
+      "cli": "--audit-log-buffer-size=value",
+      "name": "audit_log_buffer_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false
+    },
+    {
+      "id": "sysvar_audit_log_compression",
+      "cli": "--audit-log-compression=value",
+      "name": "audit_log_compression",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "enumeration",
+      "default": "none",
+      "validValues": [
+        "NONE",
+        "GZIP"
+      ]
+    },
+    {
+      "id": "sysvar_audit_log_connection_policy",
+      "cli": "--audit-log-connection-policy=value",
+      "name": "audit_log_connection_policy",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "all",
+      "validValues": [
+        "ALL",
+        "ERRORS",
+        "NONE"
+      ]
+    },
+    {
+      "id": "sysvar_audit_log_current_session",
+      "name": "audit_log_current_session",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": false,
+      "type": "boolean",
+      "default": "depends on filtering policy"
+    },
+    {
+      "id": "sysvar_audit_log_encryption",
+      "cli": "--audit-log-encryption=value",
+      "name": "audit_log_encryption",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "enumeration",
+      "default": "none",
+      "validValues": [
+        "NONE",
+        "AES"
+      ]
+    },
+    {
+      "id": "sysvar_audit_log_exclude_accounts",
+      "cli": "--audit-log-exclude-accounts=value",
+      "name": "audit_log_exclude_accounts",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "string",
+      "default": "null"
+    },
+    {
+      "id": "sysvar_audit_log_file",
+      "cli": "--audit-log-file=file_name",
+      "name": "audit_log_file",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "file name",
+      "default": "audit.log"
+    },
+    {
+      "id": "sysvar_audit_log_filter_id",
+      "name": "audit_log_filter_id",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": false,
+      "type": "integer"
+    },
+    {
+      "id": "sysvar_audit_log_flush",
+      "name": "audit_log_flush",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "sysvar_audit_log_format",
+      "cli": "--audit-log-format=value",
+      "name": "audit_log_format",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "enumeration",
+      "default": "new",
+      "validValues": [
+        "OLD",
+        "NEW",
+        "JSON"
+      ]
+    },
+    {
+      "id": "sysvar_audit_log_include_accounts",
+      "cli": "--audit-log-include-accounts=value",
+      "name": "audit_log_include_accounts",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "string",
+      "default": "null"
+    },
+    {
+      "id": "sysvar_audit_log_policy",
+      "cli": "--audit-log-policy=value",
+      "name": "audit_log_policy",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "enumeration",
+      "default": "all",
+      "validValues": [
+        "ALL",
+        "LOGINS",
+        "QUERIES",
+        "NONE"
+      ]
+    },
+    {
+      "id": "sysvar_audit_log_read_buffer_size",
+      "cli": "--audit-log-read-buffer-size=#"
+    },
+    {
+      "id": "sysvar_audit_log_rotate_on_size",
+      "cli": "--audit-log-rotate-on-size=N",
+      "name": "audit_log_rotate_on_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "id": "sysvar_audit_log_statement_policy",
+      "cli": "--audit-log-statement-policy=value",
+      "name": "audit_log_statement_policy",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "all",
+      "validValues": [
+        "ALL",
+        "ERRORS",
+        "NONE"
+      ]
+    },
+    {
+      "id": "sysvar_audit_log_strategy",
+      "cli": "--audit-log-strategy=value",
+      "name": "audit_log_strategy",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "enumeration",
+      "default": "asynchronous",
+      "validValues": [
+        "ASYNCHRONOUS",
+        "PERFORMANCE",
+        "SEMISYNCHRONOUS",
+        "SYNCHRONOUS"
+      ]
+    }
+  ]
+}

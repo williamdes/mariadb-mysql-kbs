@@ -1,0 +1,185 @@
+{
+  "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html",
+  "name": "replication-options-gtids",
+  "data": [
+    {
+      "id": "option_mysqld_enforce-gtid-consistency",
+      "cli": "--enforce-gtid-consistency[=value]",
+      "name": "enforce_gtid_consistency",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "ON",
+        "WARN"
+      ]
+    },
+    {
+      "id": "option_mysqld_executed-gtids-compression-period",
+      "cli": "--executed-gtids-compression-period=#",
+      "type": "integer",
+      "default": "1000",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "option_mysqld_gtid-mode",
+      "cli": "--gtid-mode=MODE",
+      "name": "gtid_mode",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "OFF_PERMISSIVE",
+        "ON_PERMISSIVE",
+        "ON"
+      ]
+    },
+    {
+      "id": "option_mysqld_gtid-executed-compression-period",
+      "cli": "--gtid-executed-compression-period=#",
+      "type": "integer",
+      "default": "1000",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "sysvar_binlog_gtid_simple_recovery",
+      "cli": "--binlog-gtid-simple-recovery",
+      "name": "binlog_gtid_simple_recovery",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "boolean",
+      "default": "true"
+    },
+    {
+      "id": "sysvar_enforce_gtid_consistency",
+      "cli": "--enforce-gtid-consistency[=value]",
+      "name": "enforce_gtid_consistency",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "ON",
+        "WARN"
+      ]
+    },
+    {
+      "id": "sysvar_executed_gtids_compression_period",
+      "name": "executed_gtids_compression_period",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "1000",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "sysvar_gtid_executed",
+      "name": "gtid_executed",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "sysvar_gtid_executed_compression_period",
+      "name": "gtid_executed_compression_period",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "1000",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "sysvar_gtid_mode",
+      "name": "gtid_mode",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "OFF_PERMISSIVE",
+        "ON_PERMISSIVE",
+        "ON"
+      ]
+    },
+    {
+      "id": "sysvar_gtid_next",
+      "name": "gtid_next",
+      "scope": [
+        "session"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "automatic",
+      "validValues": [
+        "AUTOMATIC",
+        "ANONYMOUS",
+        "UUID:NUMBER"
+      ]
+    },
+    {
+      "id": "sysvar_gtid_owned",
+      "name": "gtid_owned",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "sysvar_gtid_purged",
+      "name": "gtid_purged",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "string"
+    },
+    {
+      "id": "sysvar_simplified_binlog_gtid_recovery",
+      "cli": "--simplified-binlog-gtid-recovery",
+      "name": "simplified_binlog_gtid_recovery",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "boolean",
+      "default": "false"
+    }
+  ]
+}

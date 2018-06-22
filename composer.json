@@ -1,0 +1,21 @@
+{
+    "name": "williamdes/mariadb-mysql-kbs",
+    "description": "An index of the MariaDB and MySQL Knowledge bases",
+    "homepage": "https://github.com/williamdes/mariadb-mysql-kbs",
+    "type": "library",
+    "readme": "https://github.com/williamdes/mariadb-mysql-kbs/blob/master/README.md",
+    "license": "MPL-2.0",
+    "version": "1.0.0",
+    "support": {
+        "email": "williamdes@wdes.fr",
+        "issues": "https://github.com/williamdes/mariadb-mysql-kbs/issues",
+        "source": "https://github.com/williamdes/mariadb-mysql-kbs"
+    },
+    "authors": [
+        {
+            "name": "William Desportes",
+            "email": "williamdes@wdes.fr"
+        }
+    ],
+    "require": {}
+}

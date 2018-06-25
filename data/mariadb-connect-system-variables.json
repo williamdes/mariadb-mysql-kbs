@@ -19,7 +19,7 @@
       "type": "the size of the",
       "cli": "--connect-conv-size=#",
       "scope": [
-        "session (>"
+        "session"
       ],
       "dynamic": true,
       "dataType": "numeric",
@@ -126,7 +126,7 @@
       "type": "determines the handling of",
       "cli": "--connect-type-conv=#",
       "scope": [
-        "session (>"
+        "session"
       ],
       "dynamic": true,
       "dataType": "enum",
@@ -156,7 +156,7 @@
       "cli": "--connect-work-size=#",
       "scope": [
         "global",
-        "session (session-only from connect 1.03.005)"
+        "session"
       ],
       "dynamic": true,
       "dataType": "numeric",

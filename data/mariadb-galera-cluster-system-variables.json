@@ -335,7 +335,7 @@
       "cli": "--wsrep-osu-method[=value]",
       "scope": [
         "global",
-        "session (since"
+        "session"
       ],
       "dynamic": true,
       "dataType": "enum",

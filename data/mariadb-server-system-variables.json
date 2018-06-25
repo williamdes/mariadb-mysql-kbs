@@ -2357,7 +2357,7 @@
       "type": "if set to",
       "cli": "query-cache-strip-comments",
       "scope": [
-        "session (from"
+        "session"
       ],
       "dynamic": true,
       "dataType": "boolean",
@@ -2695,7 +2695,7 @@
       "cli": "--slow-query-log",
       "scope": [
         "global",
-        "session ("
+        "session"
       ],
       "dynamic": true,
       "dataType": "boolean",

@@ -17,5 +17,18 @@
             "email": "williamdes@wdes.fr"
         }
     ],
-    "require": {}
+    "require": {},
+    "archive": {
+        "exclude": ["/scripts", "/data", "/build/merged-raw.json", "/tests", "*.js", "/package.json", "/package-lock.json"]
+    },
+    "autoload": {
+        "psr-4": {
+            "Williamdes\\MariaDBMySQLKBS\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Williamdes\\MariadbMySQLKBS\\": "tests/"
+        }
+    }
 }

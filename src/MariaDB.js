@@ -26,7 +26,16 @@ function parsePage(url, cbSuccess) {
                                 case 'scope:':
                                     doc.scope = elementDescr.nextSibling.textContent
                                     .toLowerCase()
-                                    .split(",").map(item => item.trim());
+                                    .split(",").map( (item) => {
+                                        if(item.match(/session/)) {
+                                            return "session";
+                                        } else if(item.match(/global/)) {
+                                            return "global";
+                                        } else {
+                                            return item.trim();
+                                        }
+                                    });
+                                    doc.scope = doc.scope.filter(function(e){ return e === 0 || e });
                                     break;
                                 case 'type:':
                                     doc.type = elementDescr.nextSibling.textContent

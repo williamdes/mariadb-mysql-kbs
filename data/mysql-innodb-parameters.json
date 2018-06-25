@@ -353,7 +353,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "dynamic": false,
+      "type": "integer",
+      "range": {
+        "from": 1,
+        "to": 64
+      }
     },
     {
       "id": "sysvar_innodb_buffer_pool_load_abort",
@@ -395,7 +400,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": true
+      "dynamic": true,
+      "type": "integer",
+      "default": "134217728",
+      "range": {
+        "from": 5242880
+      }
     },
     {
       "id": "sysvar_innodb_change_buffer_max_size",
@@ -777,7 +787,8 @@
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "dynamic": false,
+      "type": "string"
     },
     {
       "id": "sysvar_innodb_flush_neighbors",
@@ -1009,7 +1020,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": true
+      "dynamic": true,
+      "type": "integer",
+      "default": "200",
+      "range": {
+        "from": 100
+      }
     },
     {
       "id": "sysvar_innodb_io_capacity_max",
@@ -1018,7 +1034,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": true
+      "dynamic": true,
+      "type": "integer",
+      "default": "see description",
+      "range": {
+        "from": 100
+      }
     },
     {
       "id": "sysvar_innodb_limit_optimistic_insert_debug",
@@ -1160,7 +1181,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": true
+      "dynamic": true,
+      "type": "integer",
+      "default": "400",
+      "range": {
+        "from": 0
+      }
     },
     {
       "id": "sysvar_innodb_log_write_ahead_size",
@@ -1184,7 +1210,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": true
+      "dynamic": true,
+      "type": "integer",
+      "default": "1024",
+      "range": {
+        "from": 100
+      }
     },
     {
       "id": "sysvar_innodb_max_dirty_pages_pct",
@@ -1651,7 +1682,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": true
+      "dynamic": true,
+      "type": "integer",
+      "default": "6",
+      "range": {
+        "from": 0
+      }
     },
     {
       "id": "sysvar_innodb_stats_auto_recalc",

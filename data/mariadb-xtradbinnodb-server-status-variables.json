@@ -879,18 +879,14 @@
       "id": "innodb_num_index_pages_written",
       "name": "Innodb_num_index_pages_written",
       "type": "",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "innodb_num_non_index_pages_written",
       "name": "Innodb_num_non_index_pages_written",
       "type": "",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
@@ -1050,72 +1046,56 @@
       "id": "innodb_page_compression_saved",
       "name": "Innodb_page_compression_saved",
       "type": "number of bytes saved by page compression.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": ""
     },
     {
       "id": "innodb_page_compression_trim_sect512",
       "name": "Innodb_page_compression_trim_sect512",
       "type": "number of trim operations performed for the page-compression/nvm compression workload for the 512 byte block-size.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "innodb_page_compression_trim_sect1024",
       "name": "Innodb_page_compression_trim_sect1024",
       "type": "number of trim operations performed for the page-compression/nvm compression workload for the 1k block-size.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "innodb_page_compression_trim_sect2048",
       "name": "Innodb_page_compression_trim_sect2048",
       "type": "number of trim operations performed for the page-compression/nvm compression workload for the 2k block-size.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "innodb_page_compression_trim_sect4096",
       "name": "Innodb_page_compression_trim_sect4096",
       "type": "number of trim operations performed for the page-compression/nvm compression workload for the 4k block-size.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "innodb_page_compression_trim_sect8192",
       "name": "Innodb_page_compression_trim_sect8192",
       "type": "number of trim operations performed for the page-compression/nvm compression workload for the 8k block-size.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "innodb_page_compression_trim_sect16384",
       "name": "Innodb_page_compression_trim_sect16384",
       "type": "number of trim operations performed for the page-compression/nvm compression workload for the 16k block-size.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "innodb_page_compression_trim_sect32768",
       "name": "Innodb_page_compression_trim_sect32768",
       "type": "number of trim operations performed for the page-compression/nvm compression workload for the 32k block-size.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
@@ -1392,36 +1372,28 @@
       "id": "innodb_system_rows_deleted",
       "name": "Innodb_system_rows_deleted",
       "type": "",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "innodb_system_rows_inserted",
       "name": "Innodb_system_rows_inserted",
       "type": "",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "innodb_system_rows_read",
       "name": "Innodb_system_rows_read",
       "type": "",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "innodb_system_rows_updated",
       "name": "Innodb_system_rows_updated",
       "type": "",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {

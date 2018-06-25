@@ -1551,8 +1551,7 @@
       "type": "maximum length considered for computing a statement digest, such as used by the",
       "cli": "--max-digest-length=#",
       "scope": [
-        "global",
-        ""
+        "global"
       ],
       "dynamic": true,
       "dataType": "numeric",

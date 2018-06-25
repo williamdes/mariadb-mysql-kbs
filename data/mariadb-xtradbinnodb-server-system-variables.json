@@ -1194,7 +1194,7 @@
     {
       "id": "innodb_fatal_semaphore_wait_threshold",
       "name": "innodb_fatal_semaphore_wait_threshold",
-      "type": "maximum number of seconds that semaphore times out in innodb.",
+      "type": "in mariadb, the fatal semaphore timeout is configurable. this variable sets the maximum number of seconds for semaphores to time out in innodb.",
       "cli": "--innodb-fatal-semaphore-wait-threshold=#",
       "scope": [
         "global"
@@ -2123,7 +2123,7 @@
     {
       "id": "innodb_mtflush_threads",
       "name": "innodb_mtflush_threads",
-      "type": "sets the number of threads to use in multi-threaded flush operations.  for more information, see",
+      "type": "sets the number of threads to use in multi-threaded flush operations. for more information, see",
       "cli": "--innodb-mtflush-threads=#",
       "scope": [
         "global"
@@ -3061,7 +3061,7 @@
     {
       "id": "innodb_use_atomic_writes",
       "name": "innodb_use_atomic_writes",
-      "type": "implement atomic writes on fusionio devices. see",
+      "type": "implement atomic writes on supported ssd devices. see",
       "cli": "innodb-use-atomic-writes={0|1}",
       "scope": [
         "global"

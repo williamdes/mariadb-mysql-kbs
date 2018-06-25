@@ -227,8 +227,7 @@
       "name": "spider_connect_error_interval",
       "type": "return same error code until interval passes if connection is failed",
       "scope": [
-        "global",
-        ""
+        "global"
       ],
       "dynamic": true,
       "dataType": "numeric",

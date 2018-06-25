@@ -21,7 +21,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "dynamic": false,
+      "type": "integer",
+      "default": "1048576",
+      "range": {
+        "from": 4096
+      }
     },
     {
       "id": "sysvar_audit_log_compression",
@@ -168,7 +173,11 @@
     },
     {
       "id": "sysvar_audit_log_read_buffer_size",
-      "cli": "--audit-log-read-buffer-size=#"
+      "cli": "--audit-log-read-buffer-size=#",
+      "type": "integer",
+      "range": {
+        "to": 4194304
+      }
     },
     {
       "id": "sysvar_audit_log_rotate_on_size",

@@ -20,7 +20,12 @@
     },
     {
       "id": "option_mysqld_master-retry-count",
-      "cli": "--master-retry-count=#"
+      "cli": "--master-retry-count=#",
+      "type": "integer",
+      "default": "86400",
+      "range": {
+        "from": 0
+      }
     },
     {
       "id": "option_mysqld_max-relay-log-size",
@@ -87,7 +92,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "dynamic": false,
+      "type": "integer",
+      "default": "0",
+      "range": {
+        "from": 0
+      }
     },
     {
       "id": "option_mysqld_replicate-do-db",
@@ -481,7 +491,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "dynamic": false,
+      "type": "integer",
+      "default": "0",
+      "range": {
+        "from": 0
+      }
     },
     {
       "id": "sysvar_report_host",
@@ -791,7 +806,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": true
+      "dynamic": true,
+      "type": "integer",
+      "default": "10",
+      "range": {
+        "from": 0
+      }
     },
     {
       "id": "sysvar_slave_type_conversions",
@@ -826,7 +846,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": true
+      "dynamic": true,
+      "type": "integer",
+      "default": "10000",
+      "range": {
+        "from": 0
+      }
     },
     {
       "id": "sysvar_sync_relay_log",
@@ -835,7 +860,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": true
+      "dynamic": true,
+      "type": "integer",
+      "default": "10000",
+      "range": {
+        "from": 0
+      }
     },
     {
       "id": "sysvar_sync_relay_log_info",
@@ -844,7 +874,12 @@
       "scope": [
         "global"
       ],
-      "dynamic": true
+      "dynamic": true,
+      "type": "integer",
+      "default": "10000",
+      "range": {
+        "from": 0
+      }
     }
   ]
 }

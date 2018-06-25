@@ -505,8 +505,7 @@
       "name": "tokudb_read_status_frequency",
       "type": "progress is measured every this many reads for display by",
       "scope": [
-        "global",
-        ""
+        "global"
       ],
       "dynamic": true,
       "dataType": "numeric",
@@ -628,8 +627,7 @@
       "name": "tokudb_write_status_frequency",
       "type": "progress is measured every this many writes for display by",
       "scope": [
-        "global",
-        ""
+        "global"
       ],
       "dynamic": true,
       "dataType": "numeric",

@@ -3168,36 +3168,28 @@
       "id": "table_open_cache_active_instances",
       "name": "Table_open_cache_active_instances",
       "type": "number of active instances for open tables cache lookups.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "table_open_cache_hits",
       "name": "Table_open_cache_hits",
       "type": "number of hits for open tables cache lookups.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "table_open_cache_misses",
       "name": "Table_open_cache_misses",
       "type": "number of misses for open tables cache lookups.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {
       "id": "table_open_cache_overflows",
       "name": "Table_open_cache_overflows",
       "type": "number of overflows for open tables cache lookups.",
-      "scope": [
-        ""
-      ],
+      "scope": [],
       "dataType": "numeric"
     },
     {

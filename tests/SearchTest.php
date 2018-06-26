@@ -75,4 +75,18 @@ class SearchTest extends TestCase
         Search::getByName("mysql_native_password_proxy_users", Search::MARIADB);
     }
 
+    /**
+     * test get by name not found variable
+     *
+     * @expectedException     Exception
+     * @expectedExceptionCode 0
+     * @expectedExceptionMessageRegExp /(.+) does not exist !/
+     *
+     * @return void
+     */
+    public function testExceptionNoFound(): void
+    {
+        Search::getByName("acbdefghi0202", Search::MARIADB);
+    }
+
 }

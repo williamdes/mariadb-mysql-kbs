@@ -73,6 +73,8 @@ class Search
             }
 
             throw new Exception("$name does not exist for this type of documentation !");
+        } else {
+            throw new Exception("$name does not exist !");
         }
     }
 

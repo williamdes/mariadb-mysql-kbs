@@ -1,78 +1,78 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/aria-server-status-variables/",
-  "name": "aria-server-status-variables",
   "data": [
     {
+      "dataType": "numeric",
       "id": "aria_pagecache_blocks_not_flushed",
       "name": "Aria_pagecache_blocks_not_flushed",
-      "type": "the number of dirty blocks in the aria page cache.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "the number of dirty blocks in the aria page cache."
     },
     {
+      "dataType": "numeric",
       "id": "aria_pagecache_blocks_unused",
       "name": "Aria_pagecache_blocks_unused",
-      "type": "free blocks in the aria page cache.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "free blocks in the aria page cache."
     },
     {
+      "dataType": "numeric",
       "id": "aria_pagecache_blocks_used",
       "name": "Aria_pagecache_blocks_used",
-      "type": "blocks used in the aria page cache.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "blocks used in the aria page cache."
     },
     {
+      "dataType": "numeric",
       "id": "aria_pagecache_read_requests",
       "name": "Aria_pagecache_read_requests",
-      "type": "the number of requests to read something from the aria page cache.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "the number of requests to read something from the aria page cache."
     },
     {
+      "dataType": "numeric",
       "id": "aria_pagecache_reads",
       "name": "Aria_pagecache_reads",
-      "type": "the number of aria page cache read requests that caused a block to be read from the disk.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "the number of aria page cache read requests that caused a block to be read from the disk."
     },
     {
+      "dataType": "numeric",
       "id": "aria_pagecache_write_requests",
       "name": "Aria_pagecache_write_requests",
-      "type": "the number of requests to write a block to the aria page cache.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "the number of requests to write a block to the aria page cache."
     },
     {
+      "dataType": "numeric",
       "id": "aria_pagecache_writes",
       "name": "Aria_pagecache_writes",
-      "type": "the number of blocks written to disk from the aria page cache.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "the number of blocks written to disk from the aria page cache."
     },
     {
+      "dataType": "numeric",
       "id": "aria_transaction_log_syncs",
       "name": "Aria_transaction_log_syncs",
-      "type": "the number of aria log fsyncs.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "the number of aria log fsyncs."
     }
-  ]
+  ],
+  "name": "aria-server-status-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/aria-server-status-variables/"
 }

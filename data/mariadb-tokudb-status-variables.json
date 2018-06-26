@@ -1,6 +1,4 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/tokudb-status-variables/",
-  "name": "tokudb-status-variables",
   "data": [
     {
       "id": "tokudb_basement_deserialization_fixed_key",
@@ -882,5 +880,7 @@
       "name": "Tokudb_txn_commits",
       "type": "number of transactions that have been committed."
     }
-  ]
+  ],
+  "name": "tokudb-status-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/tokudb-status-variables/"
 }

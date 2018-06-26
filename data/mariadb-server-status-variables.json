@@ -1,2525 +1,2523 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/server-status-variables/",
-  "name": "server-status-variables",
   "data": [
     {
+      "dataType": "numeric",
       "id": "aborted_clients",
       "name": "Aborted_clients",
-      "type": "number of aborted client connections. this can be due to the client not calling mysql_close() before exiting, the client sleeping without issuing a request to the server for more seconds than specified by",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of aborted client connections. this can be due to the client not calling mysql_close() before exiting, the client sleeping without issuing a request to the server for more seconds than specified by"
     },
     {
+      "dataType": "numeric",
       "id": "aborted_connects",
       "name": "Aborted_connects",
-      "type": "number of failed server connection attempts. this can be due to a client using an incorrect password, a client not having privileges to connect to a database, a connection packet not containing the correct information, or if it takes more than",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of failed server connection attempts. this can be due to a client using an incorrect password, a client not having privileges to connect to a database, a connection packet not containing the correct information, or if it takes more than"
     },
     {
+      "dataType": "numeric",
       "id": "access_denied_errors",
       "name": "Access_denied_errors",
-      "type": "number of access denied errors.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of access denied errors."
     },
     {
+      "dataType": "numeric",
       "id": "acl_column_grants",
       "name": "Acl_column_grants",
-      "type": "number of column permissions granted (rows in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of column permissions granted (rows in the"
     },
     {
+      "dataType": "numeric",
       "id": "acl_database_grants",
       "name": "Acl_database_grants",
-      "type": "number of database permissions granted (rows in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of database permissions granted (rows in the"
     },
     {
+      "dataType": "numeric",
       "id": "acl_function_grants",
       "name": "Acl_function_grants",
-      "type": "number of function permissions granted (rows in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of function permissions granted (rows in the"
     },
     {
+      "dataType": "numeric",
       "id": "acl_package_body_grants",
       "name": "Acl_package_body_grants",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "acl_package_spec_grants",
       "name": "Acl_package_spec_grants",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "acl_procedure_grants",
       "name": "Acl_procedure_grants",
-      "type": "number of procedure permissions granted (rows in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of procedure permissions granted (rows in the"
     },
     {
+      "dataType": "numeric",
       "id": "acl_proxy_users",
       "name": "Acl_proxy_users",
-      "type": "number of proxy permissions granted (rows in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of proxy permissions granted (rows in the"
     },
     {
+      "dataType": "numeric",
       "id": "acl_role_grants",
       "name": "Acl_role_grants",
-      "type": "number of role permissions granted (rows in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of role permissions granted (rows in the"
     },
     {
+      "dataType": "numeric",
       "id": "acl_roles",
       "name": "Acl_roles",
-      "type": "number of roles (rows in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of roles (rows in the"
     },
     {
+      "dataType": "numeric",
       "id": "acl_table_grants",
       "name": "Acl_table_grants",
-      "type": "number of table permissions granted (rows in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of table permissions granted (rows in the"
     },
     {
+      "dataType": "numeric",
       "id": "acl_users",
       "name": "Acl_users",
-      "type": "number of users (rows in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of users (rows in the"
     },
     {
+      "dataType": "numeric",
       "id": "busy_time",
       "name": "Busy_time",
-      "type": "cumulative time in seconds of activity on connections.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "cumulative time in seconds of activity on connections."
     },
     {
+      "dataType": "numeric",
       "id": "bytes_received",
       "name": "Bytes_received",
-      "type": "total bytes received from all clients.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "total bytes received from all clients."
     },
     {
+      "dataType": "numeric",
       "id": "bytes_sent",
       "name": "Bytes_sent",
-      "type": "total bytes sent to all clients.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "total bytes sent to all clients."
     },
     {
+      "dataType": "numeric",
       "id": "com_admin_commands",
       "name": "Com_admin_commands",
-      "type": "number of admin commands executed. these include table dumps, change users, binary log dumps, shutdowns, pings and debugs.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of admin commands executed. these include table dumps, change users, binary log dumps, shutdowns, pings and debugs."
     },
     {
+      "dataType": "numeric",
       "id": "com_alter_db",
       "name": "Com_alter_db",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_alter_db_upgrade",
       "name": "Com_alter_db_upgrade",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_alter_event",
       "name": "Com_alter_event",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_alter_function",
       "name": "Com_alter_function",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_alter_procedure",
       "name": "Com_alter_procedure",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_alter_sequence",
       "name": "Com_alter_sequence",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_alter_server",
       "name": "Com_alter_server",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_alter_table",
       "name": "Com_alter_table",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_alter_tablespace",
       "name": "Com_alter_tablespace",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_alter_user",
       "name": "Com_alter_user",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_analyze",
       "name": "Com_analyze",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_assign_to_keycache",
       "name": "Com_assign_to_keycache",
-      "type": "number of assign to keycache commands executed.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of assign to keycache commands executed."
     },
     {
+      "dataType": "numeric",
       "id": "com_backup_table",
       "name": "Com_backup_table",
-      "type": "removed in",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "removed in"
     },
     {
+      "dataType": "numeric",
       "id": "com_begin",
       "name": "Com_begin",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_binlog",
       "name": "Com_binlog",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_call_procedure",
       "name": "Com_call_procedure",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_change_db",
       "name": "Com_change_db",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_check",
       "name": "Com_check",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_checksum",
       "name": "Com_checksum",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_commit",
       "name": "Com_commit",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_compound_sql",
       "name": "Com_compound_sql",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_db",
       "name": "Com_create_db",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_event",
       "name": "Com_create_event",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_function",
       "name": "Com_create_function",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_index",
       "name": "Com_create_index",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_package",
       "name": "Com_create_package",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_create_package_body",
       "name": "Com_create_package_body",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_create_procedure",
       "name": "Com_create_procedure",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_role",
       "name": "Com_create_role",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_sequence",
       "name": "Com_create_sequence",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_server",
       "name": "Com_create_server",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_table",
       "name": "Com_create_table",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_temporary_table",
       "name": "Com_create_temporary_table",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_trigger",
       "name": "Com_create_trigger",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_udf",
       "name": "Com_create_udf",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_user",
       "name": "Com_create_user",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_create_view",
       "name": "Com_create_view",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_dealloc_sql",
       "name": "Com_dealloc_sql",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_delete",
       "name": "Com_delete",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_delete_multi",
       "name": "Com_delete_multi",
-      "type": "number of multi-table",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of multi-table"
     },
     {
+      "dataType": "numeric",
       "id": "com_do",
       "name": "Com_do",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_db",
       "name": "Com_drop_db",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_event",
       "name": "Com_drop_event",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_function",
       "name": "Com_drop_function",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_index",
       "name": "Com_drop_index",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_package",
       "name": "Com_drop_package",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_package_body",
       "name": "Com_drop_package_body",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_procedure",
       "name": "Com_drop_procedure",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_role",
       "name": "Com_drop_role",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_sequence",
       "name": "Com_drop_sequence",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_server",
       "name": "Com_drop_server",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_table",
       "name": "Com_drop_table",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_temporary_table",
       "name": "Com_drop_temporary_table",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_trigger",
       "name": "Com_drop_trigger",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_user",
       "name": "Com_drop_user",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_drop_view",
       "name": "Com_drop_view",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_empty_query",
       "name": "Com_empty_query",
-      "type": "number of queries to the server that do not produce sql queries. an sql query simply returning no results does not increment",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of queries to the server that do not produce sql queries. an sql query simply returning no results does not increment"
     },
     {
+      "dataType": "numeric",
       "id": "com_execute_immediate",
       "name": "Com_execute_immediate",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_execute_sql",
       "name": "Com_execute_sql",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_flush",
       "name": "Com_flush",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_get_diagnostics",
       "name": "Com_get_diagnostics",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_grant",
       "name": "Com_grant",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_grant_role",
       "name": "Com_grant_role",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_ha_close",
       "name": "Com_ha_close",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_ha_open",
       "name": "Com_ha_open",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_ha_read",
       "name": "Com_ha_read",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_help",
       "name": "Com_help",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_insert",
       "name": "Com_insert",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_insert_select",
       "name": "Com_insert_select",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_install_plugin",
       "name": "Com_install_plugin",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_kill",
       "name": "Com_kill",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_load",
       "name": "Com_load",
-      "type": "number of load commands executed.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of load commands executed."
     },
     {
+      "dataType": "numeric",
       "id": "com_load_master_data",
       "name": "Com_load_master_data",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_load_master_table",
       "name": "Com_load_master_table",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_multi",
       "name": "Com_multi",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_lock_tables",
       "name": "Com_lock_tables",
-      "type": "number of [lock-tables|lock tables]] commands executed.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of [lock-tables|lock tables]] commands executed."
     },
     {
+      "dataType": "numeric",
       "id": "com_optimize",
       "name": "Com_optimize",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_preload_keys",
       "name": "Com_preload_keys",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_prepare_sql",
       "name": "Com_prepare_sql",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_purge",
       "name": "Com_purge",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_purge_before_date",
       "name": "Com_purge_before_date",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_release_savepoint",
       "name": "Com_release_savepoint",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_rename_table",
       "name": "Com_rename_table",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_rename_user",
       "name": "Com_rename_user",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_repair",
       "name": "Com_repair",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_replace",
       "name": "Com_replace",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_replace_select",
       "name": "Com_replace_select",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_reset",
       "name": "Com_reset",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_resignal",
       "name": "Com_resignal",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_restore_table",
       "name": "Com_restore_table",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_revoke",
       "name": "Com_revoke",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_revoke_all",
       "name": "Com_revoke_all",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_revoke_grant",
       "name": "Com_revoke_grant",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_rollback",
       "name": "Com_rollback",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_rollback_to_savepoint",
       "name": "Com_rollback_to_savepoint",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_savepoint",
       "name": "Com_savepoint",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_select",
       "name": "Com_select",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_set_option",
       "name": "Com_set_option",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_signal",
       "name": "Com_signal",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_authors",
       "name": "Com_show_authors",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_binlog_events",
       "name": "Com_show_binlog_events",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_binlogs",
       "name": "Com_show_binlogs",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_charsets",
       "name": "Com_show_charsets",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_client_statistics",
       "name": "Com_show_client_statistics",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_collations",
       "name": "Com_show_collations",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_column_types",
       "name": "Com_show_column_types",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_show_contributors",
       "name": "Com_show_contributors",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_create_db",
       "name": "Com_show_create_db",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_create_event",
       "name": "Com_show_create_event",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_create_func",
       "name": "Com_show_create_func",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_create_package",
       "name": "Com_show_create_package",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_show_create_package_body",
       "name": "Com_show_create_package_body",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_show_create_proc",
       "name": "Com_show_create_proc",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_create_table",
       "name": "Com_show_create_table",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_create_trigger",
       "name": "Com_show_create_trigger",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_create_user",
       "name": "Com_show_create_user",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_databases",
       "name": "Com_show_databases",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_engine_logs",
       "name": "Com_show_engine_logs",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_engine_mutex",
       "name": "Com_show_engine_mutex",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_engine_status",
       "name": "Com_show_engine_status",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_events",
       "name": "Com_show_events",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_errors",
       "name": "Com_show_errors",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_explain",
       "name": "Com_show_explain",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_fields",
       "name": "Com_show_fields",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_function_status",
       "name": "Com_show_function_status",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_generic",
       "name": "Com_show_generic",
-      "type": "number of generic",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of generic"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_grants",
       "name": "Com_show_grants",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_keys",
       "name": "Com_show_keys",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_index_statistics",
       "name": "Com_show_index_statistics",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_open_tables",
       "name": "Com_show_open_tables",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_package_status",
       "name": "Com_show_package_status",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_show_package_body_status",
       "name": "Com_show_package_body_status",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "com_show_plugins",
       "name": "Com_show_plugins",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_privileges",
       "name": "Com_show_privileges",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_procedure_status",
       "name": "Com_show_procedure_status",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_processlist",
       "name": "Com_show_processlist",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_profile",
       "name": "Com_show_profile",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_profiles",
       "name": "Com_show_profiles",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_relaylog_events",
       "name": "Com_show_relaylog_events",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_status",
       "name": "Com_show_status",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_storage_engines",
       "name": "Com_show_storage_engines",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_table_statistics",
       "name": "Com_show_table_statistics",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_table_status",
       "name": "Com_show_table_status",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_tables",
       "name": "Com_show_tables",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_triggers",
       "name": "Com_show_triggers",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_user_statistics",
       "name": "Com_show_user_statistics",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_variable",
       "name": "Com_show_variable",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_show_warnings",
       "name": "Com_show_warnings",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_shutdown",
       "name": "Com_shutdown",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_stmt_close",
       "name": "Com_stmt_close",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_stmt_execute",
       "name": "Com_stmt_execute",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_stmt_fetch",
       "name": "Com_stmt_fetch",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_stmt_prepare",
       "name": "Com_stmt_prepare",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_stmt_reprepare",
       "name": "Com_stmt_reprepare",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_stmt_reset",
       "name": "Com_stmt_reset",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_stmt_send_long_data",
       "name": "Com_stmt_send_long_data",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_truncate",
       "name": "Com_truncate",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_uninstall_plugin",
       "name": "Com_uninstall_plugin",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_unlock_tables",
       "name": "Com_unlock_tables",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_update",
       "name": "Com_update",
-      "type": "number of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "com_update_multi",
       "name": "Com_update_multi",
-      "type": "number of multi-table",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of multi-table"
     },
     {
+      "dataType": "numeric",
       "id": "com_xa_commit",
       "name": "Com_xa_commit",
-      "type": "number of xa statements committed.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of xa statements committed."
     },
     {
+      "dataType": "numeric",
       "id": "com_xa_end",
       "name": "Com_xa_end",
-      "type": "number of xa statements ended.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of xa statements ended."
     },
     {
+      "dataType": "numeric",
       "id": "com_xa_prepare",
       "name": "Com_xa_prepare",
-      "type": "number of xa statements prepared.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of xa statements prepared."
     },
     {
+      "dataType": "numeric",
       "id": "com_xa_recover",
       "name": "Com_xa_recover",
-      "type": "number of xa recover statements executed.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of xa recover statements executed."
     },
     {
+      "dataType": "numeric",
       "id": "com_xa_rollback",
       "name": "Com_xa_rollback",
-      "type": "number of xa statements rolled back.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of xa statements rolled back."
     },
     {
+      "dataType": "numeric",
       "id": "com_xa_start",
       "name": "Com_xa_start",
-      "type": "number of xa statements started.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of xa statements started."
     },
     {
+      "dataType": "boolean",
       "id": "compression",
       "name": "Compression",
-      "type": "whether client-server traffic is compressed.",
       "scope": [
         "session"
       ],
-      "dataType": "boolean"
+      "type": "whether client-server traffic is compressed."
     },
     {
+      "dataType": "numeric",
       "id": "connection_errors_accept",
       "name": "Connection_errors_accept",
-      "type": "number of errors that occurred during calls to accept() on the listening port.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of errors that occurred during calls to accept() on the listening port."
     },
     {
+      "dataType": "numeric",
       "id": "connection_errors_internal",
       "name": "Connection_errors_internal",
-      "type": "number of refused connections due to internal server errors, for example out of memory errors, or failed thread starts.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of refused connections due to internal server errors, for example out of memory errors, or failed thread starts."
     },
     {
+      "dataType": "numeric",
       "id": "connection_errors_max_connections",
       "name": "Connection_errors_max_connections",
-      "type": "number of refused connections due to the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of refused connections due to the"
     },
     {
+      "dataType": "numeric",
       "id": "connection_errors_peer_address",
       "name": "Connection_errors_peer_address",
-      "type": "number of errors while searching for the connecting client ip address.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of errors while searching for the connecting client ip address."
     },
     {
+      "dataType": "numeric",
       "id": "connection_errors_select",
       "name": "Connection_errors_select",
-      "type": "number of errors during calls to select() or poll() on the listening port. the client would not necessarily have been rejected in these cases.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of errors during calls to select() or poll() on the listening port. the client would not necessarily have been rejected in these cases."
     },
     {
+      "dataType": "numeric",
       "id": "connection_errors_tcpwrap",
       "name": "Connection_errors_tcpwrap",
-      "type": "number of connections the libwrap library refused.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of connections the libwrap library refused."
     },
     {
+      "dataType": "numeric",
       "id": "connections",
       "name": "Connections",
-      "type": "number of connection attempts (both successful and unsuccessful)",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of connection attempts (both successful and unsuccessful)"
     },
     {
+      "dataType": "numeric",
       "id": "cpu_time",
       "name": "Cpu_time",
-      "type": "total cpu time used.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "total cpu time used."
     },
     {
+      "dataType": "numeric",
       "id": "created_tmp_disk_tables",
       "name": "Created_tmp_disk_tables",
-      "type": "number of on-disk temporary tables created.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of on-disk temporary tables created."
     },
     {
+      "dataType": "numeric",
       "id": "created_tmp_files",
       "name": "Created_tmp_files",
-      "type": "number of in-memory temporary tables created.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of in-memory temporary tables created."
     },
     {
+      "dataType": "numeric",
       "id": "created_tmp_tables",
       "name": "Created_tmp_tables",
-      "type": "number of temporary tables created.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of temporary tables created."
     },
     {
+      "dataType": "numeric",
       "id": "delayed_errors",
       "name": "Delayed_errors",
-      "type": "number of errors which occurred while doing",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of errors which occurred while doing"
     },
     {
+      "dataType": "numeric",
       "id": "delayed_insert_threads",
       "name": "Delayed_insert_threads",
-      "type": "number of",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "delayed_writes",
       "name": "Delayed_writes",
-      "type": "number of",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "delete_scan",
       "name": "Delete_scan",
-      "type": "number of",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "empty_queries",
       "name": "Empty_queries",
-      "type": "number of queries returning no results. note this is not the same as",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of queries returning no results. note this is not the same as"
     },
     {
+      "dataType": "numeric",
       "id": "executed_events",
       "name": "Executed_events",
-      "type": "number of times events created with",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times events created with"
     },
     {
+      "dataType": "numeric",
       "id": "executed_triggers",
       "name": "Executed_triggers",
-      "type": "number of times triggers created with",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times triggers created with"
     },
     {
+      "dataType": "numeric",
       "id": "feature_check_constraint",
       "name": "Feature_check_constraint",
-      "type": "number of times",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times"
     },
     {
+      "dataType": "numeric",
       "id": "feature_custom_aggregate_functions",
       "name": "Feature_custom_aggregate_functions",
-      "type": "number of queries which make use of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of queries which make use of"
     },
     {
+      "dataType": "numeric",
       "id": "feature_delay_key_write",
       "name": "Feature_delay_key_write",
-      "type": "number of tables opened that are using",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of tables opened that are using"
     },
     {
+      "dataType": "numeric",
       "id": "feature_dynamic_columns",
       "name": "Feature_dynamic_columns",
-      "type": "number of times the",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times the"
     },
     {
+      "dataType": "numeric",
       "id": "feature_fulltext",
       "name": "Feature_fulltext",
-      "type": "number of times the",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times the"
     },
     {
+      "dataType": "numeric",
       "id": "feature_gis",
       "name": "Feature_gis",
-      "type": "number of times a table with a any of the",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times a table with a any of the"
     },
     {
+      "dataType": "numeric",
       "id": "feature_invisible_columns",
       "name": "Feature_invisible_columns",
-      "type": "number of invisible columns in all opened tables.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of invisible columns in all opened tables."
     },
     {
+      "dataType": "numeric",
       "id": "feature_json",
       "name": "Feature_json",
-      "type": "number of times json functionality has been used, such as one of the",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times json functionality has been used, such as one of the"
     },
     {
+      "dataType": "numeric",
       "id": "feature_locale",
       "name": "Feature_locale",
-      "type": "number of times the",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times the"
     },
     {
+      "dataType": "numeric",
       "id": "feature_subquery",
       "name": "Feature_subquery",
-      "type": "number of subqueries (excluding subqueries in the from clause) used.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of subqueries (excluding subqueries in the from clause) used."
     },
     {
+      "dataType": "numeric",
       "id": "feature_system_versioning",
       "name": "Feature_system_versioning",
-      "type": "number of times",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times"
     },
     {
+      "dataType": "numeric",
       "id": "feature_timezone",
       "name": "Feature_timezone",
-      "type": "number of times an explicit timezone (excluding",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times an explicit timezone (excluding"
     },
     {
+      "dataType": "numeric",
       "id": "feature_trigger",
       "name": "Feature_trigger",
-      "type": "number of triggers loaded.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of triggers loaded."
     },
     {
+      "dataType": "numeric",
       "id": "feature_window_functions",
       "name": "Feature_window_functions",
-      "type": "number of times",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times"
     },
     {
+      "dataType": "numeric",
       "id": "feature_xml",
       "name": "Feature_xml",
-      "type": "number of times xml functions (",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times xml functions ("
     },
     {
+      "dataType": "numeric",
       "id": "flush_commands",
       "name": "Flush_commands",
-      "type": "number of",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "handler_commit",
       "name": "Handler_commit",
-      "type": "number of internal",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of internal"
     },
     {
+      "dataType": "numeric",
       "id": "handler_delete",
       "name": "Handler_delete",
-      "type": "number of times rows have been deleted from tables. differs from",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times rows have been deleted from tables. differs from"
     },
     {
+      "dataType": "numeric",
       "id": "handler_discover",
       "name": "Handler_discover",
-      "type": "discovery is when the server asks the ndbcluster storage engine if it knows about a table with a given name. handler_discover indicates the number of times that tables have been discovered in this way.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "discovery is when the server asks the ndbcluster storage engine if it knows about a table with a given name. handler_discover indicates the number of times that tables have been discovered in this way."
     },
     {
+      "dataType": "numeric",
       "id": "handler_external_lock",
       "name": "Handler_external_lock",
-      "type": "incremented for each call to the external_lock() function, which generally occurs at the beginning and end of access to a table instance.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "incremented for each call to the external_lock() function, which generally occurs at the beginning and end of access to a table instance."
     },
     {
+      "dataType": "numeric",
       "id": "handler_icp_attempts",
       "name": "Handler_icp_attempts",
-      "type": "number of times pushed index condition was checked. the smaller the ratio of handler_icp_attempts to",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times pushed index condition was checked. the smaller the ratio of handler_icp_attempts to"
     },
     {
+      "dataType": "numeric",
       "id": "handler_icp_match",
       "name": "Handler_icp_match",
-      "type": "number of times pushed index condition was matched. the smaller the ratio of",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times pushed index condition was matched. the smaller the ratio of"
     },
     {
+      "dataType": "numeric",
       "id": "handler_mrr_init",
       "name": "Handler_mrr_init",
-      "type": "counts how many mrr (multi-range read) scans were performed. see",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "counts how many mrr (multi-range read) scans were performed. see"
     },
     {
+      "dataType": "numeric",
       "id": "handler_mrr_key_refills",
       "name": "Handler_mrr_key_refills",
-      "type": "number of times key buffer was refilled (not counting the initial fill). a non-zero value indicates there wasn't enough memory to do key sort-and-sweep passes in one go.  see",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times key buffer was refilled (not counting the initial fill). a non-zero value indicates there wasn't enough memory to do key sort-and-sweep passes in one go.  see"
     },
     {
+      "dataType": "numeric",
       "id": "handler_mrr_rowid_refills",
       "name": "Handler_mrr_rowid_refills",
-      "type": "number of times rowid buffer was refilled (not counting the initial fill). a non-zero value indicates there wasn't enough memory to do rowid sort-and-sweep passes in one go. see",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times rowid buffer was refilled (not counting the initial fill). a non-zero value indicates there wasn't enough memory to do rowid sort-and-sweep passes in one go. see"
     },
     {
+      "dataType": "numeric",
       "id": "handler_prepare",
       "name": "Handler_prepare",
-      "type": "number of two-phase commit prepares.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of two-phase commit prepares."
     },
     {
+      "dataType": "numeric",
       "id": "handler_read_first",
       "name": "Handler_read_first",
-      "type": "number of requests to read the first row from an index. a high value indicates many full index scans, e.g.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to read the first row from an index. a high value indicates many full index scans, e.g."
     },
     {
+      "dataType": "numeric",
       "id": "handler_read_key",
       "name": "Handler_read_key",
-      "type": "number of row read requests based on an index value. a high value indicates indexes are regularly being used, which is usually positive.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of row read requests based on an index value. a high value indicates indexes are regularly being used, which is usually positive."
     },
     {
+      "dataType": "numeric",
       "id": "handler_read_last",
       "name": "Handler_read_last",
-      "type": "number of requests to read the last row from an index.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to read the last row from an index."
     },
     {
+      "dataType": "numeric",
       "id": "handler_read_next",
       "name": "Handler_read_next",
-      "type": "number of requests to read the next row from an index (in order). increments when doing an index scan or querying an index column with a range constraint.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to read the next row from an index (in order). increments when doing an index scan or querying an index column with a range constraint."
     },
     {
+      "dataType": "numeric",
       "id": "handler_read_prev",
       "name": "Handler_read_prev",
-      "type": "number of requests to read the previous row from an index (in order). mostly used with",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to read the previous row from an index (in order). mostly used with"
     },
     {
+      "dataType": "numeric",
       "id": "handler_read_retry",
       "name": "Handler_read_retry",
-      "type": "number of read retrys triggered by semi_consistent_read (innodb feature).",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of read retrys triggered by semi_consistent_read (innodb feature)."
     },
     {
+      "dataType": "numeric",
       "id": "handler_read_rnd",
       "name": "Handler_read_rnd",
-      "type": "number of requests to read a row based on its position. if this value is high, you may not be using joins that don't use indexes properly, or be doing many full table scans.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to read a row based on its position. if this value is high, you may not be using joins that don't use indexes properly, or be doing many full table scans."
     },
     {
+      "dataType": "numeric",
       "id": "handler_read_rnd_deleted",
       "name": "Handler_read_rnd_deleted",
-      "type": "number of requests to delete a row based on its position.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to delete a row based on its position."
     },
     {
+      "dataType": "numeric",
       "id": "handler_read_rnd_next",
       "name": "Handler_read_rnd_next",
-      "type": "number of requests to read the next row. a large number of these may indicate many table scans and improperly used indexes.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to read the next row. a large number of these may indicate many table scans and improperly used indexes."
     },
     {
+      "dataType": "numeric",
       "id": "handler_rollback",
       "name": "Handler_rollback",
-      "type": "number of transaction rollback requests given to a storage engine. differs from",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of transaction rollback requests given to a storage engine. differs from"
     },
     {
+      "dataType": "numeric",
       "id": "handler_savepoint",
       "name": "Handler_savepoint",
-      "type": "number of transaction savepoint creation requests. differs from",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of transaction savepoint creation requests. differs from"
     },
     {
+      "dataType": "numeric",
       "id": "handler_savepoint_rollback",
       "name": "Handler_savepoint_rollback",
-      "type": "number of requests to rollback to a transaction",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to rollback to a transaction"
     },
     {
+      "dataType": "numeric",
       "id": "handler_tmp_delete",
       "name": "Handler_tmp_delete",
-      "type": "number of requests to delete a row in a temporary table.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to delete a row in a temporary table."
     },
     {
+      "dataType": "numeric",
       "id": "handler_tmp_update",
       "name": "Handler_tmp_update",
-      "type": "number of requests to update a row to a temporary table.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to update a row to a temporary table."
     },
     {
+      "dataType": "numeric",
       "id": "handler_tmp_write",
       "name": "Handler_tmp_write",
-      "type": "number of requests to write a row to a temporary table.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to write a row to a temporary table."
     },
     {
+      "dataType": "numeric",
       "id": "handler_update",
       "name": "Handler_update",
-      "type": "number of requests to update a row in a table. since",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to update a row in a table. since"
     },
     {
+      "dataType": "numeric",
       "id": "handler_write",
       "name": "Handler_write",
-      "type": "number of requests to write a row to a table. since",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to write a row to a table. since"
     },
     {
+      "dataType": "numeric",
       "id": "key_blocks_not_flushed",
       "name": "Key_blocks_not_flushed",
-      "type": "number of key cache blocks which have been modified but not flushed to disk.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of key cache blocks which have been modified but not flushed to disk."
     },
     {
+      "dataType": "numeric",
       "id": "key_blocks_unused",
       "name": "Key_blocks_unused",
-      "type": "number of unused key cache blocks.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of unused key cache blocks."
     },
     {
+      "dataType": "numeric",
       "id": "key_blocks_used",
       "name": "Key_blocks_used",
-      "type": "max number of key cache blocks which have been used simultaneously.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "max number of key cache blocks which have been used simultaneously."
     },
     {
+      "dataType": "numeric",
       "id": "key_blocks_warm",
       "name": "Key_blocks_warm",
-      "type": "number of key cache blocks in the warm list.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of key cache blocks in the warm list."
     },
     {
+      "dataType": "numeric",
       "id": "key_read_requests",
       "name": "Key_read_requests",
-      "type": "number of key cache block read requests. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of key cache block read requests. see"
     },
     {
+      "dataType": "numeric",
       "id": "key_reads",
       "name": "Key_reads",
-      "type": "number of physical index block reads. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of physical index block reads. see"
     },
     {
+      "dataType": "numeric",
       "id": "key_write_requests",
       "name": "Key_write_requests",
-      "type": "number of requests to write a block to the key cache.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to write a block to the key cache."
     },
     {
+      "dataType": "numeric",
       "id": "key_writes",
       "name": "Key_writes",
-      "type": "number of key cache block write requests",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of key cache block write requests"
     },
     {
+      "dataType": "numeric",
       "id": "last_query_cost",
       "name": "Last_query_cost",
-      "type": "the most recent query optimizer query cost calculation. can not be calculated for complex queries, such as subqueries or union. it will be set to 0 for complex queries.",
       "scope": [
         "session"
       ],
-      "dataType": "numeric"
+      "type": "the most recent query optimizer query cost calculation. can not be calculated for complex queries, such as subqueries or union. it will be set to 0 for complex queries."
     },
     {
       "id": "maria_",
@@ -2527,760 +2525,762 @@
       "type": "when the maria storage engine was renamed aria, the maria variables existing at the time were renamed at the same time. see"
     },
     {
+      "dataType": "numeric",
       "id": "max_statement_time_exceeded",
       "name": "Max_statement_time_exceeded",
-      "type": "number of queries that exceeded the execution time specified by",
-      "dataType": "numeric"
+      "type": "number of queries that exceeded the execution time specified by"
     },
     {
+      "dataType": "numeric",
       "id": "max_used_connections",
       "name": "Max_used_connections",
-      "type": "max number of connections ever open at the same time.",
       "scope": [
         "session"
       ],
-      "dataType": "numeric"
+      "type": "max number of connections ever open at the same time."
     },
     {
+      "dataType": "numeric",
       "id": "memory_used",
       "name": "Memory_used",
-      "type": "global or per-connection memory usage, in bytes.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "global or per-connection memory usage, in bytes."
     },
     {
+      "dataType": "numeric",
       "id": "memory_used_initial",
       "name": "Memory_used_initial",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "not_flushed_delayed_rows",
       "name": "Not_flushed_delayed_rows",
-      "type": "number of",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "open_files",
       "name": "Open_files",
-      "type": "number of regular files currently opened by the server. does not include sockets or pipes, or storage engines using internal functions.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of regular files currently opened by the server. does not include sockets or pipes, or storage engines using internal functions."
     },
     {
+      "dataType": "numeric",
       "id": "open_streams",
       "name": "Open_streams",
-      "type": "number of currently opened streams, usually log files.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of currently opened streams, usually log files."
     },
     {
+      "dataType": "numeric",
       "id": "open_table_definitions",
       "name": "Open_table_definitions",
-      "type": "number of currently cached .frm files.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of currently cached .frm files."
     },
     {
+      "dataType": "numeric",
       "id": "open_tables",
       "name": "Open_tables",
-      "type": "number of currently opened tables, excluding temporary tables.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of currently opened tables, excluding temporary tables."
     },
     {
+      "dataType": "numeric",
       "id": "opened_files",
       "name": "Opened_files",
-      "type": "number of files the server has opened.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of files the server has opened."
     },
     {
+      "dataType": "numeric",
       "id": "opened_table_definitions",
       "name": "Opened_table_definitions",
-      "type": "number of .frm files that have been cached.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of .frm files that have been cached."
     },
     {
+      "dataType": "numeric",
       "id": "opened_tables",
       "name": "Opened_tables",
-      "type": "number of tables the server has opened.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of tables the server has opened."
     },
     {
+      "dataType": "numeric",
       "id": "opened_views",
       "name": "Opened_views",
-      "type": "number of views the server has opened.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of views the server has opened."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_accounts_lost",
       "name": "Performance_schema_accounts_lost",
-      "type": "number of times a row could not be added to the performance schema accounts table due to it being full.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times a row could not be added to the performance schema accounts table due to it being full."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_cond_classes_lost",
       "name": "Performance_schema_cond_classes_lost",
-      "type": "number of condition instruments that could not be loaded.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of condition instruments that could not be loaded."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_cond_instances_lost",
       "name": "Performance_schema_cond_instances_lost",
-      "type": "number of instances a condition object could not be created.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of instances a condition object could not be created."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_digest_lost",
       "name": "Performance_schema_digest_lost",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_file_classes_lost",
       "name": "Performance_schema_file_classes_lost",
-      "type": "number of file instruments that could not be loaded.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of file instruments that could not be loaded."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_file_handles_lost",
       "name": "Performance_schema_file_handles_lost",
-      "type": "number of instances a file object could not be opened.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of instances a file object could not be opened."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_file_instances_lost",
       "name": "Performance_schema_file_instances_lost",
-      "type": "number of instances a file object could not be created.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of instances a file object could not be created."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_hosts_lost",
       "name": "Performance_schema_hosts_lost",
-      "type": "number of times a row could not be added to the performance schema hosts table due to it being full.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times a row could not be added to the performance schema hosts table due to it being full."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_locker_lost",
       "name": "Performance_schema_locker_lost",
-      "type": "number of events not recorded, due to either being recursive, or having a deeper nested events stack than the implementation limit.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of events not recorded, due to either being recursive, or having a deeper nested events stack than the implementation limit."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_mutex_classes_lost",
       "name": "Performance_schema_mutex_classes_lost",
-      "type": "number of mutual exclusion instruments that could not be loaded.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of mutual exclusion instruments that could not be loaded."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_mutex_instances_lost",
       "name": "Performance_schema_mutex_instances_lost",
-      "type": "number of instances a mutual exclusion object could not be created.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of instances a mutual exclusion object could not be created."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_rwlock_classes_lost",
       "name": "Performance_schema_rwlock_classes_lost",
-      "type": "number of read/write lock instruments that could not be loaded.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of read/write lock instruments that could not be loaded."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_rwlock_instances_lost",
       "name": "Performance_schema_rwlock_instances_lost",
-      "type": "number of instances a read/write lock object could not be created.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of instances a read/write lock object could not be created."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_socket_classes_lost",
       "name": "Performance_schema_socket_classes_lost",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_socket_instances_lost",
       "name": "Performance_schema_socket_instances_lost",
-      "type": "number of instances a socket object could not be created.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of instances a socket object could not be created."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_stage_classes_lost",
       "name": "Performance_schema_stage_classes_lost",
-      "type": "number of stage event instruments that could not be loaded.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of stage event instruments that could not be loaded."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_statement_classes_lost",
       "name": "Performance_schema_statement_classes_lost",
-      "type": "number of statement instruments that could not be loaded.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of statement instruments that could not be loaded."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_table_handles_lost",
       "name": "Performance_schema_table_handles_lost",
-      "type": "number of instances a table object could not be opened.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of instances a table object could not be opened."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_table_instances_lost",
       "name": "Performance_schema_table_instances_lost",
-      "type": "number of instances a table object could not be created.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of instances a table object could not be created."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_thread_classes_lost",
       "name": "Performance_schema_thread_classes_lost",
-      "type": "number of thread instruments that could not be loaded.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of thread instruments that could not be loaded."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_thread_instances_lost",
       "name": "Performance_schema_thread_instances_lost",
-      "type": "number of instances thread object could not be created.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of instances thread object could not be created."
     },
     {
+      "dataType": "numeric",
       "id": "performance_schema_users_lost",
       "name": "Performance_schema_users_lost",
-      "type": "number of times a row could not be added to the performance schema users table due to it being full.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times a row could not be added to the performance schema users table due to it being full."
     },
     {
+      "dataType": "numeric",
       "id": "prepared_stmt_count",
       "name": "Prepared_stmt_count",
-      "type": "current number of prepared statements.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "current number of prepared statements."
     },
     {
+      "dataType": "numeric",
       "id": "qcache_free_blocks",
       "name": "Qcache_free_blocks",
-      "type": "number of free",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of free"
     },
     {
+      "dataType": "numeric",
       "id": "qcache_free_memory",
       "name": "Qcache_free_memory",
-      "type": "amount of free",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "amount of free"
     },
     {
+      "dataType": "numeric",
       "id": "qcache_hits",
       "name": "Qcache_hits",
-      "type": "number of requests served by the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of requests served by the"
     },
     {
+      "dataType": "numeric",
       "id": "qcache_inserts",
       "name": "Qcache_inserts",
-      "type": "number of queries ever cached in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of queries ever cached in the"
     },
     {
+      "dataType": "numeric",
       "id": "qcache_lowmem_prunes",
       "name": "Qcache_lowmem_prunes",
-      "type": "number of pruning operations performed to remove old results to make space for new results in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pruning operations performed to remove old results to make space for new results in the"
     },
     {
+      "dataType": "numeric",
       "id": "qcache_not_cached",
       "name": "Qcache_not_cached",
-      "type": "number of queries that are uncacheable by the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of queries that are uncacheable by the"
     },
     {
+      "dataType": "numeric",
       "id": "qcache_queries_in_cache",
       "name": "Qcache_queries_in_cache",
-      "type": "number of queries currently cached by the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of queries currently cached by the"
     },
     {
+      "dataType": "numeric",
       "id": "qcache_total_blocks",
       "name": "Qcache_total_blocks",
-      "type": "number of blocks used by the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of blocks used by the"
     },
     {
+      "dataType": "numeric",
       "id": "queries",
       "name": "Queries",
-      "type": "number of statements executed by the server, excluding com_ping and com_statistics. differs from",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of statements executed by the server, excluding com_ping and com_statistics. differs from"
     },
     {
+      "dataType": "numeric",
       "id": "questions",
       "name": "Questions",
-      "type": "number of statements executed by the server, excluding com_ping, com_statistics, com_stmt_prepare, com_stmt_close, and com_stmt_reset statements. differs from",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of statements executed by the server, excluding com_ping, com_statistics, com_stmt_prepare, com_stmt_close, and com_stmt_reset statements. differs from"
     },
     {
+      "dataType": "numeric",
       "id": "rows_read",
       "name": "Rows_read",
-      "type": "number of requests to read a row (excluding temporary tables).",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to read a row (excluding temporary tables)."
     },
     {
+      "dataType": "numeric",
       "id": "rows_sent",
       "name": "Rows_sent",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "rows_tmp_read",
       "name": "Rows_tmp_read",
-      "type": "number of requests to read a row in a temporary table.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to read a row in a temporary table."
     },
     {
+      "dataType": "numeric",
       "id": "select_full_join",
       "name": "Select_full_join",
-      "type": "number of joins which did not use an index. if not zero, you may need to check table indexes.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of joins which did not use an index. if not zero, you may need to check table indexes."
     },
     {
+      "dataType": "numeric",
       "id": "select_full_range_join",
       "name": "Select_full_range_join",
-      "type": "number of joins which used a range search of the first table.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of joins which used a range search of the first table."
     },
     {
+      "dataType": "numeric",
       "id": "select_range",
       "name": "Select_range",
-      "type": "number of joins which used a range on the first table.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of joins which used a range on the first table."
     },
     {
+      "dataType": "numeric",
       "id": "select_range_check",
       "name": "Select_range_check",
-      "type": "number of joins without keys that check for key usage after each row. if not zero, you may need to check table indexes.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of joins without keys that check for key usage after each row. if not zero, you may need to check table indexes."
     },
     {
+      "dataType": "numeric",
       "id": "select_scan",
       "name": "Select_scan",
-      "type": "number of joins which used a full scan of the first table.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of joins which used a full scan of the first table."
     },
     {
+      "dataType": "numeric",
       "id": "slow_launch_threads",
       "name": "Slow_launch_threads",
-      "type": "number of threads which took longer than",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of threads which took longer than"
     },
     {
+      "dataType": "numeric",
       "id": "slow_queries",
       "name": "Slow_queries",
-      "type": "number of queries which took longer than",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of queries which took longer than"
     },
     {
+      "dataType": "numeric",
       "id": "sort_merge_passes",
       "name": "Sort_merge_passes",
-      "type": "number of merge passes performed by the sort algorithm. if too high, you may need to look at improving your query indexes, or increasing the",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of merge passes performed by the sort algorithm. if too high, you may need to look at improving your query indexes, or increasing the"
     },
     {
+      "dataType": "numeric",
       "id": "sort_priority_queue_sorts",
       "name": "Sort_priority_queue_sorts",
-      "type": "the number of times that sorting was done through a priority queue. (the total number of times sorting was done is a sum",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "the number of times that sorting was done through a priority queue. (the total number of times sorting was done is a sum"
     },
     {
+      "dataType": "numeric",
       "id": "sort_range",
       "name": "Sort_range",
-      "type": "number of sorts which used a range.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of sorts which used a range."
     },
     {
+      "dataType": "numeric",
       "id": "sort_rows",
       "name": "Sort_rows",
-      "type": "number of rows sorted.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of rows sorted."
     },
     {
+      "dataType": "numeric",
       "id": "sort_scan",
       "name": "Sort_scan",
-      "type": "number of sorts which used a full table scan.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of sorts which used a full table scan."
     },
     {
+      "dataType": "numeric",
       "id": "subquery_cache_hit",
       "name": "Subquery_cache_hit",
-      "type": "counter for all",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "counter for all"
     },
     {
+      "dataType": "numeric",
       "id": "subquery_cache_miss",
       "name": "Subquery_cache_miss",
-      "type": "counter for all",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "counter for all"
     },
     {
+      "dataType": "numeric",
       "id": "syncs",
       "name": "Syncs",
-      "type": "number of times my_sync() has been called, or the number of times the server has had to force data to disk. covers the",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of times my_sync() has been called, or the number of times the server has had to force data to disk. covers the"
     },
     {
+      "dataType": "numeric",
       "id": "table_locks_immediate",
       "name": "Table_locks_immediate",
-      "type": "number of table locks which were completed immediately.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of table locks which were completed immediately."
     },
     {
+      "dataType": "numeric",
       "id": "table_locks_waited",
       "name": "Table_locks_waited",
-      "type": "number of table locks which had to wait. indicates table lock contention.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of table locks which had to wait. indicates table lock contention."
     },
     {
+      "dataType": "numeric",
       "id": "table_open_cache_active_instances",
       "name": "Table_open_cache_active_instances",
-      "type": "number of active instances for open tables cache lookups.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of active instances for open tables cache lookups."
     },
     {
+      "dataType": "numeric",
       "id": "table_open_cache_hits",
       "name": "Table_open_cache_hits",
-      "type": "number of hits for open tables cache lookups.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of hits for open tables cache lookups."
     },
     {
+      "dataType": "numeric",
       "id": "table_open_cache_misses",
       "name": "Table_open_cache_misses",
-      "type": "number of misses for open tables cache lookups.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of misses for open tables cache lookups."
     },
     {
+      "dataType": "numeric",
       "id": "table_open_cache_overflows",
       "name": "Table_open_cache_overflows",
-      "type": "number of overflows for open tables cache lookups.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of overflows for open tables cache lookups."
     },
     {
+      "dataType": "numeric",
       "id": "tc_log_max_pages_used",
       "name": "Tc_log_max_pages_used",
-      "type": "max number of pages used by the transaction coordinator recovery log.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "max number of pages used by the transaction coordinator recovery log."
     },
     {
+      "dataType": "numeric",
       "id": "tc_log_page_size",
       "name": "Tc_log_page_size",
-      "type": "page size of the transaction coordinator recovery log.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "page size of the transaction coordinator recovery log."
     },
     {
+      "dataType": "numeric",
       "id": "tc_log_page_waits",
       "name": "Tc_log_page_waits",
-      "type": "number of times a two-phase commit was forced to wait for a free transaction coordinator recovery log page.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of times a two-phase commit was forced to wait for a free transaction coordinator recovery log page."
     },
     {
+      "dataType": "numeric",
       "id": "threads_cached",
       "name": "Threads_cached",
-      "type": "number of threads cached in the thread cache. will be zero if the thread pool is in use (see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of threads cached in the thread cache. will be zero if the thread pool is in use (see"
     },
     {
+      "dataType": "numeric",
       "id": "threads_connected",
       "name": "Threads_connected",
-      "type": "number of open connections. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of open connections. see"
     },
     {
+      "dataType": "numeric",
       "id": "threads_created",
       "name": "Threads_created",
-      "type": "number of threads created to respond to client connections. if too large, look at increasing",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of threads created to respond to client connections. if too large, look at increasing"
     },
     {
+      "dataType": "numeric",
       "id": "threads_running",
       "name": "Threads_running",
-      "type": "number of threads that are actively running, not sleeping. until",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of threads that are actively running, not sleeping. until"
     },
     {
+      "dataType": "numeric",
       "id": "update_scan",
       "name": "Update_scan",
-      "type": "number of updates that required a full table scan.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of updates that required a full table scan."
     },
     {
+      "dataType": "numeric",
       "id": "uptime",
       "name": "Uptime",
-      "type": "number of seconds the server has been running.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of seconds the server has been running."
     },
     {
+      "dataType": "numeric",
       "id": "uptime_since_flush_status",
       "name": "Uptime_since_flush_status",
-      "type": "number of seconds since the last",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of seconds since the last"
     }
-  ]
+  ],
+  "name": "server-status-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
 }

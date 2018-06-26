@@ -1,74 +1,72 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/cassandra/cassandra-system-variables/",
-  "name": "cassandra-system-variables",
   "data": [
     {
+      "dataType": "string",
+      "dynamic": true,
       "id": "cassandra_default_thrift_host",
       "name": "cassandra_default_thrift_host",
-      "type": "host to connect to, if not specified on per-table basis.",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "host to connect to, if not specified on per-table basis."
     },
     {
-      "id": "cassandra_failure_retries",
-      "name": "cassandra_failure_retries",
-      "type": "number of times to retry on timeout/unavailable failures.",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "3",
+      "dynamic": true,
+      "id": "cassandra_failure_retries",
+      "name": "cassandra_failure_retries",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "number of times to retry on timeout/unavailable failures.",
       "validValues": [
         "1",
         "1073741824"
       ]
     },
     {
+      "dataType": "numeric",
+      "default": "100",
+      "dynamic": true,
       "id": "cassandra_insert_batch_size",
       "name": "cassandra_insert_batch_size",
-      "type": "insert batch size.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "100",
+      "type": "insert batch size.",
       "validValues": [
         "1",
         "1073741824"
       ]
     },
     {
+      "dataType": "numeric",
+      "default": "100",
+      "dynamic": true,
       "id": "cassandra_multiget_batch_size",
       "name": "cassandra_multiget_batch_size",
-      "type": "batched key access batch size.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "100",
+      "type": "batched key access batch size.",
       "validValues": [
         "1",
         "1073741824"
       ]
     },
     {
+      "default": "ONE",
       "id": "cassandra_read_consistency",
       "name": "cassandra_read_consistency",
-      "type": "consistency to use for reading. see",
       "scope": [
         "global",
         "session"
       ],
-      "default": "ONE",
+      "type": "consistency to use for reading. see",
       "validValues": [
         "ONE",
         "TWO",
@@ -82,28 +80,28 @@
       ]
     },
     {
+      "default": "10000",
       "id": "cassandra_rnd_batch_size",
       "name": "cassandra_rnd_batch_size",
-      "type": "full table scan batch size.",
       "scope": [
         "global",
         "session"
       ],
-      "default": "10000",
+      "type": "full table scan batch size.",
       "validValues": [
         "1",
         "1073741824"
       ]
     },
     {
+      "default": "ONE",
       "id": "cassandra_write_consistency",
       "name": "cassandra_write_consistency",
-      "type": "consistency to use for writing. see",
       "scope": [
         "global",
         "session"
       ],
-      "default": "ONE",
+      "type": "consistency to use for writing. see",
       "validValues": [
         "ONE",
         "TWO",
@@ -116,5 +114,7 @@
         "\n"
       ]
     }
-  ]
+  ],
+  "name": "cassandra-system-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/cassandra/cassandra-system-variables/"
 }

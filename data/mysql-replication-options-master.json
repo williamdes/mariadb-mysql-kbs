@@ -1,110 +1,110 @@
 {
-  "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html",
-  "name": "replication-options-master",
   "data": [
     {
-      "id": "option_mysqld_show-slave-auth-info",
       "cli": "--show-slave-auth-info",
-      "type": "boolean",
-      "default": "false"
+      "default": "false",
+      "id": "option_mysqld_show-slave-auth-info",
+      "type": "boolean"
     },
     {
+      "default": "1",
+      "dynamic": true,
       "id": "sysvar_auto_increment_increment",
       "name": "auto_increment_increment",
+      "range": {
+        "from": 1,
+        "to": 65535
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "type": "integer",
-      "default": "1",
-      "range": {
-        "from": 1,
-        "to": 65535
-      }
+      "type": "integer"
     },
     {
+      "default": "1",
+      "dynamic": true,
       "id": "sysvar_auto_increment_offset",
       "name": "auto_increment_offset",
+      "range": {
+        "from": 1,
+        "to": 65535
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "type": "integer",
-      "default": "1",
-      "range": {
-        "from": 1,
-        "to": 65535
-      }
+      "type": "integer"
     },
     {
+      "default": "off",
+      "dynamic": true,
       "id": "sysvar_rpl_semi_sync_master_enabled",
       "name": "rpl_semi_sync_master_enabled",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "type": "boolean",
-      "default": "off"
+      "type": "boolean"
     },
     {
+      "default": "10000",
+      "dynamic": true,
       "id": "sysvar_rpl_semi_sync_master_timeout",
       "name": "rpl_semi_sync_master_timeout",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "type": "integer",
-      "default": "10000"
+      "type": "integer"
     },
     {
+      "default": "32",
+      "dynamic": true,
       "id": "sysvar_rpl_semi_sync_master_trace_level",
       "name": "rpl_semi_sync_master_trace_level",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "type": "integer",
-      "default": "32"
+      "type": "integer"
     },
     {
+      "default": "1",
+      "dynamic": true,
       "id": "sysvar_rpl_semi_sync_master_wait_for_slave_count",
       "name": "rpl_semi_sync_master_wait_for_slave_count",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "type": "integer",
-      "default": "1",
       "range": {
         "from": 1,
         "to": 65535
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     },
     {
+      "default": "on",
+      "dynamic": true,
       "id": "sysvar_rpl_semi_sync_master_wait_no_slave",
       "name": "rpl_semi_sync_master_wait_no_slave",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "type": "boolean",
-      "default": "on"
+      "type": "boolean"
     },
     {
+      "default": "after_sync",
+      "dynamic": true,
       "id": "sysvar_rpl_semi_sync_master_wait_point",
       "name": "rpl_semi_sync_master_wait_point",
       "scope": [
         "global"
       ],
-      "dynamic": true,
       "type": "enumeration",
-      "default": "after_sync",
       "validValues": [
         "AFTER_SYNC",
         "AFTER_COMMIT"
       ]
     }
-  ]
+  ],
+  "name": "replication-options-master",
+  "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
 }

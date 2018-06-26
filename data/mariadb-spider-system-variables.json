@@ -1,1462 +1,1460 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/",
-  "name": "spider-system-variables",
   "data": [
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_auto_increment_mode",
       "name": "spider_auto_increment_mode",
-      "type": "the",
+      "range": {
+        "from": -1,
+        "to": 3
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 3
-      }
+      "type": "the"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_bgs_first_read",
       "name": "spider_bgs_first_read",
-      "type": "number of first read records to use when performing a concurrent background search. to start a range scan on the remote backend, the storage engine first needs to send the first record. fetching a second record in the same query can save a network round trip stopping the plan if the backend has a single record. the first and second reads are used to warm up for background search.  when not using",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 9223372036854776000
-      }
-    },
-    {
-      "id": "spider_bgs_mode",
-      "name": "spider_bgs_mode",
-      "type": "background search mode. this enables the use of a thread per data server connection if the query is not shard-based and must be distributed across shards. the partitioning plugin scans partitions one after the other to optimize memory usage. because the shards are external, reading all shards can be performed in parallel when the plan prunes multiple partitions.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "number of first read records to use when performing a concurrent background search. to start a range scan on the remote backend, the storage engine first needs to send the first record. fetching a second record in the same query can save a network round trip stopping the plan if the backend has a single record. the first and second reads are used to warm up for background search.  when not using"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_bgs_mode",
+      "name": "spider_bgs_mode",
       "range": {
         "from": -1,
         "to": 3
-      }
-    },
-    {
-      "id": "spider_bgs_second_read",
-      "name": "spider_bgs_second_read",
-      "type": "number of second read records on the backend server when using background search. when the first records are found from",
+      },
       "scope": [
         "global",
         "session"
       ],
+      "type": "background search mode. this enables the use of a thread per data server connection if the query is not shard-based and must be distributed across shards. the partitioning plugin scans partitions one after the other to optimize memory usage. because the shards are external, reading all shards can be performed in parallel when the plan prunes multiple partitions."
+    },
+    {
       "dynamic": true,
+      "id": "spider_bgs_second_read",
+      "name": "spider_bgs_second_read",
       "range": {
         "from": -1,
         "to": 9223372036854776000
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "number of second read records on the backend server when using background search. when the first records are found from"
     },
     {
+      "dataType": "string",
+      "dynamic": true,
       "id": "spider_bka_engine",
       "name": "spider_bka_engine",
-      "type": "storage engine used with temporary tables when the",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "storage engine used with temporary tables when the"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_bka_mode",
       "name": "spider_bka_mode",
-      "type": "internal action to perform when multi-split reads are disabled.  if the",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 2
-      }
-    },
-    {
-      "id": "spider_bka_table_name_type",
-      "name": "spider_bka_table_name_type",
-      "type": "the type of temporary table name for bka.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "internal action to perform when multi-split reads are disabled.  if the"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_bka_table_name_type",
+      "name": "spider_bka_table_name_type",
       "range": {
         "from": -1,
         "to": 1
-      }
-    },
-    {
-      "id": "spider_block_size",
-      "name": "spider_block_size",
-      "type": "size of memory block used in mariadb. can usually be left unchanged.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "the type of temporary table name for bka."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_block_size",
+      "name": "spider_block_size",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "spider_bulk_size",
-      "name": "spider_bulk_size",
-      "type": "size in bytes of the buffer when multiple grouping multiple",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "size of memory block used in mariadb. can usually be left unchanged."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_bulk_size",
+      "name": "spider_bulk_size",
       "range": {
         "from": -1,
         "to": 2147483647
-      }
-    },
-    {
-      "id": "spider_bulk_update_mode",
-      "name": "spider_bulk_update_mode",
-      "type": "bulk update and delete mode.  note: if you use a non-default value for the",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "size in bytes of the buffer when multiple grouping multiple"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_bulk_update_mode",
+      "name": "spider_bulk_update_mode",
       "range": {
         "from": -1,
         "to": 2
-      }
-    },
-    {
-      "id": "spider_bulk_update_size",
-      "name": "spider_bulk_update_size",
-      "type": "size in bytes for",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "bulk update and delete mode.  note: if you use a non-default value for the"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_bulk_update_size",
+      "name": "spider_bulk_update_size",
       "range": {
         "from": -1,
         "to": 2147483647
-      }
-    },
-    {
-      "id": "spider_casual_read",
-      "name": "spider_casual_read",
-      "type": "casual reads enables all isolation levels, (such as repeatable reads) to work with transactions on multiple backends.  with auto-commit queries, you can relax read consistency and run on multiple connections to the backends.  this enables parallel queries across partitions, even if multiple shards are stored on the same physical server.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "size in bytes for"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_casual_read",
+      "name": "spider_casual_read",
       "range": {
         "from": -1,
         "to": 63
-      }
-    },
-    {
-      "id": "spider_conn_recycle_mode",
-      "name": "spider_conn_recycle_mode",
-      "type": "connection recycle mode.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "casual reads enables all isolation levels, (such as repeatable reads) to work with transactions on multiple backends.  with auto-commit queries, you can relax read consistency and run on multiple connections to the backends.  this enables parallel queries across partitions, even if multiple shards are stored on the same physical server."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_conn_recycle_mode",
+      "name": "spider_conn_recycle_mode",
       "range": {
         "from": 0,
         "to": 2
-      }
-    },
-    {
-      "id": "spider_conn_recycle_strict",
-      "name": "spider_conn_recycle_strict",
-      "type": "whether to force the creation of new connections.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "connection recycle mode."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_conn_recycle_strict",
+      "name": "spider_conn_recycle_strict",
       "range": {
         "from": 0,
         "to": 1
-      }
-    },
-    {
-      "id": "spider_conn_wait_timeout",
-      "name": "spider_conn_wait_timeout",
-      "type": "max waiting time in seconds for spider to get a remote connection.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "whether to force the creation of new connections."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_conn_wait_timeout",
+      "name": "spider_conn_wait_timeout",
       "range": {
         "from": 0,
         "to": 1000
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "max waiting time in seconds for spider to get a remote connection."
     },
     {
+      "dataType": "numeric",
+      "default": "1",
+      "dynamic": true,
       "id": "spider_connect_error_interval",
       "name": "spider_connect_error_interval",
-      "type": "return same error code until interval passes if connection is failed",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "1"
+      "type": "return same error code until interval passes if connection is failed"
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_connect_mutex",
       "name": "spider_connect_mutex",
-      "type": "whether to serialize remote servers connections (use mutex at connecting). use this parameter if you get an error or slowdown due to too many connection processes.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to serialize remote servers connections (use mutex at connecting). use this parameter if you get an error or slowdown due to too many connection processes."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_connect_retry_count",
       "name": "spider_connect_retry_count",
-      "type": "number of times to retry connections that fail due to too many connection processes.",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": 0,
         "to": 2147483647
-      }
-    },
-    {
-      "id": "spider_connect_retry_interval",
-      "name": "spider_connect_retry_interval",
-      "type": "interval in microseconds for connection failure due to too many connection processes.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "number of times to retry connections that fail due to too many connection processes."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_connect_retry_interval",
+      "name": "spider_connect_retry_interval",
       "range": {
         "from": -1,
         "to": 9223372036854776000
-      }
-    },
-    {
-      "id": "spider_connect_timeout",
-      "name": "spider_connect_timeout",
-      "type": "timeout in seconds to declare remote backend unresponsive when opening a connection. change for high-latency networks.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "interval in microseconds for connection failure due to too many connection processes."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_connect_timeout",
+      "name": "spider_connect_timeout",
       "range": {
         "from": -1,
         "to": 2147483647
-      }
-    },
-    {
-      "id": "spider_crd_bg_mode",
-      "name": "spider_crd_bg_mode",
-      "type": "indexes cardinality statistics in the background. disable when the",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "timeout in seconds to declare remote backend unresponsive when opening a connection. change for high-latency networks."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_crd_bg_mode",
+      "name": "spider_crd_bg_mode",
       "range": {
         "from": -1,
         "to": 1
-      }
-    },
-    {
-      "id": "spider_crd_interval",
-      "name": "spider_crd_interval",
-      "type": "time interval in seconds of index cardinality statistics. set to",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "indexes cardinality statistics in the background. disable when the"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_crd_interval",
+      "name": "spider_crd_interval",
       "range": {
         "from": -1,
         "to": 2147483647
-      }
-    },
-    {
-      "id": "spider_crd_mode",
-      "name": "spider_crd_mode",
-      "type": "mode for index cardinality statistics. by default, uses",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "time interval in seconds of index cardinality statistics. set to"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_crd_mode",
+      "name": "spider_crd_mode",
       "range": {
         "from": -1,
         "to": 3
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "mode for index cardinality statistics. by default, uses"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_crd_sync",
       "name": "spider_crd_sync",
-      "type": "synchronize index cardinality statistics in partitioned tables.",
+      "range": {
+        "from": -1,
+        "to": 2
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 2
-      }
+      "type": "synchronize index cardinality statistics in partitioned tables."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_crd_type",
       "name": "spider_crd_type",
-      "type": "type of cardinality calculation. only effective when the",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 2
-      }
-    },
-    {
-      "id": "spider_crd_weight",
-      "name": "spider_crd_weight",
-      "type": "weight coefficient used to calculate effectiveness of index from the cardinality of column. for more information, see the description for the",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "type of cardinality calculation. only effective when the"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_crd_weight",
+      "name": "spider_crd_weight",
       "range": {
         "from": -1,
         "to": 2147483647
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "weight coefficient used to calculate effectiveness of index from the cardinality of column. for more information, see the description for the"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_delete_all_rows_type",
       "name": "spider_delete_all_rows_type",
-      "type": "the type of delete_all_rows.",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 1
-      }
+      "type": "the type of delete_all_rows."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_direct_dup_insert",
       "name": "spider_direct_dup_insert",
-      "type": "manages duplicate key check for",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 1
-      }
-    },
-    {
-      "id": "spider_direct_order_limit",
-      "name": "spider_direct_order_limit",
-      "type": "pushes",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "manages duplicate key check for"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_direct_order_limit",
+      "name": "spider_direct_order_limit",
       "range": {
         "from": -1,
         "to": 9223372036854776000
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "pushes"
     },
     {
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "spider_dry_access",
       "name": "spider_dry_access",
-      "type": "simulates an empty result-set. no queries are sent to the backend. use for performance tuning.",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "simulates an empty result-set. no queries are sent to the backend. use for performance tuning."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_error_read_mode",
       "name": "spider_error_read_mode",
-      "type": "sends an empty result-set when reading a backend server raises an error.  useful with applications that don't implement transaction replays.",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 1
-      }
+      "type": "sends an empty result-set when reading a backend server raises an error.  useful with applications that don't implement transaction replays."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_error_write_mode",
       "name": "spider_error_write_mode",
-      "type": "sends an empty result-set when writing to a backend server raises an error.  useful with applications that don't implement transaction replays.",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 1
-      }
-    },
-    {
-      "id": "spider_first_read",
-      "name": "spider_first_read",
-      "type": "number of first read records to start a range scan on the backend server.  spider needs to send the first record.  fetching the second record saves network round-trips, stopping the plan if the backend has a single record.  first read and second read are used to warm up for background searches, third reads without using the",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "sends an empty result-set when writing to a backend server raises an error.  useful with applications that don't implement transaction replays."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_first_read",
+      "name": "spider_first_read",
       "range": {
         "from": -1,
         "to": 9223372036854776000
-      }
-    },
-    {
-      "id": "spider_force_commit",
-      "name": "spider_force_commit",
-      "type": "behavior when error occurs on",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "number of first read records to start a range scan on the backend server.  spider needs to send the first record.  fetching the second record saves network round-trips, stopping the plan if the backend has a single record.  first read and second read are used to warm up for background searches, third reads without using the"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_force_commit",
+      "name": "spider_force_commit",
       "range": {
         "from": 0,
         "to": 2
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "behavior when error occurs on"
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_general_log",
       "name": "spider_general_log",
-      "type": "whether spider logs all commands to the general log.  spider logs error codes according to the",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether spider logs all commands to the general log.  spider logs error codes according to the"
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_index_hint_pushdown",
       "name": "spider_index_hint_pushdown",
-      "type": "whether to use push down index hints, like",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to use push down index hints, like"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_init_sql_alloc_size",
       "name": "spider_init_sql_alloc_size",
-      "type": "initial size of the local sql buffer.",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 2147483647
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "initial size of the local sql buffer."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_internal_limit",
       "name": "spider_internal_limit",
-      "type": "limits the number of records when acquired from a remote server.",
+      "range": {
+        "from": -1,
+        "to": 9223372036854776000
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 9223372036854776000
-      }
+      "type": "limits the number of records when acquired from a remote server."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_internal_offset",
       "name": "spider_internal_offset",
-      "type": "skip records when acquired from the remote server.",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 9223372036854776000
-      }
-    },
-    {
-      "id": "spider_internal_optimize",
-      "name": "spider_internal_optimize",
-      "type": "whether to perform push down operations for",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "skip records when acquired from the remote server."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_internal_optimize",
+      "name": "spider_internal_optimize",
       "range": {
         "from": -1,
         "to": 1
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "whether to perform push down operations for"
     },
     {
       "id": "spider_internal_optimize_local",
       "name": "spider_internal_optimize_local",
-      "type": "whether to transmit to remote servers when",
       "range": {
         "from": -1,
         "to": 1
-      }
+      },
+      "type": "whether to transmit to remote servers when"
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_internal_sql_log_off",
       "name": "spider_internal_sql_log_off",
-      "type": "whether to log sql statements sent to the remote server in the",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to log sql statements sent to the remote server in the"
     },
     {
+      "dataType": "boolean",
       "id": "spider_internal_unlock",
       "name": "spider_internal_unlock",
-      "type": "whether to transmit unlock tables to the connection of the table used with",
-      "dataType": "boolean"
+      "type": "whether to transmit unlock tables to the connection of the table used with"
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_internal_xa",
       "name": "spider_internal_xa",
-      "type": "whether to implement xa at the server- or storage engine-level.  when using the server-level, set different values for the",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to implement xa at the server- or storage engine-level.  when using the server-level, set different values for the"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_internal_xa_id_type",
       "name": "spider_internal_xa_id_type",
-      "type": "the type of internal_xa id.",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 1
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "the type of internal_xa id."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_internal_xa_snapshot",
       "name": "spider_internal_xa_snapshot",
-      "type": "limitation for reading consistent data on all backend servers when using mariadb's internal xa implementation and",
+      "range": {
+        "from": 0,
+        "to": 3
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": 0,
-        "to": 3
-      }
+      "type": "limitation for reading consistent data on all backend servers when using mariadb's internal xa implementation and"
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_load_crd_at_startup",
       "name": "spider_load_crd_at_startup",
-      "type": "loads crd from the system table at startup.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "loads crd from the system table at startup."
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_load_sts_at_startup",
       "name": "spider_load_sts_at_startup",
-      "type": "loads sts from the system table at startup.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "loads sts from the system table at startup."
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_local_lock_table",
       "name": "spider_local_lock_table",
-      "type": "whether to push",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to push"
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_lock_exchange",
       "name": "spider_lock_exchange",
-      "type": "whether to convert",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to convert"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_log_result_error_with_sql",
       "name": "spider_log_result_error_with_sql",
-      "type": "logs sql statements with result errors.",
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": 0,
         "to": 3
-      }
+      },
+      "type": "logs sql statements with result errors."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_log_result_errors",
       "name": "spider_log_result_errors",
-      "type": "log results from data nodes to the spider node in the",
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": 0,
         "to": 4
-      }
+      },
+      "type": "log results from data nodes to the spider node in the"
     },
     {
-      "id": "spider_low_mem_read",
-      "name": "spider_low_mem_read",
-      "type": "whether to use low memory mode when executing queries issued internally to remote servers that return result-sets.",
       "dataType": "numeric",
       "default": "-1",
+      "id": "spider_low_mem_read",
+      "name": "spider_low_mem_read",
       "range": {
         "from": -1,
         "to": 1
-      }
+      },
+      "type": "whether to use low memory mode when executing queries issued internally to remote servers that return result-sets."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_max_connections",
       "name": "spider_max_connections",
-      "type": "maximum number of connections from spider to a remote mariadb servers. defaults to",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": 0,
         "to": 99999
-      }
-    },
-    {
-      "id": "spider_max_order",
-      "name": "spider_max_order",
-      "type": "maximum number of columns for",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "maximum number of connections from spider to a remote mariadb servers. defaults to"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_max_order",
+      "name": "spider_max_order",
       "range": {
         "from": -1,
         "to": 32767
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "maximum number of columns for"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_multi_split_read",
       "name": "spider_multi_split_read",
-      "type": "whether to divide a statement into multiple sql statements sent to the remote backend server when the optimizer resolves range retrievals to multiple conditions.",
+      "range": {
+        "from": -1,
+        "to": 2147483647
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 2147483647
-      }
+      "type": "whether to divide a statement into multiple sql statements sent to the remote backend server when the optimizer resolves range retrievals to multiple conditions."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_net_read_timeout",
       "name": "spider_net_read_timeout",
-      "type": "tcp timeout in seconds to declare remote backend servers unresponsive when reading from a connection.  change for high latency networks.",
+      "range": {
+        "from": -1,
+        "to": 2147483647
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 2147483647
-      }
+      "type": "tcp timeout in seconds to declare remote backend servers unresponsive when reading from a connection.  change for high latency networks."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_net_write_timeout",
       "name": "spider_net_write_timeout",
-      "type": "tcp timeout in seconds to declare remote backend servers unresponsive when writing to a connection.  change for high latency networks.",
+      "range": {
+        "from": -1,
+        "to": 2147483647
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 2147483647
-      }
+      "type": "tcp timeout in seconds to declare remote backend servers unresponsive when writing to a connection.  change for high latency networks."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_ping_interval_at_trx_start",
       "name": "spider_ping_interval_at_trx_start",
-      "type": "resets the connection with keepalive timeout in seconds by sending a ping.",
+      "range": {
+        "from": 0,
+        "to": 2147483647
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": 0,
-        "to": 2147483647
-      }
+      "type": "resets the connection with keepalive timeout in seconds by sending a ping."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_quick_mode",
       "name": "spider_quick_mode",
-      "type": "sets the backend query buffering to cache on the remote backend server or in the local buffer.",
+      "range": {
+        "from": -1,
+        "to": 3
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 3
-      }
+      "type": "sets the backend query buffering to cache on the remote backend server or in the local buffer."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_quick_page_size",
       "name": "spider_quick_page_size",
-      "type": "number of records in a page when acquired record by record.",
+      "range": {
+        "from": -1,
+        "to": 9223372036854776000
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 9223372036854776000
-      }
+      "type": "number of records in a page when acquired record by record."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_read_only_mode",
       "name": "spider_read_only_mode",
-      "type": "whether to allow writes on spider tables.",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 1
-      }
+      "type": "whether to allow writes on spider tables."
     },
     {
+      "dataType": "string",
+      "dynamic": true,
       "id": "spider_remote_access_charset",
       "name": "spider_remote_access_charset",
-      "type": "forces session character set when connecting to the backend server.  this can improve connection time performance.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "forces session character set when connecting to the backend server.  this can improve connection time performance."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_remote_autocommit",
       "name": "spider_remote_autocommit",
-      "type": "sets the auto-commit mode when connecting to backend servers.  this can improve connection time performance.",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 1
-      }
+      "type": "sets the auto-commit mode when connecting to backend servers.  this can improve connection time performance."
     },
     {
+      "dataType": "string",
+      "dynamic": true,
       "id": "spider_remote_default_database",
       "name": "spider_remote_default_database",
-      "type": "sets the local default database when connecting to backend servers.  this can improve connection time performance.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "sets the local default database when connecting to backend servers.  this can improve connection time performance."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_remote_sql_log_off",
       "name": "spider_remote_sql_log_off",
-      "type": "sets the",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 1
-      }
+      "type": "sets the"
     },
     {
+      "dataType": "string",
+      "dynamic": true,
       "id": "spider_remote_time_zone",
       "name": "spider_remote_time_zone",
-      "type": "forces the time zone setting when connecting to backend servers. \nthis can improve connection performance when you know the time zone.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "forces the time zone setting when connecting to backend servers. \nthis can improve connection performance when you know the time zone."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_remote_trx_isolation",
       "name": "spider_remote_trx_isolation",
-      "type": "sets the",
+      "range": {
+        "from": -1,
+        "to": 3
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 3
-      }
+      "type": "sets the"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_reset_sql_alloc",
       "name": "spider_reset_sql_alloc",
-      "type": "resets the per connection sql buffer after an sql statement executes.",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 1
-      }
+      "type": "resets the per connection sql buffer after an sql statement executes."
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_same_server_link",
       "name": "spider_same_server_link",
-      "type": "enables the linking of a table to the same local instance.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "enables the linking of a table to the same local instance."
     },
     {
+      "dynamic": true,
       "id": "spider_second_read",
       "name": "spider_second_read",
-      "type": "number of second read records on the backend server when the first records are found from the first read.  spider continues scanning a range, adding a",
+      "range": {
+        "from": -1,
+        "to": 9223372036854776000
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "range": {
-        "from": -1,
-        "to": 9223372036854776000
-      }
+      "type": "number of second read records on the backend server when the first records are found from the first read.  spider continues scanning a range, adding a"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_select_column_mode",
       "name": "spider_select_column_mode",
-      "type": "mode for column retrieval from remote backend server.",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 1
-      }
+      "type": "mode for column retrieval from remote backend server."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_selupd_lock_mode",
       "name": "spider_selupd_lock_mode",
-      "type": "local lock mode on",
+      "range": {
+        "from": -1,
+        "to": 2
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 2
-      }
+      "type": "local lock mode on"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_semi_split_read",
       "name": "spider_semi_split_read",
-      "type": "whether to use chunk retrieval with offset and limit parameters on sql statements sent to the remote backend server when using the",
+      "range": {
+        "from": -1,
+        "to": 2147483647
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 2147483647
-      }
+      "type": "whether to use chunk retrieval with offset and limit parameters on sql statements sent to the remote backend server when using the"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_semi_split_read_limit",
       "name": "spider_semi_split_read_limit",
-      "type": "sets the limit value for the",
+      "range": {
+        "from": -1,
+        "to": 9223372036854776000
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 9223372036854776000
-      }
+      "type": "sets the limit value for the"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_semi_table_lock",
       "name": "spider_semi_table_lock",
-      "type": "enables semi-table locking.  this adds a",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": 0,
         "to": 1
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "enables semi-table locking.  this adds a"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_semi_table_lock_connection",
       "name": "spider_semi_table_lock_connection",
-      "type": "whether to use multiple connections with semi-table locking.  to enable semi-table locking, use the",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 1
-      }
+      "type": "whether to use multiple connections with semi-table locking.  to enable semi-table locking, use the"
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_semi_trx",
       "name": "spider_semi_trx",
-      "type": "enables semi-transactions.  this controls transaction consistency when an sql statement is split into multiple statements issued to the backend servers.  you can preserve or relax consistency as need.  spider encapsulates auto-committed sql statements within a transaction on the remote backend server.  when using",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "enables semi-transactions.  this controls transaction consistency when an sql statement is split into multiple statements issued to the backend servers.  you can preserve or relax consistency as need.  spider encapsulates auto-committed sql statements within a transaction on the remote backend server.  when using"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_semi_trx_isolation",
       "name": "spider_semi_trx_isolation",
-      "type": "set consistency during range sql execution when",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 3
-      }
-    },
-    {
-      "id": "spider_skip_default_condition",
-      "name": "spider_skip_default_condition",
-      "type": "whether to compute condition push downs.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "set consistency during range sql execution when"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_skip_default_condition",
+      "name": "spider_skip_default_condition",
       "range": {
         "from": -1,
         "to": 1
-      }
-    },
-    {
-      "id": "spider_skip_parallel_search",
-      "name": "spider_skip_parallel_search",
-      "type": "whether to skip parallel search by specific conditions.",
-      "cli": "--spider-skip-parallel-search=#",
-      "scope": [
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 3
-      }
-    },
-    {
-      "id": "spider_split_read",
-      "name": "spider_split_read",
-      "type": "number of records in chunk to retry the result when a range query is sent to remote backend servers.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "whether to compute condition push downs."
+    },
+    {
+      "cli": "--spider-skip-parallel-search=#",
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_skip_parallel_search",
+      "name": "spider_skip_parallel_search",
+      "range": {
+        "from": -1,
+        "to": 3
+      },
+      "scope": [
+        "session"
+      ],
+      "type": "whether to skip parallel search by specific conditions."
+    },
+    {
+      "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_split_read",
+      "name": "spider_split_read",
       "range": {
         "from": -1,
         "to": 9223372036854776000
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "number of records in chunk to retry the result when a range query is sent to remote backend servers."
     },
     {
+      "cli": "--spider-store-last-crd=#",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_store_last_crd",
       "name": "spider_store_last_crd",
-      "type": "stores last crd result in the system table.",
-      "cli": "--spider-store-last-crd=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 1
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "stores last crd result in the system table."
     },
     {
+      "cli": "--spider-store-last-sts=#",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_store_last_sts",
       "name": "spider_store_last_sts",
-      "type": "stores last sts result into system table.",
-      "cli": "--spider-store-last-sts=#",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 1
-      }
+      "type": "stores last sts result into system table."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_sts_bg_mode",
       "name": "spider_sts_bg_mode",
-      "type": "enables background confirmation for table statistics.  when background confirmation is enabled, spider uses one thread per partition to maintain table status.  disable when the",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": 1
-      }
-    },
-    {
-      "id": "spider_sts_interval",
-      "name": "spider_sts_interval",
-      "type": "time interval of table statistics from the remote backend servers.",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "enables background confirmation for table statistics.  when background confirmation is enabled, spider uses one thread per partition to maintain table status.  disable when the"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_sts_interval",
+      "name": "spider_sts_interval",
       "range": {
         "from": -1,
         "to": 2147483647
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "time interval of table statistics from the remote backend servers."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_sts_mode",
       "name": "spider_sts_mode",
-      "type": "table statistics mode.\nmode for table statistics. the",
+      "range": {
+        "from": -1,
+        "to": 2
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 2
-      }
+      "type": "table statistics mode.\nmode for table statistics. the"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_sts_sync",
       "name": "spider_sts_sync",
-      "type": "synchronizes table statistics in partitioned tables.",
+      "range": {
+        "from": -1,
+        "to": 2
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": 2
-      }
+      "type": "synchronizes table statistics in partitioned tables."
     },
     {
+      "dataType": "boolean",
+      "dynamic": false,
       "id": "spider_support_xa",
       "name": "spider_support_xa",
-      "type": "xa protocol for mirroring and for multi-shard transactions.",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean"
+      "type": "xa protocol for mirroring and for multi-shard transactions."
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_sync_autocommit",
       "name": "spider_sync_autocommit",
-      "type": "whether to push down local auto-commits to remote backend servers.",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to push down local auto-commits to remote backend servers."
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_sync_time_zone",
       "name": "spider_sync_time_zone",
-      "type": "whether to push the local time zone down to remote backend servers.",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to push the local time zone down to remote backend servers."
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_sync_trx_isolation",
       "name": "spider_sync_trx_isolation",
-      "type": "pushes local transaction isolation levels down to remote backend servers.",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "pushes local transaction isolation levels down to remote backend servers."
     },
     {
-      "id": "spider_table_crd_thread_count",
-      "name": "spider_table_crd_thread_count",
-      "type": "static thread count of table crd.",
       "cli": "--spider-table-crd-thread-count=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "10",
+      "dynamic": false,
+      "id": "spider_table_crd_thread_count",
+      "name": "spider_table_crd_thread_count",
       "range": {
         "from": 1,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "spider_table_init_error_interval",
-      "name": "spider_table_init_error_interval",
-      "type": "interval in seconds where the same error code is returned if table initialization fails.  use to protect against infinite loops in table links.",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "static thread count of table crd."
+    },
+    {
       "dataType": "numeric",
       "default": "1",
+      "dynamic": true,
+      "id": "spider_table_init_error_interval",
+      "name": "spider_table_init_error_interval",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "spider_table_sts_thread_count",
-      "name": "spider_table_sts_thread_count",
-      "type": "static thread count of table sts.",
-      "cli": "--spider-table-sts-thread-count=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "interval in seconds where the same error code is returned if table initialization fails.  use to protect against infinite loops in table links."
+    },
+    {
+      "cli": "--spider-table-sts-thread-count=#",
       "dataType": "numeric",
       "default": "10",
+      "dynamic": false,
+      "id": "spider_table_sts_thread_count",
+      "name": "spider_table_sts_thread_count",
       "range": {
         "from": 1,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "spider_udf_ct_bulk_insert_interval",
-      "name": "spider_udf_ct_bulk_insert_interval",
-      "type": "interval in milliseconds between bulk inserts at copying.",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "static thread count of table sts."
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_udf_ct_bulk_insert_interval",
+      "name": "spider_udf_ct_bulk_insert_interval",
       "range": {
         "from": -1,
         "to": 2147483647
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "interval in milliseconds between bulk inserts at copying."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_udf_ct_bulk_insert_rows",
       "name": "spider_udf_ct_bulk_insert_rows",
-      "type": "number of rows to insert at a time when copying during bulk inserts.",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": null
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "number of rows to insert at a time when copying during bulk inserts."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_udf_ds_bulk_insert_rows",
       "name": "spider_udf_ds_bulk_insert_rows",
-      "type": "number of rows inserted at a time during bulk inserts when the result-set is stored in a temporary table on executing a udf.",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": null
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "number of rows inserted at a time during bulk inserts when the result-set is stored in a temporary table on executing a udf."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_udf_ds_table_loop_mode",
       "name": "spider_udf_ds_table_loop_mode",
-      "type": "whether to store the result-set in the same temporary table when the temporary table list count for udf is less than the result-set count on udf execution.",
+      "range": {
+        "from": -1,
+        "to": null
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "range": {
-        "from": -1,
-        "to": null
-      }
+      "type": "whether to store the result-set in the same temporary table when the temporary table list count for udf is less than the result-set count on udf execution."
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_udf_ds_use_real_table",
       "name": "spider_udf_ds_use_real_table",
-      "type": "use real table for temporary table list.",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": null
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "use real table for temporary table list."
     },
     {
+      "dataType": "numeric",
+      "default": "20",
+      "dynamic": false,
       "id": "spider_udf_table_lock_mutex_count",
       "name": "spider_udf_table_lock_mutex_count",
-      "type": "mutex count of table lock for spider udfs.",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "20",
       "range": {
         "from": 1,
         "to": null
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "mutex count of table lock for spider udfs."
     },
     {
+      "dataType": "numeric",
+      "default": "20",
+      "dynamic": false,
       "id": "spider_udf_table_mon_mutex_count",
       "name": "spider_udf_table_mon_mutex_count",
-      "type": "mutex count of table mon for spider udfs.",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "20",
       "range": {
         "from": 1,
         "to": null
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "mutex count of table mon for spider udfs."
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_use_all_conns_snapshot",
       "name": "spider_use_all_conns_snapshot",
-      "type": "whether to pass",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to pass"
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_use_consistent_snapshot",
       "name": "spider_use_consistent_snapshot",
-      "type": "whether to push a local",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to push a local"
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_use_default_database",
       "name": "spider_use_default_database",
-      "type": "whether to use the default database.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to use the default database."
     },
     {
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "spider_use_flash_logs",
       "name": "spider_use_flash_logs",
-      "type": "whether to push",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to push"
     },
     {
       "id": "spider_use_handler",
@@ -1464,75 +1462,77 @@
       "type": "converts"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "spider_use_pushdown_udf",
       "name": "spider_use_pushdown_udf",
-      "type": "when using a udf function in a condition and the",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": -1,
         "to": null
-      }
-    },
-    {
-      "id": "spider_use_snapshot_with_flush_tables",
-      "name": "spider_use_snapshot_with_flush_tables",
-      "type": "whether to encapsulate",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "when using a udf function in a condition and the"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_use_snapshot_with_flush_tables",
+      "name": "spider_use_snapshot_with_flush_tables",
       "range": {
         "from": 0,
         "to": null
-      }
-    },
-    {
-      "id": "spider_use_table_charset",
-      "name": "spider_use_table_charset",
-      "type": "whether to use the local table",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "whether to encapsulate"
+    },
+    {
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "spider_use_table_charset",
+      "name": "spider_use_table_charset",
       "range": {
         "from": -1,
         "to": null
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "whether to use the local table"
     },
     {
+      "dataType": "string",
+      "dynamic": false,
       "id": "spider_version",
       "name": "spider_version",
-      "type": "the current spider version.",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string"
+      "type": "the current spider version."
     },
     {
+      "dataType": "numeric",
+      "default": "1",
+      "dynamic": true,
       "id": "spider_xa_register_mode",
       "name": "spider_xa_register_mode",
-      "type": "mode of xa transaction register into system table.",
+      "range": {
+        "from": 0,
+        "to": 1
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "1",
-      "range": {
-        "from": 0,
-        "to": 1
-      }
+      "type": "mode of xa transaction register into system table."
     }
-  ]
+  ],
+  "name": "spider-system-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/"
 }

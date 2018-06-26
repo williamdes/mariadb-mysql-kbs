@@ -1,46 +1,44 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/thread-pool-system-and-status-variables/",
-  "name": "thread-pool-system-and-status-variables",
   "data": [
     {
-      "id": "extra_max_connections",
-      "name": "extra_max_connections",
-      "type": "the number of connections on the",
       "cli": "--extra-max-connections=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "1",
+      "dynamic": true,
+      "id": "extra_max_connections",
+      "name": "extra_max_connections",
       "range": {
         "from": 1,
         "to": 100000
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "the number of connections on the"
     },
     {
+      "cli": "--extra-port=#",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": false,
       "id": "extra_port",
       "name": "extra_port",
-      "type": "extra port number to use for tcp-connections in a one-thread-per-connection manner. if set to",
-      "cli": "--extra-port=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "0"
+      "type": "extra port number to use for tcp-connections in a one-thread-per-connection manner. if set to"
     },
     {
+      "cli": "--thread-handling=name",
+      "dataType": "enumeration",
+      "default": "one-thread-per-connection",
+      "dynamic": false,
       "id": "thread_handling",
       "name": "thread_handling",
-      "type": "determines how the server handles threads. the default,",
-      "cli": "--thread-handling=name",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "enumeration",
-      "default": "one-thread-per-connection",
+      "type": "determines how the server handles threads. the default,",
       "validValues": [
         "no-threads",
         "one-thread-per-connection",
@@ -48,82 +46,82 @@
       ]
     },
     {
+      "cli": "thread-pool-idle-timeout=#",
+      "dataType": "numeric",
+      "default": "60",
+      "dynamic": true,
       "id": "thread_pool_idle_timeout",
       "name": "thread_pool_idle_timeout",
-      "type": "time in seconds until an idle worker thread exits. unix-only. use",
-      "cli": "thread-pool-idle-timeout=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "60"
+      "type": "time in seconds until an idle worker thread exits. unix-only. use"
     },
     {
+      "cli": "thread-pool-max-threads=#",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "thread_pool_max_threads",
       "name": "thread_pool_max_threads",
-      "type": "maximum number of threads in the thread pool. once this limit is reached, no new threads will be created.",
-      "cli": "thread-pool-max-threads=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": 1,
         "to": 65536
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "maximum number of threads in the thread pool. once this limit is reached, no new threads will be created."
     },
     {
-      "id": "thread_pool_min_threads",
-      "name": "thread_pool_min_threads",
-      "type": "minimum number of threads in the thread pool. in bursty environments, after a period of inactivity, threads would normally be retired. when the next burst arrives, it would take time to reach the optimal level. setting this value higher than the default would prevent thread retirement even if inactive. windows-only. use",
       "cli": "thread-pool-min-threads=#",
       "dataType": "numeric",
-      "default": "1"
+      "default": "1",
+      "id": "thread_pool_min_threads",
+      "name": "thread_pool_min_threads",
+      "type": "minimum number of threads in the thread pool. in bursty environments, after a period of inactivity, threads would normally be retired. when the next burst arrives, it would take time to reach the optimal level. setting this value higher than the default would prevent thread retirement even if inactive. windows-only. use"
     },
     {
-      "id": "thread_pool_oversubscribe",
-      "name": "thread_pool_oversubscribe",
-      "type": "internal parameter, not meant to be changed. the higher the value for this parameter, the more threads that could run at the same time. a lower value can lead to more sleeps and wakeups.",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "3",
+      "dynamic": true,
+      "id": "thread_pool_oversubscribe",
+      "name": "thread_pool_oversubscribe",
       "range": {
         "from": 1,
         "to": 65536
-      }
-    },
-    {
-      "id": "thread_pool_prio_kickup_timer",
-      "name": "thread_pool_prio_kickup_timer",
-      "type": "time in milliseconds before a dequeued low-priority statement is moved to the high-priority queue. unix-only.",
-      "cli": "thread-pool-kickup-timer=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "internal parameter, not meant to be changed. the higher the value for this parameter, the more threads that could run at the same time. a lower value can lead to more sleeps and wakeups."
+    },
+    {
+      "cli": "thread-pool-kickup-timer=#",
       "dataType": "numeric",
       "default": "1000",
+      "dynamic": true,
+      "id": "thread_pool_prio_kickup_timer",
+      "name": "thread_pool_prio_kickup_timer",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "time in milliseconds before a dequeued low-priority statement is moved to the high-priority queue. unix-only."
     },
     {
+      "cli": "--thread-pool-priority=#",
+      "dataType": "enum",
+      "default": "auto",
       "id": "thread_pool_priority",
       "name": "thread_pool_priority",
-      "type": "threadpool priority. high-priority connections usually start executing earlier than low-priority.\nif set to 'auto' (the default), the actual priority (low or high) is determined by whether or not the connection is inside a transaction.",
-      "cli": "--thread-pool-priority=#",
       "scope": [
         "global",
         "connection"
       ],
-      "dataType": "enum",
-      "default": "auto",
+      "type": "threadpool priority. high-priority connections usually start executing earlier than low-priority.\nif set to 'auto' (the default), the actual priority (low or high) is determined by whether or not the connection is inside a transaction.",
       "validValues": [
         "high",
         "low",
@@ -131,55 +129,57 @@
       ]
     },
     {
+      "cli": "--thread-pool-size=#",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "thread_pool_size",
       "name": "thread_pool_size",
-      "type": "number of threads in a thread pool, which determines how many statements can execute simultaneously. unix only. see",
-      "cli": "--thread-pool-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": 1,
         "to": 128
-      }
-    },
-    {
-      "id": "thread_pool_stall_limit",
-      "name": "thread_pool_stall_limit",
-      "type": "time in milliseconds statement has to complete after starting before being defined as stalled. after this, the thread group can begin another statement. higher values can help avoid starting too many new statements while old, long-running ones are still executing, while lower values can help prevent deadlock. see",
-      "cli": "--thread-pool-stall-limit=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "number of threads in a thread pool, which determines how many statements can execute simultaneously. unix only. see"
+    },
+    {
+      "cli": "--thread-pool-stall-limit=#",
       "dataType": "numeric",
       "default": "500",
+      "dynamic": true,
+      "id": "thread_pool_stall_limit",
+      "name": "thread_pool_stall_limit",
       "range": {
         "from": 4,
         "to": 600
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "time in milliseconds statement has to complete after starting before being defined as stalled. after this, the thread group can begin another statement. higher values can help avoid starting too many new statements while old, long-running ones are still executing, while lower values can help prevent deadlock. see"
     },
     {
+      "dataType": "numeric",
       "id": "threadpool_idle_threads",
       "name": "Threadpool_idle_threads",
-      "type": "number of inactive threads in the",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of inactive threads in the"
     },
     {
+      "dataType": "numeric",
       "id": "threadpool_threads",
       "name": "Threadpool_threads",
-      "type": "number of threads in the",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "numeric"
+      "type": "number of threads in the"
     }
-  ]
+  ],
+  "name": "thread-pool-system-and-status-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/thread-pool-system-and-status-variables/"
 }

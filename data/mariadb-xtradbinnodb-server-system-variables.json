@@ -1,39 +1,37 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/",
-  "name": "xtradbinnodb-server-system-variables",
   "data": [
     {
+      "dynamic": false,
       "id": "have_innodb",
       "name": "have_innodb",
-      "type": "if the server supports",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if the server supports"
     },
     {
+      "cli": "--ignore-builtin-innodb",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "ignore_builtin_innodb",
       "name": "ignore_builtin_innodb",
-      "type": "setting this to",
-      "cli": "--ignore-builtin-innodb",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "setting this to"
     },
     {
+      "cli": "--innodb-adaptive-checkpoint=#",
+      "dataType": "string",
+      "default": "estimate",
+      "dynamic": true,
       "id": "innodb_adaptive_checkpoint",
       "name": "innodb_adaptive_checkpoint",
-      "type": "replaced with",
-      "cli": "--innodb-adaptive-checkpoint=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "estimate",
+      "type": "replaced with",
       "validValues": [
         "none",
         "0",
@@ -46,44 +44,44 @@
       ]
     },
     {
+      "cli": "--innodb-adaptive-flushing=#",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_adaptive_flushing",
       "name": "innodb_adaptive_flushing",
-      "type": "if set to",
-      "cli": "--innodb-adaptive-flushing=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
-      "id": "innodb_adaptive_flushing_lwm",
-      "name": "innodb_adaptive_flushing_lwm",
-      "type": "adaptive flushing is enabled when this this low water mark percentage of the redo log capacity is reached.",
       "cli": "--innodb-adaptive-flushing-lwm=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "double",
       "default": "10.000000",
+      "dynamic": true,
+      "id": "innodb_adaptive_flushing_lwm",
+      "name": "innodb_adaptive_flushing_lwm",
       "range": {
         "from": 0,
         "to": 70
-      }
-    },
-    {
-      "id": "innodb_adaptive_flushing_method",
-      "name": "innodb_adaptive_flushing_method",
-      "type": "determines the method of flushing dirty blocks from the innodb",
-      "cli": "innodb-adaptive-flushing-method=value",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "adaptive flushing is enabled when this this low water mark percentage of the redo log capacity is reached."
+    },
+    {
+      "cli": "innodb-adaptive-flushing-method=value",
       "dataType": "enumeration",
       "default": "estimate",
+      "dynamic": true,
+      "id": "innodb_adaptive_flushing_method",
+      "name": "innodb_adaptive_flushing_method",
+      "scope": [
+        "global"
+      ],
+      "type": "determines the method of flushing dirty blocks from the innodb",
       "validValues": [
         "native",
         "0",
@@ -94,524 +92,524 @@
       ]
     },
     {
+      "cli": "--innodb-adaptive-hash-index=#",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_adaptive_hash_index",
       "name": "innodb_adaptive_hash_index",
-      "type": "if set to",
-      "cli": "--innodb-adaptive-hash-index=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
-      "id": "innodb_adaptive_hash_index_partitions",
-      "name": "innodb_adaptive_hash_index_partitions",
-      "type": "specifies the number of partitions for use in adaptive searching. if set to",
       "cli": "innodb-adaptive-hash-index-partitions=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "1",
+      "dynamic": false,
+      "id": "innodb_adaptive_hash_index_partitions",
+      "name": "innodb_adaptive_hash_index_partitions",
       "range": {
         "from": 1,
         "to": 64
-      }
-    },
-    {
-      "id": "innodb_adaptive_hash_index_parts",
-      "name": "innodb_adaptive_hash_index_parts",
-      "type": "specifies the number of partitions for use in adaptive searching. if set to",
-      "cli": "innodb-adaptive-hash-index-parts=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "specifies the number of partitions for use in adaptive searching. if set to"
+    },
+    {
+      "cli": "innodb-adaptive-hash-index-parts=#",
       "dataType": "numeric",
       "default": "8",
+      "dynamic": false,
+      "id": "innodb_adaptive_hash_index_parts",
+      "name": "innodb_adaptive_hash_index_parts",
       "range": {
         "from": 1,
         "to": 512
-      }
-    },
-    {
-      "id": "innodb_adaptive_max_sleep_delay",
-      "name": "innodb_adaptive_max_sleep_delay",
-      "type": "maximum time in microseconds to automatically adjust the",
-      "cli": "--innodb-adaptive-max-sleep-delay=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "specifies the number of partitions for use in adaptive searching. if set to"
+    },
+    {
+      "cli": "--innodb-adaptive-max-sleep-delay=#",
       "dataType": "numeric",
       "default": "150000",
+      "dynamic": true,
+      "id": "innodb_adaptive_max_sleep_delay",
+      "name": "innodb_adaptive_max_sleep_delay",
       "range": {
         "from": 0,
         "to": 1000000
-      }
-    },
-    {
-      "id": "innodb_additional_mem_pool_size",
-      "name": "innodb_additional_mem_pool_size",
-      "type": "size in bytes of the",
-      "cli": "--innodb-additional-mem-pool-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "maximum time in microseconds to automatically adjust the"
+    },
+    {
+      "cli": "--innodb-additional-mem-pool-size=#",
       "dataType": "numeric",
       "default": "8388608",
+      "dynamic": false,
+      "id": "innodb_additional_mem_pool_size",
+      "name": "innodb_additional_mem_pool_size",
       "range": {
         "from": 2097152,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "innodb_api_bk_commit_interval",
-      "name": "innodb_api_bk_commit_interval",
-      "type": "time in seconds between auto-commits for idle connections using the innodb memcached interface (not implemented in mariadb).",
-      "cli": "--innodb-api-bk-commit-interval=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "size in bytes of the"
+    },
+    {
+      "cli": "--innodb-api-bk-commit-interval=#",
       "dataType": "numeric",
       "default": "5",
+      "dynamic": true,
+      "id": "innodb_api_bk_commit_interval",
+      "name": "innodb_api_bk_commit_interval",
       "range": {
         "from": 1,
         "to": 1073741824
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "time in seconds between auto-commits for idle connections using the innodb memcached interface (not implemented in mariadb)."
     },
     {
+      "cli": "--innodb-api-disable-rowlock=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_api_disable_rowlock",
       "name": "innodb_api_disable_rowlock",
-      "type": "for use with mysql's memcached (not implemented in mariadb)",
-      "cli": "--innodb-api-disable-rowlock=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "for use with mysql's memcached (not implemented in mariadb)"
     },
     {
+      "cli": "--innodb-api-enable-binlog=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_api_enable_binlog",
       "name": "innodb_api_enable_binlog",
-      "type": "for use with mysql's memcached (not implemented in mariadb)",
-      "cli": "--innodb-api-enable-binlog=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "for use with mysql's memcached (not implemented in mariadb)"
     },
     {
+      "cli": "--innodb-api-enable-mdl=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_api_enable_mdl",
       "name": "innodb_api_enable_mdl",
-      "type": "for use with mysql's memcached (not implemented in mariadb)",
-      "cli": "--innodb-api-enable-mdl=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "for use with mysql's memcached (not implemented in mariadb)"
     },
     {
+      "cli": "--innodb-api-trx-level=#",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "innodb_api_trx_level",
       "name": "innodb_api_trx_level",
-      "type": "for use with mysql's memcached (not implemented in mariadb)",
-      "cli": "--innodb-api-trx-level=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0"
+      "type": "for use with mysql's memcached (not implemented in mariadb)"
     },
     {
+      "cli": "--innodb-auto-lru-dump=#",
       "id": "innodb_auto_lru_dump",
       "name": "innodb_auto_lru_dump",
-      "type": "renamed",
-      "cli": "--innodb-auto-lru-dump=#"
+      "type": "renamed"
     },
     {
-      "id": "innodb_autoextend_increment",
-      "name": "innodb_autoextend_increment",
-      "type": "size in mb to increment an auto-extending shared tablespace file when it becomes full. if",
       "cli": "--innodb-autoextend-increment=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "8",
+      "dynamic": true,
+      "id": "innodb_autoextend_increment",
+      "name": "innodb_autoextend_increment",
       "range": {
         "from": 1,
         "to": 1000
-      }
-    },
-    {
-      "id": "innodb_autoinc_lock_mode",
-      "name": "innodb_autoinc_lock_mode",
-      "type": "locking mode used for generating",
-      "cli": "--innodb-autoinc-lock-mode=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "size in mb to increment an auto-extending shared tablespace file when it becomes full. if"
+    },
+    {
+      "cli": "--innodb-autoinc-lock-mode=#",
       "dataType": "numeric",
+      "dynamic": false,
+      "id": "innodb_autoinc_lock_mode",
+      "name": "innodb_autoinc_lock_mode",
       "range": {
         "from": 0,
         "to": 2
-      }
-    },
-    {
-      "id": "innodb_background_scrub_data_check_interval",
-      "name": "innodb_background_scrub_data_check_interval",
-      "type": "check if spaces needs scrubbing every",
-      "cli": "--innodb-background-scrub-data-check-interval=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "locking mode used for generating"
+    },
+    {
+      "cli": "--innodb-background-scrub-data-check-interval=#",
       "dataType": "numeric",
       "default": "3600",
+      "dynamic": true,
+      "id": "innodb_background_scrub_data_check_interval",
+      "name": "innodb_background_scrub_data_check_interval",
       "range": {
         "from": 1,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "check if spaces needs scrubbing every"
     },
     {
+      "cli": "--innodb-background-scrub-data-compressed={0|1}",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": true,
       "id": "innodb_background_scrub_data_compressed",
       "name": "innodb_background_scrub_data_compressed",
-      "type": "enable scrubbing of compressed data by background threads (same as encryption_threads). see",
-      "cli": "--innodb-background-scrub-data-compressed={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "enable scrubbing of compressed data by background threads (same as encryption_threads). see"
     },
     {
-      "id": "innodb_background_scrub_data_interval",
-      "name": "innodb_background_scrub_data_interval",
-      "type": "scrub spaces that were last scrubbed longer than this number of seconds ago. see",
       "cli": "--innodb-background-scrub-data-interval=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "604800",
+      "dynamic": true,
+      "id": "innodb_background_scrub_data_interval",
+      "name": "innodb_background_scrub_data_interval",
       "range": {
         "from": 1,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "scrub spaces that were last scrubbed longer than this number of seconds ago. see"
     },
     {
+      "cli": "--innodb-background-scrub-data-uncompressed={0|1}",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": true,
       "id": "innodb_background_scrub_data_uncompressed",
       "name": "innodb_background_scrub_data_uncompressed",
-      "type": "enable scrubbing of uncompressed data by background threads (same as encryption_threads). see",
-      "cli": "--innodb-background-scrub-data-uncompressed={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "enable scrubbing of uncompressed data by background threads (same as encryption_threads). see"
     },
     {
+      "cli": "innodb-blocking-buffer-pool-restore={1|2}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_blocking_buffer_pool_restore",
       "name": "innodb_blocking_buffer_pool_restore",
-      "type": "if set to",
-      "cli": "innodb-blocking-buffer-pool-restore={1|2}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
-      "id": "innodb_buf_dump_status_frequency",
-      "name": "innodb_buf_dump_status_frequency",
-      "type": "determines how often (as a percent) the buffer pool dump status should be printed in the logs. for example,",
       "cli": "--innodb-buf-dump-status-frequency=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_buf_dump_status_frequency",
+      "name": "innodb_buf_dump_status_frequency",
       "range": {
         "from": 0,
         "to": 100
-      }
-    },
-    {
-      "id": "innodb_buffer_pool_chunk_size",
-      "name": "innodb_buffer_pool_chunk_size",
-      "type": "chunk size used for dynamically resizing the",
-      "cli": "--innodb-buffer-pool-chunk-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "determines how often (as a percent) the buffer pool dump status should be printed in the logs. for example,"
+    },
+    {
+      "cli": "--innodb-buffer-pool-chunk-size=#",
       "dataType": "numeric",
       "default": "134217728",
+      "dynamic": false,
+      "id": "innodb_buffer_pool_chunk_size",
+      "name": "innodb_buffer_pool_chunk_size",
       "range": {
         "from": 1048576
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "chunk size used for dynamically resizing the"
     },
     {
+      "cli": "--innodb-buffer-pool-dump-at-shutdown=#",
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "innodb_buffer_pool_dump_at_shutdown",
       "name": "innodb_buffer_pool_dump_at_shutdown",
-      "type": "whether to record pages cached in the",
-      "cli": "--innodb-buffer-pool-dump-at-shutdown=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether to record pages cached in the"
     },
     {
+      "cli": "--innodb-buffer-pool-dump-now=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_buffer_pool_dump_now",
       "name": "innodb_buffer_pool_dump_now",
-      "type": "immediately records pages stored in the",
-      "cli": "--innodb-buffer-pool-dump-now=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "immediately records pages stored in the"
     },
     {
+      "cli": "--innodb-buffer-pool-dump-pct=#",
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "innodb_buffer_pool_dump_pct",
       "name": "innodb_buffer_pool_dump_pct",
-      "type": "dump only the hottest n% of each",
-      "cli": "--innodb-buffer-pool-dump-pct=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "boolean",
       "range": {
         "from": 1,
         "to": 100
-      }
-    },
-    {
-      "id": "innodb_buffer_pool_evict",
-      "name": "innodb_buffer_pool_evict",
-      "type": "evict pages from the buffer pool.  if set to \"uncompressed\" then all uncompressed pages are evicted from the buffer pool.  variable to be used only for testing. only exists in debug builds.",
-      "cli": "--innodb-buffer-pool-evict=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "dump only the hottest n% of each"
+    },
+    {
+      "cli": "--innodb-buffer-pool-evict=#",
       "dataType": "string",
       "default": "\"\"",
+      "dynamic": true,
+      "id": "innodb_buffer_pool_evict",
+      "name": "innodb_buffer_pool_evict",
+      "scope": [
+        "global"
+      ],
+      "type": "evict pages from the buffer pool.  if set to \"uncompressed\" then all uncompressed pages are evicted from the buffer pool.  variable to be used only for testing. only exists in debug builds.",
       "validValues": []
     },
     {
+      "cli": "--innodb-buffer-pool-filename=file",
+      "dataType": "string",
+      "default": "ib_buffer_pool",
+      "dynamic": true,
       "id": "innodb_buffer_pool_filename",
       "name": "innodb_buffer_pool_filename",
-      "type": "the file that holds the",
-      "cli": "--innodb-buffer-pool-filename=file",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "ib_buffer_pool"
+      "type": "the file that holds the"
     },
     {
+      "cli": "--innodb-buffer-pool-instances=#",
+      "dataType": "numeric",
+      "default": "1",
+      "dynamic": false,
       "id": "innodb_buffer_pool_instances",
       "name": "innodb_buffer_pool_instances",
-      "type": "if",
-      "cli": "--innodb-buffer-pool-instances=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "1"
+      "type": "if"
     },
     {
+      "cli": "--innodb-buffer-pool-load-abort=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_buffer_pool_load_abort",
       "name": "innodb_buffer_pool_load_abort",
-      "type": "aborts the process of restoring",
-      "cli": "--innodb-buffer-pool-load-abort=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "aborts the process of restoring"
     },
     {
+      "cli": "--innodb-buffer-pool-load-at-startup=#",
+      "dataType": "boolean",
+      "dynamic": false,
       "id": "innodb_buffer_pool_load_at_startup",
       "name": "innodb_buffer_pool_load_at_startup",
-      "type": "specifies whether the",
-      "cli": "--innodb-buffer-pool-load-at-startup=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean"
+      "type": "specifies whether the"
     },
     {
+      "cli": "--innodb-buffer-pool-load-now=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_buffer_pool_load_now",
       "name": "innodb_buffer_pool_load_now",
-      "type": "immediately warms up the",
-      "cli": "--innodb-buffer-pool-load-now=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "immediately warms up the"
     },
     {
+      "cli": "innodb-buffer-pool-populate={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_buffer_pool_populate",
       "name": "innodb_buffer_pool_populate",
-      "type": "when set to",
-      "cli": "innodb-buffer-pool-populate={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "when set to"
     },
     {
+      "cli": "innodb-buffer-pool-restore-at-startup",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "innodb_buffer_pool_restore_at_startup",
       "name": "innodb_buffer_pool_restore_at_startup",
-      "type": "time in seconds between automatic buffer pool dumps. if set to a non-zero value, xtradb will also perform an automatic restore of the",
-      "cli": "innodb-buffer-pool-restore-at-startup",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0"
+      "type": "time in seconds between automatic buffer pool dumps. if set to a non-zero value, xtradb will also perform an automatic restore of the"
     },
     {
+      "cli": "innodb-buffer-pool-shm-checksum={0|1}",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": false,
       "id": "innodb_buffer_pool_shm_checksum",
       "name": "innodb_buffer_pool_shm_checksum",
-      "type": "used with percona's shm buffer pool patch in xtradb 5.5. was shortly deprecated in xtradb xtradb 5.5.13-20.4, and removed in xtradb 5.6. xtradb only.",
-      "cli": "innodb-buffer-pool-shm-checksum={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "used with percona's shm buffer pool patch in xtradb 5.5. was shortly deprecated in xtradb xtradb 5.5.13-20.4, and removed in xtradb 5.6. xtradb only."
     },
     {
+      "cli": "innodb-buffer-pool-shm-key={0|1}",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": false,
       "id": "innodb_buffer_pool_shm_key",
       "name": "innodb_buffer_pool_shm_key",
-      "type": "used with percona's shm buffer pool patch in xtradb 5.5. later deprecated in xtradb 5.5, and removed in xtradb 5.6.",
-      "cli": "innodb-buffer-pool-shm-key={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "used with percona's shm buffer pool patch in xtradb 5.5. later deprecated in xtradb 5.5, and removed in xtradb 5.6."
     },
     {
-      "id": "innodb_buffer_pool_size",
-      "name": "innodb_buffer_pool_size",
-      "type": "innodb buffer pool size in bytes. the primary value to adjust on a database server with entirely/primarily",
       "cli": "--innodb-buffer-pool-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "134217728",
+      "dynamic": false,
+      "id": "innodb_buffer_pool_size",
+      "name": "innodb_buffer_pool_size",
       "range": {
         "from": 5242880,
         "to": 9223372036854776000
-      }
-    },
-    {
-      "id": "innodb_change_buffer_max_size",
-      "name": "innodb_change_buffer_max_size",
-      "type": "maximum size of the",
-      "cli": "--innodb-change-buffer-max-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "innodb buffer pool size in bytes. the primary value to adjust on a database server with entirely/primarily"
+    },
+    {
+      "cli": "--innodb-change-buffer-max-size=#",
       "dataType": "numeric",
       "default": "25",
+      "dynamic": true,
+      "id": "innodb_change_buffer_max_size",
+      "name": "innodb_change_buffer_max_size",
       "range": {
         "from": 0,
         "to": 50
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "maximum size of the"
     },
     {
+      "cli": "--innodb-change-buffering=#",
+      "dataType": "enumeration",
+      "dynamic": true,
       "id": "innodb_change_buffering",
       "name": "innodb_change_buffering",
-      "type": "sets how",
-      "cli": "--innodb-change-buffering=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enumeration"
+      "type": "sets how"
     },
     {
-      "id": "innodb_change_buffering_debug",
-      "name": "innodb_change_buffering_debug",
-      "type": "if set to",
       "cli": "--innodb-change-buffering-debug=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_change_buffering_debug",
+      "name": "innodb_change_buffering_debug",
       "range": {
         "from": 0,
         "to": 2
-      }
-    },
-    {
-      "id": "innodb_checkpoint_age_target",
-      "name": "innodb_checkpoint_age_target",
-      "type": "the maximum value of the checkpoint age. if set to",
-      "cli": "innodb-checkpoint-age-target=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "if set to"
+    },
+    {
+      "cli": "innodb-checkpoint-age-target=#",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_checkpoint_age_target",
+      "name": "innodb_checkpoint_age_target",
       "range": {
         "from": 0,
         "to": "upwards"
-      }
-    },
-    {
-      "id": "innodb_checksum_algorithm",
-      "name": "innodb_checksum_algorithm",
-      "type": "a replacement for innodb's",
-      "cli": "--innodb-checksum-algorithm=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "the maximum value of the checkpoint age. if set to"
+    },
+    {
+      "cli": "--innodb-checksum-algorithm=#",
       "dataType": "enumeration",
+      "dynamic": true,
+      "id": "innodb_checksum_algorithm",
+      "name": "innodb_checksum_algorithm",
+      "scope": [
+        "global"
+      ],
+      "type": "a replacement for innodb's",
       "validValues": [
         "innodb",
         "crc32",
@@ -622,68 +620,68 @@
       ]
     },
     {
+      "cli": "--innodb-checksums, --skip-innodb-checksums",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": false,
       "id": "innodb_checksums",
       "name": "innodb_checksums",
-      "type": "by default,",
-      "cli": "--innodb-checksums, --skip-innodb-checksums",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "by default,"
     },
     {
+      "cli": "--innodb-cleaner-lsn-age-factor=value",
+      "dataType": "enum",
+      "dynamic": true,
       "id": "innodb_cleaner_lsn_age_factor",
       "name": "innodb_cleaner_lsn_age_factor",
-      "type": "xtradb has enhanced page cleaner heuristics, and with these in place, the default innodb adaptive flushing may be too aggressive. as a result, a new lsn age factor formula has been introduced, controlled by this variable. the default setting,",
-      "cli": "--innodb-cleaner-lsn-age-factor=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enum",
+      "type": "xtradb has enhanced page cleaner heuristics, and with these in place, the default innodb adaptive flushing may be too aggressive. as a result, a new lsn age factor formula has been introduced, controlled by this variable. the default setting,",
       "validValues": []
     },
     {
+      "cli": "--innodb-cmp-per-index-enabled=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_cmp_per_index_enabled",
       "name": "innodb_cmp_per_index_enabled",
-      "type": "if set to",
-      "cli": "--innodb-cmp-per-index-enabled=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
-      "id": "innodb_commit_concurrency",
-      "name": "innodb_commit_concurrency",
-      "type": "limit to the number of transaction threads that can can commit simultaneously. 0, the default, imposes no limit. while you can change from one positive limit to another at runtime, you cannot set this variable to 0, or change it from 0, while the server is running.",
       "cli": "--innodb-commit-concurrency=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_commit_concurrency",
+      "name": "innodb_commit_concurrency",
       "range": {
         "from": 0,
         "to": 1000
-      }
-    },
-    {
-      "id": "innodb_compression_algorithm",
-      "name": "innodb_compression_algorithm",
-      "type": "compression algorithm used on page compression. can only be set to supported values. not all distributions support all these compression methods. setting this alone is not sufficient to compress tables - see",
-      "cli": "--innodb-compression-algorithm=value",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "limit to the number of transaction threads that can can commit simultaneously. 0, the default, imposes no limit. while you can change from one positive limit to another at runtime, you cannot set this variable to 0, or change it from 0, while the server is running."
+    },
+    {
+      "cli": "--innodb-compression-algorithm=value",
       "dataType": "enum",
       "default": "none",
+      "dynamic": true,
+      "id": "innodb_compression_algorithm",
+      "name": "innodb_compression_algorithm",
+      "scope": [
+        "global"
+      ],
+      "type": "compression algorithm used on page compression. can only be set to supported values. not all distributions support all these compression methods. setting this alone is not sufficient to compress tables - see",
       "validValues": [
         "none",
         "zlib",
@@ -695,170 +693,170 @@
       ]
     },
     {
+      "cli": "--innodb-compression-default={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_compression_default",
       "name": "innodb_compression_default",
-      "type": "whether or not",
-      "cli": "--innodb-compression-default={0|1}",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "whether or not"
     },
     {
-      "id": "innodb_compression_failure_threshold_pct",
-      "name": "innodb_compression_failure_threshold_pct",
-      "type": "specifies the percentage cutoff for expensive",
       "cli": "--innodb-compression-failure-threshold-pct=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "5",
+      "dynamic": true,
+      "id": "innodb_compression_failure_threshold_pct",
+      "name": "innodb_compression_failure_threshold_pct",
       "range": {
         "from": 0,
         "to": 100
-      }
-    },
-    {
-      "id": "innodb_compression_level",
-      "name": "innodb_compression_level",
-      "type": "the level of zlib compression, from",
-      "cli": "--innodb-compression-level=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "specifies the percentage cutoff for expensive"
+    },
+    {
+      "cli": "--innodb-compression-level=#",
       "dataType": "numeric",
       "default": "6",
+      "dynamic": true,
+      "id": "innodb_compression_level",
+      "name": "innodb_compression_level",
       "range": {
         "from": 0,
         "to": 9
-      }
-    },
-    {
-      "id": "innodb_compression_pad_pct_max",
-      "name": "innodb_compression_pad_pct_max",
-      "type": "the maximum percentage of reserved free space within each compressed page. reserved free space is used when the page's data is reorganized and might be recompressed. only used when",
-      "cli": "--innodb-compression-pad-pct-max=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "the level of zlib compression, from"
+    },
+    {
+      "cli": "--innodb-compression-pad-pct-max=#",
       "dataType": "numeric",
       "default": "50",
+      "dynamic": true,
+      "id": "innodb_compression_pad_pct_max",
+      "name": "innodb_compression_pad_pct_max",
       "range": {
         "from": 0,
         "to": 75
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "the maximum percentage of reserved free space within each compressed page. reserved free space is used when the page's data is reorganized and might be recompressed. only used when"
     },
     {
+      "cli": "--innodb-concurrency-tickets=#",
+      "dataType": "numeric",
+      "default": "500",
+      "dynamic": true,
       "id": "innodb_concurrency_tickets",
       "name": "innodb_concurrency_tickets",
-      "type": "number of times a newly-entered thread can enter and leave",
-      "cli": "--innodb-concurrency-tickets=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "500"
+      "type": "number of times a newly-entered thread can enter and leave"
     },
     {
+      "cli": "innodb-corrupt-table-action=value",
+      "dataType": "enumeration",
+      "dynamic": true,
       "id": "innodb_corrupt_table_action",
       "name": "innodb_corrupt_table_action",
-      "type": "when set to",
-      "cli": "innodb-corrupt-table-action=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enumeration",
+      "type": "when set to",
       "validValues": []
     },
     {
+      "cli": "--innodb-data-file-path=name",
+      "dataType": "numeric",
+      "default": "ibdata1:10M:autoextend",
+      "dynamic": false,
       "id": "innodb_data_file_path",
       "name": "innodb_data_file_path",
-      "type": "individual",
-      "cli": "--innodb-data-file-path=name",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "ibdata1:10M:autoextend"
+      "type": "individual"
     },
     {
+      "cli": "--innodb-data-home-dir=path",
+      "dataType": "directory name",
+      "default": "The MariaDB data directory",
+      "dynamic": false,
       "id": "innodb_data_home_dir",
       "name": "innodb_data_home_dir",
-      "type": "directory path for all",
-      "cli": "--innodb-data-home-dir=path",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "directory name",
-      "default": "The MariaDB data directory"
+      "type": "directory path for all"
     },
     {
+      "cli": "--innodb-deadlock-detect",
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": true,
       "id": "innodb_deadlock_detect",
       "name": "innodb_deadlock_detect",
-      "type": "by default, the innodb deadlock detector is enabled. if set to off, deadlock detection is disabled and mariadb will rely on",
-      "cli": "--innodb-deadlock-detect",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "by default, the innodb deadlock detector is enabled. if set to off, deadlock detection is disabled and mariadb will rely on"
     },
     {
-      "id": "innodb_default_page_encryption_key",
-      "name": "innodb_default_page_encryption_key",
-      "type": "encryption key used for page encryption. see",
       "cli": "--innodb-default-page-encryption-key=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "1",
+      "dynamic": true,
+      "id": "innodb_default_page_encryption_key",
+      "name": "innodb_default_page_encryption_key",
       "range": {
         "from": 1,
         "to": 255
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "encryption key used for page encryption. see"
     },
     {
+      "cli": "--innodb-default-encryption-key-id=#",
+      "dataType": "numeric",
+      "default": "1",
+      "dynamic": true,
       "id": "innodb_default_encryption_key_id",
       "name": "innodb_default_encryption_key_id",
-      "type": "default encryption key id used for table encryption, see",
-      "cli": "--innodb-default-encryption-key-id=#",
+      "range": {
+        "from": 1,
+        "to": 4294967295
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "1",
-      "range": {
-        "from": 1,
-        "to": 4294967295
-      }
+      "type": "default encryption key id used for table encryption, see"
     },
     {
+      "cli": "--innodb-default-row-format=value",
+      "dataType": "enum",
+      "default": "dynamic",
+      "dynamic": true,
       "id": "innodb_default_row_format",
       "name": "innodb_default_row_format",
-      "type": "specifies the",
-      "cli": "--innodb-default-row-format=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enum",
-      "default": "dynamic",
+      "type": "specifies the",
       "validValues": [
         "redundant",
         "compact",
@@ -866,208 +864,208 @@
       ]
     },
     {
+      "cli": "--innodb-defragment=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_defragment",
       "name": "innodb_defragment",
-      "type": "when set to",
-      "cli": "--innodb-defragment=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "when set to"
     },
     {
-      "id": "innodb_defragment_fill_factor",
-      "name": "innodb_defragment_fill_factor",
-      "type": ". indicates how full defragmentation should fill a page. together with",
       "cli": "--innodb-defragment-fill-factor=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "double",
       "default": "0.9",
+      "dynamic": true,
+      "id": "innodb_defragment_fill_factor",
+      "name": "innodb_defragment_fill_factor",
       "range": {
         "from": 0.7,
         "to": 1
-      }
-    },
-    {
-      "id": "innodb_defragment_fill_factor_n_recs",
-      "name": "innodb_defragment_fill_factor_n_recs",
-      "type": "number of records of space that defragmentation should leave on the page. this variable, together with",
-      "cli": "--innodb-defragment-fill-factor-n-recs=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": ". indicates how full defragmentation should fill a page. together with"
+    },
+    {
+      "cli": "--innodb-defragment-fill-factor-n-recs=#",
       "dataType": "numeric",
       "default": "20",
+      "dynamic": true,
+      "id": "innodb_defragment_fill_factor_n_recs",
+      "name": "innodb_defragment_fill_factor_n_recs",
       "range": {
         "from": 1,
         "to": 100
-      }
-    },
-    {
-      "id": "innodb_defragment_frequency",
-      "name": "innodb_defragment_frequency",
-      "type": "maximum times per second for defragmenting a single index. this controls the number of times the defragmentation thread can request x_lock on an index. the defragmentation thread will check whether 1/defragment_frequency (s) has passed since it last worked on this index, and put the index back in the queue if not enough time has passed. the actual frequency can only be lower than this given number. see",
-      "cli": "--innodb-defragment-frequency=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "number of records of space that defragmentation should leave on the page. this variable, together with"
+    },
+    {
+      "cli": "--innodb-defragment-frequency=#",
       "dataType": "integer",
       "default": "40",
+      "dynamic": true,
+      "id": "innodb_defragment_frequency",
+      "name": "innodb_defragment_frequency",
       "range": {
         "from": 1,
         "to": 1000
-      }
-    },
-    {
-      "id": "innodb_defragment_n_pages",
-      "name": "innodb_defragment_n_pages",
-      "type": "number of pages considered at once when merging multiple pages to defragment. see",
-      "cli": "--innodb-defragment-n-pages=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "maximum times per second for defragmenting a single index. this controls the number of times the defragmentation thread can request x_lock on an index. the defragmentation thread will check whether 1/defragment_frequency (s) has passed since it last worked on this index, and put the index back in the queue if not enough time has passed. the actual frequency can only be lower than this given number. see"
+    },
+    {
+      "cli": "--innodb-defragment-n-pages=#",
       "dataType": "numeric",
       "default": "7",
+      "dynamic": true,
+      "id": "innodb_defragment_n_pages",
+      "name": "innodb_defragment_n_pages",
       "range": {
         "from": 2,
         "to": 32
-      }
-    },
-    {
-      "id": "innodb_defragment_stats_accuracy",
-      "name": "innodb_defragment_stats_accuracy",
-      "type": "number of defragment stats changes there are before the stats are written to persistent storage. defaults to zero, meaning disable defragment stats tracking. see",
-      "cli": "--innodb-defragment-stats-accuracy=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "number of pages considered at once when merging multiple pages to defragment. see"
+    },
+    {
+      "cli": "--innodb-defragment-stats-accuracy=#",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_defragment_stats_accuracy",
+      "name": "innodb_defragment_stats_accuracy",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "number of defragment stats changes there are before the stats are written to persistent storage. defaults to zero, meaning disable defragment stats tracking. see"
     },
     {
+      "cli": "innodb-dict-size-limit=#",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "innodb_dict_size_limit",
       "name": "innodb_dict_size_limit",
-      "type": "size in bytes of a soft limit the memory used by tables in the data dictionary. once this limit is reached, xtradb will attempt to remove unused entries. if set to",
-      "cli": "innodb-dict-size-limit=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0"
+      "type": "size in bytes of a soft limit the memory used by tables in the data dictionary. once this limit is reached, xtradb will attempt to remove unused entries. if set to"
     },
     {
+      "cli": "--innodb-disable-sort-file-cache=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_disable_sort_file_cache",
       "name": "innodb_disable_sort_file_cache",
-      "type": "if set to",
-      "cli": "--innodb-disable-sort-file-cache=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
+      "cli": "none",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_disallow_writes",
       "name": "innodb_disallow_writes",
-      "type": "tell innodb to stop any writes to disk.",
-      "cli": "none",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "tell innodb to stop any writes to disk."
     },
     {
+      "cli": "--innodb-doublewrite, --skip-innodb-doublewrite",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": false,
       "id": "innodb_doublewrite",
       "name": "innodb_doublewrite",
-      "type": "if set to",
-      "cli": "--innodb-doublewrite, --skip-innodb-doublewrite",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
+      "cli": "innodb-doublewrite-file=filename",
+      "dataType": "filename",
+      "default": "NULL",
+      "dynamic": false,
       "id": "innodb_doublewrite_file",
       "name": "innodb_doublewrite_file",
-      "type": "the absolute or relative path and filename to a dedicated tablespace for the",
-      "cli": "innodb-doublewrite-file=filename",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "filename",
-      "default": "NULL"
+      "type": "the absolute or relative path and filename to a dedicated tablespace for the"
     },
     {
+      "cli": "innodb-empty-free-list-algorithm=value",
+      "dataType": "enum",
+      "dynamic": true,
       "id": "innodb_empty_free_list_algorithm",
       "name": "innodb_empty_free_list_algorithm",
-      "type": "xtradb 5.6.13-61 introduced an algorithm to assist with reducing mutex contention when the buffer pool free list is empty, controlled by this variable. if set to",
-      "cli": "innodb-empty-free-list-algorithm=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enum",
+      "type": "xtradb 5.6.13-61 introduced an algorithm to assist with reducing mutex contention when the buffer pool free list is empty, controlled by this variable. if set to",
       "validValues": []
     },
     {
-      "id": "innodb_enable_unsafe_group_commit",
-      "name": "innodb_enable_unsafe_group_commit",
-      "type": "unneeded after xtradb 1.0.5. if set to",
       "cli": "--innodb-enable-unsafe-group-commit",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_enable_unsafe_group_commit",
+      "name": "innodb_enable_unsafe_group_commit",
       "range": {
         "from": 0,
         "to": 1
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "unneeded after xtradb 1.0.5. if set to"
     },
     {
-      "id": "innodb_encrypt_log",
-      "name": "innodb_encrypt_log",
-      "type": "enable redo log encryption/decryption. see",
       "cli": "--innodb-encrypt-log",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
-    },
-    {
-      "id": "innodb_encrypt_tables",
-      "name": "innodb_encrypt_tables",
-      "type": "encrypt all tables in the storage engine. see",
-      "cli": "--innodb-encrypt-tables=value",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "boolean",
       "default": "OFF",
+      "dynamic": false,
+      "id": "innodb_encrypt_log",
+      "name": "innodb_encrypt_log",
+      "scope": [
+        "global"
+      ],
+      "type": "enable redo log encryption/decryption. see"
+    },
+    {
+      "cli": "--innodb-encrypt-tables=value",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "innodb_encrypt_tables",
+      "name": "innodb_encrypt_tables",
+      "scope": [
+        "global"
+      ],
+      "type": "encrypt all tables in the storage engine. see",
       "validValues": [
         "ON",
         "OFF",
@@ -1075,234 +1073,234 @@
       ]
     },
     {
-      "id": "innodb_encryption_rotate_key_age",
-      "name": "innodb_encryption_rotate_key_age",
-      "type": "re-encrypt in background any page having a key older than this. when setting up",
       "cli": "--innodb-encryption-rotate-key-age=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "1",
+      "dynamic": true,
+      "id": "innodb_encryption_rotate_key_age",
+      "name": "innodb_encryption_rotate_key_age",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "innodb_encryption_rotation_iops",
-      "name": "innodb_encryption_rotation_iops",
-      "type": "use this many iops for background key rotation. see",
-      "cli": "--innodb-encryption-rotation_iops=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "re-encrypt in background any page having a key older than this. when setting up"
+    },
+    {
+      "cli": "--innodb-encryption-rotation_iops=#",
       "dataType": "numeric",
       "default": "100",
+      "dynamic": true,
+      "id": "innodb_encryption_rotation_iops",
+      "name": "innodb_encryption_rotation_iops",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "use this many iops for background key rotation. see"
     },
     {
+      "cli": "--innodb-encryption-threads=#",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "innodb_encryption_threads",
       "name": "innodb_encryption_threads",
-      "type": "number of threads performing background key rotation and scrubbing. when setting up",
-      "cli": "--innodb-encryption-threads=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "innodb_extra_rsegments",
-      "name": "innodb_extra_rsegments",
-      "type": "removed in xtradb 5.5 and replaced by",
-      "cli": "--innodb-extra-rsegments=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "number of threads performing background key rotation and scrubbing. when setting up"
+    },
+    {
+      "cli": "--innodb-extra-rsegments=#",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": false,
+      "id": "innodb_extra_rsegments",
+      "name": "innodb_extra_rsegments",
       "range": {
         "from": 0,
         "to": 126
-      }
-    },
-    {
-      "id": "innodb_extra_undoslots",
-      "name": "innodb_extra_undoslots",
-      "type": "usually, innodb has 1024 undo slots in its rollback segment, so 1024 transactions can run in parallel. new transactions will fail if all slots are used. setting this variable to",
-      "cli": "--innodb-extra-undoslots=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "removed in xtradb 5.5 and replaced by"
     },
     {
+      "cli": "--innodb-extra-undoslots=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "innodb_extra_undoslots",
+      "name": "innodb_extra_undoslots",
+      "scope": [
+        "global"
+      ],
+      "type": "usually, innodb has 1024 undo slots in its rollback segment, so 1024 transactions can run in parallel. new transactions will fail if all slots are used. setting this variable to"
+    },
+    {
+      "cli": "--innodb-fake-changes={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_fake_changes",
       "name": "innodb_fake_changes",
-      "type": "enables the fake changes feature. in",
-      "cli": "--innodb-fake-changes={0|1}",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "enables the fake changes feature. in"
     },
     {
+      "cli": "--innodb-fast-checksum={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_fast_checksum",
       "name": "innodb_fast_checksum",
-      "type": "implements a more cpu efficient xtradb checksum algorithm, useful for write-heavy loads with high i/o. if set to",
-      "cli": "--innodb-fast-checksum={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "implements a more cpu efficient xtradb checksum algorithm, useful for write-heavy loads with high i/o. if set to"
     },
     {
-      "id": "innodb_fast_shutdown",
-      "name": "innodb_fast_shutdown",
-      "type": "the shutdown mode.",
       "cli": "--innodb-fast-shutdown[=#]",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "1",
+      "dynamic": true,
+      "id": "innodb_fast_shutdown",
+      "name": "innodb_fast_shutdown",
       "range": {
         "from": 0,
         "to": 3
-      }
-    },
-    {
-      "id": "innodb_fatal_semaphore_wait_threshold",
-      "name": "innodb_fatal_semaphore_wait_threshold",
-      "type": "in mariadb, the fatal semaphore timeout is configurable. this variable sets the maximum number of seconds for semaphores to time out in innodb.",
-      "cli": "--innodb-fatal-semaphore-wait-threshold=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "the shutdown mode."
+    },
+    {
+      "cli": "--innodb-fatal-semaphore-wait-threshold=#",
       "dataType": "numeric",
       "default": "600",
+      "dynamic": false,
+      "id": "innodb_fatal_semaphore_wait_threshold",
+      "name": "innodb_fatal_semaphore_wait_threshold",
       "range": {
         "from": 1,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "in mariadb, the fatal semaphore timeout is configurable. this variable sets the maximum number of seconds for semaphores to time out in innodb."
     },
     {
+      "cli": "--innodb-file-format=value",
+      "dataType": "string",
+      "dynamic": true,
       "id": "innodb_file_format",
       "name": "innodb_file_format",
-      "type": "file format for new",
-      "cli": "--innodb-file-format=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string",
+      "type": "file format for new",
       "validValues": [
         "Antelope",
         "Barracuda"
       ]
     },
     {
+      "cli": "--innodb-file-format-check=#",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": false,
       "id": "innodb_file_format_check",
       "name": "innodb_file_format_check",
-      "type": "if set to",
-      "cli": "--innodb-file-format-check=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-file-format-max=value",
+      "dataType": "string",
+      "default": "Antelope",
+      "dynamic": true,
       "id": "innodb_file_format_max",
       "name": "innodb_file_format_max",
-      "type": "the highest",
-      "cli": "--innodb-file-format-max=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "Antelope",
+      "type": "the highest",
       "validValues": [
         "Antelope",
         "Barracuda"
       ]
     },
     {
+      "cli": "--innodb-file-per-table",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_file_per_table",
       "name": "innodb_file_per_table",
-      "type": "if set to",
-      "cli": "--innodb-file-per-table",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-fill-factor=#",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "innodb_fill_factor",
       "name": "innodb_fill_factor",
-      "type": "percentage of b-tree page filled during bulk insert (sorted index build). used as a hint rather than an absolute value. setting to",
-      "cli": "--innodb-fill-factor=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": 10,
         "to": 100
-      }
-    },
-    {
-      "id": "innodb_flush_log_at_timeout",
-      "name": "innodb_flush_log_at_timeout",
-      "type": "interval in seconds to write and flush the logs. before mariadb 10, this was fixed at one second, which is still the default, but this can now be changed. it's usually increased to reduce flushing and avoid impacting performance of binary log group commit.",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "percentage of b-tree page filled during bulk insert (sorted index build). used as a hint rather than an absolute value. setting to"
+    },
+    {
       "dataType": "numeric",
       "default": "1",
+      "dynamic": true,
+      "id": "innodb_flush_log_at_timeout",
+      "name": "innodb_flush_log_at_timeout",
       "range": {
         "from": 0,
         "to": 2700
-      }
-    },
-    {
-      "id": "innodb_flush_log_at_trx_commit",
-      "name": "innodb_flush_log_at_trx_commit",
-      "type": "set to",
-      "cli": "--innodb-flush-log-at-trx-commit[=#]",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "interval in seconds to write and flush the logs. before mariadb 10, this was fixed at one second, which is still the default, but this can now be changed. it's usually increased to reduce flushing and avoid impacting performance of binary log group commit."
+    },
+    {
+      "cli": "--innodb-flush-log-at-trx-commit[=#]",
       "dataType": "enumeration",
       "default": "1",
+      "dynamic": true,
+      "id": "innodb_flush_log_at_trx_commit",
+      "name": "innodb_flush_log_at_trx_commit",
+      "scope": [
+        "global"
+      ],
+      "type": "set to",
       "validValues": [
         "0",
         "1",
@@ -1311,28 +1309,28 @@
       ]
     },
     {
+      "cli": "--innodb-flush-method=name",
+      "dataType": "enumeration",
+      "dynamic": false,
       "id": "innodb_flush_method",
       "name": "innodb_flush_method",
-      "type": "",
-      "cli": "--innodb-flush-method=name",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "enumeration",
+      "type": "",
       "validValues": []
     },
     {
+      "cli": "innodb-flush-neighbor-pages=value",
+      "dataType": "enumeration",
+      "default": "area",
+      "dynamic": true,
       "id": "innodb_flush_neighbor_pages",
       "name": "innodb_flush_neighbor_pages",
-      "type": "determines whether, when dirty pages are flushed to the data file, neighboring pages in the data file are flushed at the same time. if set to",
-      "cli": "innodb-flush-neighbor-pages=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enumeration",
-      "default": "area",
+      "type": "determines whether, when dirty pages are flushed to the data file, neighboring pages in the data file are flushed at the same time. if set to",
       "validValues": [
         "none",
         "0",
@@ -1343,16 +1341,16 @@
       ]
     },
     {
+      "cli": "--innodb-flush-neighbors=#",
+      "dataType": "enumeration",
+      "default": "1",
+      "dynamic": true,
       "id": "innodb_flush_neighbors",
       "name": "innodb_flush_neighbors",
-      "type": "determines whether flushing a page from the",
-      "cli": "--innodb-flush-neighbors=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enumeration",
-      "default": "1",
+      "type": "determines whether flushing a page from the",
       "validValues": [
         "0",
         "1",
@@ -1360,760 +1358,760 @@
       ]
     },
     {
+      "cli": "--innodb-flush-sync={0|1}",
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "innodb_flush_sync",
       "name": "innodb_flush_sync",
-      "type": "if set to",
-      "cli": "--innodb-flush-sync={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "if set to"
     },
     {
-      "id": "innodb_flushing_avg_loops",
-      "name": "innodb_flushing_avg_loops",
-      "type": "determines how quickly adaptive flushing will respond to changing workloads. the value is the number of iterations that a previously calculated flushing state snapshot is kept. increasing the value smooths and slows the rate that the flushing operations change, while decreasing it causes flushing activity to spike quickly in response to workload changes.",
       "cli": "--innodb-flushing-avg-loops=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "30",
+      "dynamic": true,
+      "id": "innodb_flushing_avg_loops",
+      "name": "innodb_flushing_avg_loops",
       "range": {
         "from": 1,
         "to": 1000
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "determines how quickly adaptive flushing will respond to changing workloads. the value is the number of iterations that a previously calculated flushing state snapshot is kept. increasing the value smooths and slows the rate that the flushing operations change, while decreasing it causes flushing activity to spike quickly in response to workload changes."
     },
     {
+      "cli": "--innodb-force-load-corrupted",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_force_load_corrupted",
       "name": "innodb_force_load_corrupted",
-      "type": "set to",
-      "cli": "--innodb-force-load-corrupted",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "set to"
     },
     {
+      "cli": "--innodb-force-primary-key",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_force_primary_key",
       "name": "innodb_force_primary_key",
-      "type": "if set to",
-      "cli": "--innodb-force-primary-key",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
-      "id": "innodb_force_recovery",
-      "name": "innodb_force_recovery",
-      "type": "",
       "cli": "--innodb-force-recovery=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "enumeration",
       "default": "0",
+      "dynamic": false,
+      "id": "innodb_force_recovery",
+      "name": "innodb_force_recovery",
       "range": {
         "from": 0,
         "to": 6
-      }
-    },
-    {
-      "id": "innodb_foreground_preflush",
-      "name": "innodb_foreground_preflush",
-      "type": "before xtradb 5.6.13-61.0, if the checkpoint age is in the sync preflush zone while a thread is writing to log, it will try to advance the checkpoint by issuing a flush list flush batch if this is not already being done. xtradb has enhanced page cleaner tuning, and  may already be performing furious flushing, resulting in the flush simply adding unneeded mutex pressure. instead, the thread now waits for the flushes to finish, and then has two options, controlled by this variable. xtradb only. added as a deprecated and ignored option in",
-      "cli": "innodb-foreground-preflush=value",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": ""
+    },
+    {
+      "cli": "innodb-foreground-preflush=value",
       "dataType": "enum",
+      "dynamic": true,
+      "id": "innodb_foreground_preflush",
+      "name": "innodb_foreground_preflush",
+      "scope": [
+        "global"
+      ],
+      "type": "before xtradb 5.6.13-61.0, if the checkpoint age is in the sync preflush zone while a thread is writing to log, it will try to advance the checkpoint by issuing a flush list flush batch if this is not already being done. xtradb has enhanced page cleaner tuning, and  may already be performing furious flushing, resulting in the flush simply adding unneeded mutex pressure. instead, the thread now waits for the flushes to finish, and then has two options, controlled by this variable. xtradb only. added as a deprecated and ignored option in",
       "validValues": []
     },
     {
+      "cli": "--innodb-ft-aux-table=value",
+      "dataType": "string",
+      "dynamic": true,
       "id": "innodb_ft_aux_table",
       "name": "innodb_ft_aux_table",
-      "type": "diagnostic variable intended only to be set at runtime. it specifies the qualified name (for example",
-      "cli": "--innodb-ft-aux-table=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "diagnostic variable intended only to be set at runtime. it specifies the qualified name (for example"
     },
     {
+      "cli": "--innodb-ft-cache-size=#",
+      "dataType": "numeric",
+      "default": "8000000",
+      "dynamic": false,
       "id": "innodb_ft_cache_size",
       "name": "innodb_ft_cache_size",
-      "type": "cache size available for a parsed document while creating an innodb",
-      "cli": "--innodb-ft-cache-size=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "8000000"
+      "type": "cache size available for a parsed document while creating an innodb"
     },
     {
+      "cli": "--innodb-ft-enable-diag-print=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_ft_enable_diag_print",
       "name": "innodb_ft_enable_diag_print",
-      "type": "if set to",
-      "cli": "--innodb-ft-enable-diag-print=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-ft-enable-stopword=#",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_ft_enable_stopword",
       "name": "innodb_ft_enable_stopword",
-      "type": "if set to",
-      "cli": "--innodb-ft-enable-stopword=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
-      "id": "innodb_ft_max_token_size",
-      "name": "innodb_ft_max_token_size",
-      "type": "maximum length of words stored in an innodb",
       "cli": "--innodb-ft-max-token-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "84",
+      "dynamic": false,
+      "id": "innodb_ft_max_token_size",
+      "name": "innodb_ft_max_token_size",
       "range": {
         "from": 10,
         "to": 252
-      }
-    },
-    {
-      "id": "innodb_ft_min_token_size",
-      "name": "innodb_ft_min_token_size",
-      "type": "minimum length of words stored in an innodb",
-      "cli": "--innodb-ft-min-token-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "maximum length of words stored in an innodb"
+    },
+    {
+      "cli": "--innodb-ft-min-token-size=#",
       "dataType": "numeric",
       "default": "3",
+      "dynamic": false,
+      "id": "innodb_ft_min_token_size",
+      "name": "innodb_ft_min_token_size",
       "range": {
         "from": 0,
         "to": 16
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "minimum length of words stored in an innodb"
     },
     {
+      "cli": "--innodb-ft-num-word-optimize=#",
+      "dataType": "numeric",
+      "default": "2000",
+      "dynamic": true,
       "id": "innodb_ft_num_word_optimize",
       "name": "innodb_ft_num_word_optimize",
-      "type": "number of words processed during each",
-      "cli": "--innodb-ft-num-word-optimize=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "2000"
+      "type": "number of words processed during each"
     },
     {
-      "id": "innodb_ft_result_cache_limit",
-      "name": "innodb_ft_result_cache_limit",
-      "type": "limit in bytes of the innodb",
       "cli": "--innodb-ft-result-cache-limit=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "2000000000",
+      "dynamic": true,
+      "id": "innodb_ft_result_cache_limit",
+      "name": "innodb_ft_result_cache_limit",
       "range": {
         "from": 10000,
         "to": 18446744073709552000
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "limit in bytes of the innodb"
     },
     {
+      "cli": "--innodb-ft-server-stopword-table=db_name/table_name",
+      "dataType": "string",
+      "dynamic": true,
       "id": "innodb_ft_server_stopword_table",
       "name": "innodb_ft_server_stopword_table",
-      "type": "table name containing a list of stopwords to ignore when creating an innodb",
-      "cli": "--innodb-ft-server-stopword-table=db_name/table_name",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "table name containing a list of stopwords to ignore when creating an innodb"
     },
     {
-      "id": "innodb_ft_sort_pll_degree",
-      "name": "innodb_ft_sort_pll_degree",
-      "type": "number of parallel threads used when building an innodb",
       "cli": "--innodb-ft-sort-pll-degree=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "2",
+      "dynamic": false,
+      "id": "innodb_ft_sort_pll_degree",
+      "name": "innodb_ft_sort_pll_degree",
       "range": {
         "from": 1,
         "to": 32
-      }
-    },
-    {
-      "id": "innodb_ft_total_cache_size",
-      "name": "innodb_ft_total_cache_size",
-      "type": "total memory allocated for the cache for all innodb",
-      "cli": "--innodb-ft-total-cache-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "number of parallel threads used when building an innodb"
+    },
+    {
+      "cli": "--innodb-ft-total-cache-size=#",
       "dataType": "numeric",
       "default": "640000000",
+      "dynamic": false,
+      "id": "innodb_ft_total_cache_size",
+      "name": "innodb_ft_total_cache_size",
       "range": {
         "from": 32000000,
         "to": 1600000000
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "total memory allocated for the cache for all innodb"
     },
     {
+      "cli": "--innodb-ft-user-stopword-table=db_name/table_name",
+      "dataType": "string",
+      "dynamic": true,
       "id": "innodb_ft_user_stopword_table",
       "name": "innodb_ft_user_stopword_table",
-      "type": "table name containing a list of stopwords to ignore when creating an innodb",
-      "cli": "--innodb-ft-user-stopword-table=db_name/table_name",
       "scope": [
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "table name containing a list of stopwords to ignore when creating an innodb"
     },
     {
-      "id": "innodb_ibuf_accel_rate",
-      "name": "innodb_ibuf_accel_rate",
-      "type": "allows the insert buffer activity to be adjusted. the following formula is used: [real activity] = [default activity] * (innodb_io_capacity/100) * (innodb_ibuf_accel_rate/100). as",
       "cli": "innodb-ibuf-accel-rate=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "100",
+      "dynamic": true,
+      "id": "innodb_ibuf_accel_rate",
+      "name": "innodb_ibuf_accel_rate",
       "range": {
         "from": 100,
         "to": 999999999
-      }
-    },
-    {
-      "id": "innodb_ibuf_active_contract",
-      "name": "innodb_ibuf_active_contract",
-      "type": "specifies whether the insert buffer can be processed before it's full. if set to",
-      "cli": "innodb-ibuf-active-contract=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "allows the insert buffer activity to be adjusted. the following formula is used: [real activity] = [default activity] * (innodb_io_capacity/100) * (innodb_ibuf_accel_rate/100). as"
+    },
+    {
+      "cli": "innodb-ibuf-active-contract=#",
       "dataType": "numeric",
       "default": "1",
+      "dynamic": true,
+      "id": "innodb_ibuf_active_contract",
+      "name": "innodb_ibuf_active_contract",
       "range": {
         "from": 0,
         "to": 1
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "specifies whether the insert buffer can be processed before it's full. if set to"
     },
     {
+      "cli": "innodb-ibuf-max-size=#",
+      "dataType": "numeric",
+      "dynamic": false,
       "id": "innodb_ibuf_max_size",
       "name": "innodb_ibuf_max_size",
-      "type": "maximum size in bytes of the insert buffer. defaults to half the size of the",
-      "cli": "innodb-ibuf-max-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
-      "dataType": "numeric",
       "range": {
         "from": 0
-      }
-    },
-    {
-      "id": "innodb_idle_flush_pct",
-      "name": "innodb_idle_flush_pct",
-      "type": "up to what percentage of dirty pages should be flushed when innodb finds it has spare resources to do so.",
-      "cli": "--innodb-idle-flush-pct=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "maximum size in bytes of the insert buffer. defaults to half the size of the"
+    },
+    {
+      "cli": "--innodb-idle-flush-pct=#",
       "dataType": "numeric",
       "default": "100",
+      "dynamic": true,
+      "id": "innodb_idle_flush_pct",
+      "name": "innodb_idle_flush_pct",
       "range": {
         "from": 0,
         "to": 100
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "up to what percentage of dirty pages should be flushed when innodb finds it has spare resources to do so."
     },
     {
+      "cli": "--innodb-immediate-scrub-data-uncompressed=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_immediate_scrub_data_uncompressed",
       "name": "innodb_immediate_scrub_data_uncompressed",
-      "type": "enable scrubbing of data. see",
-      "cli": "--innodb-immediate-scrub-data-uncompressed=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "enable scrubbing of data. see"
     },
     {
-      "id": "innodb_import_table_from_xtrabackup",
-      "name": "innodb_import_table_from_xtrabackup",
-      "type": "if set to",
       "cli": "innodb-import-table-from-xtrabackup=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_import_table_from_xtrabackup",
+      "name": "innodb_import_table_from_xtrabackup",
       "range": {
         "from": 0,
         "to": 1
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-instrument-semaphores={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_instrument_semaphores",
       "name": "innodb_instrument_semaphores",
-      "type": "enable semaphore request instrumentation. this could have some effect on performance but allows better information on long semaphore wait problems.",
-      "cli": "--innodb-instrument-semaphores={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "enable semaphore request instrumentation. this could have some effect on performance but allows better information on long semaphore wait problems."
     },
     {
-      "id": "innodb_io_capacity",
-      "name": "innodb_io_capacity",
-      "type": "limit on i/o activity for xtradb/innodb background tasks, including merging data from the insert buffer and flushing pages. should be set to around the number of i/o operations per second that system can handle, based on the type of drive/s being used. you can also set it higher when the server starts to help with the extra workload at that time, and then reduce for normal use. ideally, opt for a lower setting, as at higher value data is removed from the buffers too quickly, reducing the effectiveness of caching. see also",
       "cli": "--innodb-io-capacity=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "200",
+      "dynamic": true,
+      "id": "innodb_io_capacity",
+      "name": "innodb_io_capacity",
       "range": {
         "from": 100,
         "to": 18446744073709552000
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "limit on i/o activity for xtradb/innodb background tasks, including merging data from the insert buffer and flushing pages. should be set to around the number of i/o operations per second that system can handle, based on the type of drive/s being used. you can also set it higher when the server starts to help with the extra workload at that time, and then reduce for normal use. ideally, opt for a lower setting, as at higher value data is removed from the buffers too quickly, reducing the effectiveness of caching. see also"
     },
     {
+      "cli": "--innodb-io-capacity-max=#",
+      "dataType": "numeric",
+      "default": "200",
+      "dynamic": true,
       "id": "innodb_io_capacity_max",
       "name": "innodb_io_capacity_max",
-      "type": "upper limit to which innoddb can extend",
-      "cli": "--innodb-io-capacity-max=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "200"
+      "type": "upper limit to which innoddb can extend"
     },
     {
-      "id": "innodb_kill_idle_transaction",
-      "name": "innodb_kill_idle_transaction",
-      "type": "time in seconds before killing an idle xtradb transaction. if set to",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_kill_idle_transaction",
+      "name": "innodb_kill_idle_transaction",
       "range": {
         "from": null,
         "to": null
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "time in seconds before killing an idle xtradb transaction. if set to"
     },
     {
+      "cli": "--innodb-large-prefix",
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "innodb_large_prefix",
       "name": "innodb_large_prefix",
-      "type": "if set to",
-      "cli": "--innodb-large-prefix",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "if set to"
     },
     {
+      "cli": "innodb-lazy-drop-table={0|1}",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": true,
       "id": "innodb_lazy_drop_table",
       "name": "innodb_lazy_drop_table",
-      "type": "deprecated and removed in xtradb 5.6.",
-      "cli": "innodb-lazy-drop-table={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "deprecated and removed in xtradb 5.6."
     },
     {
+      "cli": "--innodb-lock-schedule-algorithm=#",
+      "dataType": "enum",
+      "default": "FCFS",
+      "dynamic": false,
       "id": "innodb_lock_schedule_algorithm",
       "name": "innodb_lock_schedule_algorithm",
-      "type": "specifies the algorithm that innodb/xtradb uses to decide which of the waiting transactions should be granted the lock once it has been released. the possible values are:",
-      "cli": "--innodb-lock-schedule-algorithm=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "enum",
+      "type": "specifies the algorithm that innodb/xtradb uses to decide which of the waiting transactions should be granted the lock once it has been released. the possible values are:",
       "validValues": [
         "FCFS",
         "VATS"
-      ],
-      "default": "FCFS"
+      ]
     },
     {
+      "cli": "--innodb-lock-wait-timeout=#",
+      "dataType": "numeric",
+      "default": "50",
+      "dynamic": true,
       "id": "innodb_lock_wait_timeout",
       "name": "innodb_lock_wait_timeout",
-      "type": "time in seconds that an innodb transaction waits for an innodb row lock (not table lock) before giving up with the error",
-      "cli": "--innodb-lock-wait-timeout=#",
+      "range": {
+        "from": null
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "50",
-      "range": {
-        "from": null
-      }
+      "type": "time in seconds that an innodb transaction waits for an innodb row lock (not table lock) before giving up with the error"
     },
     {
+      "cli": "--innodb-locking-fake-changes",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_locking_fake_changes",
       "name": "innodb_locking_fake_changes",
-      "type": "if set to",
-      "cli": "--innodb-locking-fake-changes",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-locks-unsafe-for-binlog",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_locks_unsafe_for_binlog",
       "name": "innodb_locks_unsafe_for_binlog",
-      "type": "set to",
-      "cli": "--innodb-locks-unsafe-for-binlog",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "set to"
     },
     {
+      "cli": "--innodb-log-arch-dir=name",
+      "dataType": "string",
+      "default": "./",
+      "dynamic": false,
       "id": "innodb_log_arch_dir",
       "name": "innodb_log_arch_dir",
-      "type": "the directory for xtradb log archiving. xtradb only. added as a deprecated and ignored option in",
-      "cli": "--innodb-log-arch-dir=name",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string",
-      "default": "./"
+      "type": "the directory for xtradb log archiving. xtradb only. added as a deprecated and ignored option in"
     },
     {
+      "cli": "--innodb-log-arch-expire-sec=#",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "innodb_log_arch_expire_sec",
       "name": "innodb_log_arch_expire_sec",
-      "type": "time in seconds since the last change after which the archive log should be deleted. xtradb only. added as a deprecated and ignored option in",
-      "cli": "--innodb-log-arch-expire-sec=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0"
+      "type": "time in seconds since the last change after which the archive log should be deleted. xtradb only. added as a deprecated and ignored option in"
     },
     {
+      "cli": "--innodb-log-archive=value",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_log_archive",
       "name": "innodb_log_archive",
-      "type": "whether or not xtradb log archiving is enabled. xtradb only. added as a deprecated and ignored option in",
-      "cli": "--innodb-log-archive=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "whether or not xtradb log archiving is enabled. xtradb only. added as a deprecated and ignored option in"
     },
     {
+      "cli": "innodb-log-block-size=#",
+      "dataType": "numeric",
+      "default": "512",
+      "dynamic": false,
       "id": "innodb_log_block_size",
       "name": "innodb_log_block_size",
-      "type": "size in bytes of the transaction log records. generally",
-      "cli": "innodb-log-block-size=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "512"
+      "type": "size in bytes of the transaction log records. generally"
     },
     {
-      "id": "innodb_log_buffer_size",
-      "name": "innodb_log_buffer_size",
-      "type": "size in bytes of the buffer for writing",
       "cli": "--innodb-log-buffer-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "8388608",
+      "dynamic": false,
+      "id": "innodb_log_buffer_size",
+      "name": "innodb_log_buffer_size",
       "range": {
         "from": 262144,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "innodb_log_checksum_algorithm",
-      "name": "innodb_log_checksum_algorithm",
-      "type": "experimental feature (as of",
-      "cli": "innodb-log-checksum-algorithm=value",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "size in bytes of the buffer for writing"
+    },
+    {
+      "cli": "innodb-log-checksum-algorithm=value",
       "dataType": "enum",
+      "dynamic": true,
+      "id": "innodb_log_checksum_algorithm",
+      "name": "innodb_log_checksum_algorithm",
+      "scope": [
+        "global"
+      ],
+      "type": "experimental feature (as of",
       "validValues": []
     },
     {
+      "cli": "innodb-log-checksums={0|1}",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_log_checksums",
       "name": "innodb_log_checksums",
-      "type": "if set to",
-      "cli": "innodb-log-checksums={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-log-compressed-pages=#",
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "innodb_log_compressed_pages",
       "name": "innodb_log_compressed_pages",
-      "type": "whether or not images of recompressed pages are stored in the innodb redo logs.",
-      "cli": "--innodb-log-compressed-pages=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "whether or not images of recompressed pages are stored in the innodb redo logs."
     },
     {
-      "id": "innodb_log_file_size",
-      "name": "innodb_log_file_size",
-      "type": "size in bytes of each log file in the log group. the combined size can be no more than 4gb prior to",
       "cli": "--innodb-log-file-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "5242880",
+      "dynamic": false,
+      "id": "innodb_log_file_size",
+      "name": "innodb_log_file_size",
       "range": {
         "from": 1048576,
         "to": 512
-      }
-    },
-    {
-      "id": "innodb_log_files_in_group",
-      "name": "innodb_log_files_in_group",
-      "type": "number of physical files in the innodb redo log.",
-      "cli": "--innodb-log-files-in-group=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "size in bytes of each log file in the log group. the combined size can be no more than 4gb prior to"
+    },
+    {
+      "cli": "--innodb-log-files-in-group=#",
       "dataType": "numeric",
       "default": "2",
+      "dynamic": false,
+      "id": "innodb_log_files_in_group",
+      "name": "innodb_log_files_in_group",
       "range": {
         "from": 1,
         "to": 100
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "number of physical files in the innodb redo log."
     },
     {
+      "cli": "--innodb-log-group-home-dir=path",
+      "dataType": "directory name",
+      "dynamic": false,
       "id": "innodb_log_group_home_dir",
       "name": "innodb_log_group_home_dir",
-      "type": "path to the xtradb/innodb redo log files. if none is specified,",
-      "cli": "--innodb-log-group-home-dir=path",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "directory name"
+      "type": "path to the xtradb/innodb redo log files. if none is specified,"
     },
     {
-      "id": "innodb_log_write_ahead_size",
-      "name": "innodb_log_write_ahead_size",
-      "type": "redo log write ahead unit size to avoid read-on-write. should match the os cache block io size.",
       "cli": "--innodb-log-write-ahead-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "8192",
+      "dynamic": true,
+      "id": "innodb_log_write_ahead_size",
+      "name": "innodb_log_write_ahead_size",
       "range": {
         "from": 512
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "redo log write ahead unit size to avoid read-on-write. should match the os cache block io size."
     },
     {
+      "cli": "--innodb-lru-scan-depth=#",
+      "dataType": "numeric",
+      "default": "1024",
+      "dynamic": true,
       "id": "innodb_lru_scan_depth",
       "name": "innodb_lru_scan_depth",
-      "type": "specifies how far down the buffer pool lru list the cleaning thread should look for dirty pages to flush. this process is performed once a second. in an i/o intensive-workload, can be increased if there is spare i/o capacity, or decreased if in a write-intensive workload with little spare i/o capacity.",
-      "cli": "--innodb-lru-scan-depth=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "1024"
+      "type": "specifies how far down the buffer pool lru list the cleaning thread should look for dirty pages to flush. this process is performed once a second. in an i/o intensive-workload, can be increased if there is spare i/o capacity, or decreased if in a write-intensive workload with little spare i/o capacity."
     },
     {
-      "id": "innodb_max_bitmap_file_size",
-      "name": "innodb_max_bitmap_file_size",
-      "type": "limit in bytes of the changed page bitmap files. for faster incremental backup with",
       "cli": "innodb-max-bitmap-file-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "4096",
+      "dynamic": true,
+      "id": "innodb_max_bitmap_file_size",
+      "name": "innodb_max_bitmap_file_size",
       "range": {
         "from": 4096,
         "to": 18446744073709552000
-      }
-    },
-    {
-      "id": "innodb_max_changed_pages",
-      "name": "innodb_max_changed_pages",
-      "type": "limit to the number of changed page bitmap files (stored in the",
-      "cli": "innodb-max-changed-pages=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "limit in bytes of the changed page bitmap files. for faster incremental backup with"
+    },
+    {
+      "cli": "innodb-max-changed-pages=#",
       "dataType": "numeric",
       "default": "1000000",
+      "dynamic": true,
+      "id": "innodb_max_changed_pages",
+      "name": "innodb_max_changed_pages",
       "range": {
         "from": 0,
         "to": 18446744073709552000
-      }
-    },
-    {
-      "id": "innodb_max_dirty_pages_pct",
-      "name": "innodb_max_dirty_pages_pct",
-      "type": "maximum percentage of unwritten (dirty) pages in the buffer pool. this variable was changed to a double in",
-      "cli": "--innodb-max-dirty-pages-pct=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "limit to the number of changed page bitmap files (stored in the"
+    },
+    {
+      "cli": "--innodb-max-dirty-pages-pct=#",
       "dataType": "numeric",
       "default": "75",
+      "dynamic": false,
+      "id": "innodb_max_dirty_pages_pct",
+      "name": "innodb_max_dirty_pages_pct",
       "range": {
         "from": 0,
         "to": 99.999
-      }
-    },
-    {
-      "id": "innodb_max_dirty_pages_pct_lwm",
-      "name": "innodb_max_dirty_pages_pct_lwm",
-      "type": "low water mark percentage of dirty pages that will enable preflushing to lower the dirty page ratio. if set to",
-      "cli": "--innodb-max-dirty-pages-pct-lwm=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "maximum percentage of unwritten (dirty) pages in the buffer pool. this variable was changed to a double in"
+    },
+    {
+      "cli": "--innodb-max-dirty-pages-pct-lwm=#",
       "dataType": "numeric",
       "default": "0.001000",
+      "dynamic": true,
+      "id": "innodb_max_dirty_pages_pct_lwm",
+      "name": "innodb_max_dirty_pages_pct_lwm",
       "range": {
         "from": 0,
         "to": 99.999
-      }
-    },
-    {
-      "id": "innodb_max_purge_lag",
-      "name": "innodb_max_purge_lag",
-      "type": "when purge operations are lagging on a busy server, setting innodb_max_purge_lag can help. by default set to",
-      "cli": "--innodb-max-purge-lag=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "low water mark percentage of dirty pages that will enable preflushing to lower the dirty page ratio. if set to"
+    },
+    {
+      "cli": "--innodb-max-purge-lag=#",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_max_purge_lag",
+      "name": "innodb_max_purge_lag",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "when purge operations are lagging on a busy server, setting innodb_max_purge_lag can help. by default set to"
     },
     {
+      "cli": "--innodb-max-purge-lag-delay=#",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "innodb_max_purge_lag_delay",
       "name": "innodb_max_purge_lag_delay",
-      "type": "maximum delay in milliseconds imposed by the",
-      "cli": "--innodb-max-purge-lag-delay=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0"
+      "type": "maximum delay in milliseconds imposed by the"
     },
     {
+      "cli": "--innodb-max-undo-log-size=#",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "innodb_max_undo_log_size",
       "name": "innodb_max_undo_log_size",
-      "type": "if an undo tablespace is larger than this, it will be marked for truncation if",
-      "cli": "--innodb-max-undo-log-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": 10485760,
         "to": 18446744073709552000
-      }
-    },
-    {
-      "id": "innodb_merge_sort_block_size",
-      "name": "innodb_merge_sort_block_size",
-      "type": "size in bytes of the block used for merge sorting in fast index creation. replaced in",
-      "cli": "innodb-merge-sort-block-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "if an undo tablespace is larger than this, it will be marked for truncation if"
+    },
+    {
+      "cli": "innodb-merge-sort-block-size=#",
       "dataType": "numeric",
       "default": "1048576",
+      "dynamic": true,
+      "id": "innodb_merge_sort_block_size",
+      "name": "innodb_merge_sort_block_size",
       "range": {
         "from": 1048576,
         "to": 1073741824
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "size in bytes of the block used for merge sorting in fast index creation. replaced in"
     },
     {
       "id": "innodb_mirrored_log_groups",
@@ -2121,180 +2119,180 @@
       "type": "unused. restored as a deprecated and ignored option in"
     },
     {
-      "id": "innodb_mtflush_threads",
-      "name": "innodb_mtflush_threads",
-      "type": "sets the number of threads to use in multi-threaded flush operations. for more information, see",
       "cli": "--innodb-mtflush-threads=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "8",
+      "dynamic": false,
+      "id": "innodb_mtflush_threads",
+      "name": "innodb_mtflush_threads",
       "range": {
         "from": 1,
         "to": 64
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "sets the number of threads to use in multi-threaded flush operations. for more information, see"
     },
     {
+      "cli": "--innodb-monitor-disable=string",
+      "dataType": "string",
+      "dynamic": true,
       "id": "innodb_monitor_disable",
       "name": "innodb_monitor_disable",
-      "type": "disables the specified counters in the",
-      "cli": "--innodb-monitor-disable=string",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "disables the specified counters in the"
     },
     {
+      "cli": "--innodb-monitor-enable=string",
+      "dataType": "string",
+      "dynamic": true,
       "id": "innodb_monitor_enable",
       "name": "innodb_monitor_enable",
-      "type": "enables the specified counters in the",
-      "cli": "--innodb-monitor-enable=string",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "enables the specified counters in the"
     },
     {
+      "cli": "--innodb-monitor-reset=string",
+      "dataType": "string",
+      "dynamic": true,
       "id": "innodb_monitor_reset",
       "name": "innodb_monitor_reset",
-      "type": "resets the count value of the specified counters in the",
-      "cli": "--innodb-monitor-reset=string",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "resets the count value of the specified counters in the"
     },
     {
+      "cli": "---innodb-monitor-reset-all=string",
+      "dataType": "string",
+      "dynamic": true,
       "id": "innodb_monitor_reset_all",
       "name": "innodb_monitor_reset_all",
-      "type": "resets all values for the specified counters in the",
-      "cli": "---innodb-monitor-reset-all=string",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "resets all values for the specified counters in the"
     },
     {
+      "cli": "innodb-numa-interleave={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_numa_interleave",
       "name": "innodb_numa_interleave",
-      "type": "whether or not to use the numa interleave memory policy to allocate the",
-      "cli": "innodb-numa-interleave={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "whether or not to use the numa interleave memory policy to allocate the"
     },
     {
-      "id": "innodb_old_blocks_pct",
-      "name": "innodb_old_blocks_pct",
-      "type": "percentage of the",
       "cli": "--innodb-old-blocks-pct=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "37",
+      "dynamic": true,
+      "id": "innodb_old_blocks_pct",
+      "name": "innodb_old_blocks_pct",
       "range": {
         "from": 5,
         "to": 95
-      }
-    },
-    {
-      "id": "innodb_old_blocks_time",
-      "name": "innodb_old_blocks_time",
-      "type": "time in milliseconds an inserted block must stay in the old sublist after its first access before it can be moved to the new sublist. '0' means \"no delay\". setting  a non-zero value can help prevent full table scans clogging the",
-      "cli": "--innodb-old-blocks-time=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "percentage of the"
+    },
+    {
+      "cli": "--innodb-old-blocks-time=#",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_old_blocks_time",
+      "name": "innodb_old_blocks_time",
       "range": {
         "from": 0,
         "to": 232
-      }
-    },
-    {
-      "id": "innodb_online_alter_log_max_size",
-      "name": "innodb_online_alter_log_max_size",
-      "type": "the maximum size for temporary log files during online ddl (data and index structure changes). the temporary log file is used for each table being altered, or index being created, to store data changes to the table while the process is underway. the table is extended by",
-      "cli": "--innodb-online-alter-log-max-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "time in milliseconds an inserted block must stay in the old sublist after its first access before it can be moved to the new sublist. '0' means \"no delay\". setting  a non-zero value can help prevent full table scans clogging the"
+    },
+    {
+      "cli": "--innodb-online-alter-log-max-size=#",
       "dataType": "numeric",
       "default": "134217728",
+      "dynamic": true,
+      "id": "innodb_online_alter_log_max_size",
+      "name": "innodb_online_alter_log_max_size",
       "range": {
         "from": 65536,
         "to": 264
-      }
-    },
-    {
-      "id": "innodb_open_files",
-      "name": "innodb_open_files",
-      "type": "maximum .ibd files mariadb can have open at the same time. only applies to systems with multiple xtradb/innodb tablespaces, and is separate to the table cache and",
-      "cli": "--innodb-open-files=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "the maximum size for temporary log files during online ddl (data and index structure changes). the temporary log file is used for each table being altered, or index being created, to store data changes to the table while the process is underway. the table is extended by"
+    },
+    {
+      "cli": "--innodb-open-files=#",
       "dataType": "numeric",
       "default": "300",
+      "dynamic": false,
+      "id": "innodb_open_files",
+      "name": "innodb_open_files",
       "range": {
         "from": 10,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "maximum .ibd files mariadb can have open at the same time. only applies to systems with multiple xtradb/innodb tablespaces, and is separate to the table cache and"
     },
     {
+      "cli": "--innodb-optimize-fulltext-only=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_optimize_fulltext_only",
       "name": "innodb_optimize_fulltext_only",
-      "type": "when set to",
-      "cli": "--innodb-optimize-fulltext-only=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "when set to"
     },
     {
-      "id": "innodb_page_cleaners",
-      "name": "innodb_page_cleaners",
-      "type": "number of page cleaner threads. the default is",
       "cli": "--innodb-page-cleaners=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "4",
+      "dynamic": false,
+      "id": "innodb_page_cleaners",
+      "name": "innodb_page_cleaners",
       "range": {
         "from": 1,
         "to": 64
-      }
-    },
-    {
-      "id": "innodb_page_size",
-      "name": "innodb_page_size",
-      "type": "size in bytes of the page size for all xtradb/innodb tablespaces. the default,",
-      "cli": "--innodb-page-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "number of page cleaner threads. the default is"
+    },
+    {
+      "cli": "--innodb-page-size=#",
       "dataType": "enumeration",
       "default": "16384",
+      "dynamic": false,
+      "id": "innodb_page_size",
+      "name": "innodb_page_size",
+      "scope": [
+        "global"
+      ],
+      "type": "size in bytes of the page size for all xtradb/innodb tablespaces. the default,",
       "validValues": [
         "4k",
         "4096",
@@ -2311,99 +2309,99 @@
       "name": "innodb_pass_corrupt_table"
     },
     {
+      "cli": "--innodb-prefix-index-cluster-optimization=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_prefix_index_cluster_optimization",
       "name": "innodb_prefix_index_cluster_optimization",
-      "type": "enable prefix optimization to sometimes avoid cluster index lookups.",
-      "cli": "--innodb-prefix-index-cluster-optimization=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "enable prefix optimization to sometimes avoid cluster index lookups."
     },
     {
+      "cli": "--innodb-print-all-deadlocks=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_print_all_deadlocks",
       "name": "innodb_print_all_deadlocks",
-      "type": "if set to",
-      "cli": "--innodb-print-all-deadlocks=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
-      "id": "innodb_purge_batch_size",
-      "name": "innodb_purge_batch_size",
-      "type": "units of redo log records that will trigger a purge operation. together with",
       "cli": "--innodb-purge-batch-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "20",
+      "dynamic": false,
+      "id": "innodb_purge_batch_size",
+      "name": "innodb_purge_batch_size",
       "range": {
         "from": 1,
         "to": 5000
-      }
-    },
-    {
-      "id": "innodb_purge_rseg_truncate_frequency",
-      "name": "innodb_purge_rseg_truncate_frequency",
-      "type": "frequency with which undo records are purged. set by default to every 128 times, reducing this increases the frequency at which rollback segments are freed. see also",
-      "cli": "-- innodb-purge-rseg-truncate-frequency=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "units of redo log records that will trigger a purge operation. together with"
+    },
+    {
+      "cli": "-- innodb-purge-rseg-truncate-frequency=#",
       "dataType": "numeric",
       "default": "128",
+      "dynamic": true,
+      "id": "innodb_purge_rseg_truncate_frequency",
+      "name": "innodb_purge_rseg_truncate_frequency",
       "range": {
         "from": 1,
         "to": 128
-      }
-    },
-    {
-      "id": "innodb_purge_threads",
-      "name": "innodb_purge_threads",
-      "type": "number of background threads dedicated to xtradb/innodb purge operations. since",
-      "cli": "--innodb-purge-threads=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "frequency with which undo records are purged. set by default to every 128 times, reducing this increases the frequency at which rollback segments are freed. see also"
+    },
+    {
+      "cli": "--innodb-purge-threads=#",
       "dataType": "numeric",
+      "dynamic": false,
+      "id": "innodb_purge_threads",
+      "name": "innodb_purge_threads",
       "range": {
         "from": 1,
         "to": 32
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "number of background threads dedicated to xtradb/innodb purge operations. since"
     },
     {
+      "cli": "--innodb-random-read-ahead=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_random_read_ahead",
       "name": "innodb_random_read_ahead",
-      "type": "originally, random read-ahead was always set as an optimization technique, but was removed in",
-      "cli": "--innodb-random-read-ahead=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "originally, random read-ahead was always set as an optimization technique, but was removed in"
     },
     {
+      "cli": "innodb-read-ahead=value",
+      "dataType": "enumeration",
+      "default": "linear",
+      "dynamic": true,
       "id": "innodb_read_ahead",
       "name": "innodb_read_ahead",
-      "type": "if set to",
-      "cli": "innodb-read-ahead=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enumeration",
-      "default": "linear",
+      "type": "if set to",
       "validValues": [
         "none",
         "random",
@@ -2412,302 +2410,302 @@
       ]
     },
     {
-      "id": "innodb_read_ahead_threshold",
-      "name": "innodb_read_ahead_threshold",
-      "type": "minimum number of pages xtradb/innodb must read from an extent of 64 before initiating an asynchronous read for the following extent.",
       "cli": "--innodb-read-ahead-threshold=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "56",
+      "dynamic": true,
+      "id": "innodb_read_ahead_threshold",
+      "name": "innodb_read_ahead_threshold",
       "range": {
         "from": 0,
         "to": 64
-      }
-    },
-    {
-      "id": "innodb_read_io_threads",
-      "name": "innodb_read_io_threads",
-      "type": "number of i/o threads for xtradb/innodb reads. you may on rare occasions need to reduce this default on linux systems running multiple mariadb servers to avoid exceeding system limits.",
-      "cli": "--innodb-read-io-threads=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "minimum number of pages xtradb/innodb must read from an extent of 64 before initiating an asynchronous read for the following extent."
+    },
+    {
+      "cli": "--innodb-read-io-threads=#",
       "dataType": "numeric",
       "default": "4",
+      "dynamic": false,
+      "id": "innodb_read_io_threads",
+      "name": "innodb_read_io_threads",
       "range": {
         "from": 1,
         "to": 64
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "number of i/o threads for xtradb/innodb reads. you may on rare occasions need to reduce this default on linux systems running multiple mariadb servers to avoid exceeding system limits."
     },
     {
+      "cli": "--innodb-read-only=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_read_only",
       "name": "innodb_read_only",
-      "type": "if set to",
-      "cli": "--innodb-read-only=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
+      "cli": "no",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_recovery_stats",
       "name": "innodb_recovery_stats",
-      "type": "if set to",
-      "cli": "no",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
+      "cli": "innodb-recovery-update-relay-log={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_recovery_update_relay_log",
       "name": "innodb_recovery_update_relay_log",
-      "type": "if set to",
-      "cli": "innodb-recovery-update-relay-log={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
-      "id": "innodb_replication_delay",
-      "name": "innodb_replication_delay",
-      "type": "time in milliseconds for the slave server to delay the replication thread if",
       "cli": "--innodb-replication-delay=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_replication_delay",
+      "name": "innodb_replication_delay",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "time in milliseconds for the slave server to delay the replication thread if"
     },
     {
+      "cli": "--innodb-rollback-on-timeout",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": false,
       "id": "innodb_rollback_on_timeout",
       "name": "innodb_rollback_on_timeout",
-      "type": "innodb usually rolls back the last statement of a transaction that's been timed out (see",
-      "cli": "--innodb-rollback-on-timeout",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "innodb usually rolls back the last statement of a transaction that's been timed out (see"
     },
     {
-      "id": "innodb_rollback_segments",
-      "name": "innodb_rollback_segments",
-      "type": "specifies the number of rollback segments that xtradb/innodb will use within a transaction (see",
       "cli": "--innodb-rollback-segments=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "128",
+      "dynamic": true,
+      "id": "innodb_rollback_segments",
+      "name": "innodb_rollback_segments",
       "range": {
         "from": 1,
         "to": 128
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "specifies the number of rollback segments that xtradb/innodb will use within a transaction (see"
     },
     {
+      "cli": "--innodb-scrub-log",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_scrub_log",
       "name": "innodb_scrub_log",
-      "type": "enable redo log scrubbing. see",
-      "cli": "--innodb-scrub-log",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "enable redo log scrubbing. see"
     },
     {
-      "id": "innodb_scrub_log_interval",
-      "name": "innodb_scrub_log_interval",
-      "type": "used with",
       "cli": "--innodb-scrub-log-interval=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "56",
+      "dynamic": true,
+      "id": "innodb_scrub_log_interval",
+      "name": "innodb_scrub_log_interval",
       "range": {
         "from": 0,
         "to": 50000
-      }
-    },
-    {
-      "id": "innodb_scrub_log_speed",
-      "name": "innodb_scrub_log_speed",
-      "type": "innodb redo log scrubbing speed in bytes/sec. see",
-      "cli": "--innodb-scrub-log-speed=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "used with"
+    },
+    {
+      "cli": "--innodb-scrub-log-speed=#",
       "dataType": "numeric",
       "default": "256",
+      "dynamic": true,
+      "id": "innodb_scrub_log_speed",
+      "name": "innodb_scrub_log_speed",
       "range": {
         "from": 1,
         "to": 50000
-      }
-    },
-    {
-      "id": "innodb_sched_priority_cleaner",
-      "name": "innodb_sched_priority_cleaner",
-      "type": "set a thread scheduling priority for cleaner and lru manager threads. the range from",
-      "cli": "innodb-sched-priority-cleaner=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "innodb redo log scrubbing speed in bytes/sec. see"
+    },
+    {
+      "cli": "innodb-sched-priority-cleaner=#",
       "dataType": "numeric",
       "default": "19",
+      "dynamic": true,
+      "id": "innodb_sched_priority_cleaner",
+      "name": "innodb_sched_priority_cleaner",
       "range": {
         "from": 0,
         "to": 39
-      }
-    },
-    {
-      "id": "innodb_show_locks_held",
-      "name": "innodb_show_locks_held",
-      "type": "specifies the number of locks held for each innodb transaction to be displayed in",
-      "cli": "innodb-show-locks-held=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "set a thread scheduling priority for cleaner and lru manager threads. the range from"
+    },
+    {
+      "cli": "innodb-show-locks-held=#",
       "dataType": "numeric",
       "default": "10",
+      "dynamic": true,
+      "id": "innodb_show_locks_held",
+      "name": "innodb_show_locks_held",
       "range": {
         "from": 0,
         "to": 1000
-      }
-    },
-    {
-      "id": "innodb_show_verbose_locks",
-      "name": "innodb_show_verbose_locks",
-      "type": "if set to",
-      "cli": "innodb-show-verbose-locks=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "specifies the number of locks held for each innodb transaction to be displayed in"
+    },
+    {
+      "cli": "innodb-show-verbose-locks=#",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_show_verbose_locks",
+      "name": "innodb_show_verbose_locks",
       "range": {
         "from": 0,
         "to": 1
-      }
-    },
-    {
-      "id": "innodb_simulate_comp_failures",
-      "name": "innodb_simulate_comp_failures",
-      "type": "simulate compression failures. used for testing robustness against random compression failures. xtradb only.",
-      "cli": "none",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "if set to"
+    },
+    {
+      "cli": "none",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_simulate_comp_failures",
+      "name": "innodb_simulate_comp_failures",
       "range": {
         "from": 0,
         "to": 99
-      }
-    },
-    {
-      "id": "innodb_sort_buffer_size",
-      "name": "innodb_sort_buffer_size",
-      "type": "size of the sort buffers used for sorting data when an innodb index is created, as well as the amount by which the temporary log file is extended during online ddl operations to record concurrent writes. before",
-      "cli": "--innodb-sort-buffer-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "simulate compression failures. used for testing robustness against random compression failures. xtradb only."
+    },
+    {
+      "cli": "--innodb-sort-buffer-size=#",
       "dataType": "numeric",
       "default": "1048576",
+      "dynamic": false,
+      "id": "innodb_sort_buffer_size",
+      "name": "innodb_sort_buffer_size",
       "range": {
         "from": 65536,
         "to": 67108864
-      }
-    },
-    {
-      "id": "innodb_spin_wait_delay",
-      "name": "innodb_spin_wait_delay",
-      "type": "maximum delay (not strictly corresponding to a time unit) between spin lock polls. default changed from",
-      "cli": "--innodb-spin-wait-delay=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "size of the sort buffers used for sorting data when an innodb index is created, as well as the amount by which the temporary log file is extended during online ddl operations to record concurrent writes. before"
+    },
+    {
+      "cli": "--innodb-spin-wait-delay=#",
       "dataType": "numeric",
       "default": "6",
+      "dynamic": true,
+      "id": "innodb_spin_wait_delay",
+      "name": "innodb_spin_wait_delay",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "maximum delay (not strictly corresponding to a time unit) between spin lock polls. default changed from"
     },
     {
+      "cli": "--innodb-stats-auto-recalc=#",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_stats_auto_recalc",
       "name": "innodb_stats_auto_recalc",
-      "type": "if set to",
-      "cli": "--innodb-stats-auto-recalc=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": true,
       "id": "innodb_stats_auto_update",
       "name": "innodb_stats_auto_update",
-      "type": "if set to",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "if set to"
     },
     {
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_stats_include_delete_marked",
       "name": "innodb_stats_include_delete_marked",
-      "type": "include delete marked records when calculating persistent statistics.",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "include delete marked records when calculating persistent statistics."
     },
     {
+      "cli": "--innodb-stats-method=name",
+      "dataType": "enumeration",
+      "default": "nulls_equal",
+      "dynamic": true,
       "id": "innodb_stats_method",
       "name": "innodb_stats_method",
-      "type": "determines how nulls are treated for xtradb/innodb index statistics purposes. if set to",
-      "cli": "--innodb-stats-method=name",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enumeration",
-      "default": "nulls_equal",
+      "type": "determines how nulls are treated for xtradb/innodb index statistics purposes. if set to",
       "validValues": [
         "nulls_equal",
         "nulls_unequal",
@@ -2715,498 +2713,500 @@
       ]
     },
     {
-      "id": "innodb_stats_modified_counter",
-      "name": "innodb_stats_modified_counter",
-      "type": "the number of rows modified before we calculate new statistics. if set to",
       "cli": "--innodb-stats-modified-counter=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_stats_modified_counter",
+      "name": "innodb_stats_modified_counter",
       "range": {
         "from": 0,
         "to": 18446744073709552000
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "the number of rows modified before we calculate new statistics. if set to"
     },
     {
+      "cli": "--innodb-stats-on-metadata",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_stats_on_metadata",
       "name": "innodb_stats_on_metadata",
-      "type": "if set to",
-      "cli": "--innodb-stats-on-metadata",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-stats-persistent=#",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_stats_persistent",
       "name": "innodb_stats_persistent",
-      "type": "",
-      "cli": "--innodb-stats-persistent=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": ""
     },
     {
+      "cli": "--innodb-stats-persistent-sample-pages=#",
+      "dataType": "numeric",
+      "default": "20",
+      "dynamic": true,
       "id": "innodb_stats_persistent_sample_pages",
       "name": "innodb_stats_persistent_sample_pages",
-      "type": "number of index pages sampled when estimating cardinality and statistics for indexed columns. increasing this value will increases index statistics accuracy, but use more i/o resources when running",
-      "cli": "--innodb-stats-persistent-sample-pages=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "20"
+      "type": "number of index pages sampled when estimating cardinality and statistics for indexed columns. increasing this value will increases index statistics accuracy, but use more i/o resources when running"
     },
     {
+      "cli": "--innodb-stats-sample-pages=#",
+      "dataType": "numeric",
+      "default": "8",
+      "dynamic": true,
       "id": "innodb_stats_sample_pages",
       "name": "innodb_stats_sample_pages",
-      "type": "gives control over the index distribution statistics by determining the number of index pages to sample. higher values produce more disk i/o, but, especially for large tables, produce more accurate statistics and therefore make more effective use of the query optimizer. lower values than the default are not recommended, as the statistics can be quite inaccurate. enabling",
-      "cli": "--innodb-stats-sample-pages=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "8",
       "range": {
         "from": 1,
         "to": 264
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "gives control over the index distribution statistics by determining the number of index pages to sample. higher values produce more disk i/o, but, especially for large tables, produce more accurate statistics and therefore make more effective use of the query optimizer. lower values than the default are not recommended, as the statistics can be quite inaccurate. enabling"
     },
     {
+      "cli": "--innodb-stats-traditional=#",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_stats_traditional",
       "name": "innodb_stats_traditional",
-      "type": "when enabled (the default), traditional statistics calculation based on the number of configured pages is used. when disabled, the",
-      "cli": "--innodb-stats-traditional=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "when enabled (the default), traditional statistics calculation based on the number of configured pages is used. when disabled, the"
     },
     {
-      "id": "innodb_stats_transient_sample_pages",
-      "name": "innodb_stats_transient_sample_pages",
-      "type": "gives control over the index distribution statistics by determining the number of index pages to sample. higher values produce more disk i/o, but, especially for large tables, produce more accurate statistics and therefore make more effective use of the query optimizer. lower values than the default are not recommended, as the statistics can be quite inaccurate. enabling",
       "cli": "--innodb-stats-transient-sample-pages=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "8",
+      "dynamic": true,
+      "id": "innodb_stats_transient_sample_pages",
+      "name": "innodb_stats_transient_sample_pages",
       "range": {
         "from": 1,
         "to": 264
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "gives control over the index distribution statistics by determining the number of index pages to sample. higher values produce more disk i/o, but, especially for large tables, produce more accurate statistics and therefore make more effective use of the query optimizer. lower values than the default are not recommended, as the statistics can be quite inaccurate. enabling"
     },
     {
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": true,
       "id": "innodb_stats_update_need_lock",
       "name": "innodb_stats_update_need_lock",
-      "type": "setting to",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "setting to"
     },
     {
+      "cli": "--innodb-status-output={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_status_output",
       "name": "innodb_status_output",
-      "type": "enable",
-      "cli": "--innodb-status-output={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "enable"
     },
     {
+      "cli": "--innodb-status-output-locks={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_status_output_locks",
       "name": "innodb_status_output_locks",
-      "type": "enable",
-      "cli": "--innodb-status-output-locks={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "enable"
     },
     {
+      "cli": "--innodb-strict-mode=#",
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "innodb_strict_mode",
       "name": "innodb_strict_mode",
-      "type": "if set to",
-      "cli": "--innodb-strict-mode=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-support-xa",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_support_xa",
       "name": "innodb_support_xa",
-      "type": "if set to",
-      "cli": "--innodb-support-xa",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
-      "id": "innodb_sync_array_size",
-      "name": "innodb_sync_array_size",
-      "type": "by default",
       "cli": "--innodb-sync-array-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "1",
+      "dynamic": false,
+      "id": "innodb_sync_array_size",
+      "name": "innodb_sync_array_size",
       "range": {
         "from": 1,
         "to": 1024
-      }
-    },
-    {
-      "id": "innodb_sync_spin_loops",
-      "name": "innodb_sync_spin_loops",
-      "type": "the number of times a thread waits for an xtradb/innodb mutex to be freed before the thread is suspended.",
-      "cli": "--innodb-sync-spin-loops=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "by default"
+    },
+    {
+      "cli": "--innodb-sync-spin-loops=#",
       "dataType": "numeric",
       "default": "30",
+      "dynamic": true,
+      "id": "innodb_sync_spin_loops",
+      "name": "innodb_sync_spin_loops",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "the number of times a thread waits for an xtradb/innodb mutex to be freed before the thread is suspended."
     },
     {
+      "cli": "--innodb-table-locks",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_table_locks",
       "name": "innodb_table_locks",
-      "type": "if",
-      "cli": "--innodb-table-locks",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if"
     },
     {
-      "id": "innodb_thread_concurrency",
-      "name": "innodb_thread_concurrency",
-      "type": "once this number of threads is reached (excluding threads waiting for locks), xtradb/innodb will place new threads in a wait state in a first-in, first-out queue for execution, in order to limit the number of threads running concurrently. a setting of",
       "cli": "--innodb-thread-concurrency=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "innodb_thread_concurrency",
+      "name": "innodb_thread_concurrency",
       "range": {
         "from": 0,
         "to": 1000
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "once this number of threads is reached (excluding threads waiting for locks), xtradb/innodb will place new threads in a wait state in a first-in, first-out queue for execution, in order to limit the number of threads running concurrently. a setting of"
     },
     {
+      "cli": "innodb-thread-concurrency-timer-based={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_thread_concurrency_timer_based",
       "name": "innodb_thread_concurrency_timer_based",
-      "type": "if set to",
-      "cli": "innodb-thread-concurrency-timer-based={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-thread-sleep-delay=#",
+      "dataType": "numeric",
+      "default": "10000",
+      "dynamic": true,
       "id": "innodb_thread_sleep_delay",
       "name": "innodb_thread_sleep_delay",
-      "type": "time in microseconds that xtradb/innodb threads sleep before joining the queue. setting to",
-      "cli": "--innodb-thread-sleep-delay=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "10000"
+      "type": "time in microseconds that xtradb/innodb threads sleep before joining the queue. setting to"
     },
     {
+      "cli": "--innodb-temp-data-file-path=path",
+      "dataType": "string",
+      "default": "ibtmp1:12M:autoextend",
+      "dynamic": false,
       "id": "innodb_temp_data_file_path",
       "name": "innodb_temp_data_file_path",
-      "type": "",
-      "cli": "--innodb-temp-data-file-path=path",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string",
-      "default": "ibtmp1:12M:autoextend"
+      "type": ""
     },
     {
+      "cli": "--innodb-tmpdir=path",
+      "dataType": "string",
+      "dynamic": true,
       "id": "innodb_tmpdir",
       "name": "innodb_tmpdir",
-      "type": "allows an alternate location to be set for temporary non-tablespace files. if not set (the default), files will be created in the usual",
-      "cli": "--innodb-tmpdir=path",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "allows an alternate location to be set for temporary non-tablespace files. if not set (the default), files will be created in the usual"
     },
     {
+      "cli": "innodb-track-changed-pages={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_track_changed_pages",
       "name": "innodb_track_changed_pages",
-      "type": "for faster incremental backup with",
-      "cli": "innodb-track-changed-pages={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "for faster incremental backup with"
     },
     {
+      "cli": "innodb-track-redo-log-now={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_track_redo_log_now",
       "name": "innodb_track_redo_log_now",
-      "type": "available on debug builds only. xtradb only. added as a deprecated and ignored option in",
-      "cli": "innodb-track-redo-log-now={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "available on debug builds only. xtradb only. added as a deprecated and ignored option in"
     },
     {
+      "cli": "--innodb-undo-directory=name",
+      "dataType": "string",
+      "default": ".",
+      "dynamic": false,
       "id": "innodb_undo_directory",
       "name": "innodb_undo_directory",
-      "type": "path to the directory (relative or absolute) that innodb uses to create separate tablespaces for the",
-      "cli": "--innodb-undo-directory=name",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string",
-      "default": "."
+      "type": "path to the directory (relative or absolute) that innodb uses to create separate tablespaces for the"
     },
     {
+      "cli": "--innodb-undo-log-truncate[={0|1}]",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "innodb_undo_log_truncate",
       "name": "innodb_undo_log_truncate",
-      "type": "when enabled, undo tablespaces that are larger than",
-      "cli": "--innodb-undo-log-truncate[={0|1}]",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "when enabled, undo tablespaces that are larger than"
     },
     {
-      "id": "innodb_undo_logs",
-      "name": "innodb_undo_logs",
-      "type": "specifies the number of rollback segments that xtradb/innodb will use within a transaction (or the number of active",
       "cli": "--innodb-undo-logs=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "128",
+      "dynamic": true,
+      "id": "innodb_undo_logs",
+      "name": "innodb_undo_logs",
       "range": {
         "from": 0,
         "to": 128
-      }
-    },
-    {
-      "id": "innodb_undo_tablespaces",
-      "name": "innodb_undo_tablespaces",
-      "type": "number of tablespaces files used for dividing up the",
-      "cli": "--innodb-undo-tablespaces=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "specifies the number of rollback segments that xtradb/innodb will use within a transaction (or the number of active"
+    },
+    {
+      "cli": "--innodb-undo-tablespaces=#",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": false,
+      "id": "innodb_undo_tablespaces",
+      "name": "innodb_undo_tablespaces",
       "range": {
         "from": 0,
         "to": 95
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "number of tablespaces files used for dividing up the"
     },
     {
+      "cli": "innodb-use-atomic-writes={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_use_atomic_writes",
       "name": "innodb_use_atomic_writes",
-      "type": "implement atomic writes on supported ssd devices. see",
-      "cli": "innodb-use-atomic-writes={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "implement atomic writes on supported ssd devices. see"
     },
     {
+      "cli": "innodb-use-fallocate={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_use_fallocate",
       "name": "innodb_use_fallocate",
-      "type": "preallocate files fast, using operating system functionality. on posix systems, posix_fallocate system call is used. automatically set to",
-      "cli": "innodb-use-fallocate={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "preallocate files fast, using operating system functionality. on posix systems, posix_fallocate system call is used. automatically set to"
     },
     {
+      "cli": "innodb-use-global-flush-log-at-trx_commit={0|1}",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "innodb_use_global_flush_log_at_trx_commit",
       "name": "innodb_use_global_flush_log_at_trx_commit",
-      "type": "determines whether a user can set the variable",
-      "cli": "innodb-use-global-flush-log-at-trx_commit={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "determines whether a user can set the variable"
     },
     {
+      "cli": "--innodb-use-mtflush=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_use_mtflush",
       "name": "innodb_use_mtflush",
-      "type": "whether to enable multi-threaded flush operations.\nfor more information, see fusion.  this feature was deprecated in version 10.2.9 and removed from version 10.3.2 of mariadb.  instead, use",
-      "cli": "--innodb-use-mtflush=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "whether to enable multi-threaded flush operations.\nfor more information, see fusion.  this feature was deprecated in version 10.2.9 and removed from version 10.3.2 of mariadb.  instead, use"
     },
     {
+      "cli": "--innodb-use-native-aio=#",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": false,
       "id": "innodb_use_native_aio",
       "name": "innodb_use_native_aio",
-      "type": "for linux systems only, specified whether to use linux's asynchronous i/o subsystem. set to",
-      "cli": "--innodb-use-native-aio=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "for linux systems only, specified whether to use linux's asynchronous i/o subsystem. set to"
     },
     {
-      "id": "innodb_use_purge_thread",
-      "name": "innodb_use_purge_thread",
-      "type": "usually with innodb, data changed by a transaction is written to an undo space to permit read consistency, and freed when the transaction is complete. many, or large, transactions, can cause the main tablespace to grow dramatically, reducing performance. this option, introduced in xtradb 5.1 and removed for 5.5, allows multiple threads to perform the purging, resulting in slower, but much more stable performance.",
       "cli": "--innodb-use-purge-thread=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "1",
+      "dynamic": false,
+      "id": "innodb_use_purge_thread",
+      "name": "innodb_use_purge_thread",
       "range": {
         "from": 0,
         "to": 32
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "usually with innodb, data changed by a transaction is written to an undo space to permit read consistency, and freed when the transaction is complete. many, or large, transactions, can cause the main tablespace to grow dramatically, reducing performance. this option, introduced in xtradb 5.1 and removed for 5.5, allows multiple threads to perform the purging, resulting in slower, but much more stable performance."
     },
     {
+      "cli": "--innodb-use-stacktrace=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_use_stacktrace",
       "name": "innodb_use_stacktrace",
-      "type": "if set to",
-      "cli": "--innodb-use-stacktrace=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-use-sys-malloc=#",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": false,
       "id": "innodb_use_sys_malloc",
       "name": "innodb_use_sys_malloc",
-      "type": "if set the",
-      "cli": "--innodb-use-sys-malloc=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set the"
     },
     {
+      "cli": "innodb-use-sys-stats-table={0|1}",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": false,
       "id": "innodb_use_sys_stats_table",
       "name": "innodb_use_sys_stats_table",
-      "type": "if set to",
-      "cli": "innodb-use-sys-stats-table={0|1}",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "if set to"
     },
     {
+      "cli": "--innodb-use-trim=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "innodb_use_trim",
       "name": "innodb_use_trim",
-      "type": "use trim to free up space of compressed blocks. see",
-      "cli": "--innodb-use-trim=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "use trim to free up space of compressed blocks. see"
     },
     {
+      "dataType": "string",
+      "dynamic": false,
       "id": "innodb_version",
       "name": "innodb_version",
-      "type": "innodb version number. from",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string"
+      "type": "innodb version number. from"
     },
     {
-      "id": "innodb_write_io_threads",
-      "name": "innodb_write_io_threads",
-      "type": "number of i/o threads for xtradb/innodb writes. you may on rare occasions need to reduce this default on linux systems running multiple mariadb servers to avoid exceeding system limits.",
       "cli": "--innodb-write-io-threads=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "4",
+      "dynamic": false,
+      "id": "innodb_write_io_threads",
+      "name": "innodb_write_io_threads",
       "range": {
         "from": 1,
         "to": 64
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "number of i/o threads for xtradb/innodb writes. you may on rare occasions need to reduce this default on linux systems running multiple mariadb servers to avoid exceeding system limits."
     }
-  ]
+  ],
+  "name": "xtradbinnodb-server-system-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
 }

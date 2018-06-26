@@ -1,129 +1,127 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myisam/myisam-system-variables/",
-  "name": "myisam-system-variables",
   "data": [
     {
-      "id": "key_buffer_size",
-      "name": "key_buffer_size",
-      "type": "size of the buffer for the index blocks used by myisam tables and shared for all threads. see",
       "cli": "--key-buffer-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "134217728",
+      "dynamic": true,
+      "id": "key_buffer_size",
+      "name": "key_buffer_size",
       "range": {
         "from": 8,
         "to": "upwards (upper limit determined by operating system per process limit)"
-      }
-    },
-    {
-      "id": "key_cache_age_threshold",
-      "name": "key_cache_age_threshold",
-      "type": "the lower the setting, the more quickly buffers move from the hot key cache sublist to the warm sublist.",
-      "cli": "--key-cache-age-threshold=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "size of the buffer for the index blocks used by myisam tables and shared for all threads. see"
+    },
+    {
+      "cli": "--key-cache-age-threshold=#",
       "dataType": "numeric",
       "default": "300",
+      "dynamic": true,
+      "id": "key_cache_age_threshold",
+      "name": "key_cache_age_threshold",
       "range": {
         "from": 100,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "key_cache_block_size",
-      "name": "key_cache_block_size",
-      "type": "",
-      "cli": "--key-cache-block-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "the lower the setting, the more quickly buffers move from the hot key cache sublist to the warm sublist."
+    },
+    {
+      "cli": "--key-cache-block-size=#",
       "dataType": "numeric",
       "default": "1024",
+      "dynamic": true,
+      "id": "key_cache_block_size",
+      "name": "key_cache_block_size",
       "range": {
         "from": 512,
         "to": 16384
-      }
-    },
-    {
-      "id": "key_cache_division_limit",
-      "name": "key_cache_division_limit",
-      "type": "percentage to use for the warm key cache buffer list (the remainder is allocated between the hot and cold caches).",
-      "cli": "--key-cache-division-limit=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": ""
+    },
+    {
+      "cli": "--key-cache-division-limit=#",
       "dataType": "numeric",
       "default": "100",
+      "dynamic": true,
+      "id": "key_cache_division_limit",
+      "name": "key_cache_division_limit",
       "range": {
         "from": 1,
         "to": 100
-      }
-    },
-    {
-      "id": "key_cache_file_hash_size",
-      "name": "key_cache_file_hash_size",
-      "type": "number of hash buckets for open and changed files. if you have many myisam files open you should increase this for faster flushing of changes. a good value is probably 1/10th of the number of possible open myisam files.",
-      "cli": "--key-cache-file-hash-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "percentage to use for the warm key cache buffer list (the remainder is allocated between the hot and cold caches)."
+    },
+    {
+      "cli": "--key-cache-file-hash-size=#",
       "dataType": "numeric",
       "default": "512",
+      "dynamic": true,
+      "id": "key_cache_file_hash_size",
+      "name": "key_cache_file_hash_size",
       "range": {
         "from": 128,
         "to": 16384
-      }
-    },
-    {
-      "id": "key_cache_segments",
-      "name": "key_cache_segments",
-      "type": "numeric",
-      "cli": "--key-cache-segments=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "number of hash buckets for open and changed files. if you have many myisam files open you should increase this for faster flushing of changes. a good value is probably 1/10th of the number of possible open myisam files."
+    },
+    {
+      "cli": "--key-cache-segments=#",
       "default": "0",
+      "dynamic": true,
+      "id": "key_cache_segments",
+      "name": "key_cache_segments",
       "range": {
         "from": 0,
         "to": 64
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "numeric"
     },
     {
+      "cli": "--myisam-block-size=#",
+      "dataType": "numeric",
+      "default": "1024",
+      "dynamic": false,
       "id": "myisam_block_size",
       "name": "myisam_block_size",
-      "type": "block size to be used for myisam index pages.",
-      "cli": "--myisam-block-size=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "1024"
+      "type": "block size to be used for myisam index pages."
     },
     {
-      "id": "myisam_data_pointer_size",
-      "name": "myisam_data_pointer_size",
-      "type": "size in bytes of the default pointer, used in a",
       "cli": "--myisam-data-pointer-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "6",
+      "dynamic": true,
+      "id": "myisam_data_pointer_size",
+      "name": "myisam_data_pointer_size",
       "range": {
         "from": 2,
         "to": 7
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "size in bytes of the default pointer, used in a"
     },
     {
       "id": "myisam_max_extra_sort_file_size",
@@ -131,38 +129,38 @@
       "type": "removed in mysql 5.0.6, was used as a way to force long character keys in large tables to use the key cache method."
     },
     {
+      "cli": "--myisam-max-sort-file-size=#",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "myisam_max_sort_file_size",
       "name": "myisam_max_sort_file_size",
-      "type": "maximum size in bytes of the temporary file used while recreating a myisam index. if the this size is exceeded, the slower process of using the key cache is done instead.",
-      "cli": "--myisam-max-sort-file-size=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric"
+      "type": "maximum size in bytes of the temporary file used while recreating a myisam index. if the this size is exceeded, the slower process of using the key cache is done instead."
     },
     {
+      "cli": "--myisam-mmap-size=#",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "myisam_mmap_size",
       "name": "myisam_mmap_size",
-      "type": "maximum memory in bytes that can be used for memory mapping compressed myisam files. too high a value may result in swapping if there are many compressed myisam tables.",
-      "cli": "--myisam-mmap-size=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric"
+      "type": "maximum memory in bytes that can be used for memory mapping compressed myisam files. too high a value may result in swapping if there are many compressed myisam tables."
     },
     {
+      "cli": "--myisam-recover-options[=name]",
+      "dataType": "enumeration",
+      "dynamic": false,
       "id": "myisam_recover_options",
       "name": "myisam_recover_options",
-      "type": "myisam recovery mode. multiple options can be selected, comma-delimited. using no argument is equivalent to specifying",
-      "cli": "--myisam-recover-options[=name]",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "enumeration",
+      "type": "myisam recovery mode. multiple options can be selected, comma-delimited. using no argument is equivalent to specifying",
       "validValues": [
         "OFF",
         "DEFAULT",
@@ -173,47 +171,47 @@
       ]
     },
     {
+      "cli": "--myisam-repair-threads=#",
+      "dataType": "numeric",
+      "default": "1",
+      "dynamic": true,
       "id": "myisam_repair_threads",
       "name": "myisam_repair_threads",
-      "type": "if set to more than",
-      "cli": "--myisam-repair-threads=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "1"
+      "type": "if set to more than"
     },
     {
-      "id": "myisam_sort_buffer_size",
-      "name": "myisam_sort_buffer_size",
-      "type": "size in bytes of the buffer allocated when creating or sorting indexes on a myisam table.",
       "cli": "--myisam-sort-buffer-size=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "8388608",
+      "dynamic": true,
+      "id": "myisam_sort_buffer_size",
+      "name": "myisam_sort_buffer_size",
       "range": {
         "from": 4096,
         "to": 18446744073709548000
-      }
-    },
-    {
-      "id": "myisam_stats_method",
-      "name": "myisam_stats_method",
-      "type": "determines how nulls are treated for",
-      "cli": "--myisam-stats-method=name",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "size in bytes of the buffer allocated when creating or sorting indexes on a myisam table."
+    },
+    {
+      "cli": "--myisam-stats-method=name",
       "dataType": "enumeration",
       "default": "nulls_equal",
+      "dynamic": true,
+      "id": "myisam_stats_method",
+      "name": "myisam_stats_method",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "determines how nulls are treated for",
       "validValues": [
         "nulls_equal",
         "nulls_unequal",
@@ -221,16 +219,18 @@
       ]
     },
     {
+      "cli": "--myisam-use-mmap",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "myisam_use_mmap",
       "name": "myisam_use_mmap",
-      "type": "if set to",
-      "cli": "--myisam-use-mmap",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     }
-  ]
+  ],
+  "name": "myisam-system-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myisam/myisam-system-variables/"
 }

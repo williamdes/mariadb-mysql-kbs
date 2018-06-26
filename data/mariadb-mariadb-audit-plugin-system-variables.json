@@ -1,17 +1,15 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/",
-  "name": "mariadb-audit-plugin-system-variables",
   "data": [
     {
+      "cli": "--server-audit-events=value",
+      "dataType": "string",
+      "dynamic": true,
       "id": "server_audit_events",
       "name": "server_audit_events",
-      "type": "if set it specifies the set of types of events to log. for example:",
-      "cli": "--server-audit-events=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string",
+      "type": "if set it specifies the set of types of events to log. for example:",
       "validValues": [
         "CONNECT",
         "QUERY",
@@ -23,151 +21,151 @@
       ]
     },
     {
+      "cli": "--server-audit-excl-users=value",
+      "dataType": "string",
+      "dynamic": true,
       "id": "server_audit_excl_users",
       "name": "server_audit_excl_users",
-      "type": "if not empty, it contains the list of users whose activity will not be logged.\tfor example:",
-      "cli": "--server-audit-excl-users=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "if not empty, it contains the list of users whose activity will not be logged.\tfor example:"
     },
     {
+      "cli": "--server-audit-file-path=value",
+      "dataType": "string",
+      "default": "server_audit.log",
+      "dynamic": true,
       "id": "server_audit_file_path",
       "name": "server_audit_file_path",
-      "type": "when",
-      "cli": "--server-audit-file-path=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "server_audit.log"
+      "type": "when"
     },
     {
+      "cli": "--server-audit-rotate-now[={0|1}]",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "server_audit_file_rotate_now",
       "name": "server_audit_file_rotate_now",
-      "type": "when",
-      "cli": "--server-audit-rotate-now[={0|1}]",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "when"
     },
     {
+      "cli": "--server-audit-rotate-size=#",
+      "dataType": "numeric",
+      "default": "1000000",
+      "dynamic": true,
       "id": "server_audit_file_rotate_size",
       "name": "server_audit_file_rotate_size",
-      "type": "when",
-      "cli": "--server-audit-rotate-size=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "1000000"
+      "type": "when"
     },
     {
-      "id": "server_audit_file_rotations",
-      "name": "server_audit_file_rotations",
-      "type": "when",
       "cli": "--server-audit-rotations=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "9",
+      "dynamic": true,
+      "id": "server_audit_file_rotations",
+      "name": "server_audit_file_rotations",
       "range": {
         "from": 0,
         "to": 999
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "when"
     },
     {
+      "cli": "--server-audit-incl-users=value",
+      "dataType": "string",
+      "dynamic": true,
       "id": "server_audit_incl_users",
       "name": "server_audit_incl_users",
-      "type": "if not empty, it contains a comma-delimited list of users whose activity will be logged. for example:",
-      "cli": "--server-audit-incl-users=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "if not empty, it contains a comma-delimited list of users whose activity will be logged. for example:"
     },
     {
+      "cli": "n/a",
+      "dataType": "string",
+      "dynamic": false,
       "id": "server_audit_loc_info",
       "name": "server_audit_loc_info",
-      "type": "used by plugin internals. for a user it's read-only and its value has no distinct meaning. the goal is to make it invisible over time.",
-      "cli": "n/a",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string"
+      "type": "used by plugin internals. for a user it's read-only and its value has no distinct meaning. the goal is to make it invisible over time."
     },
     {
+      "cli": "--server-audit-logging[={0|1}]",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "server_audit_logging",
       "name": "server_audit_logging",
-      "type": "enables/disables the logging. expected values are on/off. for example:",
-      "cli": "--server-audit-logging[={0|1}]",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "enables/disables the logging. expected values are on/off. for example:"
     },
     {
+      "cli": "--server-audit-mode[=#]",
       "id": "server_audit_mode",
       "name": "server_audit_mode",
-      "type": "this variable doesn't have any distinctive meaning for a user. its value mostly reflects the server version with which the plugin was started and is intended to be used by developers for testing.",
-      "cli": "--server-audit-mode[=#]"
+      "type": "this variable doesn't have any distinctive meaning for a user. its value mostly reflects the server version with which the plugin was started and is intended to be used by developers for testing."
     },
     {
+      "cli": "--server-audit-output-type=value",
+      "dataType": "enum",
+      "default": "file",
+      "dynamic": true,
       "id": "server_audit_output_type",
       "name": "server_audit_output_type",
-      "type": "specifies the desired output type. can be syslog or file. for example:",
-      "cli": "--server-audit-output-type=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enum",
-      "default": "file",
+      "type": "specifies the desired output type. can be syslog or file. for example:",
       "validValues": [
         "SYSLOG",
         "FILE"
       ]
     },
     {
-      "id": "server_audit_query_log_limit",
-      "name": "server_audit_query_log_limit",
-      "type": "limit on the length of the query string in a record.",
       "cli": "--server-audit-query-log-limit=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "1024",
+      "dynamic": true,
+      "id": "server_audit_query_log_limit",
+      "name": "server_audit_query_log_limit",
       "range": {
         "from": 0,
         "to": 2147483647
-      }
-    },
-    {
-      "id": "server_audit_syslog_facility",
-      "name": "server_audit_syslog_facility",
-      "type": "syslog-mode variable. it defines the 'facility' of the records that will be sent to the syslog. later the log can be filtered by this parameter.",
-      "cli": "--server-audit-syslog-facility=value",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "limit on the length of the query string in a record."
+    },
+    {
+      "cli": "--server-audit-syslog-facility=value",
       "dataType": "enum",
       "default": "LOG_USER",
+      "dynamic": true,
+      "id": "server_audit_syslog_facility",
+      "name": "server_audit_syslog_facility",
+      "scope": [
+        "global"
+      ],
+      "type": "syslog-mode variable. it defines the 'facility' of the records that will be sent to the syslog. later the log can be filtered by this parameter.",
       "validValues": [
         "LOG_USER",
         "LOG_MAIL",
@@ -185,39 +183,39 @@
       ]
     },
     {
+      "cli": "--server-audit-syslog-ident=value",
+      "dataType": "string",
+      "default": "mysql-server_auditing",
+      "dynamic": true,
       "id": "server_audit_syslog_ident",
       "name": "server_audit_syslog_ident",
-      "type": "syslog-mode variable. string value for the 'ident' part of each syslog record. default value is 'mysql-server_auditing'. new value becomes effective only after restarting the logging.",
-      "cli": "--server-audit-syslog-ident=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "mysql-server_auditing"
+      "type": "syslog-mode variable. string value for the 'ident' part of each syslog record. default value is 'mysql-server_auditing'. new value becomes effective only after restarting the logging."
     },
     {
+      "cli": "--server-audit-syslog-info=value",
+      "dataType": "string",
+      "dynamic": true,
       "id": "server_audit_syslog_info",
       "name": "server_audit_syslog_info",
-      "type": "syslog-mode variable. the 'info' string to be added to the syslog records. can be changed any time.",
-      "cli": "--server-audit-syslog-info=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "syslog-mode variable. the 'info' string to be added to the syslog records. can be changed any time."
     },
     {
+      "cli": "--server-audit-syslog-priority=value",
+      "dataType": "enum",
+      "default": "LOG_INFO",
+      "dynamic": true,
       "id": "server_audit_syslog_priority",
       "name": "server_audit_syslog_priority",
-      "type": "syslog-mode variable. defines the priority of the log records for the syslogd.",
-      "cli": "--server-audit-syslog-priority=value",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enum",
-      "default": "LOG_INFO",
+      "type": "syslog-mode variable. defines the priority of the log records for the syslogd.",
       "validValues": [
         "LOG_EMERG",
         "LOG_ALERT",
@@ -229,5 +227,7 @@
         "LOG_DEBUG"
       ]
     }
-  ]
+  ],
+  "name": "mariadb-audit-plugin-system-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
 }

@@ -1,6 +1,4 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/",
-  "name": "galera-cluster-status-variables",
   "data": [
     {
       "id": "wsrep_apply_oooe",
@@ -172,5 +170,7 @@
       "name": "wsrep_thread_count",
       "type": "total number of wsrep (applier/rollbacker) threads."
     }
-  ]
+  ],
+  "name": "galera-cluster-status-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
 }

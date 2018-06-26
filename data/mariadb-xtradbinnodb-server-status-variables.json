@@ -1,1436 +1,1436 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/",
-  "name": "xtradbinnodb-server-status-variables",
   "data": [
     {
+      "dataType": "numeric",
       "id": "innodb_adaptive_hash_cells",
       "name": "Innodb_adaptive_hash_cells",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_adaptive_hash_hash_searches",
       "name": "Innodb_adaptive_hash_hash_searches",
-      "type": "hash searches as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "hash searches as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_adaptive_hash_heap_buffers",
       "name": "Innodb_adaptive_hash_heap_buffers",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_adaptive_hash_non_hash_searches",
       "name": "Innodb_adaptive_hash_non_hash_searches",
-      "type": "non-hash searches as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "non-hash searches as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_available_undo_logs",
       "name": "Innodb_available_undo_logs",
-      "type": "total number available innodb",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "total number available innodb"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_background_log_sync",
       "name": "Innodb_background_log_sync",
-      "type": "as shown in the background thread section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the background thread section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_bytes_data",
       "name": "Innodb_buffer_pool_bytes_data",
-      "type": "number of bytes contained in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of bytes contained in the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_bytes_dirty",
       "name": "Innodb_buffer_pool_bytes_dirty",
-      "type": "number of dirty (modified) bytes contained in the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of dirty (modified) bytes contained in the"
     },
     {
+      "dataType": "string",
       "id": "innodb_buffer_pool_dump_status",
       "name": "Innodb_buffer_pool_dump_status",
-      "type": "a text description of the progress or final status of the last innodb buffer pool dump.",
       "scope": [
         "global"
       ],
-      "dataType": "string"
+      "type": "a text description of the progress or final status of the last innodb buffer pool dump."
     },
     {
+      "dataType": "boolean",
       "id": "innodb_buffer_pool_load_incomplete",
       "name": "Innodb_buffer_pool_load_incomplete",
-      "type": "whether or not the loaded buffer pool is incomplete, for example after a shutdown or abort during innodb buffer pool load from file caused an incomplete save.",
       "scope": [
         "global"
       ],
-      "dataType": "boolean"
+      "type": "whether or not the loaded buffer pool is incomplete, for example after a shutdown or abort during innodb buffer pool load from file caused an incomplete save."
     },
     {
+      "dataType": "string",
       "id": "innodb_buffer_pool_load_status",
       "name": "Innodb_buffer_pool_load_status",
-      "type": "a text description of the progress or final status of the last innodb buffer pool load.",
       "scope": [
         "global"
       ],
-      "dataType": "string"
+      "type": "a text description of the progress or final status of the last innodb buffer pool load."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_data",
       "name": "Innodb_buffer_pool_pages_data",
-      "type": "number of",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_dirty",
       "name": "Innodb_buffer_pool_pages_dirty",
-      "type": "number of",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_flushed",
       "name": "Innodb_buffer_pool_pages_flushed",
-      "type": "number of",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_lru_flushed",
       "name": "Innodb_buffer_pool_pages_LRU_flushed",
-      "type": "flush list as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "flush list as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_free",
       "name": "Innodb_buffer_pool_pages_free",
-      "type": "number of free",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of free"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_made_not_young",
       "name": "Innodb_buffer_pool_pages_made_not_young",
-      "type": "pages not young as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "pages not young as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_made_young",
       "name": "Innodb_buffer_pool_pages_made_young",
-      "type": "pages made young as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "pages made young as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_misc",
       "name": "Innodb_buffer_pool_pages_misc",
-      "type": "number of",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_old",
       "name": "Innodb_buffer_pool_pages_old",
-      "type": "old database page, as shown in the buffer pool and memory section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "old database page, as shown in the buffer pool and memory section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_total",
       "name": "Innodb_buffer_pool_pages_total",
-      "type": "total number of",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "total number of"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_read_ahead",
       "name": "Innodb_buffer_pool_read_ahead",
-      "type": "number of pages read into the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pages read into the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_read_ahead_evicted",
       "name": "Innodb_buffer_pool_read_ahead_evicted",
-      "type": "number of pages read into the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pages read into the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_read_ahead_rnd",
       "name": "Innodb_buffer_pool_read_ahead_rnd",
-      "type": "number of random read-aheads.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of random read-aheads."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_read_requests",
       "name": "Innodb_buffer_pool_read_requests",
-      "type": "number of requests to read from the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to read from the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_reads",
       "name": "Innodb_buffer_pool_reads",
-      "type": "number of reads that could not be satisfied by the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of reads that could not be satisfied by the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_resize_status",
       "name": "Innodb_buffer_pool_resize_status",
-      "type": "progress of the dynamic",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "progress of the dynamic"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_wait_free",
       "name": "Innodb_buffer_pool_wait_free",
-      "type": "number of times innodb waited for a free page before reading or creating a page. normally, writes to the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of times innodb waited for a free page before reading or creating a page. normally, writes to the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_buffer_pool_write_requests",
       "name": "Innodb_buffer_pool_write_requests",
-      "type": "number of requests to write to the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to write to the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_checkpoint_age",
       "name": "Innodb_checkpoint_age",
-      "type": "the checkpoint age, as shown in the log section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "the checkpoint age, as shown in the log section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_checkpoint_max_age",
       "name": "Innodb_checkpoint_max_age",
-      "type": "max checkpoint age, as shown in the log section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "max checkpoint age, as shown in the log section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_checkpoint_target_age",
       "name": "Innodb_checkpoint_target_age",
-      "type": "checkpoint age target, as shown in the log section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "checkpoint age target, as shown in the log section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_current_row_locks",
       "name": "Innodb_current_row_locks",
-      "type": "number of current row locks on innodb tables as shown in the transactions section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of current row locks on innodb tables as shown in the transactions section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_data_fsyncs",
       "name": "Innodb_data_fsyncs",
-      "type": "number of innodb fsync (sync-to-disk) calls. fsync call frequency can be influenced by the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of innodb fsync (sync-to-disk) calls. fsync call frequency can be influenced by the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_data_pending_fsyncs",
       "name": "Innodb_data_pending_fsyncs",
-      "type": "number of pending innodb fsync (sync-to-disk) calls. fsync call frequency can be influenced by the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pending innodb fsync (sync-to-disk) calls. fsync call frequency can be influenced by the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_data_pending_reads",
       "name": "Innodb_data_pending_reads",
-      "type": "number of pending innodb reads.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pending innodb reads."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_data_pending_writes",
       "name": "Innodb_data_pending_writes",
-      "type": "number of pending innodb writes.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pending innodb writes."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_data_read",
       "name": "Innodb_data_read",
-      "type": "number of innodb bytes read since server startup (not to be confused with",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of innodb bytes read since server startup (not to be confused with"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_data_reads",
       "name": "Innodb_data_reads",
-      "type": "number of innodb read operations (not to be confused with",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of innodb read operations (not to be confused with"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_data_writes",
       "name": "Innodb_data_writes",
-      "type": "number of innodb write operations.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of innodb write operations."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_data_written",
       "name": "Innodb_data_written",
-      "type": "number of innodb bytes written server startup.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of innodb bytes written server startup."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_dblwr_pages_written",
       "name": "Innodb_dblwr_pages_written",
-      "type": "number of pages written to the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pages written to the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_dblwr_writes",
       "name": "Innodb_dblwr_writes",
-      "type": "number of writes to the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of writes to the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_deadlocks",
       "name": "Innodb_deadlocks",
-      "type": "total number of innodb deadlocks. deadlocks occur when at least two transactions are waiting for the other to finish, creating a circular dependency. innodb usually detects these quickly, returning an error. xtradb only.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "total number of innodb deadlocks. deadlocks occur when at least two transactions are waiting for the other to finish, creating a circular dependency. innodb usually detects these quickly, returning an error. xtradb only."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_defragment_compression_failures",
       "name": "Innodb_defragment_compression_failures",
-      "type": "number of defragment re-compression failures. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of defragment re-compression failures. see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_defragment_count",
       "name": "Innodb_defragment_count",
-      "type": "number of defragment operations. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of defragment operations. see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_defragment_failures",
       "name": "Innodb_defragment_failures",
-      "type": "number of defragment failures. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of defragment failures. see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_dict_tables",
       "name": "Innodb_dict_tables",
-      "type": "number of entries in the xtradb data dictionary cache. this percona xtradb variable was removed in mariadb 10/xtradb 5.6 as it was replaced with mysql 5.6's",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of entries in the xtradb data dictionary cache. this percona xtradb variable was removed in mariadb 10/xtradb 5.6 as it was replaced with mysql 5.6's"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_encryption_n_merge_blocks_decrypted",
       "name": "Innodb_encryption_n_merge_blocks_decrypted",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_encryption_n_merge_blocks_encrypted",
       "name": "Innodb_encryption_n_merge_blocks_encrypted",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_encryption_n_rowlog_blocks_decrypted",
       "name": "Innodb_encryption_n_rowlog_blocks_decrypted",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_encryption_n_rowlog_blocks_encrypted",
       "name": "Innodb_encryption_n_rowlog_blocks_encrypted",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_encryption_num_key_requests",
       "name": "Innodb_encryption_num_key_requests",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_encryption_rotation_estimated_iops",
       "name": "Innodb_encryption_rotation_estimated_iops",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_encryption_rotation_pages_flushed",
       "name": "Innodb_encryption_rotation_pages_flushed",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_encryption_rotation_pages_modified",
       "name": "Innodb_encryption_rotation_pages_modified",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_encryption_rotation_pages_read_from_cache",
       "name": "Innodb_encryption_rotation_pages_read_from_cache",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_encryption_rotation_pages_read_from_disk",
       "name": "Innodb_encryption_rotation_pages_read_from_disk",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "boolean",
       "id": "innodb_have_atomic_builtins",
       "name": "Innodb_have_atomic_builtins",
-      "type": "whether the server has been built with atomic instructions, provided by the cpu ensuring that critical low-level operations can't be interrupted. xtradb only.",
       "scope": [
         "global"
       ],
-      "dataType": "boolean"
+      "type": "whether the server has been built with atomic instructions, provided by the cpu ensuring that critical low-level operations can't be interrupted. xtradb only."
     },
     {
+      "dataType": "boolean",
       "id": "innodb_have_bzip2",
       "name": "Innodb_have_bzip2",
-      "type": "whether the server has the bzip2 compression method available. see",
       "scope": [
         "global"
       ],
-      "dataType": "boolean"
+      "type": "whether the server has the bzip2 compression method available. see"
     },
     {
+      "dataType": "boolean",
       "id": "innodb_have_lz4",
       "name": "Innodb_have_lz4",
-      "type": "whether the server has the lz4 compression method available. see",
       "scope": [
         "global"
       ],
-      "dataType": "boolean"
+      "type": "whether the server has the lz4 compression method available. see"
     },
     {
+      "dataType": "boolean",
       "id": "innodb_have_lzma",
       "name": "Innodb_have_lzma",
-      "type": "whether the server has the lzma compression method available. see",
       "scope": [
         "global"
       ],
-      "dataType": "boolean"
+      "type": "whether the server has the lzma compression method available. see"
     },
     {
+      "dataType": "boolean",
       "id": "innodb_have_lzo",
       "name": "Innodb_have_lzo",
-      "type": "whether the server has the lzo compression method available. see",
       "scope": [
         "global"
       ],
-      "dataType": "boolean"
+      "type": "whether the server has the lzo compression method available. see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_have_punch_hole",
       "name": "Innodb_have_punch_hole",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "boolean",
       "id": "innodb_have_snappy",
       "name": "Innodb_have_snappy",
-      "type": "whether the server has the snappy compression method available. see",
       "scope": [
         "global"
       ],
-      "dataType": "boolean"
+      "type": "whether the server has the snappy compression method available. see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_history_list_length",
       "name": "Innodb_history_list_length",
-      "type": "history list length as shown in the transactions section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "history list length as shown in the transactions section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_ibuf_discarded_delete_marks",
       "name": "Innodb_ibuf_discarded_delete_marks",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_ibuf_discarded_deletes",
       "name": "Innodb_ibuf_discarded_deletes",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_ibuf_discarded_inserts",
       "name": "Innodb_ibuf_discarded_inserts",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_ibuf_free_list",
       "name": "Innodb_ibuf_free_list",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_ibuf_merged_delete_marks",
       "name": "Innodb_ibuf_merged_delete_marks",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_ibuf_merged_deletes",
       "name": "Innodb_ibuf_merged_deletes",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_ibuf_merged_inserts",
       "name": "Innodb_ibuf_merged_inserts",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_ibuf_merges",
       "name": "Innodb_ibuf_merges",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_ibuf_segment_size",
       "name": "Innodb_ibuf_segment_size",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_ibuf_size",
       "name": "Innodb_ibuf_size",
-      "type": "as shown in the insert buffer and adaptive hash index section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the insert buffer and adaptive hash index section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_instant_alter_column",
       "name": "Innodb_instant_alter_column",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_log_waits",
       "name": "Innodb_log_waits",
-      "type": "number of times innodb was forced to wait for log writes to be flushed due to the log buffer being too small.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of times innodb was forced to wait for log writes to be flushed due to the log buffer being too small."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_log_write_requests",
       "name": "Innodb_log_write_requests",
-      "type": "number of requests to write to the innodb redo log.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of requests to write to the innodb redo log."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_log_writes",
       "name": "Innodb_log_writes",
-      "type": "number of writes to the innodb redo log.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of writes to the innodb redo log."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_lsn_current",
       "name": "Innodb_lsn_current",
-      "type": "log sequence number as shown in the log section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "log sequence number as shown in the log section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_lsn_flushed",
       "name": "Innodb_lsn_flushed",
-      "type": "flushed up to log sequence number as shown in the log section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "flushed up to log sequence number as shown in the log section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_lsn_last_checkpoint",
       "name": "Innodb_lsn_last_checkpoint",
-      "type": "log sequence number last checkpoint as shown in the log section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "log sequence number last checkpoint as shown in the log section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_master_thread_1_second_loops",
       "name": "Innodb_master_thread_1_second_loops",
-      "type": "as shown in the background thread section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the background thread section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_master_thread_10_second_loops",
       "name": "Innodb_master_thread_10_second_loops",
-      "type": "as shown in the background thread section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the background thread section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_master_thread_active_loops",
       "name": "Innodb_master_thread_active_loops",
-      "type": "as shown in the background thread section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the background thread section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_master_thread_background_loops",
       "name": "Innodb_master_thread_background_loops",
-      "type": "as shown in the background thread section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the background thread section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_master_thread_idle_loops",
       "name": "Innodb_master_thread_idle_loops",
-      "type": "as shown in the background thread section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the background thread section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_master_thread_main_flush_loops",
       "name": "Innodb_master_thread_main_flush_loops",
-      "type": "as shown in the background thread section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the background thread section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_master_thread_sleeps",
       "name": "Innodb_master_thread_sleeps",
-      "type": "as shown in the background thread section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the background thread section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_max_trx_id",
       "name": "Innodb_max_trx_id",
-      "type": "as shown in the transactions section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the transactions section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_mem_adaptive_hash",
       "name": "Innodb_mem_adaptive_hash",
-      "type": "as shown in the buffer pool and memory section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the buffer pool and memory section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_mem_dictionary",
       "name": "Innodb_mem_dictionary",
-      "type": "as shown in the buffer pool and memory section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the buffer pool and memory section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_mem_total",
       "name": "Innodb_mem_total",
-      "type": "as shown in the buffer pool and memory section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the buffer pool and memory section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_mutex_os_waits",
       "name": "Innodb_mutex_os_waits",
-      "type": "mutex os waits as shown in the semaphores section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "mutex os waits as shown in the semaphores section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_mutex_spin_rounds",
       "name": "Innodb_mutex_spin_rounds",
-      "type": "mutex spin rounds as shown in the semaphores section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "mutex spin rounds as shown in the semaphores section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_mutex_spin_waits",
       "name": "Innodb_mutex_spin_waits",
-      "type": "mutex spin waits as shown in the semaphores section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "mutex spin waits as shown in the semaphores section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_index_pages_written",
       "name": "Innodb_num_index_pages_written",
-      "type": "",
       "scope": [],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_non_index_pages_written",
       "name": "Innodb_num_non_index_pages_written",
-      "type": "",
       "scope": [],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_open_files",
       "name": "Innodb_num_open_files",
-      "type": "number of open files held by innodb. innodb only.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of open files held by innodb. innodb only."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_page_compressed_trim_op",
       "name": "Innodb_num_page_compressed_trim_op",
-      "type": "number of trim operations performed.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of trim operations performed."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_page_compressed_trim_op_saved",
       "name": "Innodb_num_page_compressed_trim_op_saved",
-      "type": "number of trim operations not done because of an earlier trim.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of trim operations not done because of an earlier trim."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_pages_decrypted",
       "name": "Innodb_num_pages_decrypted",
-      "type": "number of pages page decrypted. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pages page decrypted. see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_pages_encrypted",
       "name": "Innodb_num_pages_encrypted",
-      "type": "number of pages page encrypted. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pages page encrypted. see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_pages_page_compressed",
       "name": "Innodb_num_pages_page_compressed",
-      "type": "number of pages that are page compressed.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pages that are page compressed."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_pages_page_compression_error",
       "name": "Innodb_num_pages_page_compression_error",
-      "type": "number of compression errors.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of compression errors."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_pages_page_decompressed",
       "name": "Innodb_num_pages_page_decompressed",
-      "type": "number of pages compressed with page compression that are decompressed.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pages compressed with page compression that are decompressed."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_num_pages_page_encryption_error",
       "name": "Innodb_num_pages_page_encryption_error",
-      "type": "number of page encryption errors. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of page encryption errors. see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_oldest_view_low_limit_trx_id",
       "name": "Innodb_oldest_view_low_limit_trx_id",
-      "type": "as shown in the transactions section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the transactions section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_onlineddl_pct_progress",
       "name": "Innodb_onlineddl_pct_progress",
-      "type": "shows the progress of in-place alter table. it might be not so accurate because in-place alter is highly dependent on disk and buffer pool status. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "shows the progress of in-place alter table. it might be not so accurate because in-place alter is highly dependent on disk and buffer pool status. see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_onlineddl_rowlog_pct_used",
       "name": "Innodb_onlineddl_rowlog_pct_used",
-      "type": "shows row log buffer usage in 5-digit integer (10000 means 100.00%). see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "shows row log buffer usage in 5-digit integer (10000 means 100.00%). see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_onlineddl_rowlog_rows",
       "name": "Innodb_onlineddl_rowlog_rows",
-      "type": "number of rows stored in the row log buffer. see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of rows stored in the row log buffer. see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_os_log_fsyncs",
       "name": "Innodb_os_log_fsyncs",
-      "type": "number of innodb log fsync (sync-to-disk) requests.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of innodb log fsync (sync-to-disk) requests."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_os_log_pending_fsyncs",
       "name": "Innodb_os_log_pending_fsyncs",
-      "type": "number of pending innodb log fsync (sync-to-disk) requests.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pending innodb log fsync (sync-to-disk) requests."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_os_log_pending_writes",
       "name": "Innodb_os_log_pending_writes",
-      "type": "number of pending innodb log writes.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pending innodb log writes."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_os_log_written",
       "name": "Innodb_os_log_written",
-      "type": "number of bytes written to the innodb log.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of bytes written to the innodb log."
     },
     {
+      "dataType": "",
       "id": "innodb_page_compression_saved",
       "name": "Innodb_page_compression_saved",
-      "type": "number of bytes saved by page compression.",
       "scope": [],
-      "dataType": ""
+      "type": "number of bytes saved by page compression."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect512",
       "name": "Innodb_page_compression_trim_sect512",
-      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 512 byte block-size.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 512 byte block-size."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect1024",
       "name": "Innodb_page_compression_trim_sect1024",
-      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 1k block-size.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 1k block-size."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect2048",
       "name": "Innodb_page_compression_trim_sect2048",
-      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 2k block-size.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 2k block-size."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect4096",
       "name": "Innodb_page_compression_trim_sect4096",
-      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 4k block-size.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 4k block-size."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect8192",
       "name": "Innodb_page_compression_trim_sect8192",
-      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 8k block-size.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 8k block-size."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect16384",
       "name": "Innodb_page_compression_trim_sect16384",
-      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 16k block-size.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 16k block-size."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect32768",
       "name": "Innodb_page_compression_trim_sect32768",
-      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 32k block-size.",
       "scope": [],
-      "dataType": "numeric"
+      "type": "number of trim operations performed for the page-compression/nvm compression workload for the 32k block-size."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_page_size",
       "name": "Innodb_page_size",
-      "type": "page size used by innodb. defaults to 16kb, can be compiled with a different value.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "page size used by innodb. defaults to 16kb, can be compiled with a different value."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_pages_created",
       "name": "Innodb_pages_created",
-      "type": "number of innodb pages created.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of innodb pages created."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_pages_read",
       "name": "Innodb_pages_read",
-      "type": "number of innodb pages read.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of innodb pages read."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_pages0_read",
       "name": "Innodb_pages0_read",
-      "type": "counter for keeping track of reads of the first page of innodb data files, because the original implementation of data-at-rest-encryption for innodb introduced new code paths for reading the pages. removed in",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "counter for keeping track of reads of the first page of innodb data files, because the original implementation of data-at-rest-encryption for innodb introduced new code paths for reading the pages. removed in"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_pages_written",
       "name": "Innodb_pages_written",
-      "type": "number of innodb pages written.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of innodb pages written."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_purge_trx_id",
       "name": "Innodb_purge_trx_id",
-      "type": "purge transaction id as shown in the transactions section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "purge transaction id as shown in the transactions section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_purge_undo_no",
       "name": "Innodb_purge_undo_no",
-      "type": "as shown in the transactions section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the transactions section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_read_views_memory",
       "name": "Innodb_read_views_memory",
-      "type": "as shown in the buffer pool and memory section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the buffer pool and memory section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_row_lock_current_waits",
       "name": "Innodb_row_lock_current_waits",
-      "type": "number of pending row locks on innodb tables.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of pending row locks on innodb tables."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_row_lock_numbers",
       "name": "Innodb_row_lock_numbers",
-      "type": "number of current row locks on innodb tables as shown in the transactions section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of current row locks on innodb tables as shown in the transactions section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_row_lock_time",
       "name": "Innodb_row_lock_time",
-      "type": "total time in milliseconds spent getting innodb row locks.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "total time in milliseconds spent getting innodb row locks."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_row_lock_time_avg",
       "name": "Innodb_row_lock_time_avg",
-      "type": "average time in milliseconds spent getting innodb row locks.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "average time in milliseconds spent getting innodb row locks."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_row_lock_time_max",
       "name": "Innodb_row_lock_time_max",
-      "type": "maximum time in milliseconds spent getting an innodb row lock.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "maximum time in milliseconds spent getting an innodb row lock."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_row_lock_time_waits",
       "name": "Innodb_row_lock_time_waits",
-      "type": "number of times innodb had to wait before getting a row lock.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of times innodb had to wait before getting a row lock."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_rows_deleted",
       "name": "Innodb_rows_deleted",
-      "type": "number of rows deleted from innodb tables.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of rows deleted from innodb tables."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_rows_inserted",
       "name": "Innodb_rows_inserted",
-      "type": "number of rows inserted into innodb tables.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of rows inserted into innodb tables."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_rows_read",
       "name": "Innodb_rows_read",
-      "type": "number of rows read from innodb tables.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of rows read from innodb tables."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_rows_updated",
       "name": "Innodb_rows_updated",
-      "type": "number of rows updated in innodb tables.",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of rows updated in innodb tables."
     },
     {
+      "dataType": "numeric",
       "id": "innodb_s_lock_os_waits",
       "name": "Innodb_s_lock_os_waits",
-      "type": "as shown in the semaphores section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the semaphores section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_s_lock_spin_rounds",
       "name": "Innodb_s_lock_spin_rounds",
-      "type": "as shown in the semaphores section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the semaphores section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_s_lock_spin_waits",
       "name": "Innodb_s_lock_spin_waits",
-      "type": "as shown in the semaphores section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the semaphores section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_scrub_background_page_reorganizations",
       "name": "Innodb_scrub_background_page_reorganizations",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_scrub_background_page_split_failures_missing_index",
       "name": "Innodb_scrub_background_page_split_failures_missing_index",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_scrub_background_page_split_failures_out_of_filespace",
       "name": "Innodb_scrub_background_page_split_failures_out_of_filespace",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_scrub_background_page_split_failures_underflow",
       "name": "Innodb_scrub_background_page_split_failures_underflow",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_scrub_background_page_split_failures_unknown",
       "name": "Innodb_scrub_background_page_split_failures_unknown",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_scrub_background_page_splits",
       "name": "Innodb_scrub_background_page_splits",
-      "type": "see",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "see"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_scrub_log",
       "name": "Innodb_scrub_log",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_secondary_index_triggered_cluster_reads",
       "name": "Innodb_secondary_index_triggered_cluster_reads",
-      "type": "used to track the effectiveness of the prefix index queries optimization (",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "used to track the effectiveness of the prefix index queries optimization ("
     },
     {
+      "dataType": "numeric",
       "id": "innodb_secondary_index_triggered_cluster_reads_avoided",
       "name": "Innodb_secondary_index_triggered_cluster_reads_avoided",
-      "type": "used to track the effectiveness of the prefix index queries optimization (",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "used to track the effectiveness of the prefix index queries optimization ("
     },
     {
+      "dataType": "numeric",
       "id": "innodb_system_rows_deleted",
       "name": "Innodb_system_rows_deleted",
-      "type": "",
       "scope": [],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_system_rows_inserted",
       "name": "Innodb_system_rows_inserted",
-      "type": "",
       "scope": [],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_system_rows_read",
       "name": "Innodb_system_rows_read",
-      "type": "",
       "scope": [],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_system_rows_updated",
       "name": "Innodb_system_rows_updated",
-      "type": "",
       "scope": [],
-      "dataType": "numeric"
+      "type": ""
     },
     {
+      "dataType": "numeric",
       "id": "innodb_truncated_status_writes",
       "name": "Innodb_truncated_status_writes",
-      "type": "number of times output from",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "number of times output from"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_x_lock_os_waits",
       "name": "Innodb_x_lock_os_waits",
-      "type": "as shown in the semaphores section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the semaphores section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_x_lock_spin_rounds",
       "name": "Innodb_x_lock_spin_rounds",
-      "type": "as shown in the semaphores section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the semaphores section of the"
     },
     {
+      "dataType": "numeric",
       "id": "innodb_x_lock_spin_waits",
       "name": "Innodb_x_lock_spin_waits",
-      "type": "as shown in the semaphores section of the",
       "scope": [
         "global"
       ],
-      "dataType": "numeric"
+      "type": "as shown in the semaphores section of the"
     }
-  ]
+  ],
+  "name": "xtradbinnodb-server-status-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/"
 }

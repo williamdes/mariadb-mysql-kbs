@@ -1,47 +1,47 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/oqgraph-system-and-status-variables/",
-  "name": "oqgraph-system-and-status-variables",
   "data": [
     {
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": true,
       "id": "oqgraph_allow_create_integer_latch",
       "name": "oqgraph_allow_create_integer_latch",
-      "type": "created when the",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "created when the"
     },
     {
+      "dataType": "string",
       "id": "oqgraph_boost_version",
       "name": "Oqgraph_boost_version",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "string"
+      "type": ""
     },
     {
+      "dataType": "string",
       "id": "oqgraph_compat_mode",
       "name": "Oqgraph_compat_mode",
-      "type": "whether or not legacy tables with integer latches are supported.",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "string"
+      "type": "whether or not legacy tables with integer latches are supported."
     },
     {
+      "dataType": "string",
       "id": "oqgraph_verbose_debug",
       "name": "Oqgraph_verbose_debug",
-      "type": "whether or not verbose debugging is enabled. if it is, performance may be adversely impacted",
       "scope": [
         "global",
         "session"
       ],
-      "dataType": "string"
+      "type": "whether or not verbose debugging is enabled. if it is, performance may be adversely impacted"
     }
-  ]
+  ],
+  "name": "oqgraph-system-and-status-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/oqgraph-system-and-status-variables/"
 }

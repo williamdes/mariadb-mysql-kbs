@@ -1,17 +1,15 @@
 {
-  "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html",
-  "name": "replication-options-gtids",
   "data": [
     {
-      "id": "option_mysqld_enforce-gtid-consistency",
       "cli": "--enforce-gtid-consistency[=value]",
+      "default": "off",
+      "dynamic": true,
+      "id": "option_mysqld_enforce-gtid-consistency",
       "name": "enforce_gtid_consistency",
       "scope": [
         "global"
       ],
-      "dynamic": true,
       "type": "enumeration",
-      "default": "off",
       "validValues": [
         "OFF",
         "ON",
@@ -19,25 +17,25 @@
       ]
     },
     {
-      "id": "option_mysqld_executed-gtids-compression-period",
       "cli": "--executed-gtids-compression-period=#",
-      "type": "integer",
       "default": "1000",
+      "id": "option_mysqld_executed-gtids-compression-period",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "type": "integer"
     },
     {
-      "id": "option_mysqld_gtid-mode",
       "cli": "--gtid-mode=MODE",
+      "default": "off",
+      "dynamic": true,
+      "id": "option_mysqld_gtid-mode",
       "name": "gtid_mode",
       "scope": [
         "global"
       ],
-      "dynamic": true,
       "type": "enumeration",
-      "default": "off",
       "validValues": [
         "OFF",
         "OFF_PERMISSIVE",
@@ -46,36 +44,36 @@
       ]
     },
     {
-      "id": "option_mysqld_gtid-executed-compression-period",
       "cli": "--gtid-executed-compression-period=#",
-      "type": "integer",
       "default": "1000",
+      "id": "option_mysqld_gtid-executed-compression-period",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "type": "integer"
     },
     {
-      "id": "sysvar_binlog_gtid_simple_recovery",
       "cli": "--binlog-gtid-simple-recovery",
+      "default": "true",
+      "dynamic": false,
+      "id": "sysvar_binlog_gtid_simple_recovery",
       "name": "binlog_gtid_simple_recovery",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "type": "boolean",
-      "default": "true"
+      "type": "boolean"
     },
     {
-      "id": "sysvar_enforce_gtid_consistency",
       "cli": "--enforce-gtid-consistency[=value]",
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_enforce_gtid_consistency",
       "name": "enforce_gtid_consistency",
       "scope": [
         "global"
       ],
-      "dynamic": true,
       "type": "enumeration",
-      "default": "off",
       "validValues": [
         "OFF",
         "ON",
@@ -83,52 +81,52 @@
       ]
     },
     {
+      "default": "1000",
+      "dynamic": true,
       "id": "sysvar_executed_gtids_compression_period",
       "name": "executed_gtids_compression_period",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "type": "integer",
-      "default": "1000",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     },
     {
+      "dynamic": false,
       "id": "sysvar_gtid_executed",
       "name": "gtid_executed",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": false,
       "type": "string"
     },
     {
+      "default": "1000",
+      "dynamic": true,
       "id": "sysvar_gtid_executed_compression_period",
       "name": "gtid_executed_compression_period",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "type": "integer",
-      "default": "1000",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     },
     {
+      "default": "off",
+      "dynamic": true,
       "id": "sysvar_gtid_mode",
       "name": "gtid_mode",
       "scope": [
         "global"
       ],
-      "dynamic": true,
       "type": "enumeration",
-      "default": "off",
       "validValues": [
         "OFF",
         "OFF_PERMISSIVE",
@@ -137,14 +135,14 @@
       ]
     },
     {
+      "default": "automatic",
+      "dynamic": true,
       "id": "sysvar_gtid_next",
       "name": "gtid_next",
       "scope": [
         "session"
       ],
-      "dynamic": true,
       "type": "enumeration",
-      "default": "automatic",
       "validValues": [
         "AUTOMATIC",
         "ANONYMOUS",
@@ -152,34 +150,36 @@
       ]
     },
     {
+      "dynamic": false,
       "id": "sysvar_gtid_owned",
       "name": "gtid_owned",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": false,
       "type": "string"
     },
     {
+      "dynamic": true,
       "id": "sysvar_gtid_purged",
       "name": "gtid_purged",
       "scope": [
         "global"
       ],
-      "dynamic": true,
       "type": "string"
     },
     {
-      "id": "sysvar_simplified_binlog_gtid_recovery",
       "cli": "--simplified-binlog-gtid-recovery",
+      "default": "false",
+      "dynamic": false,
+      "id": "sysvar_simplified_binlog_gtid_recovery",
       "name": "simplified_binlog_gtid_recovery",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "type": "boolean",
-      "default": "false"
+      "type": "boolean"
     }
-  ]
+  ],
+  "name": "replication-options-gtids",
+  "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
 }

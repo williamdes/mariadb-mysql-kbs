@@ -1,31 +1,31 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-status-variables/",
-  "name": "mariadb-audit-plugin-status-variables",
   "data": [
     {
+      "dataType": "boolean",
       "id": "server_audit_active",
       "name": "Server_audit_active",
-      "type": "if the auditing is actually working. it gets the on value when the logging is successfully started. then it can get the off value if the logging was stopped or log records can't be properly stored due to file or syslog errors.",
-      "dataType": "boolean"
+      "type": "if the auditing is actually working. it gets the on value when the logging is successfully started. then it can get the off value if the logging was stopped or log records can't be properly stored due to file or syslog errors."
     },
     {
+      "dataType": "string",
       "id": "server_audit_current_log",
       "name": "Server_audit_current_log",
-      "type": "the name of the logfile or the syslog parameters that are in current use.",
-      "dataType": "string"
+      "type": "the name of the logfile or the syslog parameters that are in current use."
     },
     {
+      "dataType": "string",
       "id": "server_audit_last_error",
       "name": "Server_audit_last_error",
-      "type": "if something went wrong with the logging here you can see the message.",
-      "dataType": "string"
+      "type": "if something went wrong with the logging here you can see the message."
     },
     {
+      "dataType": "numeric",
+      "default": "0",
       "id": "server_audit_writes_failed",
       "name": "Server_audit_writes_failed",
-      "type": "the number of log records since last logging-start that weren't properly stored because of errors of any kind.",
-      "dataType": "numeric",
-      "default": "0"
+      "type": "the number of log records since last logging-start that weren't properly stored because of errors of any kind."
     }
-  ]
+  ],
+  "name": "mariadb-audit-plugin-status-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-status-variables/"
 }

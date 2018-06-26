@@ -1,19 +1,17 @@
 {
-  "url": "http://kb-mirror.mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/",
-  "name": "server-system-variables",
   "data": [
     {
+      "cli": "--alter-algorithm=default",
+      "dataType": "enumerated",
+      "default": "DEFAULT",
+      "dynamic": true,
       "id": "alter_algorithm",
       "name": "alter_algorithm",
-      "type": "the implied",
-      "cli": "--alter-algorithm=default",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "enumerated",
-      "default": "DEFAULT",
+      "type": "the implied",
       "validValues": [
         "DEFAULT",
         "COPY",
@@ -23,241 +21,241 @@
       ]
     },
     {
+      "cli": "--autocommit[=#]",
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": true,
       "id": "autocommit",
       "name": "autocommit",
-      "type": "if set to 1, the default, all queries are committed immediately. the",
-      "cli": "--autocommit[=#]",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "if set to 1, the default, all queries are committed immediately. the"
     },
     {
+      "cli": "--automatic-sp-privileges, --skip-automatic-sp-privileges",
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": true,
       "id": "automatic_sp_privileges",
       "name": "automatic_sp_privileges",
-      "type": "when set to 1, the default, when a stored routine is created, the creator is automatically granted permission to",
-      "cli": "--automatic-sp-privileges, --skip-automatic-sp-privileges",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "when set to 1, the default, when a stored routine is created, the creator is automatically granted permission to"
     },
     {
+      "cli": "--back-log=#",
+      "dynamic": false,
       "id": "back_log",
       "name": "back_log",
-      "type": "number",
-      "cli": "--back-log=#",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "number"
     },
     {
+      "cli": "--basedir=path or -b path",
+      "dynamic": false,
       "id": "basedir",
       "name": "basedir",
-      "type": "directory name",
-      "cli": "--basedir=path or -b path",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "directory name"
     },
     {
+      "cli": "--big-tables",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": true,
       "id": "big_tables",
       "name": "big_tables",
-      "type": "old variable, which if set to 1, allows large result sets by saving all temporary sets to disk, avoiding 'table full' errors. no longer needed, as the server now handles this automatically.",
-      "cli": "--big-tables",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "old variable, which if set to 1, allows large result sets by saving all temporary sets to disk, avoiding 'table full' errors. no longer needed, as the server now handles this automatically."
     },
     {
+      "cli": "--bind-address=addr",
+      "dataType": "string",
+      "dynamic": false,
       "id": "bind_address",
       "name": "bind_address",
-      "type": "by default, the mariadb server listens for tcp/ip connections on a network socket bound to a single address, 0.0.0.0. you can specify an alternative when the server starts using this option; either a host name, an ipv4 or an ipv6 address. in debian and ubuntu, the default bind_address is 127.0.0.1, which binds the server to listen on localhost only. has always been available as a",
-      "cli": "--bind-address=addr",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string",
+      "type": "by default, the mariadb server listens for tcp/ip connections on a network socket bound to a single address, 0.0.0.0. you can specify an alternative when the server starts using this option; either a host name, an ipv4 or an ipv6 address. in debian and ubuntu, the default bind_address is 127.0.0.1, which binds the server to listen on localhost only. has always been available as a",
       "validValues": []
     },
     {
+      "cli": "--bulk-insert-buffer-size=#",
+      "dataType": "numeric",
+      "default": "8388608",
+      "dynamic": true,
       "id": "bulk_insert_buffer_size",
       "name": "bulk_insert_buffer_size",
-      "type": "size in bytes of the per-thread cache tree used to speed up bulk inserts into",
-      "cli": "--bulk-insert-buffer-size=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "8388608"
+      "type": "size in bytes of the per-thread cache tree used to speed up bulk inserts into"
     },
     {
+      "dataType": "string",
+      "default": "utf8",
+      "dynamic": true,
       "id": "character_set_client",
       "name": "character_set_client",
-      "type": "determines the",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "utf8"
+      "type": "determines the"
     },
     {
+      "dataType": "string",
+      "default": "utf8",
+      "dynamic": true,
       "id": "character_set_connection",
       "name": "character_set_connection",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "utf8"
+      "type": ""
     },
     {
+      "dataType": "string",
+      "default": "latin1",
+      "dynamic": true,
       "id": "character_set_database",
       "name": "character_set_database",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "latin1"
+      "type": ""
     },
     {
+      "cli": "--character-set-filesystem=name",
+      "dataType": "string",
+      "default": "binary",
+      "dynamic": true,
       "id": "character_set_filesystem",
       "name": "character_set_filesystem",
-      "type": "the",
-      "cli": "--character-set-filesystem=name",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "binary"
+      "type": "the"
     },
     {
+      "dataType": "string",
+      "default": "utf8",
+      "dynamic": true,
       "id": "character_set_results",
       "name": "character_set_results",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "utf8"
+      "type": ""
     },
     {
+      "cli": "--character-set-server",
+      "dataType": "string",
+      "default": "latin1",
+      "dynamic": true,
       "id": "character_set_server",
       "name": "character_set_server",
-      "type": "default",
-      "cli": "--character-set-server",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "latin1"
+      "type": "default"
     },
     {
+      "dataType": "string",
+      "default": "utf8",
+      "dynamic": false,
       "id": "character_set_system",
       "name": "character_set_system",
-      "type": "",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string",
-      "default": "utf8"
+      "type": ""
     },
     {
+      "cli": "--character-sets-dir=path",
+      "dynamic": false,
       "id": "character_sets_dir",
       "name": "character_sets_dir",
-      "type": "directory name",
-      "cli": "--character-sets-dir=path",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "directory name"
     },
     {
+      "cli": "--check-constraint-checks=[0|1]",
+      "dynamic": true,
       "id": "check_constraint_checks",
       "name": "check_constraint_checks",
-      "type": "boolean",
-      "cli": "--check-constraint-checks=[0|1]",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true
+      "type": "boolean"
     },
     {
+      "dataType": "string",
+      "dynamic": true,
       "id": "collation_connection",
       "name": "collation_connection",
-      "type": "collation used for the connection",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "collation used for the connection"
     },
     {
+      "dataType": "string",
+      "dynamic": true,
       "id": "collation_database",
       "name": "collation_database",
-      "type": "",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": ""
     },
     {
+      "cli": "--collation-server=name",
+      "dataType": "string",
+      "default": "latin1_swedish_ci",
+      "dynamic": true,
       "id": "collation_server",
       "name": "collation_server",
-      "type": "default",
-      "cli": "--collation-server=name",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "latin1_swedish_ci"
+      "type": "default"
     },
     {
+      "cli": "--completion-type=name",
+      "dataType": "enumerated",
+      "default": "0",
+      "dynamic": true,
       "id": "completion_type",
       "name": "completion_type",
-      "type": "the transaction completion type. if set to",
-      "cli": "--completion-type=name",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "enumerated",
-      "default": "0",
+      "type": "the transaction completion type. if set to",
       "validValues": [
         "0",
         "1",
@@ -268,16 +266,16 @@
       ]
     },
     {
+      "cli": "--concurrent-insert[=name]",
+      "dataType": "enumerated",
+      "default": "1",
+      "dynamic": true,
       "id": "concurrent_insert",
       "name": "concurrent_insert",
-      "type": "if set to",
-      "cli": "--concurrent-insert[=name]",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enumerated",
-      "default": "1",
+      "type": "if set to",
       "validValues": [
         "0",
         "1",
@@ -288,25 +286,25 @@
       ]
     },
     {
+      "cli": "--connect-timeout=#",
+      "default": "10",
+      "dynamic": true,
       "id": "connect_timeout",
       "name": "connect_timeout",
-      "type": "numeric",
-      "cli": "--connect-timeout=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "default": "10"
+      "type": "numeric"
     },
     {
+      "cli": "--datadir=path or -h path",
+      "dynamic": false,
       "id": "datadir",
       "name": "datadir",
-      "type": "directory name",
-      "cli": "--datadir=path or -h path",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "directory name"
     },
     {
       "id": "date_format",
@@ -319,40 +317,40 @@
       "type": "unused."
     },
     {
+      "cli": "--debug[=debug_options]",
+      "dataType": "string",
+      "default": "d:t:i:O,\\mysqld.trace",
+      "dynamic": true,
       "id": "debug",
       "name": "debug",
-      "type": "used in debugging to write to a trace file. mariadb needs to be configured with -swith_debug=1 to enable this option.",
-      "cli": "--debug[=debug_options]",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "d:t:i:O,\\mysqld.trace"
+      "type": "used in debugging to write to a trace file. mariadb needs to be configured with -swith_debug=1 to enable this option."
     },
     {
+      "cli": "--debug-no-thead-alarm=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "debug_no_thread_alarm",
       "name": "debug_no_thread_alarm",
-      "type": "disable system thread alarm calls. disabling it may be useful in debugging or testing, never do it in production.",
-      "cli": "--debug-no-thead-alarm=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "disable system thread alarm calls. disabling it may be useful in debugging or testing, never do it in production."
     },
     {
+      "dataType": "string",
+      "default": "ON - current signal signal name",
+      "dynamic": true,
       "id": "debug_sync",
       "name": "debug_sync",
-      "type": "used in debugging to show the interface to the",
       "scope": [
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "ON - current signal signal name"
+      "type": "used in debugging to show the interface to the"
     },
     {
       "id": "default_regex_flags",
@@ -360,68 +358,68 @@
       "type": "introduced to address remaining incompatibilities between"
     },
     {
+      "cli": "--default-storage-engine=name",
+      "default": "MyISAM",
+      "dynamic": true,
       "id": "default_storage_engine",
       "name": "default_storage_engine",
-      "type": "enumeration",
-      "cli": "--default-storage-engine=name",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "default": "MyISAM"
+      "type": "enumeration"
     },
     {
+      "cli": "--default-table-type=name",
+      "dynamic": true,
       "id": "default_table_type",
       "name": "default_table_type",
-      "type": "a synonym for",
-      "cli": "--default-table-type=name",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true
+      "type": "a synonym for"
     },
     {
+      "cli": "--default-tmp-storage-engine=name",
+      "dataType": "enumeration",
+      "dynamic": true,
       "id": "default_tmp_storage_engine",
       "name": "default_tmp_storage_engine",
-      "type": "default storage engine that will be used for tables created with",
-      "cli": "--default-tmp-storage-engine=name",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "enumeration"
+      "type": "default storage engine that will be used for tables created with"
     },
     {
-      "id": "default_week_format",
-      "name": "default_week_format",
-      "type": "default mode for the",
       "cli": "--default-week-format=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "default_week_format",
+      "name": "default_week_format",
       "range": {
         "from": 0,
         "to": 7
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "default mode for the"
     },
     {
+      "cli": "--delay-key-write[=name]",
+      "dataType": "enumeration",
+      "default": "ON",
+      "dynamic": true,
       "id": "delay_key_write",
       "name": "delay_key_write",
-      "type": "specifies how myisam tables handles",
-      "cli": "--delay-key-write[=name]",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enumeration",
-      "default": "ON",
+      "type": "specifies how myisam tables handles",
       "validValues": [
         "ON",
         "OFF",
@@ -429,100 +427,100 @@
       ]
     },
     {
-      "id": "delayed_insert_limit",
-      "name": "delayed_insert_limit",
-      "type": "after this many rows have been inserted with",
       "cli": "--delayed-insert-limit=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "100",
+      "dynamic": true,
+      "id": "delayed_insert_limit",
+      "name": "delayed_insert_limit",
       "range": {
         "from": 1,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "after this many rows have been inserted with"
     },
     {
+      "cli": "--delayed-insert-timeout=#",
+      "dataType": "numeric",
+      "default": "300",
+      "dynamic": true,
       "id": "delayed_insert_timeout",
       "name": "delayed_insert_timeout",
-      "type": "time in seconds that the",
-      "cli": "--delayed-insert-timeout=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "300"
+      "type": "time in seconds that the"
     },
     {
+      "cli": "--delayed-queue-size=#",
+      "default": "1000",
+      "dynamic": true,
       "id": "delayed_queue_size",
       "name": "delayed_queue_size",
-      "type": "numeric",
-      "cli": "--delayed-queue-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "default": "1000",
       "range": {
         "from": 1,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "numeric"
     },
     {
+      "cli": "--div-precision-increment=#",
+      "dataType": "numeric",
+      "default": "4",
+      "dynamic": true,
       "id": "div_precision_increment",
       "name": "div_precision_increment",
-      "type": "number of digits to be returned after the decimal point in division operations. by default",
-      "cli": "--div-precision-increment=#",
+      "range": {
+        "from": 0,
+        "to": 30
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "4",
-      "range": {
-        "from": 0,
-        "to": 30
-      }
+      "type": "number of digits to be returned after the decimal point in division operations. by default"
     },
     {
+      "cli": "--encrypt-tmp-disk-tables[={0|1}]",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "encrypt_tmp_disk_tables",
       "name": "encrypt_tmp_disk_tables",
-      "type": "encrypt tmp disk tables (created as part of query execution). see",
-      "cli": "--encrypt-tmp-disk-tables[={0|1}]",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "encrypt tmp disk tables (created as part of query execution). see"
     },
     {
+      "cli": "--encrypt-tmp-files[={0|1}]",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": false,
       "id": "encrypt_tmp_files",
       "name": "encrypt_tmp_files",
-      "type": "encrypt temporary files (created for filesort, binary log cache, etc). see",
-      "cli": "--encrypt-tmp-files[={0|1}]",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "encrypt temporary files (created for filesort, binary log cache, etc). see"
     },
     {
+      "cli": "--encryption-algorithm=value",
+      "dataType": "enum",
+      "default": "none",
+      "dynamic": false,
       "id": "encryption_algorithm",
       "name": "encryption_algorithm",
-      "type": "which encryption algorithm to use for table encryption.",
-      "cli": "--encryption-algorithm=value",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "enum",
-      "default": "none",
+      "type": "which encryption algorithm to use for table encryption.",
       "validValues": [
         "none",
         "aes_ecb",
@@ -531,50 +529,50 @@
       ]
     },
     {
+      "cli": "none",
+      "dataType": "string",
+      "default": "none",
+      "dynamic": true,
       "id": "enforce_storage_engine",
       "name": "enforce_storage_engine",
-      "type": "force the use of a particular storage engine for new tables. used to avoid unwanted creation of tables using another engine. for example, setting to",
-      "cli": "none",
       "scope": [
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "none"
+      "type": "force the use of a particular storage engine for new tables. used to avoid unwanted creation of tables using another engine. for example, setting to"
     },
     {
+      "cli": "--engine-condition-pushdown",
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "engine_condition_pushdown",
       "name": "engine_condition_pushdown",
-      "type": "deprecated in",
-      "cli": "--engine-condition-pushdown",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "deprecated in"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "error_count",
       "name": "error_count",
-      "type": "read-only variable denoting the number of errors from the most recent statement in the current session that generated errors. see",
       "scope": [
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric"
+      "type": "read-only variable denoting the number of errors from the most recent statement in the current session that generated errors. see"
     },
     {
+      "cli": "--event-scheduler[=value]",
+      "dataType": "enumeration",
+      "default": "OFF",
+      "dynamic": true,
       "id": "event_scheduler",
       "name": "event_scheduler",
-      "type": "status of the",
-      "cli": "--event-scheduler[=value]",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "enumeration",
-      "default": "OFF",
+      "type": "status of the",
       "validValues": [
         "ON",
         "1",
@@ -584,340 +582,340 @@
       ]
     },
     {
-      "id": "expensive_subquery_limit",
-      "name": "expensive_subquery_limit",
-      "type": "number of rows to be examined for a query to be considered expensive, that is, maximum number of rows a subquery may examine in order to be executed during optimization and used for constant optimization.",
       "cli": "--expensive-subquery-limit=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "100",
+      "dynamic": true,
+      "id": "expensive_subquery_limit",
+      "name": "expensive_subquery_limit",
       "range": {
         "from": 0,
         "to": "upwards"
-      }
-    },
-    {
-      "id": "explicit_defaults_for_timestamp",
-      "name": "explicit_defaults_for_timestamp",
-      "type": "this option causes",
-      "cli": "--explicit-defaults-for-timestamp=[={0|1}]",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
-      "dataType": "bolean",
-      "default": "OFF"
-    },
-    {
-      "id": "external_user",
-      "name": "external_user",
-      "type": "external user name set by the plugin used to authenticate the client.",
-      "scope": [
-        "session"
-      ],
-      "dynamic": false,
-      "dataType": "string",
-      "default": "NULL"
-    },
-    {
-      "id": "flush",
-      "name": "flush",
-      "type": "usually, mariadb writes changes to disk after each sql statement, and the operating system handles synchronizing (flushing) it to disk. if set to",
-      "cli": "--flush",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
-    },
-    {
-      "id": "flush_time",
-      "name": "flush_time",
-      "type": "interval in seconds that tables are closed to synchronize (flush) data to disk and free up resources. if set to 0, the default, there is no automatic synchronizing tables and closing of tables. this option should not be necessary on systems with sufficient resources.",
-      "cli": "--flush_time=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0"
-    },
-    {
-      "id": "foreign_key_checks",
-      "name": "foreign_key_checks",
-      "type": "if set to 1 (the default)",
-      "cli": "none",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "number of rows to be examined for a query to be considered expensive, that is, maximum number of rows a subquery may examine in order to be executed during optimization and used for constant optimization."
     },
     {
+      "cli": "--explicit-defaults-for-timestamp=[={0|1}]",
+      "dataType": "bolean",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "explicit_defaults_for_timestamp",
+      "name": "explicit_defaults_for_timestamp",
+      "scope": [
+        "global"
+      ],
+      "type": "this option causes"
+    },
+    {
+      "dataType": "string",
+      "default": "NULL",
+      "dynamic": false,
+      "id": "external_user",
+      "name": "external_user",
+      "scope": [
+        "session"
+      ],
+      "type": "external user name set by the plugin used to authenticate the client."
+    },
+    {
+      "cli": "--flush",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "flush",
+      "name": "flush",
+      "scope": [
+        "global"
+      ],
+      "type": "usually, mariadb writes changes to disk after each sql statement, and the operating system handles synchronizing (flushing) it to disk. if set to"
+    },
+    {
+      "cli": "--flush_time=#",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
+      "id": "flush_time",
+      "name": "flush_time",
+      "scope": [
+        "global"
+      ],
+      "type": "interval in seconds that tables are closed to synchronize (flush) data to disk and free up resources. if set to 0, the default, there is no automatic synchronizing tables and closing of tables. this option should not be necessary on systems with sufficient resources."
+    },
+    {
+      "cli": "none",
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": true,
+      "id": "foreign_key_checks",
+      "name": "foreign_key_checks",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "if set to 1 (the default)"
+    },
+    {
+      "cli": "--ft-boolean-syntax=name",
+      "dataType": "string",
+      "default": "+ -><()*:\"\"&|",
+      "dynamic": true,
       "id": "ft_boolean_syntax",
       "name": "ft_boolean_syntax",
-      "type": "list of operators supported by an in boolean mode",
-      "cli": "--ft-boolean-syntax=name",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "+ -><()*:\"\"&|"
+      "type": "list of operators supported by an in boolean mode"
     },
     {
+      "cli": "--ft-max-word-len=#",
+      "dataType": "numeric",
+      "default": "84",
+      "dynamic": false,
       "id": "ft_max_word_len",
       "name": "ft_max_word_len",
-      "type": "maximum length for a word to be included in the",
-      "cli": "--ft-max-word-len=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "84"
+      "type": "maximum length for a word to be included in the"
     },
     {
+      "cli": "--ft-min-word-len=#",
+      "dataType": "numeric",
+      "default": "4",
+      "dynamic": false,
       "id": "ft_min_word_len",
       "name": "ft_min_word_len",
-      "type": "minimum length for a word to be included in the",
-      "cli": "--ft-min-word-len=#",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "4"
+      "type": "minimum length for a word to be included in the"
     },
     {
-      "id": "ft_query_expansion_limit",
-      "name": "ft_query_expansion_limit",
-      "type": "for",
       "cli": "--ft-query-expansion-limit=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "20",
+      "dynamic": false,
+      "id": "ft_query_expansion_limit",
+      "name": "ft_query_expansion_limit",
       "range": {
         "from": 0,
         "to": 1000
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "for"
     },
     {
+      "cli": "--ft-stopword-file=file_name",
+      "dataType": "file name",
+      "default": "(built-in)",
+      "dynamic": false,
       "id": "ft_stopword_file",
       "name": "ft_stopword_file",
-      "type": "file containing a list of",
-      "cli": "--ft-stopword-file=file_name",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "file name",
-      "default": "(built-in)"
+      "type": "file containing a list of"
     },
     {
+      "cli": "--general-log",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": true,
       "id": "general_log",
       "name": "general_log",
-      "type": "if set to 0, the default unless the --general-log option is used, the",
-      "cli": "--general-log",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "if set to 0, the default unless the --general-log option is used, the"
     },
     {
+      "cli": "--general-log-file=file_name",
+      "dataType": "file name",
+      "default": "host_name.log",
+      "dynamic": true,
       "id": "general_log_file",
       "name": "general_log_file",
-      "type": "name of the",
-      "cli": "--general-log-file=file_name",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "file name",
-      "default": "host_name.log"
+      "type": "name of the"
     },
     {
+      "cli": "--group-concat-max-len=#",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "group_concat_max_len",
       "name": "group_concat_max_len",
-      "type": "maximum length in bytes of the returned result for a",
-      "cli": "--group-concat-max-len=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric"
+      "type": "maximum length in bytes of the returned result for a"
     },
     {
+      "dynamic": false,
       "id": "have_compress",
       "name": "have_compress",
-      "type": "if the zlib compression library is accessible to the server, this will be set to",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if the zlib compression library is accessible to the server, this will be set to"
     },
     {
+      "dynamic": false,
       "id": "have_crypt",
       "name": "have_crypt",
-      "type": "if the crypt() system call is available this variable will be set to",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if the crypt() system call is available this variable will be set to"
     },
     {
+      "dynamic": false,
       "id": "have_csv",
       "name": "have_csv",
-      "type": "if the server supports",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if the server supports"
     },
     {
+      "dynamic": false,
       "id": "have_dynamic_loading",
       "name": "have_dynamic_loading",
-      "type": "if the server supports dynamic loading of",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if the server supports dynamic loading of"
     },
     {
+      "dynamic": false,
       "id": "have_geometry",
       "name": "have_geometry",
-      "type": "if the server supports spatial data types, will be set to",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if the server supports spatial data types, will be set to"
     },
     {
+      "dynamic": false,
       "id": "have_ndbcluster",
       "name": "have_ndbcluster",
-      "type": "if the server supports ndbcluster (",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if the server supports ndbcluster ("
     },
     {
+      "dynamic": false,
       "id": "have_partitioning",
       "name": "have_partitioning",
-      "type": "if the server supports partitioning, will be set to",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if the server supports partitioning, will be set to"
     },
     {
+      "dynamic": false,
       "id": "have_profiling",
       "name": "have_profiling",
-      "type": "if statement profiling is available, will be set to",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if statement profiling is available, will be set to"
     },
     {
+      "dynamic": false,
       "id": "have_query_cache",
       "name": "have_query_cache",
-      "type": "if the server supports the",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if the server supports the"
     },
     {
+      "dynamic": false,
       "id": "have_rtree_keys",
       "name": "have_rtree_keys",
-      "type": "if rtree indexes (used for",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if rtree indexes (used for"
     },
     {
+      "dynamic": false,
       "id": "have_symlink",
       "name": "have_symlink",
-      "type": "if symbolic link support is enabled, will be set to",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "if symbolic link support is enabled, will be set to"
     },
     {
-      "id": "histogram_size",
-      "name": "histogram_size",
-      "type": "number of bytes used for a",
       "cli": "--histogram-size=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "histogram_size",
+      "name": "histogram_size",
       "range": {
         "from": 0,
         "to": 255
-      }
-    },
-    {
-      "id": "histogram_type",
-      "name": "histogram_type",
-      "type": "specifies the type of",
-      "cli": "--histogram-type=value",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "number of bytes used for a"
+    },
+    {
+      "cli": "--histogram-type=value",
       "dataType": "enumeration",
       "default": "SINGLE_PREC_HB",
+      "dynamic": true,
+      "id": "histogram_type",
+      "name": "histogram_type",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "specifies the type of",
       "validValues": [
         "SINGLE_PREC_HB",
         "DOUBLE_PREC_HB"
       ]
     },
     {
-      "id": "host_cache_size",
-      "name": "host_cache_size",
-      "type": "number of host names that will be cached to avoid resolving. setting to",
       "cli": "--host-cache-size=#.",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "128",
+      "dynamic": true,
+      "id": "host_cache_size",
+      "name": "host_cache_size",
       "range": {
         "from": 0,
         "to": 65536
-      }
-    },
-    {
-      "id": "hostname",
-      "name": "hostname",
-      "type": "when the server starts, this variable is set to the server host name.",
+      },
       "scope": [
         "global"
       ],
+      "type": "number of host names that will be cached to avoid resolving. setting to"
+    },
+    {
+      "dataType": "string",
       "dynamic": false,
-      "dataType": "string"
+      "id": "hostname",
+      "name": "hostname",
+      "scope": [
+        "global"
+      ],
+      "type": "when the server starts, this variable is set to the server host name."
     },
     {
       "id": "identity",
@@ -925,365 +923,365 @@
       "type": "a synonym for"
     },
     {
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "idle_readonly_transaction_timeout",
       "name": "idle_readonly_transaction_timeout",
-      "type": "time in seconds that the server waits for idle read-only transactions before killing the connection. if set to",
+      "range": {
+        "from": 0,
+        "to": 31536000
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0",
-      "range": {
-        "from": 0,
-        "to": 31536000
-      }
+      "type": "time in seconds that the server waits for idle read-only transactions before killing the connection. if set to"
     },
     {
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "idle_transaction_timeout",
       "name": "idle_transaction_timeout",
-      "type": "time in seconds that the server waits for idle transactions before killing the connection. if set to",
+      "range": {
+        "from": 0,
+        "to": 31536000
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0",
-      "range": {
-        "from": 0,
-        "to": 31536000
-      }
+      "type": "time in seconds that the server waits for idle transactions before killing the connection. if set to"
     },
     {
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "idle_write_transaction_timeout",
       "name": "idle_write_transaction_timeout",
-      "type": "time in seconds that the server waits for idle read-write transactions before killing the connection. if set to",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0",
       "range": {
         "from": 0,
         "to": 31536000
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "time in seconds that the server waits for idle read-write transactions before killing the connection. if set to"
     },
     {
+      "dataType": "string",
+      "dynamic": false,
       "id": "ignore_db_dirs",
       "name": "ignore_db_dirs",
-      "type": "comma-delimited list of directories in the data directory that are not considered as database directories. set from",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string"
+      "type": "comma-delimited list of directories in the data directory that are not considered as database directories. set from"
     },
     {
+      "cli": "no",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": false,
       "id": "in_transaction",
       "name": "in_transaction",
-      "type": "session-only and read-only variable that is set to",
-      "cli": "no",
       "scope": [
         "session"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "session-only and read-only variable that is set to"
     },
     {
+      "cli": "--init-connect=name",
+      "dataType": "string",
+      "dynamic": true,
       "id": "init_connect",
       "name": "init_connect",
-      "type": "string containing one or more sql statements, separated by semicolons, that will be executed by the server for each client connecting. if there's a syntax error in the one of the statements, the client will fail to connect. for this reason, the statements are not executed for users with the super privilege, who can then still connect and correct the error. see also",
-      "cli": "--init-connect=name",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "string"
+      "type": "string containing one or more sql statements, separated by semicolons, that will be executed by the server for each client connecting. if there's a syntax error in the one of the statements, the client will fail to connect. for this reason, the statements are not executed for users with the super privilege, who can then still connect and correct the error. see also"
     },
     {
+      "cli": "init-file=file_name",
+      "dataType": "file name",
+      "dynamic": false,
       "id": "init_file",
       "name": "init_file",
-      "type": "name of a file containing sql statements that will be executed by the server on startup. each statement should be on a new line, and end with a semicolon. see also",
-      "cli": "init-file=file_name",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "file name"
+      "type": "name of a file containing sql statements that will be executed by the server on startup. each statement should be on a new line, and end with a semicolon. see also"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "insert_id",
       "name": "insert_id",
-      "type": "value to be used for the next statement inserting a new",
       "scope": [
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric"
+      "type": "value to be used for the next statement inserting a new"
     },
     {
+      "cli": "--interactive-timeout=#",
+      "dataType": "numeric",
+      "default": "28800",
+      "dynamic": true,
       "id": "interactive_timeout",
       "name": "interactive_timeout",
-      "type": "time in seconds that the server waits for an interactive connection (one that connects with the mysql_real_connect() client_interactive option) to become active before closing it. see also",
-      "cli": "--interactive-timeout=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "28800"
+      "type": "time in seconds that the server waits for an interactive connection (one that connects with the mysql_real_connect() client_interactive option) to become active before closing it. see also"
     },
     {
+      "cli": "--join-buffer-size=#",
+      "dataType": "numeric",
+      "default": "131072",
+      "dynamic": true,
       "id": "join_buffer_size",
       "name": "join_buffer_size",
-      "type": "minimum size in bytes of the buffer used for queries that cannot use an index, and instead perform a full table scan. increase to get faster full joins when adding indexes is not possible, although be aware of memory issues, since joins will always allocate the minimum size. best left low globally and set high in sessions that require large full joins. in 64-bit platforms, windows truncates values above 4gb to 4gb with a warning.",
-      "cli": "--join-buffer-size=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "131072"
+      "type": "minimum size in bytes of the buffer used for queries that cannot use an index, and instead perform a full table scan. increase to get faster full joins when adding indexes is not possible, although be aware of memory issues, since joins will always allocate the minimum size. best left low globally and set high in sessions that require large full joins. in 64-bit platforms, windows truncates values above 4gb to 4gb with a warning."
     },
     {
-      "id": "join_buffer_space_limit",
-      "name": "join_buffer_space_limit",
-      "type": "maximum size in bytes of the query buffer, by default 1024*128*10. see",
       "cli": "--join-buffer-space-limit=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "2097152",
+      "dynamic": true,
+      "id": "join_buffer_space_limit",
+      "name": "join_buffer_space_limit",
       "range": {
         "from": 2048,
         "to": 99999999997952
-      }
-    },
-    {
-      "id": "join_cache_level",
-      "name": "join_cache_level",
-      "type": "controls which of the eight block-based algorithms can be used for join operations. see",
-      "cli": "--join-cache-level=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "maximum size in bytes of the query buffer, by default 1024*128*10. see"
+    },
+    {
+      "cli": "--join-cache-level=#",
       "dataType": "numeric",
       "default": "2",
+      "dynamic": true,
+      "id": "join_cache_level",
+      "name": "join_cache_level",
       "range": {
         "from": 0,
         "to": 8
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "controls which of the eight block-based algorithms can be used for join operations. see"
     },
     {
+      "cli": "--keep-files-on-create=#",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "keep_files_on_create",
       "name": "keep_files_on_create",
-      "type": "if a",
-      "cli": "--keep-files-on-create=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if a"
     },
     {
+      "cli": "--language=name, -l",
+      "dataType": "directory name",
+      "default": "/usr/local/mysql/share/mysql/english/",
+      "dynamic": false,
       "id": "language",
       "name": "language",
-      "type": "language to use for the server error messages. either just the language name, or the directory where the error messages are stored. an alternative is to use",
-      "cli": "--language=name, -l",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "directory name",
-      "default": "/usr/local/mysql/share/mysql/english/"
+      "type": "language to use for the server error messages. either just the language name, or the directory where the error messages are stored. an alternative is to use"
     },
     {
+      "dynamic": false,
       "id": "large_files_support",
       "name": "large_files_support",
-      "type": "on if the server if was compiled with large file support or not, else off",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "on if the server if was compiled with large file support or not, else off"
     },
     {
+      "dataType": "numeric",
+      "dynamic": false,
       "id": "large_page_size",
       "name": "large_page_size",
-      "type": "indicates the size of memory page if large page support (linux only) is enabled. the page size is determined from the hugepagesize setting in",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "numeric"
+      "type": "indicates the size of memory page if large page support (linux only) is enabled. the page size is determined from the hugepagesize setting in"
     },
     {
+      "cli": "--large-pages, --skip-large-pages",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "large_pages",
       "name": "large_pages",
-      "type": "indicates whether large page support (linux only - called huge pages) is used.  this is set with",
-      "cli": "--large-pages, --skip-large-pages",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "indicates whether large page support (linux only - called huge pages) is used.  this is set with"
     },
     {
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "last_insert_id",
       "name": "last_insert_id",
-      "type": "contains the same value as that returned by",
       "scope": [
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric"
+      "type": "contains the same value as that returned by"
     },
     {
+      "cli": "--lc-messages=name",
+      "dataType": "string",
+      "default": "en_us",
+      "dynamic": true,
       "id": "lc_messages",
       "name": "lc_messages",
-      "type": "",
-      "cli": "--lc-messages=name",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "en_us"
+      "type": ""
     },
     {
+      "cli": "--lc-messages-dir=path",
+      "dataType": "directory name",
+      "dynamic": false,
       "id": "lc_messages_dir",
       "name": "lc_messages_dir",
-      "type": "directory where the error messages are located. together with",
-      "cli": "--lc-messages-dir=path",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "directory name"
+      "type": "directory where the error messages are located. together with"
     },
     {
+      "cli": "--lc-time-names=name",
+      "dataType": "string",
+      "default": "en_US",
+      "dynamic": true,
       "id": "lc_time_names",
       "name": "lc_time_names",
-      "type": "the locale that determines the language used for the date and time functions",
-      "cli": "--lc-time-names=name",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "en_US"
+      "type": "the locale that determines the language used for the date and time functions"
     },
     {
+      "dataType": "string",
+      "dynamic": false,
       "id": "license",
       "name": "license",
-      "type": "server license, for example",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string"
+      "type": "server license, for example"
     },
     {
+      "cli": "--local-infile=#",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "local_infile",
       "name": "local_infile",
-      "type": "if set to",
-      "cli": "--local-infile=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set to"
     },
     {
+      "cli": "--lock-wait-timeout=#",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "lock_wait_timeout",
       "name": "lock_wait_timeout",
-      "type": "timeout in seconds for attempts to acquire",
-      "cli": "--lock-wait-timeout=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": null
-      }
-    },
-    {
-      "id": "locked_in_memory",
-      "name": "locked_in_memory",
-      "type": "indicates whether --memlock was used to lock mysqld in memory.",
-      "cli": "--memlock",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
-    },
-    {
-      "id": "log",
-      "name": "log",
-      "type": "deprecated and removed in",
-      "cli": "-l [filename] or --log[=filename]",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "OFF"
-    },
-    {
-      "id": "log_disabled_statements",
-      "name": "log_disabled_statements",
-      "type": "if set, the specified type of statements (slave or stored procedure statements) will not be logged to the",
-      "cli": "--log-disabled_statements=value",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": false,
-      "dataType": "set"
+      "type": "timeout in seconds for attempts to acquire"
     },
     {
+      "cli": "--memlock",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "locked_in_memory",
+      "name": "locked_in_memory",
+      "scope": [
+        "global"
+      ],
+      "type": "indicates whether --memlock was used to lock mysqld in memory."
+    },
+    {
+      "cli": "-l [filename] or --log[=filename]",
+      "dataType": "string",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "log",
+      "name": "log",
+      "scope": [
+        "global"
+      ],
+      "type": "deprecated and removed in"
+    },
+    {
+      "cli": "--log-disabled_statements=value",
+      "dataType": "set",
+      "dynamic": false,
+      "id": "log_disabled_statements",
+      "name": "log_disabled_statements",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "if set, the specified type of statements (slave or stored procedure statements) will not be logged to the"
+    },
+    {
+      "cli": "--log-error[=name]",
+      "dataType": "file name",
+      "dynamic": false,
       "id": "log_error",
       "name": "log_error",
-      "type": "specifies the name of the",
-      "cli": "--log-error[=name]",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "file name"
+      "type": "specifies the name of the"
     },
     {
+      "cli": "--log-output=name",
+      "dataType": "set",
+      "default": "FILE",
+      "dynamic": true,
       "id": "log_output",
       "name": "log_output",
-      "type": "how the output for the",
-      "cli": "--log-output=name",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "set",
-      "default": "FILE",
+      "type": "how the output for the",
       "validValues": [
         "TABLE",
         "FILE",
@@ -1291,52 +1289,52 @@
       ]
     },
     {
+      "cli": "--log-queries-not-using-indexes",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "log_queries_not_using_indexes",
       "name": "log_queries_not_using_indexes",
-      "type": "queries that don't use an index, or that perform a  full index scan where the index doesn't limit the number of rows, will be logged to the",
-      "cli": "--log-queries-not-using-indexes",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "queries that don't use an index, or that perform a  full index scan where the index doesn't limit the number of rows, will be logged to the"
     },
     {
+      "cli": "--log-slow-admin-statements",
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "log_slow_admin_statements",
       "name": "log_slow_admin_statements",
-      "type": "log slow",
-      "cli": "--log-slow-admin-statements",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "log slow"
     },
     {
+      "cli": "--log-slow-disabled_statements=value",
+      "dataType": "set",
+      "default": "sp",
+      "dynamic": false,
       "id": "log_slow_disabled_statements",
       "name": "log_slow_disabled_statements",
-      "type": "if set, the specified type of statements will not be logged to the",
-      "cli": "--log-slow-disabled_statements=value",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": false,
-      "dataType": "set",
-      "default": "sp"
+      "type": "if set, the specified type of statements will not be logged to the"
     },
     {
+      "cli": "log-slow-filter=value1[,value2...]",
+      "dataType": "enumeration",
+      "dynamic": true,
       "id": "log_slow_filter",
       "name": "log_slow_filter",
-      "type": "comma-delimited string containing one or more settings for filtering what is logged to the",
-      "cli": "log-slow-filter=value1[,value2...]",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "enumeration",
+      "type": "comma-delimited string containing one or more settings for filtering what is logged to the",
       "validValues": [
         "admin",
         "filesort",
@@ -1351,45 +1349,45 @@
       ]
     },
     {
+      "cli": "--log-slow-queries[=name]",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "log_slow_queries",
       "name": "log_slow_queries",
-      "type": "deprecated and removed in",
-      "cli": "--log-slow-queries[=name]",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "deprecated and removed in"
     },
     {
-      "id": "log_slow_rate_limit",
-      "name": "log_slow_rate_limit",
-      "type": "the",
       "cli": "log-slow-rate-limit=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "1",
+      "dynamic": true,
+      "id": "log_slow_rate_limit",
+      "name": "log_slow_rate_limit",
       "range": {
         "from": 1,
         "to": "upwards"
-      }
-    },
-    {
-      "id": "log_slow_verbosity",
-      "name": "log_slow_verbosity",
-      "type": "controls information to be added to the",
-      "cli": "log-slow-verbosity=value1[,value2...]",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "the"
+    },
+    {
+      "cli": "log-slow-verbosity=value1[,value2...]",
       "dataType": "enumeration",
+      "dynamic": true,
+      "id": "log_slow_verbosity",
+      "name": "log_slow_verbosity",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "controls information to be added to the",
       "validValues": [
         "query_plan",
         "innodb",
@@ -1397,199 +1395,199 @@
       ]
     },
     {
-      "id": "log_tc_size",
-      "name": "log_tc_size",
-      "type": "size in bytes of the transaction coordinator log, defined in multiples of 4096. always available as a commandline option, but added as a variable in",
       "cli": "log-tc-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "24576",
+      "dynamic": false,
+      "id": "log_tc_size",
+      "name": "log_tc_size",
       "range": {
         "from": 12288,
         "to": 18446744073709552000
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "size in bytes of the transaction coordinator log, defined in multiples of 4096. always available as a commandline option, but added as a variable in"
     },
     {
+      "cli": "-w [level] or --log-warnings[=level]",
+      "dataType": "numeric",
+      "dynamic": true,
       "id": "log_warnings",
       "name": "log_warnings",
-      "type": "if set to",
-      "cli": "-w [level] or --log-warnings[=level]",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "long_query_time",
-      "name": "long_query_time",
-      "type": "if a query takes longer than this many seconds to execute (microseconds can be specified too), the",
-      "cli": "--long-query-time=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "if set to"
+    },
+    {
+      "cli": "--long-query-time=#",
       "dataType": "numeric",
       "default": "10",
+      "dynamic": true,
+      "id": "long_query_time",
+      "name": "long_query_time",
       "range": {
         "from": 0,
         "to": "upwards"
-      }
-    },
-    {
-      "id": "low_priority_updates",
-      "name": "low_priority_updates",
-      "type": "if set to 1 (0 is the default), for",
-      "cli": "--low-priority-updates",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "if a query takes longer than this many seconds to execute (microseconds can be specified too), the"
     },
     {
+      "cli": "--low-priority-updates",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": true,
+      "id": "low_priority_updates",
+      "name": "low_priority_updates",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "if set to 1 (0 is the default), for"
+    },
+    {
+      "dataType": "boolean",
+      "default": "##",
+      "dynamic": false,
       "id": "lower_case_file_system",
       "name": "lower_case_file_system",
-      "type": "read-only variable describing whether the file system is case-sensitive. if set to",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "##"
+      "type": "read-only variable describing whether the file system is case-sensitive. if set to"
     },
     {
-      "id": "lower_case_table_names",
-      "name": "lower_case_table_names",
-      "type": "if set to",
       "cli": "--lower-case-table-names[=#]",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "2",
+      "dynamic": false,
+      "id": "lower_case_table_names",
+      "name": "lower_case_table_names",
       "range": {
         "from": 0,
         "to": 2
-      }
-    },
-    {
-      "id": "max_allowed_packet",
-      "name": "max_allowed_packet",
-      "type": "maximum size in bytes of a packet or a generated/intermediate string. the packet message buffer is initialized with the value from",
-      "cli": "--max-allowed-packet=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "if set to"
+    },
+    {
+      "cli": "--max-allowed-packet=#",
       "dataType": "numeric",
+      "dynamic": true,
+      "id": "max_allowed_packet",
+      "name": "max_allowed_packet",
       "range": {
         "from": 1024,
         "to": 1073741824
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "maximum size in bytes of a packet or a generated/intermediate string. the packet message buffer is initialized with the value from"
     },
     {
+      "cli": "--max-connect-errors=#",
+      "dataType": "numeric",
+      "default": "10",
+      "dynamic": true,
       "id": "max_connect_errors",
       "name": "max_connect_errors",
-      "type": "limit to the number of successive failed connects from a host before the host is blocked from making further connections. the count for a host is reset to zero if they successfully connect. to unblock, flush the host cache with a",
-      "cli": "--max-connect-errors=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "10"
+      "type": "limit to the number of successive failed connects from a host before the host is blocked from making further connections. the count for a host is reset to zero if they successfully connect. to unblock, flush the host cache with a"
     },
     {
-      "id": "max_connections",
-      "name": "max_connections",
-      "type": "the maximum number of simultaneous client connections. see also",
       "cli": "--max-connections=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "151",
+      "dynamic": true,
+      "id": "max_connections",
+      "name": "max_connections",
       "range": {
         "from": 1,
         "to": 100000
-      }
-    },
-    {
-      "id": "max_delayed_threads",
-      "name": "max_delayed_threads",
-      "type": "limits to the number of",
-      "cli": "--max-delayed-threads=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "20",
-      "range": {
-        "from": 0,
-        "to": 16384
-      }
-    },
-    {
-      "id": "max_digest_length",
-      "name": "max_digest_length",
-      "type": "maximum length considered for computing a statement digest, such as used by the",
-      "cli": "--max-digest-length=#",
+      },
       "scope": [
         "global"
       ],
+      "type": "the maximum number of simultaneous client connections. see also"
+    },
+    {
+      "cli": "--max-delayed-threads=#",
+      "dataType": "numeric",
+      "default": "20",
       "dynamic": true,
+      "id": "max_delayed_threads",
+      "name": "max_delayed_threads",
+      "range": {
+        "from": 0,
+        "to": 16384
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "limits to the number of"
+    },
+    {
+      "cli": "--max-digest-length=#",
       "dataType": "numeric",
       "default": "1024",
+      "dynamic": true,
+      "id": "max_digest_length",
+      "name": "max_digest_length",
       "range": {
         "from": 0,
         "to": 1048576
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "maximum length considered for computing a statement digest, such as used by the"
     },
     {
-      "id": "max_error_count",
-      "name": "max_error_count",
-      "type": "specifies the maximum number of messages stored for display by",
       "cli": "--max-error-count=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "64",
+      "dynamic": true,
+      "id": "max_error_count",
+      "name": "max_error_count",
       "range": {
         "from": 0,
         "to": 65535
-      }
-    },
-    {
-      "id": "max_heap_table_size",
-      "name": "max_heap_table_size",
-      "type": "maximum size in bytes for user-created",
-      "cli": "--max-heap-table-size=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "specifies the maximum number of messages stored for display by"
+    },
+    {
+      "cli": "--max-heap-table-size=#",
       "dataType": "numeric",
-      "default": "16777216"
+      "default": "16777216",
+      "dynamic": true,
+      "id": "max_heap_table_size",
+      "name": "max_heap_table_size",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "maximum size in bytes for user-created"
     },
     {
       "id": "max_insert_delayed_threads",
@@ -1597,171 +1595,171 @@
       "type": "synonym for"
     },
     {
-      "id": "max_join_size",
-      "name": "max_join_size",
-      "type": "statements will not be performed if they are likely to need to examine more than this number of rows, row combinations or do more disk seeks. can prevent poorly-formatted queries from taking server resources. changing this value to anything other the default will reset",
       "cli": "--max-join-size=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "4294967295",
+      "dynamic": true,
+      "id": "max_join_size",
+      "name": "max_join_size",
       "range": {
         "from": 1,
         "to": 18446744073709552000
-      }
-    },
-    {
-      "id": "max_length_for_sort_data",
-      "name": "max_length_for_sort_data",
-      "type": "used to decide which algorithm to choose when sorting rows. if the total size of the column data, not including columns that are part of the sort, is less than",
-      "cli": "--max-length-for-sort-data=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "statements will not be performed if they are likely to need to examine more than this number of rows, row combinations or do more disk seeks. can prevent poorly-formatted queries from taking server resources. changing this value to anything other the default will reset"
+    },
+    {
+      "cli": "--max-length-for-sort-data=#",
       "dataType": "numeric",
       "default": "1024",
+      "dynamic": true,
+      "id": "max_length_for_sort_data",
+      "name": "max_length_for_sort_data",
       "range": {
         "from": 4,
         "to": 8388608
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "used to decide which algorithm to choose when sorting rows. if the total size of the column data, not including columns that are part of the sort, is less than"
     },
     {
+      "cli": "--max-long-data-size=#",
+      "dataType": "numeric",
+      "dynamic": false,
       "id": "max_long_data_size",
       "name": "max_long_data_size",
-      "type": "maximum size for parameter values sent with mysql_stmt_send_long_data(). if not set, will default to the value of",
-      "cli": "--max-long-data-size=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
-      "dataType": "numeric",
       "range": {
         "from": 1024,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "max_prepared_stmt_count",
-      "name": "max_prepared_stmt_count",
-      "type": "maximum number of prepared statements on the server. can help prevent certain forms of denial-of-service attacks. if set to",
-      "cli": "--max-prepared-stmt-count=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "maximum size for parameter values sent with mysql_stmt_send_long_data(). if not set, will default to the value of"
+    },
+    {
+      "cli": "--max-prepared-stmt-count=#",
       "dataType": "numeric",
       "default": "16382",
+      "dynamic": true,
+      "id": "max_prepared_stmt_count",
+      "name": "max_prepared_stmt_count",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "maximum number of prepared statements on the server. can help prevent certain forms of denial-of-service attacks. if set to"
     },
     {
+      "cli": "--max-recursive-iterations=#",
+      "dataType": "numeric",
+      "default": "4294967295",
+      "dynamic": true,
       "id": "max_recursive_iterations",
       "name": "max_recursive_iterations",
-      "type": "maximum number of iterations when executing recursive queries.",
-      "cli": "--max-recursive-iterations=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "4294967295",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "max_seeks_for_key",
-      "name": "max_seeks_for_key",
-      "type": "the optimizer assumes that the number specified here is the most key seeks required when searching with an index, regardless of the actual index cardinality. if this value is set lower than its default and maximum, indexes will tend to be preferred over table scans.",
-      "cli": "--max-seeks-for-key=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "maximum number of iterations when executing recursive queries."
+    },
+    {
+      "cli": "--max-seeks-for-key=#",
       "dataType": "numeric",
       "default": "4294967295",
+      "dynamic": true,
+      "id": "max_seeks_for_key",
+      "name": "max_seeks_for_key",
       "range": {
         "from": 1,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "max_session_mem_used",
-      "name": "max_session_mem_used",
-      "type": "amount of memory a single user session is allowed to allocate. this limits the value of the session variable mem_used.",
-      "cli": "--max-session-mem-used=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "the optimizer assumes that the number specified here is the most key seeks required when searching with an index, regardless of the actual index cardinality. if this value is set lower than its default and maximum, indexes will tend to be preferred over table scans."
+    },
+    {
+      "cli": "--max-session-mem-used=#",
       "dataType": "numeric",
       "default": "9223372036854775807",
+      "dynamic": true,
+      "id": "max_session_mem_used",
+      "name": "max_session_mem_used",
       "range": {
         "from": 8192,
         "to": 18446744073709552000
-      }
-    },
-    {
-      "id": "max_sort_length",
-      "name": "max_sort_length",
-      "type": "maximum size in bytes used for sorting data values - anything exceeding this is ignored.",
-      "cli": "--max-sort-length=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "amount of memory a single user session is allowed to allocate. this limits the value of the session variable mem_used."
+    },
+    {
+      "cli": "--max-sort-length=#",
       "dataType": "numeric",
       "default": "1024",
+      "dynamic": true,
+      "id": "max_sort_length",
+      "name": "max_sort_length",
       "range": {
         "from": 4,
         "to": 8388608
-      }
-    },
-    {
-      "id": "max_sp_recursion_depth",
-      "name": "max_sp_recursion_depth",
-      "type": "permitted number of recursive calls for a",
-      "cli": "--max-sp-recursion-depth[=#]",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "maximum size in bytes used for sorting data values - anything exceeding this is ignored."
+    },
+    {
+      "cli": "--max-sp-recursion-depth[=#]",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "max_sp_recursion_depth",
+      "name": "max_sp_recursion_depth",
       "range": {
         "from": 0,
         "to": 255
-      }
-    },
-    {
-      "id": "max_statement_time",
-      "name": "max_statement_time",
-      "type": "maximum time in seconds that a query can execute before being aborted. this includes all queries, not just",
-      "cli": "--max-statement-time[=#]",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "permitted number of recursive calls for a"
+    },
+    {
+      "cli": "--max-statement-time[=#]",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "max_statement_time",
+      "name": "max_statement_time",
       "range": {
         "from": 0,
         "to": "upwards"
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "maximum time in seconds that a query can execute before being aborted. this includes all queries, not just"
     },
     {
       "id": "max_tmp_tables",
@@ -1769,250 +1767,250 @@
       "type": "unused."
     },
     {
-      "id": "max_user_connections",
-      "name": "max_user_connections",
-      "type": "maximum simultaneous connections permitted for each user account.  when set to",
       "cli": "--max-user-connections=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": false,
+      "id": "max_user_connections",
+      "name": "max_user_connections",
       "range": {
         "from": -1,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "maximum simultaneous connections permitted for each user account.  when set to"
     },
     {
-      "id": "max_write_lock_count",
-      "name": "max_write_lock_count",
-      "type": "read lock requests will be permitted for processing after this many write locks. applies only to storage engines that use table level locks (thr_lock), so no effect with",
       "cli": "--max-write-lock-count=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "4294967295",
+      "dynamic": false,
+      "id": "max_write_lock_count",
+      "name": "max_write_lock_count",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "metadata_locks_cache_size",
-      "name": "metadata_locks_cache_size",
-      "type": "size of the metadata locks cache, used for reducing the need to create and destroy synchronization objects. it is particularly helpful on systems where this process is inefficient, such as windows xp.",
-      "cli": "--metadata-locks-cache-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "read lock requests will be permitted for processing after this many write locks. applies only to storage engines that use table level locks (thr_lock), so no effect with"
+    },
+    {
+      "cli": "--metadata-locks-cache-size=#",
       "dataType": "numeric",
       "default": "1024",
+      "dynamic": false,
+      "id": "metadata_locks_cache_size",
+      "name": "metadata_locks_cache_size",
       "range": {
         "from": 1,
         "to": 1048576
-      }
-    },
-    {
-      "id": "metadata_locks_hash_instances",
-      "name": "metadata_locks_hash_instances",
-      "type": "number of hashes used by the set of metadata locks. the metadata locks are partitioned into separate hashes in order to reduce contention.",
-      "cli": "--metadata-locks-hash-instances=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "size of the metadata locks cache, used for reducing the need to create and destroy synchronization objects. it is particularly helpful on systems where this process is inefficient, such as windows xp."
+    },
+    {
+      "cli": "--metadata-locks-hash-instances=#",
       "dataType": "numeric",
       "default": "8",
+      "dynamic": false,
+      "id": "metadata_locks_hash_instances",
+      "name": "metadata_locks_hash_instances",
       "range": {
         "from": 1,
         "to": 1024
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "number of hashes used by the set of metadata locks. the metadata locks are partitioned into separate hashes in order to reduce contention."
     },
     {
-      "id": "min_examined_row_limit",
-      "name": "min_examined_row_limit",
-      "type": "if a query examines more than this number of rows, it is logged to the",
       "cli": "--min-examined-row-limit=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "min_examined_row_limit",
+      "name": "min_examined_row_limit",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "if a query examines more than this number of rows, it is logged to the"
     },
     {
+      "cli": "--mrr-buffer-size=#",
+      "dataType": "numeric",
+      "default": "262144",
+      "dynamic": true,
       "id": "mrr_buffer_size",
       "name": "mrr_buffer_size",
-      "type": "size of buffer to use when using multi-range read with range access. see",
-      "cli": "--mrr-buffer-size=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "262144"
+      "type": "size of buffer to use when using multi-range read with range access. see"
     },
     {
+      "default": "256",
       "id": "multi_range_count",
       "name": "multi_range_count",
-      "type": "deprecated in 5.1 and ignored from",
-      "default": "256"
+      "type": "deprecated in 5.1 and ignored from"
     },
     {
+      "cli": "--mysql56-temporal-format",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": false,
       "id": "mysql56_temporal_format",
       "name": "mysql56_temporal_format",
-      "type": "if set (the default), mariadb uses the mysql 5.6 low level formats for",
-      "cli": "--mysql56-temporal-format",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "if set (the default), mariadb uses the mysql 5.6 low level formats for"
     },
     {
+      "cli": "--enable-named-pipe",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "named_pipe",
       "name": "named_pipe",
-      "type": "on windows systems, determines whether connections over named pipes are permitted.",
-      "cli": "--enable-named-pipe",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "on windows systems, determines whether connections over named pipes are permitted."
     },
     {
-      "id": "net_buffer_length",
-      "name": "net_buffer_length",
-      "type": "the starting size, in bytes, for the connection and thread buffers for each client thread. the size can grow to",
       "cli": "--net-buffer-length=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "16384",
+      "dynamic": true,
+      "id": "net_buffer_length",
+      "name": "net_buffer_length",
       "range": {
         "from": 1024,
         "to": 1048576
-      }
-    },
-    {
-      "id": "net_read_timeout",
-      "name": "net_read_timeout",
-      "type": "time in seconds the server will wait for a client connection to send more data before aborting the read. see also",
-      "cli": "--net-read-timeout=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "the starting size, in bytes, for the connection and thread buffers for each client thread. the size can grow to"
+    },
+    {
+      "cli": "--net-read-timeout=#",
       "dataType": "numeric",
       "default": "30",
+      "dynamic": true,
+      "id": "net_read_timeout",
+      "name": "net_read_timeout",
       "range": {
         "from": 1,
         "to": "upwards"
-      }
-    },
-    {
-      "id": "net_retry_count",
-      "name": "net_retry_count",
-      "type": "permit this many retries before aborting when attempting to read or write on a communication port. on freebsd systems should be set higher as threads are sent internal interrupts..",
-      "cli": "--net-retry-count=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "time in seconds the server will wait for a client connection to send more data before aborting the read. see also"
+    },
+    {
+      "cli": "--net-retry-count=#",
       "dataType": "numeric",
       "default": "10",
+      "dynamic": true,
+      "id": "net_retry_count",
+      "name": "net_retry_count",
       "range": {
         "from": 1,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "net_write_timeout",
-      "name": "net_write_timeout",
-      "type": "time in seconds to wait on writing a block to a connection before aborting the write. see also",
-      "cli": "--net-write-timeout=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "permit this many retries before aborting when attempting to read or write on a communication port. on freebsd systems should be set higher as threads are sent internal interrupts.."
+    },
+    {
+      "cli": "--net-write-timeout=#",
       "dataType": "numeric",
       "default": "60",
+      "dynamic": true,
+      "id": "net_write_timeout",
+      "name": "net_write_timeout",
       "range": {
         "from": 1,
         "to": "upwards"
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "time in seconds to wait on writing a block to a connection before aborting the write. see also"
     },
     {
+      "cli": "--old",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "old",
       "name": "old",
-      "type": "disabled by default, enabling it reverts index hints to those used before mysql 5.1.17. enabling may lead to replication errors. being replaced by",
-      "cli": "--old",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "disabled by default, enabling it reverts index hints to those used before mysql 5.1.17. enabling may lead to replication errors. being replaced by"
     },
     {
-      "id": "old_alter_table",
-      "name": "old_alter_table",
-      "type": "from",
       "cli": "--old-alter-table",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "enumerated",
       "default": "0",
-      "validValues": []
-    },
-    {
-      "id": "old_mode",
-      "name": "old_mode",
-      "type": "used for getting mariadb to emulate behavior from an old version of mysql or mariadb. see",
-      "cli": "--old-mode",
+      "dynamic": true,
+      "id": "old_alter_table",
+      "name": "old_alter_table",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "from",
+      "validValues": []
+    },
+    {
+      "cli": "--old-mode",
       "dataType": "string",
       "default": "(empty string)",
-      "validValues": []
-    },
-    {
-      "id": "old_passwords",
-      "name": "old_passwords",
-      "type": "if set to",
+      "dynamic": true,
+      "id": "old_mode",
+      "name": "old_mode",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "used for getting mariadb to emulate behavior from an old version of mysql or mariadb. see",
+      "validValues": []
+    },
+    {
       "dataType": "boolean",
-      "default": "OFF"
+      "default": "OFF",
+      "dynamic": true,
+      "id": "old_passwords",
+      "name": "old_passwords",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "if set to"
     },
     {
       "id": "open_files_limit",
@@ -2020,127 +2018,127 @@
       "type": "the number of file descriptors available to mysqld. increase if you are getting the"
     },
     {
+      "cli": "--optimizer-prune-level[=#]",
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": true,
       "id": "optimizer_prune_level",
       "name": "optimizer_prune_level",
-      "type": "if set to",
-      "cli": "--optimizer-prune-level[=#]",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "if set to"
     },
     {
-      "id": "optimizer_search_depth",
-      "name": "optimizer_search_depth",
-      "type": "maximum search depth by the query optimizer. smaller values lead to less time spent on execution plans, but potentially less optimal results. if set to",
       "cli": "--optimizer-search-depth[=#]",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "62",
+      "dynamic": true,
+      "id": "optimizer_search_depth",
+      "name": "optimizer_search_depth",
       "range": {
         "from": 0,
         "to": 63
-      }
-    },
-    {
-      "id": "optimizer_selectivity_sampling_limit",
-      "name": "optimizer_selectivity_sampling_limit",
-      "type": "controls number of record samples to check condition selectivity",
-      "cli": "optimizer-selectivity-sampling-limit[=#]",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "maximum search depth by the query optimizer. smaller values lead to less time spent on execution plans, but potentially less optimal results. if set to"
+    },
+    {
+      "cli": "optimizer-selectivity-sampling-limit[=#]",
       "dataType": "numeric",
       "default": "100",
+      "dynamic": true,
+      "id": "optimizer_selectivity_sampling_limit",
+      "name": "optimizer_selectivity_sampling_limit",
       "range": {
         "from": 10,
         "to": "upwards"
-      }
-    },
-    {
-      "id": "optimizer_switch",
-      "name": "optimizer_switch",
-      "type": "a series of flags for controlling the query optimizer. see",
-      "cli": "--optimizer-switch=value",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "controls number of record samples to check condition selectivity"
+    },
+    {
+      "cli": "--optimizer-switch=value",
       "dataType": "string",
+      "dynamic": true,
+      "id": "optimizer_switch",
+      "name": "optimizer_switch",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "a series of flags for controlling the query optimizer. see",
       "validValues": []
     },
     {
+      "cli": "--optimizer-use-condition-selectivity=#",
+      "dataType": "numeric",
+      "default": "1",
+      "dynamic": true,
       "id": "optimizer_use_condition_selectivity",
       "name": "optimizer_use_condition_selectivity",
-      "type": "controls which statistics can be used by the optimizer when looking for\nthe best query execution plan.",
-      "cli": "--optimizer-use-condition-selectivity=#",
+      "range": {
+        "from": 1,
+        "to": 5
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "1",
-      "range": {
-        "from": 1,
-        "to": 5
-      }
+      "type": "controls which statistics can be used by the optimizer when looking for\nthe best query execution plan."
     },
     {
+      "cli": "<<code>>--pam-use-cleartext-plugin</code>>",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": false,
       "id": "pam_use_cleartext_plugin",
       "name": "pam_use_cleartext_plugin",
-      "type": "use mysql_cleartext_plugin on the client side instead of the dialog plugin. this may be needed for compatibility reasons, but it only supports simple pam policies that don't require anything besides a password. see",
-      "cli": "<<code>>--pam-use-cleartext-plugin</code>>",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "use mysql_cleartext_plugin on the client side instead of the dialog plugin. this may be needed for compatibility reasons, but it only supports simple pam policies that don't require anything besides a password. see"
     },
     {
+      "cli": "--pid-file=file_name",
+      "dataType": "file name",
+      "dynamic": false,
       "id": "pid_file",
       "name": "pid_file",
-      "type": "full path of the process id file.",
-      "cli": "--pid-file=file_name",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "file name"
+      "type": "full path of the process id file."
     },
     {
+      "cli": "--plugin-dir=path",
+      "dataType": "directory name",
+      "default": "BASEDIR/lib/plugin",
+      "dynamic": false,
       "id": "plugin_dir",
       "name": "plugin_dir",
-      "type": "path to the",
-      "cli": "--plugin-dir=path",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "directory name",
-      "default": "BASEDIR/lib/plugin"
+      "type": "path to the"
     },
     {
+      "cli": "--plugin-maturity=level",
+      "default": "unknown",
+      "dynamic": false,
       "id": "plugin_maturity",
       "name": "plugin_maturity",
-      "type": "enum",
-      "cli": "--plugin-maturity=level",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "default": "unknown",
+      "type": "enum",
       "validValues": [
         "unknown",
         "experimental",
@@ -2151,230 +2149,230 @@
       ]
     },
     {
-      "id": "port",
-      "name": "port",
-      "type": "port to listen for tcp/ip connections. if set to",
       "cli": "--port=#, -p",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
       "dataType": "numeric",
       "default": "3306",
+      "dynamic": false,
+      "id": "port",
+      "name": "port",
       "range": {
         "from": 0,
         "to": 65535
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "port to listen for tcp/ip connections. if set to"
     },
     {
-      "id": "preload_buffer_size",
-      "name": "preload_buffer_size",
-      "type": "size in bytes of the buffer allocated when indexes are preloaded.",
       "cli": "--preload-buffer-size=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "32768",
+      "dynamic": true,
+      "id": "preload_buffer_size",
+      "name": "preload_buffer_size",
       "range": {
         "from": 1024,
         "to": 1073741824
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "size in bytes of the buffer allocated when indexes are preloaded."
     },
     {
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "profiling",
       "name": "profiling",
-      "type": "if set to",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
-      "id": "profiling_history_size",
-      "name": "profiling_history_size",
-      "type": "number of statements about which profiling information is maintained. if set to",
       "cli": "--profiling-history-size=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "15",
+      "dynamic": true,
+      "id": "profiling_history_size",
+      "name": "profiling_history_size",
       "range": {
         "from": 0,
         "to": 100
-      }
-    },
-    {
-      "id": "progress_report_time",
-      "name": "progress_report_time",
-      "type": "time in seconds between sending",
-      "cli": "--progress-report-time=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "number of statements about which profiling information is maintained. if set to"
+    },
+    {
+      "cli": "--progress-report-time=#",
       "dataType": "numeric",
       "default": "5",
+      "dynamic": true,
+      "id": "progress_report_time",
+      "name": "progress_report_time",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "protocol_version",
-      "name": "protocol_version",
-      "type": "the version of the client/server protocol used by the mariadb server.",
-      "cli": "none",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
-      "dataType": "numeric",
-      "default": "10",
-      "range": {
-        "from": 0,
-        "to": 4294967295
-      }
-    },
-    {
-      "id": "proxy_protocol_networks",
-      "name": "proxy_protocol_networks",
-      "type": "enable",
-      "cli": "--proxy-protocol-networks=value",
-      "scope": [
-        "global"
-      ],
-      "dynamic": false,
-      "dataType": "string"
-    },
-    {
-      "id": "proxy_user",
-      "name": "proxy_user",
-      "type": "set to the proxy user account name if the current client is a proxy, else",
-      "scope": [
-        "session"
-      ],
-      "dynamic": false,
-      "dataType": "string"
-    },
-    {
-      "id": "pseudo_slave_mode",
-      "name": "pseudo_slave_mode",
-      "type": "for internal use by the server.",
-      "scope": [
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "OFF"
-    },
-    {
-      "id": "pseudo_thread_id",
-      "name": "pseudo_thread_id",
-      "type": "for internal use only.",
-      "scope": [
-        "session"
-      ],
-      "dynamic": true,
-      "dataType": "numeric"
-    },
-    {
-      "id": "query_alloc_block_size",
-      "name": "query_alloc_block_size",
-      "type": "size in bytes of the extra blocks allocated during query parsing and execution (after",
-      "cli": "--query-alloc-block-size=#",
+      },
       "scope": [
         "global",
         "session"
       ],
+      "type": "time in seconds between sending"
+    },
+    {
+      "cli": "none",
+      "dataType": "numeric",
+      "default": "10",
+      "dynamic": false,
+      "id": "protocol_version",
+      "name": "protocol_version",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "the version of the client/server protocol used by the mariadb server."
+    },
+    {
+      "cli": "--proxy-protocol-networks=value",
+      "dataType": "string",
+      "dynamic": false,
+      "id": "proxy_protocol_networks",
+      "name": "proxy_protocol_networks",
+      "scope": [
+        "global"
+      ],
+      "type": "enable"
+    },
+    {
+      "dataType": "string",
+      "dynamic": false,
+      "id": "proxy_user",
+      "name": "proxy_user",
+      "scope": [
+        "session"
+      ],
+      "type": "set to the proxy user account name if the current client is a proxy, else"
+    },
+    {
+      "dataType": "numeric",
+      "default": "OFF",
       "dynamic": true,
+      "id": "pseudo_slave_mode",
+      "name": "pseudo_slave_mode",
+      "scope": [
+        "session"
+      ],
+      "type": "for internal use by the server."
+    },
+    {
+      "dataType": "numeric",
+      "dynamic": true,
+      "id": "pseudo_thread_id",
+      "name": "pseudo_thread_id",
+      "scope": [
+        "session"
+      ],
+      "type": "for internal use only."
+    },
+    {
+      "cli": "--query-alloc-block-size=#",
       "dataType": "numeric",
       "default": "8192",
+      "dynamic": true,
+      "id": "query_alloc_block_size",
+      "name": "query_alloc_block_size",
       "range": {
         "from": 1024,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "size in bytes of the extra blocks allocated during query parsing and execution (after"
     },
     {
-      "id": "query_cache_limit",
-      "name": "query_cache_limit",
-      "type": "size in bytes for which results larger than this are not stored in the",
       "cli": "--query-cache-limit=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "1048576",
+      "dynamic": true,
+      "id": "query_cache_limit",
+      "name": "query_cache_limit",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "query_cache_min_res_unit",
-      "name": "query_cache_min_res_unit",
-      "type": "minimum size in bytes of the blocks allocated for",
-      "cli": "--query-cache-min-res-unit=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "size in bytes for which results larger than this are not stored in the"
+    },
+    {
+      "cli": "--query-cache-min-res-unit=#",
       "dataType": "numeric",
       "default": "4096",
+      "dynamic": true,
+      "id": "query_cache_min_res_unit",
+      "name": "query_cache_min_res_unit",
       "range": {
         "from": 0,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "query_cache_size",
-      "name": "query_cache_size",
-      "type": "size in bytes available to the",
-      "cli": "--query-cache-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "minimum size in bytes of the blocks allocated for"
+    },
+    {
+      "cli": "--query-cache-size=#",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "query_cache_size",
+      "name": "query_cache_size",
+      "scope": [
+        "global"
+      ],
+      "type": "size in bytes available to the",
       "validValues": [
         "0"
       ]
     },
     {
+      "cli": "query-cache-strip-comments",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "query_cache_strip_comments",
       "name": "query_cache_strip_comments",
-      "type": "if set to",
-      "cli": "query-cache-strip-comments",
       "scope": [
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
+      "cli": "--query-cache-type=#",
+      "dataType": "enumeration",
+      "default": "ON",
+      "dynamic": true,
       "id": "query_cache_type",
       "name": "query_cache_type",
-      "type": "if set to",
-      "cli": "--query-cache-type=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "enumeration",
-      "default": "ON",
+      "type": "if set to",
       "validValues": [
         "0",
         "OFF",
@@ -2385,34 +2383,34 @@
       ]
     },
     {
+      "cli": "--query-cache-wlock-invalidate",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "query_cache_wlock_invalidate",
       "name": "query_cache_wlock_invalidate",
-      "type": "if set to",
-      "cli": "--query-cache-wlock-invalidate",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
-      "id": "query_prealloc_size",
-      "name": "query_prealloc_size",
-      "type": "size in bytes of the persistent buffer for query parsing and execution, allocated on connect and freed on disconnect. increasing may be useful if complex queries are being run, as this will reduce the need for more memory allocations during query operation. see also",
       "cli": "--query-prealloc-size=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "8192",
+      "dynamic": true,
+      "id": "query_prealloc_size",
+      "name": "query_prealloc_size",
       "range": {
         "from": 1024,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "size in bytes of the persistent buffer for query parsing and execution, allocated on connect and freed on disconnect. increasing may be useful if complex queries are being run, as this will reduce the need for more memory allocations during query operation. see also"
     },
     {
       "id": "rand_seed1",
@@ -2425,80 +2423,80 @@
       "type": "see"
     },
     {
+      "cli": "--range-alloc-block-size=#",
+      "dataType": "numeric",
+      "default": "4096",
+      "dynamic": true,
       "id": "range_alloc_block_size",
       "name": "range_alloc_block_size",
-      "type": "size in bytes of blocks allocated during range optimization. the unit size in 1024.",
-      "cli": "--range-alloc-block-size=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "4096"
+      "type": "size in bytes of blocks allocated during range optimization. the unit size in 1024."
     },
     {
-      "id": "read_buffer_size",
-      "name": "read_buffer_size",
-      "type": "each thread performing a sequential scan (for myisam, aria and merge tables) allocates a buffer of this size in bytes for each table scanned. increase if you perform many sequential scans. if not in a multiple of 4kb, will be rounded down to the nearest multiple. also used in order by's for caching indexes in a temporary file (not temporary table), for caching results of nested queries, for bulk inserts into partitions, and to determine the memory block size of",
       "cli": "--read-buffer-size=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "131072",
+      "dynamic": true,
+      "id": "read_buffer_size",
+      "name": "read_buffer_size",
       "range": {
         "from": 8200,
         "to": 2147479552
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "each thread performing a sequential scan (for myisam, aria and merge tables) allocates a buffer of this size in bytes for each table scanned. increase if you perform many sequential scans. if not in a multiple of 4kb, will be rounded down to the nearest multiple. also used in order by's for caching indexes in a temporary file (not temporary table), for caching results of nested queries, for bulk inserts into partitions, and to determine the memory block size of"
     },
     {
+      "cli": "--read-only",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "read_only",
       "name": "read_only",
-      "type": "when set to",
-      "cli": "--read-only",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "when set to"
     },
     {
-      "id": "read_rnd_buffer_size",
-      "name": "read_rnd_buffer_size",
-      "type": "size in bytes of the buffer used when reading rows from a",
       "cli": "--read-rnd-buffer-size=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "262144",
+      "dynamic": true,
+      "id": "read_rnd_buffer_size",
+      "name": "read_rnd_buffer_size",
       "range": {
         "from": 8200,
         "to": 2147483647
-      }
-    },
-    {
-      "id": "rowid_merge_buff_size",
-      "name": "rowid_merge_buff_size",
-      "type": "the maximum size in bytes of the memory available to the rowid-merge strategy. see",
-      "cli": "--rowid-merge-buff-size=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "size in bytes of the buffer used when reading rows from a"
+    },
+    {
+      "cli": "--rowid-merge-buff-size=#",
       "dataType": "numeric",
       "default": "8388608",
+      "dynamic": true,
+      "id": "rowid_merge_buff_size",
+      "name": "rowid_merge_buff_size",
       "range": {
         "from": 0,
         "to": 2147483647
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "the maximum size in bytes of the memory available to the rowid-merge strategy. see"
     },
     {
       "id": "rpl_recovery_rank",
@@ -2506,102 +2504,102 @@
       "type": "unused."
     },
     {
+      "cli": "--safe-show-database (until mysql 4.1.1)",
+      "dataType": "boolean",
+      "dynamic": true,
       "id": "safe_show_database",
       "name": "safe_show_database",
-      "type": "this variable was removed in",
-      "cli": "--safe-show-database (until mysql 4.1.1)",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean"
+      "type": "this variable was removed in"
     },
     {
+      "cli": "--secure-auth",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "secure_auth",
       "name": "secure_auth",
-      "type": "connections will be blocked unless clients use the current password format. prior to mysql 4.1 passwords used an old, less secure format.. for the mysql client, the",
-      "cli": "--secure-auth",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "connections will be blocked unless clients use the current password format. prior to mysql 4.1 passwords used an old, less secure format.. for the mysql client, the"
     },
     {
+      "cli": "--secure-file-priv=path",
+      "dataType": "path name",
+      "dynamic": false,
       "id": "secure_file_priv",
       "name": "secure_file_priv",
-      "type": "",
-      "cli": "--secure-file-priv=path",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "path name"
+      "type": ""
     },
     {
+      "cli": "--secure-timestamp=value",
+      "dataType": "enum",
+      "default": "NO",
+      "dynamic": false,
       "id": "secure_timestamp",
       "name": "secure_timestamp",
-      "type": "restricts direct setting of a session timestamp. possible levels are:",
-      "cli": "--secure-timestamp=value",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "enum",
-      "default": "NO"
+      "type": "restricts direct setting of a session timestamp. possible levels are:"
     },
     {
+      "cli": "--session-track-schema={0|1}",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "session_track_schema",
       "name": "session_track_schema",
-      "type": "whether to track changes to the default schema within the current session.",
-      "cli": "--session-track-schema={0|1}",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "whether to track changes to the default schema within the current session."
     },
     {
+      "cli": "--session-track-state-change={0|1}",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "session_track_state_change",
       "name": "session_track_state_change",
-      "type": "whether to track changes to the session state.",
-      "cli": "--session-track-state-change={0|1}",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "whether to track changes to the session state."
     },
     {
+      "cli": "--session-track-system-variables=value",
+      "dataType": "string",
+      "default": "autocommit, character_set_client, character_set_connection, character_set_results, time_zone",
+      "dynamic": true,
       "id": "session_track_system_variables",
       "name": "session_track_system_variables",
-      "type": "comma-separated list of session system variables for which to track changes. in",
-      "cli": "--session-track-system-variables=value",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "autocommit, character_set_client, character_set_connection, character_set_results, time_zone"
+      "type": "comma-separated list of session system variables for which to track changes. in"
     },
     {
+      "cli": "--session-track-transaction-info=value",
+      "dataType": "enum",
+      "default": "OFF",
+      "dynamic": true,
       "id": "session_track_transaction_info",
       "name": "session_track_transaction_info",
-      "type": "track changes to the transaction attributes. off to disable; state to track just transaction state (is there an active transaction? does it have any data? etc.); characteristics to track transaction state and report all statements needed to start a transaction with the same characteristics (isolation level, read only/read write,snapshot - but not any work done / data modified within the transaction).",
-      "cli": "--session-track-transaction-info=value",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "enum",
-      "default": "OFF",
+      "type": "track changes to the transaction attributes. off to disable; state to track just transaction state (is there an active transaction? does it have any data? etc.); characteristics to track transaction state and report all statements needed to start a transaction with the same characteristics (isolation level, read only/read write,snapshot - but not any work done / data modified within the transaction).",
       "validValues": [
         "OFF",
         "STATE",
@@ -2609,158 +2607,158 @@
       ]
     },
     {
+      "dynamic": false,
       "id": "shared_memory",
       "name": "shared_memory",
-      "type": "windows only, determines whether the server permits shared memory connections. see also",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "windows only, determines whether the server permits shared memory connections. see also"
     },
     {
+      "dataType": "string",
+      "default": "MYSQL",
+      "dynamic": false,
       "id": "shared_memory_base_name",
       "name": "shared_memory_base_name",
-      "type": "windows only, specifies the name of the shared memory to use for shared memory connection. mainly used when running more than one instance on the same physical machine. by default the name is",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string",
-      "default": "MYSQL"
+      "type": "windows only, specifies the name of the shared memory to use for shared memory connection. mainly used when running more than one instance on the same physical machine. by default the name is"
     },
     {
+      "cli": "--skip-external-locking",
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": false,
       "id": "skip_external_locking",
       "name": "skip_external_locking",
-      "type": "if set, external locking for myisam tables is disabled.",
-      "cli": "--skip-external-locking",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "if set, external locking for myisam tables is disabled."
     },
     {
+      "cli": "--skip-name-resolve",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": false,
       "id": "skip_name_resolve",
       "name": "skip_name_resolve",
-      "type": "if set to 1 (0 is the default), only ip addresses are used for connections. host names are not resolved. all host values in the grant tables must be ip addresses (or localhost).",
-      "cli": "--skip-name-resolve",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "if set to 1 (0 is the default), only ip addresses are used for connections. host names are not resolved. all host values in the grant tables must be ip addresses (or localhost)."
     },
     {
+      "cli": "--skip-networking",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": false,
       "id": "skip_networking",
       "name": "skip_networking",
-      "type": "if set to 1, (0 is the default), the server does not listen for tcp/ip connections. all interaction with the server by be through socket files (unix) or named pipes or shared memory (windows). it's recommended to use this option if only local clients are permitted to connect to the server. enabling this option also prevents a server from functioning as a replication client.",
-      "cli": "--skip-networking",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "if set to 1, (0 is the default), the server does not listen for tcp/ip connections. all interaction with the server by be through socket files (unix) or named pipes or shared memory (windows). it's recommended to use this option if only local clients are permitted to connect to the server. enabling this option also prevents a server from functioning as a replication client."
     },
     {
+      "cli": "--skip-show-database",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": false,
       "id": "skip_show_database",
       "name": "skip_show_database",
-      "type": "if set to 1, (0 is the default), only users with the",
-      "cli": "--skip-show-database",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "if set to 1, (0 is the default), only users with the"
     },
     {
+      "cli": "--slow-launch-time=#",
+      "dataType": "numeric",
+      "default": "2",
+      "dynamic": true,
       "id": "slow_launch_time",
       "name": "slow_launch_time",
-      "type": "time in seconds. if a thread takes longer than this to launch, the",
-      "cli": "--slow-launch-time=#",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "2"
+      "type": "time in seconds. if a thread takes longer than this to launch, the"
     },
     {
+      "cli": "--slow-query-log",
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": true,
       "id": "slow_query_log",
       "name": "slow_query_log",
-      "type": "if set to 0, the default unless the --slow-query-log option is used, the",
-      "cli": "--slow-query-log",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "if set to 0, the default unless the --slow-query-log option is used, the"
     },
     {
+      "cli": "--slow-query-log-file=file_name",
+      "dataType": "file name",
+      "default": "host_name-slow.log",
+      "dynamic": true,
       "id": "slow_query_log_file",
       "name": "slow_query_log_file",
-      "type": "name of the",
-      "cli": "--slow-query-log-file=file_name",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "file name",
-      "default": "host_name-slow.log"
+      "type": "name of the"
     },
     {
+      "cli": "--socket=name",
+      "dataType": "file name",
+      "default": "MySQL",
+      "dynamic": false,
       "id": "socket",
       "name": "socket",
-      "type": "on unix-like systems, this is the name of the socket file used for local client connections, by default",
-      "cli": "--socket=name",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "file name",
-      "default": "MySQL"
+      "type": "on unix-like systems, this is the name of the socket file used for local client connections, by default"
     },
     {
+      "cli": "--sort-buffer-size=#",
+      "dataType": "number",
+      "default": "2M (2097152)",
+      "dynamic": true,
       "id": "sort_buffer_size",
       "name": "sort_buffer_size",
-      "type": "each session performing a sort allocates a buffer with this amount of memory. not specific to any storage engine. if the status variable",
-      "cli": "--sort-buffer-size=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "number",
-      "default": "2M (2097152)"
+      "type": "each session performing a sort allocates a buffer with this amount of memory. not specific to any storage engine. if the status variable"
     },
     {
+      "dataType": "boolean",
+      "default": "0 (>= MariaDB/MySQL 5.5.3), 1 (MariaDB/MySQL <= 5.5.2)",
+      "dynamic": true,
       "id": "sql_auto_is_null",
       "name": "sql_auto_is_null",
-      "type": "if set to 1, the query",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0 (>= MariaDB/MySQL 5.5.3), 1 (MariaDB/MySQL <= 5.5.2)"
+      "type": "if set to 1, the query"
     },
     {
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": true,
       "id": "sql_big_selects",
       "name": "sql_big_selects",
-      "type": "if set to 0, mariadb will not perform large selects. see",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "if set to 0, mariadb will not perform large selects. see"
     },
     {
       "id": "sql_big_tables",
@@ -2768,27 +2766,27 @@
       "type": "a synonym for"
     },
     {
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": true,
       "id": "sql_buffer_result",
       "name": "sql_buffer_result",
-      "type": "if set to 1 (0 is default), results from select statements are always placed into temporary tables. this can help the server when it takes a long time to send the results to the client by allowing the table locks to be freed early.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "if set to 1 (0 is default), results from select statements are always placed into temporary tables. this can help the server when it takes a long time to send the results to the client by allowing the table locks to be freed early."
     },
     {
+      "dataType": "boolean",
+      "default": "0",
+      "dynamic": true,
       "id": "sql_log_off",
       "name": "sql_log_off",
-      "type": "if set to 1 (0 is the default), no logging to the",
       "scope": [
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "0"
+      "type": "if set to 1 (0 is the default), no logging to the"
     },
     {
       "id": "sql_log_update",
@@ -2806,74 +2804,74 @@
       "type": "synonym for"
     },
     {
+      "cli": "--sql-mode=value[,value[,value...]]",
+      "dataType": "string",
+      "dynamic": true,
       "id": "sql_mode",
       "name": "sql_mode",
-      "type": "sets the",
-      "cli": "--sql-mode=value[,value[,value...]]",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
+      "type": "sets the",
       "validValues": []
     },
     {
+      "cli": "none",
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": true,
       "id": "sql_notes",
       "name": "sql_notes",
-      "type": "if set to 1, the default,",
-      "cli": "none",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "if set to 1, the default,"
     },
     {
+      "dataType": "boolean",
+      "default": "1",
+      "dynamic": true,
       "id": "sql_quote_show_create",
       "name": "sql_quote_show_create",
-      "type": "if set to 1, the default, the server will quote identifiers for",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "1"
+      "type": "if set to 1, the default, the server will quote identifiers for"
     },
     {
+      "dataType": "boolean",
+      "default": "OFF (0)",
+      "dynamic": true,
       "id": "sql_safe_updates",
       "name": "sql_safe_updates",
-      "type": "if set to 1, updates and deletes need either a key in the where clause, or a limit clause, or else they will aborted. prevents the common mistake of accidentally deleting or updating every row in a table.",
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF (0)"
+      "type": "if set to 1, updates and deletes need either a key in the where clause, or a limit clause, or else they will aborted. prevents the common mistake of accidentally deleting or updating every row in a table."
     },
     {
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "sql_select_limit",
       "name": "sql_select_limit",
-      "type": "maximum number of rows that can be returned from a select query. default is the maximum number of rows permitted per table by the server, usually 2",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0"
+      "type": "maximum number of rows that can be returned from a select query. default is the maximum number of rows permitted per table by the server, usually 2"
     },
     {
+      "dataType": "boolean",
+      "default": "OFF (0)",
+      "dynamic": true,
       "id": "sql_warnings",
       "name": "sql_warnings",
-      "type": "if set to 1, single-row inserts will produce a string containing warning information if a warning occurs.",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF (0)"
+      "type": "if set to 1, single-row inserts will produce a string containing warning information if a warning occurs."
     },
     {
       "id": "storage_engine",
@@ -2881,130 +2879,130 @@
       "type": "see"
     },
     {
+      "cli": "--standard-compliant-cte={0|1}",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "standard_compliant_cte",
       "name": "standard_compliant_cte",
-      "type": "allow only standard-compliant common table expressions. prior to version 10.2.4, this variable was named",
-      "cli": "--standard-compliant-cte={0|1}",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "allow only standard-compliant common table expressions. prior to version 10.2.4, this variable was named"
     },
     {
-      "id": "stored_program_cache",
-      "name": "stored_program_cache",
-      "type": "limit to the number of",
       "cli": "--stored-program-cache=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "256",
+      "dynamic": true,
+      "id": "stored_program_cache",
+      "name": "stored_program_cache",
       "range": {
         "from": 256,
         "to": 524288
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "limit to the number of"
     },
     {
+      "cli": "--strict-password-validation",
+      "dataType": "boolean",
+      "default": "ON",
+      "dynamic": true,
       "id": "strict_password_validation",
       "name": "strict_password_validation",
-      "type": "when",
-      "cli": "--strict-password-validation",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "ON"
+      "type": "when"
     },
     {
+      "cli": "--sync-frm",
+      "dataType": "boolean",
+      "default": "TRUE",
+      "dynamic": true,
       "id": "sync_frm",
       "name": "sync_frm",
-      "type": "if set to 1, the default, each time a non-temporary table is created, its .frm definition file is synced to disk. fractionally slower, but safer in case of a crash.",
-      "cli": "--sync-frm",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "TRUE"
+      "type": "if set to 1, the default, each time a non-temporary table is created, its .frm definition file is synced to disk. fractionally slower, but safer in case of a crash."
     },
     {
+      "dataType": "string",
+      "dynamic": false,
       "id": "system_time_zone",
       "name": "system_time_zone",
-      "type": "server system",
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "dataType": "string"
+      "type": "server system"
     },
     {
-      "id": "table_definition_cache",
-      "name": "table_definition_cache",
-      "type": "number of table definitions that can be cached. table definitions are taken from the .frm files, and if there are a large number of tables increasing the cache size can speed up table opening. unlike the",
       "cli": "--table-definition-cache=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "400",
+      "dynamic": true,
+      "id": "table_definition_cache",
+      "name": "table_definition_cache",
       "range": {
         "from": 400,
         "to": 524288
-      }
-    },
-    {
-      "id": "table_lock_wait_timeout",
-      "name": "table_lock_wait_timeout",
-      "type": "unused, and removed in mariadb/mysql 5.5.3",
-      "cli": "--table-lock-wait-timeout=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "number of table definitions that can be cached. table definitions are taken from the .frm files, and if there are a large number of tables increasing the cache size can speed up table opening. unlike the"
+    },
+    {
+      "cli": "--table-lock-wait-timeout=#",
       "dataType": "numeric",
       "default": "50",
+      "dynamic": true,
+      "id": "table_lock_wait_timeout",
+      "name": "table_lock_wait_timeout",
       "range": {
         "from": 1,
         "to": 1073741824
-      }
-    },
-    {
-      "id": "table_open_cache",
-      "name": "table_open_cache",
-      "type": "maximum number of open tables cached in one table cache instance. see",
-      "cli": "--table-open-cache=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "unused, and removed in mariadb/mysql 5.5.3"
+    },
+    {
+      "cli": "--table-open-cache=#",
       "dataType": "numeric",
       "default": "400",
+      "dynamic": true,
+      "id": "table_open_cache",
+      "name": "table_open_cache",
       "range": {
         "from": 1,
         "to": 1048576
-      }
-    },
-    {
-      "id": "table_open_cache_instances",
-      "name": "table_open_cache_instances",
-      "type": "from",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "maximum number of open tables cached in one table cache instance. see"
+    },
+    {
       "dataType": "numeric",
       "default": "1",
+      "dynamic": false,
+      "id": "table_open_cache_instances",
+      "name": "table_open_cache_instances",
       "range": {
         "from": 1,
         "to": 64
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "from"
     },
     {
       "id": "table_type",
@@ -3012,99 +3010,99 @@
       "type": "removed and replaced by"
     },
     {
+      "cli": "--tcp-keepalive-interval=#",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "tcp_keepalive_interval",
       "name": "tcp_keepalive_interval",
-      "type": "the interval, in seconds, between when successive keep-alive packets are sent if no acknowledgement is received. if set to 0, the system dependent default is used.",
-      "cli": "--tcp-keepalive-interval=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0",
       "range": {
         "from": 0,
         "to": 2147483
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "the interval, in seconds, between when successive keep-alive packets are sent if no acknowledgement is received. if set to 0, the system dependent default is used."
     },
     {
+      "cli": "--tcp-keepalive-probes=#",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "tcp_keepalive_probes",
       "name": "tcp_keepalive_probes",
-      "type": "the number of unacknowledged probes to send before considering the connection dead and notifying the application layer. if set to 0, a system dependent default is used.",
-      "cli": "--tcp-keepalive-probes=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0",
       "range": {
         "from": 0,
         "to": 2147483
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "the number of unacknowledged probes to send before considering the connection dead and notifying the application layer. if set to 0, a system dependent default is used."
     },
     {
+      "cli": "--tcp-keepalive-time=#",
+      "dataType": "numeric",
+      "default": "0",
+      "dynamic": true,
       "id": "tcp_keepalive_time",
       "name": "tcp_keepalive_time",
-      "type": "timeout, in milliseconds, with no activity until the first tcp keep-alive packet is sent. if set to 0, a system dependent default is used.",
-      "cli": "--tcp-keepalive-time=#",
-      "scope": [
-        "global"
-      ],
-      "dynamic": true,
-      "dataType": "numeric",
-      "default": "0",
       "range": {
         "from": 0,
         "to": 2147483
-      }
-    },
-    {
-      "id": "thread_cache_size",
-      "name": "thread_cache_size",
-      "type": "number of threads server caches for re-use. if this limit hasn't been reached, when a client disconnects, its threads are put into the cache, and re-used where possible. these are freed after 5 minutes of idle time. normally this setting has little effect, as the other aspects of the thread implementation are more important, but increasing it can help servers with high volumes of connections per second so that most can use a cached, rather than a new, thread. the cache miss rate can be calculated as the",
-      "cli": "--thread-cache-size=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": true,
+      "type": "timeout, in milliseconds, with no activity until the first tcp keep-alive packet is sent. if set to 0, a system dependent default is used."
+    },
+    {
+      "cli": "--thread-cache-size=#",
       "dataType": "numeric",
       "default": "0",
+      "dynamic": true,
+      "id": "thread_cache_size",
+      "name": "thread_cache_size",
       "range": {
         "from": 0,
         "to": 16384
-      }
-    },
-    {
-      "id": "thread_concurrency",
-      "name": "thread_concurrency",
-      "type": "allows applications to give the system a hint about the desired number of threads. specific to solaris only, invokes thr_setconcurrency(). deprecated and has no effect in",
-      "cli": "--thread-concurrency=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "number of threads server caches for re-use. if this limit hasn't been reached, when a client disconnects, its threads are put into the cache, and re-used where possible. these are freed after 5 minutes of idle time. normally this setting has little effect, as the other aspects of the thread implementation are more important, but increasing it can help servers with high volumes of connections per second so that most can use a cached, rather than a new, thread. the cache miss rate can be calculated as the"
+    },
+    {
+      "cli": "--thread-concurrency=#",
       "dataType": "numeric",
       "default": "10",
+      "dynamic": false,
+      "id": "thread_concurrency",
+      "name": "thread_concurrency",
       "range": {
         "from": 1,
         "to": 512
-      }
-    },
-    {
-      "id": "thread_stack",
-      "name": "thread_stack",
-      "type": "stack size for each thread. if set too small, limits recursion depth of stored procedures and complexity of sql statements the server can handle in memory. also affects limits in the crash-me test.",
-      "cli": "--thread-stack=#",
+      },
       "scope": [
         "global"
       ],
-      "dynamic": false,
+      "type": "allows applications to give the system a hint about the desired number of threads. specific to solaris only, invokes thr_setconcurrency(). deprecated and has no effect in"
+    },
+    {
+      "cli": "--thread-stack=#",
       "dataType": "numeric",
+      "dynamic": false,
+      "id": "thread_stack",
+      "name": "thread_stack",
       "range": {
         "from": 131072,
         "to": 18446744073709552000
-      }
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "stack size for each thread. if set too small, limits recursion depth of stored procedures and complexity of sql statements the server can handle in memory. also affects limits in the crash-me test."
     },
     {
       "id": "time_format",
@@ -3112,136 +3110,136 @@
       "type": "unused."
     },
     {
+      "cli": "--default-time-zone=string",
+      "dataType": "string",
+      "default": "SYSTEM",
+      "dynamic": true,
       "id": "time_zone",
       "name": "time_zone",
-      "type": "the current",
-      "cli": "--default-time-zone=string",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "string",
-      "default": "SYSTEM"
+      "type": "the current"
     },
     {
+      "cli": "--timed-mutexes",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "timed_mutexes",
       "name": "timed_mutexes",
-      "type": "determines whether",
-      "cli": "--timed-mutexes",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "determines whether"
     },
     {
+      "dynamic": true,
       "id": "timestamp",
       "name": "timestamp",
-      "type": "sets the time for the client. this will affect the result returned by the",
       "scope": [
         "session"
       ],
-      "dynamic": true,
+      "type": "sets the time for the client. this will affect the result returned by the",
       "validValues": [
         "timestamp_value",
         "DEFAULT"
       ]
     },
     {
-      "id": "tmp_disk_table_size",
-      "name": "tmp_disk_table_size",
-      "type": "max size for data for an internal temporary on-disk",
       "cli": "--tmp-disk-table-size=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
       "dataType": "numeric",
       "default": "18446744073709551615",
+      "dynamic": true,
+      "id": "tmp_disk_table_size",
+      "name": "tmp_disk_table_size",
       "range": {
         "from": 1024,
         "to": 18446744073709552000
-      }
-    },
-    {
-      "id": "tmp_memory_table_size",
-      "name": "tmp_memory_table_size",
-      "type": "an alias for",
-      "cli": "--tmp-memory-table-size=#"
-    },
-    {
-      "id": "tmp_table_size",
-      "name": "tmp_table_size",
-      "type": "the largest size for temporary tables in memory (not",
-      "cli": "--tmp-table-size=#",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "max size for data for an internal temporary on-disk"
+    },
+    {
+      "cli": "--tmp-memory-table-size=#",
+      "id": "tmp_memory_table_size",
+      "name": "tmp_memory_table_size",
+      "type": "an alias for"
+    },
+    {
+      "cli": "--tmp-table-size=#",
       "dataType": "numeric",
       "default": "16777216",
+      "dynamic": true,
+      "id": "tmp_table_size",
+      "name": "tmp_table_size",
       "range": {
         "from": 1024,
         "to": 4294967295
-      }
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "the largest size for temporary tables in memory (not"
     },
     {
+      "cli": "--tmpdir=path or -t path",
+      "dynamic": false,
       "id": "tmpdir",
       "name": "tmpdir",
-      "type": "directory name/s",
-      "cli": "--tmpdir=path or -t path",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "directory name/s"
     },
     {
+      "cli": "--transaction-alloc-block-size=#",
+      "default": "8192",
+      "dynamic": true,
       "id": "transaction_alloc_block_size",
       "name": "transaction_alloc_block_size",
-      "type": "numeric",
-      "cli": "--transaction-alloc-block-size=#",
+      "range": {
+        "from": 1024,
+        "to": 4294967295
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "default": "8192",
-      "range": {
-        "from": 1024,
-        "to": 4294967295
-      }
+      "type": "numeric"
     },
     {
+      "cli": "--transaction-prealloc-size=#",
+      "default": "4096",
+      "dynamic": true,
       "id": "transaction_prealloc_size",
       "name": "transaction_prealloc_size",
-      "type": "numeric",
-      "cli": "--transaction-prealloc-size=#",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "dynamic": true,
-      "default": "4096",
       "range": {
         "from": 1024,
         "to": 4294967295
-      }
-    },
-    {
-      "id": "tx_isolation",
-      "name": "tx_isolation",
-      "type": "enumeration",
-      "cli": "--transaction-isolation=name",
+      },
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
+      "type": "numeric"
+    },
+    {
+      "cli": "--transaction-isolation=name",
       "default": "REPEATABLE-READ",
+      "dynamic": true,
+      "id": "tx_isolation",
+      "name": "tx_isolation",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "enumeration",
       "validValues": [
         "READ-UNCOMMITTED",
         "READ-COMMITTED",
@@ -3250,142 +3248,144 @@
       ]
     },
     {
+      "cli": "--transaction-read-only=#",
+      "default": "OFF-READ",
+      "dynamic": true,
       "id": "tx_read_only",
       "name": "tx_read_only",
-      "type": "boolean",
-      "cli": "--transaction-read-only=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "default": "OFF-READ"
+      "type": "boolean"
     },
     {
+      "default": "1",
+      "dynamic": true,
       "id": "unique_checks",
       "name": "unique_checks",
-      "type": "boolean",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "default": "1"
+      "type": "boolean"
     },
     {
+      "cli": "--updatable-views-with-limit=#",
+      "default": "1",
+      "dynamic": true,
       "id": "updatable_views_with_limit",
       "name": "updatable_views_with_limit",
-      "type": "boolean",
-      "cli": "--updatable-views-with-limit=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "default": "1"
+      "type": "boolean"
     },
     {
+      "cli": "--use-stat-tables=mode",
+      "dataType": "enum",
+      "default": "never",
+      "dynamic": true,
       "id": "use_stat_tables",
       "name": "use_stat_tables",
-      "type": "controls the use of",
-      "cli": "--use-stat-tables=mode",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "dataType": "enum",
-      "default": "never"
+      "type": "controls the use of"
     },
     {
+      "cli": "--userstat=1",
+      "dataType": "boolean",
+      "default": "OFF",
+      "dynamic": true,
       "id": "userstat",
       "name": "userstat",
-      "type": "if set to",
-      "cli": "--userstat=1",
       "scope": [
         "global"
       ],
-      "dynamic": true,
-      "dataType": "boolean",
-      "default": "OFF"
+      "type": "if set to"
     },
     {
+      "cli": "-v, --version[=name] (>= mariadb 10.2.1), --version (<= mariadb 10.2.0)",
+      "dynamic": false,
       "id": "version",
       "name": "version",
-      "type": "string",
-      "cli": "-v, --version[=name] (>= mariadb 10.2.1), --version (<= mariadb 10.2.0)",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "string"
     },
     {
+      "dynamic": false,
       "id": "version_comment",
       "name": "version_comment",
-      "type": "string",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "string"
     },
     {
+      "dynamic": false,
       "id": "version_compile_machine",
       "name": "version_compile_machine",
-      "type": "string",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "string"
     },
     {
+      "dynamic": false,
       "id": "version_compile_os",
       "name": "version_compile_os",
-      "type": "string",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "string"
     },
     {
+      "cli": "no",
+      "dynamic": false,
       "id": "version_malloc_library",
       "name": "version_malloc_library",
-      "type": "string",
-      "cli": "no",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "string"
     },
     {
+      "cli": "none",
+      "dynamic": false,
       "id": "version_source_revision",
       "name": "version_source_revision",
-      "type": "string",
-      "cli": "none",
       "scope": [
         "global"
       ],
-      "dynamic": false
+      "type": "string"
     },
     {
+      "cli": "--wait-timeout=#",
+      "default": "28800",
+      "dynamic": true,
       "id": "wait_timeout",
       "name": "wait_timeout",
-      "type": "numeric",
-      "cli": "--wait-timeout=#",
       "scope": [
         "global",
         "session"
       ],
-      "dynamic": true,
-      "default": "28800"
+      "type": "numeric"
     },
     {
+      "dynamic": false,
       "id": "warning_count",
       "name": "warning_count",
-      "type": "numeric",
       "scope": [
         "session"
       ],
-      "dynamic": false
+      "type": "numeric"
     }
-  ]
+  ],
+  "name": "server-system-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
 }

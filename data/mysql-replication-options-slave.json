@@ -14,12 +14,14 @@
       "cli": "--master-info-file=file_name",
       "default": "master.info",
       "id": "option_mysqld_master-info-file",
+      "name": "master_info_file",
       "type": "file name"
     },
     {
       "cli": "--master-retry-count=#",
       "default": "86400",
       "id": "option_mysqld_master-retry-count",
+      "name": "master_retry_count",
       "range": {
         "from": 0
       },
@@ -64,6 +66,7 @@
       "cli": "--relay-log-info-file=file_name",
       "default": "relay-log.info",
       "id": "option_mysqld_relay-log-info-file",
+      "name": "relay_log_info_file",
       "type": "file name"
     },
     {
@@ -81,6 +84,7 @@
       "cli": "--relay-log-recovery",
       "default": "false",
       "id": "option_mysqld_relay-log-recovery",
+      "name": "relay_log_recovery",
       "type": "boolean"
     },
     {
@@ -100,42 +104,50 @@
     {
       "cli": "--replicate-do-db=name",
       "id": "option_mysqld_replicate-do-db",
+      "name": "replicate_do_db",
       "type": "string"
     },
     {
       "cli": "--replicate-ignore-db=name",
       "id": "option_mysqld_replicate-ignore-db",
+      "name": "replicate_ignore_db",
       "type": "string"
     },
     {
       "cli": "--replicate-do-table=name",
       "id": "option_mysqld_replicate-do-table",
+      "name": "replicate_do_table",
       "type": "string"
     },
     {
       "cli": "--replicate-ignore-table=name",
       "id": "option_mysqld_replicate-ignore-table",
+      "name": "replicate_ignore_table",
       "type": "string"
     },
     {
       "cli": "--replicate-rewrite-db=old_name->new_name",
       "id": "option_mysqld_replicate-rewrite-db",
+      "name": "replicate_rewrite_db",
       "type": "string"
     },
     {
       "cli": "--replicate-same-server-id",
       "default": "false",
       "id": "option_mysqld_replicate-same-server-id",
+      "name": "replicate_same_server_id",
       "type": "boolean"
     },
     {
       "cli": "--replicate-wild-do-table=name",
       "id": "option_mysqld_replicate-wild-do-table",
+      "name": "replicate_wild_do_table",
       "type": "string"
     },
     {
       "cli": "--replicate-wild-ignore-table=name",
       "id": "option_mysqld_replicate-wild-ignore-table",
+      "name": "replicate_wild_ignore_table",
       "type": "string"
     },
     {
@@ -187,6 +199,7 @@
       "cli": "--slave-checkpoint-group=#",
       "default": "512",
       "id": "option_mysqld_slave-checkpoint-group",
+      "name": "slave_checkpoint_group",
       "range": {
         "from": 32,
         "to": 524280
@@ -197,6 +210,7 @@
       "cli": "--slave-checkpoint-period=#",
       "default": "300",
       "id": "option_mysqld_slave-checkpoint-period",
+      "name": "slave_checkpoint_period",
       "range": {
         "from": 1,
         "to": 4
@@ -207,6 +221,7 @@
       "cli": "--slave-parallel-workers=#",
       "default": "0",
       "id": "option_mysqld_slave-parallel-workers",
+      "name": "slave_parallel_workers",
       "range": {
         "from": 0,
         "to": 1024
@@ -217,6 +232,7 @@
       "cli": "--slave-pending-jobs-size-max=#",
       "default": "16m",
       "id": "option_mysqld_slave-pending-jobs-size-max",
+      "name": "slave_pending_jobs_size_max",
       "range": {
         "from": 1024,
         "to": 18
@@ -227,6 +243,7 @@
       "cli": "--skip-slave-start",
       "default": "false",
       "id": "option_mysqld_skip-slave-start",
+      "name": "skip_slave_start",
       "type": "boolean"
     },
     {
@@ -255,6 +272,7 @@
       "cli": "--slave-max-allowed-packet=#",
       "default": "1073741824",
       "id": "option_mysqld_slave-max-allowed-packet",
+      "name": "slave-max-allowed-packet=bytes",
       "range": {
         "from": 1024,
         "to": 1073741824
@@ -279,6 +297,7 @@
       "cli": "--slave-parallel-type=type",
       "default": "database",
       "id": "option_mysqld_slave-parallel-type",
+      "name": "slave_parallel_type",
       "type": "enumeration",
       "validValues": [
         "DATABASE",
@@ -288,6 +307,7 @@
     {
       "cli": "--slave-rows-search-algorithms=list",
       "id": "option_mysqld_slave-rows-search-algorithms",
+      "name": "slave-rows-search-algorithms=list",
       "type": "set",
       "validValues": [
         "TABLE_SCAN,INDEX_SCAN",
@@ -317,6 +337,7 @@
       "cli": "--slave-sql-verify-checksum=value",
       "default": "1",
       "id": "option_mysqld_slave-sql-verify-checksum",
+      "name": "slave_sql_verify_checksum",
       "type": "boolean",
       "validValues": [
         "0",
@@ -327,6 +348,7 @@
       "cli": "--abort-slave-event-count=#",
       "default": "0",
       "id": "option_mysqld_abort-slave-event-count",
+      "name": "abort_slave_event_count",
       "range": {
         "from": 0
       },
@@ -336,11 +358,13 @@
       "cli": "--disconnect-slave-event-count=#",
       "default": "0",
       "id": "option_mysqld_disconnect-slave-event-count",
+      "name": "disconnect_slave_event_count",
       "type": "integer"
     },
     {
       "cli": "--master-info-repository=FILE|TABLE",
       "id": "option_mysqld_master-info-repository",
+      "name": "master_info_repository",
       "type": "string",
       "validValues": [
         "FILE",
@@ -350,6 +374,7 @@
     {
       "cli": "--relay-log-info-repository=FILE|TABLE",
       "id": "option_mysqld_relay-log-info-repository",
+      "name": "relay_log_info_repository",
       "type": "string",
       "validValues": [
         "FILE",
@@ -607,7 +632,7 @@
       "default": "512",
       "dynamic": true,
       "id": "sysvar_slave_checkpoint_group",
-      "name": "slave_checkpoint_group=#",
+      "name": "slave_checkpoint_group",
       "range": {
         "from": 32,
         "to": 524280
@@ -622,7 +647,7 @@
       "default": "300",
       "dynamic": true,
       "id": "sysvar_slave_checkpoint_period",
-      "name": "slave_checkpoint_period=#",
+      "name": "slave_checkpoint_period",
       "range": {
         "from": 1,
         "to": 4
@@ -701,6 +726,7 @@
       "cli": "--slave-parallel-type=type",
       "default": "database",
       "id": "sysvar_slave_parallel_type",
+      "name": "slave_parallel_type=type",
       "type": "enumeration",
       "validValues": [
         "DATABASE",
@@ -754,7 +780,7 @@
     {
       "dynamic": true,
       "id": "sysvar_slave_rows_search_algorithms",
-      "name": "slave_rows_search_algorithms=list",
+      "name": "slave_rows_search_algorithms",
       "scope": [
         "global"
       ],

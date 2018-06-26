@@ -20,6 +20,7 @@
       "cli": "--executed-gtids-compression-period=#",
       "default": "1000",
       "id": "option_mysqld_executed-gtids-compression-period",
+      "name": "executed_gtids_compression_period",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -47,6 +48,7 @@
       "cli": "--gtid-executed-compression-period=#",
       "default": "1000",
       "id": "option_mysqld_gtid-executed-compression-period",
+      "name": "gtid_executed_compression_period",
       "range": {
         "from": 0,
         "to": 4294967295

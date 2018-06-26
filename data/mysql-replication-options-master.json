@@ -4,6 +4,7 @@
       "cli": "--show-slave-auth-info",
       "default": "false",
       "id": "option_mysqld_show-slave-auth-info",
+      "name": "show_slave_auth_info",
       "type": "boolean"
     },
     {

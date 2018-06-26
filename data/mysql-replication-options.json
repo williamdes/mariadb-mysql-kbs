@@ -17,7 +17,7 @@
     {
       "dynamic": false,
       "id": "replication-options",
-      "name": "server_uuid",
+      "name": "server_id",
       "scope": [
         "global"
       ],

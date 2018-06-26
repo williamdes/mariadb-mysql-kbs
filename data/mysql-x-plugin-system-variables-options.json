@@ -147,7 +147,7 @@
       "default": "28800",
       "dynamic": true,
       "id": "option_mysqld_mysqlx-read-timeout",
-      "name": "mysqlx_port_read_timeout",
+      "name": "mysqlx_read_timeout",
       "range": {
         "from": 30,
         "to": 2147483
@@ -211,6 +211,7 @@
     {
       "cli": "--mysqlx-ssl-cipher=name",
       "id": "option_mysqld_mysqlx-ssl-cipher",
+      "name": "mysqlx_ssl_cipher",
       "type": "string"
     },
     {

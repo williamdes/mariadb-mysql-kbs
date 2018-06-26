@@ -14,6 +14,7 @@
       "cli": "--innodb[=value]",
       "default": "on",
       "id": "option_mysqld_innodb",
+      "name": "innodb",
       "type": "enumeration",
       "validValues": [
         "OFF",
@@ -25,6 +26,7 @@
       "cli": "--innodb-status-file",
       "default": "off",
       "id": "option_mysqld_innodb-status-file",
+      "name": "innodb_status_file",
       "type": "boolean"
     },
     {
@@ -1074,6 +1076,7 @@
       "cli": "--innodb-log-buffer-size=#",
       "default": "16777216",
       "id": "sysvar_innodb_log_buffer_size",
+      "name": "innodb_log_buffer_size",
       "range": {
         "from": 1048576,
         "to": 4294967295

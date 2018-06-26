@@ -4,6 +4,7 @@
       "cli": "--binlog-row-event-max-size=#",
       "default": "8192",
       "id": "option_mysqld_binlog-row-event-max-size",
+      "name": "binlog_row_event_max_size",
       "range": {
         "from": 256
       },
@@ -13,6 +14,7 @@
       "cli": "--binlog-rows-query-log-events",
       "default": "false",
       "id": "option_mysqld_binlog-rows-query-log-events",
+      "name": "binlog_rows_query_log_events",
       "type": "boolean"
     },
     {
@@ -28,6 +30,7 @@
     {
       "cli": "--log-bin-index=file_name",
       "id": "option_mysqld_log-bin-index",
+      "name": "log_bin_index",
       "type": "file name"
     },
     {
@@ -55,17 +58,20 @@
     {
       "cli": "--binlog-do-db=name",
       "id": "option_mysqld_binlog-do-db",
+      "name": "binlog_do_db",
       "type": "string"
     },
     {
       "cli": "--binlog-ignore-db=name",
       "id": "option_mysqld_binlog-ignore-db",
+      "name": "binlog_ignore_db",
       "type": "string"
     },
     {
       "cli": "--binlog-checksum=type",
       "default": "crc32",
       "id": "option_mysqld_binlog-checksum",
+      "name": "binlog_checksum",
       "type": "string",
       "validValues": [
         "NONE",
@@ -76,18 +82,21 @@
       "cli": "--master-verify-checksum=name",
       "default": "off",
       "id": "option_mysqld_master-verify-checksum",
+      "name": "master_verify_checksum",
       "type": "boolean"
     },
     {
       "cli": "--max-binlog-dump-events=#",
       "default": "0",
       "id": "option_mysqld_max-binlog-dump-events",
+      "name": "max_binlog_dump_events",
       "type": "integer"
     },
     {
       "cli": "--sporadic-binlog-dump-fail",
       "default": "false",
       "id": "option_mysqld_sporadic-binlog-dump-fail",
+      "name": "sporadic_binlog_dump_fail",
       "type": "boolean"
     },
     {
@@ -235,7 +244,7 @@
       "default": "full",
       "dynamic": true,
       "id": "sysvar_binlog_row_image",
-      "name": "binlog_row_image=image_type",
+      "name": "binlog_row_image",
       "scope": [
         "global",
         "session"
@@ -252,7 +261,7 @@
       "default": "minimal",
       "dynamic": true,
       "id": "sysvar_binlog_row_metadata",
-      "name": "binlog_row_metadata=metadata_type",
+      "name": "binlog_row_metadata",
       "scope": [
         "global"
       ],
@@ -485,6 +494,7 @@
     {
       "dynamic": true,
       "id": "sysvar_original_commit_timestamp",
+      "name": "original_commit_timestamp",
       "scope": [
         "session"
       ],

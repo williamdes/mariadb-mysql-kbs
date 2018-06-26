@@ -4,6 +4,7 @@
       "cli": "--audit-log[=value]",
       "default": "on",
       "id": "option_mysqld_audit-log",
+      "name": "audit_log",
       "type": "enumeration",
       "validValues": [
         "ON",
@@ -172,6 +173,7 @@
     {
       "cli": "--audit-log-read-buffer-size=#",
       "id": "sysvar_audit_log_read_buffer_size",
+      "name": "audit_log_read_buffer_size",
       "range": {
         "to": 4194304
       },

@@ -15,6 +15,7 @@
       "cli": "--authentication-windows-log-level",
       "default": "0",
       "id": "sysvar_authentication_windows_log_level",
+      "name": "authentication_windows_log_level",
       "range": {
         "from": 0,
         "to": 4
@@ -25,6 +26,7 @@
       "cli": "--authentication-windows-use-principal-name",
       "default": "on",
       "id": "sysvar_authentication_windows_use_principal_name",
+      "name": "authentication_windows_use_principal_name",
       "type": "boolean"
     },
     {

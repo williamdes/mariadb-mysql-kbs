@@ -1,98 +1,130 @@
 const jsdom = require('jsdom').JSDOM;
 const path = require('path');
 const writeJSON = require(__dirname + '/common').writeJSON;
+const regexCli = /([-]{2})([0-9a-z-_]+)/i;
+
+/**
+ * Complete a doc element with info found in table
+ * @param {HTMLTableRowElement[]} rows The table rows
+ */
+function completeDoc(rows, doc) {
+  for (let i = 0; i < rows.length; i++) {
+    const tr = rows[i];
+    var name = tr.firstElementChild.textContent.toLowerCase().trim();
+    var value = tr.lastElementChild;
+    switch (name) {
+      case 'dynamic':
+        doc.dynamic = value.textContent.toLowerCase().trim() === 'yes';
+        break;
+      case 'system variable':
+        var theName = value.textContent.toLowerCase().trim();
+        if (doc.name !== undefined) {
+          if (doc.name.match(regexCli)) {
+            doc.name = theName;
+          }
+        } else {
+          doc.name = theName;
+        }
+        break;
+      case 'scope':
+        let scope = value.textContent.toLowerCase();
+        if( scope === 'both') {// found on mysql-cluster-options-variables.html
+            doc.scope = ['global', 'session'];
+        } else if( scope == '') {// empty scope
+        } else {
+          doc.scope = scope.split(',')
+          .map(item => {
+            if (item.match(/session/)) {
+              return 'session';
+            } else if (item.match(/global/)) {
+              return 'global';
+            } else {
+              return item.trim();
+            }
+          });
+        }
+        if(doc.scope != undefined) {
+          doc.scope = doc.scope.filter(function(e) {
+            return e === 0 || e;
+          });
+        }
+        break;
+      case 'type':
+        let type = value.textContent.toLowerCase().trim();
+        if(type != "")
+          doc.type = type;
+        break;
+      case 'default value':
+        doc.default = value.textContent.toLowerCase().trim();
+        break;
+      case 'valid values':
+        doc.validValues = [];
+        var codes = value.getElementsByTagName('code');
+        for (let j = 0; j < codes.length; j++) {
+          const code = codes[j];
+          doc.validValues.push(code.textContent);
+        }
+        break;
+      case 'minimum value':
+        if (doc.range == undefined) {
+          doc.range = {};
+        }
+        doc.range.from = parseFloat(value.textContent.trim());
+        break;
+      case 'maximum value':
+        if (doc.range == undefined) {
+          doc.range = {};
+        }
+        doc.range.to = parseFloat(value.textContent.trim());
+        break;
+      case 'command-line format':
+        doc.cli = value.textContent.trim();
+        break;
+    }
+  }
+}
+
+/**
+ * Create a doc element
+ * @param {Element} element The root element
+ * @returns object The doc object
+ */
+function createDoc(element, anchors) {
+  let doc = {};
+  doc.id = element.parentElement.getElementsByTagName('a')[0].name;
+  doc.name = element.parentElement.getElementsByTagName('code')[0].textContent.trim();
+  var cli = doc.name.match(regexCli);
+  if (cli) {
+    // cli format
+    doc.name = cli[2].replace(/-/g, '_'); //Try to clean format
+  }
+  var tbody = element.getElementsByTagName('tbody')[0];
+
+  completeDoc(tbody.getElementsByTagName('tr'), doc);
+
+  return doc;
+}
 
 function parsePage(url, cbSuccess) {
   var anchors = [];
   jsdom.fromURL(url).then(dom => {
     var window = dom.window;
     var document = window.document;
-    const elements = document.getElementsByClassName('informaltable');
+    var elements = document.getElementsByClassName('informaltable');
     for (let i = 0; i < elements.length; i++) {
       let element = elements[i];
-      let doc = {};
       if (element.getElementsByTagName('th')[0].textContent != 'Property') {
         continue;
       }
-
-      doc.id = element.parentElement.getElementsByTagName('a')[0].name;
-      const regexCli = /([-]{2})([0-9a-z-_]+)/i;
-      doc.name = element.parentElement.getElementsByTagName('code')[0].textContent.trim();
-      var cli = doc.name.match(regexCli);
-      if (cli) {
-        // cli format
-        doc.name = cli[2].replace(/-/g, '_'); //Try to clean format
+      anchors.push(createDoc(element));
+    }
+    elements = document.getElementsByClassName('table');
+    for (let i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      if (element.getElementsByTagName('a')[0].name.match(/-detailtable/) === null) {
+        continue;
       }
-      var tbody = element.getElementsByTagName('tbody')[0];
-
-      var trs = tbody.getElementsByTagName('tr');
-      for (let i = 0; i < trs.length; i++) {
-        const tr = trs[i];
-        var name = tr.firstElementChild.textContent.toLowerCase().trim();
-        var value = tr.lastElementChild;
-        switch (name) {
-          case 'dynamic':
-            doc.dynamic = value.textContent.toLowerCase().trim() === 'yes';
-            break;
-          case 'system variable':
-            var theName = value.textContent.toLowerCase().trim();
-            if (doc.name !== undefined) {
-              if (doc.name.match(regexCli)) {
-                doc.name = theName;
-              }
-            } else {
-              doc.name = theName;
-            }
-            break;
-          case 'scope':
-            doc.scope = value.textContent
-              .toLowerCase()
-              .split(',')
-              .map(item => {
-                if (item.match(/session/)) {
-                  return 'session';
-                } else if (item.match(/global/)) {
-                  return 'global';
-                } else {
-                  return item.trim();
-                }
-              });
-            doc.scope = doc.scope.filter(function(e) {
-              return e === 0 || e;
-            });
-            break;
-          case 'type':
-            doc.type = value.textContent.toLowerCase().trim();
-            break;
-          case 'default value':
-            doc.default = value.textContent.toLowerCase().trim();
-            break;
-          case 'valid values':
-            doc.validValues = [];
-            var codes = value.getElementsByTagName('code');
-            for (let j = 0; j < codes.length; j++) {
-              const code = codes[j];
-              doc.validValues.push(code.textContent);
-            }
-            break;
-          case 'minimum value':
-            if (doc.range == undefined) {
-              doc.range = {};
-            }
-            doc.range.from = parseFloat(value.textContent.trim());
-            break;
-          case 'maximum value':
-            if (doc.range == undefined) {
-              doc.range = {};
-            }
-            doc.range.to = parseFloat(value.textContent.trim());
-            break;
-          case 'command-line format':
-            doc.cli = value.textContent.trim();
-            break;
-        }
-      }
-      anchors.push(doc);
+      anchors.push(createDoc(element));
     }
     cbSuccess(anchors, url);
   });

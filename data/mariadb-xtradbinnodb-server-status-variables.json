@@ -1,64 +1,62 @@
 {
   "data": [
     {
-      "dataType": "numeric",
       "id": "innodb_adaptive_hash_cells",
       "name": "Innodb_adaptive_hash_cells",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_adaptive_hash_hash_searches",
       "name": "Innodb_adaptive_hash_hash_searches",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_adaptive_hash_heap_buffers",
       "name": "Innodb_adaptive_hash_heap_buffers",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_adaptive_hash_non_hash_searches",
       "name": "Innodb_adaptive_hash_non_hash_searches",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_available_undo_logs",
       "name": "Innodb_available_undo_logs",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_background_log_sync",
       "name": "Innodb_background_log_sync",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_bytes_data",
       "name": "Innodb_buffer_pool_bytes_data",
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_bytes_dirty",
       "name": "Innodb_buffer_pool_bytes_dirty",
       "scope": [
@@ -67,31 +65,30 @@
       "type": "integer"
     },
     {
-      "dataType": "string",
       "id": "innodb_buffer_pool_dump_status",
       "name": "Innodb_buffer_pool_dump_status",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "boolean",
       "id": "innodb_buffer_pool_load_incomplete",
       "name": "Innodb_buffer_pool_load_incomplete",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "string",
       "id": "innodb_buffer_pool_load_status",
       "name": "Innodb_buffer_pool_load_status",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_data",
       "name": "Innodb_buffer_pool_pages_data",
       "scope": [
@@ -100,7 +97,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_dirty",
       "name": "Innodb_buffer_pool_pages_dirty",
       "scope": [
@@ -109,7 +105,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_flushed",
       "name": "Innodb_buffer_pool_pages_flushed",
       "scope": [
@@ -118,15 +113,14 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_lru_flushed",
       "name": "Innodb_buffer_pool_pages_LRU_flushed",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_free",
       "name": "Innodb_buffer_pool_pages_free",
       "scope": [
@@ -135,23 +129,22 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_made_not_young",
       "name": "Innodb_buffer_pool_pages_made_not_young",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_made_young",
       "name": "Innodb_buffer_pool_pages_made_young",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_misc",
       "name": "Innodb_buffer_pool_pages_misc",
       "scope": [
@@ -160,15 +153,14 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_old",
       "name": "Innodb_buffer_pool_pages_old",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_pages_total",
       "name": "Innodb_buffer_pool_pages_total",
       "scope": [
@@ -177,7 +169,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_read_ahead",
       "name": "Innodb_buffer_pool_read_ahead",
       "scope": [
@@ -186,7 +177,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_read_ahead_evicted",
       "name": "Innodb_buffer_pool_read_ahead_evicted",
       "scope": [
@@ -195,7 +185,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_read_ahead_rnd",
       "name": "Innodb_buffer_pool_read_ahead_rnd",
       "scope": [
@@ -204,7 +193,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_read_requests",
       "name": "Innodb_buffer_pool_read_requests",
       "scope": [
@@ -213,7 +201,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_reads",
       "name": "Innodb_buffer_pool_reads",
       "scope": [
@@ -222,15 +209,14 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_resize_status",
       "name": "Innodb_buffer_pool_resize_status",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_wait_free",
       "name": "Innodb_buffer_pool_wait_free",
       "scope": [
@@ -239,7 +225,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_buffer_pool_write_requests",
       "name": "Innodb_buffer_pool_write_requests",
       "scope": [
@@ -248,31 +233,30 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_checkpoint_age",
       "name": "Innodb_checkpoint_age",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_checkpoint_max_age",
       "name": "Innodb_checkpoint_max_age",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_checkpoint_target_age",
       "name": "Innodb_checkpoint_target_age",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_current_row_locks",
       "name": "Innodb_current_row_locks",
       "scope": [
@@ -281,7 +265,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_data_fsyncs",
       "name": "Innodb_data_fsyncs",
       "scope": [
@@ -290,7 +273,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_data_pending_fsyncs",
       "name": "Innodb_data_pending_fsyncs",
       "scope": [
@@ -299,7 +281,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_data_pending_reads",
       "name": "Innodb_data_pending_reads",
       "scope": [
@@ -308,7 +289,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_data_pending_writes",
       "name": "Innodb_data_pending_writes",
       "scope": [
@@ -317,7 +297,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_data_read",
       "name": "Innodb_data_read",
       "scope": [
@@ -326,7 +305,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_data_reads",
       "name": "Innodb_data_reads",
       "scope": [
@@ -335,7 +313,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_data_writes",
       "name": "Innodb_data_writes",
       "scope": [
@@ -344,7 +321,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_data_written",
       "name": "Innodb_data_written",
       "scope": [
@@ -353,7 +329,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_dblwr_pages_written",
       "name": "Innodb_dblwr_pages_written",
       "scope": [
@@ -362,7 +337,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_dblwr_writes",
       "name": "Innodb_dblwr_writes",
       "scope": [
@@ -371,7 +345,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_deadlocks",
       "name": "Innodb_deadlocks",
       "scope": [
@@ -380,7 +353,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_defragment_compression_failures",
       "name": "Innodb_defragment_compression_failures",
       "scope": [
@@ -389,7 +361,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_defragment_count",
       "name": "Innodb_defragment_count",
       "scope": [
@@ -398,7 +369,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_defragment_failures",
       "name": "Innodb_defragment_failures",
       "scope": [
@@ -407,7 +377,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_dict_tables",
       "name": "Innodb_dict_tables",
       "scope": [
@@ -416,239 +385,238 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_encryption_n_merge_blocks_decrypted",
       "name": "Innodb_encryption_n_merge_blocks_decrypted",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_encryption_n_merge_blocks_encrypted",
       "name": "Innodb_encryption_n_merge_blocks_encrypted",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_encryption_n_rowlog_blocks_decrypted",
       "name": "Innodb_encryption_n_rowlog_blocks_decrypted",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_encryption_n_rowlog_blocks_encrypted",
       "name": "Innodb_encryption_n_rowlog_blocks_encrypted",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_encryption_num_key_requests",
       "name": "Innodb_encryption_num_key_requests",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_encryption_rotation_estimated_iops",
       "name": "Innodb_encryption_rotation_estimated_iops",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_encryption_rotation_pages_flushed",
       "name": "Innodb_encryption_rotation_pages_flushed",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_encryption_rotation_pages_modified",
       "name": "Innodb_encryption_rotation_pages_modified",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_encryption_rotation_pages_read_from_cache",
       "name": "Innodb_encryption_rotation_pages_read_from_cache",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_encryption_rotation_pages_read_from_disk",
       "name": "Innodb_encryption_rotation_pages_read_from_disk",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "id": "innodb_have_atomic_builtins",
       "name": "Innodb_have_atomic_builtins",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "id": "innodb_have_bzip2",
       "name": "Innodb_have_bzip2",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "id": "innodb_have_lz4",
       "name": "Innodb_have_lz4",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "id": "innodb_have_lzma",
       "name": "Innodb_have_lzma",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "id": "innodb_have_lzo",
       "name": "Innodb_have_lzo",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_have_punch_hole",
       "name": "Innodb_have_punch_hole",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "id": "innodb_have_snappy",
       "name": "Innodb_have_snappy",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_history_list_length",
       "name": "Innodb_history_list_length",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_ibuf_discarded_delete_marks",
       "name": "Innodb_ibuf_discarded_delete_marks",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_ibuf_discarded_deletes",
       "name": "Innodb_ibuf_discarded_deletes",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_ibuf_discarded_inserts",
       "name": "Innodb_ibuf_discarded_inserts",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_ibuf_free_list",
       "name": "Innodb_ibuf_free_list",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_ibuf_merged_delete_marks",
       "name": "Innodb_ibuf_merged_delete_marks",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_ibuf_merged_deletes",
       "name": "Innodb_ibuf_merged_deletes",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_ibuf_merged_inserts",
       "name": "Innodb_ibuf_merged_inserts",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_ibuf_merges",
       "name": "Innodb_ibuf_merges",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_ibuf_segment_size",
       "name": "Innodb_ibuf_segment_size",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_ibuf_size",
       "name": "Innodb_ibuf_size",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_instant_alter_column",
       "name": "Innodb_instant_alter_column",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_log_waits",
       "name": "Innodb_log_waits",
       "scope": [
@@ -657,7 +625,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_log_write_requests",
       "name": "Innodb_log_write_requests",
       "scope": [
@@ -666,7 +633,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_log_writes",
       "name": "Innodb_log_writes",
       "scope": [
@@ -675,155 +641,154 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_lsn_current",
       "name": "Innodb_lsn_current",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_lsn_flushed",
       "name": "Innodb_lsn_flushed",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_lsn_last_checkpoint",
       "name": "Innodb_lsn_last_checkpoint",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_master_thread_1_second_loops",
       "name": "Innodb_master_thread_1_second_loops",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_master_thread_10_second_loops",
       "name": "Innodb_master_thread_10_second_loops",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_master_thread_active_loops",
       "name": "Innodb_master_thread_active_loops",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_master_thread_background_loops",
       "name": "Innodb_master_thread_background_loops",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_master_thread_idle_loops",
       "name": "Innodb_master_thread_idle_loops",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_master_thread_main_flush_loops",
       "name": "Innodb_master_thread_main_flush_loops",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_master_thread_sleeps",
       "name": "Innodb_master_thread_sleeps",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_max_trx_id",
       "name": "Innodb_max_trx_id",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_mem_adaptive_hash",
       "name": "Innodb_mem_adaptive_hash",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_mem_dictionary",
       "name": "Innodb_mem_dictionary",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_mem_total",
       "name": "Innodb_mem_total",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_mutex_os_waits",
       "name": "Innodb_mutex_os_waits",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_mutex_spin_rounds",
       "name": "Innodb_mutex_spin_rounds",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_mutex_spin_waits",
       "name": "Innodb_mutex_spin_waits",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_index_pages_written",
       "name": "Innodb_num_index_pages_written",
-      "scope": []
+      "scope": [],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_non_index_pages_written",
       "name": "Innodb_num_non_index_pages_written",
-      "scope": []
+      "scope": [],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_open_files",
       "name": "Innodb_num_open_files",
       "scope": [
@@ -832,7 +797,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_page_compressed_trim_op",
       "name": "Innodb_num_page_compressed_trim_op",
       "scope": [
@@ -841,7 +805,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_page_compressed_trim_op_saved",
       "name": "Innodb_num_page_compressed_trim_op_saved",
       "scope": [
@@ -850,7 +813,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_pages_decrypted",
       "name": "Innodb_num_pages_decrypted",
       "scope": [
@@ -859,7 +821,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_pages_encrypted",
       "name": "Innodb_num_pages_encrypted",
       "scope": [
@@ -868,7 +829,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_pages_page_compressed",
       "name": "Innodb_num_pages_page_compressed",
       "scope": [
@@ -877,7 +837,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_pages_page_compression_error",
       "name": "Innodb_num_pages_page_compression_error",
       "scope": [
@@ -886,7 +845,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_pages_page_decompressed",
       "name": "Innodb_num_pages_page_decompressed",
       "scope": [
@@ -895,7 +853,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_num_pages_page_encryption_error",
       "name": "Innodb_num_pages_page_encryption_error",
       "scope": [
@@ -904,31 +861,30 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_oldest_view_low_limit_trx_id",
       "name": "Innodb_oldest_view_low_limit_trx_id",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_onlineddl_pct_progress",
       "name": "Innodb_onlineddl_pct_progress",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_onlineddl_rowlog_pct_used",
       "name": "Innodb_onlineddl_rowlog_pct_used",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_onlineddl_rowlog_rows",
       "name": "Innodb_onlineddl_rowlog_rows",
       "scope": [
@@ -937,7 +893,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_os_log_fsyncs",
       "name": "Innodb_os_log_fsyncs",
       "scope": [
@@ -946,7 +901,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_os_log_pending_fsyncs",
       "name": "Innodb_os_log_pending_fsyncs",
       "scope": [
@@ -955,7 +909,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_os_log_pending_writes",
       "name": "Innodb_os_log_pending_writes",
       "scope": [
@@ -964,80 +917,69 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_os_log_written",
       "name": "Innodb_os_log_written",
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
-      "dataType": "",
       "id": "innodb_page_compression_saved",
       "name": "Innodb_page_compression_saved",
-      "scope": [],
-      "type": "byte"
+      "scope": []
     },
     {
-      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect512",
       "name": "Innodb_page_compression_trim_sect512",
       "scope": [],
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect1024",
       "name": "Innodb_page_compression_trim_sect1024",
       "scope": [],
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect2048",
       "name": "Innodb_page_compression_trim_sect2048",
       "scope": [],
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect4096",
       "name": "Innodb_page_compression_trim_sect4096",
       "scope": [],
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect8192",
       "name": "Innodb_page_compression_trim_sect8192",
       "scope": [],
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect16384",
       "name": "Innodb_page_compression_trim_sect16384",
       "scope": [],
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_page_compression_trim_sect32768",
       "name": "Innodb_page_compression_trim_sect32768",
       "scope": [],
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_page_size",
       "name": "Innodb_page_size",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_pages_created",
       "name": "Innodb_pages_created",
       "scope": [
@@ -1046,7 +988,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_pages_read",
       "name": "Innodb_pages_read",
       "scope": [
@@ -1055,15 +996,14 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_pages0_read",
       "name": "Innodb_pages0_read",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_pages_written",
       "name": "Innodb_pages_written",
       "scope": [
@@ -1072,31 +1012,30 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_purge_trx_id",
       "name": "Innodb_purge_trx_id",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_purge_undo_no",
       "name": "Innodb_purge_undo_no",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_read_views_memory",
       "name": "Innodb_read_views_memory",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_row_lock_current_waits",
       "name": "Innodb_row_lock_current_waits",
       "scope": [
@@ -1105,7 +1044,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_row_lock_numbers",
       "name": "Innodb_row_lock_numbers",
       "scope": [
@@ -1114,31 +1052,30 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_row_lock_time",
       "name": "Innodb_row_lock_time",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_row_lock_time_avg",
       "name": "Innodb_row_lock_time_avg",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_row_lock_time_max",
       "name": "Innodb_row_lock_time_max",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_row_lock_time_waits",
       "name": "Innodb_row_lock_time_waits",
       "scope": [
@@ -1147,7 +1084,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_rows_deleted",
       "name": "Innodb_rows_deleted",
       "scope": [
@@ -1156,7 +1092,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_rows_inserted",
       "name": "Innodb_rows_inserted",
       "scope": [
@@ -1165,7 +1100,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_rows_read",
       "name": "Innodb_rows_read",
       "scope": [
@@ -1174,7 +1108,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_rows_updated",
       "name": "Innodb_rows_updated",
       "scope": [
@@ -1183,127 +1116,126 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_s_lock_os_waits",
       "name": "Innodb_s_lock_os_waits",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_s_lock_spin_rounds",
       "name": "Innodb_s_lock_spin_rounds",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_s_lock_spin_waits",
       "name": "Innodb_s_lock_spin_waits",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_scrub_background_page_reorganizations",
       "name": "Innodb_scrub_background_page_reorganizations",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_scrub_background_page_split_failures_missing_index",
       "name": "Innodb_scrub_background_page_split_failures_missing_index",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_scrub_background_page_split_failures_out_of_filespace",
       "name": "Innodb_scrub_background_page_split_failures_out_of_filespace",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_scrub_background_page_split_failures_underflow",
       "name": "Innodb_scrub_background_page_split_failures_underflow",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_scrub_background_page_split_failures_unknown",
       "name": "Innodb_scrub_background_page_split_failures_unknown",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_scrub_background_page_splits",
       "name": "Innodb_scrub_background_page_splits",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_scrub_log",
       "name": "Innodb_scrub_log",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_secondary_index_triggered_cluster_reads",
       "name": "Innodb_secondary_index_triggered_cluster_reads",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_secondary_index_triggered_cluster_reads_avoided",
       "name": "Innodb_secondary_index_triggered_cluster_reads_avoided",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_system_rows_deleted",
       "name": "Innodb_system_rows_deleted",
-      "scope": []
+      "scope": [],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_system_rows_inserted",
       "name": "Innodb_system_rows_inserted",
-      "scope": []
+      "scope": [],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_system_rows_read",
       "name": "Innodb_system_rows_read",
-      "scope": []
+      "scope": [],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_system_rows_updated",
       "name": "Innodb_system_rows_updated",
-      "scope": []
+      "scope": [],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_truncated_status_writes",
       "name": "Innodb_truncated_status_writes",
       "scope": [
@@ -1312,28 +1244,28 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_x_lock_os_waits",
       "name": "Innodb_x_lock_os_waits",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_x_lock_spin_rounds",
       "name": "Innodb_x_lock_spin_rounds",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "innodb_x_lock_spin_waits",
       "name": "Innodb_x_lock_spin_waits",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     }
   ],
   "name": "xtradbinnodb-server-status-variables",

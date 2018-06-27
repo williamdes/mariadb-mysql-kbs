@@ -2,7 +2,6 @@
   "data": [
     {
       "cli": "--extra-max-connections=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "extra_max_connections",
@@ -18,18 +17,17 @@
     },
     {
       "cli": "--extra-port=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": false,
       "id": "extra_port",
       "name": "extra_port",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--thread-handling=name",
-      "dataType": "enumeration",
       "default": "one-thread-per-connection",
       "dynamic": false,
       "id": "thread_handling",
@@ -37,6 +35,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "no-threads",
         "one-thread-per-connection",
@@ -45,7 +44,6 @@
     },
     {
       "cli": "thread-pool-idle-timeout=#",
-      "dataType": "numeric",
       "default": "60",
       "dynamic": true,
       "id": "thread_pool_idle_timeout",
@@ -57,7 +55,6 @@
     },
     {
       "cli": "thread-pool-max-threads=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "thread_pool_max_threads",
       "name": "thread_pool_max_threads",
@@ -72,14 +69,12 @@
     },
     {
       "cli": "thread-pool-min-threads=#",
-      "dataType": "numeric",
       "default": "1",
       "id": "thread_pool_min_threads",
       "name": "thread_pool_min_threads",
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "3",
       "dynamic": true,
       "id": "thread_pool_oversubscribe",
@@ -90,11 +85,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "thread-pool-kickup-timer=#",
-      "dataType": "numeric",
       "default": "1000",
       "dynamic": true,
       "id": "thread_pool_prio_kickup_timer",
@@ -105,11 +100,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--thread-pool-priority=#",
-      "dataType": "enum",
       "default": "auto",
       "id": "thread_pool_priority",
       "name": "thread_pool_priority",
@@ -125,7 +120,6 @@
     },
     {
       "cli": "--thread-pool-size=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "thread_pool_size",
       "name": "thread_pool_size",
@@ -140,7 +134,6 @@
     },
     {
       "cli": "--thread-pool-stall-limit=#",
-      "dataType": "numeric",
       "default": "500",
       "dynamic": true,
       "id": "thread_pool_stall_limit",
@@ -151,10 +144,10 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "threadpool_idle_threads",
       "name": "Threadpool_idle_threads",
       "scope": [
@@ -164,7 +157,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "threadpool_threads",
       "name": "Threadpool_threads",
       "scope": [

@@ -2,7 +2,6 @@
   "data": [
     {
       "cli": "--mroonga-action-on-fulltext-query-error=value",
-      "dataType": "enum",
       "default": "ERROR_AND_LOG",
       "dynamic": true,
       "id": "mroonga_action_on_fulltext_query_error",
@@ -14,7 +13,6 @@
     },
     {
       "cli": "--mroonga-boolean-mode-syntax-flags=value",
-      "dataType": "enum",
       "default": "DEFAULT",
       "dynamic": true,
       "id": "mroonga_boolean_mode_syntax_flags",
@@ -26,28 +24,27 @@
     },
     {
       "cli": "--mroonga-database-path-prefix=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "mroonga_database_path_prefix",
       "name": "mroonga_database_path_prefix",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--mroonga-default-parser=value",
-      "dataType": "string",
       "default": "TokenBigram",
       "dynamic": true,
       "id": "mroonga_default_parser",
       "name": "mroonga_default_parser",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--mroonga-default-tokenizer=value",
-      "dataType": "string",
       "default": "TokenBigram",
       "dynamic": true,
       "id": "mroonga_default_tokenizer",
@@ -55,21 +52,21 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--mroonga-default-wrapper-engine=value",
-      "dataType": "string",
       "dynamic": false,
       "id": "mroonga_default_wrapper_engine",
       "name": "mroonga_default_wrapper_engine",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--mroonga-dry-write[={0|1}]",
-      "dataType": "boolean",
       "default": "off",
       "dynamic": true,
       "id": "mroonga_dry_write",
@@ -77,22 +74,22 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--mroonga-enable-operations-recording={0|1}",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "mroonga_enable_operations_recording",
       "name": "mroonga_enable_operations_recording",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--mroonga-enable-optimization={0|1}",
-      "dataType": "boolean",
       "default": "on",
       "dynamic": true,
       "id": "mroonga_enable_optimization",
@@ -100,54 +97,54 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "none",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "mroonga_libgroonga_embedded",
       "name": "mroonga_libgroonga_embedded",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "none",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "mroonga_libgroonga_support_zlib",
       "name": "mroonga_libgroonga_support_zlib",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "none",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "mroonga_libgroonga_support_zstd",
       "name": "mroonga_libgroonga_support_zstd",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "none",
-      "dataType": "string",
       "dynamic": false,
       "id": "mroonga_libgroonga_version",
       "name": "mroonga_libgroonga_version",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "<<code>>--mroonga-lock-timeout=#</code>>",
-      "dataType": "numeric",
       "default": "900000",
       "dynamic": true,
       "id": "mroonga_lock_timeout",
@@ -158,22 +155,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--mroonga-log-file=value",
-      "dataType": "string",
       "default": "groonga.log",
       "dynamic": true,
       "id": "mroonga_log_file",
       "name": "mroonga_log_file",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--mroonga-log-level=value",
-      "dataType": "enum",
       "default": "NOTICE",
       "dynamic": true,
       "id": "mroonga_log_level",
@@ -184,7 +181,6 @@
     },
     {
       "cli": "--mroonga-match-escalation-threshold=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "mroonga_match_escalation_threshold",
@@ -196,11 +192,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--mroonga-max-n-records-for-estimate=#",
-      "dataType": "numeric",
       "default": "1000",
       "dynamic": true,
       "id": "mroonga_max_n_records_for_estimate",
@@ -217,34 +213,34 @@
     },
     {
       "cli": "--mroonga-query-log-file=filename",
-      "dataType": "string",
       "dynamic": true,
       "id": "mroonga_query_log_file",
       "name": "mroonga_query_log_file",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--mroonga-vector-column-delimiter=value",
-      "dataType": "string",
       "default": " ",
       "dynamic": true,
       "id": "mroonga_vector_column_delimiter",
       "name": "mroonga_vector_column_delimiter",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "none",
-      "dataType": "string",
       "dynamic": false,
       "id": "mroonga_version",
       "name": "mroonga_version",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     }
   ],
   "name": "mroonga-system-variables",

@@ -2,18 +2,17 @@
   "data": [
     {
       "cli": "--wsrep-auto-increment-control[={0|1}]",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "wsrep_auto_increment_control",
       "name": "wsrep_auto_increment_control",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-causal-reads[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_causal_reads",
@@ -21,96 +20,96 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-certify-nonpk[={0|1}]",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "wsrep_certify_nonpk",
       "name": "wsrep_certify_nonPK",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-cluster-address=value",
-      "dataType": "string",
       "dynamic": false,
       "id": "wsrep_cluster_address",
       "name": "wsrep_cluster_address",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-cluster-name=value",
-      "dataType": "string",
       "default": "my_wsrep_cluster",
       "dynamic": true,
       "id": "wsrep_cluster_name",
       "name": "wsrep_cluster_name",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-convert-lock-to-trx[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_convert_lock_to_trx",
       "name": "wsrep_convert_LOCK_to_trx",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-data-home-dir=value",
-      "dataType": "string",
       "dynamic": false,
       "id": "wsrep_data_home_dir",
       "name": "wsrep_data_home_dir",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-dbug-option=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "wsrep_dbug_option",
       "name": "wsrep_dbug_option",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-debug[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_debug",
       "name": "wsrep_debug",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-desync[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_desync",
       "name": "wsrep_desync",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-dirty-reads[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_dirty_reads",
@@ -119,6 +118,7 @@
         "global",
         "session"
       ],
+      "type": "boolean",
       "validValues": [
         "ON",
         "OFF"
@@ -126,18 +126,17 @@
     },
     {
       "cli": "--wsrep-drupal-282555-workaround[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_drupal_282555_workaround",
       "name": "wsrep_drupal_282555_workaround",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-forced-binlog-format=value",
-      "dataType": "enum",
       "default": "NONE",
       "dynamic": true,
       "id": "wsrep_forced_binlog_format",
@@ -154,7 +153,6 @@
     },
     {
       "cli": "--wsrep-gtid-domain-id=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "wsrep_gtid_domain_id",
@@ -165,44 +163,44 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--wsrep-gtid-mode[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_gtid_mode",
       "name": "wsrep_gtid_mode",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-load-data-splitting[={0|1}]",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "wsrep_load_data_splitting",
       "name": "wsrep_load_data_splitting",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-log-conflicts[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_log_conflicts",
       "name": "wsrep_log_conflicts",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-max-ws-rows=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "wsrep_max_ws_rows",
       "name": "wsrep_max_ws_rows",
@@ -217,7 +215,6 @@
     },
     {
       "cli": "--wsrep-max-ws-size=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "wsrep_max_ws_size",
       "name": "wsrep_max_ws_size",
@@ -228,11 +225,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--wsrep-mysql-replication-bundle=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": false,
       "id": "wsrep_mysql_replication_bundle",
@@ -248,49 +244,48 @@
     },
     {
       "cli": "--wsrep-node-address=value",
-      "dataType": "string",
       "default": "eth0",
       "dynamic": false,
       "id": "wsrep_node_address",
       "name": "wsrep_node_address",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-node-incoming-address=value",
-      "dataType": "string",
       "default": "AUTO",
       "dynamic": false,
       "id": "wsrep_node_incoming_address",
       "name": "wsrep_node_incoming_address",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-node-name=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "wsrep_node_name",
       "name": "wsrep_node_name",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-notify-command=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "wsrep_notify_cmd",
       "name": "wsrep_notify_cmd",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-on[={0|1}]",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "wsrep_on",
@@ -299,6 +294,7 @@
         "global",
         "session"
       ],
+      "type": "boolean",
       "validValues": [
         "ON",
         "OFF"
@@ -306,7 +302,6 @@
     },
     {
       "cli": "--wsrep-osu-method[=value]",
-      "dataType": "enum",
       "default": "TOI",
       "dynamic": true,
       "id": "wsrep_osu_method",
@@ -322,48 +317,47 @@
     },
     {
       "cli": "none",
-      "dataType": "string",
       "dynamic": false,
       "id": "wsrep_patch_version",
       "name": "wsrep_patch_version",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-provider=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "wsrep_provider",
       "name": "wsrep_provider",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-provider-options=value",
-      "dataType": "string",
       "dynamic": false,
       "id": "wsrep_provider_options",
       "name": "wsrep_provider_options",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-recover[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "wsrep_recover",
       "name": "wsrep_recover",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-reject-queries[=value]",
-      "dataType": "enum",
       "default": "NONE",
       "dynamic": true,
       "id": "wsrep_reject_queries",
@@ -379,7 +373,6 @@
     },
     {
       "cli": "--wsrep-replicate-myisam[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_replicate_myisam",
@@ -387,6 +380,7 @@
       "scope": [
         "global"
       ],
+      "type": "boolean",
       "validValues": [
         "ON",
         "OFF"
@@ -394,18 +388,17 @@
     },
     {
       "cli": "--wsrep-restart-slave[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_restart_slave",
       "name": "wsrep_restart_slave",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-retry-autocommit=value",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": false,
       "id": "wsrep_retry_autocommit",
@@ -421,17 +414,16 @@
     },
     {
       "cli": "--wsrep-slave-fk-checks[={0|1}]",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "wsrep_slave_fk_checks",
       "name": "wsrep_slave_FK_checks",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-slave-threads=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "wsrep_slave_threads",
@@ -447,48 +439,47 @@
     },
     {
       "cli": "--wsrep-slave-uk-checks[={0|1}]",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "wsrep_slave_uk_checks",
       "name": "wsrep_slave_UK_checks",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-sst-auth=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "wsrep_sst_auth",
       "name": "wsrep_sst_auth",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-sst-donor=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "wsrep_sst_donor",
       "name": "wsrep_sst_donor",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-sst-donor-rejects-queries[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "wsrep_sst_donor_rejects_queries",
       "name": "wsrep_sst_donor_rejects_queries",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-sst-method=value",
-      "dataType": "string",
       "default": "rsync",
       "dynamic": true,
       "id": "wsrep_sst_method",
@@ -496,6 +487,7 @@
       "scope": [
         "global"
       ],
+      "type": "string",
       "validValues": [
         "rsync",
         "mysqldump",
@@ -506,29 +498,28 @@
     },
     {
       "cli": "--wsrep-sst-receive-address=value",
-      "dataType": "string",
       "default": "AUTO",
       "dynamic": true,
       "id": "wsrep_sst_receive_address",
       "name": "wsrep_sst_receive_address",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-start-position=value",
-      "dataType": "string",
       "default": " 00000000-0000-0000-0000-000000000000:-1",
       "dynamic": true,
       "id": "wsrep_start_position",
       "name": "wsrep_start_position",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--wsrep-sync-wait=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "wsrep_sync_wait",
@@ -537,7 +528,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     }
   ],
   "name": "galera-cluster-system-variables",

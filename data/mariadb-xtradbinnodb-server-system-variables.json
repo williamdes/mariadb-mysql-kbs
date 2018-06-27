@@ -10,18 +10,17 @@
     },
     {
       "cli": "--ignore-builtin-innodb",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "ignore_builtin_innodb",
       "name": "ignore_builtin_innodb",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-adaptive-checkpoint=#",
-      "dataType": "string",
       "default": "estimate",
       "dynamic": true,
       "id": "innodb_adaptive_checkpoint",
@@ -29,6 +28,7 @@
       "scope": [
         "global"
       ],
+      "type": "string",
       "validValues": [
         "none",
         "0",
@@ -42,18 +42,17 @@
     },
     {
       "cli": "--innodb-adaptive-flushing=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_adaptive_flushing",
       "name": "innodb_adaptive_flushing",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-adaptive-flushing-lwm=#",
-      "dataType": "double",
       "default": "10.000000",
       "dynamic": true,
       "id": "innodb_adaptive_flushing_lwm",
@@ -68,7 +67,6 @@
     },
     {
       "cli": "innodb-adaptive-flushing-method=value",
-      "dataType": "enumeration",
       "default": "estimate",
       "dynamic": true,
       "id": "innodb_adaptive_flushing_method",
@@ -76,6 +74,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "native",
         "0",
@@ -87,18 +86,17 @@
     },
     {
       "cli": "--innodb-adaptive-hash-index=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_adaptive_hash_index",
       "name": "innodb_adaptive_hash_index",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-adaptive-hash-index-partitions=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": false,
       "id": "innodb_adaptive_hash_index_partitions",
@@ -114,7 +112,6 @@
     },
     {
       "cli": "innodb-adaptive-hash-index-parts=#",
-      "dataType": "numeric",
       "default": "8",
       "dynamic": false,
       "id": "innodb_adaptive_hash_index_parts",
@@ -130,7 +127,6 @@
     },
     {
       "cli": "--innodb-adaptive-max-sleep-delay=#",
-      "dataType": "numeric",
       "default": "150000",
       "dynamic": true,
       "id": "innodb_adaptive_max_sleep_delay",
@@ -146,7 +142,6 @@
     },
     {
       "cli": "--innodb-additional-mem-pool-size=#",
-      "dataType": "numeric",
       "default": "8388608",
       "dynamic": false,
       "id": "innodb_additional_mem_pool_size",
@@ -158,11 +153,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--innodb-api-bk-commit-interval=#",
-      "dataType": "numeric",
       "default": "5",
       "dynamic": true,
       "id": "innodb_api_bk_commit_interval",
@@ -178,47 +172,47 @@
     },
     {
       "cli": "--innodb-api-disable-rowlock=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_api_disable_rowlock",
       "name": "innodb_api_disable_rowlock",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-api-enable-binlog=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_api_enable_binlog",
       "name": "innodb_api_enable_binlog",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-api-enable-mdl=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_api_enable_mdl",
       "name": "innodb_api_enable_mdl",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-api-trx-level=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_api_trx_level",
       "name": "innodb_api_trx_level",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-auto-lru-dump=#",
@@ -227,7 +221,6 @@
     },
     {
       "cli": "--innodb-autoextend-increment=#",
-      "dataType": "numeric",
       "default": "8",
       "dynamic": true,
       "id": "innodb_autoextend_increment",
@@ -239,11 +232,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--innodb-autoinc-lock-mode=#",
-      "dataType": "numeric",
       "dynamic": false,
       "id": "innodb_autoinc_lock_mode",
       "name": "innodb_autoinc_lock_mode",
@@ -253,11 +245,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-background-scrub-data-check-interval=#",
-      "dataType": "numeric",
       "default": "3600",
       "dynamic": true,
       "id": "innodb_background_scrub_data_check_interval",
@@ -268,22 +260,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-background-scrub-data-compressed={0|1}",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": true,
       "id": "innodb_background_scrub_data_compressed",
       "name": "innodb_background_scrub_data_compressed",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-background-scrub-data-interval=#",
-      "dataType": "numeric",
       "default": "604800",
       "dynamic": true,
       "id": "innodb_background_scrub_data_interval",
@@ -299,29 +291,28 @@
     },
     {
       "cli": "--innodb-background-scrub-data-uncompressed={0|1}",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": true,
       "id": "innodb_background_scrub_data_uncompressed",
       "name": "innodb_background_scrub_data_uncompressed",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-blocking-buffer-pool-restore={1|2}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_blocking_buffer_pool_restore",
       "name": "innodb_blocking_buffer_pool_restore",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-buf-dump-status-frequency=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_buf_dump_status_frequency",
@@ -332,11 +323,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-buffer-pool-chunk-size=#",
-      "dataType": "numeric",
       "default": "134217728",
       "dynamic": false,
       "id": "innodb_buffer_pool_chunk_size",
@@ -346,32 +337,32 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-buffer-pool-dump-at-shutdown=#",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "innodb_buffer_pool_dump_at_shutdown",
       "name": "innodb_buffer_pool_dump_at_shutdown",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-buffer-pool-dump-now=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_buffer_pool_dump_now",
       "name": "innodb_buffer_pool_dump_now",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-buffer-pool-dump-pct=#",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "innodb_buffer_pool_dump_pct",
       "name": "innodb_buffer_pool_dump_pct",
@@ -381,11 +372,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-buffer-pool-evict=#",
-      "dataType": "string",
       "default": "\"\"",
       "dynamic": true,
       "id": "innodb_buffer_pool_evict",
@@ -393,76 +384,76 @@
       "scope": [
         "global"
       ],
+      "type": "string",
       "validValues": []
     },
     {
       "cli": "--innodb-buffer-pool-filename=file",
-      "dataType": "string",
       "default": "ib_buffer_pool",
       "dynamic": true,
       "id": "innodb_buffer_pool_filename",
       "name": "innodb_buffer_pool_filename",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--innodb-buffer-pool-instances=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": false,
       "id": "innodb_buffer_pool_instances",
       "name": "innodb_buffer_pool_instances",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-buffer-pool-load-abort=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_buffer_pool_load_abort",
       "name": "innodb_buffer_pool_load_abort",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-buffer-pool-load-at-startup=#",
-      "dataType": "boolean",
       "dynamic": false,
       "id": "innodb_buffer_pool_load_at_startup",
       "name": "innodb_buffer_pool_load_at_startup",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-buffer-pool-load-now=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_buffer_pool_load_now",
       "name": "innodb_buffer_pool_load_now",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-buffer-pool-populate={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_buffer_pool_populate",
       "name": "innodb_buffer_pool_populate",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-buffer-pool-restore-at-startup",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_buffer_pool_restore_at_startup",
@@ -474,29 +465,28 @@
     },
     {
       "cli": "innodb-buffer-pool-shm-checksum={0|1}",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "innodb_buffer_pool_shm_checksum",
       "name": "innodb_buffer_pool_shm_checksum",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-buffer-pool-shm-key={0|1}",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": false,
       "id": "innodb_buffer_pool_shm_key",
       "name": "innodb_buffer_pool_shm_key",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-buffer-pool-size=#",
-      "dataType": "numeric",
       "default": "134217728",
       "dynamic": false,
       "id": "innodb_buffer_pool_size",
@@ -508,11 +498,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--innodb-change-buffer-max-size=#",
-      "dataType": "numeric",
       "default": "25",
       "dynamic": true,
       "id": "innodb_change_buffer_max_size",
@@ -528,17 +517,16 @@
     },
     {
       "cli": "--innodb-change-buffering=#",
-      "dataType": "enumeration",
       "dynamic": true,
       "id": "innodb_change_buffering",
       "name": "innodb_change_buffering",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "--innodb-change-buffering-debug=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_change_buffering_debug",
@@ -549,11 +537,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "innodb-checkpoint-age-target=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_checkpoint_age_target",
@@ -564,17 +552,18 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-checksum-algorithm=#",
-      "dataType": "enumeration",
       "dynamic": true,
       "id": "innodb_checksum_algorithm",
       "name": "innodb_checksum_algorithm",
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "innodb",
         "crc32",
@@ -586,18 +575,17 @@
     },
     {
       "cli": "--innodb-checksums, --skip-innodb-checksums",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "innodb_checksums",
       "name": "innodb_checksums",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-cleaner-lsn-age-factor=value",
-      "dataType": "enum",
       "dynamic": true,
       "id": "innodb_cleaner_lsn_age_factor",
       "name": "innodb_cleaner_lsn_age_factor",
@@ -608,18 +596,17 @@
     },
     {
       "cli": "--innodb-cmp-per-index-enabled=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_cmp_per_index_enabled",
       "name": "innodb_cmp_per_index_enabled",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-commit-concurrency=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_commit_concurrency",
@@ -635,7 +622,6 @@
     },
     {
       "cli": "--innodb-compression-algorithm=value",
-      "dataType": "enum",
       "default": "none",
       "dynamic": true,
       "id": "innodb_compression_algorithm",
@@ -655,7 +641,6 @@
     },
     {
       "cli": "--innodb-compression-default={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_compression_default",
@@ -663,11 +648,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-compression-failure-threshold-pct=#",
-      "dataType": "numeric",
       "default": "5",
       "dynamic": true,
       "id": "innodb_compression_failure_threshold_pct",
@@ -678,11 +663,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-compression-level=#",
-      "dataType": "numeric",
       "default": "6",
       "dynamic": true,
       "id": "innodb_compression_level",
@@ -693,11 +678,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-compression-pad-pct-max=#",
-      "dataType": "numeric",
       "default": "50",
       "dynamic": true,
       "id": "innodb_compression_pad_pct_max",
@@ -708,11 +693,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-concurrency-tickets=#",
-      "dataType": "numeric",
       "default": "500",
       "dynamic": true,
       "id": "innodb_concurrency_tickets",
@@ -724,51 +709,50 @@
     },
     {
       "cli": "innodb-corrupt-table-action=value",
-      "dataType": "enumeration",
       "dynamic": true,
       "id": "innodb_corrupt_table_action",
       "name": "innodb_corrupt_table_action",
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": []
     },
     {
       "cli": "--innodb-data-file-path=name",
-      "dataType": "numeric",
       "default": "ibdata1:10M:autoextend",
       "dynamic": false,
       "id": "innodb_data_file_path",
       "name": "innodb_data_file_path",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-data-home-dir=path",
-      "dataType": "directory name",
       "default": "The MariaDB data directory",
       "dynamic": false,
       "id": "innodb_data_home_dir",
       "name": "innodb_data_home_dir",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "directory name"
     },
     {
       "cli": "--innodb-deadlock-detect",
-      "dataType": "boolean",
       "default": "1",
       "dynamic": true,
       "id": "innodb_deadlock_detect",
       "name": "innodb_deadlock_detect",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-default-page-encryption-key=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "innodb_default_page_encryption_key",
@@ -779,11 +763,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-default-encryption-key-id=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "innodb_default_encryption_key_id",
@@ -795,11 +779,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-default-row-format=value",
-      "dataType": "enum",
       "default": "dynamic",
       "dynamic": true,
       "id": "innodb_default_row_format",
@@ -815,18 +799,17 @@
     },
     {
       "cli": "--innodb-defragment=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_defragment",
       "name": "innodb_defragment",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-defragment-fill-factor=#",
-      "dataType": "double",
       "default": "0.9",
       "dynamic": true,
       "id": "innodb_defragment_fill_factor",
@@ -841,7 +824,6 @@
     },
     {
       "cli": "--innodb-defragment-fill-factor-n-recs=#",
-      "dataType": "numeric",
       "default": "20",
       "dynamic": true,
       "id": "innodb_defragment_fill_factor_n_recs",
@@ -857,7 +839,6 @@
     },
     {
       "cli": "--innodb-defragment-frequency=#",
-      "dataType": "integer",
       "default": "40",
       "dynamic": true,
       "id": "innodb_defragment_frequency",
@@ -873,7 +854,6 @@
     },
     {
       "cli": "--innodb-defragment-n-pages=#",
-      "dataType": "numeric",
       "default": "7",
       "dynamic": true,
       "id": "innodb_defragment_n_pages",
@@ -889,7 +869,6 @@
     },
     {
       "cli": "--innodb-defragment-stats-accuracy=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_defragment_stats_accuracy",
@@ -905,7 +884,6 @@
     },
     {
       "cli": "innodb-dict-size-limit=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_dict_size_limit",
@@ -913,44 +891,43 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--innodb-disable-sort-file-cache=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_disable_sort_file_cache",
       "name": "innodb_disable_sort_file_cache",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "none",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_disallow_writes",
       "name": "innodb_disallow_writes",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-doublewrite, --skip-innodb-doublewrite",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "innodb_doublewrite",
       "name": "innodb_doublewrite",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-doublewrite-file=filename",
-      "dataType": "filename",
       "default": "NULL",
       "dynamic": false,
       "id": "innodb_doublewrite_file",
@@ -961,7 +938,6 @@
     },
     {
       "cli": "innodb-empty-free-list-algorithm=value",
-      "dataType": "enum",
       "dynamic": true,
       "id": "innodb_empty_free_list_algorithm",
       "name": "innodb_empty_free_list_algorithm",
@@ -972,7 +948,6 @@
     },
     {
       "cli": "--innodb-enable-unsafe-group-commit",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_enable_unsafe_group_commit",
@@ -983,22 +958,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-encrypt-log",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_encrypt_log",
       "name": "innodb_encrypt_log",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-encrypt-tables=value",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_encrypt_tables",
@@ -1006,6 +981,7 @@
       "scope": [
         "global"
       ],
+      "type": "boolean",
       "validValues": [
         "ON",
         "OFF",
@@ -1014,7 +990,6 @@
     },
     {
       "cli": "--innodb-encryption-rotate-key-age=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "innodb_encryption_rotate_key_age",
@@ -1025,11 +1000,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-encryption-rotation_iops=#",
-      "dataType": "numeric",
       "default": "100",
       "dynamic": true,
       "id": "innodb_encryption_rotation_iops",
@@ -1040,11 +1015,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-encryption-threads=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_encryption_threads",
@@ -1060,7 +1035,6 @@
     },
     {
       "cli": "--innodb-extra-rsegments=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": false,
       "id": "innodb_extra_rsegments",
@@ -1071,22 +1045,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-extra-undoslots=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_extra_undoslots",
       "name": "innodb_extra_undoslots",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-fake-changes={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_fake_changes",
@@ -1094,22 +1068,22 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-fast-checksum={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_fast_checksum",
       "name": "innodb_fast_checksum",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-fast-shutdown[=#]",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "innodb_fast_shutdown",
@@ -1120,11 +1094,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-fatal-semaphore-wait-threshold=#",
-      "dataType": "numeric",
       "default": "600",
       "dynamic": false,
       "id": "innodb_fatal_semaphore_wait_threshold",
@@ -1140,13 +1114,13 @@
     },
     {
       "cli": "--innodb-file-format=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "innodb_file_format",
       "name": "innodb_file_format",
       "scope": [
         "global"
       ],
+      "type": "string",
       "validValues": [
         "Antelope",
         "Barracuda"
@@ -1154,18 +1128,17 @@
     },
     {
       "cli": "--innodb-file-format-check=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "innodb_file_format_check",
       "name": "innodb_file_format_check",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-file-format-max=value",
-      "dataType": "string",
       "default": "Antelope",
       "dynamic": true,
       "id": "innodb_file_format_max",
@@ -1173,6 +1146,7 @@
       "scope": [
         "global"
       ],
+      "type": "string",
       "validValues": [
         "Antelope",
         "Barracuda"
@@ -1180,18 +1154,17 @@
     },
     {
       "cli": "--innodb-file-per-table",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_file_per_table",
       "name": "innodb_file_per_table",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-fill-factor=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "innodb_fill_factor",
       "name": "innodb_fill_factor",
@@ -1201,10 +1174,10 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "innodb_flush_log_at_timeout",
@@ -1220,7 +1193,6 @@
     },
     {
       "cli": "--innodb-flush-log-at-trx-commit[=#]",
-      "dataType": "enumeration",
       "default": "1",
       "dynamic": true,
       "id": "innodb_flush_log_at_trx_commit",
@@ -1228,6 +1200,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "0",
         "1",
@@ -1237,18 +1210,17 @@
     },
     {
       "cli": "--innodb-flush-method=name",
-      "dataType": "enumeration",
       "dynamic": false,
       "id": "innodb_flush_method",
       "name": "innodb_flush_method",
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": []
     },
     {
       "cli": "innodb-flush-neighbor-pages=value",
-      "dataType": "enumeration",
       "default": "area",
       "dynamic": true,
       "id": "innodb_flush_neighbor_pages",
@@ -1256,6 +1228,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "none",
         "0",
@@ -1267,7 +1240,6 @@
     },
     {
       "cli": "--innodb-flush-neighbors=#",
-      "dataType": "enumeration",
       "default": "1",
       "dynamic": true,
       "id": "innodb_flush_neighbors",
@@ -1275,6 +1247,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "0",
         "1",
@@ -1283,17 +1256,16 @@
     },
     {
       "cli": "--innodb-flush-sync={0|1}",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "innodb_flush_sync",
       "name": "innodb_flush_sync",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-flushing-avg-loops=#",
-      "dataType": "numeric",
       "default": "30",
       "dynamic": true,
       "id": "innodb_flushing_avg_loops",
@@ -1309,29 +1281,28 @@
     },
     {
       "cli": "--innodb-force-load-corrupted",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_force_load_corrupted",
       "name": "innodb_force_load_corrupted",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-force-primary-key",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_force_primary_key",
       "name": "innodb_force_primary_key",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-force-recovery=#",
-      "dataType": "enumeration",
       "default": "0",
       "dynamic": false,
       "id": "innodb_force_recovery",
@@ -1342,11 +1313,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "innodb-foreground-preflush=value",
-      "dataType": "enum",
       "dynamic": true,
       "id": "innodb_foreground_preflush",
       "name": "innodb_foreground_preflush",
@@ -1357,50 +1328,49 @@
     },
     {
       "cli": "--innodb-ft-aux-table=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "innodb_ft_aux_table",
       "name": "innodb_ft_aux_table",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--innodb-ft-cache-size=#",
-      "dataType": "numeric",
       "default": "8000000",
       "dynamic": false,
       "id": "innodb_ft_cache_size",
       "name": "innodb_ft_cache_size",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-ft-enable-diag-print=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_ft_enable_diag_print",
       "name": "innodb_ft_enable_diag_print",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-ft-enable-stopword=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_ft_enable_stopword",
       "name": "innodb_ft_enable_stopword",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-ft-max-token-size=#",
-      "dataType": "numeric",
       "default": "84",
       "dynamic": false,
       "id": "innodb_ft_max_token_size",
@@ -1411,11 +1381,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-ft-min-token-size=#",
-      "dataType": "numeric",
       "default": "3",
       "dynamic": false,
       "id": "innodb_ft_min_token_size",
@@ -1426,11 +1396,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-ft-num-word-optimize=#",
-      "dataType": "numeric",
       "default": "2000",
       "dynamic": true,
       "id": "innodb_ft_num_word_optimize",
@@ -1442,7 +1412,6 @@
     },
     {
       "cli": "--innodb-ft-result-cache-limit=#",
-      "dataType": "numeric",
       "default": "2000000000",
       "dynamic": true,
       "id": "innodb_ft_result_cache_limit",
@@ -1454,21 +1423,20 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--innodb-ft-server-stopword-table=db_name/table_name",
-      "dataType": "string",
       "dynamic": true,
       "id": "innodb_ft_server_stopword_table",
       "name": "innodb_ft_server_stopword_table",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--innodb-ft-sort-pll-degree=#",
-      "dataType": "numeric",
       "default": "2",
       "dynamic": false,
       "id": "innodb_ft_sort_pll_degree",
@@ -1484,7 +1452,6 @@
     },
     {
       "cli": "--innodb-ft-total-cache-size=#",
-      "dataType": "numeric",
       "default": "640000000",
       "dynamic": false,
       "id": "innodb_ft_total_cache_size",
@@ -1495,21 +1462,21 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-ft-user-stopword-table=db_name/table_name",
-      "dataType": "string",
       "dynamic": true,
       "id": "innodb_ft_user_stopword_table",
       "name": "innodb_ft_user_stopword_table",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "innodb-ibuf-accel-rate=#",
-      "dataType": "numeric",
       "default": "100",
       "dynamic": true,
       "id": "innodb_ibuf_accel_rate",
@@ -1520,11 +1487,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "innodb-ibuf-active-contract=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "innodb_ibuf_active_contract",
@@ -1535,11 +1502,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "innodb-ibuf-max-size=#",
-      "dataType": "numeric",
       "dynamic": false,
       "id": "innodb_ibuf_max_size",
       "name": "innodb_ibuf_max_size",
@@ -1549,11 +1516,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--innodb-idle-flush-pct=#",
-      "dataType": "numeric",
       "default": "100",
       "dynamic": true,
       "id": "innodb_idle_flush_pct",
@@ -1564,22 +1530,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-immediate-scrub-data-uncompressed=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_immediate_scrub_data_uncompressed",
       "name": "innodb_immediate_scrub_data_uncompressed",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-import-table-from-xtrabackup=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_import_table_from_xtrabackup",
@@ -1590,22 +1556,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-instrument-semaphores={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_instrument_semaphores",
       "name": "innodb_instrument_semaphores",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-io-capacity=#",
-      "dataType": "numeric",
       "default": "200",
       "dynamic": true,
       "id": "innodb_io_capacity",
@@ -1621,17 +1587,16 @@
     },
     {
       "cli": "--innodb-io-capacity-max=#",
-      "dataType": "numeric",
       "default": "200",
       "dynamic": true,
       "id": "innodb_io_capacity_max",
       "name": "innodb_io_capacity_max",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_kill_idle_transaction",
@@ -1644,28 +1609,27 @@
     },
     {
       "cli": "--innodb-large-prefix",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "innodb_large_prefix",
       "name": "innodb_large_prefix",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-lazy-drop-table={0|1}",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": true,
       "id": "innodb_lazy_drop_table",
       "name": "innodb_lazy_drop_table",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-lock-schedule-algorithm=#",
-      "dataType": "enum",
       "default": "FCFS",
       "dynamic": false,
       "id": "innodb_lock_schedule_algorithm",
@@ -1680,7 +1644,6 @@
     },
     {
       "cli": "--innodb-lock-wait-timeout=#",
-      "dataType": "numeric",
       "default": "50",
       "dynamic": true,
       "id": "innodb_lock_wait_timeout",
@@ -1694,40 +1657,39 @@
     },
     {
       "cli": "--innodb-locking-fake-changes",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_locking_fake_changes",
       "name": "innodb_locking_fake_changes",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-locks-unsafe-for-binlog",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_locks_unsafe_for_binlog",
       "name": "innodb_locks_unsafe_for_binlog",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-log-arch-dir=name",
-      "dataType": "string",
       "default": "./",
       "dynamic": false,
       "id": "innodb_log_arch_dir",
       "name": "innodb_log_arch_dir",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--innodb-log-arch-expire-sec=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_log_arch_expire_sec",
@@ -1739,18 +1701,17 @@
     },
     {
       "cli": "--innodb-log-archive=value",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_log_archive",
       "name": "innodb_log_archive",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-log-block-size=#",
-      "dataType": "numeric",
       "default": "512",
       "dynamic": false,
       "id": "innodb_log_block_size",
@@ -1758,11 +1719,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--innodb-log-buffer-size=#",
-      "dataType": "numeric",
       "default": "8388608",
       "dynamic": false,
       "id": "innodb_log_buffer_size",
@@ -1774,11 +1734,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "innodb-log-checksum-algorithm=value",
-      "dataType": "enum",
       "dynamic": true,
       "id": "innodb_log_checksum_algorithm",
       "name": "innodb_log_checksum_algorithm",
@@ -1789,28 +1748,27 @@
     },
     {
       "cli": "innodb-log-checksums={0|1}",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_log_checksums",
       "name": "innodb_log_checksums",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-log-compressed-pages=#",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "innodb_log_compressed_pages",
       "name": "innodb_log_compressed_pages",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-log-file-size=#",
-      "dataType": "numeric",
       "default": "5242880",
       "dynamic": false,
       "id": "innodb_log_file_size",
@@ -1822,11 +1780,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--innodb-log-files-in-group=#",
-      "dataType": "numeric",
       "default": "2",
       "dynamic": false,
       "id": "innodb_log_files_in_group",
@@ -1842,17 +1799,16 @@
     },
     {
       "cli": "--innodb-log-group-home-dir=path",
-      "dataType": "directory name",
       "dynamic": false,
       "id": "innodb_log_group_home_dir",
       "name": "innodb_log_group_home_dir",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "directory name"
     },
     {
       "cli": "--innodb-log-write-ahead-size=#",
-      "dataType": "numeric",
       "default": "8192",
       "dynamic": true,
       "id": "innodb_log_write_ahead_size",
@@ -1862,22 +1818,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-lru-scan-depth=#",
-      "dataType": "numeric",
       "default": "1024",
       "dynamic": true,
       "id": "innodb_lru_scan_depth",
       "name": "innodb_lru_scan_depth",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "innodb-max-bitmap-file-size=#",
-      "dataType": "numeric",
       "default": "4096",
       "dynamic": true,
       "id": "innodb_max_bitmap_file_size",
@@ -1889,11 +1845,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "innodb-max-changed-pages=#",
-      "dataType": "numeric",
       "default": "1000000",
       "dynamic": true,
       "id": "innodb_max_changed_pages",
@@ -1909,7 +1864,6 @@
     },
     {
       "cli": "--innodb-max-dirty-pages-pct=#",
-      "dataType": "numeric",
       "default": "75",
       "dynamic": false,
       "id": "innodb_max_dirty_pages_pct",
@@ -1920,11 +1874,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-max-dirty-pages-pct-lwm=#",
-      "dataType": "numeric",
       "default": "0.001000",
       "dynamic": true,
       "id": "innodb_max_dirty_pages_pct_lwm",
@@ -1935,11 +1889,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-max-purge-lag=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_max_purge_lag",
@@ -1950,22 +1904,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-max-purge-lag-delay=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_max_purge_lag_delay",
       "name": "innodb_max_purge_lag_delay",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-max-undo-log-size=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "innodb_max_undo_log_size",
       "name": "innodb_max_undo_log_size",
@@ -1975,11 +1929,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "innodb-merge-sort-block-size=#",
-      "dataType": "numeric",
       "default": "1048576",
       "dynamic": true,
       "id": "innodb_merge_sort_block_size",
@@ -1991,7 +1945,7 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "id": "innodb_mirrored_log_groups",
@@ -1999,7 +1953,6 @@
     },
     {
       "cli": "--innodb-mtflush-threads=#",
-      "dataType": "numeric",
       "default": "8",
       "dynamic": false,
       "id": "innodb_mtflush_threads",
@@ -2015,58 +1968,57 @@
     },
     {
       "cli": "--innodb-monitor-disable=string",
-      "dataType": "string",
       "dynamic": true,
       "id": "innodb_monitor_disable",
       "name": "innodb_monitor_disable",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--innodb-monitor-enable=string",
-      "dataType": "string",
       "dynamic": true,
       "id": "innodb_monitor_enable",
       "name": "innodb_monitor_enable",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--innodb-monitor-reset=string",
-      "dataType": "string",
       "dynamic": true,
       "id": "innodb_monitor_reset",
       "name": "innodb_monitor_reset",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "---innodb-monitor-reset-all=string",
-      "dataType": "string",
       "dynamic": true,
       "id": "innodb_monitor_reset_all",
       "name": "innodb_monitor_reset_all",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "innodb-numa-interleave={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_numa_interleave",
       "name": "innodb_numa_interleave",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-old-blocks-pct=#",
-      "dataType": "numeric",
       "default": "37",
       "dynamic": true,
       "id": "innodb_old_blocks_pct",
@@ -2077,11 +2029,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-old-blocks-time=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_old_blocks_time",
@@ -2092,11 +2044,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-online-alter-log-max-size=#",
-      "dataType": "numeric",
       "default": "134217728",
       "dynamic": true,
       "id": "innodb_online_alter_log_max_size",
@@ -2107,11 +2059,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-open-files=#",
-      "dataType": "numeric",
       "default": "300",
       "dynamic": false,
       "id": "innodb_open_files",
@@ -2122,22 +2074,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-optimize-fulltext-only=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_optimize_fulltext_only",
       "name": "innodb_optimize_fulltext_only",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-page-cleaners=#",
-      "dataType": "numeric",
       "default": "4",
       "dynamic": false,
       "id": "innodb_page_cleaners",
@@ -2153,7 +2105,6 @@
     },
     {
       "cli": "--innodb-page-size=#",
-      "dataType": "enumeration",
       "default": "16384",
       "dynamic": false,
       "id": "innodb_page_size",
@@ -2161,7 +2112,7 @@
       "scope": [
         "global"
       ],
-      "type": "byte",
+      "type": "enumeration",
       "validValues": [
         "4k",
         "4096",
@@ -2179,29 +2130,28 @@
     },
     {
       "cli": "--innodb-prefix-index-cluster-optimization=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_prefix_index_cluster_optimization",
       "name": "innodb_prefix_index_cluster_optimization",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-print-all-deadlocks=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_print_all_deadlocks",
       "name": "innodb_print_all_deadlocks",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-purge-batch-size=#",
-      "dataType": "numeric",
       "default": "20",
       "dynamic": false,
       "id": "innodb_purge_batch_size",
@@ -2212,11 +2162,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "-- innodb-purge-rseg-truncate-frequency=#",
-      "dataType": "numeric",
       "default": "128",
       "dynamic": true,
       "id": "innodb_purge_rseg_truncate_frequency",
@@ -2227,11 +2177,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-purge-threads=#",
-      "dataType": "numeric",
       "dynamic": false,
       "id": "innodb_purge_threads",
       "name": "innodb_purge_threads",
@@ -2246,18 +2196,17 @@
     },
     {
       "cli": "--innodb-random-read-ahead=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_random_read_ahead",
       "name": "innodb_random_read_ahead",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-read-ahead=value",
-      "dataType": "enumeration",
       "default": "linear",
       "dynamic": true,
       "id": "innodb_read_ahead",
@@ -2265,6 +2214,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "none",
         "random",
@@ -2274,7 +2224,6 @@
     },
     {
       "cli": "--innodb-read-ahead-threshold=#",
-      "dataType": "numeric",
       "default": "56",
       "dynamic": true,
       "id": "innodb_read_ahead_threshold",
@@ -2290,7 +2239,6 @@
     },
     {
       "cli": "--innodb-read-io-threads=#",
-      "dataType": "numeric",
       "default": "4",
       "dynamic": false,
       "id": "innodb_read_io_threads",
@@ -2306,40 +2254,39 @@
     },
     {
       "cli": "--innodb-read-only=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_read_only",
       "name": "innodb_read_only",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "no",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_recovery_stats",
       "name": "innodb_recovery_stats",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-recovery-update-relay-log={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_recovery_update_relay_log",
       "name": "innodb_recovery_update_relay_log",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-replication-delay=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_replication_delay",
@@ -2350,22 +2297,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-rollback-on-timeout",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": false,
       "id": "innodb_rollback_on_timeout",
       "name": "innodb_rollback_on_timeout",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-rollback-segments=#",
-      "dataType": "numeric",
       "default": "128",
       "dynamic": true,
       "id": "innodb_rollback_segments",
@@ -2381,18 +2328,17 @@
     },
     {
       "cli": "--innodb-scrub-log",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_scrub_log",
       "name": "innodb_scrub_log",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-scrub-log-interval=#",
-      "dataType": "numeric",
       "default": "56",
       "dynamic": true,
       "id": "innodb_scrub_log_interval",
@@ -2403,11 +2349,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-scrub-log-speed=#",
-      "dataType": "numeric",
       "default": "256",
       "dynamic": true,
       "id": "innodb_scrub_log_speed",
@@ -2419,11 +2365,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "innodb-sched-priority-cleaner=#",
-      "dataType": "numeric",
       "default": "19",
       "dynamic": true,
       "id": "innodb_sched_priority_cleaner",
@@ -2434,11 +2379,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "innodb-show-locks-held=#",
-      "dataType": "numeric",
       "default": "10",
       "dynamic": true,
       "id": "innodb_show_locks_held",
@@ -2454,7 +2399,6 @@
     },
     {
       "cli": "innodb-show-verbose-locks=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_show_verbose_locks",
@@ -2465,11 +2409,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "none",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_simulate_comp_failures",
@@ -2480,11 +2424,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-sort-buffer-size=#",
-      "dataType": "numeric",
       "default": "1048576",
       "dynamic": false,
       "id": "innodb_sort_buffer_size",
@@ -2500,7 +2444,6 @@
     },
     {
       "cli": "--innodb-spin-wait-delay=#",
-      "dataType": "numeric",
       "default": "6",
       "dynamic": true,
       "id": "innodb_spin_wait_delay",
@@ -2511,42 +2454,42 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-stats-auto-recalc=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_stats_auto_recalc",
       "name": "innodb_stats_auto_recalc",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "default": "1",
       "dynamic": true,
       "id": "innodb_stats_auto_update",
       "name": "innodb_stats_auto_update",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_stats_include_delete_marked",
       "name": "innodb_stats_include_delete_marked",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-stats-method=name",
-      "dataType": "enumeration",
       "default": "nulls_equal",
       "dynamic": true,
       "id": "innodb_stats_method",
@@ -2554,6 +2497,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "nulls_equal",
         "nulls_unequal",
@@ -2562,7 +2506,6 @@
     },
     {
       "cli": "--innodb-stats-modified-counter=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_stats_modified_counter",
@@ -2578,29 +2521,28 @@
     },
     {
       "cli": "--innodb-stats-on-metadata",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_stats_on_metadata",
       "name": "innodb_stats_on_metadata",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-stats-persistent=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_stats_persistent",
       "name": "innodb_stats_persistent",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-stats-persistent-sample-pages=#",
-      "dataType": "numeric",
       "default": "20",
       "dynamic": true,
       "id": "innodb_stats_persistent_sample_pages",
@@ -2612,7 +2554,6 @@
     },
     {
       "cli": "--innodb-stats-sample-pages=#",
-      "dataType": "numeric",
       "default": "8",
       "dynamic": true,
       "id": "innodb_stats_sample_pages",
@@ -2628,7 +2569,6 @@
     },
     {
       "cli": "--innodb-stats-traditional=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_stats_traditional",
@@ -2636,11 +2576,10 @@
       "scope": [
         "global"
       ],
-      "type": "integer"
+      "type": "boolean"
     },
     {
       "cli": "--innodb-stats-transient-sample-pages=#",
-      "dataType": "numeric",
       "default": "8",
       "dynamic": true,
       "id": "innodb_stats_transient_sample_pages",
@@ -2655,51 +2594,50 @@
       "type": "integer"
     },
     {
-      "dataType": "boolean",
       "default": "1",
       "dynamic": true,
       "id": "innodb_stats_update_need_lock",
       "name": "innodb_stats_update_need_lock",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-status-output={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_status_output",
       "name": "innodb_status_output",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-status-output-locks={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_status_output_locks",
       "name": "innodb_status_output_locks",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-strict-mode=#",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "innodb_strict_mode",
       "name": "innodb_strict_mode",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-support-xa",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_support_xa",
@@ -2707,11 +2645,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-sync-array-size=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": false,
       "id": "innodb_sync_array_size",
@@ -2722,11 +2660,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-sync-spin-loops=#",
-      "dataType": "numeric",
       "default": "30",
       "dynamic": true,
       "id": "innodb_sync_spin_loops",
@@ -2742,7 +2680,6 @@
     },
     {
       "cli": "--innodb-table-locks",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_table_locks",
@@ -2750,11 +2687,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-thread-concurrency=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "innodb_thread_concurrency",
@@ -2770,18 +2707,17 @@
     },
     {
       "cli": "innodb-thread-concurrency-timer-based={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_thread_concurrency_timer_based",
       "name": "innodb_thread_concurrency_timer_based",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-thread-sleep-delay=#",
-      "dataType": "numeric",
       "default": "10000",
       "dynamic": true,
       "id": "innodb_thread_sleep_delay",
@@ -2793,72 +2729,71 @@
     },
     {
       "cli": "--innodb-temp-data-file-path=path",
-      "dataType": "string",
       "default": "ibtmp1:12M:autoextend",
       "dynamic": false,
       "id": "innodb_temp_data_file_path",
       "name": "innodb_temp_data_file_path",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--innodb-tmpdir=path",
-      "dataType": "string",
       "dynamic": true,
       "id": "innodb_tmpdir",
       "name": "innodb_tmpdir",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "innodb-track-changed-pages={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_track_changed_pages",
       "name": "innodb_track_changed_pages",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-track-redo-log-now={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_track_redo_log_now",
       "name": "innodb_track_redo_log_now",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-undo-directory=name",
-      "dataType": "string",
       "default": ".",
       "dynamic": false,
       "id": "innodb_undo_directory",
       "name": "innodb_undo_directory",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--innodb-undo-log-truncate[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_undo_log_truncate",
       "name": "innodb_undo_log_truncate",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-undo-logs=#",
-      "dataType": "numeric",
       "default": "128",
       "dynamic": true,
       "id": "innodb_undo_logs",
@@ -2874,7 +2809,6 @@
     },
     {
       "cli": "--innodb-undo-tablespaces=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": false,
       "id": "innodb_undo_tablespaces",
@@ -2890,62 +2824,61 @@
     },
     {
       "cli": "innodb-use-atomic-writes={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_use_atomic_writes",
       "name": "innodb_use_atomic_writes",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-use-fallocate={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_use_fallocate",
       "name": "innodb_use_fallocate",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-use-global-flush-log-at-trx_commit={0|1}",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_use_global_flush_log_at_trx_commit",
       "name": "innodb_use_global_flush_log_at_trx_commit",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-use-mtflush=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_use_mtflush",
       "name": "innodb_use_mtflush",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-use-native-aio=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "innodb_use_native_aio",
       "name": "innodb_use_native_aio",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-use-purge-thread=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": false,
       "id": "innodb_use_purge_thread",
@@ -2956,64 +2889,64 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-use-stacktrace=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_use_stacktrace",
       "name": "innodb_use_stacktrace",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-use-sys-malloc=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "innodb_use_sys_malloc",
       "name": "innodb_use_sys_malloc",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "innodb-use-sys-stats-table={0|1}",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": false,
       "id": "innodb_use_sys_stats_table",
       "name": "innodb_use_sys_stats_table",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-use-trim=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_use_trim",
       "name": "innodb_use_trim",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "string",
       "dynamic": false,
       "id": "innodb_version",
       "name": "innodb_version",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--innodb-write-io-threads=#",
-      "dataType": "numeric",
       "default": "4",
       "dynamic": false,
       "id": "innodb_write_io_threads",

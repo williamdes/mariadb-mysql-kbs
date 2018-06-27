@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "dataType": "numeric",
       "id": "cassandra_multiget_keys_scanned",
       "name": "Cassandra_multiget_keys_scanned",
       "scope": [
@@ -11,7 +10,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "cassandra_multiget_reads",
       "name": "Cassandra_multiget_reads",
       "scope": [
@@ -21,7 +19,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "cassandra_multiget_rows_read",
       "name": "Cassandra_multiget_rows_read",
       "scope": [
@@ -31,7 +28,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "cassandra_network_exceptions",
       "name": "Cassandra_network_exceptions",
       "scope": [
@@ -41,7 +37,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "cassandra_row_insert_batches",
       "name": "Cassandra_row_insert_batches",
       "scope": [
@@ -51,7 +46,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "cassandra_row_inserts",
       "name": "Cassandra_row_inserts",
       "scope": [
@@ -61,7 +55,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "cassandra_timeout_exceptions",
       "name": "Cassandra_timeout_exceptions",
       "scope": [
@@ -71,7 +64,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "cassandra_unavailable_exceptions",
       "name": "Cassandra_unavailable_exceptions",
       "scope": [

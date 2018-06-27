@@ -2,7 +2,6 @@
   "data": [
     {
       "cli": "--key-buffer-size=#",
-      "dataType": "numeric",
       "default": "134217728",
       "dynamic": true,
       "id": "key_buffer_size",
@@ -18,7 +17,6 @@
     },
     {
       "cli": "--key-cache-age-threshold=#",
-      "dataType": "numeric",
       "default": "300",
       "dynamic": true,
       "id": "key_cache_age_threshold",
@@ -29,11 +27,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--key-cache-block-size=#",
-      "dataType": "numeric",
       "default": "1024",
       "dynamic": true,
       "id": "key_cache_block_size",
@@ -44,11 +42,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--key-cache-division-limit=#",
-      "dataType": "numeric",
       "default": "100",
       "dynamic": true,
       "id": "key_cache_division_limit",
@@ -59,11 +57,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--key-cache-file-hash-size=#",
-      "dataType": "numeric",
       "default": "512",
       "dynamic": true,
       "id": "key_cache_file_hash_size",
@@ -94,18 +92,17 @@
     },
     {
       "cli": "--myisam-block-size=#",
-      "dataType": "numeric",
       "default": "1024",
       "dynamic": false,
       "id": "myisam_block_size",
       "name": "myisam_block_size",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--myisam-data-pointer-size=#",
-      "dataType": "numeric",
       "default": "6",
       "dynamic": true,
       "id": "myisam_data_pointer_size",
@@ -117,7 +114,7 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "id": "myisam_max_extra_sort_file_size",
@@ -125,18 +122,16 @@
     },
     {
       "cli": "--myisam-max-sort-file-size=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "myisam_max_sort_file_size",
       "name": "myisam_max_sort_file_size",
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--myisam-mmap-size=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "myisam_mmap_size",
       "name": "myisam_mmap_size",
@@ -144,17 +139,17 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--myisam-recover-options[=name]",
-      "dataType": "enumeration",
       "dynamic": false,
       "id": "myisam_recover_options",
       "name": "myisam_recover_options",
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "OFF",
         "DEFAULT",
@@ -166,7 +161,6 @@
     },
     {
       "cli": "--myisam-repair-threads=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "myisam_repair_threads",
@@ -174,11 +168,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--myisam-sort-buffer-size=#",
-      "dataType": "numeric",
       "default": "8388608",
       "dynamic": true,
       "id": "myisam_sort_buffer_size",
@@ -191,11 +185,10 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--myisam-stats-method=name",
-      "dataType": "enumeration",
       "default": "nulls_equal",
       "dynamic": true,
       "id": "myisam_stats_method",
@@ -204,6 +197,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "nulls_equal",
         "nulls_unequal",
@@ -212,14 +206,14 @@
     },
     {
       "cli": "--myisam-use-mmap",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "myisam_use_mmap",
       "name": "myisam_use_mmap",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     }
   ],
   "name": "myisam-system-variables",

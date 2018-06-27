@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_auto_increment_mode",
       "name": "spider_auto_increment_mode",
@@ -12,10 +11,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_bgs_first_read",
       "name": "spider_bgs_first_read",
@@ -30,7 +29,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_bgs_mode",
       "name": "spider_bgs_mode",
@@ -41,7 +39,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "dynamic": true,
@@ -58,17 +57,16 @@
       "type": "integer"
     },
     {
-      "dataType": "string",
       "dynamic": true,
       "id": "spider_bka_engine",
       "name": "spider_bka_engine",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_bka_mode",
       "name": "spider_bka_mode",
@@ -79,10 +77,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_bka_table_name_type",
       "name": "spider_bka_table_name_type",
@@ -93,10 +91,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_block_size",
       "name": "spider_block_size",
@@ -111,7 +109,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_bulk_size",
       "name": "spider_bulk_size",
@@ -123,10 +120,9 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_bulk_update_mode",
       "name": "spider_bulk_update_mode",
@@ -137,10 +133,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_bulk_update_size",
       "name": "spider_bulk_update_size",
@@ -152,10 +148,9 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_casual_read",
       "name": "spider_casual_read",
@@ -166,10 +161,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_conn_recycle_mode",
       "name": "spider_conn_recycle_mode",
@@ -180,10 +175,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_conn_recycle_strict",
       "name": "spider_conn_recycle_strict",
@@ -194,10 +189,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_conn_wait_timeout",
       "name": "spider_conn_wait_timeout",
@@ -212,27 +207,26 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "spider_connect_error_interval",
       "name": "spider_connect_error_interval",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_connect_mutex",
       "name": "spider_connect_mutex",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_connect_retry_count",
       "name": "spider_connect_retry_count",
@@ -247,7 +241,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_connect_retry_interval",
       "name": "spider_connect_retry_interval",
@@ -262,7 +255,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_connect_timeout",
       "name": "spider_connect_timeout",
@@ -277,7 +269,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_crd_bg_mode",
       "name": "spider_crd_bg_mode",
@@ -288,10 +279,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_crd_interval",
       "name": "spider_crd_interval",
@@ -306,7 +297,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_crd_mode",
       "name": "spider_crd_mode",
@@ -317,10 +307,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_crd_sync",
       "name": "spider_crd_sync",
@@ -331,10 +321,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_crd_type",
       "name": "spider_crd_type",
@@ -345,10 +335,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_crd_weight",
       "name": "spider_crd_weight",
@@ -359,10 +349,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_delete_all_rows_type",
       "name": "spider_delete_all_rows_type",
@@ -373,10 +363,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_direct_dup_insert",
       "name": "spider_direct_dup_insert",
@@ -387,10 +377,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_direct_order_limit",
       "name": "spider_direct_order_limit",
@@ -401,20 +391,20 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "spider_dry_access",
       "name": "spider_dry_access",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_error_read_mode",
       "name": "spider_error_read_mode",
@@ -425,10 +415,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_error_write_mode",
       "name": "spider_error_write_mode",
@@ -439,10 +429,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_first_read",
       "name": "spider_first_read",
@@ -457,7 +447,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_force_commit",
       "name": "spider_force_commit",
@@ -468,30 +457,30 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_general_log",
       "name": "spider_general_log",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_index_hint_pushdown",
       "name": "spider_index_hint_pushdown",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_init_sql_alloc_size",
       "name": "spider_init_sql_alloc_size",
@@ -506,7 +495,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_internal_limit",
       "name": "spider_internal_limit",
@@ -521,7 +509,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_internal_offset",
       "name": "spider_internal_offset",
@@ -532,10 +519,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_internal_optimize",
       "name": "spider_internal_optimize",
@@ -546,7 +533,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "id": "spider_internal_optimize_local",
@@ -557,32 +545,31 @@
       }
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_internal_sql_log_off",
       "name": "spider_internal_sql_log_off",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "id": "spider_internal_unlock",
-      "name": "spider_internal_unlock"
+      "name": "spider_internal_unlock",
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_internal_xa",
       "name": "spider_internal_xa",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_internal_xa_id_type",
       "name": "spider_internal_xa_id_type",
@@ -593,10 +580,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_internal_xa_snapshot",
       "name": "spider_internal_xa_snapshot",
@@ -607,80 +594,80 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_load_crd_at_startup",
       "name": "spider_load_crd_at_startup",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_load_sts_at_startup",
       "name": "spider_load_sts_at_startup",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_local_lock_table",
       "name": "spider_local_lock_table",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_lock_exchange",
       "name": "spider_lock_exchange",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_log_result_error_with_sql",
       "name": "spider_log_result_error_with_sql",
       "range": {
         "from": 0,
         "to": 3
-      }
+      },
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_log_result_errors",
       "name": "spider_log_result_errors",
       "range": {
         "from": 0,
         "to": 4
-      }
+      },
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "-1",
       "id": "spider_low_mem_read",
       "name": "spider_low_mem_read",
       "range": {
         "from": -1,
         "to": 1
-      }
+      },
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_max_connections",
       "name": "spider_max_connections",
@@ -695,7 +682,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_max_order",
       "name": "spider_max_order",
@@ -710,7 +696,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_multi_split_read",
       "name": "spider_multi_split_read",
@@ -721,10 +706,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_net_read_timeout",
       "name": "spider_net_read_timeout",
@@ -739,7 +724,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_net_write_timeout",
       "name": "spider_net_write_timeout",
@@ -754,7 +738,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_ping_interval_at_trx_start",
       "name": "spider_ping_interval_at_trx_start",
@@ -769,7 +752,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_quick_mode",
       "name": "spider_quick_mode",
@@ -780,10 +762,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_quick_page_size",
       "name": "spider_quick_page_size",
@@ -798,7 +780,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_read_only_mode",
       "name": "spider_read_only_mode",
@@ -809,20 +790,20 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "string",
       "dynamic": true,
       "id": "spider_remote_access_charset",
       "name": "spider_remote_access_charset",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_remote_autocommit",
       "name": "spider_remote_autocommit",
@@ -833,20 +814,20 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "string",
       "dynamic": true,
       "id": "spider_remote_default_database",
       "name": "spider_remote_default_database",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_remote_sql_log_off",
       "name": "spider_remote_sql_log_off",
@@ -857,20 +838,20 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "string",
       "dynamic": true,
       "id": "spider_remote_time_zone",
       "name": "spider_remote_time_zone",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_remote_trx_isolation",
       "name": "spider_remote_trx_isolation",
@@ -881,10 +862,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_reset_sql_alloc",
       "name": "spider_reset_sql_alloc",
@@ -895,17 +876,18 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_same_server_link",
       "name": "spider_same_server_link",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "dynamic": true,
@@ -922,7 +904,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_select_column_mode",
       "name": "spider_select_column_mode",
@@ -933,10 +914,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_selupd_lock_mode",
       "name": "spider_selupd_lock_mode",
@@ -947,10 +928,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_semi_split_read",
       "name": "spider_semi_split_read",
@@ -961,10 +942,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_semi_split_read_limit",
       "name": "spider_semi_split_read_limit",
@@ -975,10 +956,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_semi_table_lock",
       "name": "spider_semi_table_lock",
@@ -989,10 +970,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_semi_table_lock_connection",
       "name": "spider_semi_table_lock_connection",
@@ -1003,20 +984,20 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_semi_trx",
       "name": "spider_semi_trx",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_semi_trx_isolation",
       "name": "spider_semi_trx_isolation",
@@ -1027,10 +1008,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_skip_default_condition",
       "name": "spider_skip_default_condition",
@@ -1041,11 +1022,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--spider-skip-parallel-search=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_skip_parallel_search",
       "name": "spider_skip_parallel_search",
@@ -1055,10 +1036,10 @@
       },
       "scope": [
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_split_read",
       "name": "spider_split_read",
@@ -1074,7 +1055,6 @@
     },
     {
       "cli": "--spider-store-last-crd=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_store_last_crd",
       "name": "spider_store_last_crd",
@@ -1084,11 +1064,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--spider-store-last-sts=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_store_last_sts",
       "name": "spider_store_last_sts",
@@ -1098,10 +1078,10 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_sts_bg_mode",
       "name": "spider_sts_bg_mode",
@@ -1112,10 +1092,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_sts_interval",
       "name": "spider_sts_interval",
@@ -1126,10 +1106,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_sts_mode",
       "name": "spider_sts_mode",
@@ -1140,10 +1120,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_sts_sync",
       "name": "spider_sts_sync",
@@ -1154,47 +1134,47 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "dynamic": false,
       "id": "spider_support_xa",
       "name": "spider_support_xa",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_sync_autocommit",
       "name": "spider_sync_autocommit",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_sync_time_zone",
       "name": "spider_sync_time_zone",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_sync_trx_isolation",
       "name": "spider_sync_trx_isolation",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--spider-table-crd-thread-count=#",
-      "dataType": "numeric",
       "default": "10",
       "dynamic": false,
       "id": "spider_table_crd_thread_count",
@@ -1205,10 +1185,10 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "spider_table_init_error_interval",
@@ -1224,7 +1204,6 @@
     },
     {
       "cli": "--spider-table-sts-thread-count=#",
-      "dataType": "numeric",
       "default": "10",
       "dynamic": false,
       "id": "spider_table_sts_thread_count",
@@ -1235,10 +1214,10 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_udf_ct_bulk_insert_interval",
       "name": "spider_udf_ct_bulk_insert_interval",
@@ -1248,10 +1227,10 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_udf_ct_bulk_insert_rows",
       "name": "spider_udf_ct_bulk_insert_rows",
@@ -1264,7 +1243,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_udf_ds_bulk_insert_rows",
       "name": "spider_udf_ds_bulk_insert_rows",
@@ -1277,7 +1255,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_udf_ds_table_loop_mode",
       "name": "spider_udf_ds_table_loop_mode",
@@ -1287,10 +1264,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_udf_ds_use_real_table",
       "name": "spider_udf_ds_use_real_table",
@@ -1300,10 +1277,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "20",
       "dynamic": false,
       "id": "spider_udf_table_lock_mutex_count",
@@ -1313,10 +1290,10 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "20",
       "dynamic": false,
       "id": "spider_udf_table_mon_mutex_count",
@@ -1326,54 +1303,54 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_use_all_conns_snapshot",
       "name": "spider_use_all_conns_snapshot",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_use_consistent_snapshot",
       "name": "spider_use_consistent_snapshot",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_use_default_database",
       "name": "spider_use_default_database",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "dynamic": true,
       "id": "spider_use_flash_logs",
       "name": "spider_use_flash_logs",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "id": "spider_use_handler",
       "name": "spider_use_handler"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_use_pushdown_udf",
       "name": "spider_use_pushdown_udf",
@@ -1383,10 +1360,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_use_snapshot_with_flush_tables",
       "name": "spider_use_snapshot_with_flush_tables",
@@ -1396,10 +1373,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "spider_use_table_charset",
       "name": "spider_use_table_charset",
@@ -1409,19 +1386,19 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "string",
       "dynamic": false,
       "id": "spider_version",
       "name": "spider_version",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "spider_xa_register_mode",
@@ -1433,7 +1410,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     }
   ],
   "name": "spider-system-variables",

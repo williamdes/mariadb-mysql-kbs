@@ -2,7 +2,6 @@
   "data": [
     {
       "cli": "--alter-algorithm=default",
-      "dataType": "enumerated",
       "default": "DEFAULT",
       "dynamic": true,
       "id": "alter_algorithm",
@@ -21,7 +20,6 @@
     },
     {
       "cli": "--autocommit[=#]",
-      "dataType": "boolean",
       "default": "1",
       "dynamic": true,
       "id": "autocommit",
@@ -29,18 +27,19 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--automatic-sp-privileges, --skip-automatic-sp-privileges",
-      "dataType": "boolean",
       "default": "1",
       "dynamic": true,
       "id": "automatic_sp_privileges",
       "name": "automatic_sp_privileges",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--back-log=#",
@@ -63,7 +62,6 @@
     },
     {
       "cli": "--big-tables",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": true,
       "id": "big_tables",
@@ -71,22 +69,22 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--bind-address=addr",
-      "dataType": "string",
       "dynamic": false,
       "id": "bind_address",
       "name": "bind_address",
       "scope": [
         "global"
       ],
+      "type": "string",
       "validValues": []
     },
     {
       "cli": "--bulk-insert-buffer-size=#",
-      "dataType": "numeric",
       "default": "8388608",
       "dynamic": true,
       "id": "bulk_insert_buffer_size",
@@ -95,10 +93,9 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
-      "dataType": "string",
       "default": "utf8",
       "dynamic": true,
       "id": "character_set_client",
@@ -106,10 +103,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "string",
       "default": "utf8",
       "dynamic": true,
       "id": "character_set_connection",
@@ -117,10 +114,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "string",
       "default": "latin1",
       "dynamic": true,
       "id": "character_set_database",
@@ -128,11 +125,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--character-set-filesystem=name",
-      "dataType": "string",
       "default": "binary",
       "dynamic": true,
       "id": "character_set_filesystem",
@@ -140,10 +137,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "string",
       "default": "utf8",
       "dynamic": true,
       "id": "character_set_results",
@@ -151,11 +148,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--character-set-server",
-      "dataType": "string",
       "default": "latin1",
       "dynamic": true,
       "id": "character_set_server",
@@ -163,17 +160,18 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "string",
       "default": "utf8",
       "dynamic": false,
       "id": "character_set_system",
       "name": "character_set_system",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--character-sets-dir=path",
@@ -197,28 +195,27 @@
       "type": "boolean"
     },
     {
-      "dataType": "string",
       "dynamic": true,
       "id": "collation_connection",
       "name": "collation_connection",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "string",
       "dynamic": true,
       "id": "collation_database",
       "name": "collation_database",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--collation-server=name",
-      "dataType": "string",
       "default": "latin1_swedish_ci",
       "dynamic": true,
       "id": "collation_server",
@@ -226,11 +223,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--completion-type=name",
-      "dataType": "enumerated",
       "default": "0",
       "dynamic": true,
       "id": "completion_type",
@@ -250,7 +247,6 @@
     },
     {
       "cli": "--concurrent-insert[=name]",
-      "dataType": "enumerated",
       "default": "1",
       "dynamic": true,
       "id": "concurrent_insert",
@@ -298,7 +294,6 @@
     },
     {
       "cli": "--debug[=debug_options]",
-      "dataType": "string",
       "default": "d:t:i:O,\\mysqld.trace",
       "dynamic": true,
       "id": "debug",
@@ -306,28 +301,29 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--debug-no-thead-alarm=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "debug_no_thread_alarm",
       "name": "debug_no_thread_alarm",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "string",
       "default": "ON - current signal signal name",
       "dynamic": true,
       "id": "debug_sync",
       "name": "debug_sync",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "id": "default_regex_flags",
@@ -357,18 +353,17 @@
     },
     {
       "cli": "--default-tmp-storage-engine=name",
-      "dataType": "enumeration",
       "dynamic": true,
       "id": "default_tmp_storage_engine",
       "name": "default_tmp_storage_engine",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "--default-week-format=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "default_week_format",
@@ -380,11 +375,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--delay-key-write[=name]",
-      "dataType": "enumeration",
       "default": "ON",
       "dynamic": true,
       "id": "delay_key_write",
@@ -392,6 +387,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "ON",
         "OFF",
@@ -400,7 +396,6 @@
     },
     {
       "cli": "--delayed-insert-limit=#",
-      "dataType": "numeric",
       "default": "100",
       "dynamic": true,
       "id": "delayed_insert_limit",
@@ -411,11 +406,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--delayed-insert-timeout=#",
-      "dataType": "numeric",
       "default": "300",
       "dynamic": true,
       "id": "delayed_insert_timeout",
@@ -442,7 +437,6 @@
     },
     {
       "cli": "--div-precision-increment=#",
-      "dataType": "numeric",
       "default": "4",
       "dynamic": true,
       "id": "div_precision_increment",
@@ -459,29 +453,28 @@
     },
     {
       "cli": "--encrypt-tmp-disk-tables[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "encrypt_tmp_disk_tables",
       "name": "encrypt_tmp_disk_tables",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--encrypt-tmp-files[={0|1}]",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "encrypt_tmp_files",
       "name": "encrypt_tmp_files",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--encryption-algorithm=value",
-      "dataType": "enum",
       "default": "none",
       "dynamic": false,
       "id": "encryption_algorithm",
@@ -498,28 +491,27 @@
     },
     {
       "cli": "none",
-      "dataType": "string",
       "default": "none",
       "dynamic": true,
       "id": "enforce_storage_engine",
       "name": "enforce_storage_engine",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--engine-condition-pushdown",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "engine_condition_pushdown",
       "name": "engine_condition_pushdown",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "error_count",
       "name": "error_count",
@@ -530,7 +522,6 @@
     },
     {
       "cli": "--event-scheduler[=value]",
-      "dataType": "enumeration",
       "default": "OFF",
       "dynamic": true,
       "id": "event_scheduler",
@@ -538,6 +529,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "ON",
         "1",
@@ -548,7 +540,6 @@
     },
     {
       "cli": "--expensive-subquery-limit=#",
-      "dataType": "numeric",
       "default": "100",
       "dynamic": true,
       "id": "expensive_subquery_limit",
@@ -565,7 +556,6 @@
     },
     {
       "cli": "--explicit-defaults-for-timestamp=[={0|1}]",
-      "dataType": "bolean",
       "default": "OFF",
       "dynamic": false,
       "id": "explicit_defaults_for_timestamp",
@@ -575,29 +565,28 @@
       ]
     },
     {
-      "dataType": "string",
       "default": "NULL",
       "dynamic": false,
       "id": "external_user",
       "name": "external_user",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--flush",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "flush",
       "name": "flush",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--flush_time=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "flush_time",
@@ -609,7 +598,6 @@
     },
     {
       "cli": "none",
-      "dataType": "boolean",
       "default": "1",
       "dynamic": true,
       "id": "foreign_key_checks",
@@ -617,44 +605,44 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--ft-boolean-syntax=name",
-      "dataType": "string",
       "default": "+ -><()*:\"\"&|",
       "dynamic": true,
       "id": "ft_boolean_syntax",
       "name": "ft_boolean_syntax",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--ft-max-word-len=#",
-      "dataType": "numeric",
       "default": "84",
       "dynamic": false,
       "id": "ft_max_word_len",
       "name": "ft_max_word_len",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--ft-min-word-len=#",
-      "dataType": "numeric",
       "default": "4",
       "dynamic": false,
       "id": "ft_min_word_len",
       "name": "ft_min_word_len",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--ft-query-expansion-limit=#",
-      "dataType": "numeric",
       "default": "20",
       "dynamic": false,
       "id": "ft_query_expansion_limit",
@@ -665,44 +653,44 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--ft-stopword-file=file_name",
-      "dataType": "file name",
       "default": "(built-in)",
       "dynamic": false,
       "id": "ft_stopword_file",
       "name": "ft_stopword_file",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "file name"
     },
     {
       "cli": "--general-log",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": true,
       "id": "general_log",
       "name": "general_log",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--general-log-file=file_name",
-      "dataType": "file name",
       "default": "host_name.log",
       "dynamic": true,
       "id": "general_log_file",
       "name": "general_log_file",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "file name"
     },
     {
       "cli": "--group-concat-max-len=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "group_concat_max_len",
       "name": "group_concat_max_len",
@@ -710,7 +698,7 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "dynamic": false,
@@ -802,7 +790,6 @@
     },
     {
       "cli": "--histogram-size=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "histogram_size",
@@ -815,11 +802,10 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--histogram-type=value",
-      "dataType": "enumeration",
       "default": "SINGLE_PREC_HB",
       "dynamic": true,
       "id": "histogram_type",
@@ -828,6 +814,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "SINGLE_PREC_HB",
         "DOUBLE_PREC_HB"
@@ -835,7 +822,6 @@
     },
     {
       "cli": "--host-cache-size=#.",
-      "dataType": "numeric",
       "default": "128",
       "dynamic": true,
       "id": "host_cache_size",
@@ -850,20 +836,19 @@
       "type": "integer"
     },
     {
-      "dataType": "string",
       "dynamic": false,
       "id": "hostname",
       "name": "hostname",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "id": "identity",
       "name": "identity"
     },
     {
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "idle_readonly_transaction_timeout",
@@ -879,7 +864,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "idle_transaction_timeout",
@@ -895,7 +879,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "idle_write_transaction_timeout",
@@ -911,57 +894,56 @@
       "type": "integer"
     },
     {
-      "dataType": "string",
       "dynamic": false,
       "id": "ignore_db_dirs",
       "name": "ignore_db_dirs",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "no",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": false,
       "id": "in_transaction",
       "name": "in_transaction",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--init-connect=name",
-      "dataType": "string",
       "dynamic": true,
       "id": "init_connect",
       "name": "init_connect",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "init-file=file_name",
-      "dataType": "file name",
       "dynamic": false,
       "id": "init_file",
       "name": "init_file",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "file name"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "insert_id",
       "name": "insert_id",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--interactive-timeout=#",
-      "dataType": "numeric",
       "default": "28800",
       "dynamic": true,
       "id": "interactive_timeout",
@@ -974,7 +956,6 @@
     },
     {
       "cli": "--join-buffer-size=#",
-      "dataType": "numeric",
       "default": "131072",
       "dynamic": true,
       "id": "join_buffer_size",
@@ -983,11 +964,10 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--join-buffer-space-limit=#",
-      "dataType": "numeric",
       "default": "2097152",
       "dynamic": true,
       "id": "join_buffer_space_limit",
@@ -1000,11 +980,10 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--join-cache-level=#",
-      "dataType": "numeric",
       "default": "2",
       "dynamic": true,
       "id": "join_cache_level",
@@ -1016,11 +995,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--keep-files-on-create=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "keep_files_on_create",
@@ -1028,18 +1007,19 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--language=name, -l",
-      "dataType": "directory name",
       "default": "/usr/local/mysql/share/mysql/english/",
       "dynamic": false,
       "id": "language",
       "name": "language",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "directory name"
     },
     {
       "dynamic": false,
@@ -1050,7 +1030,6 @@
       ]
     },
     {
-      "dataType": "numeric",
       "dynamic": false,
       "id": "large_page_size",
       "name": "large_page_size",
@@ -1061,27 +1040,26 @@
     },
     {
       "cli": "--large-pages, --skip-large-pages",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "large_pages",
       "name": "large_pages",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "last_insert_id",
       "name": "last_insert_id",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--lc-messages=name",
-      "dataType": "string",
       "default": "en_us",
       "dynamic": true,
       "id": "lc_messages",
@@ -1089,21 +1067,21 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--lc-messages-dir=path",
-      "dataType": "directory name",
       "dynamic": false,
       "id": "lc_messages_dir",
       "name": "lc_messages_dir",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "directory name"
     },
     {
       "cli": "--lc-time-names=name",
-      "dataType": "string",
       "default": "en_US",
       "dynamic": true,
       "id": "lc_time_names",
@@ -1111,31 +1089,31 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "string",
       "dynamic": false,
       "id": "license",
       "name": "license",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--local-infile=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "local_infile",
       "name": "local_infile",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--lock-wait-timeout=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "lock_wait_timeout",
       "name": "lock_wait_timeout",
@@ -1148,50 +1126,49 @@
     },
     {
       "cli": "--memlock",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "locked_in_memory",
       "name": "locked_in_memory",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "-l [filename] or --log[=filename]",
-      "dataType": "string",
       "default": "OFF",
       "dynamic": true,
       "id": "log",
       "name": "log",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--log-disabled_statements=value",
-      "dataType": "set",
       "dynamic": false,
       "id": "log_disabled_statements",
       "name": "log_disabled_statements",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "set"
     },
     {
       "cli": "--log-error[=name]",
-      "dataType": "file name",
       "dynamic": false,
       "id": "log_error",
       "name": "log_error",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "file name"
     },
     {
       "cli": "--log-output=name",
-      "dataType": "set",
       "default": "FILE",
       "dynamic": true,
       "id": "log_output",
@@ -1199,6 +1176,7 @@
       "scope": [
         "global"
       ],
+      "type": "set",
       "validValues": [
         "TABLE",
         "FILE",
@@ -1207,7 +1185,6 @@
     },
     {
       "cli": "--log-queries-not-using-indexes",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "log_queries_not_using_indexes",
@@ -1215,21 +1192,20 @@
       "scope": [
         "global"
       ],
-      "type": "integer"
+      "type": "boolean"
     },
     {
       "cli": "--log-slow-admin-statements",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "log_slow_admin_statements",
       "name": "log_slow_admin_statements",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--log-slow-disabled_statements=value",
-      "dataType": "set",
       "default": "sp",
       "dynamic": false,
       "id": "log_slow_disabled_statements",
@@ -1237,11 +1213,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "set"
     },
     {
       "cli": "log-slow-filter=value1[,value2...]",
-      "dataType": "enumeration",
       "dynamic": true,
       "id": "log_slow_filter",
       "name": "log_slow_filter",
@@ -1249,6 +1225,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "admin",
         "filesort",
@@ -1264,18 +1241,17 @@
     },
     {
       "cli": "--log-slow-queries[=name]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "log_slow_queries",
       "name": "log_slow_queries",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "log-slow-rate-limit=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "log_slow_rate_limit",
@@ -1287,11 +1263,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "log-slow-verbosity=value1[,value2...]",
-      "dataType": "enumeration",
       "dynamic": true,
       "id": "log_slow_verbosity",
       "name": "log_slow_verbosity",
@@ -1299,6 +1275,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "query_plan",
         "innodb",
@@ -1307,7 +1284,6 @@
     },
     {
       "cli": "log-tc-size=#",
-      "dataType": "numeric",
       "default": "24576",
       "dynamic": false,
       "id": "log_tc_size",
@@ -1319,11 +1295,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "-w [level] or --log-warnings[=level]",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "log_warnings",
       "name": "log_warnings",
@@ -1334,11 +1309,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--long-query-time=#",
-      "dataType": "numeric",
       "default": "10",
       "dynamic": true,
       "id": "long_query_time",
@@ -1350,11 +1325,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--low-priority-updates",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": true,
       "id": "low_priority_updates",
@@ -1362,21 +1337,21 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "default": "##",
       "dynamic": false,
       "id": "lower_case_file_system",
       "name": "lower_case_file_system",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--lower-case-table-names[=#]",
-      "dataType": "numeric",
       "default": "2",
       "dynamic": false,
       "id": "lower_case_table_names",
@@ -1387,11 +1362,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--max-allowed-packet=#",
-      "dataType": "numeric",
       "dynamic": true,
       "id": "max_allowed_packet",
       "name": "max_allowed_packet",
@@ -1402,11 +1377,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--max-connect-errors=#",
-      "dataType": "numeric",
       "default": "10",
       "dynamic": true,
       "id": "max_connect_errors",
@@ -1418,7 +1392,6 @@
     },
     {
       "cli": "--max-connections=#",
-      "dataType": "numeric",
       "default": "151",
       "dynamic": true,
       "id": "max_connections",
@@ -1434,7 +1407,6 @@
     },
     {
       "cli": "--max-delayed-threads=#",
-      "dataType": "numeric",
       "default": "20",
       "dynamic": true,
       "id": "max_delayed_threads",
@@ -1451,7 +1423,6 @@
     },
     {
       "cli": "--max-digest-length=#",
-      "dataType": "numeric",
       "default": "1024",
       "dynamic": true,
       "id": "max_digest_length",
@@ -1462,11 +1433,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--max-error-count=#",
-      "dataType": "numeric",
       "default": "64",
       "dynamic": true,
       "id": "max_error_count",
@@ -1483,7 +1454,6 @@
     },
     {
       "cli": "--max-heap-table-size=#",
-      "dataType": "numeric",
       "default": "16777216",
       "dynamic": true,
       "id": "max_heap_table_size",
@@ -1492,7 +1462,7 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "id": "max_insert_delayed_threads",
@@ -1500,7 +1470,6 @@
     },
     {
       "cli": "--max-join-size=#",
-      "dataType": "numeric",
       "default": "4294967295",
       "dynamic": true,
       "id": "max_join_size",
@@ -1517,7 +1486,6 @@
     },
     {
       "cli": "--max-length-for-sort-data=#",
-      "dataType": "numeric",
       "default": "1024",
       "dynamic": true,
       "id": "max_length_for_sort_data",
@@ -1534,7 +1502,6 @@
     },
     {
       "cli": "--max-long-data-size=#",
-      "dataType": "numeric",
       "dynamic": false,
       "id": "max_long_data_size",
       "name": "max_long_data_size",
@@ -1544,11 +1511,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--max-prepared-stmt-count=#",
-      "dataType": "numeric",
       "default": "16382",
       "dynamic": true,
       "id": "max_prepared_stmt_count",
@@ -1564,7 +1531,6 @@
     },
     {
       "cli": "--max-recursive-iterations=#",
-      "dataType": "numeric",
       "default": "4294967295",
       "dynamic": true,
       "id": "max_recursive_iterations",
@@ -1581,7 +1547,6 @@
     },
     {
       "cli": "--max-seeks-for-key=#",
-      "dataType": "numeric",
       "default": "4294967295",
       "dynamic": true,
       "id": "max_seeks_for_key",
@@ -1593,11 +1558,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--max-session-mem-used=#",
-      "dataType": "numeric",
       "default": "9223372036854775807",
       "dynamic": true,
       "id": "max_session_mem_used",
@@ -1609,11 +1574,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--max-sort-length=#",
-      "dataType": "numeric",
       "default": "1024",
       "dynamic": true,
       "id": "max_sort_length",
@@ -1626,11 +1591,10 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--max-sp-recursion-depth[=#]",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "max_sp_recursion_depth",
@@ -1647,7 +1611,6 @@
     },
     {
       "cli": "--max-statement-time[=#]",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "max_statement_time",
@@ -1668,7 +1631,6 @@
     },
     {
       "cli": "--max-user-connections=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": false,
       "id": "max_user_connections",
@@ -1680,11 +1642,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--max-write-lock-count=#",
-      "dataType": "numeric",
       "default": "4294967295",
       "dynamic": false,
       "id": "max_write_lock_count",
@@ -1695,11 +1657,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--metadata-locks-cache-size=#",
-      "dataType": "numeric",
       "default": "1024",
       "dynamic": false,
       "id": "metadata_locks_cache_size",
@@ -1715,7 +1677,6 @@
     },
     {
       "cli": "--metadata-locks-hash-instances=#",
-      "dataType": "numeric",
       "default": "8",
       "dynamic": false,
       "id": "metadata_locks_hash_instances",
@@ -1731,7 +1692,6 @@
     },
     {
       "cli": "--min-examined-row-limit=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "min_examined_row_limit",
@@ -1748,7 +1708,6 @@
     },
     {
       "cli": "--mrr-buffer-size=#",
-      "dataType": "numeric",
       "default": "262144",
       "dynamic": true,
       "id": "mrr_buffer_size",
@@ -1766,29 +1725,28 @@
     },
     {
       "cli": "--mysql56-temporal-format",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "mysql56_temporal_format",
       "name": "mysql56_temporal_format",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--enable-named-pipe",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "named_pipe",
       "name": "named_pipe",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--net-buffer-length=#",
-      "dataType": "numeric",
       "default": "16384",
       "dynamic": true,
       "id": "net_buffer_length",
@@ -1801,11 +1759,10 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--net-read-timeout=#",
-      "dataType": "numeric",
       "default": "30",
       "dynamic": true,
       "id": "net_read_timeout",
@@ -1822,7 +1779,6 @@
     },
     {
       "cli": "--net-retry-count=#",
-      "dataType": "numeric",
       "default": "10",
       "dynamic": true,
       "id": "net_retry_count",
@@ -1834,11 +1790,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--net-write-timeout=#",
-      "dataType": "numeric",
       "default": "60",
       "dynamic": true,
       "id": "net_write_timeout",
@@ -1855,7 +1811,6 @@
     },
     {
       "cli": "--old",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "old",
@@ -1863,11 +1818,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--old-alter-table",
-      "dataType": "enumerated",
       "default": "0",
       "dynamic": true,
       "id": "old_alter_table",
@@ -1880,7 +1835,6 @@
     },
     {
       "cli": "--old-mode",
-      "dataType": "string",
       "default": "(empty string)",
       "dynamic": true,
       "id": "old_mode",
@@ -1889,10 +1843,10 @@
         "global",
         "session"
       ],
+      "type": "string",
       "validValues": []
     },
     {
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "old_passwords",
@@ -1900,7 +1854,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "id": "open_files_limit",
@@ -1909,7 +1864,6 @@
     },
     {
       "cli": "--optimizer-prune-level[=#]",
-      "dataType": "boolean",
       "default": "1",
       "dynamic": true,
       "id": "optimizer_prune_level",
@@ -1917,11 +1871,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--optimizer-search-depth[=#]",
-      "dataType": "numeric",
       "default": "62",
       "dynamic": true,
       "id": "optimizer_search_depth",
@@ -1933,11 +1887,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "optimizer-selectivity-sampling-limit[=#]",
-      "dataType": "numeric",
       "default": "100",
       "dynamic": true,
       "id": "optimizer_selectivity_sampling_limit",
@@ -1954,7 +1908,6 @@
     },
     {
       "cli": "--optimizer-switch=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "optimizer_switch",
       "name": "optimizer_switch",
@@ -1962,11 +1915,11 @@
         "global",
         "session"
       ],
+      "type": "string",
       "validValues": []
     },
     {
       "cli": "--optimizer-use-condition-selectivity=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "optimizer_use_condition_selectivity",
@@ -1978,39 +1931,40 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "<<code>>--pam-use-cleartext-plugin</code>>",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "pam_use_cleartext_plugin",
       "name": "pam_use_cleartext_plugin",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--pid-file=file_name",
-      "dataType": "file name",
       "dynamic": false,
       "id": "pid_file",
       "name": "pid_file",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "file name"
     },
     {
       "cli": "--plugin-dir=path",
-      "dataType": "directory name",
       "default": "BASEDIR/lib/plugin",
       "dynamic": false,
       "id": "plugin_dir",
       "name": "plugin_dir",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "directory name"
     },
     {
       "cli": "--plugin-maturity=level",
@@ -2032,7 +1986,6 @@
     },
     {
       "cli": "--port=#, -p",
-      "dataType": "numeric",
       "default": "3306",
       "dynamic": false,
       "id": "port",
@@ -2043,11 +1996,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--preload-buffer-size=#",
-      "dataType": "numeric",
       "default": "32768",
       "dynamic": true,
       "id": "preload_buffer_size",
@@ -2060,10 +2013,9 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "profiling",
@@ -2071,11 +2023,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--profiling-history-size=#",
-      "dataType": "numeric",
       "default": "15",
       "dynamic": true,
       "id": "profiling_history_size",
@@ -2092,7 +2044,6 @@
     },
     {
       "cli": "--progress-report-time=#",
-      "dataType": "numeric",
       "default": "5",
       "dynamic": true,
       "id": "progress_report_time",
@@ -2109,7 +2060,6 @@
     },
     {
       "cli": "none",
-      "dataType": "numeric",
       "default": "10",
       "dynamic": false,
       "id": "protocol_version",
@@ -2120,49 +2070,49 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--proxy-protocol-networks=value",
-      "dataType": "string",
       "dynamic": false,
       "id": "proxy_protocol_networks",
       "name": "proxy_protocol_networks",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "string",
       "dynamic": false,
       "id": "proxy_user",
       "name": "proxy_user",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "numeric",
       "default": "OFF",
       "dynamic": true,
       "id": "pseudo_slave_mode",
       "name": "pseudo_slave_mode",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "dynamic": true,
       "id": "pseudo_thread_id",
       "name": "pseudo_thread_id",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--query-alloc-block-size=#",
-      "dataType": "numeric",
       "default": "8192",
       "dynamic": true,
       "id": "query_alloc_block_size",
@@ -2175,11 +2125,10 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--query-cache-limit=#",
-      "dataType": "numeric",
       "default": "1048576",
       "dynamic": true,
       "id": "query_cache_limit",
@@ -2191,11 +2140,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--query-cache-min-res-unit=#",
-      "dataType": "numeric",
       "default": "4096",
       "dynamic": true,
       "id": "query_cache_min_res_unit",
@@ -2207,11 +2155,10 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--query-cache-size=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "query_cache_size",
@@ -2219,25 +2166,24 @@
       "scope": [
         "global"
       ],
-      "type": "byte",
+      "type": "integer",
       "validValues": [
         "0"
       ]
     },
     {
       "cli": "query-cache-strip-comments",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "query_cache_strip_comments",
       "name": "query_cache_strip_comments",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--query-cache-type=#",
-      "dataType": "enumeration",
       "default": "ON",
       "dynamic": true,
       "id": "query_cache_type",
@@ -2246,6 +2192,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "0",
         "OFF",
@@ -2257,7 +2204,6 @@
     },
     {
       "cli": "--query-cache-wlock-invalidate",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "query_cache_wlock_invalidate",
@@ -2265,11 +2211,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--query-prealloc-size=#",
-      "dataType": "numeric",
       "default": "8192",
       "dynamic": true,
       "id": "query_prealloc_size",
@@ -2282,7 +2228,7 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "id": "rand_seed1",
@@ -2294,7 +2240,6 @@
     },
     {
       "cli": "--range-alloc-block-size=#",
-      "dataType": "numeric",
       "default": "4096",
       "dynamic": true,
       "id": "range_alloc_block_size",
@@ -2303,11 +2248,10 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--read-buffer-size=#",
-      "dataType": "numeric",
       "default": "131072",
       "dynamic": true,
       "id": "read_buffer_size",
@@ -2320,22 +2264,21 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--read-only",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "read_only",
       "name": "read_only",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--read-rnd-buffer-size=#",
-      "dataType": "numeric",
       "default": "262144",
       "dynamic": true,
       "id": "read_rnd_buffer_size",
@@ -2348,11 +2291,10 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "--rowid-merge-buff-size=#",
-      "dataType": "numeric",
       "default": "8388608",
       "dynamic": true,
       "id": "rowid_merge_buff_size",
@@ -2365,7 +2307,7 @@
         "global",
         "session"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "id": "rpl_recovery_rank",
@@ -2373,28 +2315,27 @@
     },
     {
       "cli": "--safe-show-database (until mysql 4.1.1)",
-      "dataType": "boolean",
       "dynamic": true,
       "id": "safe_show_database",
       "name": "safe_show_database",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--secure-auth",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "secure_auth",
       "name": "secure_auth",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--secure-file-priv=path",
-      "dataType": "path name",
       "dynamic": false,
       "id": "secure_file_priv",
       "name": "secure_file_priv",
@@ -2404,7 +2345,6 @@
     },
     {
       "cli": "--secure-timestamp=value",
-      "dataType": "enum",
       "default": "NO",
       "dynamic": false,
       "id": "secure_timestamp",
@@ -2415,7 +2355,6 @@
     },
     {
       "cli": "--session-track-schema={0|1}",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "session_track_schema",
@@ -2423,11 +2362,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--session-track-state-change={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "session_track_state_change",
@@ -2435,11 +2374,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--session-track-system-variables=value",
-      "dataType": "string",
       "default": "autocommit, character_set_client, character_set_connection, character_set_results, time_zone",
       "dynamic": true,
       "id": "session_track_system_variables",
@@ -2447,11 +2386,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--session-track-transaction-info=value",
-      "dataType": "enum",
       "default": "OFF",
       "dynamic": true,
       "id": "session_track_transaction_info",
@@ -2475,62 +2414,61 @@
       ]
     },
     {
-      "dataType": "string",
       "default": "MYSQL",
       "dynamic": false,
       "id": "shared_memory_base_name",
       "name": "shared_memory_base_name",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--skip-external-locking",
-      "dataType": "boolean",
       "default": "1",
       "dynamic": false,
       "id": "skip_external_locking",
       "name": "skip_external_locking",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--skip-name-resolve",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": false,
       "id": "skip_name_resolve",
       "name": "skip_name_resolve",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--skip-networking",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": false,
       "id": "skip_networking",
       "name": "skip_networking",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--skip-show-database",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": false,
       "id": "skip_show_database",
       "name": "skip_show_database",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--slow-launch-time=#",
-      "dataType": "numeric",
       "default": "2",
       "dynamic": true,
       "id": "slow_launch_time",
@@ -2542,7 +2480,6 @@
     },
     {
       "cli": "--slow-query-log",
-      "dataType": "boolean",
       "default": "0",
       "dynamic": true,
       "id": "slow_query_log",
@@ -2550,33 +2487,33 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--slow-query-log-file=file_name",
-      "dataType": "file name",
       "default": "host_name-slow.log",
       "dynamic": true,
       "id": "slow_query_log_file",
       "name": "slow_query_log_file",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "file name"
     },
     {
       "cli": "--socket=name",
-      "dataType": "file name",
       "default": "MySQL",
       "dynamic": false,
       "id": "socket",
       "name": "socket",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "file name"
     },
     {
       "cli": "--sort-buffer-size=#",
-      "dataType": "number",
       "default": "2M (2097152)",
       "dynamic": true,
       "id": "sort_buffer_size",
@@ -2587,7 +2524,6 @@
       ]
     },
     {
-      "dataType": "boolean",
       "default": "0 (>= MariaDB/MySQL 5.5.3), 1 (MariaDB/MySQL <= 5.5.2)",
       "dynamic": true,
       "id": "sql_auto_is_null",
@@ -2595,10 +2531,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "default": "1",
       "dynamic": true,
       "id": "sql_big_selects",
@@ -2606,14 +2542,14 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "id": "sql_big_tables",
       "name": "sql_big_tables"
     },
     {
-      "dataType": "boolean",
       "default": "0",
       "dynamic": true,
       "id": "sql_buffer_result",
@@ -2621,17 +2557,18 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "default": "0",
       "dynamic": true,
       "id": "sql_log_off",
       "name": "sql_log_off",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "id": "sql_log_update",
@@ -2647,7 +2584,6 @@
     },
     {
       "cli": "--sql-mode=value[,value[,value...]]",
-      "dataType": "string",
       "dynamic": true,
       "id": "sql_mode",
       "name": "sql_mode",
@@ -2655,11 +2591,11 @@
         "global",
         "session"
       ],
+      "type": "string",
       "validValues": []
     },
     {
       "cli": "none",
-      "dataType": "boolean",
       "default": "1",
       "dynamic": true,
       "id": "sql_notes",
@@ -2667,10 +2603,10 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "default": "1",
       "dynamic": true,
       "id": "sql_quote_show_create",
@@ -2678,17 +2614,17 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "boolean",
       "default": "OFF (0)",
       "dynamic": true,
       "id": "sql_safe_updates",
-      "name": "sql_safe_updates"
+      "name": "sql_safe_updates",
+      "type": "boolean"
     },
     {
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "sql_select_limit",
@@ -2700,7 +2636,6 @@
       "type": "integer"
     },
     {
-      "dataType": "boolean",
       "default": "OFF (0)",
       "dynamic": true,
       "id": "sql_warnings",
@@ -2708,7 +2643,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "id": "storage_engine",
@@ -2716,7 +2652,6 @@
     },
     {
       "cli": "--standard-compliant-cte={0|1}",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "standard_compliant_cte",
@@ -2724,11 +2659,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--stored-program-cache=#",
-      "dataType": "numeric",
       "default": "256",
       "dynamic": true,
       "id": "stored_program_cache",
@@ -2744,38 +2679,37 @@
     },
     {
       "cli": "--strict-password-validation",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "strict_password_validation",
       "name": "strict_password_validation",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--sync-frm",
-      "dataType": "boolean",
       "default": "TRUE",
       "dynamic": true,
       "id": "sync_frm",
       "name": "sync_frm",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
-      "dataType": "string",
       "dynamic": false,
       "id": "system_time_zone",
       "name": "system_time_zone",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--table-definition-cache=#",
-      "dataType": "numeric",
       "default": "400",
       "dynamic": true,
       "id": "table_definition_cache",
@@ -2791,7 +2725,6 @@
     },
     {
       "cli": "--table-lock-wait-timeout=#",
-      "dataType": "numeric",
       "default": "50",
       "dynamic": true,
       "id": "table_lock_wait_timeout",
@@ -2802,11 +2735,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--table-open-cache=#",
-      "dataType": "numeric",
       "default": "400",
       "dynamic": true,
       "id": "table_open_cache",
@@ -2821,7 +2754,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "default": "1",
       "dynamic": false,
       "id": "table_open_cache_instances",
@@ -2832,7 +2764,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "id": "table_type",
@@ -2840,7 +2773,6 @@
     },
     {
       "cli": "--tcp-keepalive-interval=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "tcp_keepalive_interval",
@@ -2856,7 +2788,6 @@
     },
     {
       "cli": "--tcp-keepalive-probes=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "tcp_keepalive_probes",
@@ -2872,7 +2803,6 @@
     },
     {
       "cli": "--tcp-keepalive-time=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "tcp_keepalive_time",
@@ -2883,11 +2813,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--thread-cache-size=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": true,
       "id": "thread_cache_size",
@@ -2903,7 +2833,6 @@
     },
     {
       "cli": "--thread-concurrency=#",
-      "dataType": "numeric",
       "default": "10",
       "dynamic": false,
       "id": "thread_concurrency",
@@ -2919,7 +2848,6 @@
     },
     {
       "cli": "--thread-stack=#",
-      "dataType": "numeric",
       "dynamic": false,
       "id": "thread_stack",
       "name": "thread_stack",
@@ -2929,7 +2857,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "id": "time_format",
@@ -2937,7 +2866,6 @@
     },
     {
       "cli": "--default-time-zone=string",
-      "dataType": "string",
       "default": "SYSTEM",
       "dynamic": true,
       "id": "time_zone",
@@ -2945,18 +2873,19 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--timed-mutexes",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "timed_mutexes",
       "name": "timed_mutexes",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "dynamic": true,
@@ -2972,7 +2901,6 @@
     },
     {
       "cli": "--tmp-disk-table-size=#",
-      "dataType": "numeric",
       "default": "18446744073709551615",
       "dynamic": true,
       "id": "tmp_disk_table_size",
@@ -2984,7 +2912,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--tmp-memory-table-size=#",
@@ -2993,7 +2922,6 @@
     },
     {
       "cli": "--tmp-table-size=#",
-      "dataType": "numeric",
       "default": "16777216",
       "dynamic": true,
       "id": "tmp_table_size",
@@ -3005,7 +2933,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--tmpdir=path or -t path",
@@ -3103,7 +3032,6 @@
     },
     {
       "cli": "--use-stat-tables=mode",
-      "dataType": "enum",
       "default": "never",
       "dynamic": true,
       "id": "use_stat_tables",
@@ -3115,14 +3043,14 @@
     },
     {
       "cli": "--userstat=1",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "userstat",
       "name": "userstat",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "-v, --version[=name] (>= mariadb 10.2.1), --version (<= mariadb 10.2.0)",

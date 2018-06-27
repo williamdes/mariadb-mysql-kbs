@@ -2,18 +2,17 @@
   "data": [
     {
       "cli": "--aria-block-size=#",
-      "dataType": "numeric",
       "default": "8192",
       "dynamic": false,
       "id": "aria_block_size",
       "name": "aria_block_size",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--aria-checkpoint-interval=#",
-      "dataType": "numeric",
       "default": "30",
       "dynamic": true,
       "id": "aria_checkpoint_interval",
@@ -29,7 +28,6 @@
     },
     {
       "cli": "aria-checkpoint-log-activity=#",
-      "dataType": "numeric",
       "default": "1048576",
       "dynamic": true,
       "id": "aria_checkpoint_log_activity",
@@ -37,22 +35,21 @@
       "scope": [
         "global"
       ],
-      "type": "byte"
+      "type": "integer"
     },
     {
       "cli": "aria-encrypt-tables={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "aria_encrypt_tables",
       "name": "aria_encrypt_tables",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--aria-force-start-after-recovery-failures=#",
-      "dataType": "numeric",
       "default": "0",
       "dynamic": false,
       "id": "aria_force_start_after_recovery_failures",
@@ -64,7 +61,6 @@
     },
     {
       "cli": "--aria_group_commit=\"value\"",
-      "dataType": "string",
       "default": "none",
       "dynamic": false,
       "id": "aria_group_commit",
@@ -72,6 +68,7 @@
       "scope": [
         "global"
       ],
+      "type": "string",
       "validValues": []
     },
     {
@@ -87,7 +84,6 @@
     },
     {
       "cli": "--aria-log-dir-path=#",
-      "dataType": "directory",
       "default": "SAME AS DATADIR",
       "dynamic": true,
       "id": "aria_log_dir_path",
@@ -98,18 +94,17 @@
     },
     {
       "cli": "--aria-log-file-size=#",
-      "dataType": "numeric",
       "default": "1073741824",
       "dynamic": true,
       "id": "aria_log_file_size",
       "name": "aria_log_file_size",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--aria-log-purge-type=name",
-      "dataType": "enumeration",
       "default": "immediate",
       "dynamic": true,
       "id": "aria_log_purge_type",
@@ -117,6 +112,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "immediate",
         "external",
@@ -125,7 +121,6 @@
     },
     {
       "cli": "--aria-max-sort-file-size=#",
-      "dataType": "numeric",
       "default": "9223372036853727232",
       "dynamic": true,
       "id": "aria_max_sort_file_size",
@@ -136,22 +131,22 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--aria-page-checksum=#",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": true,
       "id": "aria_page_checksum",
       "name": "aria_page_checksum",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--aria-pagecache-age-threshold=#",
-      "dataType": "numeric",
       "default": "300",
       "dynamic": true,
       "id": "aria_pagecache_age_threshold",
@@ -167,7 +162,6 @@
     },
     {
       "cli": "--aria-pagecache-buffer-size=#",
-      "dataType": "numeric",
       "default": "134217720",
       "dynamic": false,
       "id": "aria_pagecache_buffer_size",
@@ -183,7 +177,6 @@
     },
     {
       "cli": "--aria-pagecache-division-limit=#",
-      "dataType": "numeric",
       "default": "100",
       "dynamic": true,
       "id": "aria_pagecache_division_limit",
@@ -194,11 +187,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--aria-pagecache-file-hash-size=#",
-      "dataType": "numeric",
       "default": "512",
       "dynamic": false,
       "id": "aria_pagecache_file_hash_size",
@@ -218,13 +211,13 @@
     },
     {
       "cli": "--aria-recover[=#]",
-      "dataType": "enumeration",
       "dynamic": true,
       "id": "aria_recover_options",
       "name": "aria_recover_options",
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "NORMAL",
         "BACKUP",
@@ -235,7 +228,6 @@
     },
     {
       "cli": "--aria-repair-threads=#",
-      "dataType": "numeric",
       "default": "1",
       "dynamic": true,
       "id": "aria_repair_threads",
@@ -248,7 +240,6 @@
     },
     {
       "cli": "--aria-sort-buffer-size=#",
-      "dataType": "numeric",
       "default": "134217728",
       "dynamic": true,
       "id": "aria_sort_buffer_size",
@@ -256,11 +247,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--aria-stats-method=#",
-      "dataType": "numeric",
       "default": "nulls_unequal",
       "dynamic": true,
       "id": "aria_stats_method",
@@ -269,6 +260,7 @@
         "global",
         "session"
       ],
+      "type": "integer",
       "validValues": [
         "nulls_equal",
         "nulls_unequal",
@@ -277,7 +269,6 @@
     },
     {
       "cli": "--aria-sync-log-dir=#",
-      "dataType": "enumeration",
       "default": "NEWFILE",
       "dynamic": true,
       "id": "aria_sync_log_dir",
@@ -285,6 +276,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "NEWFILE",
         "NEVER",
@@ -293,18 +285,17 @@
     },
     {
       "cli": "no",
-      "dataType": "boolean",
       "default": "ON",
       "dynamic": false,
       "id": "aria_used_for_temp_tables",
       "name": "aria_used_for_temp_tables",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--deadlock-search-depth-long=#",
-      "dataType": "numeric",
       "default": "15",
       "dynamic": true,
       "id": "deadlock_search_depth_long",
@@ -316,11 +307,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--deadlock-search-depth-short=#",
-      "dataType": "numeric",
       "default": "4",
       "dynamic": true,
       "id": "deadlock_search_depth_short",
@@ -332,11 +323,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--deadlock-timeout-long=#",
-      "dataType": "numeric",
       "default": "50000000",
       "dynamic": true,
       "id": "deadlock_timeout_long",
@@ -353,7 +344,6 @@
     },
     {
       "cli": "--deadlock-timeout-short=#",
-      "dataType": "numeric",
       "default": "10000",
       "dynamic": true,
       "id": "deadlock_timeout_short",

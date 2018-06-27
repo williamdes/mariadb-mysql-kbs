@@ -2,13 +2,13 @@
   "data": [
     {
       "cli": "--server-audit-events=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "server_audit_events",
       "name": "server_audit_events",
       "scope": [
         "global"
       ],
+      "type": "string",
       "validValues": [
         "CONNECT",
         "QUERY",
@@ -21,50 +21,49 @@
     },
     {
       "cli": "--server-audit-excl-users=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "server_audit_excl_users",
       "name": "server_audit_excl_users",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--server-audit-file-path=value",
-      "dataType": "string",
       "default": "server_audit.log",
       "dynamic": true,
       "id": "server_audit_file_path",
       "name": "server_audit_file_path",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--server-audit-rotate-now[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "server_audit_file_rotate_now",
       "name": "server_audit_file_rotate_now",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--server-audit-rotate-size=#",
-      "dataType": "numeric",
       "default": "1000000",
       "dynamic": true,
       "id": "server_audit_file_rotate_size",
       "name": "server_audit_file_rotate_size",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--server-audit-rotations=#",
-      "dataType": "numeric",
       "default": "9",
       "dynamic": true,
       "id": "server_audit_file_rotations",
@@ -75,38 +74,39 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--server-audit-incl-users=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "server_audit_incl_users",
       "name": "server_audit_incl_users",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "n/a",
-      "dataType": "string",
       "dynamic": false,
       "id": "server_audit_loc_info",
       "name": "server_audit_loc_info",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--server-audit-logging[={0|1}]",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "server_audit_logging",
       "name": "server_audit_logging",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--server-audit-mode[=#]",
@@ -115,7 +115,6 @@
     },
     {
       "cli": "--server-audit-output-type=value",
-      "dataType": "enum",
       "default": "file",
       "dynamic": true,
       "id": "server_audit_output_type",
@@ -130,7 +129,6 @@
     },
     {
       "cli": "--server-audit-query-log-limit=#",
-      "dataType": "numeric",
       "default": "1024",
       "dynamic": true,
       "id": "server_audit_query_log_limit",
@@ -141,11 +139,11 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--server-audit-syslog-facility=value",
-      "dataType": "enum",
       "default": "LOG_USER",
       "dynamic": true,
       "id": "server_audit_syslog_facility",
@@ -171,28 +169,27 @@
     },
     {
       "cli": "--server-audit-syslog-ident=value",
-      "dataType": "string",
       "default": "mysql-server_auditing",
       "dynamic": true,
       "id": "server_audit_syslog_ident",
       "name": "server_audit_syslog_ident",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--server-audit-syslog-info=value",
-      "dataType": "string",
       "dynamic": true,
       "id": "server_audit_syslog_info",
       "name": "server_audit_syslog_info",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--server-audit-syslog-priority=value",
-      "dataType": "enum",
       "default": "LOG_INFO",
       "dynamic": true,
       "id": "server_audit_syslog_priority",

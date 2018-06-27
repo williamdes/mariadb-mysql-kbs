@@ -2,17 +2,16 @@
   "data": [
     {
       "cli": "--connect-class_path=value",
-      "dataType": "string",
       "dynamic": false,
       "id": "connect_class_path",
       "name": "connect_class_path",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--connect-conv-size=#",
-      "dataType": "numeric",
       "default": "8192",
       "dynamic": true,
       "id": "connect_conv_size",
@@ -28,7 +27,6 @@
     },
     {
       "cli": "--connect-enable-mongo={0|1}",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "connect_enable_mongo",
@@ -36,33 +34,33 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--connect-exact-info=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "connect_exact_info",
       "name": "connect_exact_info",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--connect-indx-map=#",
-      "dataType": "boolean",
       "default": "OFF",
       "dynamic": true,
       "id": "connect_indx_map",
       "name": "connect_indx_map",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--connect-java-wrapper=val",
-      "dataType": "string",
       "default": "wrappers/JdbcInterface",
       "dynamic": true,
       "id": "connect_java_wrapper",
@@ -70,11 +68,11 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--connect-json-grp-size=#",
-      "dataType": "numeric",
       "default": "10",
       "dynamic": true,
       "id": "connect_json_grp_size",
@@ -91,7 +89,6 @@
     },
     {
       "cli": "--connect-json-null=value",
-      "dataType": "string",
       "default": "<null>",
       "dynamic": true,
       "id": "connect_json_null",
@@ -99,21 +96,21 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--connect-jvm_path=value",
-      "dataType": "string",
       "dynamic": false,
       "id": "connect_jvm_path",
       "name": "connect_jvm_path",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--connect-type-conv=#",
-      "dataType": "enum",
       "default": "NO",
       "dynamic": true,
       "id": "connect_type_conv",
@@ -129,7 +126,6 @@
     },
     {
       "cli": "--connect-use-tempfile=#",
-      "dataType": "enum",
       "default": "AUTO",
       "dynamic": true,
       "id": "connect_use_tempfile",
@@ -140,7 +136,6 @@
     },
     {
       "cli": "--connect-work-size=#",
-      "dataType": "numeric",
       "default": "67108864",
       "dynamic": true,
       "id": "connect_work_size",
@@ -157,7 +152,6 @@
     },
     {
       "cli": "--connect-xtrace=#",
-      "dataType": "set",
       "default": "0",
       "dynamic": true,
       "id": "connect_xtrace",
@@ -169,6 +163,7 @@
       "scope": [
         "global"
       ],
+      "type": "set",
       "validValues": []
     }
   ],

@@ -1,7 +1,6 @@
 {
   "data": [
     {
-      "dataType": "numeric",
       "id": "ssl_accept_renegotiates",
       "name": "Ssl_accept_renegotiates",
       "scope": [
@@ -10,7 +9,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_accepts",
       "name": "Ssl_accepts",
       "scope": [
@@ -19,7 +17,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_callback_cache_hits",
       "name": "Ssl_callback_cache_hits",
       "scope": [
@@ -28,25 +25,24 @@
       "type": "integer"
     },
     {
-      "dataType": "string",
       "id": "ssl_cipher",
       "name": "Ssl_cipher",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "string",
       "id": "ssl_cipher_list",
       "name": "Ssl_cipher_list",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_client_connects",
       "name": "Ssl_client_connects",
       "scope": [
@@ -55,7 +51,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_connect_renegotiates",
       "name": "Ssl_connect_renegotiates",
       "scope": [
@@ -64,23 +59,22 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_ctx_verify_depth",
       "name": "Ssl_ctx_verify_depth",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_ctx_verify_mode",
       "name": "Ssl_ctx_verify_mode",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_default_timeout",
       "name": "Ssl_default_timeout",
       "scope": [
@@ -90,7 +84,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_finished_accepts",
       "name": "Ssl_finished_accepts",
       "scope": [
@@ -99,7 +92,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_finished_connects",
       "name": "Ssl_finished_connects",
       "scope": [
@@ -108,25 +100,24 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_server_not_after",
       "name": "Ssl_server_not_after",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_server_not_before",
       "name": "Ssl_server_not_before",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_session_cache_hits",
       "name": "Ssl_session_cache_hits",
       "scope": [
@@ -135,7 +126,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_session_cache_misses",
       "name": "Ssl_session_cache_misses",
       "scope": [
@@ -144,15 +134,14 @@
       "type": "integer"
     },
     {
-      "dataType": "string",
       "id": "ssl_session_cache_mode",
       "name": "Ssl_session_cache_mode",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_session_cache_overflows",
       "name": "Ssl_session_cache_overflows",
       "scope": [
@@ -161,7 +150,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_session_cache_size",
       "name": "Ssl_session_cache_size",
       "scope": [
@@ -170,7 +158,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_session_cache_timeouts",
       "name": "Ssl_session_cache_timeouts",
       "scope": [
@@ -179,7 +166,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_sessions_reused",
       "name": "Ssl_sessions_reused",
       "scope": [
@@ -189,7 +175,6 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_used_session_cache_entries",
       "name": "Ssl_used_session_cache_entries",
       "scope": [
@@ -198,31 +183,31 @@
       "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_verify_depth",
       "name": "Ssl_verify_depth",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "numeric",
       "id": "ssl_verify_mode",
       "name": "Ssl_verify_mode",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "integer"
     },
     {
-      "dataType": "string",
       "id": "ssl_version",
       "name": "Ssl_version",
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     }
   ],
   "name": "ssltls-status-variables",

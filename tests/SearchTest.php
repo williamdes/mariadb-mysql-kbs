@@ -89,4 +89,38 @@ class SearchTest extends TestCase
         Search::getByName("acbdefghi0202", Search::MARIADB);
     }
 
+    /**
+     * test load data fail
+     *
+     * @runInSeparateProcess
+     * @expectedException     Exception
+     * @expectedExceptionCode 0
+     * @expectedExceptionMessageRegExp /(.+) does not exist !/
+     *
+     * @return void
+     */
+    public function testExceptionLoadData(): void
+    {
+        Search::$DATA_DIR = ".";
+        Search::$loaded   = false;
+        Search::loadData();
+    }
+
+    /**
+     * test get variables with dynamic status
+     *
+     * @return void
+     */
+    public function testGetVariablesWithDynamic(): void
+    {
+        $dynamic = Search::getVariablesWithDynamic(true);
+        $this->assertEquals($dynamic, Search::getDynamicVariables());
+        $static = Search::getVariablesWithDynamic(false);
+        $this->assertEquals($static, Search::getStaticVariables());
+        $this->assertGreaterThan(10, count($dynamic));
+        $this->assertGreaterThan(10, count($static));
+        $common = \array_intersect($dynamic, $static);
+        $this->assertEquals(0, count($common));// Impossible to be dynamic and not
+    }
+
 }

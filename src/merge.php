@@ -337,9 +337,10 @@ echo "NBR_CONFLICTS: ".$nbrConflicts.PHP_EOL;
 echo "NBR_CONFLICTS_SOLVED: ".$nbrConflictsSolved.PHP_EOL;
 echo "NBR_CONFLICTS_REMAINING: ".($nbrConflicts - $nbrConflictsSolved).PHP_EOL;
 
-$fileOut       = new stdClass();
-$fileOut->vars = json_decode(json_encode($variables));
-file_put_contents(__DIR__."/../dist/merged-raw.json", json_encode($fileOut, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+$fileOut          = new stdClass();
+$fileOut->vars    = json_decode(json_encode($variables));
+$fileOut->version = 1.0;
+file_put_contents(__DIR__."/../dist/merged-raw.json", json_encode($fileOut, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).PHP_EOL);
 
 $fileOut->urls = array();
 
@@ -353,13 +354,17 @@ foreach ($fileOut->vars as $id => $doc) {
         $kbEntry      = "$urlId#$kbEntry->anchor";
     }
 }
+$fileOut->version = 1.0;
+file_put_contents(__DIR__."/../dist/merged-slim.json", json_encode($fileOut, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).PHP_EOL);
 
-file_put_contents(__DIR__."/../dist/merged-slim.json", json_encode($fileOut, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
-
-$fileOut->vars  = $variables;
+$fileOut->vars  = json_decode(json_encode($variables));
 $fileOut->types = array( "MYSQL" => 1, "MARIADB" => 2 );
 foreach ($fileOut->vars as $id => &$doc) {
-    $links = array();
+    $data = new stdClass();
+    if (isset($doc->dynamic)) {
+        $data->d = $doc->dynamic;
+    }
+    $data->a = array();
     foreach ($doc->ids as &$kbEntry) {
         $urlId = array_search($kbEntry->url, $fileOut->urls, true);
         if ($urlId === false) {
@@ -367,17 +372,19 @@ foreach ($fileOut->vars as $id => &$doc) {
         }
         $kbEntryMin    = new stdClass();
         $kbEntryMin->a = $kbEntry->anchor;
+
         $kbEntryMin->u = $urlId;
         if (preg_match("/mysql\.com/", $kbEntry->url)) {
             $kbEntryMin->t = $fileOut->types["MYSQL"];
         } elseif (preg_match("/mariadb\.com/", $kbEntry->url)) {
             $kbEntryMin->t = $fileOut->types["MARIADB"];
         }
-        $links[] = $kbEntryMin;
+        $data->a[] = $kbEntryMin;
     }
-    $doc = $links;
+    $doc = $data;
 }
-$fileOut->types = array_flip($fileOut->types);
-file_put_contents(__DIR__."/../dist/merged-ultraslim.json", json_encode($fileOut, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+$fileOut->types   = array_flip($fileOut->types);
+$fileOut->version = 1.0;
+file_put_contents(__DIR__."/../dist/merged-ultraslim.json", json_encode($fileOut, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).PHP_EOL);
 
 echo "Files merged !".PHP_EOL;

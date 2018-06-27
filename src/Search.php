@@ -21,9 +21,11 @@ class Search
      */
     public static $loaded = false;
 
-    public const ANY     = -1;
-    public const MYSQL   = 1;
-    public const MARIADB = 2;
+    public const ANY        = -1;
+    public const MYSQL      = 1;
+    public const MARIADB    = 2;
+    public const DS         = DIRECTORY_SEPARATOR;
+    public static $DATA_DIR = __DIR__.self::DS."..".self::DS."dist".self::DS;
 
     /**
      * Load data from disk
@@ -32,13 +34,11 @@ class Search
      */
     public static function loadData(): void
     {
-        $DS = DIRECTORY_SEPARATOR;
         if (Search::$loaded === false) {
-            $contents = file_get_contents(
-                __DIR__.$DS."..".$DS."dist".$DS."merged-ultraslim.json"
-            );
+            $filePath = Search::$DATA_DIR."merged-ultraslim.json";
+            $contents = @file_get_contents($filePath);
             if ($contents === false) {
-                throw new Exception("File not found !");
+                throw new Exception("$filePath does not exist !");
             }
             Search::$data   = json_decode($contents);
             Search::$loaded = true;
@@ -58,7 +58,7 @@ class Search
         if (isset(Search::$data->vars->{$name})) {
             $kbEntrys = Search::$data->vars->{$name};
             $kbEntry  = null;
-            foreach ($kbEntrys as $kbEntry) {
+            foreach ($kbEntrys->a as $kbEntry) {
                 if ($type === Search::ANY) {
                     return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
                 } elseif ($type === Search::MYSQL) {
@@ -76,6 +76,46 @@ class Search
         } else {
             throw new Exception("$name does not exist !");
         }
+    }
+
+    /**
+     * Return the list of static variables
+     *
+     * @return array
+     */
+    public static function getStaticVariables(): array
+    {
+        return self::getVariablesWithDynamic(false);
+    }
+
+    /**
+     * Return the list of dynamic variables
+     *
+     * @return array
+     */
+    public static function getDynamicVariables(): array
+    {
+        return self::getVariablesWithDynamic(true);
+    }
+
+    /**
+     * Return the list of variables having dynamic = $dynamic
+     *
+     * @param bool $dynamic dynamic=true/dynamic=false
+     * @return array
+     */
+    public static function getVariablesWithDynamic(bool $dynamic): array
+    {
+        self::loadData();
+        $staticVars = array();
+        foreach (Search::$data->vars as $name => $var) {
+            if (isset($var->d)) {
+                if ($var->d === $dynamic) {
+                    $staticVars[] = $name;
+                }
+            }
+        }
+        return $staticVars;
     }
 
 }

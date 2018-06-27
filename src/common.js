@@ -30,3 +30,21 @@ exports.writeJSON = function writeJSON(filename, data) {
     }
   });
 };
+
+exports.readJSON = function readJSON(filename, callbackSuccess) {
+  fs.readFile(filename, 'utf8', function(err, data) {
+    if (err) {
+      return console.log(err);
+    }
+    callbackSuccess(JSON.parse(data), filename);
+  });
+};
+
+exports.listDirectory = function readJSON(dirname, callbackSuccess) {
+  fs.readdir(dirname, (err, files) => {
+    if (err) {
+      return console.log(err);
+    }
+    callbackSuccess(files, dirname);
+  });
+};

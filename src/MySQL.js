@@ -28,12 +28,13 @@ function completeDoc(rows, doc) {
         break;
       case 'scope':
         let scope = value.textContent.toLowerCase();
-        if( scope === 'both') {// found on mysql-cluster-options-variables.html
-            doc.scope = ['global', 'session'];
-        } else if( scope == '') {// empty scope
+        if (scope === 'both') {
+          // found on mysql-cluster-options-variables.html
+          doc.scope = ['global', 'session'];
+        } else if (scope == '') {
+          // empty scope
         } else {
-          doc.scope = scope.split(',')
-          .map(item => {
+          doc.scope = scope.split(',').map(item => {
             if (item.match(/session/)) {
               return 'session';
             } else if (item.match(/global/)) {
@@ -43,7 +44,7 @@ function completeDoc(rows, doc) {
             }
           });
         }
-        if(doc.scope != undefined) {
+        if (doc.scope != undefined) {
           doc.scope = doc.scope.filter(function(e) {
             return e === 0 || e;
           });
@@ -51,8 +52,7 @@ function completeDoc(rows, doc) {
         break;
       case 'type':
         let type = value.textContent.toLowerCase().trim();
-        if(type != "")
-          doc.type = type;
+        if (type != '') doc.type = type;
         break;
       case 'default value':
         doc.default = value.textContent.toLowerCase().trim();
@@ -267,4 +267,3 @@ parsePage(KB_URL + 'version-tokens-reference.html', (data, url) => {
   };
   writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
 });
-

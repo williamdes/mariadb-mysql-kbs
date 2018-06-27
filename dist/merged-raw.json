@@ -33944,7 +33944,7 @@
             "name": "slave_pending_jobs_size_max",
             "range": {
                 "from": 1024,
-                "to": 18
+                "to": 16
             },
             "scope": [
                 "global"
@@ -36551,6 +36551,40 @@
                 }
             ]
         },
+        "version_tokens_session": {
+            "cli": "--version-tokens-session=value",
+            "default": "null",
+            "dynamic": true,
+            "name": "version_tokens_session",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sysvar_version_tokens_session",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/version-tokens-reference.html"
+                }
+            ]
+        },
+        "version_tokens_session_number": {
+            "cli": "--version-tokens-session-number=N",
+            "default": "0",
+            "dynamic": false,
+            "name": "version_tokens_session_number",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_version_tokens_session_number",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/version-tokens-reference.html"
+                }
+            ]
+        },
         "mysqlx": {
             "cli": "--mysqlx[={OFF|ON}]",
             "default": "on",
@@ -37007,5 +37041,6 @@
                 }
             ]
         }
-    }
+    },
+    "version": 1
 }

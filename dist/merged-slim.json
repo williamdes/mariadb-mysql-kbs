@@ -26537,7 +26537,7 @@
             "name": "slave_pending_jobs_size_max",
             "range": {
                 "from": 1024,
-                "to": 18
+                "to": 16
             },
             "scope": [
                 "global"
@@ -28616,6 +28616,34 @@
                 "12#sysvar_windowing_use_high_precision"
             ]
         },
+        "version_tokens_session": {
+            "cli": "--version-tokens-session=value",
+            "default": "null",
+            "dynamic": true,
+            "name": "version_tokens_session",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "string",
+            "ids": [
+                "41#sysvar_version_tokens_session"
+            ]
+        },
+        "version_tokens_session_number": {
+            "cli": "--version-tokens-session-number=N",
+            "default": "0",
+            "dynamic": false,
+            "name": "version_tokens_session_number",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "40#sysvar_version_tokens_session_number"
+            ]
+        },
         "mysqlx": {
             "cli": "--mysqlx[={OFF|ON}]",
             "default": "on",
@@ -28626,8 +28654,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "41#option_mysqld_mysqlx",
-                "40#sysvar_mysqlx"
+                "42#option_mysqld_mysqlx",
+                "41#sysvar_mysqlx"
             ]
         },
         "mysqlx_bind_address": {
@@ -28640,8 +28668,8 @@
             ],
             "type": "string",
             "ids": [
-                "40#option_mysqld_mysqlx-bind-address",
-                "40#sysvar_mysqlx_bind_address"
+                "41#option_mysqld_mysqlx-bind-address",
+                "41#sysvar_mysqlx_bind_address"
             ]
         },
         "mysqlx_connect_timeout": {
@@ -28658,8 +28686,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-connect-timeout",
-                "40#sysvar_mysqlx_connect_timeout"
+                "41#option_mysqld_mysqlx-connect-timeout",
+                "41#sysvar_mysqlx_connect_timeout"
             ]
         },
         "mysqlx_idle_worker_thread_timeout": {
@@ -28676,8 +28704,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-idle-worker-thread-timeout",
-                "40#sysvar_mysqlx_idle_worker_thread_timeout"
+                "41#option_mysqld_mysqlx-idle-worker-thread-timeout",
+                "41#sysvar_mysqlx_idle_worker_thread_timeout"
             ]
         },
         "mysqlx_interactive_timeout": {
@@ -28694,8 +28722,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-interactive-timeout",
-                "40#sysvar_mysqlx_interactive_timeout"
+                "41#option_mysqld_mysqlx-interactive-timeout",
+                "41#sysvar_mysqlx_interactive_timeout"
             ]
         },
         "mysqlx_max_allowed_packet": {
@@ -28712,8 +28740,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-max-allowed-packet",
-                "40#sysvar_mysqlx_max_allowed_packet"
+                "41#option_mysqld_mysqlx-max-allowed-packet",
+                "41#sysvar_mysqlx_max_allowed_packet"
             ]
         },
         "mysqlx_max_connections": {
@@ -28730,8 +28758,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-max-connections",
-                "40#sysvar_mysqlx_max_connections"
+                "41#option_mysqld_mysqlx-max-connections",
+                "41#sysvar_mysqlx_max_connections"
             ]
         },
         "mysqlx_min_worker_threads": {
@@ -28748,8 +28776,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-min-worker-threads",
-                "40#sysvar_mysqlx_min_worker_threads"
+                "41#option_mysqld_mysqlx-min-worker-threads",
+                "41#sysvar_mysqlx_min_worker_threads"
             ]
         },
         "mysqlx_port": {
@@ -28766,8 +28794,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-port",
-                "40#sysvar_mysqlx_port"
+                "41#option_mysqld_mysqlx-port",
+                "41#sysvar_mysqlx_port"
             ]
         },
         "mysqlx_port_open_timeout": {
@@ -28780,8 +28808,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-port-open-timeout",
-                "40#sysvar_mysqlx_port_open_timeout"
+                "41#option_mysqld_mysqlx-port-open-timeout",
+                "41#sysvar_mysqlx_port_open_timeout"
             ]
         },
         "mysqlx_read_timeout": {
@@ -28798,8 +28826,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-read-timeout",
-                "40#sysvar_mysqlx_read_timeout"
+                "41#option_mysqld_mysqlx-read-timeout",
+                "41#sysvar_mysqlx_read_timeout"
             ]
         },
         "mysqlx_socket": {
@@ -28812,8 +28840,8 @@
             ],
             "type": "string",
             "ids": [
-                "40#option_mysqld_mysqlx-socket",
-                "40#sysvar_mysqlx_socket"
+                "41#option_mysqld_mysqlx-socket",
+                "41#sysvar_mysqlx_socket"
             ]
         },
         "mysqlx_ssl": {
@@ -28825,7 +28853,7 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-ssl"
+                "41#option_mysqld_mysqlx-ssl"
             ]
         },
         "mysqlx_ssl_ca": {
@@ -28837,7 +28865,7 @@
             ],
             "type": "file name",
             "ids": [
-                "40#option_mysqld_mysqlx-ssl-ca"
+                "41#option_mysqld_mysqlx-ssl-ca"
             ]
         },
         "mysqlx_ssl_capath": {
@@ -28849,7 +28877,7 @@
             ],
             "type": "directory name",
             "ids": [
-                "40#option_mysqld_mysqlx-ssl-capath"
+                "41#option_mysqld_mysqlx-ssl-capath"
             ]
         },
         "mysqlx_ssl_cert": {
@@ -28861,7 +28889,7 @@
             ],
             "type": "file name",
             "ids": [
-                "40#option_mysqld_mysqlx-ssl-cert"
+                "41#option_mysqld_mysqlx-ssl-cert"
             ]
         },
         "mysqlx_ssl_cipher": {
@@ -28869,7 +28897,7 @@
             "name": "mysqlx_ssl_cipher",
             "type": "string",
             "ids": [
-                "40#option_mysqld_mysqlx-ssl-cipher"
+                "41#option_mysqld_mysqlx-ssl-cipher"
             ]
         },
         "mysqlx_ssl_crl": {
@@ -28881,7 +28909,7 @@
             ],
             "type": "file name",
             "ids": [
-                "40#option_mysqld_mysqlx-ssl-crl"
+                "41#option_mysqld_mysqlx-ssl-crl"
             ]
         },
         "mysqlx_ssl_crlpath": {
@@ -28893,7 +28921,7 @@
             ],
             "type": "directory name",
             "ids": [
-                "40#option_mysqld_mysqlx-ssl-crlpath"
+                "41#option_mysqld_mysqlx-ssl-crlpath"
             ]
         },
         "mysqlx_ssl_key": {
@@ -28905,7 +28933,7 @@
             ],
             "type": "file name",
             "ids": [
-                "40#option_mysqld_mysqlx-ssl-key"
+                "41#option_mysqld_mysqlx-ssl-key"
             ]
         },
         "mysqlx_wait_timeout": {
@@ -28922,8 +28950,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-wait-timeout",
-                "40#sysvar_mysqlx_wait_timeout"
+                "41#option_mysqld_mysqlx-wait-timeout",
+                "41#sysvar_mysqlx_wait_timeout"
             ]
         },
         "mysqlx_write_timeout": {
@@ -28940,8 +28968,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#option_mysqld_mysqlx-write-timeout",
-                "40#sysvar_mysqlx_write_timeout"
+                "41#option_mysqld_mysqlx-write-timeout",
+                "41#sysvar_mysqlx_write_timeout"
             ]
         },
         "mysqlx_document_id_unique_prefix": {
@@ -28958,10 +28986,11 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_mysqlx_document_id_unique_prefix"
+                "41#sysvar_mysqlx_document_id_unique_prefix"
             ]
         }
     },
+    "version": 1,
     "urls": [
         "https://mariadb.com/kb/en/library/documentation/aria-server-status-variables/",
         "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/aria/aria-system-variables/",
@@ -29003,6 +29032,7 @@
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html",
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html",
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options.html",
+        "https://dev.mysql.com/doc/refman/8.0/en/version-tokens-reference.html",
         "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
     ]
 }

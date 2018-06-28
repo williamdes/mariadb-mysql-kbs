@@ -64,7 +64,7 @@ class SearchTest extends TestCase
     /**
      * test get by name
      *
-     * @expectedException     Exception
+     * @expectedException     \Williamdes\MariaDBMySQLKBS\KBException
      * @expectedExceptionCode 0
      * @expectedExceptionMessageRegExp /(.+) does not exist for this type of documentation !/
      *
@@ -78,7 +78,7 @@ class SearchTest extends TestCase
     /**
      * test get by name not found variable
      *
-     * @expectedException     Exception
+     * @expectedException     \Williamdes\MariaDBMySQLKBS\KBException
      * @expectedExceptionCode 0
      * @expectedExceptionMessageRegExp /(.+) does not exist !/
      *
@@ -92,7 +92,7 @@ class SearchTest extends TestCase
     /**
      * test get by name not found variable
      *
-     * @expectedException     Exception
+     * @expectedException     \Williamdes\MariaDBMySQLKBS\KBException
      * @expectedExceptionCode 0
      * @expectedExceptionMessageRegExp /(.+) does not exist !/
      *
@@ -107,7 +107,7 @@ class SearchTest extends TestCase
      * test load data fail
      *
      * @runInSeparateProcess
-     * @expectedException     Exception
+     * @expectedException     \Williamdes\MariaDBMySQLKBS\KBException
      * @expectedExceptionCode 0
      * @expectedExceptionMessageRegExp /(.+) does not exist !/
      *
@@ -140,7 +140,7 @@ class SearchTest extends TestCase
     /**
      * test Exception get variable type has no type
      *
-     * @expectedException     Exception
+     * @expectedException     \Williamdes\MariaDBMySQLKBS\KBException
      * @expectedExceptionCode 0
      * @expectedExceptionMessageRegExp /(.+) does have a known type !/
      *

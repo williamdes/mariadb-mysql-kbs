@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace Williamdes\MariaDBMySQLKBS;
 
-use \Exception;
+use \Williamdes\MariaDBMySQLKBS\KBKBException;
 
 class Search
 {
@@ -38,7 +38,7 @@ class Search
             $filePath = Search::$DATA_DIR."merged-ultraslim.json";
             $contents = @file_get_contents($filePath);
             if ($contents === false) {
-                throw new Exception("$filePath does not exist !");
+                throw new KBException("$filePath does not exist !");
             }
             Search::$data   = json_decode($contents);
             Search::$loaded = true;
@@ -72,9 +72,9 @@ class Search
                 }
             }
 
-            throw new Exception("$name does not exist for this type of documentation !");
+            throw new KBException("$name does not exist for this type of documentation !");
         } else {
-            throw new Exception("$name does not exist !");
+            throw new KBException("$name does not exist !");
         }
     }
 
@@ -92,10 +92,10 @@ class Search
             if (isset($kbEntry->t)) {
                 return Search::$data->varTypes->{$kbEntry->t};
             } else {
-                throw new Exception("$name does have a known type !");
+                throw new KBException("$name does have a known type !");
             }
         } else {
-            throw new Exception("$name does not exist !");
+            throw new KBException("$name does not exist !");
         }
     }
 

@@ -231,11 +231,12 @@ foreach ($files as $file) {
                                 ) {// Missing translation (in bytes) for 32k and 64k
                                     $intersecValidValues[] = "32768";
                                     $intersecValidValues[] = "65536";
-                                    $newData->$key         = $intersecValidValues;
+                                    $newData->$key         = array_values($intersecValidValues);
                                     $nbrConflictsSolved++;
                                 } elseif (strtoupper(json_encode(ksort($docValue))) === strtoupper(json_encode(ksort($cacheValue)))
                                 ) {// uppercase / lowercase
-                                    $newData->$key = json_decode(json_encode(ksort($cacheValue)));
+                                    ksort($cacheValue);
+                                    $newData->$key = json_decode(json_encode($cacheValue));
                                     $nbrConflictsSolved++;
                                 } else {
                                     echo '[ERROR] conflict validValues : '

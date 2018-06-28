@@ -1,6 +1,6 @@
 {
   "name": "mariadb-mysql-kbs",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "An index of the MariaDB and MySQL Knowledge bases",
   "main": "src/index.js",
   "scripts": {

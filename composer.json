@@ -27,7 +27,7 @@
         "squizlabs/php_codesniffer": "^3.3"
     },
     "archive": {
-        "exclude": ["/scripts", "/data", "/dist/merged-raw.json", "/tests", "*.js", "/package.json", "/package-lock.json", "/.prettierignore", "/.gitignore", "/phpcs.xml", "/phpstan.neon", "/.travis.yml"]
+        "exclude": ["/scripts", "/data", "/dist/merged-raw.json", "/tests", "*.js", "/package.json", "/package-lock.json", "/.prettierignore", "/.gitignore", "/phpcs.xml", "/phpstan.neon", "/.travis.yml", "/dist/merged-raw.md"]
     },
     "autoload": {
         "psr-4": {

@@ -342,6 +342,62 @@ echo "NBR_CONFLICTS_REMAINING: ".($nbrConflicts - $nbrConflictsSolved).PHP_EOL;
 $fileOut          = new stdClass();
 $fileOut->vars    = json_decode(json_encode($variables));
 $fileOut->version = 1.0;
+
+$md = "# Variables and options".PHP_EOL;
+foreach ($fileOut->vars as $id => $doc) {
+    //$md .= "## ".$doc->url.PHP_EOL;
+    $md .= "## ".$doc->name.PHP_EOL;
+    $md .= "|name|value|".PHP_EOL;
+    $md .= "|----|-----|".PHP_EOL;
+    if (isset($doc->name)) {
+        $md .= "|Name|`$doc->name`|".PHP_EOL;
+    }
+    if (isset($doc->cli)) {
+        $md .= "|Command line|`$doc->cli`|".PHP_EOL;
+    }
+    if (isset($doc->type)) {
+        $md .= "|Type of variable|`$doc->type`|".PHP_EOL;
+    }
+    if (isset($doc->scope)) {
+        $md .= "|Scope|`".implode("`, `", $doc->scope)."`|".PHP_EOL;
+    }
+    if (isset($doc->default)) {
+        $md .= "|Default value|`$doc->default`|".PHP_EOL;
+    }
+    if (isset($doc->dynamic)) {
+        $md .= "|Dynamic|`".( ($doc->dynamic) ? 'true' : 'false')."`|".PHP_EOL;
+    }
+    if (empty($doc->validValues) === false) {
+        $md .= "|Valid value(s)|`".implode("`, `", $doc->validValues)."`|".PHP_EOL;
+    }
+    if (isset($doc->range)) {
+        $r = '';
+        if (isset($doc->range->from)) {
+            $r .= "from: `".$doc->range->from."`";
+        }
+
+        if (isset($doc->range->to)) {
+            if (isset($doc->range->from)) {
+                $r .= " ";
+            }
+            $r .= "to: `".$doc->range->to."`";
+        }
+        $md .= "|Range|$r|".PHP_EOL;
+    }
+    $md .= PHP_EOL;
+    $md .= "### Documentation(s)".PHP_EOL;
+    $md .= "|source|anchor name|".PHP_EOL;
+    $md .= "|------|----|".PHP_EOL;
+    foreach ($doc->ids as &$kbEntry) {
+        $matchs = array();
+        preg_match("/:\/\/([a-z.]+)/i", $kbEntry->url, $matchs);
+        $md .= "|$matchs[1]|[$kbEntry->anchor]($kbEntry->url#$kbEntry->anchor)|".PHP_EOL;
+    }
+    $md .= PHP_EOL;
+}
+
+file_put_contents(__DIR__."/../dist/merged-raw.md", $md.PHP_EOL);
+
 file_put_contents(__DIR__."/../dist/merged-raw.json", json_encode($fileOut, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).PHP_EOL);
 
 $fileOut->urls = array();

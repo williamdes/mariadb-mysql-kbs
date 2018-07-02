@@ -1,0 +1,1547 @@
+{
+  "url": "http://localhost.localdomain/refman-8.0-en.html-chapter/replication.html#replication-options-binary-log",
+  "name": "server-system-variables",
+  "data": [
+    {
+      "id": "replication-options",
+      "name": "server_id",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "replication-options",
+      "name": "server_uuid",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_show-slave-auth-info",
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "id": "sysvar_auto_increment_increment",
+      "name": "auto_increment_increment",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "1",
+      "range": {
+        "from": 1,
+        "to": 65535
+      }
+    },
+    {
+      "id": "sysvar_auto_increment_offset",
+      "name": "auto_increment_offset",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "1",
+      "range": {
+        "from": 1,
+        "to": 65535
+      }
+    },
+    {
+      "id": "sysvar_rpl_semi_sync_master_enabled",
+      "name": "rpl_semi_sync_master_enabled",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "sysvar_rpl_semi_sync_master_timeout",
+      "name": "rpl_semi_sync_master_timeout",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "10000"
+    },
+    {
+      "id": "sysvar_rpl_semi_sync_master_trace_level",
+      "name": "rpl_semi_sync_master_trace_level",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "32"
+    },
+    {
+      "id": "sysvar_rpl_semi_sync_master_wait_for_slave_count",
+      "name": "rpl_semi_sync_master_wait_for_slave_count",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "1",
+      "range": {
+        "from": 1,
+        "to": 65535
+      }
+    },
+    {
+      "id": "sysvar_rpl_semi_sync_master_wait_no_slave",
+      "name": "rpl_semi_sync_master_wait_no_slave",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "on"
+    },
+    {
+      "id": "sysvar_rpl_semi_sync_master_wait_point",
+      "name": "rpl_semi_sync_master_wait_point",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "after_sync",
+      "validValues": [
+        "AFTER_SYNC",
+        "AFTER_COMMIT"
+      ]
+    },
+    {
+      "id": "option_mysqld_log-slave-updates",
+      "name": "log_slave_updates",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "boolean"
+    },
+    {
+      "id": "option_mysqld_master-info-file",
+      "type": "file name",
+      "default": "master.info"
+    },
+    {
+      "id": "option_mysqld_master-retry-count"
+    },
+    {
+      "id": "option_mysqld_max-relay-log-size",
+      "name": "max_relay_log_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "0",
+      "range": {
+        "from": 0,
+        "to": 1073741824
+      }
+    },
+    {
+      "id": "option_mysqld_relay-log",
+      "name": "relay_log",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "file name"
+    },
+    {
+      "id": "option_mysqld_relay-log-index",
+      "name": "relay_log_index",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "file name"
+    },
+    {
+      "id": "option_mysqld_relay-log-info-file",
+      "type": "file name",
+      "default": "relay-log.info"
+    },
+    {
+      "id": "option_mysqld_relay-log-purge",
+      "name": "relay_log_purge",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "true"
+    },
+    {
+      "id": "option_mysqld_relay-log-recovery",
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "id": "option_mysqld_relay-log-space-limit",
+      "name": "relay_log_space_limit",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false
+    },
+    {
+      "id": "option_mysqld_replicate-do-db",
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_replicate-ignore-db",
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_replicate-do-table",
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_replicate-ignore-table",
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_replicate-rewrite-db",
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_replicate-same-server-id",
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "id": "option_mysqld_replicate-wild-do-table",
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_replicate-wild-ignore-table",
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_report-host",
+      "name": "report_host",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_report-password",
+      "name": "report_password",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_report-port",
+      "name": "report_port",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "integer",
+      "default": "[slave_port]",
+      "range": {
+        "from": 0,
+        "to": 65535
+      }
+    },
+    {
+      "id": "option_mysqld_report-user",
+      "name": "report_user",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_slave-checkpoint-group",
+      "type": "integer",
+      "default": "512",
+      "range": {
+        "from": 32,
+        "to": 524280
+      }
+    },
+    {
+      "id": "option_mysqld_slave-checkpoint-period",
+      "type": "integer",
+      "default": "300",
+      "range": {
+        "from": 1,
+        "to": 4
+      }
+    },
+    {
+      "id": "option_mysqld_slave-parallel-workers",
+      "type": "integer",
+      "default": "0",
+      "range": {
+        "from": 0,
+        "to": 1024
+      }
+    },
+    {
+      "id": "option_mysqld_slave-pending-jobs-size-max",
+      "type": "integer",
+      "default": "16m",
+      "range": {
+        "from": 1024,
+        "to": 18
+      }
+    },
+    {
+      "id": "option_mysqld_skip-slave-start",
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "id": "option_mysqld_slave_compressed_protocol",
+      "name": "slave_compressed_protocol",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "option_mysqld_slave-load-tmpdir",
+      "name": "slave_load_tmpdir",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "directory name",
+      "default": "/tmp"
+    },
+    {
+      "id": "option_mysqld_slave-max-allowed-packet",
+      "type": "integer",
+      "default": "1073741824",
+      "range": {
+        "from": 1024,
+        "to": 1073741824
+      }
+    },
+    {
+      "id": "option_mysqld_slave-net-timeout",
+      "name": "slave_net_timeout",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "60",
+      "range": {
+        "from": 1
+      }
+    },
+    {
+      "id": "option_mysqld_slave-parallel-type",
+      "type": "enumeration",
+      "default": "database",
+      "validValues": [
+        "DATABASE",
+        "LOGICAL_CLOCK"
+      ]
+    },
+    {
+      "id": "option_mysqld_slave-rows-search-algorithms",
+      "type": "set",
+      "validValues": [
+        "TABLE_SCAN,INDEX_SCAN",
+        "INDEX_SCAN,HASH_SCAN",
+        "TABLE_SCAN,HASH_SCAN",
+        "TABLE_SCAN,INDEX_SCAN,HASH_SCAN"
+      ]
+    },
+    {
+      "id": "option_mysqld_slave-skip-errors",
+      "name": "slave_skip_errors",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "string",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "[list of error codes]",
+        "all",
+        "ddl_exist_errors"
+      ]
+    },
+    {
+      "id": "option_mysqld_slave-sql-verify-checksum",
+      "type": "boolean",
+      "default": "1",
+      "validValues": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "id": "option_mysqld_abort-slave-event-count",
+      "type": "integer",
+      "default": "0",
+      "range": {
+        "from": 0
+      }
+    },
+    {
+      "id": "option_mysqld_disconnect-slave-event-count",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "id": "option_mysqld_master-info-repository",
+      "type": "string",
+      "validValues": [
+        "FILE",
+        "TABLE"
+      ]
+    },
+    {
+      "id": "option_mysqld_relay-log-info-repository",
+      "type": "string",
+      "validValues": [
+        "FILE",
+        "TABLE"
+      ]
+    },
+    {
+      "id": "sysvar_init_slave",
+      "name": "init_slave",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "string"
+    },
+    {
+      "id": "sysvar_log_slow_slave_statements",
+      "name": "log_slow_slave_statements",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "sysvar_master_info_repository",
+      "name": "master_info_repository",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "string",
+      "validValues": [
+        "FILE",
+        "TABLE"
+      ]
+    },
+    {
+      "id": "sysvar_max_relay_log_size",
+      "name": "max_relay_log_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "0",
+      "range": {
+        "from": 0,
+        "to": 1073741824
+      }
+    },
+    {
+      "id": "sysvar_relay_log",
+      "name": "relay_log",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "file name"
+    },
+    {
+      "id": "sysvar_relay_log_basename",
+      "name": "relay_log_basename",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "file name",
+      "default": "datadir + '/' + hostname + '-relay-bin'"
+    },
+    {
+      "id": "sysvar_relay_log_index",
+      "name": "relay_log_index",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "file name",
+      "default": "*host_name*-relay-bin.index"
+    },
+    {
+      "id": "sysvar_relay_log_info_file",
+      "name": "relay_log_info_file",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "file name",
+      "default": "relay-log.info"
+    },
+    {
+      "id": "sysvar_relay_log_info_repository",
+      "name": "relay_log_info_repository",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "string",
+      "validValues": [
+        "FILE",
+        "TABLE"
+      ]
+    },
+    {
+      "id": "sysvar_relay_log_purge",
+      "name": "relay_log_purge",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "true"
+    },
+    {
+      "id": "sysvar_relay_log_recovery",
+      "name": "relay_log_recovery",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "id": "sysvar_relay_log_space_limit",
+      "name": "relay_log_space_limit",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false
+    },
+    {
+      "id": "sysvar_report_host",
+      "name": "report_host",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "sysvar_report_password",
+      "name": "report_password",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "sysvar_report_port",
+      "name": "report_port",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "integer",
+      "default": "[slave_port]",
+      "range": {
+        "from": 0,
+        "to": 65535
+      }
+    },
+    {
+      "id": "sysvar_report_user",
+      "name": "report_user",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "sysvar_rpl_read_size",
+      "name": "rpl_read_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "8192",
+      "range": {
+        "from": 8192,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "sysvar_rpl_semi_sync_slave_enabled",
+      "name": "rpl_semi_sync_slave_enabled",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "sysvar_rpl_semi_sync_slave_trace_level",
+      "name": "rpl_semi_sync_slave_trace_level",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "32"
+    },
+    {
+      "id": "sysvar_rpl_stop_slave_timeout",
+      "name": "rpl_stop_slave_timeout",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "31536000",
+      "range": {
+        "from": 2,
+        "to": 31536000
+      }
+    },
+    {
+      "id": "sysvar_slave_allow_batching",
+      "name": "slave_allow_batching",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "sysvar_slave_checkpoint_group",
+      "name": "slave_checkpoint_group=#",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "512",
+      "range": {
+        "from": 32,
+        "to": 524280
+      }
+    },
+    {
+      "id": "sysvar_slave_checkpoint_period",
+      "name": "slave_checkpoint_period=#",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "300",
+      "range": {
+        "from": 1,
+        "to": 4
+      }
+    },
+    {
+      "id": "sysvar_slave_compressed_protocol",
+      "name": "slave_compressed_protocol",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "sysvar_slave_exec_mode",
+      "name": "slave_exec_mode",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "idempotent (ndb)strict (other)",
+      "validValues": [
+        "IDEMPOTENT",
+        "STRICT"
+      ]
+    },
+    {
+      "id": "sysvar_slave_load_tmpdir",
+      "name": "slave_load_tmpdir",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "directory name",
+      "default": "/tmp"
+    },
+    {
+      "id": "sysvar_slave_max_allowed_packet",
+      "name": "slave_max_allowed_packet",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "1073741824",
+      "range": {
+        "from": 1024,
+        "to": 1073741824
+      }
+    },
+    {
+      "id": "sysvar_slave_net_timeout",
+      "name": "slave_net_timeout",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "60",
+      "range": {
+        "from": 1
+      }
+    },
+    {
+      "id": "sysvar_slave_parallel_type",
+      "type": "enumeration",
+      "default": "database",
+      "validValues": [
+        "DATABASE",
+        "LOGICAL_CLOCK"
+      ]
+    },
+    {
+      "id": "sysvar_slave_parallel_workers",
+      "name": "slave_parallel_workers",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "0",
+      "range": {
+        "from": 0,
+        "to": 1024
+      }
+    },
+    {
+      "id": "sysvar_slave_pending_jobs_size_max",
+      "name": "slave_pending_jobs_size_max",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "16m",
+      "range": {
+        "from": 1024,
+        "to": 18
+      }
+    },
+    {
+      "id": "sysvar_slave_preserve_commit_order",
+      "name": "slave_preserve_commit_order",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "0",
+      "validValues": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "id": "sysvar_slave_rows_search_algorithms",
+      "name": "slave_rows_search_algorithms=list",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "set",
+      "validValues": [
+        "TABLE_SCAN,INDEX_SCAN",
+        "INDEX_SCAN,HASH_SCAN",
+        "TABLE_SCAN,HASH_SCAN",
+        "TABLE_SCAN,INDEX_SCAN,HASH_SCAN"
+      ]
+    },
+    {
+      "id": "sysvar_slave_skip_errors",
+      "name": "slave_skip_errors",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "string",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "[list of error codes]",
+        "all",
+        "ddl_exist_errors"
+      ]
+    },
+    {
+      "id": "sysvar_slave_sql_verify_checksum",
+      "name": "slave_sql_verify_checksum",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "1",
+      "validValues": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "id": "sysvar_slave_transaction_retries",
+      "name": "slave_transaction_retries",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true
+    },
+    {
+      "id": "sysvar_slave_type_conversions",
+      "name": "slave_type_conversions",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "set",
+      "default": "",
+      "validValues": [
+        "ALL_LOSSY",
+        "ALL_NON_LOSSY",
+        "ALL_SIGNED",
+        "ALL_UNSIGNED"
+      ]
+    },
+    {
+      "id": "sysvar_sql_slave_skip_counter",
+      "name": "sql_slave_skip_counter",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer"
+    },
+    {
+      "id": "sysvar_sync_master_info",
+      "name": "sync_master_info",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true
+    },
+    {
+      "id": "sysvar_sync_relay_log",
+      "name": "sync_relay_log",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true
+    },
+    {
+      "id": "sysvar_sync_relay_log_info",
+      "name": "sync_relay_log_info",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true
+    },
+    {
+      "id": "option_mysqld_binlog-row-event-max-size"
+    },
+    {
+      "id": "option_mysqld_binlog-rows-query-log-events",
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "id": "option_mysqld_log-bin",
+      "name": "log_bin",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "file name"
+    },
+    {
+      "id": "option_mysqld_log-bin-index",
+      "type": "file name"
+    },
+    {
+      "id": "option_mysqld_log-bin-trust-function-creators",
+      "name": "log_bin_trust_function_creators",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "id": "option_mysqld_log-bin-use-v1-row-events",
+      "name": "log_bin_use_v1_row_events",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "boolean",
+      "default": "0"
+    },
+    {
+      "id": "option_mysqld_binlog-do-db",
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_binlog-ignore-db",
+      "type": "string"
+    },
+    {
+      "id": "option_mysqld_binlog-checksum",
+      "type": "string",
+      "default": "crc32",
+      "validValues": [
+        "NONE",
+        "CRC32"
+      ]
+    },
+    {
+      "id": "option_mysqld_master-verify-checksum",
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "option_mysqld_max-binlog-dump-events",
+      "type": "integer",
+      "default": "0"
+    },
+    {
+      "id": "option_mysqld_sporadic-binlog-dump-fail",
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "id": "sysvar_binlog_cache_size",
+      "name": "binlog_cache_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true
+    },
+    {
+      "id": "sysvar_binlog_checksum",
+      "name": "binlog_checksum",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "string",
+      "default": "crc32",
+      "validValues": [
+        "NONE",
+        "CRC32"
+      ]
+    },
+    {
+      "id": "sysvar_binlog_direct_non_transactional_updates",
+      "name": "binlog_direct_non_transactional_updates",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "sysvar_binlog_error_action",
+      "name": "binlog_error_action",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "abort_server",
+      "validValues": [
+        "IGNORE_ERROR",
+        "ABORT_SERVER"
+      ]
+    },
+    {
+      "id": "sysvar_binlog_expire_logs_seconds",
+      "name": "binlog_expire_logs_seconds",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true
+    },
+    {
+      "id": "sysvar_binlog_format",
+      "name": "binlog_format",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "row",
+      "validValues": [
+        "ROW",
+        "STATEMENT",
+        "MIXED"
+      ]
+    },
+    {
+      "id": "sysvar_binlog_group_commit_sync_delay",
+      "name": "binlog_group_commit_sync_delay",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "0",
+      "range": {
+        "from": 0,
+        "to": 1000000
+      }
+    },
+    {
+      "id": "sysvar_binlog_group_commit_sync_no_delay_count",
+      "name": "binlog_group_commit_sync_no_delay_count",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "0",
+      "range": {
+        "from": 0,
+        "to": 1000000
+      }
+    },
+    {
+      "id": "sysvar_binlog_max_flush_queue_time",
+      "name": "binlog_max_flush_queue_time",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "0",
+      "range": {
+        "from": 0,
+        "to": 100000
+      }
+    },
+    {
+      "id": "sysvar_binlog_order_commits",
+      "name": "binlog_order_commits",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "on"
+    },
+    {
+      "id": "sysvar_binlog_row_image",
+      "name": "binlog_row_image=image_type",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "full",
+      "validValues": [
+        "full",
+        "minimal",
+        "noblob"
+      ]
+    },
+    {
+      "id": "sysvar_binlog_row_metadata",
+      "name": "binlog_row_metadata=metadata_type",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "minimal",
+      "validValues": [
+        "FULL",
+        "MINIMAL"
+      ]
+    },
+    {
+      "id": "sysvar_binlog_row_value_options",
+      "name": "binlog_row_value_options",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "type": "set",
+      "default": "''",
+      "validValues": [
+        "PARTIAL_JSON"
+      ]
+    },
+    {
+      "id": "sysvar_binlog_rows_query_log_events",
+      "name": "binlog_rows_query_log_events",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "id": "sysvar_binlog_stmt_cache_size",
+      "name": "binlog_stmt_cache_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true
+    },
+    {
+      "id": "sysvar_binlog_transaction_dependency_tracking",
+      "name": "binlog_transaction_dependency_tracking",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "commit_order",
+      "validValues": [
+        "COMMIT_ORDER",
+        "WRITESET",
+        "WRITESET_SESSION"
+      ]
+    },
+    {
+      "id": "sysvar_binlog_transaction_dependency_history_size",
+      "name": "binlog_transaction_dependency_history_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "25000",
+      "range": {
+        "from": 1,
+        "to": 1000000
+      }
+    },
+    {
+      "id": "sysvar_expire_logs_days",
+      "name": "expire_logs_days",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true
+    },
+    {
+      "id": "sysvar_log_bin",
+      "name": "log_bin",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false
+    },
+    {
+      "id": "sysvar_log_bin_basename",
+      "name": "log_bin_basename",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "file name"
+    },
+    {
+      "id": "sysvar_log_bin_index",
+      "name": "log_bin_index",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "file name"
+    },
+    {
+      "id": "sysvar_log_bin_trust_function_creators",
+      "name": "log_bin_trust_function_creators",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "false"
+    },
+    {
+      "id": "sysvar_log_bin_use_v1_row_events",
+      "name": "log_bin_use_v1_row_events",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "boolean",
+      "default": "0"
+    },
+    {
+      "id": "sysvar_log_builtin_as_identified_by_password",
+      "name": "log_builtin_as_identified_by_password",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "sysvar_log_slave_updates",
+      "name": "log_slave_updates",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "boolean"
+    },
+    {
+      "id": "sysvar_log_statements_unsafe_for_binlog",
+      "name": "log_statements_unsafe_for_binlog",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "on"
+    },
+    {
+      "id": "sysvar_master_verify_checksum",
+      "name": "master_verify_checksum",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "boolean",
+      "default": "off"
+    },
+    {
+      "id": "sysvar_max_binlog_cache_size",
+      "name": "max_binlog_cache_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "18446744073709551615",
+      "range": {
+        "from": 4096,
+        "to": 18446744073709552000
+      }
+    },
+    {
+      "id": "sysvar_max_binlog_size",
+      "name": "max_binlog_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "1073741824",
+      "range": {
+        "from": 4096,
+        "to": 1073741824
+      }
+    },
+    {
+      "id": "sysvar_max_binlog_stmt_cache_size",
+      "name": "max_binlog_stmt_cache_size",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "18446744073709547520",
+      "range": {
+        "from": 4096,
+        "to": 18446744073709548000
+      }
+    },
+    {
+      "id": "sysvar_original_commit_timestamp",
+      "scope": [
+        "session"
+      ],
+      "dynamic": true,
+      "type": "numeric"
+    },
+    {
+      "id": "sysvar_sql_log_bin",
+      "name": "sql_log_bin",
+      "scope": [
+        "session"
+      ],
+      "dynamic": true,
+      "type": "boolean"
+    },
+    {
+      "id": "sysvar_sync_binlog",
+      "name": "sync_binlog",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "1",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "sysvar_transaction_write_set_extraction",
+      "name": "transaction_write_set_extraction",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "MURMUR32",
+        "XXHASH64"
+      ]
+    },
+    {
+      "id": "option_mysqld_enforce-gtid-consistency",
+      "name": "enforce_gtid_consistency",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "ON",
+        "WARN"
+      ]
+    },
+    {
+      "id": "option_mysqld_executed-gtids-compression-period",
+      "type": "integer",
+      "default": "1000",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "option_mysqld_gtid-mode",
+      "name": "gtid_mode",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "OFF_PERMISSIVE",
+        "ON_PERMISSIVE",
+        "ON"
+      ]
+    },
+    {
+      "id": "option_mysqld_gtid-executed-compression-period",
+      "type": "integer",
+      "default": "1000",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "sysvar_binlog_gtid_simple_recovery",
+      "name": "binlog_gtid_simple_recovery",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "boolean",
+      "default": "true"
+    },
+    {
+      "id": "sysvar_enforce_gtid_consistency",
+      "name": "enforce_gtid_consistency",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "ON",
+        "WARN"
+      ]
+    },
+    {
+      "id": "sysvar_executed_gtids_compression_period",
+      "name": "executed_gtids_compression_period",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "1000",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "sysvar_gtid_executed",
+      "name": "gtid_executed",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "sysvar_gtid_executed_compression_period",
+      "name": "gtid_executed_compression_period",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "integer",
+      "default": "1000",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      }
+    },
+    {
+      "id": "sysvar_gtid_mode",
+      "name": "gtid_mode",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "off",
+      "validValues": [
+        "OFF",
+        "OFF_PERMISSIVE",
+        "ON_PERMISSIVE",
+        "ON"
+      ]
+    },
+    {
+      "id": "sysvar_gtid_next",
+      "name": "gtid_next",
+      "scope": [
+        "session"
+      ],
+      "dynamic": true,
+      "type": "enumeration",
+      "default": "automatic",
+      "validValues": [
+        "AUTOMATIC",
+        "ANONYMOUS",
+        "UUID:NUMBER"
+      ]
+    },
+    {
+      "id": "sysvar_gtid_owned",
+      "name": "gtid_owned",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "dynamic": false,
+      "type": "string"
+    },
+    {
+      "id": "sysvar_gtid_purged",
+      "name": "gtid_purged",
+      "scope": [
+        "global"
+      ],
+      "dynamic": true,
+      "type": "string"
+    },
+    {
+      "id": "sysvar_simplified_binlog_gtid_recovery",
+      "name": "simplified_binlog_gtid_recovery",
+      "scope": [
+        "global"
+      ],
+      "dynamic": false,
+      "type": "boolean",
+      "default": "false"
+    }
+  ]
+}

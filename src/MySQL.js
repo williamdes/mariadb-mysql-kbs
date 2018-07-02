@@ -78,6 +78,7 @@ function parsePage(url, cbSuccess) {
 }
 
 const KB_URL = 'https://dev.mysql.com/doc/refman/8.0/en/';
+const KB_URL57 = 'https://dev.mysql.com/doc/refman/5.7/en/';
 
 parsePage(
     KB_URL+'server-system-variables.html',
@@ -141,6 +142,50 @@ parsePage(
         let page = {
             url: url,
             name: 'pluggable-authentication-system-variables',
+            data: data,
+        };
+    writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);
+});
+
+parsePage(
+    KB_URL+'audit-log-reference.html',
+    (data, url)=> {
+        let page = {
+            url: url,
+            name: 'audit-log-reference',
+            data: data,
+        };
+    writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);
+});
+
+parsePage(
+    KB_URL+'replication-options-gtids.html',
+    (data, url)=> {
+        let page = {
+            url: url,
+            name: 'replication-options-gtids',
+            data: data,
+        };
+    writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);
+});
+
+parsePage(
+    KB_URL+'replication-options-slave.html',
+    (data, url)=> {
+        let page = {
+            url: url,
+            name: 'replication-options-slave',
+            data: data,
+        };
+    writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);
+});
+
+parsePage(
+    KB_URL57+'mysql-cluster-options-variables.html',
+    (data, url)=> {
+        let page = {
+            url: url,
+            name: 'mysql-cluster-options-variables',
             data: data,
         };
     writeJSON(path.join(__dirname, "../", "data", "mysql-"+page.name+".json"), page);

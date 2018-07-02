@@ -16,9 +16,9 @@ class SearchTest extends TestCase
     public function testGetByName(): void
     {
         $found = Search::getByName("max_relay_log_size");
-        $this->assertContains("http",$found);
-        $this->assertContains("://",$found);
-        $this->assertContains("#",$found);
+        $this->assertContains("http", $found);
+        $this->assertContains("://", $found);
+        $this->assertContains("#", $found);
     }
 
     /**
@@ -29,16 +29,16 @@ class SearchTest extends TestCase
     public function testGetByNameMYSQL(): void
     {
         $found = Search::getByName("max_relay_log_size", Search::MYSQL);
-        $this->assertContains("http",$found);
-        $this->assertContains("://",$found);
-        $this->assertContains("mysql.com",$found);
-        $this->assertContains("#",$found);
+        $this->assertContains("http", $found);
+        $this->assertContains("://", $found);
+        $this->assertContains("mysql.com", $found);
+        $this->assertContains("#", $found);
 
         $found = Search::getByName("innodb_compression_level", Search::MYSQL);
-        $this->assertContains("http",$found);
-        $this->assertContains("://",$found);
-        $this->assertContains("mysql.com",$found);
-        $this->assertContains("#",$found);
+        $this->assertContains("http", $found);
+        $this->assertContains("://", $found);
+        $this->assertContains("mysql.com", $found);
+        $this->assertContains("#", $found);
     }
 
     /**
@@ -49,16 +49,16 @@ class SearchTest extends TestCase
     public function testGetByNameMARIADB(): void
     {
         $found = Search::getByName("use_stat_tables", Search::MARIADB);
-        $this->assertContains("http",$found);
-        $this->assertContains("://",$found);
-        $this->assertContains("mariadb.com",$found);
-        $this->assertContains("#",$found);
+        $this->assertContains("http", $found);
+        $this->assertContains("://", $found);
+        $this->assertContains("mariadb.com", $found);
+        $this->assertContains("#", $found);
 
         $found = Search::getByName("innodb_compression_level", Search::MARIADB);
-        $this->assertContains("http",$found);
-        $this->assertContains("://",$found);
-        $this->assertContains("mariadb.com",$found);
-        $this->assertContains("#",$found);
+        $this->assertContains("http", $found);
+        $this->assertContains("://", $found);
+        $this->assertContains("mariadb.com", $found);
+        $this->assertContains("#", $found);
     }
 
     /**
@@ -74,4 +74,5 @@ class SearchTest extends TestCase
     {
         Search::getByName("mysql_native_password_proxy_users", Search::MARIADB);
     }
+
 }

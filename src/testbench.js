@@ -46,33 +46,30 @@ var dom = new jsdom(`
 </li></ul>
 </div>
 `);
-    var window = dom.window;
-    var document = window.document;
-    const elements = document.getElementsByClassName('anchored_heading');
-    for (let i = 0; i < elements.length; i++) {
-        var element = elements[i];
-        var doc = {};
-        element.nextSibling.nextSibling.childNodes.forEach(liChild => {
-            liChild.childNodes.forEach(elementDescr => {
-                if (elementDescr.nodeName.toLocaleLowerCase() === "strong") {
-
-                    switch (elementDescr.innerHTML.toLowerCase().trim()) {
-                        case 'data type:':
-                                if (elementDescr.nextSibling.nextSibling != undefined) {
-                                    doc.dataType = elementDescr.nextSibling.nextSibling.textContent;
-                                } else {
-                                    doc.dataType = elementDescr.nextSibling.textContent;
-                                }
-                                doc.dataType = doc.dataType
-                                .toLowerCase().trim();
-                                console.log(doc.dataType);
-                            break;
-                        default:
-                            //console.log(elementDescr.innerHTML);
-                            break;
-                    }
-
-                }
-            });
-        });
-    }
+var window = dom.window;
+var document = window.document;
+const elements = document.getElementsByClassName('anchored_heading');
+for (let i = 0; i < elements.length; i++) {
+  var element = elements[i];
+  var doc = {};
+  element.nextSibling.nextSibling.childNodes.forEach(liChild => {
+    liChild.childNodes.forEach(elementDescr => {
+      if (elementDescr.nodeName.toLocaleLowerCase() === 'strong') {
+        switch (elementDescr.innerHTML.toLowerCase().trim()) {
+          case 'data type:':
+            if (elementDescr.nextSibling.nextSibling != undefined) {
+              doc.dataType = elementDescr.nextSibling.nextSibling.textContent;
+            } else {
+              doc.dataType = elementDescr.nextSibling.textContent;
+            }
+            doc.dataType = doc.dataType.toLowerCase().trim();
+            console.log(doc.dataType);
+            break;
+          default:
+            //console.log(elementDescr.innerHTML);
+            break;
+        }
+      }
+    });
+  });
+}

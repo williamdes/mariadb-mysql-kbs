@@ -60,10 +60,9 @@ function parsePage(url, cbSuccess) {
                                     .toLowerCase().trim();
                                     break;
                                 case 'default value:':
-                                    doc.default = [];
                                     elementDescr.parentNode.childNodes.forEach(codeChild => {
                                         if(codeChild.nodeName.toLowerCase().trim() === "code") {
-                                            doc.default.push(codeChild.textContent);
+                                            doc.default = codeChild.textContent;
                                         }
                                     });
                                     break;

@@ -25233,6 +25233,120 @@
                 "34#sysvar_simplified_binlog_gtid_recovery"
             ]
         },
+        "auto_increment_increment": {
+            "name": "auto_increment_increment",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "dynamic": true,
+            "type": "integer",
+            "default": "1",
+            "range": {
+                "from": 1,
+                "to": 65535
+            },
+            "ids": [
+                "36#sysvar_auto_increment_increment"
+            ]
+        },
+        "auto_increment_offset": {
+            "name": "auto_increment_offset",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "dynamic": true,
+            "type": "integer",
+            "default": "1",
+            "range": {
+                "from": 1,
+                "to": 65535
+            },
+            "ids": [
+                "35#sysvar_auto_increment_offset"
+            ]
+        },
+        "rpl_semi_sync_master_enabled": {
+            "name": "rpl_semi_sync_master_enabled",
+            "scope": [
+                "global"
+            ],
+            "dynamic": true,
+            "type": "boolean",
+            "default": "off",
+            "ids": [
+                "35#sysvar_rpl_semi_sync_master_enabled"
+            ]
+        },
+        "rpl_semi_sync_master_timeout": {
+            "name": "rpl_semi_sync_master_timeout",
+            "scope": [
+                "global"
+            ],
+            "dynamic": true,
+            "type": "integer",
+            "default": "10000",
+            "ids": [
+                "35#sysvar_rpl_semi_sync_master_timeout"
+            ]
+        },
+        "rpl_semi_sync_master_trace_level": {
+            "name": "rpl_semi_sync_master_trace_level",
+            "scope": [
+                "global"
+            ],
+            "dynamic": true,
+            "type": "integer",
+            "default": "32",
+            "ids": [
+                "35#sysvar_rpl_semi_sync_master_trace_level"
+            ]
+        },
+        "rpl_semi_sync_master_wait_for_slave_count": {
+            "name": "rpl_semi_sync_master_wait_for_slave_count",
+            "scope": [
+                "global"
+            ],
+            "dynamic": true,
+            "type": "integer",
+            "default": "1",
+            "range": {
+                "from": 1,
+                "to": 65535
+            },
+            "ids": [
+                "35#sysvar_rpl_semi_sync_master_wait_for_slave_count"
+            ]
+        },
+        "rpl_semi_sync_master_wait_no_slave": {
+            "name": "rpl_semi_sync_master_wait_no_slave",
+            "scope": [
+                "global"
+            ],
+            "dynamic": true,
+            "type": "boolean",
+            "default": "on",
+            "ids": [
+                "35#sysvar_rpl_semi_sync_master_wait_no_slave"
+            ]
+        },
+        "rpl_semi_sync_master_wait_point": {
+            "name": "rpl_semi_sync_master_wait_point",
+            "scope": [
+                "global"
+            ],
+            "dynamic": true,
+            "type": "enumeration",
+            "default": "after_sync",
+            "validValues": [
+                "AFTER_SYNC",
+                "AFTER_COMMIT"
+            ],
+            "ids": [
+                "35#sysvar_rpl_semi_sync_master_wait_point"
+            ]
+        },
         "max_relay_log_size": {
             "cli": "--max-relay-log-size=#",
             "name": "max_relay_log_size",
@@ -25837,6 +25951,34 @@
             },
             "ids": [
                 "33#sysvar_sync_relay_log_info"
+            ]
+        },
+        "server_id": {
+            "cli": "--server-id=#",
+            "name": "server_id",
+            "scope": [
+                "global"
+            ],
+            "dynamic": true,
+            "type": "integer",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "ids": [
+                "37#replication-options",
+                "12#sysvar_server_id"
+            ]
+        },
+        "server_uuid": {
+            "name": "server_uuid",
+            "scope": [
+                "global"
+            ],
+            "dynamic": false,
+            "type": "string",
+            "ids": [
+                "36#replication-options"
             ]
         },
         "activate_all_roles_on_login": {
@@ -26645,22 +26787,6 @@
                 "12#sysvar_schema_definition_cache"
             ]
         },
-        "server_id": {
-            "cli": "--server-id=#",
-            "name": "server_id",
-            "scope": [
-                "global"
-            ],
-            "dynamic": true,
-            "type": "integer",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
-            "ids": [
-                "12#sysvar_server_id"
-            ]
-        },
         "session_track_gtids": {
             "cli": "--session-track-gtids=[value]",
             "name": "session_track_gtids",
@@ -27065,8 +27191,8 @@
             "type": "boolean",
             "default": "on",
             "ids": [
-                "36#option_mysqld_mysqlx",
-                "35#sysvar_mysqlx"
+                "38#option_mysqld_mysqlx",
+                "37#sysvar_mysqlx"
             ]
         },
         "mysqlx_bind_address": {
@@ -27079,8 +27205,8 @@
             "type": "string",
             "default": "*",
             "ids": [
-                "35#option_mysqld_mysqlx-bind-address",
-                "35#sysvar_mysqlx_bind_address"
+                "37#option_mysqld_mysqlx-bind-address",
+                "37#sysvar_mysqlx_bind_address"
             ]
         },
         "mysqlx_connect_timeout": {
@@ -27097,8 +27223,8 @@
                 "to": 1000000000
             },
             "ids": [
-                "35#option_mysqld_mysqlx-connect-timeout",
-                "35#sysvar_mysqlx_connect_timeout"
+                "37#option_mysqld_mysqlx-connect-timeout",
+                "37#sysvar_mysqlx_connect_timeout"
             ]
         },
         "mysqlx_idle_worker_thread_timeout": {
@@ -27115,8 +27241,8 @@
                 "to": 3600
             },
             "ids": [
-                "35#option_mysqld_mysqlx-idle-worker-thread-timeout",
-                "35#sysvar_mysqlx_idle_worker_thread_timeout"
+                "37#option_mysqld_mysqlx-idle-worker-thread-timeout",
+                "37#sysvar_mysqlx_idle_worker_thread_timeout"
             ]
         },
         "mysqlx_interactive_timeout": {
@@ -27133,8 +27259,8 @@
                 "to": 2147483
             },
             "ids": [
-                "35#option_mysqld_mysqlx-interactive-timeout",
-                "35#sysvar_mysqlx_interactive_timeout"
+                "37#option_mysqld_mysqlx-interactive-timeout",
+                "37#sysvar_mysqlx_interactive_timeout"
             ]
         },
         "mysqlx_max_allowed_packet": {
@@ -27151,8 +27277,8 @@
                 "to": 1073741824
             },
             "ids": [
-                "35#option_mysqld_mysqlx-max-allowed-packet",
-                "35#sysvar_mysqlx_max_allowed_packet"
+                "37#option_mysqld_mysqlx-max-allowed-packet",
+                "37#sysvar_mysqlx_max_allowed_packet"
             ]
         },
         "mysqlx_max_connections": {
@@ -27169,8 +27295,8 @@
                 "to": 65535
             },
             "ids": [
-                "35#option_mysqld_mysqlx-max-connections",
-                "35#sysvar_mysqlx_max_connections"
+                "37#option_mysqld_mysqlx-max-connections",
+                "37#sysvar_mysqlx_max_connections"
             ]
         },
         "mysqlx_min_worker_threads": {
@@ -27187,8 +27313,8 @@
                 "to": 100
             },
             "ids": [
-                "35#option_mysqld_mysqlx-min-worker-threads",
-                "35#sysvar_mysqlx_min_worker_threads"
+                "37#option_mysqld_mysqlx-min-worker-threads",
+                "37#sysvar_mysqlx_min_worker_threads"
             ]
         },
         "mysqlx_port": {
@@ -27205,8 +27331,8 @@
                 "to": 65535
             },
             "ids": [
-                "35#option_mysqld_mysqlx-port",
-                "35#sysvar_mysqlx_port"
+                "37#option_mysqld_mysqlx-port",
+                "37#sysvar_mysqlx_port"
             ]
         },
         "mysqlx_port_open_timeout": {
@@ -27219,8 +27345,8 @@
             "type": "integer",
             "default": "0",
             "ids": [
-                "35#option_mysqld_mysqlx-port-open-timeout",
-                "35#sysvar_mysqlx_port_open_timeout"
+                "37#option_mysqld_mysqlx-port-open-timeout",
+                "37#sysvar_mysqlx_port_open_timeout"
             ]
         },
         "mysqlx_port_read_timeout": {
@@ -27237,7 +27363,7 @@
                 "to": 2147483
             },
             "ids": [
-                "35#option_mysqld_mysqlx-read-timeout"
+                "37#option_mysqld_mysqlx-read-timeout"
             ]
         },
         "mysqlx_socket": {
@@ -27250,8 +27376,8 @@
             "type": "string",
             "default": "/tmp/mysqlx.sock",
             "ids": [
-                "35#option_mysqld_mysqlx-socket",
-                "35#sysvar_mysqlx_socket"
+                "37#option_mysqld_mysqlx-socket",
+                "37#sysvar_mysqlx_socket"
             ]
         },
         "mysqlx_ssl": {
@@ -27263,7 +27389,7 @@
             "dynamic": false,
             "type": "integer",
             "ids": [
-                "35#option_mysqld_mysqlx-ssl"
+                "37#option_mysqld_mysqlx-ssl"
             ]
         },
         "mysqlx_ssl_ca": {
@@ -27275,7 +27401,7 @@
             "dynamic": false,
             "type": "file name",
             "ids": [
-                "35#option_mysqld_mysqlx-ssl-ca"
+                "37#option_mysqld_mysqlx-ssl-ca"
             ]
         },
         "mysqlx_ssl_capath": {
@@ -27287,7 +27413,7 @@
             "dynamic": false,
             "type": "directory name",
             "ids": [
-                "35#option_mysqld_mysqlx-ssl-capath"
+                "37#option_mysqld_mysqlx-ssl-capath"
             ]
         },
         "mysqlx_ssl_cert": {
@@ -27299,7 +27425,7 @@
             "dynamic": false,
             "type": "file name",
             "ids": [
-                "35#option_mysqld_mysqlx-ssl-cert"
+                "37#option_mysqld_mysqlx-ssl-cert"
             ]
         },
         "mysqlx_ssl_crl": {
@@ -27311,7 +27437,7 @@
             "dynamic": false,
             "type": "file name",
             "ids": [
-                "35#option_mysqld_mysqlx-ssl-crl"
+                "37#option_mysqld_mysqlx-ssl-crl"
             ]
         },
         "mysqlx_ssl_crlpath": {
@@ -27323,7 +27449,7 @@
             "dynamic": false,
             "type": "directory name",
             "ids": [
-                "35#option_mysqld_mysqlx-ssl-crlpath"
+                "37#option_mysqld_mysqlx-ssl-crlpath"
             ]
         },
         "mysqlx_ssl_key": {
@@ -27335,7 +27461,7 @@
             "dynamic": false,
             "type": "file name",
             "ids": [
-                "35#option_mysqld_mysqlx-ssl-key"
+                "37#option_mysqld_mysqlx-ssl-key"
             ]
         },
         "mysqlx_wait_timeout": {
@@ -27352,8 +27478,8 @@
                 "to": 2147483
             },
             "ids": [
-                "35#option_mysqld_mysqlx-wait-timeout",
-                "35#sysvar_mysqlx_wait_timeout"
+                "37#option_mysqld_mysqlx-wait-timeout",
+                "37#sysvar_mysqlx_wait_timeout"
             ]
         },
         "mysqlx_write_timeout": {
@@ -27370,8 +27496,8 @@
                 "to": 2147483
             },
             "ids": [
-                "35#option_mysqld_mysqlx-write-timeout",
-                "35#sysvar_mysqlx_write_timeout"
+                "37#option_mysqld_mysqlx-write-timeout",
+                "37#sysvar_mysqlx_write_timeout"
             ]
         },
         "mysqlx_document_id_unique_prefix": {
@@ -27388,7 +27514,7 @@
                 "to": 65535
             },
             "ids": [
-                "35#sysvar_mysqlx_document_id_unique_prefix"
+                "37#sysvar_mysqlx_document_id_unique_prefix"
             ]
         },
         "mysqlx_read_timeout": {
@@ -27405,7 +27531,7 @@
                 "to": 2147483
             },
             "ids": [
-                "35#sysvar_mysqlx_read_timeout"
+                "37#sysvar_mysqlx_read_timeout"
             ]
         }
     },
@@ -27445,6 +27571,8 @@
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html",
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html",
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html",
+        "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html",
+        "https://dev.mysql.com/doc/refman/8.0/en/replication-options.html",
         "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
     ]
 }

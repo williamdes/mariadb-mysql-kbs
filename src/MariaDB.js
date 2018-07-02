@@ -1,20 +1,6 @@
 const jsdom = require('jsdom').JSDOM;
-const fs = require('fs');
 const path = require('path');
-
-
-
-function writeJSON(filename, data) {
-
-    fs.writeFile(filename, JSON.stringify(data, null, 2), function(err) {
-        if(err) {
-            return console.log(err);
-        }
-    });
-}
-
-
-//'http://localhost.localdomain/server-system-variables.html'
+const writeJSON = require(__dirname+'/common').writeJSON;
 
 function parsePage(url, cbSuccess) {
     var anchors = [];

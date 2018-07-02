@@ -169,6 +169,24 @@ parsePage(KB_URL + 'replication-options-slave.html', (data, url) => {
   writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
 });
 
+parsePage(KB_URL + 'replication-options-master.html', (data, url) => {
+  let page = {
+    url: url,
+    name: 'replication-options-master',
+    data: data,
+  };
+  writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
+});
+
+parsePage(KB_URL + 'replication-options.html', (data, url) => {
+  let page = {
+    url: url,
+    name: 'replication-options',
+    data: data,
+  };
+  writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
+});
+
 parsePage(KB_URL57 + 'mysql-cluster-options-variables.html', (data, url) => {
   let page = {
     url: url,

@@ -359,7 +359,7 @@ echo "NBR_CONFLICTS_REMAINING: ".($nbrConflicts-$nbrConflictsSolved).PHP_EOL;
 
 $fileOut = new stdClass();
 $fileOut->vars = json_decode(json_encode($variables));
-file_put_contents(__DIR__."/../build/merged-raw.json", json_encode($fileOut, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));
+file_put_contents(__DIR__."/../dist/merged-raw.json", json_encode($fileOut, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));
 
 $fileOut->urls = array();
 
@@ -374,19 +374,29 @@ foreach($fileOut->vars as $id => $doc) {
     }
 }
 
-file_put_contents(__DIR__."/../build/merged-slim.json", json_encode($fileOut, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));
+file_put_contents(__DIR__."/../dist/merged-slim.json", json_encode($fileOut, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));
 
 $fileOut->vars = $variables;
+$fileOut->types = array( "MYSQL" => 1, "MARIADB" => 2 );
 foreach($fileOut->vars as $id => &$doc) {
+    $links = array();
     foreach($doc->ids as &$kbEntry) {
         $urlId = array_search($kbEntry->url, $fileOut->urls, true);
         if($urlId === false){
             $urlId = array_push($fileOut->urls, $kbEntry->url);
         }
-        $name = "$urlId#$kbEntry->anchor";
-        $doc = $name;
+        $kbEntryMin = new stdClass();
+        $kbEntryMin->a = $kbEntry->anchor;
+        $kbEntryMin->u = $urlId;
+        if(preg_match("/mysql\.com/",$kbEntry->url))
+            $kbEntryMin->t = $fileOut->types["MYSQL"];
+        elseif(preg_match("/mariadb\.com/",$kbEntry->url))
+            $kbEntryMin->t = $fileOut->types["MARIADB"];
+        $links[] = $kbEntryMin;
     }
+    $doc = $links;
 }
-file_put_contents(__DIR__."/../build/merged-ultraslim.json", json_encode($fileOut, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));
+$fileOut->types = array_flip($fileOut->types);
+file_put_contents(__DIR__."/../dist/merged-ultraslim.json", json_encode($fileOut, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES));
 
 echo "Files merged !".PHP_EOL;

@@ -47,7 +47,7 @@ function parsePage(url, cbSuccess) {
                    * Default method, <li> has a <code> child
                    * Example: <li><strong>Data Type:</strong> <code>numeric</code></li>
                    */
-                  let dataType = elementDescr.parentElement.getElementsByTagName("code");
+                  let dataType = elementDescr.parentElement.getElementsByTagName('code');
                   if (dataType[0] !== undefined) {
                     doc.dataType = dataType[0].textContent.toLowerCase().trim();
                   } else {
@@ -56,12 +56,13 @@ function parsePage(url, cbSuccess) {
                      * Example: <li><strong>Data Type:</strong> boolean</li>
                      */
                     let dataType = elementDescr.parentElement.textContent
-                    .replace("Data Type:").replace(/undefined/gi, "");
+                      .replace('Data Type:')
+                      .replace(/undefined/gi, '');
                     dataType = dataType.toLowerCase().trim();
                     if (dataType !== '') {
                       doc.dataType = dataType;
                     } else {
-                      console.log("No datatype found for : "+doc.id);
+                      console.log('No datatype found for : ' + doc.id);
                     }
                   }
                   break;
@@ -146,7 +147,6 @@ function parsePage(url, cbSuccess) {
 
 const KB_URL = 'https://mariadb.com/kb/en/library/documentation/';
 
-
 const storageEngines = [
   'aria',
   'myrocks',
@@ -189,7 +189,8 @@ storageEngines.forEach(se => {
 
 const custom = [
   {
-    url: 'columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/',
+    url:
+      'columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/',
     name: 'spider-server-system-variables',
   },
   {
@@ -217,17 +218,14 @@ const custom = [
 custom.forEach(cu => {
   console.log('Parsing : ', cu.name);
   console.log('URL : ', cu.url);
-  parsePage(
-    KB_URL + cu.url,
-    (data, url) => {
-      let page = {
-        url: url,
-        name: cu.name,
-        data: data,
-      };
-      writeJSON(path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'), page);
-    }
-  );
+  parsePage(KB_URL + cu.url, (data, url) => {
+    let page = {
+      url: url,
+      name: cu.name,
+      data: data,
+    };
+    writeJSON(path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'), page);
+  });
 });
 
 const status = [
@@ -260,7 +258,12 @@ status.forEach(statusName => {
   });
 });
 
-const systemVariables = ['xtradbinnodb-server', 'mariadb-audit-plugin', 'ssltls', 'performance-schema'];
+const systemVariables = [
+  'xtradbinnodb-server',
+  'mariadb-audit-plugin',
+  'ssltls',
+  'performance-schema',
+];
 
 systemVariables.forEach(systemVariableName => {
   console.log('Parsing : ', systemVariableName);

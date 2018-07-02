@@ -7,5 +7,6 @@ use \Exception;
 /**
  * KBException class
  */
-class KBException extends Exception{
+class KBException extends Exception
+{
 }

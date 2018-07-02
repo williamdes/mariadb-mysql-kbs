@@ -2,8 +2,6 @@
 declare(strict_types = 1);
 namespace Williamdes\MariaDBMySQLKBS;
 
-use \Williamdes\MariaDBMySQLKBS\KBKBException;
-
 class Search
 {
 

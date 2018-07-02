@@ -4,6 +4,7 @@
   "description": "An index of the MariaDB and MySQL Knowledge bases",
   "main": "src/index.js",
   "scripts": {
+    "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,5 +26,11 @@
   },
   "devDependencies": {
     "prettier": "^1.13.4"
+  },
+  "prettier": {
+      "singleQuote": true,
+      "proseWrap": "never",
+      "trailingComma": "es5",
+      "printWidth": 95
   }
 }

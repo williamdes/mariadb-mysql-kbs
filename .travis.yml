@@ -1,0 +1,62 @@
+dist: trusty
+
+language: php
+
+php:
+  - "7.1"
+  - "7.2"
+
+sudo: required
+
+env:
+  matrix:
+    - CI_TYPE=phpunit
+
+before_script:
+  - ./scripts/ci/install-reporters.sh
+  - ./scripts/ci/install.sh
+
+script:
+  - ./scripts/ci/ci-$CI_TYPE.sh
+
+install:
+    # flags to pass to install
+    - flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"
+    # install dependencies using system provided composer binary
+    - composer install $flags
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+after_script:
+  - ./codacy-coverage.phar clover build/logs/clover.xml
+
+matrix:
+  fast_finish: true
+  include:
+    - php: "7.2"
+      env: CI_TYPE=phpstan
+
+    - php: "7.2"
+      env: CI_TYPE=phpcs
+
+    - os: osx
+      language: generic
+      php: "7.2"
+      env: CI_TYPE=phpunit
+      before_install:
+        - ./scripts/ci/install-osx.sh
+
+cache:
+  apt: true
+  directories:
+    - $HOME/.composer/cache/
+    - $HOME/.cache/bower
+    - $HOME/.npm
+    - $HOME/.cache/ci
+    - /var/cache/apt
+    - ~/Library/Caches/Homebrew
+
+addons:
+  apt:
+    update: false

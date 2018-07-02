@@ -1,0 +1,29 @@
+{
+  "name": "mariadb-mysql-kbs",
+  "version": "1.0.0",
+  "description": "An index of the MariaDB and MySQL Knowledge bases",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamdes/mariadb-mysql-kbs.git"
+  },
+  "author": {
+    "email": "williamdes@wdes.fr",
+    "name": "William Desportes",
+    "url": "https://william.wdes.fr"
+  },
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/williamdes/mariadb-mysql-kbs/issues"
+  },
+  "homepage": "https://github.com/williamdes/mariadb-mysql-kbs#readme",
+  "dependencies": {
+    "jsdom": "^11.11.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.13.4"
+  }
+}

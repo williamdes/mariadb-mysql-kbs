@@ -70,9 +70,6 @@ function parsePage(url, cbSuccess) {
                         break;
                 }
             }
-            //console.log(tbody.innerHTML);
-
-            console.log(doc);
             anchors.push(doc);
         }
         cbSuccess(anchors, url);
@@ -83,8 +80,7 @@ function parsePage(url, cbSuccess) {
 const KB_URL = 'https://dev.mysql.com/doc/refman/8.0/en/';
 
 parsePage(
-    //KB_URL+'server-system-variables.html',
-    'http://localhost.localdomain/refman-8.0-en.html-chapter/replication.html#replication-options-binary-log',
+    KB_URL+'server-system-variables.html',
     (data, url)=> {
         let page = {
             url: url,

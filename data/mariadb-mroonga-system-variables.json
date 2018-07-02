@@ -12,9 +12,7 @@
       ],
       "dynamic": true,
       "dataType": "enum",
-      "default": [
-        "ERROR_AND_LOG"
-      ]
+      "default": "ERROR_AND_LOG"
     },
     {
       "id": "mroonga_boolean_mode_syntax_flags",
@@ -26,9 +24,7 @@
       ],
       "dynamic": true,
       "dataType": "enum",
-      "default": [
-        "DEFAULT"
-      ]
+      "default": "DEFAULT"
     },
     {
       "id": "mroonga_database_path_prefix",
@@ -38,8 +34,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "mroonga_default_parser",
@@ -50,9 +45,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "TokenBigram"
-      ]
+      "default": "TokenBigram"
     },
     {
       "id": "mroonga_default_tokenizer",
@@ -64,9 +57,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "TokenBigram"
-      ]
+      "default": "TokenBigram"
     },
     {
       "id": "mroonga_default_wrapper_engine",
@@ -76,8 +67,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "mroonga_dry_write",
@@ -89,9 +79,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "off"
-      ]
+      "default": "off"
     },
     {
       "id": "mroonga_enable_operations_recording",
@@ -102,9 +90,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "mroonga_enable_optimization",
@@ -116,9 +102,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "on"
-      ]
+      "default": "on"
     },
     {
       "id": "mroonga_libgroonga_embedded",
@@ -129,9 +113,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "mroonga_libgroonga_support_zlib",
@@ -142,9 +124,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "mroonga_libgroonga_support_zstd",
@@ -155,9 +135,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "mroonga_libgroonga_version",
@@ -178,9 +156,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "900000"
-      ],
+      "default": "900000",
       "range": {
         "from": -1,
         "to": 2147483647
@@ -195,9 +171,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "groonga.log"
-      ]
+      "default": "groonga.log"
     },
     {
       "id": "mroonga_log_level",
@@ -208,9 +182,7 @@
       ],
       "dynamic": true,
       "dataType": "enum",
-      "default": [
-        "NOTICE"
-      ]
+      "default": "NOTICE"
     },
     {
       "id": "mroonga_match_escalation_threshold",
@@ -222,9 +194,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": -1,
         "to": 9223372036854776000
@@ -240,9 +210,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1000"
-      ],
+      "default": "1000",
       "range": {
         "from": -1,
         "to": 2147483647
@@ -256,8 +224,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "mroonga_vector_column_delimiter",
@@ -268,9 +235,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        " "
-      ]
+      "default": " "
     },
     {
       "id": "mroonga_version",

@@ -11,9 +11,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "134217728"
-      ],
+      "default": "134217728",
       "range": {
         "from": 8,
         "to": "upwards (upper limit determined by operating system per process limit)"
@@ -28,9 +26,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "300"
-      ],
+      "default": "300",
       "range": {
         "from": 100,
         "to": 4294967295
@@ -45,9 +41,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1024"
-      ],
+      "default": "1024",
       "range": {
         "from": 512,
         "to": 16384
@@ -62,9 +56,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "100"
-      ],
+      "default": "100",
       "range": {
         "from": 1,
         "to": 100
@@ -79,9 +71,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "512"
-      ],
+      "default": "512",
       "range": {
         "from": 128,
         "to": 16384
@@ -95,9 +85,7 @@
         "global"
       ],
       "dynamic": true,
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 64
@@ -112,9 +100,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "1024"
-      ]
+      "default": "1024"
     },
     {
       "id": "myisam_data_pointer_size",
@@ -125,9 +111,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "6"
-      ],
+      "default": "6",
       "range": {
         "from": 2,
         "to": 7
@@ -168,7 +152,6 @@
       ],
       "dynamic": false,
       "dataType": "enumeration",
-      "default": [],
       "validValues": [
         "OFF",
         "DEFAULT",
@@ -188,9 +171,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "myisam_sort_buffer_size",
@@ -202,10 +183,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "134217720",
-        "8388608"
-      ],
+      "default": "8388608",
       "range": {
         "from": 4096,
         "to": 18446744073709548000
@@ -221,9 +199,7 @@
       ],
       "dynamic": true,
       "dataType": "enumeration",
-      "default": [
-        "nulls_equal"
-      ],
+      "default": "nulls_equal",
       "validValues": [
         "nulls_equal",
         "nulls_unequal",
@@ -239,9 +215,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     }
   ]
 }

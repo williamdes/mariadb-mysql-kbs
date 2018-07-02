@@ -11,9 +11,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "wsrep_causal_reads",
@@ -25,9 +23,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "wsrep_certify_nonpk",
@@ -38,9 +34,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "wsrep_cluster_address",
@@ -61,9 +55,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "my_wsrep_cluster"
-      ]
+      "default": "my_wsrep_cluster"
     },
     {
       "id": "wsrep_convert_lock_to_trx",
@@ -74,9 +66,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "wsrep_data_home_dir",
@@ -86,8 +76,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "wsrep_dbug_option",
@@ -108,9 +97,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "wsrep_desync",
@@ -121,9 +108,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "wsrep_dirty_reads",
@@ -135,9 +120,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ],
+      "default": "OFF",
       "validValues": [
         "ON",
         "OFF"
@@ -152,9 +135,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "wsrep_forced_binlog_format",
@@ -164,9 +145,7 @@
         "global"
       ],
       "dynamic": true,
-      "default": [
-        "NONE"
-      ],
+      "default": "NONE",
       "dataType": "enum",
       "validValues": [
         "STATEMENT",
@@ -184,9 +163,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -201,9 +178,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "wsrep_load_data_splitting",
@@ -214,9 +189,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "wsrep_log_conflicts",
@@ -227,9 +200,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "wsrep_max_ws_rows",
@@ -240,7 +211,6 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [],
       "range": {
         "from": 0,
         "to": 1048576
@@ -255,7 +225,6 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [],
       "range": {
         "from": 1024,
         "to": 2147483647
@@ -270,9 +239,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 1000
@@ -287,9 +254,7 @@
       ],
       "dynamic": false,
       "dataType": "string",
-      "default": [
-        "eth0"
-      ]
+      "default": "eth0"
     },
     {
       "id": "wsrep_node_incoming_address",
@@ -300,9 +265,7 @@
       ],
       "dynamic": false,
       "dataType": "string",
-      "default": [
-        "AUTO"
-      ]
+      "default": "AUTO"
     },
     {
       "id": "wsrep_node_name",
@@ -312,8 +275,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "wsrep_notify_cmd",
@@ -323,8 +285,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "wsrep_on",
@@ -336,10 +297,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF",
-        "ON"
-      ],
+      "default": "ON",
       "validValues": [
         "ON",
         "OFF"
@@ -355,9 +313,7 @@
       ],
       "dynamic": true,
       "dataType": "enum",
-      "default": [
-        "TOI"
-      ],
+      "default": "TOI",
       "validValues": [
         "TOI",
         "RSU"
@@ -371,8 +327,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "wsrep_provider",
@@ -382,8 +337,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "wsrep_provider_options",
@@ -393,8 +347,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "wsrep_recover",
@@ -405,9 +358,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "wsrep_reject_queries",
@@ -418,9 +369,7 @@
       ],
       "dynamic": true,
       "dataType": "enum",
-      "default": [
-        "NONE"
-      ],
+      "default": "NONE",
       "validValues": [
         "NONE",
         "ALL",
@@ -435,9 +384,7 @@
         "global"
       ],
       "dynamic": true,
-      "default": [
-        "OFF"
-      ],
+      "default": "OFF",
       "dataType": "boolean",
       "validValues": [
         "ON",
@@ -452,9 +399,7 @@
         "global"
       ],
       "dynamic": true,
-      "default": [
-        "OFF"
-      ],
+      "default": "OFF",
       "dataType": "boolean"
     },
     {
@@ -466,9 +411,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 0,
         "to": 10000
@@ -482,8 +425,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "boolean",
-      "default": []
+      "dataType": "boolean"
     },
     {
       "id": "wsrep_slave_threads",
@@ -494,9 +436,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 1,
         "to": 512
@@ -510,8 +450,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "boolean",
-      "default": []
+      "dataType": "boolean"
     },
     {
       "id": "wsrep_sst_auth",
@@ -521,8 +460,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "wsrep_sst_donor",
@@ -532,8 +470,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "wsrep_sst_donor_rejects_queries",
@@ -544,9 +481,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "wsrep_sst_method",
@@ -557,9 +492,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "rsync"
-      ],
+      "default": "rsync",
       "validValues": [
         "rsync",
         "mysqldump",
@@ -577,9 +510,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "AUTO"
-      ]
+      "default": "AUTO"
     },
     {
       "id": "wsrep_start_position",
@@ -590,9 +521,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        " 00000000-0000-0000-0000-000000000000:-1"
-      ]
+      "default": " 00000000-0000-0000-0000-000000000000:-1"
     },
     {
       "id": "wsrep_sync_wait",
@@ -604,9 +533,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": null
       }

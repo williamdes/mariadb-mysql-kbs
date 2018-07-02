@@ -11,9 +11,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "8192"
-      ]
+      "default": "8192"
     },
     {
       "id": "aria_checkpoint_interval",
@@ -24,9 +22,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "30"
-      ],
+      "default": "30",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -41,9 +37,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1048576"
-      ]
+      "default": "1048576"
     },
     {
       "id": "aria_encrypt_tables",
@@ -54,9 +48,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "aria_force_start_after_recovery_failures",
@@ -67,9 +59,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "aria_group_commit",
@@ -81,9 +71,7 @@
       "dynamic": false,
       "dataType": "string",
       "validValues": [],
-      "default": [
-        "none"
-      ]
+      "default": "none"
     },
     {
       "id": "aria_group_commit_interval",
@@ -104,9 +92,7 @@
       ],
       "dynamic": true,
       "dataType": "directory",
-      "default": [
-        "SAME AS DATADIR"
-      ]
+      "default": "SAME AS DATADIR"
     },
     {
       "id": "aria_log_file_size",
@@ -117,9 +103,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1073741824"
-      ]
+      "default": "1073741824"
     },
     {
       "id": "aria_log_purge_type",
@@ -130,9 +114,7 @@
       ],
       "dynamic": true,
       "dataType": "enumeration",
-      "default": [
-        "immediate"
-      ],
+      "default": "immediate",
       "validValues": [
         "immediate",
         "external",
@@ -148,9 +130,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "9223372036853727232"
-      ],
+      "default": "9223372036853727232",
       "range": {
         "from": 0,
         "to": 9223372036854776000
@@ -165,9 +145,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "aria_pagecache_age_threshold",
@@ -178,9 +156,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "300"
-      ],
+      "default": "300",
       "range": {
         "from": 100,
         "to": 9999900
@@ -195,9 +171,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "134217720"
-      ],
+      "default": "134217720",
       "range": {
         "from": 131072,
         "to": "(128KB) upwards"
@@ -212,9 +186,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "100"
-      ],
+      "default": "100",
       "range": {
         "from": 1,
         "to": 100
@@ -229,9 +201,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "512"
-      ],
+      "default": "512",
       "range": {
         "from": 128,
         "to": 16384
@@ -251,7 +221,6 @@
       ],
       "dynamic": true,
       "dataType": "enumeration",
-      "default": [],
       "validValues": [
         "NORMAL",
         "BACKUP",
@@ -270,9 +239,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "aria_sort_buffer_size",
@@ -284,10 +251,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "268434432",
-        "134217728"
-      ]
+      "default": "134217728"
     },
     {
       "id": "aria_stats_method",
@@ -299,9 +263,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "nulls_unequal"
-      ],
+      "default": "nulls_unequal",
       "validValues": [
         "nulls_equal",
         "nulls_unequal",
@@ -317,9 +279,7 @@
       ],
       "dynamic": true,
       "dataType": "enumeration",
-      "default": [
-        "NEWFILE"
-      ],
+      "default": "NEWFILE",
       "validValues": [
         "NEWFILE",
         "NEVER",
@@ -335,9 +295,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "deadlock_search_depth_long",
@@ -349,9 +307,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "15"
-      ],
+      "default": "15",
       "range": {
         "from": 0,
         "to": 33
@@ -367,9 +323,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "4"
-      ],
+      "default": "4",
       "range": {
         "from": 0,
         "to": 32
@@ -385,9 +339,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "50000000"
-      ],
+      "default": "50000000",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -403,9 +355,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "10000"
-      ],
+      "default": "10000",
       "range": {
         "from": 0,
         "to": 4294967295

@@ -232,9 +232,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "spider_connect_mutex",
@@ -436,9 +434,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "spider_error_read_mode",
@@ -720,9 +716,7 @@
       "name": "spider_low_mem_read",
       "type": "whether to use low memory mode when executing queries issued internally to remote servers that return result-sets.",
       "dataType": "numeric",
-      "default": [
-        "-1"
-      ],
+      "default": "-1",
       "range": {
         "from": -1,
         "to": 1
@@ -1278,9 +1272,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "10"
-      ],
+      "default": "10",
       "range": {
         "from": 1,
         "to": 4294967295
@@ -1295,9 +1287,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -1312,9 +1302,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "10"
-      ],
+      "default": "10",
       "range": {
         "from": 1,
         "to": 4294967295
@@ -1401,9 +1389,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "20"
-      ],
+      "default": "20",
       "range": {
         "from": 1,
         "to": null
@@ -1418,9 +1404,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "20"
-      ],
+      "default": "20",
       "range": {
         "from": 1,
         "to": null
@@ -1540,9 +1524,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 0,
         "to": 1

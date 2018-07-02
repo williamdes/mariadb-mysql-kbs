@@ -12,9 +12,7 @@
       ],
       "dynamic": true,
       "dataType": "enumerated",
-      "default": [
-        "DEFAULT"
-      ],
+      "default": "DEFAULT",
       "validValues": [
         "DEFAULT",
         "COPY",
@@ -33,9 +31,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "automatic_sp_privileges",
@@ -46,9 +42,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "back_log",
@@ -57,8 +51,7 @@
       "scope": [
         "global"
       ],
-      "dynamic": false,
-      "default": []
+      "dynamic": false
     },
     {
       "id": "basedir",
@@ -79,9 +72,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "bind_address",
@@ -104,9 +95,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "8388608"
-      ]
+      "default": "8388608"
     },
     {
       "id": "character_set_client",
@@ -118,9 +107,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "utf8"
-      ]
+      "default": "utf8"
     },
     {
       "id": "character_set_connection",
@@ -132,9 +119,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "utf8"
-      ]
+      "default": "utf8"
     },
     {
       "id": "character_set_database",
@@ -146,9 +131,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "latin1"
-      ]
+      "default": "latin1"
     },
     {
       "id": "character_set_filesystem",
@@ -160,9 +143,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "binary"
-      ]
+      "default": "binary"
     },
     {
       "id": "character_set_results",
@@ -174,9 +155,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "utf8"
-      ]
+      "default": "utf8"
     },
     {
       "id": "character_set_server",
@@ -188,9 +167,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "latin1"
-      ]
+      "default": "latin1"
     },
     {
       "id": "character_set_system",
@@ -201,9 +178,7 @@
       ],
       "dynamic": false,
       "dataType": "string",
-      "default": [
-        "utf8"
-      ]
+      "default": "utf8"
     },
     {
       "id": "character_sets_dir",
@@ -256,9 +231,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "latin1_swedish_ci"
-      ]
+      "default": "latin1_swedish_ci"
     },
     {
       "id": "completion_type",
@@ -270,10 +243,7 @@
       ],
       "dynamic": true,
       "dataType": "enumerated",
-      "default": [
-        "NO_CHAIN",
-        "0"
-      ],
+      "default": "0",
       "validValues": [
         "0",
         "1",
@@ -292,10 +262,7 @@
       ],
       "dynamic": true,
       "dataType": "enumerated",
-      "default": [
-        "AUTO",
-        "1"
-      ],
+      "default": "1",
       "validValues": [
         "0",
         "1",
@@ -313,9 +280,7 @@
         "global"
       ],
       "dynamic": true,
-      "default": [
-        "10"
-      ]
+      "default": "10"
     },
     {
       "id": "datadir",
@@ -346,10 +311,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "d:t:i:o,/tmp/mysqld.trace",
-        "d:t:i:O,\\mysqld.trace"
-      ]
+      "default": "d:t:i:O,\\mysqld.trace"
     },
     {
       "id": "debug_no_thread_alarm",
@@ -360,9 +322,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "debug_sync",
@@ -373,10 +333,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "OFF",
-        "ON - current signal signal name"
-      ]
+      "default": "ON - current signal signal name"
     },
     {
       "id": "default_regex_flags",
@@ -392,10 +349,7 @@
         "session"
       ],
       "dynamic": true,
-      "default": [
-        "InnoDB",
-        "MyISAM"
-      ]
+      "default": "MyISAM"
     },
     {
       "id": "default_table_type",
@@ -416,8 +370,7 @@
         "session"
       ],
       "dynamic": true,
-      "dataType": "enumeration",
-      "default": []
+      "dataType": "enumeration"
     },
     {
       "id": "default_week_format",
@@ -429,9 +382,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 7
@@ -446,9 +397,7 @@
       ],
       "dynamic": true,
       "dataType": "enumeration",
-      "default": [
-        "ON"
-      ],
+      "default": "ON",
       "validValues": [
         "ON",
         "OFF",
@@ -464,9 +413,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "100"
-      ],
+      "default": "100",
       "range": {
         "from": 1,
         "to": 4294967295
@@ -481,9 +428,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "300"
-      ]
+      "default": "300"
     },
     {
       "id": "delayed_queue_size",
@@ -493,9 +438,7 @@
         "global"
       ],
       "dynamic": true,
-      "default": [
-        "1000"
-      ],
+      "default": "1000",
       "range": {
         "from": 1,
         "to": 4294967295
@@ -511,9 +454,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "4"
-      ],
+      "default": "4",
       "range": {
         "from": 0,
         "to": 30
@@ -528,9 +469,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "encrypt_tmp_files",
@@ -541,10 +480,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF",
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "encryption_algorithm",
@@ -555,9 +491,7 @@
       ],
       "dynamic": false,
       "dataType": "enum",
-      "default": [
-        "none"
-      ],
+      "default": "none",
       "validValues": [
         "none",
         "aes_ecb",
@@ -574,9 +508,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "none"
-      ]
+      "default": "none"
     },
     {
       "id": "engine_condition_pushdown",
@@ -587,8 +519,7 @@
         "session"
       ],
       "dynamic": true,
-      "dataType": "boolean",
-      "default": []
+      "dataType": "boolean"
     },
     {
       "id": "error_count",
@@ -609,9 +540,7 @@
       ],
       "dynamic": true,
       "dataType": "enumeration",
-      "default": [
-        "OFF"
-      ],
+      "default": "OFF",
       "validValues": [
         "ON",
         "1",
@@ -630,9 +559,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "100"
-      ],
+      "default": "100",
       "range": {
         "from": 0,
         "to": "upwards"
@@ -647,9 +574,7 @@
       ],
       "dynamic": false,
       "dataType": "bolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "external_user",
@@ -660,9 +585,7 @@
       ],
       "dynamic": false,
       "dataType": "string",
-      "default": [
-        "NULL"
-      ]
+      "default": "NULL"
     },
     {
       "id": "flush",
@@ -673,9 +596,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "flush_time",
@@ -686,9 +607,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "foreign_key_checks",
@@ -700,9 +619,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "ft_boolean_syntax",
@@ -713,9 +630,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "+ -><()*:\"\"&|"
-      ]
+      "default": "+ -><()*:\"\"&|"
     },
     {
       "id": "ft_max_word_len",
@@ -726,9 +641,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "84"
-      ]
+      "default": "84"
     },
     {
       "id": "ft_min_word_len",
@@ -739,9 +652,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "4"
-      ]
+      "default": "4"
     },
     {
       "id": "ft_query_expansion_limit",
@@ -752,9 +663,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "20"
-      ],
+      "default": "20",
       "range": {
         "from": 0,
         "to": 1000
@@ -769,9 +678,7 @@
       ],
       "dynamic": false,
       "dataType": "file name",
-      "default": [
-        "(built-in)"
-      ]
+      "default": "(built-in)"
     },
     {
       "id": "general_log",
@@ -782,9 +689,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "general_log_file",
@@ -795,9 +700,7 @@
       ],
       "dynamic": true,
       "dataType": "file name",
-      "default": [
-        "host_name.log"
-      ]
+      "default": "host_name.log"
     },
     {
       "id": "group_concat_max_len",
@@ -808,8 +711,7 @@
         "session"
       ],
       "dynamic": true,
-      "dataType": "numeric",
-      "default": []
+      "dataType": "numeric"
     },
     {
       "id": "have_compress",
@@ -920,9 +822,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 255
@@ -938,9 +838,7 @@
       ],
       "dynamic": true,
       "dataType": "enumeration",
-      "default": [
-        "SINGLE_PREC_HB"
-      ],
+      "default": "SINGLE_PREC_HB",
       "validValues": [
         "SINGLE_PREC_HB",
         "DOUBLE_PREC_HB"
@@ -955,9 +853,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "128"
-      ],
+      "default": "128",
       "range": {
         "from": 0,
         "to": 65536
@@ -988,9 +884,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 31536000
@@ -1006,9 +900,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 31536000
@@ -1024,9 +916,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 31536000
@@ -1051,9 +941,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "init_connect",
@@ -1095,9 +983,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "28800"
-      ]
+      "default": "28800"
     },
     {
       "id": "join_buffer_size",
@@ -1109,10 +995,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "262144",
-        "131072"
-      ]
+      "default": "131072"
     },
     {
       "id": "join_buffer_space_limit",
@@ -1124,9 +1007,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "2097152"
-      ],
+      "default": "2097152",
       "range": {
         "from": 2048,
         "to": 99999999997952
@@ -1142,9 +1023,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "2"
-      ],
+      "default": "2",
       "range": {
         "from": 0,
         "to": 8
@@ -1160,9 +1039,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "language",
@@ -1173,9 +1050,7 @@
       ],
       "dynamic": false,
       "dataType": "directory name",
-      "default": [
-        "/usr/local/mysql/share/mysql/english/"
-      ]
+      "default": "/usr/local/mysql/share/mysql/english/"
     },
     {
       "id": "large_files_support",
@@ -1194,8 +1069,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "numeric",
-      "default": []
+      "dataType": "numeric"
     },
     {
       "id": "large_pages",
@@ -1206,9 +1080,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "last_insert_id",
@@ -1230,9 +1102,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "en_us"
-      ]
+      "default": "en_us"
     },
     {
       "id": "lc_messages_dir",
@@ -1254,9 +1124,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "en_US"
-      ]
+      "default": "en_US"
     },
     {
       "id": "license",
@@ -1277,9 +1145,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "lock_wait_timeout",
@@ -1291,7 +1157,6 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [],
       "range": {
         "from": null
       }
@@ -1305,9 +1170,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "log",
@@ -1318,9 +1181,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "log_disabled_statements",
@@ -1331,8 +1192,7 @@
         "session"
       ],
       "dynamic": false,
-      "dataType": "set",
-      "default": []
+      "dataType": "set"
     },
     {
       "id": "log_error",
@@ -1342,8 +1202,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "file name",
-      "default": []
+      "dataType": "file name"
     },
     {
       "id": "log_output",
@@ -1354,9 +1213,7 @@
       ],
       "dynamic": true,
       "dataType": "set",
-      "default": [
-        "FILE"
-      ],
+      "default": "FILE",
       "validValues": [
         "TABLE",
         "FILE",
@@ -1372,9 +1229,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "log_slow_admin_statements",
@@ -1384,8 +1239,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "boolean",
-      "default": []
+      "dataType": "boolean"
     },
     {
       "id": "log_slow_disabled_statements",
@@ -1397,9 +1251,7 @@
       ],
       "dynamic": false,
       "dataType": "set",
-      "default": [
-        "sp"
-      ]
+      "default": "sp"
     },
     {
       "id": "log_slow_filter",
@@ -1411,7 +1263,6 @@
       ],
       "dynamic": true,
       "dataType": "enumeration",
-      "default": [],
       "validValues": [
         "admin",
         "filesort",
@@ -1434,9 +1285,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "log_slow_rate_limit",
@@ -1448,9 +1297,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 1,
         "to": "upwards"
@@ -1466,7 +1313,6 @@
       ],
       "dynamic": true,
       "dataType": "enumeration",
-      "default": [],
       "validValues": [
         "query_plan",
         "innodb",
@@ -1482,9 +1328,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "24576"
-      ],
+      "default": "24576",
       "range": {
         "from": 12288,
         "to": 18446744073709552000
@@ -1500,7 +1344,6 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [],
       "range": {
         "from": 0,
         "to": 4294967295
@@ -1516,10 +1359,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "10.000000",
-        "10"
-      ],
+      "default": "10",
       "range": {
         "from": 0,
         "to": "upwards"
@@ -1535,9 +1375,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "lower_case_file_system",
@@ -1548,9 +1386,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "##"
-      ]
+      "default": "##"
     },
     {
       "id": "lower_case_table_names",
@@ -1561,11 +1397,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0",
-        "1",
-        "2"
-      ],
+      "default": "2",
       "range": {
         "from": 0,
         "to": 2
@@ -1580,7 +1412,6 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [],
       "range": {
         "from": 1024,
         "to": 1073741824
@@ -1595,10 +1426,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "100",
-        "10"
-      ]
+      "default": "10"
     },
     {
       "id": "max_connections",
@@ -1609,9 +1437,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "151"
-      ],
+      "default": "151",
       "range": {
         "from": 1,
         "to": 100000
@@ -1627,9 +1453,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "20"
-      ],
+      "default": "20",
       "range": {
         "from": 0,
         "to": 16384
@@ -1645,9 +1469,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1024"
-      ],
+      "default": "1024",
       "range": {
         "from": 0,
         "to": 1048576
@@ -1663,9 +1485,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "64"
-      ],
+      "default": "64",
       "range": {
         "from": 0,
         "to": 65535
@@ -1681,9 +1501,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "16777216"
-      ]
+      "default": "16777216"
     },
     {
       "id": "max_insert_delayed_threads",
@@ -1700,10 +1518,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "18446744073709551615",
-        "4294967295"
-      ],
+      "default": "4294967295",
       "range": {
         "from": 1,
         "to": 18446744073709552000
@@ -1719,9 +1534,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1024"
-      ],
+      "default": "1024",
       "range": {
         "from": 4,
         "to": 8388608
@@ -1736,7 +1549,6 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [],
       "range": {
         "from": 1024,
         "to": 4294967295
@@ -1751,9 +1563,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "16382"
-      ],
+      "default": "16382",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -1769,9 +1579,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "4294967295"
-      ],
+      "default": "4294967295",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -1787,9 +1595,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "4294967295"
-      ],
+      "default": "4294967295",
       "range": {
         "from": 1,
         "to": 4294967295
@@ -1805,9 +1611,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "9223372036854775807"
-      ],
+      "default": "9223372036854775807",
       "range": {
         "from": 8192,
         "to": 18446744073709552000
@@ -1823,9 +1627,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1024"
-      ],
+      "default": "1024",
       "range": {
         "from": 4,
         "to": 8388608
@@ -1841,9 +1643,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 255
@@ -1859,10 +1659,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0.000000",
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": "upwards"
@@ -1883,9 +1680,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": -1,
         "to": 4294967295
@@ -1900,9 +1695,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "4294967295"
-      ],
+      "default": "4294967295",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -1917,9 +1710,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "1024"
-      ],
+      "default": "1024",
       "range": {
         "from": 1,
         "to": 1048576
@@ -1934,9 +1725,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "8"
-      ],
+      "default": "8",
       "range": {
         "from": 1,
         "to": 1024
@@ -1952,9 +1741,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -1970,17 +1757,13 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "262144"
-      ]
+      "default": "262144"
     },
     {
       "id": "multi_range_count",
       "name": "multi_range_count",
       "type": "deprecated in 5.1 and ignored from",
-      "default": [
-        "256"
-      ]
+      "default": "256"
     },
     {
       "id": "mysql56_temporal_format",
@@ -1991,9 +1774,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "named_pipe",
@@ -2004,9 +1785,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "net_buffer_length",
@@ -2018,9 +1797,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "16384"
-      ],
+      "default": "16384",
       "range": {
         "from": 1024,
         "to": 1048576
@@ -2036,9 +1813,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "30"
-      ],
+      "default": "30",
       "range": {
         "from": 1,
         "to": "upwards"
@@ -2054,9 +1829,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "10"
-      ],
+      "default": "10",
       "range": {
         "from": 1,
         "to": 4294967295
@@ -2072,9 +1845,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "60"
-      ],
+      "default": "60",
       "range": {
         "from": 1,
         "to": "upwards"
@@ -2090,9 +1861,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "old_alter_table",
@@ -2104,9 +1873,7 @@
       ],
       "dynamic": true,
       "dataType": "enumerated",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "validValues": []
     },
     {
@@ -2119,9 +1886,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "(empty string)"
-      ],
+      "default": "(empty string)",
       "validValues": []
     },
     {
@@ -2134,9 +1899,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "open_files_limit",
@@ -2153,9 +1916,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "optimizer_search_depth",
@@ -2167,9 +1928,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "62"
-      ],
+      "default": "62",
       "range": {
         "from": 0,
         "to": 63
@@ -2185,9 +1944,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "100"
-      ],
+      "default": "100",
       "range": {
         "from": 10,
         "to": "upwards"
@@ -2215,9 +1972,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 1,
         "to": 5
@@ -2232,9 +1987,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "pid_file",
@@ -2255,9 +2008,7 @@
       ],
       "dynamic": false,
       "dataType": "directory name",
-      "default": [
-        "BASEDIR/lib/plugin"
-      ]
+      "default": "BASEDIR/lib/plugin"
     },
     {
       "id": "plugin_maturity",
@@ -2267,9 +2018,7 @@
         "global"
       ],
       "dynamic": false,
-      "default": [
-        "unknown"
-      ],
+      "default": "unknown",
       "validValues": [
         "unknown",
         "experimental",
@@ -2288,9 +2037,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "3306"
-      ],
+      "default": "3306",
       "range": {
         "from": 0,
         "to": 65535
@@ -2306,9 +2053,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "32768"
-      ],
+      "default": "32768",
       "range": {
         "from": 1024,
         "to": 1073741824
@@ -2324,9 +2069,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "profiling_history_size",
@@ -2338,9 +2081,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "15"
-      ],
+      "default": "15",
       "range": {
         "from": 0,
         "to": 100
@@ -2356,10 +2097,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "56",
-        "5"
-      ],
+      "default": "5",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -2374,9 +2112,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "10"
-      ],
+      "default": "10",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -2390,8 +2126,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "proxy_user",
@@ -2412,9 +2147,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "pseudo_thread_id",
@@ -2436,10 +2169,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "16384",
-        "8192"
-      ],
+      "default": "8192",
       "range": {
         "from": 1024,
         "to": 4294967295
@@ -2454,9 +2184,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1048576"
-      ],
+      "default": "1048576",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -2471,9 +2199,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "4096"
-      ],
+      "default": "4096",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -2488,10 +2214,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1M",
-        "0"
-      ],
+      "default": "0",
       "validValues": [
         "0"
       ]
@@ -2505,9 +2228,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "query_cache_type",
@@ -2519,10 +2240,7 @@
       ],
       "dynamic": true,
       "dataType": "enumeration",
-      "default": [
-        "OFF",
-        "ON"
-      ],
+      "default": "ON",
       "validValues": [
         "0",
         "OFF",
@@ -2542,9 +2260,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "query_prealloc_size",
@@ -2556,10 +2272,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "24576",
-        "8192"
-      ],
+      "default": "8192",
       "range": {
         "from": 1024,
         "to": 4294967295
@@ -2585,9 +2298,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "4096"
-      ]
+      "default": "4096"
     },
     {
       "id": "read_buffer_size",
@@ -2599,9 +2310,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "131072"
-      ],
+      "default": "131072",
       "range": {
         "from": 8200,
         "to": 2147479552
@@ -2616,9 +2325,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "read_rnd_buffer_size",
@@ -2630,9 +2337,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "262144"
-      ],
+      "default": "262144",
       "range": {
         "from": 8200,
         "to": 2147483647
@@ -2648,9 +2353,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "8388608"
-      ],
+      "default": "8388608",
       "range": {
         "from": 0,
         "to": 2147483647
@@ -2680,10 +2383,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON",
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "secure_file_priv",
@@ -2693,8 +2393,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "path name",
-      "default": []
+      "dataType": "path name"
     },
     {
       "id": "secure_timestamp",
@@ -2705,9 +2404,7 @@
       ],
       "dynamic": false,
       "dataType": "enum",
-      "default": [
-        "NO"
-      ]
+      "default": "NO"
     },
     {
       "id": "session_track_schema",
@@ -2719,9 +2416,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "session_track_state_change",
@@ -2733,9 +2428,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "session_track_system_variables",
@@ -2747,9 +2440,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "autocommit, character_set_client, character_set_connection, character_set_results, time_zone"
-      ]
+      "default": "autocommit, character_set_client, character_set_connection, character_set_results, time_zone"
     },
     {
       "id": "session_track_transaction_info",
@@ -2761,9 +2452,7 @@
       ],
       "dynamic": true,
       "dataType": "enum",
-      "default": [
-        "OFF"
-      ],
+      "default": "OFF",
       "validValues": [
         "OFF",
         "STATE",
@@ -2788,9 +2477,7 @@
       ],
       "dynamic": false,
       "dataType": "string",
-      "default": [
-        "MYSQL"
-      ]
+      "default": "MYSQL"
     },
     {
       "id": "skip_external_locking",
@@ -2801,9 +2488,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "skip_name_resolve",
@@ -2814,9 +2499,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "skip_networking",
@@ -2827,9 +2510,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "skip_show_database",
@@ -2840,9 +2521,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "slow_launch_time",
@@ -2853,9 +2532,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "2"
-      ]
+      "default": "2"
     },
     {
       "id": "slow_query_log",
@@ -2867,9 +2544,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "slow_query_log_file",
@@ -2880,9 +2555,7 @@
       ],
       "dynamic": true,
       "dataType": "file name",
-      "default": [
-        "host_name-slow.log"
-      ]
+      "default": "host_name-slow.log"
     },
     {
       "id": "socket",
@@ -2893,10 +2566,7 @@
       ],
       "dynamic": false,
       "dataType": "file name",
-      "default": [
-        "/tmp/mysql.sock",
-        "MySQL"
-      ]
+      "default": "MySQL"
     },
     {
       "id": "sort_buffer_size",
@@ -2908,9 +2578,7 @@
       ],
       "dynamic": true,
       "dataType": "number",
-      "default": [
-        "2M (2097152)"
-      ]
+      "default": "2M (2097152)"
     },
     {
       "id": "sql_auto_is_null",
@@ -2922,9 +2590,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "0 (>= MariaDB/MySQL 5.5.3), 1 (MariaDB/MySQL <= 5.5.2)"
-      ]
+      "default": "0 (>= MariaDB/MySQL 5.5.3), 1 (MariaDB/MySQL <= 5.5.2)"
     },
     {
       "id": "sql_big_selects",
@@ -2936,9 +2602,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "sql_big_tables",
@@ -2955,9 +2619,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "sql_log_off",
@@ -2968,9 +2630,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "sql_log_update",
@@ -2997,7 +2657,6 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [],
       "validValues": []
     },
     {
@@ -3010,9 +2669,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "sql_quote_show_create",
@@ -3024,9 +2681,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "sql_safe_updates",
@@ -3034,9 +2689,7 @@
       "type": "if set to 1, updates and deletes need either a key in the where clause, or a limit clause, or else they will aborted. prevents the common mistake of accidentally deleting or updating every row in a table.",
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF (0)"
-      ]
+      "default": "OFF (0)"
     },
     {
       "id": "sql_select_limit",
@@ -3048,9 +2701,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "sql_warnings",
@@ -3062,9 +2713,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF (0)"
-      ]
+      "default": "OFF (0)"
     },
     {
       "id": "storage_engine",
@@ -3081,9 +2730,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "stored_program_cache",
@@ -3094,9 +2741,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "256"
-      ],
+      "default": "256",
       "range": {
         "from": 256,
         "to": 524288
@@ -3111,9 +2756,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "sync_frm",
@@ -3124,9 +2767,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "TRUE"
-      ]
+      "default": "TRUE"
     },
     {
       "id": "system_time_zone",
@@ -3147,9 +2788,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "400"
-      ],
+      "default": "400",
       "range": {
         "from": 400,
         "to": 524288
@@ -3164,9 +2803,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "50"
-      ],
+      "default": "50",
       "range": {
         "from": 1,
         "to": 1073741824
@@ -3181,10 +2818,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "2000",
-        "400"
-      ],
+      "default": "400",
       "range": {
         "from": 1,
         "to": 1048576
@@ -3199,10 +2833,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "8",
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 1,
         "to": 64
@@ -3222,9 +2853,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 2147483
@@ -3239,9 +2868,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 2147483
@@ -3256,9 +2883,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 2147483
@@ -3273,9 +2898,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 16384
@@ -3290,9 +2913,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "10"
-      ],
+      "default": "10",
       "range": {
         "from": 1,
         "to": 512
@@ -3307,7 +2928,6 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [],
       "range": {
         "from": 131072,
         "to": 18446744073709552000
@@ -3328,9 +2948,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "SYSTEM"
-      ]
+      "default": "SYSTEM"
     },
     {
       "id": "timed_mutexes",
@@ -3341,9 +2959,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "timestamp",
@@ -3368,9 +2984,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "18446744073709551615"
-      ],
+      "default": "18446744073709551615",
       "range": {
         "from": 1024,
         "to": 18446744073709552000
@@ -3391,9 +3005,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "16777216"
-      ],
+      "default": "16777216",
       "range": {
         "from": 1024,
         "to": 4294967295
@@ -3417,9 +3029,7 @@
         "session"
       ],
       "dynamic": true,
-      "default": [
-        "8192"
-      ],
+      "default": "8192",
       "range": {
         "from": 1024,
         "to": 4294967295
@@ -3434,9 +3044,7 @@
         "session"
       ],
       "dynamic": true,
-      "default": [
-        "4096"
-      ],
+      "default": "4096",
       "range": {
         "from": 1024,
         "to": 4294967295
@@ -3451,9 +3059,7 @@
         "session"
       ],
       "dynamic": true,
-      "default": [
-        "REPEATABLE-READ"
-      ],
+      "default": "REPEATABLE-READ",
       "validValues": [
         "READ-UNCOMMITTED",
         "READ-COMMITTED",
@@ -3470,9 +3076,7 @@
         "session"
       ],
       "dynamic": true,
-      "default": [
-        "OFF-READ"
-      ]
+      "default": "OFF-READ"
     },
     {
       "id": "unique_checks",
@@ -3483,9 +3087,7 @@
         "session"
       ],
       "dynamic": true,
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "updatable_views_with_limit",
@@ -3496,9 +3098,7 @@
         "session"
       ],
       "dynamic": true,
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "use_stat_tables",
@@ -3510,9 +3110,7 @@
       ],
       "dynamic": true,
       "dataType": "enum",
-      "default": [
-        "never"
-      ]
+      "default": "never"
     },
     {
       "id": "userstat",
@@ -3523,9 +3121,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "version",
@@ -3590,9 +3186,7 @@
         "session"
       ],
       "dynamic": true,
-      "default": [
-        "28800"
-      ]
+      "default": "28800"
     },
     {
       "id": "warning_count",

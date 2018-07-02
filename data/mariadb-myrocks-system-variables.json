@@ -11,9 +11,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 0,
         "to": 3
@@ -28,9 +26,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_allow_concurrent_memtable_write",
@@ -41,9 +37,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_allow_mmap_reads",
@@ -54,9 +48,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_allow_mmap_writes",
@@ -67,9 +59,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_background_sync",
@@ -80,9 +70,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_base_background_compactions",
@@ -93,9 +81,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": -1,
         "to": 64
@@ -110,9 +96,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_block_cache_size",
@@ -123,9 +107,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "536870912"
-      ],
+      "default": "536870912",
       "range": {
         "from": 1024,
         "to": 9223372036854776000
@@ -140,9 +122,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "16"
-      ],
+      "default": "16",
       "range": {
         "from": 1,
         "to": 2147483647
@@ -157,9 +137,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "4096"
-      ],
+      "default": "4096",
       "range": {
         "from": 1,
         "to": 18446744073709552000
@@ -175,9 +153,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "10"
-      ],
+      "default": "10",
       "range": {
         "from": 0,
         "to": 2147483647
@@ -193,9 +169,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_bulk_load_allow_unsorted",
@@ -207,9 +181,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_bulk_load_size",
@@ -220,9 +192,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1000"
-      ],
+      "default": "1000",
       "range": {
         "from": 1,
         "to": 1073741824
@@ -237,9 +207,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -254,9 +222,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_checksums_pct",
@@ -268,9 +234,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "100"
-      ],
+      "default": "100",
       "range": {
         "from": 0,
         "to": 100
@@ -285,9 +249,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_commit_in_the_middle",
@@ -298,9 +260,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_compact_cf",
@@ -310,8 +270,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "rocksdb_compaction_readahead_size",
@@ -322,9 +281,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -339,9 +296,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 2000000
@@ -356,9 +311,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_compaction_sequential_deletes_file_size",
@@ -369,9 +322,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": -1,
         "to": 9223372036854776000
@@ -386,9 +337,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 2000000
@@ -403,9 +352,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "rocksdb_create_checkpoint",
@@ -415,8 +362,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "rocksdb_create_if_missing",
@@ -427,9 +373,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_create_missing_column_families",
@@ -440,9 +384,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_datadir",
@@ -453,9 +395,7 @@
       ],
       "dynamic": false,
       "dataType": "string",
-      "default": [
-        "./.rocksdb"
-      ]
+      "default": "./.rocksdb"
     },
     {
       "id": "rocksdb_db_write_buffer_size",
@@ -466,9 +406,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -484,9 +422,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_deadlock_detect_depth",
@@ -498,9 +434,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "50"
-      ],
+      "default": "50",
       "range": {
         "from": 2,
         "to": 18446744073709552000
@@ -516,9 +450,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_debug_ttl_ignore_pk",
@@ -530,9 +462,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_debug_ttl_read_filter_ts",
@@ -544,9 +474,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": -3600,
         "to": 3600
@@ -562,9 +490,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": -3600,
         "to": 3600
@@ -580,9 +506,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": -3600,
         "to": 3600
@@ -596,8 +520,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "rocksdb_delayed_write_rate",
@@ -608,9 +531,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "16777216"
-      ],
+      "default": "16777216",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -625,9 +546,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "21600000000"
-      ],
+      "default": "21600000000",
       "range": {
         "from": 0,
         "to": 9223372036854776000
@@ -642,9 +561,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_enable_bulk_load_api",
@@ -655,9 +572,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_enable_thread_tracking",
@@ -668,9 +583,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_enable_ttl",
@@ -681,9 +594,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_enable_ttl_read_filtering",
@@ -694,9 +605,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_enable_write_thread_adaptive_yield",
@@ -707,9 +616,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_error_if_exists",
@@ -720,9 +627,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_flush_log_at_trx_commit",
@@ -734,9 +639,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 0,
         "to": 2
@@ -752,9 +655,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_force_compute_memtable_stats",
@@ -765,9 +666,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_force_compute_memtable_stats_cachetime",
@@ -778,9 +677,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "60000000"
-      ],
+      "default": "60000000",
       "range": {
         "from": 0,
         "to": 2147483647
@@ -796,9 +693,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_force_flush_memtable_now",
@@ -810,9 +705,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_force_index_records_in_range",
@@ -824,9 +717,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 0,
         "to": 2147483647
@@ -840,8 +731,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "rocksdb_hash_index_allow_collision",
@@ -852,9 +742,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_index_type",
@@ -865,9 +753,7 @@
       ],
       "dynamic": false,
       "dataType": "enum",
-      "default": [
-        "kBinarySearch"
-      ],
+      "default": "kBinarySearch",
       "validValues": [
         "kBinarySearch",
         "kHashSearch"
@@ -882,9 +768,7 @@
       ],
       "dynamic": true,
       "dataType": "enum",
-      "default": [
-        "error_level"
-      ],
+      "default": "error_level",
       "validValues": [
         "error_level",
         "debug_level",
@@ -902,9 +786,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "validValues": [
         "0",
         "4294967295"
@@ -919,9 +801,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_keep_log_file_num",
@@ -932,9 +812,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "1000"
-      ],
+      "default": "1000",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -949,9 +827,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_lock_scanned_rows",
@@ -963,9 +839,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_lock_wait_timeout",
@@ -977,9 +851,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 1,
         "to": 1073741824
@@ -994,9 +866,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -1011,9 +881,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -1028,9 +896,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_master_skip_tx_api",
@@ -1042,9 +908,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_max_background_compactions",
@@ -1055,9 +919,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 1,
         "to": 64
@@ -1072,9 +934,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 1,
         "to": 64
@@ -1089,9 +949,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "2"
-      ],
+      "default": "2",
       "range": {
         "from": -1,
         "to": 64
@@ -1106,9 +964,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "5"
-      ],
+      "default": "5",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -1123,9 +979,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -1140,9 +994,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "18446744073709551615"
-      ],
+      "default": "18446744073709551615",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -1157,9 +1009,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "-1"
-      ],
+      "default": "-1",
       "range": {
         "from": -1,
         "to": 2147483647
@@ -1175,9 +1025,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1073741824"
-      ],
+      "default": "1073741824",
       "range": {
         "from": 1,
         "to": 1073741824
@@ -1192,9 +1040,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 1,
         "to": 64
@@ -1209,9 +1055,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 9223372036854776000
@@ -1227,9 +1071,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "67108864"
-      ],
+      "default": "67108864",
       "range": {
         "from": 100,
         "to": 18446744073709552000
@@ -1245,9 +1087,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1073741824"
-      ],
+      "default": "1073741824",
       "range": {
         "from": 100,
         "to": 18446744073709552000
@@ -1263,9 +1103,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -1280,9 +1118,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_no_block_cache",
@@ -1293,9 +1129,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_override_cf_options",
@@ -1305,8 +1139,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "rocksdb_paranoid_checks",
@@ -1317,9 +1150,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_pause_background_work",
@@ -1330,9 +1161,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_perf_context_level",
@@ -1344,9 +1173,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 4
@@ -1360,8 +1187,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "rocksdb_persistent_cache_size_mb",
@@ -1373,9 +1199,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -1390,9 +1214,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_print_snapshot_conflict_queries",
@@ -1403,9 +1225,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_rate_limiter_bytes_per_sec",
@@ -1416,9 +1236,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 9223372036854776000
@@ -1433,8 +1251,7 @@
         "session"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "rocksdb_records_in_range",
@@ -1446,9 +1263,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 2147483647
@@ -1463,9 +1278,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_seconds_between_stat_computes",
@@ -1476,9 +1289,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "3600"
-      ],
+      "default": "3600",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -1493,9 +1304,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_sim_cache_size",
@@ -1506,9 +1315,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 9223372036854776000
@@ -1524,9 +1331,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_skip_fill_cache",
@@ -1538,9 +1343,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_skip_unique_check_tables",
@@ -1552,9 +1355,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        ".*"
-      ]
+      "default": ".*"
     },
     {
       "id": "rocksdb_sst_mgr_rate_bytes_per_sec",
@@ -1565,9 +1366,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -1582,9 +1381,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "600"
-      ],
+      "default": "600",
       "range": {
         "from": 0,
         "to": 2147483647
@@ -1600,9 +1397,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_strict_collation_check",
@@ -1613,9 +1408,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_strict_collation_exceptions",
@@ -1625,8 +1418,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "rocksdb_supported_compression_types",
@@ -1637,9 +1429,7 @@
       ],
       "dynamic": false,
       "dataType": "string",
-      "default": [
-        "Snappy,Zlib"
-      ]
+      "default": "Snappy,Zlib"
     },
     {
       "id": "rocksdb_table_cache_numshardbits",
@@ -1650,9 +1440,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "6"
-      ],
+      "default": "6",
       "range": {
         "from": 0,
         "to": 2147483647
@@ -1667,9 +1455,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "10"
-      ],
+      "default": "10",
       "range": {
         "from": 0,
         "to": 100
@@ -1684,8 +1470,7 @@
         "session"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "rocksdb_trace_sst_api",
@@ -1697,9 +1482,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_unsafe_for_binlog",
@@ -1711,9 +1494,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_update_cf_options",
@@ -1723,8 +1504,7 @@
         "global"
       ],
       "dynamic": true,
-      "dataType": "varchar",
-      "default": []
+      "dataType": "varchar"
     },
     {
       "id": "rocksdb_use_adaptive_mutex",
@@ -1735,9 +1515,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_use_clock_cache",
@@ -1748,9 +1526,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_use_direct_io_for_flush_and_compaction",
@@ -1761,9 +1537,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_use_direct_reads",
@@ -1774,9 +1548,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_use_fsync",
@@ -1787,9 +1559,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_validate_tables",
@@ -1800,9 +1570,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 0,
         "to": 2
@@ -1818,9 +1586,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_wal_bytes_per_sync",
@@ -1831,9 +1597,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -1847,8 +1611,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "rocksdb_wal_recovery_mode",
@@ -1859,9 +1622,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 0,
         "to": 3
@@ -1876,9 +1637,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 9223372036854776000
@@ -1893,9 +1652,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 9223372036854776000
@@ -1910,9 +1667,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "rocksdb_write_batch_max_bytes",
@@ -1924,9 +1679,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -1942,9 +1695,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "rocksdb_write_ignore_missing_column_families",
@@ -1956,9 +1707,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     }
   ]
 }

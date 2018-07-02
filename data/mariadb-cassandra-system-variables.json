@@ -22,9 +22,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "3"
-      ],
+      "default": "3",
       "validValues": [
         "1",
         "1073741824"
@@ -40,9 +38,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "100"
-      ],
+      "default": "100",
       "validValues": [
         "1",
         "1073741824"
@@ -58,9 +54,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "100"
-      ],
+      "default": "100",
       "validValues": [
         "1",
         "1073741824"
@@ -74,9 +68,7 @@
         "global",
         "session"
       ],
-      "default": [
-        "ONE"
-      ],
+      "default": "ONE",
       "validValues": [
         "ONE",
         "TWO",
@@ -97,9 +89,7 @@
         "global",
         "session"
       ],
-      "default": [
-        "10000"
-      ],
+      "default": "10000",
       "validValues": [
         "1",
         "1073741824"
@@ -113,9 +103,7 @@
         "global",
         "session"
       ],
-      "default": [
-        "ONE"
-      ],
+      "default": "ONE",
       "validValues": [
         "ONE",
         "TWO",

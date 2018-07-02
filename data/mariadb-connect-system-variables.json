@@ -10,8 +10,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "connect_conv_size",
@@ -22,9 +21,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "8192"
-      ],
+      "default": "8192",
       "range": {
         "from": 0,
         "to": 65500
@@ -40,9 +37,7 @@
       ],
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "connect_exact_info",
@@ -53,9 +48,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "connect_indx_map",
@@ -66,9 +59,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "connect_java_wrapper",
@@ -80,9 +71,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "wrappers/JdbcInterface"
-      ]
+      "default": "wrappers/JdbcInterface"
     },
     {
       "id": "connect_json_grp_size",
@@ -94,9 +83,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "10"
-      ],
+      "default": "10",
       "range": {
         "from": 1,
         "to": 2147483647
@@ -112,9 +99,7 @@
       ],
       "dynamic": true,
       "dataType": "string",
-      "default": [
-        "<null>"
-      ]
+      "default": "<null>"
     },
     {
       "id": "connect_jvm_path",
@@ -124,8 +109,7 @@
         "global"
       ],
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "connect_type_conv",
@@ -141,10 +125,7 @@
         "YES",
         "SKIP"
       ],
-      "default": [
-        "YES",
-        "NO"
-      ]
+      "default": "NO"
     },
     {
       "id": "connect_use_tempfile",
@@ -155,9 +136,7 @@
       ],
       "dynamic": true,
       "dataType": "enum",
-      "default": [
-        "AUTO"
-      ]
+      "default": "AUTO"
     },
     {
       "id": "connect_work_size",
@@ -169,9 +148,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "67108864"
-      ],
+      "default": "67108864",
       "range": {
         "from": 4194304,
         "to": "upwards, depending on the physical memory size"
@@ -186,9 +163,7 @@
       ],
       "dynamic": true,
       "dataType": "set",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "validValues": [],
       "range": {
         "from": 0,

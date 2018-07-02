@@ -12,9 +12,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "tokudb_analyze_time",
@@ -26,9 +24,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "5"
-      ],
+      "default": "5",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -44,9 +40,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "4194304"
-      ],
+      "default": "4194304",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -62,17 +56,14 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "tokudb_cache_size",
       "name": "tokudb_cache_size",
       "type": "size in bytes of the tokudb cache. this variable is read-only and cannot be changed dynamically. to change the value, either set the value in the",
       "dynamic": false,
-      "dataType": "numeric",
-      "default": []
+      "dataType": "numeric"
     },
     {
       "id": "tokudb_check_jemalloc",
@@ -83,9 +74,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "validValues": [
         "0",
         "1"
@@ -101,9 +90,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "tokudb_checkpoint_on_flush_logs",
@@ -114,9 +101,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "tokudb_checkpointing_period",
@@ -127,9 +112,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "60"
-      ],
+      "default": "60",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -144,9 +127,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "5"
-      ],
+      "default": "5",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -161,9 +142,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -179,9 +158,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "tokudb_create_index_online",
@@ -193,17 +170,14 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "tokudb_data_dir",
       "name": "tokudb_data_dir",
       "type": "directory where the tokudb data is stored. by default the variable is empty, in which case the regular",
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "tokudb_debug",
@@ -214,9 +188,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -228,9 +200,7 @@
       "type": "when set to on, tokudb writes use direct io instead of buffered io.",
       "dynamic": false,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "tokudb_disable_hot_alter",
@@ -242,9 +212,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "tokudb_disable_prefetching",
@@ -256,9 +224,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "tokudb_disable_slow_alter",
@@ -270,9 +236,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "OFF"
-      ]
+      "default": "OFF"
     },
     {
       "id": "tokudb_empty_scan",
@@ -284,9 +248,7 @@
       ],
       "dynamic": true,
       "dataType": "enum",
-      "default": [
-        "rl"
-      ],
+      "default": "rl",
       "validValues": [
         "lr",
         "rl",
@@ -302,9 +264,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "5"
-      ]
+      "default": "5"
     },
     {
       "id": "tokudb_fsync_log_period",
@@ -316,9 +276,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -334,9 +292,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "tokudb_killed_time",
@@ -348,9 +304,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "4000"
-      ],
+      "default": "4000",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -365,8 +319,7 @@
         "session"
       ],
       "dynamic": true,
-      "dataType": "text",
-      "default": []
+      "dataType": "text"
     },
     {
       "id": "tokudb_load_save_space",
@@ -378,9 +331,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "tokudb_loader_memory_size",
@@ -392,9 +343,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "100000000"
-      ],
+      "default": "100000000",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -410,9 +359,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "4000"
-      ],
+      "default": "4000",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -428,17 +375,14 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1"
-      ]
+      "default": "1"
     },
     {
       "id": "tokudb_log_dir",
       "name": "tokudb_log_dir",
       "type": "directory where the tokudb log files are stored. by default the variable is empty, in which case the regular",
       "dynamic": false,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "tokudb_max_lock_memory",
@@ -450,9 +394,7 @@
       ],
       "dynamic": false,
       "dataType": "numeric",
-      "default": [
-        "130653952"
-      ]
+      "default": "130653952"
     },
     {
       "id": "tokudb_optimize_index_fraction",
@@ -464,9 +406,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1.000000"
-      ],
+      "default": "1.000000",
       "range": {
         "from": 0,
         "to": 1
@@ -481,8 +421,7 @@
         "session"
       ],
       "dynamic": true,
-      "dataType": "string",
-      "default": []
+      "dataType": "string"
     },
     {
       "id": "tokudb_optimize_throttle",
@@ -494,9 +433,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ],
+      "default": "0",
       "range": {
         "from": 0,
         "to": 18446744073709552000
@@ -512,9 +449,7 @@
       ],
       "dynamic": true,
       "dataType": "enumerated",
-      "default": [
-        "1"
-      ],
+      "default": "1",
       "validValues": [
         "0",
         "1",
@@ -531,9 +466,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "tokudb_read_block_size",
@@ -545,9 +478,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "65536"
-      ],
+      "default": "65536",
       "range": {
         "from": 4096,
         "to": 4294967295
@@ -563,9 +494,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "131072"
-      ],
+      "default": "131072",
       "range": {
         "from": 0,
         "to": 1048576
@@ -581,9 +510,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "10000"
-      ],
+      "default": "10000",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -599,9 +526,7 @@
       ],
       "dynamic": true,
       "dataType": "enumerated",
-      "default": [
-        "tokudb_zlib"
-      ],
+      "default": "tokudb_zlib",
       "validValues": [
         "tokudb_default",
         "tokudb_fast",
@@ -622,9 +547,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "tokudb_rpl_lookup_rows",
@@ -636,9 +559,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "tokudb_rpl_lookup_rows_delay",
@@ -650,9 +571,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "tokudb_rpl_unique_checks",
@@ -664,9 +583,7 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "tokudb_rpl_unique_checks_delay",
@@ -678,9 +595,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "0"
-      ]
+      "default": "0"
     },
     {
       "id": "tokudb_support_xa",
@@ -692,17 +607,14 @@
       ],
       "dynamic": true,
       "dataType": "boolean",
-      "default": [
-        "ON"
-      ]
+      "default": "ON"
     },
     {
       "id": "tokudb_tmp_dir",
       "name": "tokudb_tmp_dir",
       "type": "directory where the tokudb bulk loaders temporary files are stored. can be very large, and useful to place on a separate disk. by default the variable is empty, in which case the regular",
       "dynamic": false,
-      "dataType": "directory name",
-      "default": []
+      "dataType": "directory name"
     },
     {
       "id": "tokudb_version",
@@ -721,9 +633,7 @@
       ],
       "dynamic": true,
       "dataType": "numeric",
-      "default": [
-        "1000"
-      ],
+      "default": "1000",
       "range": {
         "from": 0,
         "to": 4294967295

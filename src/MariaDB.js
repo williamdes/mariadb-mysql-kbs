@@ -122,7 +122,7 @@ function parsePage(url, cbSuccess) {
 
 }
 
-const KB_URL = 'http://kb-mirror.mariadb.com/kb/en/library/documentation/';
+const KB_URL = 'https://mariadb.com/kb/en/library/documentation/';
 
 parsePage(
     KB_URL+'replication/optimization-and-tuning/system-variables/server-system-variables/',

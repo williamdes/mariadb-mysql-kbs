@@ -1,0 +1,17 @@
+/scripts
+/data
+/dist/merged-raw.json
+/tests
+*.php
+/composer.json
+/composer.lock
+/.prettierignore
+/.gitignore
+/phpcs.xml
+/phpstan.neon
+/.travis.yml
+/dist/merged-raw.md
+/docs
+/vendor
+/tmp
+/.gitmodules

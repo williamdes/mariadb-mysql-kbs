@@ -358,8 +358,8 @@ foreach ($fileOut->vars as $id => $doc) {
 $fileOut->version = 1.0;
 file_put_contents(__DIR__."/../dist/merged-slim.json", json_encode($fileOut, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).PHP_EOL);
 
-$fileOut->vars  = json_decode(json_encode($variables));
-$fileOut->types = array( "MYSQL" => 1, "MARIADB" => 2 );
+$fileOut->vars     = json_decode(json_encode($variables));
+$fileOut->types    = array( "MYSQL" => 1, "MARIADB" => 2 );
 $fileOut->varTypes = array(
     "string" => 1,
     "boolean" => 2,
@@ -398,9 +398,9 @@ foreach ($fileOut->vars as $id => &$doc) {
     }
     $doc = $data;
 }
-$fileOut->types   = array_flip($fileOut->types);
-$fileOut->varTypes   = array_flip($fileOut->varTypes);
-$fileOut->version = 1.0;
+$fileOut->types    = array_flip($fileOut->types);
+$fileOut->varTypes = array_flip($fileOut->varTypes);
+$fileOut->version  = 1.0;
 file_put_contents(__DIR__."/../dist/merged-ultraslim.json", json_encode($fileOut, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).PHP_EOL);
 
 $content = '<?php'.PHP_EOL.'$data = '.json_encode($fileOut, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).';'.PHP_EOL;

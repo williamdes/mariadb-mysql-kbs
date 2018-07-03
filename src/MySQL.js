@@ -258,3 +258,13 @@ parsePage(KB_URL + 'server-options.html', (data, url) => {
   };
   writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
 });
+
+parsePage(KB_URL + 'version-tokens-reference.html', (data, url) => {
+  let page = {
+    url: url,
+    name: 'version-tokens-reference',
+    data: data,
+  };
+  writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
+});
+

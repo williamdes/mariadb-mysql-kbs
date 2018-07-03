@@ -360,10 +360,24 @@ file_put_contents(__DIR__."/../dist/merged-slim.json", json_encode($fileOut, JSO
 
 $fileOut->vars  = json_decode(json_encode($variables));
 $fileOut->types = array( "MYSQL" => 1, "MARIADB" => 2 );
+$fileOut->varTypes = array(
+    "string" => 1,
+    "boolean" => 2,
+    "integer" => 3,
+    "numeric" => 4,
+    "enumeration" => 5,
+    "set" => 6,
+    "directory name" => 7,
+    "file name" => 8,
+    "byte" => 9
+);
 foreach ($fileOut->vars as $id => &$doc) {
     $data = new stdClass();
     if (isset($doc->dynamic)) {
         $data->d = $doc->dynamic;
+    }
+    if (isset($doc->type)) {
+        $data->t = $fileOut->varTypes[$doc->type];
     }
     $data->a = array();
     foreach ($doc->ids as &$kbEntry) {
@@ -385,7 +399,17 @@ foreach ($fileOut->vars as $id => &$doc) {
     $doc = $data;
 }
 $fileOut->types   = array_flip($fileOut->types);
+$fileOut->varTypes   = array_flip($fileOut->varTypes);
 $fileOut->version = 1.0;
 file_put_contents(__DIR__."/../dist/merged-ultraslim.json", json_encode($fileOut, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).PHP_EOL);
 
+$content = '<?php'.PHP_EOL.'$data = '.json_encode($fileOut, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).';'.PHP_EOL;
+
+$content = str_replace(
+    array("{", "}", ":"),
+    array("[", "]", "=>"),
+    $content
+);
+
+file_put_contents(__DIR__."/../dist/merged-ultraslim.php", $content);
 echo "Files merged !".PHP_EOL;

@@ -60,3 +60,6 @@ cache:
 addons:
   apt:
     update: false
+
+git:
+  submodules: false

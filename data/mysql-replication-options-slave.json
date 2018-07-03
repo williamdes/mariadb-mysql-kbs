@@ -235,7 +235,7 @@
       "name": "slave_pending_jobs_size_max",
       "range": {
         "from": 1024,
-        "to": 18
+        "to": 16
       },
       "type": "integer"
     },
@@ -755,7 +755,7 @@
       "name": "slave_pending_jobs_size_max",
       "range": {
         "from": 1024,
-        "to": 18
+        "to": 16
       },
       "scope": [
         "global"

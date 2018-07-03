@@ -9,6 +9,7 @@ const realTypes = [
   'set',
   'directory name',
   'file name',
+  'byte',
 ];
 common.listDirectory(dataDir, files => {
   files.forEach(file => {
@@ -49,7 +50,7 @@ common.listDirectory(dataDir, files => {
             doc.type.match(/number of bytes/i) ||
             doc.type.match(/size in mb/i)
           ) {
-            doc.type = 'bytes';
+            doc.type = 'byte';
           } else if (
             doc.type.match(/number of/i) ||
             doc.type.match(/size of/i) ||

@@ -141,7 +141,8 @@ foreach ($files as $file) {
                                     "enumeration",
                                     "set",
                                     "directory name",
-                                    "file name"
+                                    "file name",
+                                    "byte"
                                 );
                                 if (in_array($cacheValue, $realTypes)// original
                                     && in_array($docValue, $realTypes) === false// dupe

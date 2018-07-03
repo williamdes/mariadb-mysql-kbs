@@ -43,12 +43,27 @@ function parsePage(url, cbSuccess) {
                   doc.type = elementDescr.nextSibling.textContent.toLowerCase().trim();
                   break;
                 case 'data type:':
-                  if (elementDescr.nextSibling.nextSibling !== undefined) {
-                    doc.dataType = elementDescr.nextSibling.nextSibling.textContent;
+                  /*
+                   * Default method, <li> has a <code> child
+                   * Example: <li><strong>Data Type:</strong> <code>numeric</code></li>
+                   */
+                  let dataType = elementDescr.parentElement.getElementsByTagName("code");
+                  if (dataType[0] !== undefined) {
+                    doc.dataType = dataType[0].textContent.toLowerCase().trim();
                   } else {
-                    doc.dataType = elementDescr.nextSibling.textContent;
+                    /*
+                     * Fallback method, <li> has text
+                     * Example: <li><strong>Data Type:</strong> boolean</li>
+                     */
+                    let dataType = elementDescr.parentElement.textContent
+                    .replace("Data Type:").replace(/undefined/gi, "");
+                    dataType = dataType.toLowerCase().trim();
+                    if (dataType !== '') {
+                      doc.dataType = dataType;
+                    } else {
+                      console.log("No datatype found for : "+doc.id);
+                    }
                   }
-                  doc.dataType = doc.dataType.toLowerCase().trim();
                   break;
                 case 'description:':
                   doc.type = elementDescr.nextSibling.textContent.toLowerCase().trim();
@@ -116,6 +131,7 @@ function parsePage(url, cbSuccess) {
           });
         });
       } catch (e) {
+        console.error(e);
         console.log('Error at : ' + url + '#' + doc.id);
       }
       if (element.firstChild.nodeName.toLowerCase() === 'code') {

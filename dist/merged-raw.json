@@ -30150,6 +30150,893 @@
                 }
             ]
         },
+        "ndbcluster": {
+            "dynamic": false,
+            "name": "ndbcluster",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndbcluster",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_allow_copying_alter_table": {
+            "dynamic": true,
+            "name": "ndb_allow_copying_alter_table",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-allow-copying-alter-table",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_batch_size": {
+            "dynamic": false,
+            "name": "ndb_batch_size",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-batch-size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_cluster_connection_pool": {
+            "dynamic": false,
+            "name": "ndb_cluster_connection_pool",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-cluster-connection-pool",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_cluster_connection_pool_nodeids": {
+            "dynamic": false,
+            "name": "ndb_cluster_connection_pool_nodeids",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-cluster-connection-pool-nodeids",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_blob_read_batch_bytes": {
+            "dynamic": true,
+            "name": "ndb_blob_read_batch_bytes",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-blob-read-batch-bytes",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_blob_write_batch_bytes": {
+            "dynamic": true,
+            "name": "ndb_blob_write_batch_bytes",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-blob-write-batch-bytes",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_connectstring": {
+            "dynamic": false,
+            "name": "ndb_connectstring",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-connectstring",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_default_column_format": {
+            "dynamic": true,
+            "name": "ndb_default_column_format",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-default-column-format",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_default_column_format",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_deferred_constraints": {
+            "dynamic": true,
+            "name": "ndb_deferred_constraints",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-deferred-constraints",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_deferred_constraints",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_distribution": {
+            "dynamic": true,
+            "name": "ndb_distribution",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-distribution",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_distribution",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_apply_status": {
+            "dynamic": false,
+            "name": "ndb_log_apply_status",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-log-apply-status",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_apply_status",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_empty_epochs": {
+            "dynamic": true,
+            "name": "ndb_log_empty_epochs",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-log-empty-epochs",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_empty_epochs",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_empty_update": {
+            "dynamic": true,
+            "name": "ndb_log_empty_update",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-log-empty-update",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_empty_update",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_exclusive_reads": {
+            "dynamic": true,
+            "name": "ndb_log_exclusive_reads",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-log-exclusive-reads",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_exclusive_reads",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_orig": {
+            "dynamic": false,
+            "name": "ndb_log_orig",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-log-orig",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_orig",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_transaction_id": {
+            "dynamic": false,
+            "name": "ndb_log_transaction_id",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-log-transaction-id",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_transaction_id",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_update_minimal": {
+            "dynamic": true,
+            "name": "ndb_log_update_minimal",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-log-update-minimal",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_mgmd_host": {
+            "dynamic": false,
+            "name": "ndb_mgmd_host",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-mgmd-host",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_nodeid": {
+            "dynamic": false,
+            "name": "ndb_nodeid",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-nodeid",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_optimization_delay": {
+            "dynamic": true,
+            "name": "ndb_optimization_delay",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb_optimization_delay",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_recv_thread_activation_threshold": {
+            "dynamic": false,
+            "name": "ndb_recv_thread_activation_threshold",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-recv-thread-activation-threshold",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_recv_thread_activation_threshold",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_recv_thread_cpu_mask": {
+            "name": "ndb_recv_thread_cpu_mask",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-recv-thread-cpu-mask",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_recv_thread_cpu_mask",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb-transid-mysql-connection-map=state": {
+            "dynamic": false,
+            "name": "ndb-transid-mysql-connection-map=state",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-transid-mysql-connection-map",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_wait_connected": {
+            "dynamic": false,
+            "name": "ndb_wait_connected",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-wait-connected",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_wait_setup": {
+            "dynamic": false,
+            "name": "ndb_wait_setup",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-wait-setup",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "server_id_bits": {
+            "dynamic": false,
+            "name": "server_id_bits",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_server-id-bits",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_server_id_bits",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "skip_ndbcluster": {
+            "dynamic": false,
+            "name": "skip_ndbcluster",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_skip-ndbcluster",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_autoincrement_prefetch_sz": {
+            "dynamic": true,
+            "name": "ndb_autoincrement_prefetch_sz",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_autoincrement_prefetch_sz",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_cache_check_time": {
+            "dynamic": true,
+            "name": "ndb_cache_check_time",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_cache_check_time",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_clear_apply_status": {
+            "dynamic": true,
+            "name": "ndb_clear_apply_status",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_clear_apply_status",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_data_node_neighbour": {
+            "dynamic": true,
+            "name": "ndb_data_node_neighbour",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_data_node_neighbour",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_eventbuffer_free_percent": {
+            "dynamic": true,
+            "name": "ndb_eventbuffer_free_percent",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_eventbuffer_free_percent",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_eventbuffer_max_alloc": {
+            "dynamic": true,
+            "name": "ndb_eventbuffer_max_alloc",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_eventbuffer_max_alloc",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_extra_logging": {
+            "dynamic": true,
+            "name": "ndb_extra_logging",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_extra_logging",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_force_send": {
+            "dynamic": true,
+            "name": "ndb_force_send",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_force_send",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_fully_replicated": {
+            "dynamic": true,
+            "name": "ndb_fully_replicated",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_fully_replicated",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_index_stat_enable": {
+            "dynamic": true,
+            "name": "ndb_index_stat_enable",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_index_stat_enable",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_index_stat_option": {
+            "dynamic": true,
+            "name": "ndb_index_stat_option",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_index_stat_option",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_join_pushdown": {
+            "dynamic": true,
+            "name": "ndb_join_pushdown",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_join_pushdown",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_bin": {
+            "dynamic": true,
+            "name": "ndb_log_bin",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_log_bin",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_binlog_index": {
+            "dynamic": true,
+            "name": "ndb_log_binlog_index",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_log_binlog_index",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_optimized_node_selection": {
+            "dynamic": false,
+            "name": "ndb_optimized_node_selection",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_optimized_node_selection",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_read_backup": {
+            "dynamic": true,
+            "name": "ndb_read_backup",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_read_backup",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_report_thresh_binlog_epoch_slip": {
+            "dynamic": true,
+            "name": "ndb_report_thresh_binlog_epoch_slip",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_report_thresh_binlog_epoch_slip",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_report_thresh_binlog_mem_usage": {
+            "dynamic": true,
+            "name": "ndb_report_thresh_binlog_mem_usage",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_report_thresh_binlog_mem_usage",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "slave_allow_batching": {
+            "cli": "--slave-allow-batching",
+            "default": "off",
+            "dynamic": true,
+            "name": "slave_allow_batching",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_slave_allow_batching",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_slave_allow_batching",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
+                }
+            ]
+        },
+        "ndb_show_foreign_key_mock_tables": {
+            "dynamic": true,
+            "name": "ndb_show_foreign_key_mock_tables",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_show_foreign_key_mock_tables",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_slave_conflict_role": {
+            "dynamic": true,
+            "name": "ndb_slave_conflict_role",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_slave_conflict_role",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_table_no_logging": {
+            "dynamic": true,
+            "name": "ndb_table_no_logging",
+            "scope": [
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_table_no_logging",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_table_temporary": {
+            "dynamic": true,
+            "name": "ndb_table_temporary",
+            "scope": [
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_table_temporary",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_use_copying_alter_table": {
+            "dynamic": false,
+            "name": "ndb_use_copying_alter_table",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_use_copying_alter_table",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_use_exact_count": {
+            "dynamic": true,
+            "name": "ndb_use_exact_count",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_use_exact_count",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_use_transactions": {
+            "dynamic": true,
+            "name": "ndb_use_transactions",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_use_transactions",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_version": {
+            "dynamic": false,
+            "name": "ndb_version",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_version",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_version_string": {
+            "dynamic": false,
+            "name": "ndb_version_string",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndb_version_string",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "transaction_allow_batching": {
+            "dynamic": true,
+            "name": "transaction_allow_batching",
+            "scope": [
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_transaction_allow_batching",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndbinfo_database": {
+            "dynamic": false,
+            "name": "ndbinfo_database",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndbinfo_database",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndbinfo_max_bytes": {
+            "dynamic": true,
+            "name": "ndbinfo_max_bytes",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndbinfo_max_bytes",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndbinfo_max_rows": {
+            "dynamic": true,
+            "name": "ndbinfo_max_rows",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndbinfo_max_rows",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndbinfo_offline": {
+            "dynamic": true,
+            "name": "ndbinfo_offline",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndbinfo_offline",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndbinfo_show_hidden": {
+            "dynamic": true,
+            "name": "ndbinfo_show_hidden",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndbinfo_show_hidden",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndbinfo_table_prefix": {
+            "dynamic": true,
+            "name": "ndbinfo_table_prefix",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndbinfo_table_prefix",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndbinfo_version": {
+            "dynamic": false,
+            "name": "ndbinfo_version",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ndbinfo_version",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
         "performance_schema": {
             "cli": "--performance-schema=#",
             "default": "on",
@@ -33430,22 +34317,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_rpl_stop_slave_timeout",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
-                }
-            ]
-        },
-        "slave_allow_batching": {
-            "cli": "--slave-allow-batching",
-            "default": "off",
-            "dynamic": true,
-            "name": "slave_allow_batching",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_slave_allow_batching",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
             ]

@@ -41,9 +41,8 @@ common.listDirectory(dataDir, files => {
           }
         }
         if (doc.dataType !== undefined) {
-          doc.type = ""+doc.dataType;
-          if(doc.type === "numeric")
-            doc.type = "integer";
+          doc.type = '' + doc.dataType;
+          if (doc.type === 'numeric') doc.type = 'integer';
           delete doc.dataType;
         }
         if (doc.type === undefined) {

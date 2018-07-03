@@ -44,7 +44,7 @@ function completeDoc(rows, doc) {
             }
           });
         }
-        if (doc.scope != undefined) {
+        if (doc.scope !== undefined) {
           doc.scope = doc.scope.filter(function(e) {
             return e === 0 || e;
           });

@@ -43,7 +43,7 @@ function parsePage(url, cbSuccess) {
                   doc.type = elementDescr.nextSibling.textContent.toLowerCase().trim();
                   break;
                 case 'data type:':
-                  if (elementDescr.nextSibling.nextSibling != undefined) {
+                  if (elementDescr.nextSibling.nextSibling !== undefined) {
                     doc.dataType = elementDescr.nextSibling.nextSibling.textContent;
                   } else {
                     doc.dataType = elementDescr.nextSibling.textContent;
@@ -83,7 +83,7 @@ function parsePage(url, cbSuccess) {
                     // try x to y
                     doc.range = doc.range[0].split('to').map(item => item.trim());
                   }
-                  if (doc.range[1] != undefined) {
+                  if (doc.range[1] !== undefined) {
                     doc.range[1] = parseFloat(doc.range[1]);
                   }
                   if (doc.range.length === 1) {

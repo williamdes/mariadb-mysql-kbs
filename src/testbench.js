@@ -57,7 +57,7 @@ for (let i = 0; i < elements.length; i++) {
       if (elementDescr.nodeName.toLocaleLowerCase() === 'strong') {
         switch (elementDescr.innerHTML.toLowerCase().trim()) {
           case 'data type:':
-            if (elementDescr.nextSibling.nextSibling != undefined) {
+            if (elementDescr.nextSibling.nextSibling !== undefined) {
               doc.dataType = elementDescr.nextSibling.nextSibling.textContent;
             } else {
               doc.dataType = elementDescr.nextSibling.textContent;

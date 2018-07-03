@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 {% for change in version.changesFixed %}
 {% if loop.first %}### Fixed{{ '\n'|raw }}{% endif %}
 {# #}{# #}- [{{change.hash}}](https://github.com/{{ owner }}/{{ repo }}/commit/{{change.longHash}}) {{ change.msg }}{% if not loop.last %}{{ '\n'|raw }}{% else %}{{ '\n'|raw }}{% endif %}
-{# #}{% endfor %}{% if version.changesSecurity.length > 0 %}{{ '\n'|raw }}{% endif %}
+{# #}{% endfor %}{% if version.changesImprove.length > 0 %}{{ '\n'|raw }}{% endif %}
 {% for change in version.changesImprove %}
 {% if loop.first %}### Improvements{{ '\n'|raw }}{% endif %}
 {# #}{# #}- [{{change.hash}}](https://github.com/{{ owner }}/{{ repo }}/commit/{{change.longHash}}) {{ change.msg }}{% if not loop.last %}{{ '\n'|raw }}{% else %}{{ '\n'|raw }}{% endif %}

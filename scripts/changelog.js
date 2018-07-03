@@ -119,26 +119,22 @@ log(
       /*if (msg.match(/^v([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$/gi)) {
         continue;
       }*/
-      if (msg.match(/^added:\s/gi) || msg.match(/^add:/gi)) {
+      if (msg.match(/^added:\s/gi) || msg.match(/^add:/gi) || msg.match(/^test:/gi)) {
         changes = changesAdded;
-      }
-      if (msg.match(/^changed:/gi) || msg.match(/^update:/gi) || msg.match(/^moved:/gi)) {
+      } else if (msg.match(/^changed:/gi) || msg.match(/^update:/gi) || msg.match(/^updated:/gi) || msg.match(/^moved:/gi)) {
         changes = changesChanged;
-      }
-      if (msg.match(/^deprecated:/gi)) {
+      } else if (msg.match(/^deprecated:/gi)) {
         changes = changesDeprecated;
-      }
-      if (msg.match(/^removed:/gi) || msg.match(/^remove:/gi)) {
+      } else if (msg.match(/^removed:/gi) || msg.match(/^remove:/gi)) {
         changes = changesRemoved;
-      }
-      if (msg.match(/^fixed:/gi) || msg.match(/fix:/gi)) {
+      } else if (msg.match(/^fixed:/gi) || msg.match(/fix:/gi) || msg.match(/fixes:/gi)) {
         changes = changesFixed;
-      }
-      if (msg.match(/^security:/gi)) {
+      } else if (msg.match(/^security:/gi)) {
         changes = changesSecurity;
-      }
-      if (msg.match(/^improve:/gi) || msg.match(/^improved:/gi)) {
+      } else if (msg.match(/^improve:/gi) ||  msg.match(/^improved:/gi) ||  msg.match(/^style:/gi)) {
         changes = changesImprove;
+      } else {
+        //console.log(msg);
       }
 
       changes.push({

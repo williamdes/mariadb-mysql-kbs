@@ -11,7 +11,7 @@ function parsePage(url, cbSuccess) {
     for (let i = 0; i < elements.length; i++) {
       let element = elements[i];
       let doc = { id: element.id };
-      doc.name = element.childNodes[0].textContent;
+      doc.name = element.childNodes[0].textContent.trim();
       try {
         // Parse ul > li
         element.nextSibling.nextSibling.childNodes.forEach(liChild => {

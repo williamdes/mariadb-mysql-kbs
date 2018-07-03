@@ -16,7 +16,13 @@ function parsePage(url, cbSuccess) {
       }
 
       doc.id = element.parentElement.getElementsByTagName('a')[0].name;
-
+      const regexCli = /([-]{2})([0-9a-z-_]+)/i;
+      doc.name = element.parentElement.getElementsByTagName('code')[0].textContent.trim();
+      var cli = doc.name.match(regexCli);
+      if (cli) {
+        // cli format
+        doc.name = cli[2].replace(/-/g, '_'); //Try to clean format
+      }
       var tbody = element.getElementsByTagName('tbody')[0];
 
       var trs = tbody.getElementsByTagName('tr');
@@ -29,7 +35,14 @@ function parsePage(url, cbSuccess) {
             doc.dynamic = value.textContent.toLowerCase().trim() === 'yes';
             break;
           case 'system variable':
-            doc.name = value.textContent.toLowerCase().trim();
+            var theName = value.textContent.toLowerCase().trim();
+            if (doc.name !== undefined) {
+              if (doc.name.match(regexCli)) {
+                doc.name = theName;
+              }
+            } else {
+              doc.name = theName;
+            }
             break;
           case 'scope':
             doc.scope = value.textContent

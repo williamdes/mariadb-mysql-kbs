@@ -96,16 +96,17 @@ foreach ($files as $file) {
     }
 
     foreach ($data as $doc) {
-        if (isset($doc->name)) {
-            if (isset($variables[$doc->name]) === false) {
+        $identifier = $doc->name;
+        if (isset($identifier)) {
+            if (isset($variables[$identifier]) === false) {
                 if (isset($doc->ids) === false) {
                     $doc->ids = array();
                 }
-                $variables[$doc->name] = $doc;
-                $kbEntry               = new stdClass();
-                $kbEntry->anchor       = $doc->id;
-                $kbEntry->url          = $fileData->url;
-                $doc->ids[]            = $kbEntry;
+                $variables[$identifier] = $doc;
+                $kbEntry                = new stdClass();
+                $kbEntry->anchor        = $doc->id;
+                $kbEntry->url           = $fileData->url;
+                $doc->ids[]             = $kbEntry;
                 unset($doc->id);
             } else {
                 if (isset($doc->ids) === false) {
@@ -116,11 +117,11 @@ foreach ($files as $file) {
                 $kbEntry->url    = $fileData->url;
                 $doc->ids[]      = $kbEntry;
                 unset($doc->id);
-                //echo $doc->name." duplicate ! in ".str_replace($dataDir, "", $file).PHP_EOL;
+                //echo $identifier." duplicate ! in ".str_replace($dataDir, "", $file).PHP_EOL;
                 $newData = new stdClass();
                 foreach ((array) $doc as $key => $val) {
-                    if (isset($variables[$doc->name]->$key)) {
-                        $cacheValue = $variables[$doc->name]->$key;
+                    if (isset($variables[$identifier]->$key)) {
+                        $cacheValue = $variables[$identifier]->$key;
                         $docValue   = $doc->$key;
                         if ((                            strtoupper(json_encode($cacheValue)) === strtoupper(json_encode($docValue)))
                             && (                            json_encode($cacheValue) !== json_encode($docValue))
@@ -308,7 +309,7 @@ foreach ($files as $file) {
                                 $cache   = $cacheValue;
                                 fixRange($current, $cache);
                             } else {
-                                echo '[ERROR] conflict '.$key.' + '.$doc->name.' - '.json_encode($cacheValue).' - '.json_encode($docValue).PHP_EOL;
+                                echo '[ERROR] conflict '.$key.' + '.$identifier.' - '.json_encode($cacheValue).' - '.json_encode($docValue).PHP_EOL;
                             }
                         } else {
                             $newData->$key = $val;
@@ -318,7 +319,7 @@ foreach ($files as $file) {
                     }
                 }
                 //print_r($newData);
-                $variables[$doc->name] = $newData;
+                $variables[$identifier] = $newData;
             }
         }
     }

@@ -8,7 +8,7 @@
         "global",
         "session"
       ],
-      "type": "number of keys we've made lookups for."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -18,7 +18,7 @@
         "global",
         "session"
       ],
-      "type": "number of read operations."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -28,7 +28,7 @@
         "global",
         "session"
       ],
-      "type": "number of rows actually read."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -38,7 +38,7 @@
         "global",
         "session"
       ],
-      "type": "number of network exceptions."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -48,7 +48,7 @@
         "global",
         "session"
       ],
-      "type": "number of insert batches performed."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -58,7 +58,7 @@
         "global",
         "session"
       ],
-      "type": "number of rows inserted."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -68,7 +68,7 @@
         "global",
         "session"
       ],
-      "type": "number of timeout exceptions we got from cassandra."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -78,7 +78,7 @@
         "global",
         "session"
       ],
-      "type": "number of unavailable exceptions we got from cassandra."
+      "type": "integer"
     }
   ],
   "name": "cassandra-status-variables",

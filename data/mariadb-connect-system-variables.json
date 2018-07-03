@@ -8,8 +8,7 @@
       "name": "connect_class_path",
       "scope": [
         "global"
-      ],
-      "type": "java class path"
+      ]
     },
     {
       "cli": "--connect-conv-size=#",
@@ -25,7 +24,7 @@
       "scope": [
         "session"
       ],
-      "type": "the size of the"
+      "type": "integer"
     },
     {
       "cli": "--connect-enable-mongo={0|1}",
@@ -37,8 +36,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "enable the"
+      ]
     },
     {
       "cli": "--connect-exact-info=#",
@@ -49,8 +47,7 @@
       "name": "connect_exact_info",
       "scope": [
         "session"
-      ],
-      "type": "whether the connect engine should return an exact record number value to information queries. it is off by default because this information can take a very long time for large variable record length tables or for remote tables, especially if the remote server is not available. it can be set to on when exact values are desired, for instance when querying the repartition of rows in a partition table."
+      ]
     },
     {
       "cli": "--connect-indx-map=#",
@@ -61,8 +58,7 @@
       "name": "connect_indx_map",
       "scope": [
         "global"
-      ],
-      "type": "enable file mapping for index files. to accelerate the indexing process, connect makes an index structure in memory from the index file. this can be done by reading the index file or using it as if it was in memory by “file mapping”. set to 0 (file read, the default) or 1 (file mapping)."
+      ]
     },
     {
       "cli": "--connect-java-wrapper=val",
@@ -74,8 +70,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "java wrapper."
+      ]
     },
     {
       "cli": "--connect-json-grp-size=#",
@@ -92,7 +87,7 @@
         "global",
         "session"
       ],
-      "type": "max number of rows for json aggregate functions."
+      "type": "integer"
     },
     {
       "cli": "--connect-json-null=value",
@@ -104,8 +99,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "representation of json null values."
+      ]
     },
     {
       "cli": "--connect-jvm_path=value",
@@ -115,8 +109,7 @@
       "name": "connect_jvm_path",
       "scope": [
         "global"
-      ],
-      "type": "path to jvm library."
+      ]
     },
     {
       "cli": "--connect-type-conv=#",
@@ -128,7 +121,6 @@
       "scope": [
         "session"
       ],
-      "type": "determines the handling of",
       "validValues": [
         "NO",
         "YES",
@@ -144,8 +136,7 @@
       "name": "connect_use_tempfile",
       "scope": [
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "--connect-work-size=#",
@@ -156,13 +147,13 @@
       "name": "connect_work_size",
       "range": {
         "from": 4194304,
-        "to": "upwards, depending on the physical memory size"
+        "to": "upwards"
       },
       "scope": [
         "global",
         "session"
       ],
-      "type": "size of the connect work area used for memory allocation. permits allocating a larger memory sub-allocation space when dealing with very large if sub-allocation fails. if the specified value is too big and memory allocation fails, the size of the work area remains but the variable value is not modified and should be reset."
+      "type": "integer"
     },
     {
       "cli": "--connect-xtrace=#",
@@ -178,7 +169,6 @@
       "scope": [
         "global"
       ],
-      "type": "console trace value. set to",
       "validValues": []
     }
   ],

@@ -7,7 +7,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of aborted client connections. this can be due to the client not calling mysql_close() before exiting, the client sleeping without issuing a request to the server for more seconds than specified by"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -16,7 +16,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of failed server connection attempts. this can be due to a client using an incorrect password, a client not having privileges to connect to a database, a connection packet not containing the correct information, or if it takes more than"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -25,7 +25,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of access denied errors."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -34,7 +34,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of column permissions granted (rows in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -43,7 +43,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of database permissions granted (rows in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -52,7 +52,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of function permissions granted (rows in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -60,8 +60,7 @@
       "name": "Acl_package_body_grants",
       "scope": [
         "global"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -69,8 +68,7 @@
       "name": "Acl_package_spec_grants",
       "scope": [
         "global"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -79,7 +77,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of procedure permissions granted (rows in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -88,7 +86,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of proxy permissions granted (rows in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -97,7 +95,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of role permissions granted (rows in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -106,7 +104,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of roles (rows in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -115,7 +113,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of table permissions granted (rows in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -124,7 +122,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of users (rows in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -133,7 +131,7 @@
       "scope": [
         "global"
       ],
-      "type": "cumulative time in seconds of activity on connections."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -141,8 +139,7 @@
       "name": "Bytes_received",
       "scope": [
         "global"
-      ],
-      "type": "total bytes received from all clients."
+      ]
     },
     {
       "dataType": "numeric",
@@ -151,8 +148,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "total bytes sent to all clients."
+      ]
     },
     {
       "dataType": "numeric",
@@ -162,7 +158,7 @@
         "global",
         "session"
       ],
-      "type": "number of admin commands executed. these include table dumps, change users, binary log dumps, shutdowns, pings and debugs."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -172,7 +168,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -182,7 +178,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -192,7 +188,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -202,7 +198,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -212,7 +208,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -222,7 +218,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -232,7 +228,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -242,7 +238,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -252,7 +248,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -262,7 +258,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -272,7 +268,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -282,7 +278,7 @@
         "global",
         "session"
       ],
-      "type": "number of assign to keycache commands executed."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -291,8 +287,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "removed in"
+      ]
     },
     {
       "dataType": "numeric",
@@ -302,7 +297,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -312,7 +307,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -322,7 +317,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -332,7 +327,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -342,7 +337,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -352,7 +347,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -362,7 +357,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -372,7 +367,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -382,7 +377,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -392,7 +387,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -402,7 +397,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -412,7 +407,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -421,8 +416,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -431,8 +425,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -442,7 +435,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -452,7 +445,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -462,7 +455,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -472,7 +465,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -482,7 +475,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -492,7 +485,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -502,7 +495,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -512,7 +505,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -522,7 +515,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -532,7 +525,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -542,7 +535,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -552,7 +545,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -562,7 +555,7 @@
         "global",
         "session"
       ],
-      "type": "number of multi-table"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -572,7 +565,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -582,7 +575,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -592,7 +585,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -602,7 +595,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -612,7 +605,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -621,8 +614,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -631,8 +623,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -642,7 +633,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -652,7 +643,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -662,7 +653,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -672,7 +663,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -682,7 +673,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -692,7 +683,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -702,7 +693,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -712,7 +703,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -722,7 +713,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -732,7 +723,7 @@
         "global",
         "session"
       ],
-      "type": "number of queries to the server that do not produce sql queries. an sql query simply returning no results does not increment"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -742,7 +733,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -752,7 +743,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -762,7 +753,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -772,7 +763,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -782,7 +773,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -792,7 +783,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -802,7 +793,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -812,7 +803,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -822,7 +813,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -832,7 +823,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -842,7 +833,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -852,7 +843,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -862,7 +853,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -872,7 +863,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -882,7 +873,7 @@
         "global",
         "session"
       ],
-      "type": "number of load commands executed."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -891,8 +882,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -901,8 +891,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -911,8 +900,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -922,7 +910,7 @@
         "global",
         "session"
       ],
-      "type": "number of [lock-tables|lock tables]] commands executed."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -932,7 +920,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -941,8 +929,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -952,7 +939,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -962,7 +949,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -972,7 +959,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -982,7 +969,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -992,7 +979,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1002,7 +989,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1012,7 +999,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1022,7 +1009,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1032,7 +1019,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1042,7 +1029,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1052,7 +1039,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1061,8 +1048,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -1072,7 +1058,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1082,7 +1068,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1092,7 +1078,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1102,7 +1088,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1112,7 +1098,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1122,7 +1108,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1132,7 +1118,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1142,7 +1128,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1152,7 +1138,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1162,7 +1148,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1172,7 +1158,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1182,7 +1168,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1192,7 +1178,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1202,7 +1188,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1212,7 +1198,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1221,8 +1207,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -1232,7 +1217,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1242,7 +1227,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1252,7 +1237,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1262,7 +1247,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1271,8 +1256,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -1281,8 +1265,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -1292,7 +1275,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1302,7 +1285,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1312,7 +1295,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1322,7 +1305,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1332,7 +1315,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1342,7 +1325,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1352,7 +1335,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1362,7 +1345,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1372,7 +1355,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1382,7 +1365,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1392,7 +1375,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1402,7 +1385,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1412,7 +1395,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1422,7 +1405,7 @@
         "global",
         "session"
       ],
-      "type": "number of generic"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1432,7 +1415,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1442,7 +1425,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1452,7 +1435,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1462,7 +1445,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1471,8 +1454,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -1481,8 +1463,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -1492,7 +1473,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1502,7 +1483,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1512,7 +1493,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1522,7 +1503,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1532,7 +1513,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1542,7 +1523,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1552,7 +1533,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1562,7 +1543,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1572,7 +1553,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1582,7 +1563,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1592,7 +1573,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1602,7 +1583,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1612,7 +1593,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1622,7 +1603,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1632,7 +1613,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1642,7 +1623,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1652,7 +1633,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1662,7 +1643,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1672,7 +1653,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1682,7 +1663,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1692,7 +1673,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1702,7 +1683,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1712,7 +1693,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1722,7 +1703,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1732,7 +1713,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1742,7 +1723,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1752,7 +1733,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1762,7 +1743,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1772,7 +1753,7 @@
         "global",
         "session"
       ],
-      "type": "number of multi-table"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1782,7 +1763,7 @@
         "global",
         "session"
       ],
-      "type": "number of xa statements committed."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1792,7 +1773,7 @@
         "global",
         "session"
       ],
-      "type": "number of xa statements ended."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1802,7 +1783,7 @@
         "global",
         "session"
       ],
-      "type": "number of xa statements prepared."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1812,7 +1793,7 @@
         "global",
         "session"
       ],
-      "type": "number of xa recover statements executed."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1822,7 +1803,7 @@
         "global",
         "session"
       ],
-      "type": "number of xa statements rolled back."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1832,7 +1813,7 @@
         "global",
         "session"
       ],
-      "type": "number of xa statements started."
+      "type": "integer"
     },
     {
       "dataType": "boolean",
@@ -1840,8 +1821,7 @@
       "name": "Compression",
       "scope": [
         "session"
-      ],
-      "type": "whether client-server traffic is compressed."
+      ]
     },
     {
       "dataType": "numeric",
@@ -1850,7 +1830,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of errors that occurred during calls to accept() on the listening port."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1859,7 +1839,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of refused connections due to internal server errors, for example out of memory errors, or failed thread starts."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1868,7 +1848,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of refused connections due to the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1877,7 +1857,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of errors while searching for the connecting client ip address."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1886,7 +1866,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of errors during calls to select() or poll() on the listening port. the client would not necessarily have been rejected in these cases."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1895,7 +1875,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of connections the libwrap library refused."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1904,7 +1884,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of connection attempts (both successful and unsuccessful)"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1913,8 +1893,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "total cpu time used."
+      ]
     },
     {
       "dataType": "numeric",
@@ -1924,7 +1903,7 @@
         "global",
         "session"
       ],
-      "type": "number of on-disk temporary tables created."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1933,7 +1912,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of in-memory temporary tables created."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1942,7 +1921,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of temporary tables created."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1951,7 +1930,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of errors which occurred while doing"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1960,7 +1939,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1969,7 +1948,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1978,7 +1957,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1988,7 +1967,7 @@
         "global",
         "session"
       ],
-      "type": "number of queries returning no results. note this is not the same as"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -1998,7 +1977,7 @@
         "global",
         "session"
       ],
-      "type": "number of times events created with"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2008,7 +1987,7 @@
         "global",
         "session"
       ],
-      "type": "number of times triggers created with"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2018,7 +1997,7 @@
         "global",
         "session"
       ],
-      "type": "number of times"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2028,7 +2007,7 @@
         "global",
         "session"
       ],
-      "type": "number of queries which make use of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2038,7 +2017,7 @@
         "global",
         "session"
       ],
-      "type": "number of tables opened that are using"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2048,7 +2027,7 @@
         "global",
         "session"
       ],
-      "type": "number of times the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2058,7 +2037,7 @@
         "global",
         "session"
       ],
-      "type": "number of times the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2068,7 +2047,7 @@
         "global",
         "session"
       ],
-      "type": "number of times a table with a any of the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2078,7 +2057,7 @@
         "global",
         "session"
       ],
-      "type": "number of invisible columns in all opened tables."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2088,7 +2067,7 @@
         "global",
         "session"
       ],
-      "type": "number of times json functionality has been used, such as one of the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2098,7 +2077,7 @@
         "global",
         "session"
       ],
-      "type": "number of times the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2108,7 +2087,7 @@
         "global",
         "session"
       ],
-      "type": "number of subqueries (excluding subqueries in the from clause) used."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2118,7 +2097,7 @@
         "global",
         "session"
       ],
-      "type": "number of times"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2128,7 +2107,7 @@
         "global",
         "session"
       ],
-      "type": "number of times an explicit timezone (excluding"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2138,7 +2117,7 @@
         "global",
         "session"
       ],
-      "type": "number of triggers loaded."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2148,7 +2127,7 @@
         "global",
         "session"
       ],
-      "type": "number of times"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2158,7 +2137,7 @@
         "global",
         "session"
       ],
-      "type": "number of times xml functions ("
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2167,7 +2146,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2177,7 +2156,7 @@
         "global",
         "session"
       ],
-      "type": "number of internal"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2187,7 +2166,7 @@
         "global",
         "session"
       ],
-      "type": "number of times rows have been deleted from tables. differs from"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2197,7 +2176,7 @@
         "global",
         "session"
       ],
-      "type": "discovery is when the server asks the ndbcluster storage engine if it knows about a table with a given name. handler_discover indicates the number of times that tables have been discovered in this way."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2206,8 +2185,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "incremented for each call to the external_lock() function, which generally occurs at the beginning and end of access to a table instance."
+      ]
     },
     {
       "dataType": "numeric",
@@ -2217,7 +2195,7 @@
         "global",
         "session"
       ],
-      "type": "number of times pushed index condition was checked. the smaller the ratio of handler_icp_attempts to"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2227,7 +2205,7 @@
         "global",
         "session"
       ],
-      "type": "number of times pushed index condition was matched. the smaller the ratio of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2236,8 +2214,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "counts how many mrr (multi-range read) scans were performed. see"
+      ]
     },
     {
       "dataType": "numeric",
@@ -2247,7 +2224,7 @@
         "global",
         "session"
       ],
-      "type": "number of times key buffer was refilled (not counting the initial fill). a non-zero value indicates there wasn't enough memory to do key sort-and-sweep passes in one go.  see"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2257,7 +2234,7 @@
         "global",
         "session"
       ],
-      "type": "number of times rowid buffer was refilled (not counting the initial fill). a non-zero value indicates there wasn't enough memory to do rowid sort-and-sweep passes in one go. see"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2267,7 +2244,7 @@
         "global",
         "session"
       ],
-      "type": "number of two-phase commit prepares."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2277,7 +2254,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to read the first row from an index. a high value indicates many full index scans, e.g."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2287,7 +2264,7 @@
         "global",
         "session"
       ],
-      "type": "number of row read requests based on an index value. a high value indicates indexes are regularly being used, which is usually positive."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2297,7 +2274,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to read the last row from an index."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2307,7 +2284,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to read the next row from an index (in order). increments when doing an index scan or querying an index column with a range constraint."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2317,7 +2294,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to read the previous row from an index (in order). mostly used with"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2326,7 +2303,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of read retrys triggered by semi_consistent_read (innodb feature)."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2336,7 +2313,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to read a row based on its position. if this value is high, you may not be using joins that don't use indexes properly, or be doing many full table scans."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2346,7 +2323,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to delete a row based on its position."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2356,7 +2333,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to read the next row. a large number of these may indicate many table scans and improperly used indexes."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2366,7 +2343,7 @@
         "global",
         "session"
       ],
-      "type": "number of transaction rollback requests given to a storage engine. differs from"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2376,7 +2353,7 @@
         "global",
         "session"
       ],
-      "type": "number of transaction savepoint creation requests. differs from"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2386,7 +2363,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to rollback to a transaction"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2396,7 +2373,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to delete a row in a temporary table."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2406,7 +2383,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to update a row to a temporary table."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2416,7 +2393,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to write a row to a temporary table."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2426,7 +2403,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to update a row in a table. since"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2436,7 +2413,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to write a row to a table. since"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2445,7 +2422,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of key cache blocks which have been modified but not flushed to disk."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2454,7 +2431,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of unused key cache blocks."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2463,7 +2440,7 @@
       "scope": [
         "global"
       ],
-      "type": "max number of key cache blocks which have been used simultaneously."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2472,7 +2449,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of key cache blocks in the warm list."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2481,7 +2458,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of key cache block read requests. see"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2490,7 +2467,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of physical index block reads. see"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2499,7 +2476,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of requests to write a block to the key cache."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2508,7 +2485,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of key cache block write requests"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2516,19 +2493,17 @@
       "name": "Last_query_cost",
       "scope": [
         "session"
-      ],
-      "type": "the most recent query optimizer query cost calculation. can not be calculated for complex queries, such as subqueries or union. it will be set to 0 for complex queries."
+      ]
     },
     {
       "id": "maria_",
-      "name": "Maria_*",
-      "type": "when the maria storage engine was renamed aria, the maria variables existing at the time were renamed at the same time. see"
+      "name": "Maria_*"
     },
     {
       "dataType": "numeric",
       "id": "max_statement_time_exceeded",
       "name": "Max_statement_time_exceeded",
-      "type": "number of queries that exceeded the execution time specified by"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2537,7 +2512,7 @@
       "scope": [
         "session"
       ],
-      "type": "max number of connections ever open at the same time."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2547,7 +2522,7 @@
         "global",
         "session"
       ],
-      "type": "global or per-connection memory usage, in bytes."
+      "type": "byte"
     },
     {
       "dataType": "numeric",
@@ -2555,8 +2530,7 @@
       "name": "Memory_used_initial",
       "scope": [
         "global"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -2565,7 +2539,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2574,7 +2548,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of regular files currently opened by the server. does not include sockets or pipes, or storage engines using internal functions."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2583,7 +2557,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of currently opened streams, usually log files."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2592,7 +2566,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of currently cached .frm files."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2602,7 +2576,7 @@
         "global",
         "session"
       ],
-      "type": "number of currently opened tables, excluding temporary tables."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2611,7 +2585,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of files the server has opened."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2621,7 +2595,7 @@
         "global",
         "session"
       ],
-      "type": "number of .frm files that have been cached."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2631,7 +2605,7 @@
         "global",
         "session"
       ],
-      "type": "number of tables the server has opened."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2641,7 +2615,7 @@
         "global",
         "session"
       ],
-      "type": "number of views the server has opened."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2651,7 +2625,7 @@
         "global",
         "session"
       ],
-      "type": "number of times a row could not be added to the performance schema accounts table due to it being full."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2661,7 +2635,7 @@
         "global",
         "session"
       ],
-      "type": "number of condition instruments that could not be loaded."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2671,7 +2645,7 @@
         "global",
         "session"
       ],
-      "type": "number of instances a condition object could not be created."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2680,8 +2654,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -2691,7 +2664,7 @@
         "global",
         "session"
       ],
-      "type": "number of file instruments that could not be loaded."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2701,7 +2674,7 @@
         "global",
         "session"
       ],
-      "type": "number of instances a file object could not be opened."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2711,7 +2684,7 @@
         "global",
         "session"
       ],
-      "type": "number of instances a file object could not be created."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2721,7 +2694,7 @@
         "global",
         "session"
       ],
-      "type": "number of times a row could not be added to the performance schema hosts table due to it being full."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2731,7 +2704,7 @@
         "global",
         "session"
       ],
-      "type": "number of events not recorded, due to either being recursive, or having a deeper nested events stack than the implementation limit."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2741,7 +2714,7 @@
         "global",
         "session"
       ],
-      "type": "number of mutual exclusion instruments that could not be loaded."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2751,7 +2724,7 @@
         "global",
         "session"
       ],
-      "type": "number of instances a mutual exclusion object could not be created."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2761,7 +2734,7 @@
         "global",
         "session"
       ],
-      "type": "number of read/write lock instruments that could not be loaded."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2771,7 +2744,7 @@
         "global",
         "session"
       ],
-      "type": "number of instances a read/write lock object could not be created."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2780,8 +2753,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -2791,7 +2763,7 @@
         "global",
         "session"
       ],
-      "type": "number of instances a socket object could not be created."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2801,7 +2773,7 @@
         "global",
         "session"
       ],
-      "type": "number of stage event instruments that could not be loaded."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2811,7 +2783,7 @@
         "global",
         "session"
       ],
-      "type": "number of statement instruments that could not be loaded."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2821,7 +2793,7 @@
         "global",
         "session"
       ],
-      "type": "number of instances a table object could not be opened."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2831,7 +2803,7 @@
         "global",
         "session"
       ],
-      "type": "number of instances a table object could not be created."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2841,7 +2813,7 @@
         "global",
         "session"
       ],
-      "type": "number of thread instruments that could not be loaded."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2851,7 +2823,7 @@
         "global",
         "session"
       ],
-      "type": "number of instances thread object could not be created."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2861,7 +2833,7 @@
         "global",
         "session"
       ],
-      "type": "number of times a row could not be added to the performance schema users table due to it being full."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2870,7 +2842,7 @@
       "scope": [
         "global"
       ],
-      "type": "current number of prepared statements."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2879,7 +2851,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of free"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2887,8 +2859,7 @@
       "name": "Qcache_free_memory",
       "scope": [
         "global"
-      ],
-      "type": "amount of free"
+      ]
     },
     {
       "dataType": "numeric",
@@ -2897,7 +2868,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of requests served by the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2906,7 +2877,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of queries ever cached in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2915,7 +2886,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of pruning operations performed to remove old results to make space for new results in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2924,7 +2895,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of queries that are uncacheable by the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2933,7 +2904,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of queries currently cached by the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2942,7 +2913,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of blocks used by the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2952,7 +2923,7 @@
         "global",
         "session"
       ],
-      "type": "number of statements executed by the server, excluding com_ping and com_statistics. differs from"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2962,7 +2933,7 @@
         "global",
         "session"
       ],
-      "type": "number of statements executed by the server, excluding com_ping, com_statistics, com_stmt_prepare, com_stmt_close, and com_stmt_reset statements. differs from"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2972,7 +2943,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to read a row (excluding temporary tables)."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -2981,8 +2952,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -2992,7 +2962,7 @@
         "global",
         "session"
       ],
-      "type": "number of requests to read a row in a temporary table."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3002,7 +2972,7 @@
         "global",
         "session"
       ],
-      "type": "number of joins which did not use an index. if not zero, you may need to check table indexes."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3012,7 +2982,7 @@
         "global",
         "session"
       ],
-      "type": "number of joins which used a range search of the first table."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3022,7 +2992,7 @@
         "global",
         "session"
       ],
-      "type": "number of joins which used a range on the first table."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3032,7 +3002,7 @@
         "global",
         "session"
       ],
-      "type": "number of joins without keys that check for key usage after each row. if not zero, you may need to check table indexes."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3042,7 +3012,7 @@
         "global",
         "session"
       ],
-      "type": "number of joins which used a full scan of the first table."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3052,7 +3022,7 @@
         "global",
         "session"
       ],
-      "type": "number of threads which took longer than"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3062,7 +3032,7 @@
         "global",
         "session"
       ],
-      "type": "number of queries which took longer than"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3072,7 +3042,7 @@
         "global",
         "session"
       ],
-      "type": "number of merge passes performed by the sort algorithm. if too high, you may need to look at improving your query indexes, or increasing the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3082,7 +3052,7 @@
         "global",
         "session"
       ],
-      "type": "the number of times that sorting was done through a priority queue. (the total number of times sorting was done is a sum"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3092,7 +3062,7 @@
         "global",
         "session"
       ],
-      "type": "number of sorts which used a range."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3102,7 +3072,7 @@
         "global",
         "session"
       ],
-      "type": "number of rows sorted."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3112,7 +3082,7 @@
         "global",
         "session"
       ],
-      "type": "number of sorts which used a full table scan."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3121,8 +3091,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "counter for all"
+      ]
     },
     {
       "dataType": "numeric",
@@ -3131,8 +3100,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "counter for all"
+      ]
     },
     {
       "dataType": "numeric",
@@ -3142,7 +3110,7 @@
         "global",
         "session"
       ],
-      "type": "number of times my_sync() has been called, or the number of times the server has had to force data to disk. covers the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3151,7 +3119,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of table locks which were completed immediately."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3160,35 +3128,35 @@
       "scope": [
         "global"
       ],
-      "type": "number of table locks which had to wait. indicates table lock contention."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
       "id": "table_open_cache_active_instances",
       "name": "Table_open_cache_active_instances",
       "scope": [],
-      "type": "number of active instances for open tables cache lookups."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
       "id": "table_open_cache_hits",
       "name": "Table_open_cache_hits",
       "scope": [],
-      "type": "number of hits for open tables cache lookups."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
       "id": "table_open_cache_misses",
       "name": "Table_open_cache_misses",
       "scope": [],
-      "type": "number of misses for open tables cache lookups."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
       "id": "table_open_cache_overflows",
       "name": "Table_open_cache_overflows",
       "scope": [],
-      "type": "number of overflows for open tables cache lookups."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3197,7 +3165,7 @@
       "scope": [
         "global"
       ],
-      "type": "max number of pages used by the transaction coordinator recovery log."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3206,7 +3174,7 @@
       "scope": [
         "global"
       ],
-      "type": "page size of the transaction coordinator recovery log."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3215,7 +3183,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of times a two-phase commit was forced to wait for a free transaction coordinator recovery log page."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3224,7 +3192,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of threads cached in the thread cache. will be zero if the thread pool is in use (see"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3233,7 +3201,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of open connections. see"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3242,7 +3210,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of threads created to respond to client connections. if too large, look at increasing"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3251,7 +3219,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of threads that are actively running, not sleeping. until"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3260,7 +3228,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of updates that required a full table scan."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3269,7 +3237,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of seconds the server has been running."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3278,7 +3246,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of seconds since the last"
+      "type": "integer"
     }
   ],
   "name": "server-status-variables",

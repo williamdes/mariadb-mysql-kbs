@@ -279,8 +279,7 @@
       "id": "sysvar_innodb_buffer_pool_chunk_size",
       "name": "innodb_buffer_pool_chunk_size",
       "range": {
-        "from": 1048576,
-        "to": null
+        "from": 1048576
       },
       "scope": [
         "global"
@@ -1196,8 +1195,7 @@
       "id": "sysvar_innodb_log_write_ahead_size",
       "name": "innodb_log_write_ahead_size",
       "range": {
-        "from": 512,
-        "to": null
+        "from": 512
       },
       "scope": [
         "global"

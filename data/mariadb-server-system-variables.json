@@ -11,7 +11,6 @@
         "global",
         "session"
       ],
-      "type": "the implied",
       "validValues": [
         "DEFAULT",
         "COPY",
@@ -30,8 +29,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to 1, the default, all queries are committed immediately. the"
+      ]
     },
     {
       "cli": "--automatic-sp-privileges, --skip-automatic-sp-privileges",
@@ -42,8 +40,7 @@
       "name": "automatic_sp_privileges",
       "scope": [
         "global"
-      ],
-      "type": "when set to 1, the default, when a stored routine is created, the creator is automatically granted permission to"
+      ]
     },
     {
       "cli": "--back-log=#",
@@ -52,8 +49,7 @@
       "name": "back_log",
       "scope": [
         "global"
-      ],
-      "type": "number"
+      ]
     },
     {
       "cli": "--basedir=path or -b path",
@@ -75,8 +71,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "old variable, which if set to 1, allows large result sets by saving all temporary sets to disk, avoiding 'table full' errors. no longer needed, as the server now handles this automatically."
+      ]
     },
     {
       "cli": "--bind-address=addr",
@@ -87,7 +82,6 @@
       "scope": [
         "global"
       ],
-      "type": "by default, the mariadb server listens for tcp/ip connections on a network socket bound to a single address, 0.0.0.0. you can specify an alternative when the server starts using this option; either a host name, an ipv4 or an ipv6 address. in debian and ubuntu, the default bind_address is 127.0.0.1, which binds the server to listen on localhost only. has always been available as a",
       "validValues": []
     },
     {
@@ -101,7 +95,7 @@
         "global",
         "session"
       ],
-      "type": "size in bytes of the per-thread cache tree used to speed up bulk inserts into"
+      "type": "byte"
     },
     {
       "dataType": "string",
@@ -112,8 +106,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "determines the"
+      ]
     },
     {
       "dataType": "string",
@@ -124,8 +117,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "string",
@@ -136,8 +128,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "--character-set-filesystem=name",
@@ -149,8 +140,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "the"
+      ]
     },
     {
       "dataType": "string",
@@ -161,8 +151,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "--character-set-server",
@@ -174,8 +163,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "default"
+      ]
     },
     {
       "dataType": "string",
@@ -185,8 +173,7 @@
       "name": "character_set_system",
       "scope": [
         "global"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "--character-sets-dir=path",
@@ -217,8 +204,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "collation used for the connection"
+      ]
     },
     {
       "dataType": "string",
@@ -228,8 +214,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "--collation-server=name",
@@ -241,8 +226,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "default"
+      ]
     },
     {
       "cli": "--completion-type=name",
@@ -255,7 +239,6 @@
         "global",
         "session"
       ],
-      "type": "the transaction completion type. if set to",
       "validValues": [
         "0",
         "1",
@@ -275,7 +258,6 @@
       "scope": [
         "global"
       ],
-      "type": "if set to",
       "validValues": [
         "0",
         "1",
@@ -308,13 +290,11 @@
     },
     {
       "id": "date_format",
-      "name": "date_format",
-      "type": "unused."
+      "name": "date_format"
     },
     {
       "id": "datetime_format",
-      "name": "datetime_format",
-      "type": "unused."
+      "name": "datetime_format"
     },
     {
       "cli": "--debug[=debug_options]",
@@ -326,8 +306,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "used in debugging to write to a trace file. mariadb needs to be configured with -swith_debug=1 to enable this option."
+      ]
     },
     {
       "cli": "--debug-no-thead-alarm=#",
@@ -338,8 +317,7 @@
       "name": "debug_no_thread_alarm",
       "scope": [
         "global"
-      ],
-      "type": "disable system thread alarm calls. disabling it may be useful in debugging or testing, never do it in production."
+      ]
     },
     {
       "dataType": "string",
@@ -349,13 +327,11 @@
       "name": "debug_sync",
       "scope": [
         "session"
-      ],
-      "type": "used in debugging to show the interface to the"
+      ]
     },
     {
       "id": "default_regex_flags",
-      "name": "default_regex_flags",
-      "type": "introduced to address remaining incompatibilities between"
+      "name": "default_regex_flags"
     },
     {
       "cli": "--default-storage-engine=name",
@@ -377,8 +353,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "a synonym for"
+      ]
     },
     {
       "cli": "--default-tmp-storage-engine=name",
@@ -389,8 +364,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "default storage engine that will be used for tables created with"
+      ]
     },
     {
       "cli": "--default-week-format=#",
@@ -406,8 +380,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "default mode for the"
+      ]
     },
     {
       "cli": "--delay-key-write[=name]",
@@ -419,7 +392,6 @@
       "scope": [
         "global"
       ],
-      "type": "specifies how myisam tables handles",
       "validValues": [
         "ON",
         "OFF",
@@ -439,8 +411,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "after this many rows have been inserted with"
+      ]
     },
     {
       "cli": "--delayed-insert-timeout=#",
@@ -452,7 +423,7 @@
       "scope": [
         "global"
       ],
-      "type": "time in seconds that the"
+      "type": "integer"
     },
     {
       "cli": "--delayed-queue-size=#",
@@ -484,7 +455,7 @@
         "global",
         "session"
       ],
-      "type": "number of digits to be returned after the decimal point in division operations. by default"
+      "type": "integer"
     },
     {
       "cli": "--encrypt-tmp-disk-tables[={0|1}]",
@@ -495,8 +466,7 @@
       "name": "encrypt_tmp_disk_tables",
       "scope": [
         "global"
-      ],
-      "type": "encrypt tmp disk tables (created as part of query execution). see"
+      ]
     },
     {
       "cli": "--encrypt-tmp-files[={0|1}]",
@@ -507,8 +477,7 @@
       "name": "encrypt_tmp_files",
       "scope": [
         "global"
-      ],
-      "type": "encrypt temporary files (created for filesort, binary log cache, etc). see"
+      ]
     },
     {
       "cli": "--encryption-algorithm=value",
@@ -520,7 +489,6 @@
       "scope": [
         "global"
       ],
-      "type": "which encryption algorithm to use for table encryption.",
       "validValues": [
         "none",
         "aes_ecb",
@@ -537,8 +505,7 @@
       "name": "enforce_storage_engine",
       "scope": [
         "session"
-      ],
-      "type": "force the use of a particular storage engine for new tables. used to avoid unwanted creation of tables using another engine. for example, setting to"
+      ]
     },
     {
       "cli": "--engine-condition-pushdown",
@@ -549,8 +516,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "deprecated in"
+      ]
     },
     {
       "dataType": "numeric",
@@ -560,7 +526,7 @@
       "scope": [
         "session"
       ],
-      "type": "read-only variable denoting the number of errors from the most recent statement in the current session that generated errors. see"
+      "type": "integer"
     },
     {
       "cli": "--event-scheduler[=value]",
@@ -572,7 +538,6 @@
       "scope": [
         "global"
       ],
-      "type": "status of the",
       "validValues": [
         "ON",
         "1",
@@ -596,7 +561,7 @@
         "global",
         "session"
       ],
-      "type": "number of rows to be examined for a query to be considered expensive, that is, maximum number of rows a subquery may examine in order to be executed during optimization and used for constant optimization."
+      "type": "integer"
     },
     {
       "cli": "--explicit-defaults-for-timestamp=[={0|1}]",
@@ -607,8 +572,7 @@
       "name": "explicit_defaults_for_timestamp",
       "scope": [
         "global"
-      ],
-      "type": "this option causes"
+      ]
     },
     {
       "dataType": "string",
@@ -618,8 +582,7 @@
       "name": "external_user",
       "scope": [
         "session"
-      ],
-      "type": "external user name set by the plugin used to authenticate the client."
+      ]
     },
     {
       "cli": "--flush",
@@ -630,8 +593,7 @@
       "name": "flush",
       "scope": [
         "global"
-      ],
-      "type": "usually, mariadb writes changes to disk after each sql statement, and the operating system handles synchronizing (flushing) it to disk. if set to"
+      ]
     },
     {
       "cli": "--flush_time=#",
@@ -643,7 +605,7 @@
       "scope": [
         "global"
       ],
-      "type": "interval in seconds that tables are closed to synchronize (flush) data to disk and free up resources. if set to 0, the default, there is no automatic synchronizing tables and closing of tables. this option should not be necessary on systems with sufficient resources."
+      "type": "integer"
     },
     {
       "cli": "none",
@@ -655,8 +617,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to 1 (the default)"
+      ]
     },
     {
       "cli": "--ft-boolean-syntax=name",
@@ -667,8 +628,7 @@
       "name": "ft_boolean_syntax",
       "scope": [
         "global"
-      ],
-      "type": "list of operators supported by an in boolean mode"
+      ]
     },
     {
       "cli": "--ft-max-word-len=#",
@@ -679,8 +639,7 @@
       "name": "ft_max_word_len",
       "scope": [
         "global"
-      ],
-      "type": "maximum length for a word to be included in the"
+      ]
     },
     {
       "cli": "--ft-min-word-len=#",
@@ -691,8 +650,7 @@
       "name": "ft_min_word_len",
       "scope": [
         "global"
-      ],
-      "type": "minimum length for a word to be included in the"
+      ]
     },
     {
       "cli": "--ft-query-expansion-limit=#",
@@ -707,8 +665,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "for"
+      ]
     },
     {
       "cli": "--ft-stopword-file=file_name",
@@ -719,8 +676,7 @@
       "name": "ft_stopword_file",
       "scope": [
         "global"
-      ],
-      "type": "file containing a list of"
+      ]
     },
     {
       "cli": "--general-log",
@@ -731,8 +687,7 @@
       "name": "general_log",
       "scope": [
         "global"
-      ],
-      "type": "if set to 0, the default unless the --general-log option is used, the"
+      ]
     },
     {
       "cli": "--general-log-file=file_name",
@@ -743,8 +698,7 @@
       "name": "general_log_file",
       "scope": [
         "global"
-      ],
-      "type": "name of the"
+      ]
     },
     {
       "cli": "--group-concat-max-len=#",
@@ -756,7 +710,7 @@
         "global",
         "session"
       ],
-      "type": "maximum length in bytes of the returned result for a"
+      "type": "byte"
     },
     {
       "dynamic": false,
@@ -764,8 +718,7 @@
       "name": "have_compress",
       "scope": [
         "global"
-      ],
-      "type": "if the zlib compression library is accessible to the server, this will be set to"
+      ]
     },
     {
       "dynamic": false,
@@ -773,8 +726,7 @@
       "name": "have_crypt",
       "scope": [
         "global"
-      ],
-      "type": "if the crypt() system call is available this variable will be set to"
+      ]
     },
     {
       "dynamic": false,
@@ -782,8 +734,7 @@
       "name": "have_csv",
       "scope": [
         "global"
-      ],
-      "type": "if the server supports"
+      ]
     },
     {
       "dynamic": false,
@@ -791,8 +742,7 @@
       "name": "have_dynamic_loading",
       "scope": [
         "global"
-      ],
-      "type": "if the server supports dynamic loading of"
+      ]
     },
     {
       "dynamic": false,
@@ -800,8 +750,7 @@
       "name": "have_geometry",
       "scope": [
         "global"
-      ],
-      "type": "if the server supports spatial data types, will be set to"
+      ]
     },
     {
       "dynamic": false,
@@ -809,8 +758,7 @@
       "name": "have_ndbcluster",
       "scope": [
         "global"
-      ],
-      "type": "if the server supports ndbcluster ("
+      ]
     },
     {
       "dynamic": false,
@@ -818,8 +766,7 @@
       "name": "have_partitioning",
       "scope": [
         "global"
-      ],
-      "type": "if the server supports partitioning, will be set to"
+      ]
     },
     {
       "dynamic": false,
@@ -827,8 +774,7 @@
       "name": "have_profiling",
       "scope": [
         "global"
-      ],
-      "type": "if statement profiling is available, will be set to"
+      ]
     },
     {
       "dynamic": false,
@@ -836,8 +782,7 @@
       "name": "have_query_cache",
       "scope": [
         "global"
-      ],
-      "type": "if the server supports the"
+      ]
     },
     {
       "dynamic": false,
@@ -845,8 +790,7 @@
       "name": "have_rtree_keys",
       "scope": [
         "global"
-      ],
-      "type": "if rtree indexes (used for"
+      ]
     },
     {
       "dynamic": false,
@@ -854,8 +798,7 @@
       "name": "have_symlink",
       "scope": [
         "global"
-      ],
-      "type": "if symbolic link support is enabled, will be set to"
+      ]
     },
     {
       "cli": "--histogram-size=#",
@@ -872,7 +815,7 @@
         "global",
         "session"
       ],
-      "type": "number of bytes used for a"
+      "type": "byte"
     },
     {
       "cli": "--histogram-type=value",
@@ -885,7 +828,6 @@
         "global",
         "session"
       ],
-      "type": "specifies the type of",
       "validValues": [
         "SINGLE_PREC_HB",
         "DOUBLE_PREC_HB"
@@ -905,7 +847,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of host names that will be cached to avoid resolving. setting to"
+      "type": "integer"
     },
     {
       "dataType": "string",
@@ -914,13 +856,11 @@
       "name": "hostname",
       "scope": [
         "global"
-      ],
-      "type": "when the server starts, this variable is set to the server host name."
+      ]
     },
     {
       "id": "identity",
-      "name": "identity",
-      "type": "a synonym for"
+      "name": "identity"
     },
     {
       "dataType": "numeric",
@@ -936,7 +876,7 @@
         "global",
         "session"
       ],
-      "type": "time in seconds that the server waits for idle read-only transactions before killing the connection. if set to"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -952,7 +892,7 @@
         "global",
         "session"
       ],
-      "type": "time in seconds that the server waits for idle transactions before killing the connection. if set to"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -968,7 +908,7 @@
         "global",
         "session"
       ],
-      "type": "time in seconds that the server waits for idle read-write transactions before killing the connection. if set to"
+      "type": "integer"
     },
     {
       "dataType": "string",
@@ -977,8 +917,7 @@
       "name": "ignore_db_dirs",
       "scope": [
         "global"
-      ],
-      "type": "comma-delimited list of directories in the data directory that are not considered as database directories. set from"
+      ]
     },
     {
       "cli": "no",
@@ -989,8 +928,7 @@
       "name": "in_transaction",
       "scope": [
         "session"
-      ],
-      "type": "session-only and read-only variable that is set to"
+      ]
     },
     {
       "cli": "--init-connect=name",
@@ -1000,8 +938,7 @@
       "name": "init_connect",
       "scope": [
         "global"
-      ],
-      "type": "string containing one or more sql statements, separated by semicolons, that will be executed by the server for each client connecting. if there's a syntax error in the one of the statements, the client will fail to connect. for this reason, the statements are not executed for users with the super privilege, who can then still connect and correct the error. see also"
+      ]
     },
     {
       "cli": "init-file=file_name",
@@ -1011,8 +948,7 @@
       "name": "init_file",
       "scope": [
         "global"
-      ],
-      "type": "name of a file containing sql statements that will be executed by the server on startup. each statement should be on a new line, and end with a semicolon. see also"
+      ]
     },
     {
       "dataType": "numeric",
@@ -1021,8 +957,7 @@
       "name": "insert_id",
       "scope": [
         "session"
-      ],
-      "type": "value to be used for the next statement inserting a new"
+      ]
     },
     {
       "cli": "--interactive-timeout=#",
@@ -1035,7 +970,7 @@
         "global",
         "session"
       ],
-      "type": "time in seconds that the server waits for an interactive connection (one that connects with the mysql_real_connect() client_interactive option) to become active before closing it. see also"
+      "type": "integer"
     },
     {
       "cli": "--join-buffer-size=#",
@@ -1048,7 +983,7 @@
         "global",
         "session"
       ],
-      "type": "minimum size in bytes of the buffer used for queries that cannot use an index, and instead perform a full table scan. increase to get faster full joins when adding indexes is not possible, although be aware of memory issues, since joins will always allocate the minimum size. best left low globally and set high in sessions that require large full joins. in 64-bit platforms, windows truncates values above 4gb to 4gb with a warning."
+      "type": "byte"
     },
     {
       "cli": "--join-buffer-space-limit=#",
@@ -1065,7 +1000,7 @@
         "global",
         "session"
       ],
-      "type": "maximum size in bytes of the query buffer, by default 1024*128*10. see"
+      "type": "byte"
     },
     {
       "cli": "--join-cache-level=#",
@@ -1081,8 +1016,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "controls which of the eight block-based algorithms can be used for join operations. see"
+      ]
     },
     {
       "cli": "--keep-files-on-create=#",
@@ -1094,8 +1028,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if a"
+      ]
     },
     {
       "cli": "--language=name, -l",
@@ -1106,8 +1039,7 @@
       "name": "language",
       "scope": [
         "global"
-      ],
-      "type": "language to use for the server error messages. either just the language name, or the directory where the error messages are stored. an alternative is to use"
+      ]
     },
     {
       "dynamic": false,
@@ -1115,8 +1047,7 @@
       "name": "large_files_support",
       "scope": [
         "global"
-      ],
-      "type": "on if the server if was compiled with large file support or not, else off"
+      ]
     },
     {
       "dataType": "numeric",
@@ -1126,7 +1057,7 @@
       "scope": [
         "global"
       ],
-      "type": "indicates the size of memory page if large page support (linux only) is enabled. the page size is determined from the hugepagesize setting in"
+      "type": "integer"
     },
     {
       "cli": "--large-pages, --skip-large-pages",
@@ -1137,8 +1068,7 @@
       "name": "large_pages",
       "scope": [
         "global"
-      ],
-      "type": "indicates whether large page support (linux only - called huge pages) is used.  this is set with"
+      ]
     },
     {
       "dataType": "numeric",
@@ -1147,8 +1077,7 @@
       "name": "last_insert_id",
       "scope": [
         "session"
-      ],
-      "type": "contains the same value as that returned by"
+      ]
     },
     {
       "cli": "--lc-messages=name",
@@ -1160,8 +1089,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "--lc-messages-dir=path",
@@ -1171,8 +1099,7 @@
       "name": "lc_messages_dir",
       "scope": [
         "global"
-      ],
-      "type": "directory where the error messages are located. together with"
+      ]
     },
     {
       "cli": "--lc-time-names=name",
@@ -1184,8 +1111,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "the locale that determines the language used for the date and time functions"
+      ]
     },
     {
       "dataType": "string",
@@ -1194,8 +1120,7 @@
       "name": "license",
       "scope": [
         "global"
-      ],
-      "type": "server license, for example"
+      ]
     },
     {
       "cli": "--local-infile=#",
@@ -1206,8 +1131,7 @@
       "name": "local_infile",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--lock-wait-timeout=#",
@@ -1215,14 +1139,12 @@
       "dynamic": true,
       "id": "lock_wait_timeout",
       "name": "lock_wait_timeout",
-      "range": {
-        "from": null
-      },
+      "range": {},
       "scope": [
         "global",
         "session"
       ],
-      "type": "timeout in seconds for attempts to acquire"
+      "type": "integer"
     },
     {
       "cli": "--memlock",
@@ -1233,8 +1155,7 @@
       "name": "locked_in_memory",
       "scope": [
         "global"
-      ],
-      "type": "indicates whether --memlock was used to lock mysqld in memory."
+      ]
     },
     {
       "cli": "-l [filename] or --log[=filename]",
@@ -1245,8 +1166,7 @@
       "name": "log",
       "scope": [
         "global"
-      ],
-      "type": "deprecated and removed in"
+      ]
     },
     {
       "cli": "--log-disabled_statements=value",
@@ -1257,8 +1177,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set, the specified type of statements (slave or stored procedure statements) will not be logged to the"
+      ]
     },
     {
       "cli": "--log-error[=name]",
@@ -1268,8 +1187,7 @@
       "name": "log_error",
       "scope": [
         "global"
-      ],
-      "type": "specifies the name of the"
+      ]
     },
     {
       "cli": "--log-output=name",
@@ -1281,7 +1199,6 @@
       "scope": [
         "global"
       ],
-      "type": "how the output for the",
       "validValues": [
         "TABLE",
         "FILE",
@@ -1298,7 +1215,7 @@
       "scope": [
         "global"
       ],
-      "type": "queries that don't use an index, or that perform a  full index scan where the index doesn't limit the number of rows, will be logged to the"
+      "type": "integer"
     },
     {
       "cli": "--log-slow-admin-statements",
@@ -1308,8 +1225,7 @@
       "name": "log_slow_admin_statements",
       "scope": [
         "global"
-      ],
-      "type": "log slow"
+      ]
     },
     {
       "cli": "--log-slow-disabled_statements=value",
@@ -1321,8 +1237,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set, the specified type of statements will not be logged to the"
+      ]
     },
     {
       "cli": "log-slow-filter=value1[,value2...]",
@@ -1334,7 +1249,6 @@
         "global",
         "session"
       ],
-      "type": "comma-delimited string containing one or more settings for filtering what is logged to the",
       "validValues": [
         "admin",
         "filesort",
@@ -1357,8 +1271,7 @@
       "name": "log_slow_queries",
       "scope": [
         "global"
-      ],
-      "type": "deprecated and removed in"
+      ]
     },
     {
       "cli": "log-slow-rate-limit=#",
@@ -1374,8 +1287,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "the"
+      ]
     },
     {
       "cli": "log-slow-verbosity=value1[,value2...]",
@@ -1387,7 +1299,6 @@
         "global",
         "session"
       ],
-      "type": "controls information to be added to the",
       "validValues": [
         "query_plan",
         "innodb",
@@ -1408,7 +1319,7 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes of the transaction coordinator log, defined in multiples of 4096. always available as a commandline option, but added as a variable in"
+      "type": "byte"
     },
     {
       "cli": "-w [level] or --log-warnings[=level]",
@@ -1423,8 +1334,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--long-query-time=#",
@@ -1440,8 +1350,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if a query takes longer than this many seconds to execute (microseconds can be specified too), the"
+      ]
     },
     {
       "cli": "--low-priority-updates",
@@ -1453,8 +1362,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to 1 (0 is the default), for"
+      ]
     },
     {
       "dataType": "boolean",
@@ -1464,8 +1372,7 @@
       "name": "lower_case_file_system",
       "scope": [
         "global"
-      ],
-      "type": "read-only variable describing whether the file system is case-sensitive. if set to"
+      ]
     },
     {
       "cli": "--lower-case-table-names[=#]",
@@ -1480,8 +1387,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--max-allowed-packet=#",
@@ -1496,7 +1402,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum size in bytes of a packet or a generated/intermediate string. the packet message buffer is initialized with the value from"
+      "type": "byte"
     },
     {
       "cli": "--max-connect-errors=#",
@@ -1508,7 +1414,7 @@
       "scope": [
         "global"
       ],
-      "type": "limit to the number of successive failed connects from a host before the host is blocked from making further connections. the count for a host is reset to zero if they successfully connect. to unblock, flush the host cache with a"
+      "type": "integer"
     },
     {
       "cli": "--max-connections=#",
@@ -1524,7 +1430,7 @@
       "scope": [
         "global"
       ],
-      "type": "the maximum number of simultaneous client connections. see also"
+      "type": "integer"
     },
     {
       "cli": "--max-delayed-threads=#",
@@ -1541,7 +1447,7 @@
         "global",
         "session"
       ],
-      "type": "limits to the number of"
+      "type": "integer"
     },
     {
       "cli": "--max-digest-length=#",
@@ -1556,8 +1462,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "maximum length considered for computing a statement digest, such as used by the"
+      ]
     },
     {
       "cli": "--max-error-count=#",
@@ -1574,7 +1479,7 @@
         "global",
         "session"
       ],
-      "type": "specifies the maximum number of messages stored for display by"
+      "type": "integer"
     },
     {
       "cli": "--max-heap-table-size=#",
@@ -1587,12 +1492,11 @@
         "global",
         "session"
       ],
-      "type": "maximum size in bytes for user-created"
+      "type": "byte"
     },
     {
       "id": "max_insert_delayed_threads",
-      "name": "max_insert_delayed_threads",
-      "type": "synonym for"
+      "name": "max_insert_delayed_threads"
     },
     {
       "cli": "--max-join-size=#",
@@ -1609,7 +1513,7 @@
         "global",
         "session"
       ],
-      "type": "statements will not be performed if they are likely to need to examine more than this number of rows, row combinations or do more disk seeks. can prevent poorly-formatted queries from taking server resources. changing this value to anything other the default will reset"
+      "type": "integer"
     },
     {
       "cli": "--max-length-for-sort-data=#",
@@ -1626,7 +1530,7 @@
         "global",
         "session"
       ],
-      "type": "used to decide which algorithm to choose when sorting rows. if the total size of the column data, not including columns that are part of the sort, is less than"
+      "type": "integer"
     },
     {
       "cli": "--max-long-data-size=#",
@@ -1640,8 +1544,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "maximum size for parameter values sent with mysql_stmt_send_long_data(). if not set, will default to the value of"
+      ]
     },
     {
       "cli": "--max-prepared-stmt-count=#",
@@ -1657,7 +1560,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum number of prepared statements on the server. can help prevent certain forms of denial-of-service attacks. if set to"
+      "type": "integer"
     },
     {
       "cli": "--max-recursive-iterations=#",
@@ -1674,7 +1577,7 @@
         "global",
         "session"
       ],
-      "type": "maximum number of iterations when executing recursive queries."
+      "type": "integer"
     },
     {
       "cli": "--max-seeks-for-key=#",
@@ -1690,8 +1593,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "the optimizer assumes that the number specified here is the most key seeks required when searching with an index, regardless of the actual index cardinality. if this value is set lower than its default and maximum, indexes will tend to be preferred over table scans."
+      ]
     },
     {
       "cli": "--max-session-mem-used=#",
@@ -1707,8 +1609,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "amount of memory a single user session is allowed to allocate. this limits the value of the session variable mem_used."
+      ]
     },
     {
       "cli": "--max-sort-length=#",
@@ -1725,7 +1626,7 @@
         "global",
         "session"
       ],
-      "type": "maximum size in bytes used for sorting data values - anything exceeding this is ignored."
+      "type": "byte"
     },
     {
       "cli": "--max-sp-recursion-depth[=#]",
@@ -1742,7 +1643,7 @@
         "global",
         "session"
       ],
-      "type": "permitted number of recursive calls for a"
+      "type": "integer"
     },
     {
       "cli": "--max-statement-time[=#]",
@@ -1759,12 +1660,11 @@
         "global",
         "session"
       ],
-      "type": "maximum time in seconds that a query can execute before being aborted. this includes all queries, not just"
+      "type": "integer"
     },
     {
       "id": "max_tmp_tables",
-      "name": "max_tmp_tables",
-      "type": "unused."
+      "name": "max_tmp_tables"
     },
     {
       "cli": "--max-user-connections=#",
@@ -1780,8 +1680,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "maximum simultaneous connections permitted for each user account.  when set to"
+      ]
     },
     {
       "cli": "--max-write-lock-count=#",
@@ -1796,8 +1695,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "read lock requests will be permitted for processing after this many write locks. applies only to storage engines that use table level locks (thr_lock), so no effect with"
+      ]
     },
     {
       "cli": "--metadata-locks-cache-size=#",
@@ -1813,7 +1711,7 @@
       "scope": [
         "global"
       ],
-      "type": "size of the metadata locks cache, used for reducing the need to create and destroy synchronization objects. it is particularly helpful on systems where this process is inefficient, such as windows xp."
+      "type": "integer"
     },
     {
       "cli": "--metadata-locks-hash-instances=#",
@@ -1829,7 +1727,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of hashes used by the set of metadata locks. the metadata locks are partitioned into separate hashes in order to reduce contention."
+      "type": "integer"
     },
     {
       "cli": "--min-examined-row-limit=#",
@@ -1846,7 +1744,7 @@
         "global",
         "session"
       ],
-      "type": "if a query examines more than this number of rows, it is logged to the"
+      "type": "integer"
     },
     {
       "cli": "--mrr-buffer-size=#",
@@ -1859,13 +1757,12 @@
         "global",
         "session"
       ],
-      "type": "size of buffer to use when using multi-range read with range access. see"
+      "type": "integer"
     },
     {
       "default": "256",
       "id": "multi_range_count",
-      "name": "multi_range_count",
-      "type": "deprecated in 5.1 and ignored from"
+      "name": "multi_range_count"
     },
     {
       "cli": "--mysql56-temporal-format",
@@ -1876,8 +1773,7 @@
       "name": "mysql56_temporal_format",
       "scope": [
         "global"
-      ],
-      "type": "if set (the default), mariadb uses the mysql 5.6 low level formats for"
+      ]
     },
     {
       "cli": "--enable-named-pipe",
@@ -1888,8 +1784,7 @@
       "name": "named_pipe",
       "scope": [
         "global"
-      ],
-      "type": "on windows systems, determines whether connections over named pipes are permitted."
+      ]
     },
     {
       "cli": "--net-buffer-length=#",
@@ -1906,7 +1801,7 @@
         "global",
         "session"
       ],
-      "type": "the starting size, in bytes, for the connection and thread buffers for each client thread. the size can grow to"
+      "type": "byte"
     },
     {
       "cli": "--net-read-timeout=#",
@@ -1923,7 +1818,7 @@
         "global",
         "session"
       ],
-      "type": "time in seconds the server will wait for a client connection to send more data before aborting the read. see also"
+      "type": "integer"
     },
     {
       "cli": "--net-retry-count=#",
@@ -1939,8 +1834,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "permit this many retries before aborting when attempting to read or write on a communication port. on freebsd systems should be set higher as threads are sent internal interrupts.."
+      ]
     },
     {
       "cli": "--net-write-timeout=#",
@@ -1957,7 +1851,7 @@
         "global",
         "session"
       ],
-      "type": "time in seconds to wait on writing a block to a connection before aborting the write. see also"
+      "type": "integer"
     },
     {
       "cli": "--old",
@@ -1969,8 +1863,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "disabled by default, enabling it reverts index hints to those used before mysql 5.1.17. enabling may lead to replication errors. being replaced by"
+      ]
     },
     {
       "cli": "--old-alter-table",
@@ -1983,7 +1876,6 @@
         "global",
         "session"
       ],
-      "type": "from",
       "validValues": []
     },
     {
@@ -1997,7 +1889,6 @@
         "global",
         "session"
       ],
-      "type": "used for getting mariadb to emulate behavior from an old version of mysql or mariadb. see",
       "validValues": []
     },
     {
@@ -2009,13 +1900,12 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "id": "open_files_limit",
       "name": "open_files_limit",
-      "type": "the number of file descriptors available to mysqld. increase if you are getting the"
+      "type": "integer"
     },
     {
       "cli": "--optimizer-prune-level[=#]",
@@ -2027,8 +1917,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--optimizer-search-depth[=#]",
@@ -2044,8 +1933,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "maximum search depth by the query optimizer. smaller values lead to less time spent on execution plans, but potentially less optimal results. if set to"
+      ]
     },
     {
       "cli": "optimizer-selectivity-sampling-limit[=#]",
@@ -2062,7 +1950,7 @@
         "global",
         "session"
       ],
-      "type": "controls number of record samples to check condition selectivity"
+      "type": "integer"
     },
     {
       "cli": "--optimizer-switch=value",
@@ -2074,7 +1962,6 @@
         "global",
         "session"
       ],
-      "type": "a series of flags for controlling the query optimizer. see",
       "validValues": []
     },
     {
@@ -2091,8 +1978,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "controls which statistics can be used by the optimizer when looking for\nthe best query execution plan."
+      ]
     },
     {
       "cli": "<<code>>--pam-use-cleartext-plugin</code>>",
@@ -2103,8 +1989,7 @@
       "name": "pam_use_cleartext_plugin",
       "scope": [
         "global"
-      ],
-      "type": "use mysql_cleartext_plugin on the client side instead of the dialog plugin. this may be needed for compatibility reasons, but it only supports simple pam policies that don't require anything besides a password. see"
+      ]
     },
     {
       "cli": "--pid-file=file_name",
@@ -2114,8 +1999,7 @@
       "name": "pid_file",
       "scope": [
         "global"
-      ],
-      "type": "full path of the process id file."
+      ]
     },
     {
       "cli": "--plugin-dir=path",
@@ -2126,8 +2010,7 @@
       "name": "plugin_dir",
       "scope": [
         "global"
-      ],
-      "type": "path to the"
+      ]
     },
     {
       "cli": "--plugin-maturity=level",
@@ -2138,7 +2021,6 @@
       "scope": [
         "global"
       ],
-      "type": "enum",
       "validValues": [
         "unknown",
         "experimental",
@@ -2161,8 +2043,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "port to listen for tcp/ip connections. if set to"
+      ]
     },
     {
       "cli": "--preload-buffer-size=#",
@@ -2179,7 +2060,7 @@
         "global",
         "session"
       ],
-      "type": "size in bytes of the buffer allocated when indexes are preloaded."
+      "type": "byte"
     },
     {
       "dataType": "boolean",
@@ -2190,8 +2071,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--profiling-history-size=#",
@@ -2208,7 +2088,7 @@
         "global",
         "session"
       ],
-      "type": "number of statements about which profiling information is maintained. if set to"
+      "type": "integer"
     },
     {
       "cli": "--progress-report-time=#",
@@ -2225,7 +2105,7 @@
         "global",
         "session"
       ],
-      "type": "time in seconds between sending"
+      "type": "integer"
     },
     {
       "cli": "none",
@@ -2240,8 +2120,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "the version of the client/server protocol used by the mariadb server."
+      ]
     },
     {
       "cli": "--proxy-protocol-networks=value",
@@ -2251,8 +2130,7 @@
       "name": "proxy_protocol_networks",
       "scope": [
         "global"
-      ],
-      "type": "enable"
+      ]
     },
     {
       "dataType": "string",
@@ -2261,8 +2139,7 @@
       "name": "proxy_user",
       "scope": [
         "session"
-      ],
-      "type": "set to the proxy user account name if the current client is a proxy, else"
+      ]
     },
     {
       "dataType": "numeric",
@@ -2272,8 +2149,7 @@
       "name": "pseudo_slave_mode",
       "scope": [
         "session"
-      ],
-      "type": "for internal use by the server."
+      ]
     },
     {
       "dataType": "numeric",
@@ -2282,8 +2158,7 @@
       "name": "pseudo_thread_id",
       "scope": [
         "session"
-      ],
-      "type": "for internal use only."
+      ]
     },
     {
       "cli": "--query-alloc-block-size=#",
@@ -2300,7 +2175,7 @@
         "global",
         "session"
       ],
-      "type": "size in bytes of the extra blocks allocated during query parsing and execution (after"
+      "type": "byte"
     },
     {
       "cli": "--query-cache-limit=#",
@@ -2316,7 +2191,7 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes for which results larger than this are not stored in the"
+      "type": "byte"
     },
     {
       "cli": "--query-cache-min-res-unit=#",
@@ -2332,7 +2207,7 @@
       "scope": [
         "global"
       ],
-      "type": "minimum size in bytes of the blocks allocated for"
+      "type": "byte"
     },
     {
       "cli": "--query-cache-size=#",
@@ -2344,7 +2219,7 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes available to the",
+      "type": "byte",
       "validValues": [
         "0"
       ]
@@ -2358,8 +2233,7 @@
       "name": "query_cache_strip_comments",
       "scope": [
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--query-cache-type=#",
@@ -2372,7 +2246,6 @@
         "global",
         "session"
       ],
-      "type": "if set to",
       "validValues": [
         "0",
         "OFF",
@@ -2392,8 +2265,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--query-prealloc-size=#",
@@ -2410,17 +2282,15 @@
         "global",
         "session"
       ],
-      "type": "size in bytes of the persistent buffer for query parsing and execution, allocated on connect and freed on disconnect. increasing may be useful if complex queries are being run, as this will reduce the need for more memory allocations during query operation. see also"
+      "type": "byte"
     },
     {
       "id": "rand_seed1",
-      "name": "rand_seed1",
-      "type": "rand_seed1 and rand_seed2 facilitate replication of the"
+      "name": "rand_seed1"
     },
     {
       "id": "rand_seed2",
-      "name": "rand_seed2",
-      "type": "see"
+      "name": "rand_seed2"
     },
     {
       "cli": "--range-alloc-block-size=#",
@@ -2433,7 +2303,7 @@
         "global",
         "session"
       ],
-      "type": "size in bytes of blocks allocated during range optimization. the unit size in 1024."
+      "type": "byte"
     },
     {
       "cli": "--read-buffer-size=#",
@@ -2450,7 +2320,7 @@
         "global",
         "session"
       ],
-      "type": "each thread performing a sequential scan (for myisam, aria and merge tables) allocates a buffer of this size in bytes for each table scanned. increase if you perform many sequential scans. if not in a multiple of 4kb, will be rounded down to the nearest multiple. also used in order by's for caching indexes in a temporary file (not temporary table), for caching results of nested queries, for bulk inserts into partitions, and to determine the memory block size of"
+      "type": "byte"
     },
     {
       "cli": "--read-only",
@@ -2461,8 +2331,7 @@
       "name": "read_only",
       "scope": [
         "global"
-      ],
-      "type": "when set to"
+      ]
     },
     {
       "cli": "--read-rnd-buffer-size=#",
@@ -2479,7 +2348,7 @@
         "global",
         "session"
       ],
-      "type": "size in bytes of the buffer used when reading rows from a"
+      "type": "byte"
     },
     {
       "cli": "--rowid-merge-buff-size=#",
@@ -2496,12 +2365,11 @@
         "global",
         "session"
       ],
-      "type": "the maximum size in bytes of the memory available to the rowid-merge strategy. see"
+      "type": "byte"
     },
     {
       "id": "rpl_recovery_rank",
-      "name": "rpl_recovery_rank",
-      "type": "unused."
+      "name": "rpl_recovery_rank"
     },
     {
       "cli": "--safe-show-database (until mysql 4.1.1)",
@@ -2511,8 +2379,7 @@
       "name": "safe_show_database",
       "scope": [
         "global"
-      ],
-      "type": "this variable was removed in"
+      ]
     },
     {
       "cli": "--secure-auth",
@@ -2523,8 +2390,7 @@
       "name": "secure_auth",
       "scope": [
         "global"
-      ],
-      "type": "connections will be blocked unless clients use the current password format. prior to mysql 4.1 passwords used an old, less secure format.. for the mysql client, the"
+      ]
     },
     {
       "cli": "--secure-file-priv=path",
@@ -2534,8 +2400,7 @@
       "name": "secure_file_priv",
       "scope": [
         "global"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "--secure-timestamp=value",
@@ -2546,8 +2411,7 @@
       "name": "secure_timestamp",
       "scope": [
         "global"
-      ],
-      "type": "restricts direct setting of a session timestamp. possible levels are:"
+      ]
     },
     {
       "cli": "--session-track-schema={0|1}",
@@ -2559,8 +2423,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "whether to track changes to the default schema within the current session."
+      ]
     },
     {
       "cli": "--session-track-state-change={0|1}",
@@ -2572,8 +2435,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "whether to track changes to the session state."
+      ]
     },
     {
       "cli": "--session-track-system-variables=value",
@@ -2585,8 +2447,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "comma-separated list of session system variables for which to track changes. in"
+      ]
     },
     {
       "cli": "--session-track-transaction-info=value",
@@ -2599,7 +2460,6 @@
         "global",
         "session"
       ],
-      "type": "track changes to the transaction attributes. off to disable; state to track just transaction state (is there an active transaction? does it have any data? etc.); characteristics to track transaction state and report all statements needed to start a transaction with the same characteristics (isolation level, read only/read write,snapshot - but not any work done / data modified within the transaction).",
       "validValues": [
         "OFF",
         "STATE",
@@ -2612,8 +2472,7 @@
       "name": "shared_memory",
       "scope": [
         "global"
-      ],
-      "type": "windows only, determines whether the server permits shared memory connections. see also"
+      ]
     },
     {
       "dataType": "string",
@@ -2623,8 +2482,7 @@
       "name": "shared_memory_base_name",
       "scope": [
         "global"
-      ],
-      "type": "windows only, specifies the name of the shared memory to use for shared memory connection. mainly used when running more than one instance on the same physical machine. by default the name is"
+      ]
     },
     {
       "cli": "--skip-external-locking",
@@ -2635,8 +2493,7 @@
       "name": "skip_external_locking",
       "scope": [
         "global"
-      ],
-      "type": "if set, external locking for myisam tables is disabled."
+      ]
     },
     {
       "cli": "--skip-name-resolve",
@@ -2647,8 +2504,7 @@
       "name": "skip_name_resolve",
       "scope": [
         "global"
-      ],
-      "type": "if set to 1 (0 is the default), only ip addresses are used for connections. host names are not resolved. all host values in the grant tables must be ip addresses (or localhost)."
+      ]
     },
     {
       "cli": "--skip-networking",
@@ -2659,8 +2515,7 @@
       "name": "skip_networking",
       "scope": [
         "global"
-      ],
-      "type": "if set to 1, (0 is the default), the server does not listen for tcp/ip connections. all interaction with the server by be through socket files (unix) or named pipes or shared memory (windows). it's recommended to use this option if only local clients are permitted to connect to the server. enabling this option also prevents a server from functioning as a replication client."
+      ]
     },
     {
       "cli": "--skip-show-database",
@@ -2671,8 +2526,7 @@
       "name": "skip_show_database",
       "scope": [
         "global"
-      ],
-      "type": "if set to 1, (0 is the default), only users with the"
+      ]
     },
     {
       "cli": "--slow-launch-time=#",
@@ -2684,7 +2538,7 @@
       "scope": [
         "global"
       ],
-      "type": "time in seconds. if a thread takes longer than this to launch, the"
+      "type": "integer"
     },
     {
       "cli": "--slow-query-log",
@@ -2696,8 +2550,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to 0, the default unless the --slow-query-log option is used, the"
+      ]
     },
     {
       "cli": "--slow-query-log-file=file_name",
@@ -2708,8 +2561,7 @@
       "name": "slow_query_log_file",
       "scope": [
         "global"
-      ],
-      "type": "name of the"
+      ]
     },
     {
       "cli": "--socket=name",
@@ -2720,8 +2572,7 @@
       "name": "socket",
       "scope": [
         "global"
-      ],
-      "type": "on unix-like systems, this is the name of the socket file used for local client connections, by default"
+      ]
     },
     {
       "cli": "--sort-buffer-size=#",
@@ -2733,8 +2584,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "each session performing a sort allocates a buffer with this amount of memory. not specific to any storage engine. if the status variable"
+      ]
     },
     {
       "dataType": "boolean",
@@ -2745,8 +2595,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to 1, the query"
+      ]
     },
     {
       "dataType": "boolean",
@@ -2757,13 +2606,11 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to 0, mariadb will not perform large selects. see"
+      ]
     },
     {
       "id": "sql_big_tables",
-      "name": "sql_big_tables",
-      "type": "a synonym for"
+      "name": "sql_big_tables"
     },
     {
       "dataType": "boolean",
@@ -2774,8 +2621,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to 1 (0 is default), results from select statements are always placed into temporary tables. this can help the server when it takes a long time to send the results to the client by allowing the table locks to be freed early."
+      ]
     },
     {
       "dataType": "boolean",
@@ -2785,23 +2631,19 @@
       "name": "sql_log_off",
       "scope": [
         "session"
-      ],
-      "type": "if set to 1 (0 is the default), no logging to the"
+      ]
     },
     {
       "id": "sql_log_update",
-      "name": "sql_log_update",
-      "type": "removed. use"
+      "name": "sql_log_update"
     },
     {
       "id": "sql_low_priority_updates",
-      "name": "sql_low_priority_updates",
-      "type": "synonym for"
+      "name": "sql_low_priority_updates"
     },
     {
       "id": "sql_max_join_size",
-      "name": "sql_max_join_size",
-      "type": "synonym for"
+      "name": "sql_max_join_size"
     },
     {
       "cli": "--sql-mode=value[,value[,value...]]",
@@ -2813,7 +2655,6 @@
         "global",
         "session"
       ],
-      "type": "sets the",
       "validValues": []
     },
     {
@@ -2826,8 +2667,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to 1, the default,"
+      ]
     },
     {
       "dataType": "boolean",
@@ -2838,16 +2678,14 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to 1, the default, the server will quote identifiers for"
+      ]
     },
     {
       "dataType": "boolean",
       "default": "OFF (0)",
       "dynamic": true,
       "id": "sql_safe_updates",
-      "name": "sql_safe_updates",
-      "type": "if set to 1, updates and deletes need either a key in the where clause, or a limit clause, or else they will aborted. prevents the common mistake of accidentally deleting or updating every row in a table."
+      "name": "sql_safe_updates"
     },
     {
       "dataType": "numeric",
@@ -2859,7 +2697,7 @@
         "global",
         "session"
       ],
-      "type": "maximum number of rows that can be returned from a select query. default is the maximum number of rows permitted per table by the server, usually 2"
+      "type": "integer"
     },
     {
       "dataType": "boolean",
@@ -2870,13 +2708,11 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to 1, single-row inserts will produce a string containing warning information if a warning occurs."
+      ]
     },
     {
       "id": "storage_engine",
-      "name": "storage_engine",
-      "type": "see"
+      "name": "storage_engine"
     },
     {
       "cli": "--standard-compliant-cte={0|1}",
@@ -2888,8 +2724,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "allow only standard-compliant common table expressions. prior to version 10.2.4, this variable was named"
+      ]
     },
     {
       "cli": "--stored-program-cache=#",
@@ -2905,7 +2740,7 @@
       "scope": [
         "global"
       ],
-      "type": "limit to the number of"
+      "type": "integer"
     },
     {
       "cli": "--strict-password-validation",
@@ -2916,8 +2751,7 @@
       "name": "strict_password_validation",
       "scope": [
         "global"
-      ],
-      "type": "when"
+      ]
     },
     {
       "cli": "--sync-frm",
@@ -2928,8 +2762,7 @@
       "name": "sync_frm",
       "scope": [
         "global"
-      ],
-      "type": "if set to 1, the default, each time a non-temporary table is created, its .frm definition file is synced to disk. fractionally slower, but safer in case of a crash."
+      ]
     },
     {
       "dataType": "string",
@@ -2938,8 +2771,7 @@
       "name": "system_time_zone",
       "scope": [
         "global"
-      ],
-      "type": "server system"
+      ]
     },
     {
       "cli": "--table-definition-cache=#",
@@ -2955,7 +2787,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of table definitions that can be cached. table definitions are taken from the .frm files, and if there are a large number of tables increasing the cache size can speed up table opening. unlike the"
+      "type": "integer"
     },
     {
       "cli": "--table-lock-wait-timeout=#",
@@ -2970,8 +2802,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "unused, and removed in mariadb/mysql 5.5.3"
+      ]
     },
     {
       "cli": "--table-open-cache=#",
@@ -2987,7 +2818,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum number of open tables cached in one table cache instance. see"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -3001,13 +2832,11 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "from"
+      ]
     },
     {
       "id": "table_type",
-      "name": "table_type",
-      "type": "removed and replaced by"
+      "name": "table_type"
     },
     {
       "cli": "--tcp-keepalive-interval=#",
@@ -3023,7 +2852,7 @@
       "scope": [
         "global"
       ],
-      "type": "the interval, in seconds, between when successive keep-alive packets are sent if no acknowledgement is received. if set to 0, the system dependent default is used."
+      "type": "integer"
     },
     {
       "cli": "--tcp-keepalive-probes=#",
@@ -3039,7 +2868,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of unacknowledged probes to send before considering the connection dead and notifying the application layer. if set to 0, a system dependent default is used."
+      "type": "integer"
     },
     {
       "cli": "--tcp-keepalive-time=#",
@@ -3054,8 +2883,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "timeout, in milliseconds, with no activity until the first tcp keep-alive packet is sent. if set to 0, a system dependent default is used."
+      ]
     },
     {
       "cli": "--thread-cache-size=#",
@@ -3071,7 +2899,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of threads server caches for re-use. if this limit hasn't been reached, when a client disconnects, its threads are put into the cache, and re-used where possible. these are freed after 5 minutes of idle time. normally this setting has little effect, as the other aspects of the thread implementation are more important, but increasing it can help servers with high volumes of connections per second so that most can use a cached, rather than a new, thread. the cache miss rate can be calculated as the"
+      "type": "integer"
     },
     {
       "cli": "--thread-concurrency=#",
@@ -3087,7 +2915,7 @@
       "scope": [
         "global"
       ],
-      "type": "allows applications to give the system a hint about the desired number of threads. specific to solaris only, invokes thr_setconcurrency(). deprecated and has no effect in"
+      "type": "integer"
     },
     {
       "cli": "--thread-stack=#",
@@ -3101,13 +2929,11 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "stack size for each thread. if set too small, limits recursion depth of stored procedures and complexity of sql statements the server can handle in memory. also affects limits in the crash-me test."
+      ]
     },
     {
       "id": "time_format",
-      "name": "time_format",
-      "type": "unused."
+      "name": "time_format"
     },
     {
       "cli": "--default-time-zone=string",
@@ -3119,8 +2945,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "the current"
+      ]
     },
     {
       "cli": "--timed-mutexes",
@@ -3131,8 +2956,7 @@
       "name": "timed_mutexes",
       "scope": [
         "global"
-      ],
-      "type": "determines whether"
+      ]
     },
     {
       "dynamic": true,
@@ -3141,7 +2965,6 @@
       "scope": [
         "session"
       ],
-      "type": "sets the time for the client. this will affect the result returned by the",
       "validValues": [
         "timestamp_value",
         "DEFAULT"
@@ -3161,14 +2984,12 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "max size for data for an internal temporary on-disk"
+      ]
     },
     {
       "cli": "--tmp-memory-table-size=#",
       "id": "tmp_memory_table_size",
-      "name": "tmp_memory_table_size",
-      "type": "an alias for"
+      "name": "tmp_memory_table_size"
     },
     {
       "cli": "--tmp-table-size=#",
@@ -3184,8 +3005,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "the largest size for temporary tables in memory (not"
+      ]
     },
     {
       "cli": "--tmpdir=path or -t path",
@@ -3194,8 +3014,7 @@
       "name": "tmpdir",
       "scope": [
         "global"
-      ],
-      "type": "directory name/s"
+      ]
     },
     {
       "cli": "--transaction-alloc-block-size=#",
@@ -3292,8 +3111,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "controls the use of"
+      ]
     },
     {
       "cli": "--userstat=1",
@@ -3304,8 +3122,7 @@
       "name": "userstat",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "-v, --version[=name] (>= mariadb 10.2.1), --version (<= mariadb 10.2.0)",

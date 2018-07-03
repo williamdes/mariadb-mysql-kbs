@@ -14,7 +14,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of connections on the"
+      "type": "integer"
     },
     {
       "cli": "--extra-port=#",
@@ -25,8 +25,7 @@
       "name": "extra_port",
       "scope": [
         "global"
-      ],
-      "type": "extra port number to use for tcp-connections in a one-thread-per-connection manner. if set to"
+      ]
     },
     {
       "cli": "--thread-handling=name",
@@ -38,7 +37,6 @@
       "scope": [
         "global"
       ],
-      "type": "determines how the server handles threads. the default,",
       "validValues": [
         "no-threads",
         "one-thread-per-connection",
@@ -55,7 +53,7 @@
       "scope": [
         "global"
       ],
-      "type": "time in seconds until an idle worker thread exits. unix-only. use"
+      "type": "integer"
     },
     {
       "cli": "thread-pool-max-threads=#",
@@ -70,7 +68,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum number of threads in the thread pool. once this limit is reached, no new threads will be created."
+      "type": "integer"
     },
     {
       "cli": "thread-pool-min-threads=#",
@@ -78,7 +76,7 @@
       "default": "1",
       "id": "thread_pool_min_threads",
       "name": "thread_pool_min_threads",
-      "type": "minimum number of threads in the thread pool. in bursty environments, after a period of inactivity, threads would normally be retired. when the next burst arrives, it would take time to reach the optimal level. setting this value higher than the default would prevent thread retirement even if inactive. windows-only. use"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -92,8 +90,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "internal parameter, not meant to be changed. the higher the value for this parameter, the more threads that could run at the same time. a lower value can lead to more sleeps and wakeups."
+      ]
     },
     {
       "cli": "thread-pool-kickup-timer=#",
@@ -108,8 +105,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "time in milliseconds before a dequeued low-priority statement is moved to the high-priority queue. unix-only."
+      ]
     },
     {
       "cli": "--thread-pool-priority=#",
@@ -121,7 +117,6 @@
         "global",
         "connection"
       ],
-      "type": "threadpool priority. high-priority connections usually start executing earlier than low-priority.\nif set to 'auto' (the default), the actual priority (low or high) is determined by whether or not the connection is inside a transaction.",
       "validValues": [
         "high",
         "low",
@@ -141,7 +136,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of threads in a thread pool, which determines how many statements can execute simultaneously. unix only. see"
+      "type": "integer"
     },
     {
       "cli": "--thread-pool-stall-limit=#",
@@ -156,8 +151,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "time in milliseconds statement has to complete after starting before being defined as stalled. after this, the thread group can begin another statement. higher values can help avoid starting too many new statements while old, long-running ones are still executing, while lower values can help prevent deadlock. see"
+      ]
     },
     {
       "dataType": "numeric",
@@ -167,7 +161,7 @@
         "global",
         "session"
       ],
-      "type": "number of inactive threads in the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -177,7 +171,7 @@
         "global",
         "session"
       ],
-      "type": "number of threads in the"
+      "type": "integer"
     }
   ],
   "name": "thread-pool-system-and-status-variables",

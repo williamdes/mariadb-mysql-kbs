@@ -1939,8 +1939,7 @@
       "id": "sysvar_open_files_limit",
       "name": "open_files_limit",
       "range": {
-        "from": 0,
-        "to": null
+        "from": 0
       },
       "scope": [
         "global"

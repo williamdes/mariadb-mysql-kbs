@@ -7,8 +7,7 @@
       "name": "cassandra_default_thrift_host",
       "scope": [
         "global"
-      ],
-      "type": "host to connect to, if not specified on per-table basis."
+      ]
     },
     {
       "dataType": "numeric",
@@ -20,7 +19,7 @@
         "global",
         "session"
       ],
-      "type": "number of times to retry on timeout/unavailable failures.",
+      "type": "integer",
       "validValues": [
         "1",
         "1073741824"
@@ -36,7 +35,6 @@
         "global",
         "session"
       ],
-      "type": "insert batch size.",
       "validValues": [
         "1",
         "1073741824"
@@ -52,7 +50,6 @@
         "global",
         "session"
       ],
-      "type": "batched key access batch size.",
       "validValues": [
         "1",
         "1073741824"
@@ -66,7 +63,6 @@
         "global",
         "session"
       ],
-      "type": "consistency to use for reading. see",
       "validValues": [
         "ONE",
         "TWO",
@@ -87,7 +83,6 @@
         "global",
         "session"
       ],
-      "type": "full table scan batch size.",
       "validValues": [
         "1",
         "1073741824"
@@ -101,7 +96,6 @@
         "global",
         "session"
       ],
-      "type": "consistency to use for writing. see",
       "validValues": [
         "ONE",
         "TWO",

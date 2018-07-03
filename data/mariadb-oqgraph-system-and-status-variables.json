@@ -8,8 +8,7 @@
       "name": "oqgraph_allow_create_integer_latch",
       "scope": [
         "global"
-      ],
-      "type": "created when the"
+      ]
     },
     {
       "dataType": "string",
@@ -18,8 +17,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "string",
@@ -28,8 +26,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "whether or not legacy tables with integer latches are supported."
+      ]
     },
     {
       "dataType": "string",
@@ -38,8 +35,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "whether or not verbose debugging is enabled. if it is, performance may be adversely impacted"
+      ]
     }
   ],
   "name": "oqgraph-system-and-status-variables",

@@ -9,8 +9,7 @@
       "name": "aria_block_size",
       "scope": [
         "global"
-      ],
-      "type": "block size to be used for aria index pages. changing this requires dumping, deleting old tables and deleting all log files, and then restoring your aria tables. if key lookups take too long (and one has to search roughly 8192/2 by default to find each key), can be made smaller, e.g."
+      ]
     },
     {
       "cli": "--aria-checkpoint-interval=#",
@@ -26,7 +25,7 @@
       "scope": [
         "global"
       ],
-      "type": "interval in seconds between automatic checkpoints. 0 means 'no automatic checkpoints' which makes sense only for testing."
+      "type": "integer"
     },
     {
       "cli": "aria-checkpoint-log-activity=#",
@@ -38,7 +37,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of bytes that the transaction log has to grow between checkpoints before a new checkpoint is written to the log."
+      "type": "byte"
     },
     {
       "cli": "aria-encrypt-tables={0|1}",
@@ -49,8 +48,7 @@
       "name": "aria_encrypt_tables",
       "scope": [
         "global"
-      ],
-      "type": "encrypt aria tables (only for tables with"
+      ]
     },
     {
       "cli": "--aria-force-start-after-recovery-failures=#",
@@ -62,7 +60,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of consecutive log recovery failures after which logs will be automatically deleted to cure the problem; 0 (the default) disables the feature."
+      "type": "integer"
     },
     {
       "cli": "--aria_group_commit=\"value\"",
@@ -74,7 +72,6 @@
       "scope": [
         "global"
       ],
-      "type": "specifies aria",
       "validValues": []
     },
     {
@@ -97,8 +94,7 @@
       "name": "aria_log_dir_path",
       "scope": [
         "global"
-      ],
-      "type": "path to the directory where to store transactional log"
+      ]
     },
     {
       "cli": "--aria-log-file-size=#",
@@ -109,8 +105,7 @@
       "name": "aria_log_file_size",
       "scope": [
         "global"
-      ],
-      "type": "limit for aria transaction log size"
+      ]
     },
     {
       "cli": "--aria-log-purge-type=name",
@@ -122,7 +117,6 @@
       "scope": [
         "global"
       ],
-      "type": "specifies how the aria transactional log will be purged. set to",
       "validValues": [
         "immediate",
         "external",
@@ -142,8 +136,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "don't use the fast sort index method to created index if the temporary file would get bigger than this."
+      ]
     },
     {
       "cli": "--aria-page-checksum=#",
@@ -154,8 +147,7 @@
       "name": "aria_page_checksum",
       "scope": [
         "global"
-      ],
-      "type": "determines whether index and data should use page checksums for extra safety. can be overridden per table with page_checksum clause in"
+      ]
     },
     {
       "cli": "--aria-pagecache-age-threshold=#",
@@ -171,7 +163,7 @@
       "scope": [
         "global"
       ],
-      "type": "this characterizes the number of hits a hot block has to be untouched until it is considered aged enough to be downgraded to a warm block. this specifies the percentage ratio of that number of hits to the total number of blocks in the page cache."
+      "type": "integer"
     },
     {
       "cli": "--aria-pagecache-buffer-size=#",
@@ -182,12 +174,12 @@
       "name": "aria_pagecache_buffer_size",
       "range": {
         "from": 131072,
-        "to": "(128KB) upwards"
+        "to": "upwards"
       },
       "scope": [
         "global"
       ],
-      "type": "the size of the buffer used for index blocks for aria tables. increase this to get better index handling (for all reads and multiple writes) to as much as you can afford."
+      "type": "integer"
     },
     {
       "cli": "--aria-pagecache-division-limit=#",
@@ -202,8 +194,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "the minimum percentage of warm blocks in the key cache."
+      ]
     },
     {
       "cli": "--aria-pagecache-file-hash-size=#",
@@ -219,12 +210,11 @@
       "scope": [
         "global"
       ],
-      "type": "number of hash buckets for open and changed files.  if you have many aria files open you should increase this for faster flushing of changes. a good value is probably 1/10th of the number of possible open aria files."
+      "type": "integer"
     },
     {
       "id": "aria_recover",
-      "name": "aria_recover",
-      "type": ""
+      "name": "aria_recover"
     },
     {
       "cli": "--aria-recover[=#]",
@@ -235,7 +225,6 @@
       "scope": [
         "global"
       ],
-      "type": "specifies how corrupted tables should be automatically repaired. more than one option can be specified, for example",
       "validValues": [
         "NORMAL",
         "BACKUP",
@@ -255,7 +244,7 @@
         "global",
         "session"
       ],
-      "type": "number of threads to use when repairing aria tables. the value of 1 disables parallel repair. increasing from the default will usually result in faster repair, but will use more cpu and memory."
+      "type": "integer"
     },
     {
       "cli": "--aria-sort-buffer-size=#",
@@ -267,8 +256,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "the buffer that is allocated when sorting the index when doing a"
+      ]
     },
     {
       "cli": "--aria-stats-method=#",
@@ -281,7 +269,6 @@
         "global",
         "session"
       ],
-      "type": "determines how nulls are treated for aria index statistics purposes. if set to",
       "validValues": [
         "nulls_equal",
         "nulls_unequal",
@@ -298,7 +285,6 @@
       "scope": [
         "global"
       ],
-      "type": "controls syncing directory after log file growth and new file creation.",
       "validValues": [
         "NEWFILE",
         "NEVER",
@@ -314,8 +300,7 @@
       "name": "aria_used_for_temp_tables",
       "scope": [
         "global"
-      ],
-      "type": "readonly variable indicating whether the"
+      ]
     },
     {
       "cli": "--deadlock-search-depth-long=#",
@@ -331,8 +316,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "long search depth for the"
+      ]
     },
     {
       "cli": "--deadlock-search-depth-short=#",
@@ -348,8 +332,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "short search depth for the"
+      ]
     },
     {
       "cli": "--deadlock-timeout-long=#",
@@ -366,7 +349,7 @@
         "global",
         "session"
       ],
-      "type": "long timeout in microseconds for the"
+      "type": "integer"
     },
     {
       "cli": "--deadlock-timeout-short=#",
@@ -383,7 +366,7 @@
         "global",
         "session"
       ],
-      "type": "short timeout in microseconds for the"
+      "type": "integer"
     }
   ],
   "name": "aria-system-variables",

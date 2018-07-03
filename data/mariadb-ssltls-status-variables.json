@@ -7,7 +7,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of negotiates needed to establish the tls connection."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -16,7 +16,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of accepted tls handshakes."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -25,7 +25,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of sessions retrieved from session cache."
+      "type": "integer"
     },
     {
       "dataType": "string",
@@ -34,8 +34,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "tls cipher in use."
+      ]
     },
     {
       "dataType": "string",
@@ -44,8 +43,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "list of available tls ciphers."
+      ]
     },
     {
       "dataType": "numeric",
@@ -54,7 +52,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of tls handshakes started in client mode."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -63,7 +61,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of negotiates needed to establish the connection to an tls-enabled master."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -71,8 +69,7 @@
       "name": "Ssl_ctx_verify_depth",
       "scope": [
         "global"
-      ],
-      "type": "how many tls certificates in the chain are tested."
+      ]
     },
     {
       "dataType": "numeric",
@@ -80,8 +77,7 @@
       "name": "Ssl_ctx_verify_mode",
       "scope": [
         "global"
-      ],
-      "type": "tls context verification mode."
+      ]
     },
     {
       "dataType": "numeric",
@@ -91,7 +87,7 @@
         "global",
         "session"
       ],
-      "type": "tls default timeout, in seconds."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -100,7 +96,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of successful tls sessions in server mode."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -109,7 +105,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of successful tls sessions in client mode."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -118,8 +114,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "last valid date for the tls certificate."
+      ]
     },
     {
       "dataType": "numeric",
@@ -128,8 +123,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "first valid date for the tls certificate."
+      ]
     },
     {
       "dataType": "numeric",
@@ -138,7 +132,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of tls sessions found in the session cache."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -147,7 +141,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of tls sessions not found in the session cache."
+      "type": "integer"
     },
     {
       "dataType": "string",
@@ -155,8 +149,7 @@
       "name": "Ssl_session_cache_mode",
       "scope": [
         "global"
-      ],
-      "type": "mode used for tls caching by the server."
+      ]
     },
     {
       "dataType": "numeric",
@@ -165,7 +158,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of sessions removed from the session cache because it was full."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -174,7 +167,7 @@
       "scope": [
         "global"
       ],
-      "type": "size of the session cache."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -183,7 +176,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of sessions which have timed out."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -193,7 +186,7 @@
         "global",
         "session"
       ],
-      "type": "number of sessions reused."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -202,7 +195,7 @@
       "scope": [
         "global"
       ],
-      "type": "current number of sessions in the session cache."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -211,8 +204,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "tls verification depth."
+      ]
     },
     {
       "dataType": "numeric",
@@ -221,8 +213,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "tls verification mode."
+      ]
     },
     {
       "dataType": "string",
@@ -231,8 +222,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "tls version in use."
+      ]
     }
   ],
   "name": "ssltls-status-variables",

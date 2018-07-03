@@ -6,8 +6,7 @@
       "name": "have_innodb",
       "scope": [
         "global"
-      ],
-      "type": "if the server supports"
+      ]
     },
     {
       "cli": "--ignore-builtin-innodb",
@@ -18,8 +17,7 @@
       "name": "ignore_builtin_innodb",
       "scope": [
         "global"
-      ],
-      "type": "setting this to"
+      ]
     },
     {
       "cli": "--innodb-adaptive-checkpoint=#",
@@ -31,7 +29,6 @@
       "scope": [
         "global"
       ],
-      "type": "replaced with",
       "validValues": [
         "none",
         "0",
@@ -52,8 +49,7 @@
       "name": "innodb_adaptive_flushing",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-adaptive-flushing-lwm=#",
@@ -68,8 +64,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "adaptive flushing is enabled when this this low water mark percentage of the redo log capacity is reached."
+      ]
     },
     {
       "cli": "innodb-adaptive-flushing-method=value",
@@ -81,7 +76,6 @@
       "scope": [
         "global"
       ],
-      "type": "determines the method of flushing dirty blocks from the innodb",
       "validValues": [
         "native",
         "0",
@@ -100,8 +94,7 @@
       "name": "innodb_adaptive_hash_index",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "innodb-adaptive-hash-index-partitions=#",
@@ -117,7 +110,7 @@
       "scope": [
         "global"
       ],
-      "type": "specifies the number of partitions for use in adaptive searching. if set to"
+      "type": "integer"
     },
     {
       "cli": "innodb-adaptive-hash-index-parts=#",
@@ -133,7 +126,7 @@
       "scope": [
         "global"
       ],
-      "type": "specifies the number of partitions for use in adaptive searching. if set to"
+      "type": "integer"
     },
     {
       "cli": "--innodb-adaptive-max-sleep-delay=#",
@@ -149,7 +142,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum time in microseconds to automatically adjust the"
+      "type": "integer"
     },
     {
       "cli": "--innodb-additional-mem-pool-size=#",
@@ -165,7 +158,7 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes of the"
+      "type": "byte"
     },
     {
       "cli": "--innodb-api-bk-commit-interval=#",
@@ -181,7 +174,7 @@
       "scope": [
         "global"
       ],
-      "type": "time in seconds between auto-commits for idle connections using the innodb memcached interface (not implemented in mariadb)."
+      "type": "integer"
     },
     {
       "cli": "--innodb-api-disable-rowlock=#",
@@ -192,8 +185,7 @@
       "name": "innodb_api_disable_rowlock",
       "scope": [
         "global"
-      ],
-      "type": "for use with mysql's memcached (not implemented in mariadb)"
+      ]
     },
     {
       "cli": "--innodb-api-enable-binlog=#",
@@ -204,8 +196,7 @@
       "name": "innodb_api_enable_binlog",
       "scope": [
         "global"
-      ],
-      "type": "for use with mysql's memcached (not implemented in mariadb)"
+      ]
     },
     {
       "cli": "--innodb-api-enable-mdl=#",
@@ -216,8 +207,7 @@
       "name": "innodb_api_enable_mdl",
       "scope": [
         "global"
-      ],
-      "type": "for use with mysql's memcached (not implemented in mariadb)"
+      ]
     },
     {
       "cli": "--innodb-api-trx-level=#",
@@ -228,14 +218,12 @@
       "name": "innodb_api_trx_level",
       "scope": [
         "global"
-      ],
-      "type": "for use with mysql's memcached (not implemented in mariadb)"
+      ]
     },
     {
       "cli": "--innodb-auto-lru-dump=#",
       "id": "innodb_auto_lru_dump",
-      "name": "innodb_auto_lru_dump",
-      "type": "renamed"
+      "name": "innodb_auto_lru_dump"
     },
     {
       "cli": "--innodb-autoextend-increment=#",
@@ -251,7 +239,7 @@
       "scope": [
         "global"
       ],
-      "type": "size in mb to increment an auto-extending shared tablespace file when it becomes full. if"
+      "type": "byte"
     },
     {
       "cli": "--innodb-autoinc-lock-mode=#",
@@ -265,8 +253,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "locking mode used for generating"
+      ]
     },
     {
       "cli": "--innodb-background-scrub-data-check-interval=#",
@@ -281,8 +268,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "check if spaces needs scrubbing every"
+      ]
     },
     {
       "cli": "--innodb-background-scrub-data-compressed={0|1}",
@@ -293,8 +279,7 @@
       "name": "innodb_background_scrub_data_compressed",
       "scope": [
         "global"
-      ],
-      "type": "enable scrubbing of compressed data by background threads (same as encryption_threads). see"
+      ]
     },
     {
       "cli": "--innodb-background-scrub-data-interval=#",
@@ -310,7 +295,7 @@
       "scope": [
         "global"
       ],
-      "type": "scrub spaces that were last scrubbed longer than this number of seconds ago. see"
+      "type": "integer"
     },
     {
       "cli": "--innodb-background-scrub-data-uncompressed={0|1}",
@@ -321,8 +306,7 @@
       "name": "innodb_background_scrub_data_uncompressed",
       "scope": [
         "global"
-      ],
-      "type": "enable scrubbing of uncompressed data by background threads (same as encryption_threads). see"
+      ]
     },
     {
       "cli": "innodb-blocking-buffer-pool-restore={1|2}",
@@ -333,8 +317,7 @@
       "name": "innodb_blocking_buffer_pool_restore",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-buf-dump-status-frequency=#",
@@ -349,8 +332,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "determines how often (as a percent) the buffer pool dump status should be printed in the logs. for example,"
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-chunk-size=#",
@@ -364,8 +346,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "chunk size used for dynamically resizing the"
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-dump-at-shutdown=#",
@@ -375,8 +356,7 @@
       "name": "innodb_buffer_pool_dump_at_shutdown",
       "scope": [
         "global"
-      ],
-      "type": "whether to record pages cached in the"
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-dump-now=#",
@@ -387,8 +367,7 @@
       "name": "innodb_buffer_pool_dump_now",
       "scope": [
         "global"
-      ],
-      "type": "immediately records pages stored in the"
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-dump-pct=#",
@@ -402,8 +381,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dump only the hottest n% of each"
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-evict=#",
@@ -415,7 +393,6 @@
       "scope": [
         "global"
       ],
-      "type": "evict pages from the buffer pool.  if set to \"uncompressed\" then all uncompressed pages are evicted from the buffer pool.  variable to be used only for testing. only exists in debug builds.",
       "validValues": []
     },
     {
@@ -427,8 +404,7 @@
       "name": "innodb_buffer_pool_filename",
       "scope": [
         "global"
-      ],
-      "type": "the file that holds the"
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-instances=#",
@@ -439,8 +415,7 @@
       "name": "innodb_buffer_pool_instances",
       "scope": [
         "global"
-      ],
-      "type": "if"
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-load-abort=#",
@@ -451,8 +426,7 @@
       "name": "innodb_buffer_pool_load_abort",
       "scope": [
         "global"
-      ],
-      "type": "aborts the process of restoring"
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-load-at-startup=#",
@@ -462,8 +436,7 @@
       "name": "innodb_buffer_pool_load_at_startup",
       "scope": [
         "global"
-      ],
-      "type": "specifies whether the"
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-load-now=#",
@@ -474,8 +447,7 @@
       "name": "innodb_buffer_pool_load_now",
       "scope": [
         "global"
-      ],
-      "type": "immediately warms up the"
+      ]
     },
     {
       "cli": "innodb-buffer-pool-populate={0|1}",
@@ -486,8 +458,7 @@
       "name": "innodb_buffer_pool_populate",
       "scope": [
         "global"
-      ],
-      "type": "when set to"
+      ]
     },
     {
       "cli": "innodb-buffer-pool-restore-at-startup",
@@ -499,7 +470,7 @@
       "scope": [
         "global"
       ],
-      "type": "time in seconds between automatic buffer pool dumps. if set to a non-zero value, xtradb will also perform an automatic restore of the"
+      "type": "integer"
     },
     {
       "cli": "innodb-buffer-pool-shm-checksum={0|1}",
@@ -510,8 +481,7 @@
       "name": "innodb_buffer_pool_shm_checksum",
       "scope": [
         "global"
-      ],
-      "type": "used with percona's shm buffer pool patch in xtradb 5.5. was shortly deprecated in xtradb xtradb 5.5.13-20.4, and removed in xtradb 5.6. xtradb only."
+      ]
     },
     {
       "cli": "innodb-buffer-pool-shm-key={0|1}",
@@ -522,8 +492,7 @@
       "name": "innodb_buffer_pool_shm_key",
       "scope": [
         "global"
-      ],
-      "type": "used with percona's shm buffer pool patch in xtradb 5.5. later deprecated in xtradb 5.5, and removed in xtradb 5.6."
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-size=#",
@@ -539,7 +508,7 @@
       "scope": [
         "global"
       ],
-      "type": "innodb buffer pool size in bytes. the primary value to adjust on a database server with entirely/primarily"
+      "type": "byte"
     },
     {
       "cli": "--innodb-change-buffer-max-size=#",
@@ -555,7 +524,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum size of the"
+      "type": "integer"
     },
     {
       "cli": "--innodb-change-buffering=#",
@@ -565,8 +534,7 @@
       "name": "innodb_change_buffering",
       "scope": [
         "global"
-      ],
-      "type": "sets how"
+      ]
     },
     {
       "cli": "--innodb-change-buffering-debug=#",
@@ -581,8 +549,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "innodb-checkpoint-age-target=#",
@@ -597,8 +564,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "the maximum value of the checkpoint age. if set to"
+      ]
     },
     {
       "cli": "--innodb-checksum-algorithm=#",
@@ -609,7 +575,6 @@
       "scope": [
         "global"
       ],
-      "type": "a replacement for innodb's",
       "validValues": [
         "innodb",
         "crc32",
@@ -628,8 +593,7 @@
       "name": "innodb_checksums",
       "scope": [
         "global"
-      ],
-      "type": "by default,"
+      ]
     },
     {
       "cli": "--innodb-cleaner-lsn-age-factor=value",
@@ -640,7 +604,6 @@
       "scope": [
         "global"
       ],
-      "type": "xtradb has enhanced page cleaner heuristics, and with these in place, the default innodb adaptive flushing may be too aggressive. as a result, a new lsn age factor formula has been introduced, controlled by this variable. the default setting,",
       "validValues": []
     },
     {
@@ -652,8 +615,7 @@
       "name": "innodb_cmp_per_index_enabled",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-commit-concurrency=#",
@@ -669,7 +631,7 @@
       "scope": [
         "global"
       ],
-      "type": "limit to the number of transaction threads that can can commit simultaneously. 0, the default, imposes no limit. while you can change from one positive limit to another at runtime, you cannot set this variable to 0, or change it from 0, while the server is running."
+      "type": "integer"
     },
     {
       "cli": "--innodb-compression-algorithm=value",
@@ -681,7 +643,6 @@
       "scope": [
         "global"
       ],
-      "type": "compression algorithm used on page compression. can only be set to supported values. not all distributions support all these compression methods. setting this alone is not sufficient to compress tables - see",
       "validValues": [
         "none",
         "zlib",
@@ -702,8 +663,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "whether or not"
+      ]
     },
     {
       "cli": "--innodb-compression-failure-threshold-pct=#",
@@ -718,8 +678,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "specifies the percentage cutoff for expensive"
+      ]
     },
     {
       "cli": "--innodb-compression-level=#",
@@ -734,8 +693,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "the level of zlib compression, from"
+      ]
     },
     {
       "cli": "--innodb-compression-pad-pct-max=#",
@@ -750,8 +708,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "the maximum percentage of reserved free space within each compressed page. reserved free space is used when the page's data is reorganized and might be recompressed. only used when"
+      ]
     },
     {
       "cli": "--innodb-concurrency-tickets=#",
@@ -763,7 +720,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of times a newly-entered thread can enter and leave"
+      "type": "integer"
     },
     {
       "cli": "innodb-corrupt-table-action=value",
@@ -774,7 +731,6 @@
       "scope": [
         "global"
       ],
-      "type": "when set to",
       "validValues": []
     },
     {
@@ -786,8 +742,7 @@
       "name": "innodb_data_file_path",
       "scope": [
         "global"
-      ],
-      "type": "individual"
+      ]
     },
     {
       "cli": "--innodb-data-home-dir=path",
@@ -798,8 +753,7 @@
       "name": "innodb_data_home_dir",
       "scope": [
         "global"
-      ],
-      "type": "directory path for all"
+      ]
     },
     {
       "cli": "--innodb-deadlock-detect",
@@ -810,8 +764,7 @@
       "name": "innodb_deadlock_detect",
       "scope": [
         "global"
-      ],
-      "type": "by default, the innodb deadlock detector is enabled. if set to off, deadlock detection is disabled and mariadb will rely on"
+      ]
     },
     {
       "cli": "--innodb-default-page-encryption-key=#",
@@ -826,8 +779,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "encryption key used for page encryption. see"
+      ]
     },
     {
       "cli": "--innodb-default-encryption-key-id=#",
@@ -843,8 +795,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "default encryption key id used for table encryption, see"
+      ]
     },
     {
       "cli": "--innodb-default-row-format=value",
@@ -856,7 +807,6 @@
       "scope": [
         "global"
       ],
-      "type": "specifies the",
       "validValues": [
         "redundant",
         "compact",
@@ -872,8 +822,7 @@
       "name": "innodb_defragment",
       "scope": [
         "global"
-      ],
-      "type": "when set to"
+      ]
     },
     {
       "cli": "--innodb-defragment-fill-factor=#",
@@ -888,8 +837,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": ". indicates how full defragmentation should fill a page. together with"
+      ]
     },
     {
       "cli": "--innodb-defragment-fill-factor-n-recs=#",
@@ -905,7 +853,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of records of space that defragmentation should leave on the page. this variable, together with"
+      "type": "integer"
     },
     {
       "cli": "--innodb-defragment-frequency=#",
@@ -921,7 +869,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum times per second for defragmenting a single index. this controls the number of times the defragmentation thread can request x_lock on an index. the defragmentation thread will check whether 1/defragment_frequency (s) has passed since it last worked on this index, and put the index back in the queue if not enough time has passed. the actual frequency can only be lower than this given number. see"
+      "type": "integer"
     },
     {
       "cli": "--innodb-defragment-n-pages=#",
@@ -937,7 +885,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of pages considered at once when merging multiple pages to defragment. see"
+      "type": "integer"
     },
     {
       "cli": "--innodb-defragment-stats-accuracy=#",
@@ -953,7 +901,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of defragment stats changes there are before the stats are written to persistent storage. defaults to zero, meaning disable defragment stats tracking. see"
+      "type": "integer"
     },
     {
       "cli": "innodb-dict-size-limit=#",
@@ -965,7 +913,7 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes of a soft limit the memory used by tables in the data dictionary. once this limit is reached, xtradb will attempt to remove unused entries. if set to"
+      "type": "byte"
     },
     {
       "cli": "--innodb-disable-sort-file-cache=#",
@@ -976,8 +924,7 @@
       "name": "innodb_disable_sort_file_cache",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "none",
@@ -988,8 +935,7 @@
       "name": "innodb_disallow_writes",
       "scope": [
         "global"
-      ],
-      "type": "tell innodb to stop any writes to disk."
+      ]
     },
     {
       "cli": "--innodb-doublewrite, --skip-innodb-doublewrite",
@@ -1000,8 +946,7 @@
       "name": "innodb_doublewrite",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "innodb-doublewrite-file=filename",
@@ -1012,8 +957,7 @@
       "name": "innodb_doublewrite_file",
       "scope": [
         "global"
-      ],
-      "type": "the absolute or relative path and filename to a dedicated tablespace for the"
+      ]
     },
     {
       "cli": "innodb-empty-free-list-algorithm=value",
@@ -1024,7 +968,6 @@
       "scope": [
         "global"
       ],
-      "type": "xtradb 5.6.13-61 introduced an algorithm to assist with reducing mutex contention when the buffer pool free list is empty, controlled by this variable. if set to",
       "validValues": []
     },
     {
@@ -1040,8 +983,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "unneeded after xtradb 1.0.5. if set to"
+      ]
     },
     {
       "cli": "--innodb-encrypt-log",
@@ -1052,8 +994,7 @@
       "name": "innodb_encrypt_log",
       "scope": [
         "global"
-      ],
-      "type": "enable redo log encryption/decryption. see"
+      ]
     },
     {
       "cli": "--innodb-encrypt-tables=value",
@@ -1065,7 +1006,6 @@
       "scope": [
         "global"
       ],
-      "type": "encrypt all tables in the storage engine. see",
       "validValues": [
         "ON",
         "OFF",
@@ -1085,8 +1025,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "re-encrypt in background any page having a key older than this. when setting up"
+      ]
     },
     {
       "cli": "--innodb-encryption-rotation_iops=#",
@@ -1101,8 +1040,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "use this many iops for background key rotation. see"
+      ]
     },
     {
       "cli": "--innodb-encryption-threads=#",
@@ -1118,7 +1056,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of threads performing background key rotation and scrubbing. when setting up"
+      "type": "integer"
     },
     {
       "cli": "--innodb-extra-rsegments=#",
@@ -1133,8 +1071,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "removed in xtradb 5.5 and replaced by"
+      ]
     },
     {
       "cli": "--innodb-extra-undoslots=#",
@@ -1145,8 +1082,7 @@
       "name": "innodb_extra_undoslots",
       "scope": [
         "global"
-      ],
-      "type": "usually, innodb has 1024 undo slots in its rollback segment, so 1024 transactions can run in parallel. new transactions will fail if all slots are used. setting this variable to"
+      ]
     },
     {
       "cli": "--innodb-fake-changes={0|1}",
@@ -1158,8 +1094,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "enables the fake changes feature. in"
+      ]
     },
     {
       "cli": "--innodb-fast-checksum={0|1}",
@@ -1170,8 +1105,7 @@
       "name": "innodb_fast_checksum",
       "scope": [
         "global"
-      ],
-      "type": "implements a more cpu efficient xtradb checksum algorithm, useful for write-heavy loads with high i/o. if set to"
+      ]
     },
     {
       "cli": "--innodb-fast-shutdown[=#]",
@@ -1186,8 +1120,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "the shutdown mode."
+      ]
     },
     {
       "cli": "--innodb-fatal-semaphore-wait-threshold=#",
@@ -1203,7 +1136,7 @@
       "scope": [
         "global"
       ],
-      "type": "in mariadb, the fatal semaphore timeout is configurable. this variable sets the maximum number of seconds for semaphores to time out in innodb."
+      "type": "integer"
     },
     {
       "cli": "--innodb-file-format=value",
@@ -1214,7 +1147,6 @@
       "scope": [
         "global"
       ],
-      "type": "file format for new",
       "validValues": [
         "Antelope",
         "Barracuda"
@@ -1229,8 +1161,7 @@
       "name": "innodb_file_format_check",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-file-format-max=value",
@@ -1242,7 +1173,6 @@
       "scope": [
         "global"
       ],
-      "type": "the highest",
       "validValues": [
         "Antelope",
         "Barracuda"
@@ -1257,8 +1187,7 @@
       "name": "innodb_file_per_table",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-fill-factor=#",
@@ -1272,8 +1201,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "percentage of b-tree page filled during bulk insert (sorted index build). used as a hint rather than an absolute value. setting to"
+      ]
     },
     {
       "dataType": "numeric",
@@ -1288,7 +1216,7 @@
       "scope": [
         "global"
       ],
-      "type": "interval in seconds to write and flush the logs. before mariadb 10, this was fixed at one second, which is still the default, but this can now be changed. it's usually increased to reduce flushing and avoid impacting performance of binary log group commit."
+      "type": "integer"
     },
     {
       "cli": "--innodb-flush-log-at-trx-commit[=#]",
@@ -1300,7 +1228,6 @@
       "scope": [
         "global"
       ],
-      "type": "set to",
       "validValues": [
         "0",
         "1",
@@ -1317,7 +1244,6 @@
       "scope": [
         "global"
       ],
-      "type": "",
       "validValues": []
     },
     {
@@ -1330,7 +1256,6 @@
       "scope": [
         "global"
       ],
-      "type": "determines whether, when dirty pages are flushed to the data file, neighboring pages in the data file are flushed at the same time. if set to",
       "validValues": [
         "none",
         "0",
@@ -1350,7 +1275,6 @@
       "scope": [
         "global"
       ],
-      "type": "determines whether flushing a page from the",
       "validValues": [
         "0",
         "1",
@@ -1365,8 +1289,7 @@
       "name": "innodb_flush_sync",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-flushing-avg-loops=#",
@@ -1382,7 +1305,7 @@
       "scope": [
         "global"
       ],
-      "type": "determines how quickly adaptive flushing will respond to changing workloads. the value is the number of iterations that a previously calculated flushing state snapshot is kept. increasing the value smooths and slows the rate that the flushing operations change, while decreasing it causes flushing activity to spike quickly in response to workload changes."
+      "type": "integer"
     },
     {
       "cli": "--innodb-force-load-corrupted",
@@ -1393,8 +1316,7 @@
       "name": "innodb_force_load_corrupted",
       "scope": [
         "global"
-      ],
-      "type": "set to"
+      ]
     },
     {
       "cli": "--innodb-force-primary-key",
@@ -1405,8 +1327,7 @@
       "name": "innodb_force_primary_key",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-force-recovery=#",
@@ -1421,8 +1342,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "innodb-foreground-preflush=value",
@@ -1433,7 +1353,6 @@
       "scope": [
         "global"
       ],
-      "type": "before xtradb 5.6.13-61.0, if the checkpoint age is in the sync preflush zone while a thread is writing to log, it will try to advance the checkpoint by issuing a flush list flush batch if this is not already being done. xtradb has enhanced page cleaner tuning, and  may already be performing furious flushing, resulting in the flush simply adding unneeded mutex pressure. instead, the thread now waits for the flushes to finish, and then has two options, controlled by this variable. xtradb only. added as a deprecated and ignored option in",
       "validValues": []
     },
     {
@@ -1444,8 +1363,7 @@
       "name": "innodb_ft_aux_table",
       "scope": [
         "global"
-      ],
-      "type": "diagnostic variable intended only to be set at runtime. it specifies the qualified name (for example"
+      ]
     },
     {
       "cli": "--innodb-ft-cache-size=#",
@@ -1456,8 +1374,7 @@
       "name": "innodb_ft_cache_size",
       "scope": [
         "global"
-      ],
-      "type": "cache size available for a parsed document while creating an innodb"
+      ]
     },
     {
       "cli": "--innodb-ft-enable-diag-print=#",
@@ -1468,8 +1385,7 @@
       "name": "innodb_ft_enable_diag_print",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-ft-enable-stopword=#",
@@ -1480,8 +1396,7 @@
       "name": "innodb_ft_enable_stopword",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-ft-max-token-size=#",
@@ -1496,8 +1411,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "maximum length of words stored in an innodb"
+      ]
     },
     {
       "cli": "--innodb-ft-min-token-size=#",
@@ -1512,8 +1426,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "minimum length of words stored in an innodb"
+      ]
     },
     {
       "cli": "--innodb-ft-num-word-optimize=#",
@@ -1525,7 +1438,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of words processed during each"
+      "type": "integer"
     },
     {
       "cli": "--innodb-ft-result-cache-limit=#",
@@ -1541,7 +1454,7 @@
       "scope": [
         "global"
       ],
-      "type": "limit in bytes of the innodb"
+      "type": "byte"
     },
     {
       "cli": "--innodb-ft-server-stopword-table=db_name/table_name",
@@ -1551,8 +1464,7 @@
       "name": "innodb_ft_server_stopword_table",
       "scope": [
         "global"
-      ],
-      "type": "table name containing a list of stopwords to ignore when creating an innodb"
+      ]
     },
     {
       "cli": "--innodb-ft-sort-pll-degree=#",
@@ -1568,7 +1480,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of parallel threads used when building an innodb"
+      "type": "integer"
     },
     {
       "cli": "--innodb-ft-total-cache-size=#",
@@ -1583,8 +1495,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "total memory allocated for the cache for all innodb"
+      ]
     },
     {
       "cli": "--innodb-ft-user-stopword-table=db_name/table_name",
@@ -1594,8 +1505,7 @@
       "name": "innodb_ft_user_stopword_table",
       "scope": [
         "session"
-      ],
-      "type": "table name containing a list of stopwords to ignore when creating an innodb"
+      ]
     },
     {
       "cli": "innodb-ibuf-accel-rate=#",
@@ -1610,8 +1520,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "allows the insert buffer activity to be adjusted. the following formula is used: [real activity] = [default activity] * (innodb_io_capacity/100) * (innodb_ibuf_accel_rate/100). as"
+      ]
     },
     {
       "cli": "innodb-ibuf-active-contract=#",
@@ -1626,8 +1535,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "specifies whether the insert buffer can be processed before it's full. if set to"
+      ]
     },
     {
       "cli": "innodb-ibuf-max-size=#",
@@ -1641,7 +1549,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum size in bytes of the insert buffer. defaults to half the size of the"
+      "type": "byte"
     },
     {
       "cli": "--innodb-idle-flush-pct=#",
@@ -1656,8 +1564,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "up to what percentage of dirty pages should be flushed when innodb finds it has spare resources to do so."
+      ]
     },
     {
       "cli": "--innodb-immediate-scrub-data-uncompressed=#",
@@ -1668,8 +1575,7 @@
       "name": "innodb_immediate_scrub_data_uncompressed",
       "scope": [
         "global"
-      ],
-      "type": "enable scrubbing of data. see"
+      ]
     },
     {
       "cli": "innodb-import-table-from-xtrabackup=#",
@@ -1684,8 +1590,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-instrument-semaphores={0|1}",
@@ -1696,8 +1601,7 @@
       "name": "innodb_instrument_semaphores",
       "scope": [
         "global"
-      ],
-      "type": "enable semaphore request instrumentation. this could have some effect on performance but allows better information on long semaphore wait problems."
+      ]
     },
     {
       "cli": "--innodb-io-capacity=#",
@@ -1713,7 +1617,7 @@
       "scope": [
         "global"
       ],
-      "type": "limit on i/o activity for xtradb/innodb background tasks, including merging data from the insert buffer and flushing pages. should be set to around the number of i/o operations per second that system can handle, based on the type of drive/s being used. you can also set it higher when the server starts to help with the extra workload at that time, and then reduce for normal use. ideally, opt for a lower setting, as at higher value data is removed from the buffers too quickly, reducing the effectiveness of caching. see also"
+      "type": "integer"
     },
     {
       "cli": "--innodb-io-capacity-max=#",
@@ -1724,8 +1628,7 @@
       "name": "innodb_io_capacity_max",
       "scope": [
         "global"
-      ],
-      "type": "upper limit to which innoddb can extend"
+      ]
     },
     {
       "dataType": "numeric",
@@ -1733,14 +1636,11 @@
       "dynamic": true,
       "id": "innodb_kill_idle_transaction",
       "name": "innodb_kill_idle_transaction",
-      "range": {
-        "from": null,
-        "to": null
-      },
+      "range": {},
       "scope": [
         "global"
       ],
-      "type": "time in seconds before killing an idle xtradb transaction. if set to"
+      "type": "integer"
     },
     {
       "cli": "--innodb-large-prefix",
@@ -1750,8 +1650,7 @@
       "name": "innodb_large_prefix",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "innodb-lazy-drop-table={0|1}",
@@ -1762,8 +1661,7 @@
       "name": "innodb_lazy_drop_table",
       "scope": [
         "global"
-      ],
-      "type": "deprecated and removed in xtradb 5.6."
+      ]
     },
     {
       "cli": "--innodb-lock-schedule-algorithm=#",
@@ -1775,7 +1673,6 @@
       "scope": [
         "global"
       ],
-      "type": "specifies the algorithm that innodb/xtradb uses to decide which of the waiting transactions should be granted the lock once it has been released. the possible values are:",
       "validValues": [
         "FCFS",
         "VATS"
@@ -1788,14 +1685,12 @@
       "dynamic": true,
       "id": "innodb_lock_wait_timeout",
       "name": "innodb_lock_wait_timeout",
-      "range": {
-        "from": null
-      },
+      "range": {},
       "scope": [
         "global",
         "session"
       ],
-      "type": "time in seconds that an innodb transaction waits for an innodb row lock (not table lock) before giving up with the error"
+      "type": "integer"
     },
     {
       "cli": "--innodb-locking-fake-changes",
@@ -1806,8 +1701,7 @@
       "name": "innodb_locking_fake_changes",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-locks-unsafe-for-binlog",
@@ -1818,8 +1712,7 @@
       "name": "innodb_locks_unsafe_for_binlog",
       "scope": [
         "global"
-      ],
-      "type": "set to"
+      ]
     },
     {
       "cli": "--innodb-log-arch-dir=name",
@@ -1830,8 +1723,7 @@
       "name": "innodb_log_arch_dir",
       "scope": [
         "global"
-      ],
-      "type": "the directory for xtradb log archiving. xtradb only. added as a deprecated and ignored option in"
+      ]
     },
     {
       "cli": "--innodb-log-arch-expire-sec=#",
@@ -1843,7 +1735,7 @@
       "scope": [
         "global"
       ],
-      "type": "time in seconds since the last change after which the archive log should be deleted. xtradb only. added as a deprecated and ignored option in"
+      "type": "integer"
     },
     {
       "cli": "--innodb-log-archive=value",
@@ -1854,8 +1746,7 @@
       "name": "innodb_log_archive",
       "scope": [
         "global"
-      ],
-      "type": "whether or not xtradb log archiving is enabled. xtradb only. added as a deprecated and ignored option in"
+      ]
     },
     {
       "cli": "innodb-log-block-size=#",
@@ -1867,7 +1758,7 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes of the transaction log records. generally"
+      "type": "byte"
     },
     {
       "cli": "--innodb-log-buffer-size=#",
@@ -1883,7 +1774,7 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes of the buffer for writing"
+      "type": "byte"
     },
     {
       "cli": "innodb-log-checksum-algorithm=value",
@@ -1894,7 +1785,6 @@
       "scope": [
         "global"
       ],
-      "type": "experimental feature (as of",
       "validValues": []
     },
     {
@@ -1906,8 +1796,7 @@
       "name": "innodb_log_checksums",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-log-compressed-pages=#",
@@ -1917,8 +1806,7 @@
       "name": "innodb_log_compressed_pages",
       "scope": [
         "global"
-      ],
-      "type": "whether or not images of recompressed pages are stored in the innodb redo logs."
+      ]
     },
     {
       "cli": "--innodb-log-file-size=#",
@@ -1934,7 +1822,7 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes of each log file in the log group. the combined size can be no more than 4gb prior to"
+      "type": "byte"
     },
     {
       "cli": "--innodb-log-files-in-group=#",
@@ -1950,7 +1838,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of physical files in the innodb redo log."
+      "type": "integer"
     },
     {
       "cli": "--innodb-log-group-home-dir=path",
@@ -1960,8 +1848,7 @@
       "name": "innodb_log_group_home_dir",
       "scope": [
         "global"
-      ],
-      "type": "path to the xtradb/innodb redo log files. if none is specified,"
+      ]
     },
     {
       "cli": "--innodb-log-write-ahead-size=#",
@@ -1975,8 +1862,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "redo log write ahead unit size to avoid read-on-write. should match the os cache block io size."
+      ]
     },
     {
       "cli": "--innodb-lru-scan-depth=#",
@@ -1987,8 +1873,7 @@
       "name": "innodb_lru_scan_depth",
       "scope": [
         "global"
-      ],
-      "type": "specifies how far down the buffer pool lru list the cleaning thread should look for dirty pages to flush. this process is performed once a second. in an i/o intensive-workload, can be increased if there is spare i/o capacity, or decreased if in a write-intensive workload with little spare i/o capacity."
+      ]
     },
     {
       "cli": "innodb-max-bitmap-file-size=#",
@@ -2004,7 +1889,7 @@
       "scope": [
         "global"
       ],
-      "type": "limit in bytes of the changed page bitmap files. for faster incremental backup with"
+      "type": "byte"
     },
     {
       "cli": "innodb-max-changed-pages=#",
@@ -2020,7 +1905,7 @@
       "scope": [
         "global"
       ],
-      "type": "limit to the number of changed page bitmap files (stored in the"
+      "type": "integer"
     },
     {
       "cli": "--innodb-max-dirty-pages-pct=#",
@@ -2035,8 +1920,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "maximum percentage of unwritten (dirty) pages in the buffer pool. this variable was changed to a double in"
+      ]
     },
     {
       "cli": "--innodb-max-dirty-pages-pct-lwm=#",
@@ -2051,8 +1935,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "low water mark percentage of dirty pages that will enable preflushing to lower the dirty page ratio. if set to"
+      ]
     },
     {
       "cli": "--innodb-max-purge-lag=#",
@@ -2067,8 +1950,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "when purge operations are lagging on a busy server, setting innodb_max_purge_lag can help. by default set to"
+      ]
     },
     {
       "cli": "--innodb-max-purge-lag-delay=#",
@@ -2079,8 +1961,7 @@
       "name": "innodb_max_purge_lag_delay",
       "scope": [
         "global"
-      ],
-      "type": "maximum delay in milliseconds imposed by the"
+      ]
     },
     {
       "cli": "--innodb-max-undo-log-size=#",
@@ -2094,8 +1975,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "if an undo tablespace is larger than this, it will be marked for truncation if"
+      ]
     },
     {
       "cli": "innodb-merge-sort-block-size=#",
@@ -2111,12 +1991,11 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes of the block used for merge sorting in fast index creation. replaced in"
+      "type": "byte"
     },
     {
       "id": "innodb_mirrored_log_groups",
-      "name": "innodb_mirrored_log_groups",
-      "type": "unused. restored as a deprecated and ignored option in"
+      "name": "innodb_mirrored_log_groups"
     },
     {
       "cli": "--innodb-mtflush-threads=#",
@@ -2132,7 +2011,7 @@
       "scope": [
         "global"
       ],
-      "type": "sets the number of threads to use in multi-threaded flush operations. for more information, see"
+      "type": "integer"
     },
     {
       "cli": "--innodb-monitor-disable=string",
@@ -2142,8 +2021,7 @@
       "name": "innodb_monitor_disable",
       "scope": [
         "global"
-      ],
-      "type": "disables the specified counters in the"
+      ]
     },
     {
       "cli": "--innodb-monitor-enable=string",
@@ -2153,8 +2031,7 @@
       "name": "innodb_monitor_enable",
       "scope": [
         "global"
-      ],
-      "type": "enables the specified counters in the"
+      ]
     },
     {
       "cli": "--innodb-monitor-reset=string",
@@ -2164,8 +2041,7 @@
       "name": "innodb_monitor_reset",
       "scope": [
         "global"
-      ],
-      "type": "resets the count value of the specified counters in the"
+      ]
     },
     {
       "cli": "---innodb-monitor-reset-all=string",
@@ -2175,8 +2051,7 @@
       "name": "innodb_monitor_reset_all",
       "scope": [
         "global"
-      ],
-      "type": "resets all values for the specified counters in the"
+      ]
     },
     {
       "cli": "innodb-numa-interleave={0|1}",
@@ -2187,8 +2062,7 @@
       "name": "innodb_numa_interleave",
       "scope": [
         "global"
-      ],
-      "type": "whether or not to use the numa interleave memory policy to allocate the"
+      ]
     },
     {
       "cli": "--innodb-old-blocks-pct=#",
@@ -2203,8 +2077,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "percentage of the"
+      ]
     },
     {
       "cli": "--innodb-old-blocks-time=#",
@@ -2219,8 +2092,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "time in milliseconds an inserted block must stay in the old sublist after its first access before it can be moved to the new sublist. '0' means \"no delay\". setting  a non-zero value can help prevent full table scans clogging the"
+      ]
     },
     {
       "cli": "--innodb-online-alter-log-max-size=#",
@@ -2235,8 +2107,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "the maximum size for temporary log files during online ddl (data and index structure changes). the temporary log file is used for each table being altered, or index being created, to store data changes to the table while the process is underway. the table is extended by"
+      ]
     },
     {
       "cli": "--innodb-open-files=#",
@@ -2251,8 +2122,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "maximum .ibd files mariadb can have open at the same time. only applies to systems with multiple xtradb/innodb tablespaces, and is separate to the table cache and"
+      ]
     },
     {
       "cli": "--innodb-optimize-fulltext-only=#",
@@ -2263,8 +2133,7 @@
       "name": "innodb_optimize_fulltext_only",
       "scope": [
         "global"
-      ],
-      "type": "when set to"
+      ]
     },
     {
       "cli": "--innodb-page-cleaners=#",
@@ -2280,7 +2149,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of page cleaner threads. the default is"
+      "type": "integer"
     },
     {
       "cli": "--innodb-page-size=#",
@@ -2292,7 +2161,7 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes of the page size for all xtradb/innodb tablespaces. the default,",
+      "type": "byte",
       "validValues": [
         "4k",
         "4096",
@@ -2317,8 +2186,7 @@
       "name": "innodb_prefix_index_cluster_optimization",
       "scope": [
         "global"
-      ],
-      "type": "enable prefix optimization to sometimes avoid cluster index lookups."
+      ]
     },
     {
       "cli": "--innodb-print-all-deadlocks=#",
@@ -2329,8 +2197,7 @@
       "name": "innodb_print_all_deadlocks",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-purge-batch-size=#",
@@ -2345,8 +2212,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "units of redo log records that will trigger a purge operation. together with"
+      ]
     },
     {
       "cli": "-- innodb-purge-rseg-truncate-frequency=#",
@@ -2361,8 +2227,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "frequency with which undo records are purged. set by default to every 128 times, reducing this increases the frequency at which rollback segments are freed. see also"
+      ]
     },
     {
       "cli": "--innodb-purge-threads=#",
@@ -2377,7 +2242,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of background threads dedicated to xtradb/innodb purge operations. since"
+      "type": "integer"
     },
     {
       "cli": "--innodb-random-read-ahead=#",
@@ -2388,8 +2253,7 @@
       "name": "innodb_random_read_ahead",
       "scope": [
         "global"
-      ],
-      "type": "originally, random read-ahead was always set as an optimization technique, but was removed in"
+      ]
     },
     {
       "cli": "innodb-read-ahead=value",
@@ -2401,7 +2265,6 @@
       "scope": [
         "global"
       ],
-      "type": "if set to",
       "validValues": [
         "none",
         "random",
@@ -2423,7 +2286,7 @@
       "scope": [
         "global"
       ],
-      "type": "minimum number of pages xtradb/innodb must read from an extent of 64 before initiating an asynchronous read for the following extent."
+      "type": "integer"
     },
     {
       "cli": "--innodb-read-io-threads=#",
@@ -2439,7 +2302,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of i/o threads for xtradb/innodb reads. you may on rare occasions need to reduce this default on linux systems running multiple mariadb servers to avoid exceeding system limits."
+      "type": "integer"
     },
     {
       "cli": "--innodb-read-only=#",
@@ -2450,8 +2313,7 @@
       "name": "innodb_read_only",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "no",
@@ -2462,8 +2324,7 @@
       "name": "innodb_recovery_stats",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "innodb-recovery-update-relay-log={0|1}",
@@ -2474,8 +2335,7 @@
       "name": "innodb_recovery_update_relay_log",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-replication-delay=#",
@@ -2490,8 +2350,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "time in milliseconds for the slave server to delay the replication thread if"
+      ]
     },
     {
       "cli": "--innodb-rollback-on-timeout",
@@ -2502,8 +2361,7 @@
       "name": "innodb_rollback_on_timeout",
       "scope": [
         "global"
-      ],
-      "type": "innodb usually rolls back the last statement of a transaction that's been timed out (see"
+      ]
     },
     {
       "cli": "--innodb-rollback-segments=#",
@@ -2519,7 +2377,7 @@
       "scope": [
         "global"
       ],
-      "type": "specifies the number of rollback segments that xtradb/innodb will use within a transaction (see"
+      "type": "integer"
     },
     {
       "cli": "--innodb-scrub-log",
@@ -2530,8 +2388,7 @@
       "name": "innodb_scrub_log",
       "scope": [
         "global"
-      ],
-      "type": "enable redo log scrubbing. see"
+      ]
     },
     {
       "cli": "--innodb-scrub-log-interval=#",
@@ -2546,8 +2403,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "used with"
+      ]
     },
     {
       "cli": "--innodb-scrub-log-speed=#",
@@ -2563,7 +2419,7 @@
       "scope": [
         "global"
       ],
-      "type": "innodb redo log scrubbing speed in bytes/sec. see"
+      "type": "byte"
     },
     {
       "cli": "innodb-sched-priority-cleaner=#",
@@ -2578,8 +2434,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "set a thread scheduling priority for cleaner and lru manager threads. the range from"
+      ]
     },
     {
       "cli": "innodb-show-locks-held=#",
@@ -2595,7 +2450,7 @@
       "scope": [
         "global"
       ],
-      "type": "specifies the number of locks held for each innodb transaction to be displayed in"
+      "type": "integer"
     },
     {
       "cli": "innodb-show-verbose-locks=#",
@@ -2610,8 +2465,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "none",
@@ -2626,8 +2480,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "simulate compression failures. used for testing robustness against random compression failures. xtradb only."
+      ]
     },
     {
       "cli": "--innodb-sort-buffer-size=#",
@@ -2643,7 +2496,7 @@
       "scope": [
         "global"
       ],
-      "type": "size of the sort buffers used for sorting data when an innodb index is created, as well as the amount by which the temporary log file is extended during online ddl operations to record concurrent writes. before"
+      "type": "integer"
     },
     {
       "cli": "--innodb-spin-wait-delay=#",
@@ -2658,8 +2511,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "maximum delay (not strictly corresponding to a time unit) between spin lock polls. default changed from"
+      ]
     },
     {
       "cli": "--innodb-stats-auto-recalc=#",
@@ -2670,8 +2522,7 @@
       "name": "innodb_stats_auto_recalc",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "dataType": "boolean",
@@ -2681,8 +2532,7 @@
       "name": "innodb_stats_auto_update",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "dataType": "boolean",
@@ -2692,8 +2542,7 @@
       "name": "innodb_stats_include_delete_marked",
       "scope": [
         "global"
-      ],
-      "type": "include delete marked records when calculating persistent statistics."
+      ]
     },
     {
       "cli": "--innodb-stats-method=name",
@@ -2705,7 +2554,6 @@
       "scope": [
         "global"
       ],
-      "type": "determines how nulls are treated for xtradb/innodb index statistics purposes. if set to",
       "validValues": [
         "nulls_equal",
         "nulls_unequal",
@@ -2726,7 +2574,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of rows modified before we calculate new statistics. if set to"
+      "type": "integer"
     },
     {
       "cli": "--innodb-stats-on-metadata",
@@ -2737,8 +2585,7 @@
       "name": "innodb_stats_on_metadata",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-stats-persistent=#",
@@ -2749,8 +2596,7 @@
       "name": "innodb_stats_persistent",
       "scope": [
         "global"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "--innodb-stats-persistent-sample-pages=#",
@@ -2762,7 +2608,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of index pages sampled when estimating cardinality and statistics for indexed columns. increasing this value will increases index statistics accuracy, but use more i/o resources when running"
+      "type": "integer"
     },
     {
       "cli": "--innodb-stats-sample-pages=#",
@@ -2778,7 +2624,7 @@
       "scope": [
         "global"
       ],
-      "type": "gives control over the index distribution statistics by determining the number of index pages to sample. higher values produce more disk i/o, but, especially for large tables, produce more accurate statistics and therefore make more effective use of the query optimizer. lower values than the default are not recommended, as the statistics can be quite inaccurate. enabling"
+      "type": "integer"
     },
     {
       "cli": "--innodb-stats-traditional=#",
@@ -2790,7 +2636,7 @@
       "scope": [
         "global"
       ],
-      "type": "when enabled (the default), traditional statistics calculation based on the number of configured pages is used. when disabled, the"
+      "type": "integer"
     },
     {
       "cli": "--innodb-stats-transient-sample-pages=#",
@@ -2806,7 +2652,7 @@
       "scope": [
         "global"
       ],
-      "type": "gives control over the index distribution statistics by determining the number of index pages to sample. higher values produce more disk i/o, but, especially for large tables, produce more accurate statistics and therefore make more effective use of the query optimizer. lower values than the default are not recommended, as the statistics can be quite inaccurate. enabling"
+      "type": "integer"
     },
     {
       "dataType": "boolean",
@@ -2816,8 +2662,7 @@
       "name": "innodb_stats_update_need_lock",
       "scope": [
         "global"
-      ],
-      "type": "setting to"
+      ]
     },
     {
       "cli": "--innodb-status-output={0|1}",
@@ -2828,8 +2673,7 @@
       "name": "innodb_status_output",
       "scope": [
         "global"
-      ],
-      "type": "enable"
+      ]
     },
     {
       "cli": "--innodb-status-output-locks={0|1}",
@@ -2840,8 +2684,7 @@
       "name": "innodb_status_output_locks",
       "scope": [
         "global"
-      ],
-      "type": "enable"
+      ]
     },
     {
       "cli": "--innodb-strict-mode=#",
@@ -2852,8 +2695,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-support-xa",
@@ -2865,8 +2707,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-sync-array-size=#",
@@ -2881,8 +2722,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "by default"
+      ]
     },
     {
       "cli": "--innodb-sync-spin-loops=#",
@@ -2898,7 +2738,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of times a thread waits for an xtradb/innodb mutex to be freed before the thread is suspended."
+      "type": "integer"
     },
     {
       "cli": "--innodb-table-locks",
@@ -2910,8 +2750,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if"
+      ]
     },
     {
       "cli": "--innodb-thread-concurrency=#",
@@ -2927,7 +2766,7 @@
       "scope": [
         "global"
       ],
-      "type": "once this number of threads is reached (excluding threads waiting for locks), xtradb/innodb will place new threads in a wait state in a first-in, first-out queue for execution, in order to limit the number of threads running concurrently. a setting of"
+      "type": "integer"
     },
     {
       "cli": "innodb-thread-concurrency-timer-based={0|1}",
@@ -2938,8 +2777,7 @@
       "name": "innodb_thread_concurrency_timer_based",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-thread-sleep-delay=#",
@@ -2951,7 +2789,7 @@
       "scope": [
         "global"
       ],
-      "type": "time in microseconds that xtradb/innodb threads sleep before joining the queue. setting to"
+      "type": "integer"
     },
     {
       "cli": "--innodb-temp-data-file-path=path",
@@ -2962,8 +2800,7 @@
       "name": "innodb_temp_data_file_path",
       "scope": [
         "global"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "--innodb-tmpdir=path",
@@ -2973,8 +2810,7 @@
       "name": "innodb_tmpdir",
       "scope": [
         "global"
-      ],
-      "type": "allows an alternate location to be set for temporary non-tablespace files. if not set (the default), files will be created in the usual"
+      ]
     },
     {
       "cli": "innodb-track-changed-pages={0|1}",
@@ -2985,8 +2821,7 @@
       "name": "innodb_track_changed_pages",
       "scope": [
         "global"
-      ],
-      "type": "for faster incremental backup with"
+      ]
     },
     {
       "cli": "innodb-track-redo-log-now={0|1}",
@@ -2997,8 +2832,7 @@
       "name": "innodb_track_redo_log_now",
       "scope": [
         "global"
-      ],
-      "type": "available on debug builds only. xtradb only. added as a deprecated and ignored option in"
+      ]
     },
     {
       "cli": "--innodb-undo-directory=name",
@@ -3009,8 +2843,7 @@
       "name": "innodb_undo_directory",
       "scope": [
         "global"
-      ],
-      "type": "path to the directory (relative or absolute) that innodb uses to create separate tablespaces for the"
+      ]
     },
     {
       "cli": "--innodb-undo-log-truncate[={0|1}]",
@@ -3021,8 +2854,7 @@
       "name": "innodb_undo_log_truncate",
       "scope": [
         "global"
-      ],
-      "type": "when enabled, undo tablespaces that are larger than"
+      ]
     },
     {
       "cli": "--innodb-undo-logs=#",
@@ -3038,7 +2870,7 @@
       "scope": [
         "global"
       ],
-      "type": "specifies the number of rollback segments that xtradb/innodb will use within a transaction (or the number of active"
+      "type": "integer"
     },
     {
       "cli": "--innodb-undo-tablespaces=#",
@@ -3054,7 +2886,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of tablespaces files used for dividing up the"
+      "type": "integer"
     },
     {
       "cli": "innodb-use-atomic-writes={0|1}",
@@ -3065,8 +2897,7 @@
       "name": "innodb_use_atomic_writes",
       "scope": [
         "global"
-      ],
-      "type": "implement atomic writes on supported ssd devices. see"
+      ]
     },
     {
       "cli": "innodb-use-fallocate={0|1}",
@@ -3077,8 +2908,7 @@
       "name": "innodb_use_fallocate",
       "scope": [
         "global"
-      ],
-      "type": "preallocate files fast, using operating system functionality. on posix systems, posix_fallocate system call is used. automatically set to"
+      ]
     },
     {
       "cli": "innodb-use-global-flush-log-at-trx_commit={0|1}",
@@ -3089,8 +2919,7 @@
       "name": "innodb_use_global_flush_log_at_trx_commit",
       "scope": [
         "global"
-      ],
-      "type": "determines whether a user can set the variable"
+      ]
     },
     {
       "cli": "--innodb-use-mtflush=#",
@@ -3101,8 +2930,7 @@
       "name": "innodb_use_mtflush",
       "scope": [
         "global"
-      ],
-      "type": "whether to enable multi-threaded flush operations.\nfor more information, see fusion.  this feature was deprecated in version 10.2.9 and removed from version 10.3.2 of mariadb.  instead, use"
+      ]
     },
     {
       "cli": "--innodb-use-native-aio=#",
@@ -3113,8 +2941,7 @@
       "name": "innodb_use_native_aio",
       "scope": [
         "global"
-      ],
-      "type": "for linux systems only, specified whether to use linux's asynchronous i/o subsystem. set to"
+      ]
     },
     {
       "cli": "--innodb-use-purge-thread=#",
@@ -3129,8 +2956,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "usually with innodb, data changed by a transaction is written to an undo space to permit read consistency, and freed when the transaction is complete. many, or large, transactions, can cause the main tablespace to grow dramatically, reducing performance. this option, introduced in xtradb 5.1 and removed for 5.5, allows multiple threads to perform the purging, resulting in slower, but much more stable performance."
+      ]
     },
     {
       "cli": "--innodb-use-stacktrace=#",
@@ -3141,8 +2967,7 @@
       "name": "innodb_use_stacktrace",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-use-sys-malloc=#",
@@ -3153,8 +2978,7 @@
       "name": "innodb_use_sys_malloc",
       "scope": [
         "global"
-      ],
-      "type": "if set the"
+      ]
     },
     {
       "cli": "innodb-use-sys-stats-table={0|1}",
@@ -3165,8 +2989,7 @@
       "name": "innodb_use_sys_stats_table",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "cli": "--innodb-use-trim=#",
@@ -3177,8 +3000,7 @@
       "name": "innodb_use_trim",
       "scope": [
         "global"
-      ],
-      "type": "use trim to free up space of compressed blocks. see"
+      ]
     },
     {
       "dataType": "string",
@@ -3187,8 +3009,7 @@
       "name": "innodb_version",
       "scope": [
         "global"
-      ],
-      "type": "innodb version number. from"
+      ]
     },
     {
       "cli": "--innodb-write-io-threads=#",
@@ -3204,7 +3025,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of i/o threads for xtradb/innodb writes. you may on rare occasions need to reduce this default on linux systems running multiple mariadb servers to avoid exceeding system limits."
+      "type": "integer"
     }
   ],
   "name": "xtradbinnodb-server-system-variables",

@@ -7,7 +7,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of dirty blocks in the aria page cache."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -15,8 +15,7 @@
       "name": "Aria_pagecache_blocks_unused",
       "scope": [
         "global"
-      ],
-      "type": "free blocks in the aria page cache."
+      ]
     },
     {
       "dataType": "numeric",
@@ -24,8 +23,7 @@
       "name": "Aria_pagecache_blocks_used",
       "scope": [
         "global"
-      ],
-      "type": "blocks used in the aria page cache."
+      ]
     },
     {
       "dataType": "numeric",
@@ -34,7 +32,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of requests to read something from the aria page cache."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -43,7 +41,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of aria page cache read requests that caused a block to be read from the disk."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -52,7 +50,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of requests to write a block to the aria page cache."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -61,7 +59,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of blocks written to disk from the aria page cache."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -70,7 +68,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of aria log fsyncs."
+      "type": "integer"
     }
   ],
   "name": "aria-server-status-variables",

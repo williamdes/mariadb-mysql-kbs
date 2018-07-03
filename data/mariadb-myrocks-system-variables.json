@@ -13,8 +13,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::access_hint_on_compaction_start for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-advise-random-on-open={0|1}",
@@ -25,8 +24,7 @@
       "name": "rocksdb_advise_random_on_open",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::advise_random_on_open for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-allow-concurrent-memtable-write={0|1}",
@@ -37,8 +35,7 @@
       "name": "rocksdb_allow_concurrent_memtable_write",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::allow_concurrent_memtable_write for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-allow-mmap-reads={0|1}",
@@ -49,8 +46,7 @@
       "name": "rocksdb_allow_mmap_reads",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::allow_mmap_reads for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-allow-mmap-writes={0|1}",
@@ -61,8 +57,7 @@
       "name": "rocksdb_allow_mmap_writes",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::allow_mmap_writes for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-background-sync={0|1}",
@@ -73,8 +68,7 @@
       "name": "rocksdb_background_sync",
       "scope": [
         "global"
-      ],
-      "type": "turns on background syncs for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-base-background-compactions=#",
@@ -89,8 +83,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::base_background_compactions for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-blind-delete-primary-key={0|1}",
@@ -101,8 +94,7 @@
       "name": "rocksdb_blind_delete_primary_key",
       "scope": [
         "global"
-      ],
-      "type": "deleting rows by primary key lookup, without reading rows (blind deletes). blind delete is disabled if the table has secondary key."
+      ]
     },
     {
       "cli": "--rocksdb-block-cache-size=#",
@@ -117,8 +109,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "block_cache size for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-block-restart-interval=#",
@@ -133,8 +124,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "blockbasedtableoptions::block_restart_interval for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-block-size=#",
@@ -149,8 +139,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "blockbasedtableoptions::block_size for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-block-size-deviation=#",
@@ -166,8 +155,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "blockbasedtableoptions::block_size_deviation for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-bulk-load={0|1}",
@@ -179,8 +167,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "use bulk-load mode for inserts. this disables unique_checks and enables rocksdb_commit_in_the_middle."
+      ]
     },
     {
       "cli": "--rocksdb-bulk-load_allow_unsorted={0|1}",
@@ -192,8 +179,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "allow unsorted input during bulk-load. can be changed only when bulk load is disabled."
+      ]
     },
     {
       "cli": "--rocksdb-bulk-load-size=#",
@@ -209,7 +195,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum number of records in a batch for bulk-load mode."
+      "type": "integer"
     },
     {
       "cli": "--rocksdb-bytes-per-sync=#",
@@ -224,8 +210,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::bytes_per_sync for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-cache-index-and-filter_blocks={0|1}",
@@ -236,8 +221,7 @@
       "name": "rocksdb_cache_index_and_filter_blocks",
       "scope": [
         "global"
-      ],
-      "type": "blockbasedtableoptions::cache_index_and_filter_blocks for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-checksums-pct=#",
@@ -253,8 +237,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "percentage of rows to be checksummed."
+      ]
     },
     {
       "cli": "--rocksdb-collect-sst-properties={0|1}",
@@ -265,8 +248,7 @@
       "name": "rocksdb_collect_sst_properties",
       "scope": [
         "global"
-      ],
-      "type": "enables collecting sst file properties on each flush."
+      ]
     },
     {
       "cli": "--rocksdb-commit-in-the-middle={0|1}",
@@ -277,8 +259,7 @@
       "name": "rocksdb_commit_in_the_middle",
       "scope": [
         "global"
-      ],
-      "type": "commit rows implicitly every rocksdb_bulk_load_size, on bulk load/insert, update and delete."
+      ]
     },
     {
       "cli": "--rocksdb-compact-cf=value",
@@ -288,8 +269,7 @@
       "name": "rocksdb_compact_cf",
       "scope": [
         "global"
-      ],
-      "type": "compact column family."
+      ]
     },
     {
       "cli": "--rocksdb-compaction-readahead-size=#",
@@ -304,8 +284,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::compaction_readahead_size for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-compaction-sequential-deletes=#",
@@ -320,8 +299,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "rocksdb will trigger compaction for the file if it has more than this number sequential deletes per window."
+      ]
     },
     {
       "cli": "--rocksdb-compaction-sequential-deletes-count-sd={0|1}",
@@ -332,8 +310,7 @@
       "name": "rocksdb_compaction_sequential_deletes_count_sd",
       "scope": [
         "global"
-      ],
-      "type": "counting singledelete as rocksdb_compaction_sequential_deletes."
+      ]
     },
     {
       "cli": "--rocksdb-compaction-sequential-deletes-file-size=#",
@@ -348,8 +325,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "minimum file size required for compaction_sequential_deletes."
+      ]
     },
     {
       "cli": "--rocksdb-compaction-sequential-deletes-window=#",
@@ -365,7 +341,7 @@
       "scope": [
         "global"
       ],
-      "type": "size of the window for counting rocksdb_compaction_sequential_deletes."
+      "type": "integer"
     },
     {
       "cli": "--rocksdb-coconcurrent-prepare={0|1}",
@@ -376,8 +352,7 @@
       "name": "rocksdb_concurrent_prepare",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::concurrent_prepare for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-create-checkpoint=value",
@@ -387,8 +362,7 @@
       "name": "rocksdb_create_checkpoint",
       "scope": [
         "global"
-      ],
-      "type": "checkpoint directory."
+      ]
     },
     {
       "cli": "--rocksdb-create-if-missing={0|1}",
@@ -399,8 +373,7 @@
       "name": "rocksdb_create_if_missing",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::create_if_missing for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-create-missing-column-families={0|1}",
@@ -411,8 +384,7 @@
       "name": "rocksdb_create_missing_column_families",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::create_missing_column_families for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-datadir[=value]",
@@ -423,8 +395,7 @@
       "name": "rocksdb_datadir",
       "scope": [
         "global"
-      ],
-      "type": "rocksdb data directory."
+      ]
     },
     {
       "cli": "--rocksdb-db-write-buffer-size=#",
@@ -439,8 +410,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::db_write_buffer_size for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-deadlock-detect={0|1}",
@@ -452,8 +422,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "enables deadlock detection."
+      ]
     },
     {
       "cli": "--rocksdb-deadlock-detect-depth=#",
@@ -470,7 +439,7 @@
         "global",
         "session"
       ],
-      "type": "number of transactions deadlock detection will traverse through before assuming deadlock."
+      "type": "integer"
     },
     {
       "cli": "--rocksdb-debug-optimizer-no-zero-cardinality={0|1}",
@@ -482,8 +451,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if cardinality is zero, override it with some value."
+      ]
     },
     {
       "cli": "--rocksdb-debug-ttl-ignore-pk={0|1}",
@@ -495,8 +463,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "for debugging purposes only. if true, compaction filtering will not occur on pk ttl data. this variable is a no-op in non-debug builds."
+      ]
     },
     {
       "cli": "--rocksdb-debug-ttl-read-filter-ts=#",
@@ -512,8 +479,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "for debugging purposes only.  overrides the ttl read filtering time to time + debug_ttl_read_filter_ts. a value of 0 denotes that the variable is not set. this variable is a no-op in non-debug builds."
+      ]
     },
     {
       "cli": "--rocksdb-debug-ttl-read-filter-ts=#",
@@ -529,8 +495,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "for debugging purposes only.  overrides the ttl of records to now() + debug_ttl_rec_ts. the value can be +/- to simulate a record inserted in the past vs a record inserted in the 'future'. a value of 0 denotes that the variable is not set. this variable is a no-op in non-debug builds."
+      ]
     },
     {
       "cli": "--rocksdb-debug-ttl-snapshot-ts=#",
@@ -546,8 +511,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "for debugging purposes only. sets the snapshot during compaction to now() + debug_set_ttl_snapshot_ts. the value can be positive or negative to simulate a snapshot in the past vs a snapshot created in the 'future'. a value of 0 denotes that the variable is not set. this variable is a no-op in non-debug builds."
+      ]
     },
     {
       "cli": "--rocksdb-default-cf-options=value",
@@ -557,8 +521,7 @@
       "name": "rocksdb_default_cf_options",
       "scope": [
         "global"
-      ],
-      "type": "default cf options for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-delayed-write-rate=#",
@@ -573,8 +536,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::delayed_write_rate."
+      ]
     },
     {
       "cli": "--rocksdb-delete-obsolete-files-period-micros=#",
@@ -589,8 +551,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::delete_obsolete_files_period_micros for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-enable-2pc={0|1}",
@@ -601,8 +562,7 @@
       "name": "rocksdb_enable_2pc",
       "scope": [
         "global"
-      ],
-      "type": "enable two phase commit for myrocks. when set, myrocks will keep its data consistent with the"
+      ]
     },
     {
       "cli": "--rocksdb-enable-bulk-load-api={0|1}",
@@ -613,8 +573,7 @@
       "name": "rocksdb_enable_bulk_load_api",
       "scope": [
         "global"
-      ],
-      "type": "enables using sstfilewriter for bulk loading."
+      ]
     },
     {
       "cli": "--rocksdb-enable-thread-tracking={0|1}",
@@ -625,8 +584,7 @@
       "name": "rocksdb_enable_thread_tracking",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::enable_thread_tracking for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-enable-ttl={0|1}",
@@ -637,8 +595,7 @@
       "name": "rocksdb_enable_ttl",
       "scope": [
         "global"
-      ],
-      "type": "enable expired ttl records to be dropped during compaction."
+      ]
     },
     {
       "cli": "--rocksdb-enable-ttl-read-filtering={0|1}",
@@ -649,8 +606,7 @@
       "name": "rocksdb_enable_ttl_read_filtering",
       "scope": [
         "global"
-      ],
-      "type": "for tables with ttl, expired records are skipped/filtered out during processing and in query results. disabling this will allow these records to be seen, but as a result rows may disappear in the middle of transactions as they are dropped during compaction. use with caution."
+      ]
     },
     {
       "cli": "--rocksdb-enable-write-thread-adaptive-yield={0|1}",
@@ -661,8 +617,7 @@
       "name": "rocksdb_enable_write_thread_adaptive_yield",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::enable_write_thread_adaptive_yield for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-error-if-exists={0|1}",
@@ -673,8 +628,7 @@
       "name": "rocksdb_error_if_exists",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::error_if_exists for rocksdbb."
+      ]
     },
     {
       "cli": "--rocksdb-flush-log-at-trx-commit=#",
@@ -690,8 +644,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "sync on transaction commit. similar to"
+      ]
     },
     {
       "cli": "--rocksdb-flush-memtable-on-analyze={0|1}",
@@ -703,8 +656,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "forces memtable flush on analzye table to get accurate cardinality."
+      ]
     },
     {
       "cli": "--rocksdb-force-compute-memtable-stats={0|1}",
@@ -715,8 +667,7 @@
       "name": "rocksdb_force_compute_memtable_stats",
       "scope": [
         "global"
-      ],
-      "type": "force to always compute memtable stats."
+      ]
     },
     {
       "cli": "--rocksdb-force-compute-memtable-stats-cachetime=#",
@@ -731,8 +682,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "time in usecs to cache memtable estimates."
+      ]
     },
     {
       "cli": "--rocksdb-force-flush-memtable-and-lzero-now={0|1}",
@@ -744,8 +694,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "acts similar to force_flush_memtable_now, but also compacts all l0 files."
+      ]
     },
     {
       "cli": "--rocksdb-force-flush-memtable-now={0|1}",
@@ -757,8 +706,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "forces memstore flush which may block all write requests so be careful."
+      ]
     },
     {
       "cli": "--rocksdb-force-index-records-in-range=#",
@@ -774,8 +722,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "used to override the result of records_in_range() when force index is used."
+      ]
     },
     {
       "cli": "--rocksdb-git-hash=value=#",
@@ -785,8 +732,7 @@
       "name": "rocksdb_git_hash",
       "scope": [
         "global"
-      ],
-      "type": "git revision of the rocksdb library used by myrocks."
+      ]
     },
     {
       "cli": "--rocksdb-hash-index-allow-collision={0|1}",
@@ -797,8 +743,7 @@
       "name": "rocksdb_hash_index_allow_collision",
       "scope": [
         "global"
-      ],
-      "type": "blockbasedtableoptions::hash_index_allow_collision for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-index-type=value",
@@ -810,7 +755,6 @@
       "scope": [
         "global"
       ],
-      "type": "blockbasedtableoptions::index_type for rocksdb.",
       "validValues": [
         "kBinarySearch",
         "kHashSearch"
@@ -826,7 +770,6 @@
       "scope": [
         "global"
       ],
-      "type": "filter level for info logs to be written mysqld error log. valid values include 'debug_level', 'info_level', 'warn_level''error_level' and 'fatal_level'.",
       "validValues": [
         "error_level",
         "debug_level",
@@ -845,7 +788,6 @@
       "scope": [
         "global"
       ],
-      "type": "timeout for experimental i/o watchdog.",
       "validValues": [
         "0",
         "4294967295"
@@ -860,8 +802,7 @@
       "name": "rocksdb_is_fd_close_on_exec",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::is_fd_close_on_exec for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-keep-log-file-num=#",
@@ -876,8 +817,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::keep_log_file_num for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-large_prefix={0|1}",
@@ -888,8 +828,7 @@
       "name": "rocksdb_large_prefix",
       "scope": [
         "global"
-      ],
-      "type": "support large index prefix length of 3072 bytes. if off, the maximum index prefix length is 767."
+      ]
     },
     {
       "cli": "--rocksdb-lock-scanned-rows={0|1}",
@@ -901,8 +840,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "take and hold locks on rows that are scanned but not updated."
+      ]
     },
     {
       "cli": "--rocksdb-lock-wait-timeout=#",
@@ -919,7 +857,7 @@
         "global",
         "session"
       ],
-      "type": "number of seconds to wait for lock."
+      "type": "integer"
     },
     {
       "cli": "--rocksdb-log-file-time-to_roll=#",
@@ -934,8 +872,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::log_file_time_to_roll for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-manifest-preallocation-size=#",
@@ -950,8 +887,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::manifest_preallocation_size for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-manual-wal-flush={0|1}",
@@ -962,8 +898,7 @@
       "name": "rocksdb_manual_wal_flush",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::manual_wal_flush for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-master-skip-tx-api={0|1}",
@@ -975,8 +910,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "skipping holding any lock on row access. not effective on slave."
+      ]
     },
     {
       "cli": "--rocksdb-max-background-compactions=#",
@@ -991,8 +925,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::max_background_compactions for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-max-background-flushes=#",
@@ -1007,8 +940,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::max_background_flushes for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-max-background-jobs=#",
@@ -1023,8 +955,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::max_background_jobs for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-max-latest-deadlocks=#",
@@ -1040,7 +971,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum number of recent deadlocks to store."
+      "type": "integer"
     },
     {
       "cli": "--rocksdb-max-log-file-size=#",
@@ -1055,8 +986,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::max_log_file_size for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-manifest-log-file-size=#",
@@ -1071,8 +1001,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::max_manifest_file_size for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-max-open-files=#",
@@ -1087,8 +1016,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::max_open_files for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-max-row-locks=#",
@@ -1105,7 +1033,7 @@
         "global",
         "session"
       ],
-      "type": "maximum number of locks a transaction can have."
+      "type": "integer"
     },
     {
       "cli": "--rocksdb-max-subcompactions=#",
@@ -1120,8 +1048,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::max_subcompactions for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-max-total-wal-size=#",
@@ -1136,8 +1063,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::max_total_wal_size for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-merge-buf-size=#",
@@ -1153,8 +1079,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "size to allocate for merge sort buffers written out to disk during inplace index creation."
+      ]
     },
     {
       "cli": "--rocksdb-merge-combine-read-size=#",
@@ -1170,8 +1095,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "size that we have to work with during combine (reading from disk) phase of external sort during fast index creation."
+      ]
     },
     {
       "cli": "--rocksdb-merge-tmp-file-removal-delay-ms=#",
@@ -1187,8 +1111,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "fast index creation creates a large tmp file on disk during index creation.  removing this large file all at once when index creation is complete can cause trim stalls on flash. this variable specifies a duration to sleep (in milliseconds) between calling chsize() to truncate the file in chunks. the chunk size is  the same as merge_buf_size."
+      ]
     },
     {
       "cli": "--rocksdb-new-table-reader-for-compaction-inputs={0|1}",
@@ -1199,8 +1122,7 @@
       "name": "rocksdb_new_table_reader_for_compaction_inputs",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::new_table_reader_for_compaction_inputs for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-no-block-cache={0|1}",
@@ -1211,8 +1133,7 @@
       "name": "rocksdb_no_block_cache",
       "scope": [
         "global"
-      ],
-      "type": "blockbasedtableoptions::no_block_cache for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-override-cf-options=value",
@@ -1222,8 +1143,7 @@
       "name": "rocksdb_override_cf_options",
       "scope": [
         "global"
-      ],
-      "type": "option overrides per cf for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-paranoid-checks={0|1}",
@@ -1234,8 +1154,7 @@
       "name": "rocksdb_paranoid_checks",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::paranoid_checks for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-pause-background-work={0|1}",
@@ -1246,8 +1165,7 @@
       "name": "rocksdb_pause_background_work",
       "scope": [
         "global"
-      ],
-      "type": "disable all rocksdb background operations."
+      ]
     },
     {
       "cli": "--rocksdb-perf-context-level=#",
@@ -1263,8 +1181,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "perf context level for rocksdb internal timer stat collection."
+      ]
     },
     {
       "cli": "--rocksdb-persistent-cache-path=value",
@@ -1274,8 +1191,7 @@
       "name": "rocksdb_persistent_cache_path",
       "scope": [
         "global"
-      ],
-      "type": "path for blockbasedtableoptions::persistent_cache for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-persistent-cache-size-mb=#",
@@ -1292,7 +1208,7 @@
         "global",
         "session"
       ],
-      "type": "size of cache in mb for blockbasedtableoptions::persistent_cache for rocksdb."
+      "type": "integer"
     },
     {
       "cli": "--rocksdb-pin-l0-filter-and-index-blocks-in-cache={0|1}",
@@ -1303,8 +1219,7 @@
       "name": "rocksdb_pin_l0_filter_and_index_blocks_in_cache",
       "scope": [
         "global"
-      ],
-      "type": "pin_l0_filter_and_index_blocks_in_cache for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-print-snapshot-conflict-queries={0|1}",
@@ -1315,8 +1230,7 @@
       "name": "rocksdb_print_snapshot_conflict_queries",
       "scope": [
         "global"
-      ],
-      "type": "logging queries that got snapshot conflict errors into *.err log."
+      ]
     },
     {
       "cli": "--rocksdb-rate-limiter-bytes-per-sec=#",
@@ -1331,8 +1245,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::rate_limiter bytes_per_sec for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-read-free-rpl-tables=value",
@@ -1343,8 +1256,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "list of tables that will use read-free replication on the slave (i.e. not lookup a row during replication)."
+      ]
     },
     {
       "cli": "--rocksdb-records-in-range=#",
@@ -1360,8 +1272,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "used to override the result of records_in_range(). set to a positive number to override."
+      ]
     },
     {
       "cli": "--rocksdb-reset-stats={0|1}",
@@ -1372,8 +1283,7 @@
       "name": "rocksdb_reset_stats",
       "scope": [
         "global"
-      ],
-      "type": "reset the rocksdb internal statistics without restarting the db."
+      ]
     },
     {
       "cli": "--rocksdb-seconds-between-stat-computes=#",
@@ -1389,7 +1299,7 @@
       "scope": [
         "global"
       ],
-      "type": "sets a number of seconds to wait between optimizer stats recomputation. only changed indexes will be refreshed."
+      "type": "integer"
     },
     {
       "cli": "--rocksdb-signal-drop-index-thread={0|1}",
@@ -1400,8 +1310,7 @@
       "name": "rocksdb_signal_drop_index_thread",
       "scope": [
         "global"
-      ],
-      "type": "wake up drop index thread."
+      ]
     },
     {
       "cli": "--rocksdb-sim-cache-size=#",
@@ -1416,8 +1325,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "simulated cache size for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-skip-bloom-filter-on_read={0|1}",
@@ -1429,8 +1337,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "skip using bloom filter for reads."
+      ]
     },
     {
       "cli": "--rocksdb-skip-fill-cache={0|1}",
@@ -1442,8 +1349,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "skip filling block cache on read requests."
+      ]
     },
     {
       "cli": "--rocksdb-skip-unique-check-tables=value",
@@ -1455,8 +1361,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "skip unique constraint checking for the specified tables."
+      ]
     },
     {
       "cli": "--rocksdb-sst-mgr-rate-bytes-per-sec=#",
@@ -1471,8 +1376,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::sst_file_manager rate_bytes_per_sec for rocksdb"
+      ]
     },
     {
       "cli": "--rocksdb-stats-dump-period-sec=#",
@@ -1487,8 +1391,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::stats_dump_period_sec for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-store-row-debug-checksums={0|1}",
@@ -1500,8 +1403,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "include checksums when writing index/table records."
+      ]
     },
     {
       "cli": "--rocksdb-strict-collation-check={0|1}",
@@ -1512,8 +1414,7 @@
       "name": "rocksdb_strict_collation_check",
       "scope": [
         "global"
-      ],
-      "type": "enforce case sensitive collation for myrocks indexes."
+      ]
     },
     {
       "cli": "--rocksdb-strict-collation-exceptions=value",
@@ -1523,8 +1424,7 @@
       "name": "rocksdb_strict_collation_exceptions",
       "scope": [
         "global"
-      ],
-      "type": "list of tables (using regex) that are excluded from the case sensitive collation enforcement."
+      ]
     },
     {
       "cli": "--rocksdb-supported-compression-types=value",
@@ -1535,8 +1435,7 @@
       "name": "rocksdb_supported_compression_types",
       "scope": [
         "global"
-      ],
-      "type": "compression algorithms supported by rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-table-cache-numshardbits=#",
@@ -1551,8 +1450,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::table_cache_numshardbits for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-table-stats-sampling-pct=#",
@@ -1567,8 +1465,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "percentage of entries to sample when collecting statistics about table properties. specify either 0 to sample everything or percentage [1..100]. by default 10% of entries are sampled."
+      ]
     },
     {
       "cli": "--rocksdb-tmpdir[=value]",
@@ -1579,8 +1476,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "directory for temporary files during ddl operations."
+      ]
     },
     {
       "cli": "--rocksdb-trace-sst-api={0|1}",
@@ -1592,8 +1488,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "generate trace output in the log for each call to the sstfilewriter."
+      ]
     },
     {
       "cli": "--rocksdb-unsafe-for-binlog={0|1}",
@@ -1605,8 +1500,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "allowing statement based binary logging which may break consistency."
+      ]
     },
     {
       "cli": "--rocksdb-update-cf-options=value",
@@ -1616,8 +1510,7 @@
       "name": "rocksdb_update_cf_options",
       "scope": [
         "global"
-      ],
-      "type": "option updates per column family for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-use-adaptive-mutex={0|1}",
@@ -1628,8 +1521,7 @@
       "name": "rocksdb_use_adaptive_mutex",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::use_adaptive_mutex for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-use-clock-cache={0|1}",
@@ -1640,8 +1532,7 @@
       "name": "rocksdb_use_clock_cache",
       "scope": [
         "global"
-      ],
-      "type": "use clockcache instead of default lrucache for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-use-direct-io-for-flush-and-compaction={0|1}",
@@ -1652,8 +1543,7 @@
       "name": "rocksdb_use_direct_io_for_flush_and_compaction",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::use_direct_io_for_flush_and_compaction for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-use-direct-reads={0|1}",
@@ -1664,8 +1554,7 @@
       "name": "rocksdb_use_direct_reads",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::use_direct_reads for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-use-fsync={0|1}",
@@ -1676,8 +1565,7 @@
       "name": "rocksdb_use_fsync",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::use_fsync for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-validate-tables=#",
@@ -1692,8 +1580,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "verify all .frm files match all rocksdb tables (0 means no verification, 1 means verify and fail on error, and 2 means verify but continue."
+      ]
     },
     {
       "cli": "--rocksdb-verify-row-debug-checksums={0|1}",
@@ -1705,8 +1592,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "verify checksums when reading index/table records."
+      ]
     },
     {
       "cli": "--rocksdb-wal-bytes-per-sync=#",
@@ -1721,8 +1607,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::wal_bytes_per_sync for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-wal-dir=value",
@@ -1732,8 +1617,7 @@
       "name": "rocksdb_wal_dir",
       "scope": [
         "global"
-      ],
-      "type": "dboptions::wal_dir for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-wal-recovery-mode=#",
@@ -1748,8 +1632,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::wal_recovery_mode for rocksdb. default is kabsoluteconsistency."
+      ]
     },
     {
       "cli": "--rocksdb-wal-size-limit-mb=#",
@@ -1764,8 +1647,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::wal_size_limit_mb for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-wal-ttl-seconds=#",
@@ -1780,8 +1662,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "dboptions::wal_ttl_seconds for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-whole-key-filtering={0|1}",
@@ -1792,8 +1673,7 @@
       "name": "rocksdb_whole_key_filtering",
       "scope": [
         "global"
-      ],
-      "type": "blockbasedtableoptions::whole_key_filtering for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-write-batch-max-bytes=#",
@@ -1810,7 +1690,7 @@
         "global",
         "session"
       ],
-      "type": "maximum size of write batch in bytes. 0 means no limit."
+      "type": "byte"
     },
     {
       "cli": "--rocksdb-write-disable-wal={0|1}",
@@ -1822,8 +1702,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "writeoptions::disablewal for rocksdb."
+      ]
     },
     {
       "cli": "--rocksdb-write-ignore-missing-column-familiesl={0|1}",
@@ -1835,8 +1714,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "writeoptions::ignore_missing_column_families for rocksdb."
+      ]
     }
   ],
   "name": "myrocks-system-variables",

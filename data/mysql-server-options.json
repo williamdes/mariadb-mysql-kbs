@@ -548,8 +548,7 @@
       "id": "option_mysqld_open-files-limit",
       "name": "open_files_limit",
       "range": {
-        "from": 0,
-        "to": null
+        "from": 0
       },
       "scope": [
         "global"

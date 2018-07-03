@@ -9,8 +9,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "print errors for alter table operations."
+      ]
     },
     {
       "dataType": "numeric",
@@ -26,7 +25,7 @@
         "global",
         "session"
       ],
-      "type": "time in seconds that"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -42,7 +41,7 @@
         "global",
         "session"
       ],
-      "type": "uncompressed size of internal fractal tree and leaf nodes. changing will only affect tables created after the new setting is in effect. existing tables will keep the setting they were created with unless the table is dumped and reloaded."
+      "type": "integer"
     },
     {
       "dataType": "boolean",
@@ -53,15 +52,14 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "dataType": "numeric",
       "dynamic": false,
       "id": "tokudb_cache_size",
       "name": "tokudb_cache_size",
-      "type": "size in bytes of the tokudb cache. this variable is read-only and cannot be changed dynamically. to change the value, either set the value in the"
+      "type": "byte"
     },
     {
       "dataType": "numeric",
@@ -72,7 +70,6 @@
       "scope": [
         "global"
       ],
-      "type": "check if jemalloc is linked.",
       "validValues": [
         "0",
         "1"
@@ -87,8 +84,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "mechanism to lock out tokudb checkpoints. when set to"
+      ]
     },
     {
       "dataType": "boolean",
@@ -98,8 +94,7 @@
       "name": "tokudb_checkpoint_on_flush_logs",
       "scope": [
         "global"
-      ],
-      "type": "tokudb checkpoint on flush logs."
+      ]
     },
     {
       "dataType": "numeric",
@@ -114,7 +109,7 @@
       "scope": [
         "global"
       ],
-      "type": "time in seconds between the beginning of each checkpoint. it is recommended to leave this at the default setting of 1 minute."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -129,7 +124,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of internal nodes processed in each cleaner thread period (see"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -144,7 +139,7 @@
       "scope": [
         "global"
       ],
-      "type": "frequency in seconds for the running of the cleaner thread. setting to"
+      "type": "integer"
     },
     {
       "dataType": "boolean",
@@ -155,8 +150,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "whether or not the transaction log is flushed upon transaction commit. flushing has a minor performance penalty, but switching it off means that committed transactions may not survive a server crash."
+      ]
     },
     {
       "dataType": "boolean",
@@ -167,15 +161,13 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "whether indexes are hot or not. hot, or online, indexes (the default) mean that the table is available for inserting and updates while the index is being created. it is slower to create hot indexes."
+      ]
     },
     {
       "dataType": "string",
       "dynamic": false,
       "id": "tokudb_data_dir",
-      "name": "tokudb_data_dir",
-      "type": "directory where the tokudb data is stored. by default the variable is empty, in which case the regular"
+      "name": "tokudb_data_dir"
     },
     {
       "dataType": "numeric",
@@ -189,16 +181,14 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "setting to a non-zero value turns on various tokudb debug traces."
+      ]
     },
     {
       "dataType": "boolean",
       "default": "OFF",
       "dynamic": false,
       "id": "tokudb_directio",
-      "name": "tokudb_directio",
-      "type": "when set to on, tokudb writes use direct io instead of buffered io."
+      "name": "tokudb_directio"
     },
     {
       "dataType": "boolean",
@@ -209,8 +199,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "dataType": "boolean",
@@ -221,8 +210,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if prefetching is not disabled (the default), range queries usually benefit from aggressive prefetching of blocks of rows. for range queries with limit clauses, this can create unnecessary io, and so prefetching can be disabled if these make up a majority of range queries."
+      ]
     },
     {
       "dataType": "boolean",
@@ -233,8 +221,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "usually, tokudb permits column addition, deletion, expansion, and renaming with minimal locking, very quickly. this variable determines whether certain slow [alter|alter]] table statements that cannot take advantage of this feature are permitted. statements that are slow are those that include a mix of column additions, deletions or expansions, for example,"
+      ]
     },
     {
       "dataType": "enum",
@@ -246,7 +233,6 @@
         "global",
         "session"
       ],
-      "type": "tokudb algorithm to check if the table is empty when opened. setting to",
       "validValues": [
         "lr",
         "rl",
@@ -262,7 +248,7 @@
       "scope": [
         "global"
       ],
-      "type": "if this percentage of the filesystem is not free, inserts will be prohibited. recommended value is half the size of the available memory. once disabled, inserts will be re-enabled once twice the reserve is available. tokudb will freeze entirely if the disk becomes entirely full."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -277,8 +263,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "fsync() operations frequency in milliseconds. if set to"
+      ]
     },
     {
       "dataType": "boolean",
@@ -289,8 +274,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "hide the default row format."
+      ]
     },
     {
       "dataType": "numeric",
@@ -305,8 +289,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "control lock tree kill callback frequency."
+      ]
     },
     {
       "dataType": "text",
@@ -316,8 +299,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "empty by default, when a lock deadlock is detected, or a lock request times out, set to a json document describing the most recent lock conflict. only set when the first bit of"
+      ]
     },
     {
       "dataType": "boolean",
@@ -328,8 +310,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "dataType": "numeric",
@@ -344,8 +325,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "memory limit for each loader instance used by the tokudb bulk loader.  memory is taken from the tokudb cache ("
+      ]
     },
     {
       "dataType": "numeric",
@@ -360,8 +340,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "time in milliseconds that a transaction will wait for a lock held by another transaction to be released before timing out with a"
+      ]
     },
     {
       "dataType": "numeric",
@@ -372,15 +351,13 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "when bit zero is set (default"
+      ]
     },
     {
       "dataType": "string",
       "dynamic": false,
       "id": "tokudb_log_dir",
-      "name": "tokudb_log_dir",
-      "type": "directory where the tokudb log files are stored. by default the variable is empty, in which case the regular"
+      "name": "tokudb_log_dir"
     },
     {
       "dataType": "numeric",
@@ -391,8 +368,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "max memory for locks."
+      ]
     },
     {
       "dataType": "numeric",
@@ -407,8 +383,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "when deleting a percentage of the tree (useful when the left side of the tree has many deletions, such as a pattern with increasing ids or dates), it's possible to optimize a subset of the fractal tree, as determined by the value of this variable, which ranges from"
+      ]
     },
     {
       "dataType": "string",
@@ -418,8 +393,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to an index name, will optimize that single index in a table. empty by default."
+      ]
     },
     {
       "dataType": "numeric",
@@ -435,7 +409,7 @@
         "global",
         "session"
       ],
-      "type": "table optimization utilizes all available resources by default. this variable allows the table optimization speed to be limited in order to reduce the overall resources used. the limit places an upper bound on the number of fractal tree leaf nodes that are optimized per second."
+      "type": "integer"
     },
     {
       "dataType": "enumerated",
@@ -447,7 +421,6 @@
         "global",
         "session"
       ],
-      "type": "mode for primary key inserts using either",
       "validValues": [
         "0",
         "1",
@@ -463,8 +436,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "dataType": "numeric",
@@ -480,7 +452,7 @@
         "global",
         "session"
       ],
-      "type": "uncompressed size in bytes of the read blocks of the fractal tree leaves. changing will only affect tables created after the new setting is in effect. existing tables will keep the setting they were created with unless the table is dumped and reloaded. larger values are better for large range scans and higher compressions, while smaller values are better for point and small range scans."
+      "type": "byte"
     },
     {
       "dataType": "numeric",
@@ -496,7 +468,7 @@
         "global",
         "session"
       ],
-      "type": "per-client size in bytes of the buffer used for storing bulk fetched values as part of a large range query. reduce if there are many simultaneous clients. setting to"
+      "type": "byte"
     },
     {
       "dataType": "numeric",
@@ -510,8 +482,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "progress is measured every this many reads for display by"
+      ]
     },
     {
       "dataType": "enumerated",
@@ -523,7 +494,6 @@
         "global",
         "session"
       ],
-      "type": "compression algorithm used by default to compress data. can be overridden by a row format specified in the",
       "validValues": [
         "tokudb_default",
         "tokudb_fast",
@@ -543,8 +513,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "by default, when the slave is in read only mode, row events will be run from the binary log using tokudb's read-free replication (rfr). setting this variable to"
+      ]
     },
     {
       "dataType": "boolean",
@@ -555,8 +524,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "dataType": "numeric",
@@ -568,7 +536,7 @@
         "global",
         "session"
       ],
-      "type": "can be used to simulate long disk reads by sleeping for the specified time, in microseconds, before the row lookup query. only useful to change in a test environment."
+      "type": "integer"
     },
     {
       "dataType": "boolean",
@@ -579,8 +547,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to"
+      ]
     },
     {
       "dataType": "numeric",
@@ -592,7 +559,7 @@
         "global",
         "session"
       ],
-      "type": "can be used to simulate long disk reads by sleeping for the specified time, in microseconds, before the row lookup query. only useful to change in a test environment."
+      "type": "integer"
     },
     {
       "dataType": "boolean",
@@ -603,22 +570,19 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "whether or not the prepare phase of an xa transaction performs an fsync()."
+      ]
     },
     {
       "dataType": "directory name",
       "dynamic": false,
       "id": "tokudb_tmp_dir",
-      "name": "tokudb_tmp_dir",
-      "type": "directory where the tokudb bulk loaders temporary files are stored. can be very large, and useful to place on a separate disk. by default the variable is empty, in which case the regular"
+      "name": "tokudb_tmp_dir"
     },
     {
       "dataType": "string",
       "dynamic": false,
       "id": "tokudb_version",
-      "name": "tokudb_version",
-      "type": "the tokudb version of the plugin included on mariadb."
+      "name": "tokudb_version"
     },
     {
       "dataType": "numeric",
@@ -632,8 +596,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "progress is measured every this many writes for display by"
+      ]
     }
   ],
   "name": "tokudb-system-variables",

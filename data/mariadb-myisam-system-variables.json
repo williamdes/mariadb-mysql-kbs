@@ -9,12 +9,12 @@
       "name": "key_buffer_size",
       "range": {
         "from": 8,
-        "to": "upwards (upper limit determined by operating system per process limit)"
+        "to": "upwards"
       },
       "scope": [
         "global"
       ],
-      "type": "size of the buffer for the index blocks used by myisam tables and shared for all threads. see"
+      "type": "integer"
     },
     {
       "cli": "--key-cache-age-threshold=#",
@@ -29,8 +29,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "the lower the setting, the more quickly buffers move from the hot key cache sublist to the warm sublist."
+      ]
     },
     {
       "cli": "--key-cache-block-size=#",
@@ -45,8 +44,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": ""
+      ]
     },
     {
       "cli": "--key-cache-division-limit=#",
@@ -61,8 +59,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "percentage to use for the warm key cache buffer list (the remainder is allocated between the hot and cold caches)."
+      ]
     },
     {
       "cli": "--key-cache-file-hash-size=#",
@@ -78,7 +75,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of hash buckets for open and changed files. if you have many myisam files open you should increase this for faster flushing of changes. a good value is probably 1/10th of the number of possible open myisam files."
+      "type": "integer"
     },
     {
       "cli": "--key-cache-segments=#",
@@ -104,8 +101,7 @@
       "name": "myisam_block_size",
       "scope": [
         "global"
-      ],
-      "type": "block size to be used for myisam index pages."
+      ]
     },
     {
       "cli": "--myisam-data-pointer-size=#",
@@ -121,12 +117,11 @@
       "scope": [
         "global"
       ],
-      "type": "size in bytes of the default pointer, used in a"
+      "type": "byte"
     },
     {
       "id": "myisam_max_extra_sort_file_size",
-      "name": "myisam_max_extra_sort_file_size",
-      "type": "removed in mysql 5.0.6, was used as a way to force long character keys in large tables to use the key cache method."
+      "name": "myisam_max_extra_sort_file_size"
     },
     {
       "cli": "--myisam-max-sort-file-size=#",
@@ -137,7 +132,7 @@
       "scope": [
         "global"
       ],
-      "type": "maximum size in bytes of the temporary file used while recreating a myisam index. if the this size is exceeded, the slower process of using the key cache is done instead."
+      "type": "byte"
     },
     {
       "cli": "--myisam-mmap-size=#",
@@ -149,7 +144,7 @@
         "global",
         "session"
       ],
-      "type": "maximum memory in bytes that can be used for memory mapping compressed myisam files. too high a value may result in swapping if there are many compressed myisam tables."
+      "type": "byte"
     },
     {
       "cli": "--myisam-recover-options[=name]",
@@ -160,7 +155,6 @@
       "scope": [
         "global"
       ],
-      "type": "myisam recovery mode. multiple options can be selected, comma-delimited. using no argument is equivalent to specifying",
       "validValues": [
         "OFF",
         "DEFAULT",
@@ -180,8 +174,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "if set to more than"
+      ]
     },
     {
       "cli": "--myisam-sort-buffer-size=#",
@@ -198,7 +191,7 @@
         "global",
         "session"
       ],
-      "type": "size in bytes of the buffer allocated when creating or sorting indexes on a myisam table."
+      "type": "byte"
     },
     {
       "cli": "--myisam-stats-method=name",
@@ -211,7 +204,6 @@
         "global",
         "session"
       ],
-      "type": "determines how nulls are treated for",
       "validValues": [
         "nulls_equal",
         "nulls_unequal",
@@ -227,8 +219,7 @@
       "name": "myisam_use_mmap",
       "scope": [
         "global"
-      ],
-      "type": "if set to"
+      ]
     }
   ],
   "name": "myisam-system-variables",

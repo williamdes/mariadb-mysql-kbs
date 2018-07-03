@@ -9,7 +9,6 @@
       "scope": [
         "global"
       ],
-      "type": "if set it specifies the set of types of events to log. for example:",
       "validValues": [
         "CONNECT",
         "QUERY",
@@ -28,8 +27,7 @@
       "name": "server_audit_excl_users",
       "scope": [
         "global"
-      ],
-      "type": "if not empty, it contains the list of users whose activity will not be logged.\tfor example:"
+      ]
     },
     {
       "cli": "--server-audit-file-path=value",
@@ -40,8 +38,7 @@
       "name": "server_audit_file_path",
       "scope": [
         "global"
-      ],
-      "type": "when"
+      ]
     },
     {
       "cli": "--server-audit-rotate-now[={0|1}]",
@@ -52,8 +49,7 @@
       "name": "server_audit_file_rotate_now",
       "scope": [
         "global"
-      ],
-      "type": "when"
+      ]
     },
     {
       "cli": "--server-audit-rotate-size=#",
@@ -64,8 +60,7 @@
       "name": "server_audit_file_rotate_size",
       "scope": [
         "global"
-      ],
-      "type": "when"
+      ]
     },
     {
       "cli": "--server-audit-rotations=#",
@@ -80,8 +75,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "when"
+      ]
     },
     {
       "cli": "--server-audit-incl-users=value",
@@ -91,8 +85,7 @@
       "name": "server_audit_incl_users",
       "scope": [
         "global"
-      ],
-      "type": "if not empty, it contains a comma-delimited list of users whose activity will be logged. for example:"
+      ]
     },
     {
       "cli": "n/a",
@@ -102,8 +95,7 @@
       "name": "server_audit_loc_info",
       "scope": [
         "global"
-      ],
-      "type": "used by plugin internals. for a user it's read-only and its value has no distinct meaning. the goal is to make it invisible over time."
+      ]
     },
     {
       "cli": "--server-audit-logging[={0|1}]",
@@ -114,14 +106,12 @@
       "name": "server_audit_logging",
       "scope": [
         "global"
-      ],
-      "type": "enables/disables the logging. expected values are on/off. for example:"
+      ]
     },
     {
       "cli": "--server-audit-mode[=#]",
       "id": "server_audit_mode",
-      "name": "server_audit_mode",
-      "type": "this variable doesn't have any distinctive meaning for a user. its value mostly reflects the server version with which the plugin was started and is intended to be used by developers for testing."
+      "name": "server_audit_mode"
     },
     {
       "cli": "--server-audit-output-type=value",
@@ -133,7 +123,6 @@
       "scope": [
         "global"
       ],
-      "type": "specifies the desired output type. can be syslog or file. for example:",
       "validValues": [
         "SYSLOG",
         "FILE"
@@ -152,8 +141,7 @@
       },
       "scope": [
         "global"
-      ],
-      "type": "limit on the length of the query string in a record."
+      ]
     },
     {
       "cli": "--server-audit-syslog-facility=value",
@@ -165,7 +153,6 @@
       "scope": [
         "global"
       ],
-      "type": "syslog-mode variable. it defines the 'facility' of the records that will be sent to the syslog. later the log can be filtered by this parameter.",
       "validValues": [
         "LOG_USER",
         "LOG_MAIL",
@@ -191,8 +178,7 @@
       "name": "server_audit_syslog_ident",
       "scope": [
         "global"
-      ],
-      "type": "syslog-mode variable. string value for the 'ident' part of each syslog record. default value is 'mysql-server_auditing'. new value becomes effective only after restarting the logging."
+      ]
     },
     {
       "cli": "--server-audit-syslog-info=value",
@@ -202,8 +188,7 @@
       "name": "server_audit_syslog_info",
       "scope": [
         "global"
-      ],
-      "type": "syslog-mode variable. the 'info' string to be added to the syslog records. can be changed any time."
+      ]
     },
     {
       "cli": "--server-audit-syslog-priority=value",
@@ -215,7 +200,6 @@
       "scope": [
         "global"
       ],
-      "type": "syslog-mode variable. defines the priority of the log records for the syslogd.",
       "validValues": [
         "LOG_EMERG",
         "LOG_ALERT",

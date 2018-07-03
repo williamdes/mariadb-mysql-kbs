@@ -3,14 +3,12 @@
     {
       "dataType": "numeric",
       "id": "mroonga_count_skip",
-      "name": "Mroonga_count_skip",
-      "type": "incremented each time the 'fast line count feature' is used. can be used to check if the feature is working after enabling it."
+      "name": "Mroonga_count_skip"
     },
     {
       "dataType": "numeric",
       "id": "mroonga_fast_order_limit",
-      "name": "Mroonga_fast_order_limit",
-      "type": "incremented each time the 'fast order by limit feature' is used. can be used to check if the feature is working after enabling it."
+      "name": "Mroonga_fast_order_limit"
     }
   ],
   "name": "mroonga-status-variables",

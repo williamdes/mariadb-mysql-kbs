@@ -7,7 +7,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of bytes written to the"
+      "type": "byte"
     },
     {
       "dataType": "numeric",
@@ -16,7 +16,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of transactions which used a temporary disk cache because they could not fit in the regular"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -25,7 +25,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of transaction which used the regular"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -34,7 +34,7 @@
       "scope": [
         "global"
       ],
-      "type": "total number of transactions committed to the binary log."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -43,7 +43,7 @@
       "scope": [
         "global"
       ],
-      "type": "total number of group commits triggered because of the number of binary log commits in the group reached the limit set by the variable"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -52,7 +52,7 @@
       "scope": [
         "global"
       ],
-      "type": "total number of group commits triggered because a binary log commit was being delayed because of a lock wait where the lock was held by a prior binary log commit. when this happens the later binary log commit is placed in the next group commit. see"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -61,7 +61,7 @@
       "scope": [
         "global"
       ],
-      "type": "total number of group commits triggered because of the time since the first binary log commit reached the limit set by the variable"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -70,7 +70,7 @@
       "scope": [
         "global"
       ],
-      "type": "total number of group commits done to the binary log. see"
+      "type": "integer"
     },
     {
       "dataType": "string",
@@ -78,8 +78,7 @@
       "name": "Binlog_snapshot_file",
       "scope": [
         "global"
-      ],
-      "type": "the binary log file. unlike"
+      ]
     },
     {
       "dataType": "numeric",
@@ -87,8 +86,7 @@
       "name": "Binlog_snapshot_position",
       "scope": [
         "global"
-      ],
-      "type": "the binary log position. unlike"
+      ]
     },
     {
       "dataType": "numeric",
@@ -97,7 +95,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of non-transaction statements which used a temporary disk cache because they could not fit in the regular"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -106,7 +104,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of non-transaction statement which used the regular"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -116,7 +114,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -126,7 +124,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -135,8 +133,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -146,7 +143,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -156,7 +153,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -166,7 +163,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -176,7 +173,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -186,7 +183,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -196,7 +193,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -206,7 +203,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -216,7 +213,7 @@
         "global",
         "session"
       ],
-      "type": "number of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -226,7 +223,7 @@
         "global",
         "session"
       ],
-      "type": "number of times master_gtid_wait called."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -236,7 +233,7 @@
         "global",
         "session"
       ],
-      "type": "total number of time spent in master_gtid_wait."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -246,12 +243,11 @@
         "global",
         "session"
       ],
-      "type": "number of timeouts occurring in master_gtid_wait."
+      "type": "integer"
     },
     {
       "id": "rpl_status",
-      "name": "Rpl_status",
-      "type": "for showing the status of fail-safe replication. removed in mysql 5.6, still present in"
+      "name": "Rpl_status"
     },
     {
       "dataType": "numeric",
@@ -260,7 +256,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of replicated transactions that involved changes in multiple (transactional) storage engines, before considering the update of"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -268,8 +264,7 @@
       "name": "Slave_connections",
       "scope": [
         "global"
-      ],
-      "type": ""
+      ]
     },
     {
       "dataType": "numeric",
@@ -278,7 +273,7 @@
       "scope": [
         "global"
       ],
-      "type": "time in seconds that a heartbeat packet is requested from the master by a slave."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -287,7 +282,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of temporary tables the slave has open."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -296,7 +291,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of heartbeats the slave has received from the master."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -305,7 +300,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of times the slave has retried transactions since the server started."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -313,8 +308,7 @@
       "name": "Slave_running",
       "scope": [
         "global"
-      ],
-      "type": "whether the slave is running (both i/o and sql threads running) or not."
+      ]
     },
     {
       "dataType": "numeric",
@@ -323,7 +317,7 @@
       "scope": [
         "global"
       ],
-      "type": "the number of times a slave has skipped errors defined by"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -332,7 +326,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of slaves connected."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -341,7 +335,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of slave sql threads running."
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -350,7 +344,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of replicated transactions where the update of the"
+      "type": "integer"
     },
     {
       "dataType": "numeric",
@@ -359,7 +353,7 @@
       "scope": [
         "global"
       ],
-      "type": "number of transactions that changed data in multiple (transactional) storage engines. if this is significantly larger than"
+      "type": "integer"
     }
   ],
   "name": "replication-and-binary-log-status-variables",

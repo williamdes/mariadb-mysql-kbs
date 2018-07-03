@@ -214,6 +214,12 @@ foreach ($files as $file) {
                                     }
                                 }
                             } elseif ($key === "validValues") {
+                                if (is_array($cacheValue) === false) {
+                                    $cacheValue = array($cacheValue);
+                                }
+                                if (is_array($docValue) === false) {
+                                    $docValue = array($docValue);
+                                }
                                 $intersecValidValues = array_intersect($docValue, $cacheValue);
                                 if (count($intersecValidValues) === count($docValue)
                                     && count($intersecValidValues) === count($cacheValue)

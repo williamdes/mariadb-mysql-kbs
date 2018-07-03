@@ -146,6 +146,15 @@ parsePage(KB_URL + 'replication-options-binary-log.html', (data, url) => {
   writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
 });
 
+parsePage(KB_URL57 + 'replication-options-binary-log.html', (data, url) => {
+  let page = {
+    url: url,
+    name: 'replication-options-binary-log_5.7',
+    data: data,
+  };
+  writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
+});
+
 parsePage(KB_URL + 'pluggable-authentication-system-variables.html', (data, url) => {
   let page = {
     url: url,
@@ -204,6 +213,15 @@ parsePage(KB_URL57 + 'mysql-cluster-options-variables.html', (data, url) => {
   let page = {
     url: url,
     name: 'mysql-cluster-options-variables',
+    data: data,
+  };
+  writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
+});
+
+parsePage(KB_URL + 'server-options.html', (data, url) => {
+  let page = {
+    url: url,
+    name: 'server-options',
     data: data,
   };
   writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);

@@ -146,17 +146,6 @@ function parsePage(url, cbSuccess) {
 
 const KB_URL = 'https://mariadb.com/kb/en/library/documentation/';
 
-parsePage(
-  KB_URL + 'replication/optimization-and-tuning/system-variables/server-system-variables/',
-  (data, url) => {
-    let page = {
-      url: url,
-      name: 'server-system-variables',
-      data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'), page);
-  }
-);
 
 const storageEngines = [
   'aria',
@@ -200,34 +189,40 @@ storageEngines.forEach(se => {
 
 const custom = [
   {
-    id: 'spider',
-    desc: 'spider-server',
-    name: 'spider',
+    url: 'columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/',
+    name: 'spider-server-system-variables',
+  },
+  {
+    url: 'semisynchronous-replication/',
+    name: 'semisynchronous-replication-system-variables',
+  },
+  {
+    url: 'replication-and-binary-log-server-system-variables/',
+    name: 'replication-and-binary-log-server-system-variables',
+  },
+  {
+    url: 'gtid/',
+    name: 'gtid-system-variables',
+  },
+  {
+    url: 'gtid/',
+    name: 'gtid-system-variables',
+  },
+  {
+    url: 'replication/optimization-and-tuning/system-variables/server-system-variables/',
+    name: 'server-system-variables',
   },
 ];
 
 custom.forEach(cu => {
-  console.log('Parsing : ', cu);
-  console.log(
-    'URL : ' +
-      KB_URL +
-      'columns-storage-engines-and-plugins/storage-engines/' +
-      cu.id +
-      '/' +
-      cu.desc +
-      '-system-variables/'
-  );
+  console.log('Parsing : ', cu.name);
+  console.log('URL : ', cu.url);
   parsePage(
-    KB_URL +
-      'columns-storage-engines-and-plugins/storage-engines/' +
-      cu.id +
-      '/' +
-      cu.desc +
-      '-system-variables/',
+    KB_URL + cu.url,
     (data, url) => {
       let page = {
         url: url,
-        name: cu.name + '-system-variables',
+        name: cu.name,
         data: data,
       };
       writeJSON(path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'), page);
@@ -265,7 +260,7 @@ status.forEach(statusName => {
   });
 });
 
-const systemVariables = ['xtradbinnodb-server', 'mariadb-audit-plugin'];
+const systemVariables = ['xtradbinnodb-server', 'mariadb-audit-plugin', 'ssltls', 'performance-schema'];
 
 systemVariables.forEach(systemVariableName => {
   console.log('Parsing : ', systemVariableName);

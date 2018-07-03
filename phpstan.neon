@@ -3,6 +3,7 @@ parameters:
         - %rootDir%/../../../src/merge.php
         - %rootDir%/../../../dist/*
         - %rootDir%/../../../tmp/*
+        - %rootDir%/../../../docs/*
         - %rootDir%/../../../build/*
         - %rootDir%/../../../nodes_modules/*
         - %rootDir%/../../../vendor/*

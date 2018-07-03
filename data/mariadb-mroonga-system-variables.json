@@ -144,7 +144,7 @@
       "type": "string"
     },
     {
-      "cli": "<<code>>--mroonga-lock-timeout=#</code>>",
+      "cli": "--mroonga-lock-timeout=#",
       "default": "900000",
       "dynamic": true,
       "id": "mroonga_lock_timeout",

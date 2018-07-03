@@ -1935,7 +1935,7 @@
       "type": "integer"
     },
     {
-      "cli": "<<code>>--pam-use-cleartext-plugin</code>>",
+      "cli": "--pam-use-cleartext-plugin",
       "default": "OFF",
       "dynamic": false,
       "id": "pam_use_cleartext_plugin",

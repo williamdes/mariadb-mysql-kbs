@@ -2714,7 +2714,7 @@
             ]
         },
         "mroonga_lock_timeout": {
-            "cli": "<<code>>--mroonga-lock-timeout=#</code>>",
+            "cli": "--mroonga-lock-timeout=#",
             "default": "900000",
             "dynamic": true,
             "name": "mroonga_lock_timeout",
@@ -11832,7 +11832,13 @@
                 "global"
             ],
             "type": "enumeration",
-            "validValues": true,
+            "validValues": [
+                "ON",
+                "1",
+                "OFF",
+                "0",
+                "DISABLED"
+            ],
             "ids": [
                 {
                     "anchor": "event_scheduler",
@@ -14150,7 +14156,7 @@
             ]
         },
         "pam_use_cleartext_plugin": {
-            "cli": "<<code>>--pam-use-cleartext-plugin</code>>",
+            "cli": "--pam-use-cleartext-plugin",
             "default": "OFF",
             "dynamic": false,
             "name": "pam_use_cleartext_plugin",
@@ -14544,7 +14550,14 @@
                 "session"
             ],
             "type": "enumeration",
-            "validValues": true,
+            "validValues": [
+                "0",
+                "OFF",
+                "1",
+                "ON",
+                "2",
+                "DEMAND"
+            ],
             "ids": [
                 {
                     "anchor": "query_cache_type",
@@ -18617,7 +18630,11 @@
                 "global"
             ],
             "type": "enumeration",
-            "validValues": true,
+            "validValues": [
+                "no-threads",
+                "one-thread-per-connection",
+                "pool-of-threads"
+            ],
             "ids": [
                 {
                     "anchor": "thread_handling",
@@ -24690,7 +24707,11 @@
                 "global"
             ],
             "type": "enumeration",
-            "validValues": true,
+            "validValues": [
+                "redundant",
+                "compact",
+                "dynamic"
+            ],
             "ids": [
                 {
                     "anchor": "innodb_default_row_format",
@@ -25274,7 +25295,12 @@
                 "global"
             ],
             "type": "enumeration",
-            "validValues": true,
+            "validValues": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
             "ids": [
                 {
                     "anchor": "innodb_flush_log_at_trx_commit",
@@ -26689,18 +26715,18 @@
                 "global"
             ],
             "type": "enumeration",
-            "validValues": {
-                "0": "4k",
-                "1": "8k",
-                "2": "16k",
-                "3": "32k",
-                "4": "64k",
-                "5": "4096",
-                "6": "8192",
-                "7": "16384",
-                "10": "32768",
-                "11": "65536"
-            },
+            "validValues": [
+                "4k",
+                "8k",
+                "16k",
+                "32k",
+                "64k",
+                "4096",
+                "8192",
+                "16384",
+                "32768",
+                "65536"
+            ],
             "ids": [
                 {
                     "anchor": "innodb_page_size",

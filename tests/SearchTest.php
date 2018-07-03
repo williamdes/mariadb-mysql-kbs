@@ -84,6 +84,20 @@ class SearchTest extends TestCase
      *
      * @return void
      */
+    public function testExceptionNoFoundGetVariableType(): void
+    {
+        Search::getVariableType("acbdefghi0202");
+    }
+
+    /**
+     * test get by name not found variable
+     *
+     * @expectedException     Exception
+     * @expectedExceptionCode 0
+     * @expectedExceptionMessageRegExp /(.+) does not exist !/
+     *
+     * @return void
+     */
     public function testExceptionNoFound(): void
     {
         Search::getByName("acbdefghi0202", Search::MARIADB);
@@ -121,6 +135,31 @@ class SearchTest extends TestCase
         $this->assertGreaterThan(10, count($static));
         $common = \array_intersect($dynamic, $static);
         $this->assertEquals(0, count($common));// Impossible to be dynamic and not
+    }
+
+    /**
+     * test Exception get variable type has no type
+     *
+     * @expectedException     Exception
+     * @expectedExceptionCode 0
+     * @expectedExceptionMessageRegExp /(.+) does have a known type !/
+     *
+     * @return void
+     */
+    public function testExceptionGetVariableType(): void
+    {
+        Search::getVariableType("wsrep_forced_binlog_format");
+    }
+
+    /**
+     * test get variable type
+     *
+     * @return void
+     */
+    public function testGetVariableType(): void
+    {
+        $type = Search::getVariableType("innodb_stats_persistent");
+        $this->assertEquals("boolean", $type);
     }
 
 }

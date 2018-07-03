@@ -79,6 +79,27 @@ class Search
     }
 
     /**
+     * get the type of the variable
+     *
+     * @param string $name Name of variable
+     * @return string
+     */
+    public static function getVariableType(string $name): string
+    {
+        self::loadData();
+        if (isset(Search::$data->vars->{$name})) {
+            $kbEntry = Search::$data->vars->{$name};
+            if (isset($kbEntry->t)) {
+                return Search::$data->varTypes->{$kbEntry->t};
+            } else {
+                throw new Exception("$name does have a known type !");
+            }
+        } else {
+            throw new Exception("$name does not exist !");
+        }
+    }
+
+    /**
      * Return the list of static variables
      *
      * @return array

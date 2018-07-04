@@ -74,7 +74,7 @@
       "type": "boolean"
     },
     {
-      "default": "-1 (autosized)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_back_log",
       "name": "back_log",
@@ -820,7 +820,7 @@
       "type": "integer"
     },
     {
-      "default": "-1 (autosized)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": true,
       "id": "sysvar_host_cache_size",
       "name": "host_cache_size",
@@ -1146,6 +1146,17 @@
       "type": "string"
     },
     {
+      "cli": "--log-error-suppression-list=value",
+      "default": "empty string",
+      "dynamic": true,
+      "id": "sysvar_log_error_suppression_list",
+      "name": "log_error_suppression_list",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--log-error-verbosity=#",
       "dynamic": true,
       "id": "sysvar_log_error_verbosity",
@@ -1229,7 +1240,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--log-syslog-tag=value",
+      "cli": "--log-syslog-tag=tag",
       "default": "empty string",
       "dynamic": true,
       "id": "sysvar_log_syslog_tag",
@@ -2928,6 +2939,39 @@
       "type": "boolean"
     },
     {
+      "cli": "--syseventlog.facility=value",
+      "default": "daemon",
+      "dynamic": true,
+      "id": "sysvar_syseventlog.facility",
+      "name": "syseventlog.facility",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--syseventlog.include-pid[={0|1}]",
+      "default": "on",
+      "dynamic": true,
+      "id": "sysvar_syseventlog.include_pid",
+      "name": "syseventlog.include_pid",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--syseventlog.tag=tag",
+      "default": "empty string",
+      "dynamic": true,
+      "id": "sysvar_syseventlog.tag",
+      "name": "syseventlog.tag",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "dynamic": false,
       "id": "sysvar_system_time_zone",
       "name": "system_time_zone",
@@ -2937,7 +2981,7 @@
       "type": "string"
     },
     {
-      "default": "-1 (autosized)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": true,
       "id": "sysvar_table_definition_cache",
       "name": "table_definition_cache",
@@ -2994,7 +3038,7 @@
     },
     {
       "cli": "--thread-cache-size=#",
-      "default": "-1 (autosized)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": true,
       "id": "sysvar_thread_cache_size",
       "name": "thread_cache_size",

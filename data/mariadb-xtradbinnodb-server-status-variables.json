@@ -927,7 +927,8 @@
     {
       "id": "innodb_page_compression_saved",
       "name": "Innodb_page_compression_saved",
-      "scope": []
+      "scope": [],
+      "type": "byte"
     },
     {
       "id": "innodb_page_compression_trim_sect512",

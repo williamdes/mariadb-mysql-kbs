@@ -1401,7 +1401,7 @@
     },
     {
       "cli": "--innodb-open-files=#",
-      "default": "-1 (autosized)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_innodb_open_files",
       "name": "innodb_open_files",

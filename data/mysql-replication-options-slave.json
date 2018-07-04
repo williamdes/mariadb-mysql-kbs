@@ -230,7 +230,6 @@
     },
     {
       "cli": "--slave-pending-jobs-size-max=#",
-      "default": "16m",
       "id": "option_mysqld_slave-pending-jobs-size-max",
       "name": "slave_pending_jobs_size_max",
       "range": {
@@ -749,7 +748,7 @@
       "type": "integer"
     },
     {
-      "default": "16m",
+      "cli": "--slave-pending-jobs-size-max=#",
       "dynamic": true,
       "id": "sysvar_slave_pending_jobs_size_max",
       "name": "slave_pending_jobs_size_max",

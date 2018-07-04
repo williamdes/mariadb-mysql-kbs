@@ -1,49 +1,59 @@
 {
-  "name": "mariadb-mysql-kbs",
-  "version": "1.2.1",
-  "description": "An index of the MariaDB and MySQL Knowledge bases",
-  "main": "src/index.js",
-  "homepage": "https://github.com/williamdes/mariadb-mysql-kbs#readme",
-  "readme": "https://github.com/williamdes/mariadb-mysql-kbs/blob/master/README.md",
-  "license": "MPL-2.0",
-  "bugs": {
-    "url": "https://github.com/williamdes/mariadb-mysql-kbs/issues",
-    "email": "williamdes@wdes.fr"
-  },
-  "keywords": [
-    "mariadb", "mysql", "dataset", "kb", "knowledge-base", "json", "library", "mysql-knowledge-bases","mariadb-knowledge-bases", "composer-package", "npm-package"
-  ],
-  "scripts": {
-    "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/williamdes/mariadb-mysql-kbs.git"
-  },
-  "author": {
-    "email": "williamdes@wdes.fr",
-    "name": "William Desportes",
-    "url": "https://william.wdes.fr"
-  },
-  "dependencies": {
-    "jsdom": "^11.11.0"
-  },
-  "devDependencies": {
-    "prettier": "^1.13.4",
-    "twig": "^1.12.0"
-  },
-  "directories": {
-    "lib": "src",
-    "test": "tests"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "proseWrap": "never",
-    "trailingComma": "es5",
-    "printWidth": 95
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "mariadb-mysql-kbs",
+    "version": "1.2.1",
+    "description": "An index of the MariaDB and MySQL Knowledge bases",
+    "main": "src/index.js",
+    "homepage": "https://github.com/williamdes/mariadb-mysql-kbs#readme",
+    "readme": "https://github.com/williamdes/mariadb-mysql-kbs/blob/master/README.md",
+    "license": "MPL-2.0",
+    "bugs": {
+        "url": "https://github.com/williamdes/mariadb-mysql-kbs/issues",
+        "email": "williamdes@wdes.fr"
+    },
+    "keywords": [
+        "mariadb",
+        "mysql",
+        "dataset",
+        "kb",
+        "knowledge-base",
+        "json",
+        "library",
+        "mysql-knowledge-bases",
+        "mariadb-knowledge-bases",
+        "composer-package",
+        "npm-package"
+    ],
+    "scripts": {
+        "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/williamdes/mariadb-mysql-kbs.git"
+    },
+    "author": {
+        "email": "williamdes@wdes.fr",
+        "name": "William Desportes",
+        "url": "https://william.wdes.fr"
+    },
+    "dependencies": {
+        "jsdom": "^11.11.0"
+    },
+    "devDependencies": {
+        "prettier": "^1.13.4",
+        "twig": "^1.12.0"
+    },
+    "directories": {
+        "lib": "src",
+        "test": "tests"
+    },
+    "prettier": {
+        "singleQuote": true,
+        "proseWrap": "never",
+        "trailingComma": "es5",
+        "printWidth": 95
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

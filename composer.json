@@ -7,7 +7,17 @@
     "license": "MPL-2.0",
     "version": "1.2.1",
     "keywords": [
-        "mariadb", "mysql", "dataset", "kb", "knowledge-base", "json", "library", "mysql-knowledge-bases","mariadb-knowledge-bases", "composer-package", "npm-package"
+        "mariadb",
+        "mysql",
+        "dataset",
+        "kb",
+        "knowledge-base",
+        "json",
+        "library",
+        "mysql-knowledge-bases",
+        "mariadb-knowledge-bases",
+        "composer-package",
+        "npm-package"
     ],
     "support": {
         "email": "williamdes@wdes.fr",
@@ -31,7 +41,21 @@
         "php-school/cli-menu": "^3.0"
     },
     "archive": {
-        "exclude": ["/scripts", "/data", "/dist/merged-raw.json", "/tests", "*.js", "/package.json", "/package-lock.json", "/.prettierignore", "/.gitignore", "/phpcs.xml", "/phpstan.neon", "/.travis.yml", "/dist/merged-raw.md"]
+        "exclude": [
+            "/scripts",
+            "/data",
+            "/dist/merged-raw.json",
+            "/tests",
+            "*.js",
+            "/package.json",
+            "/package-lock.json",
+            "/.prettierignore",
+            "/.gitignore",
+            "/phpcs.xml",
+            "/phpstan.neon",
+            "/.travis.yml",
+            "/dist/merged-raw.md"
+        ]
     },
     "autoload": {
         "psr-4": {

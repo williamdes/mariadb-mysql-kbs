@@ -2,6 +2,8 @@
 declare(strict_types = 1);
 namespace Williamdes\MariaDBMySQLKBS;
 
+use \stdClass;
+
 class Search
 {
 
@@ -29,6 +31,7 @@ class Search
      * Load data from disk
      *
      * @return void
+     * @throws KBException
      */
     public static function loadData(): void
     {
@@ -49,28 +52,41 @@ class Search
      * @param string $name Name of variable
      * @param int    $type (optional) Type of link Search::MYSQL/Search::MARIADB/Search::ANY
      * @return string
+     * @throws KBException
      */
     public static function getByName(string $name, int $type = Search::ANY): string
     {
         self::loadData();
-        if (isset(Search::$data->vars->{$name})) {
-            $kbEntrys = Search::$data->vars->{$name};
-            $kbEntry  = null;
-            foreach ($kbEntrys->a as $kbEntry) {
-                if ($type === Search::ANY) {
+        $kbEntrys = self::getVariable($name);
+        foreach ($kbEntrys->a as $kbEntry) {
+            if ($type === Search::ANY) {
+                return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
+            } elseif ($type === Search::MYSQL) {
+                if ($kbEntry->t === Search::MYSQL) {
                     return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
-                } elseif ($type === Search::MYSQL) {
-                    if ($kbEntry->t === Search::MYSQL) {
-                        return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
-                    }
-                } elseif ($type === Search::MARIADB) {
-                    if ($kbEntry->t === Search::MARIADB) {
-                        return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
-                    }
+                }
+            } elseif ($type === Search::MARIADB) {
+                if ($kbEntry->t === Search::MARIADB) {
+                    return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
                 }
             }
+        }
 
-            throw new KBException("$name does not exist for this type of documentation !");
+        throw new KBException("$name does not exist for this type of documentation !");
+    }
+
+    /**
+     * Get a variable
+     *
+     * @param string $name Name of variable
+     * @return stdClass
+     * @throws KBException
+     */
+    public static function getVariable(string $name): stdClass
+    {
+        self::loadData();
+        if (isset(Search::$data->vars->{$name})) {
+            return Search::$data->vars->{$name};
         } else {
             throw new KBException("$name does not exist !");
         }
@@ -81,19 +97,16 @@ class Search
      *
      * @param string $name Name of variable
      * @return string
+     * @throws KBException
      */
     public static function getVariableType(string $name): string
     {
         self::loadData();
-        if (isset(Search::$data->vars->{$name})) {
-            $kbEntry = Search::$data->vars->{$name};
-            if (isset($kbEntry->t)) {
-                return Search::$data->varTypes->{$kbEntry->t};
-            } else {
-                throw new KBException("$name does have a known type !");
-            }
+        $kbEntry = self::getVariable($name);
+        if (isset($kbEntry->t)) {
+            return Search::$data->varTypes->{$kbEntry->t};
         } else {
-            throw new KBException("$name does not exist !");
+            throw new KBException("$name does have a known type !");
         }
     }
 

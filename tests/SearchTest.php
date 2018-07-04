@@ -104,6 +104,20 @@ class SearchTest extends TestCase
     }
 
     /**
+     * test get by name not found variable
+     *
+     * @expectedException     \Williamdes\MariaDBMySQLKBS\KBException
+     * @expectedExceptionCode 0
+     * @expectedExceptionMessageRegExp /(.+) does not exist !/
+     *
+     * @return void
+     */
+    public function testExceptionNoFoundGetVariable(): void
+    {
+        Search::getVariable("acbdefghi0202");
+    }
+
+    /**
      * test load data fail
      *
      * @runInSeparateProcess

@@ -3,7 +3,6 @@ declare(strict_types = 1);
 namespace Williamdes\MariaDBMySQLKBS;
 
 use \PHPUnit\Framework\TestCase;
-use \Williamdes\MariaDBMySQLKBS\Search;
 
 class SearchTest extends TestCase
 {

@@ -17,7 +17,7 @@ class Search
     /**
      * Data is loaded
      *
-     * @var boolean
+     * @var bool
      */
     public static $loaded = false;
 

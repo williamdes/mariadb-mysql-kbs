@@ -121,7 +121,12 @@ log(
       }*/
       if (msg.match(/^added:\s/gi) || msg.match(/^add:/gi) || msg.match(/^test:/gi)) {
         changes = changesAdded;
-      } else if (msg.match(/^changed:/gi) || msg.match(/^update:/gi) || msg.match(/^updated:/gi) || msg.match(/^moved:/gi)) {
+      } else if (
+        msg.match(/^changed:/gi) ||
+        msg.match(/^update:/gi) ||
+        msg.match(/^updated:/gi) ||
+        msg.match(/^moved:/gi)
+      ) {
         changes = changesChanged;
       } else if (msg.match(/^deprecated:/gi)) {
         changes = changesDeprecated;
@@ -131,7 +136,11 @@ log(
         changes = changesFixed;
       } else if (msg.match(/^security:/gi)) {
         changes = changesSecurity;
-      } else if (msg.match(/^improve:/gi) ||  msg.match(/^improved:/gi) ||  msg.match(/^style:/gi)) {
+      } else if (
+        msg.match(/^improve:/gi) ||
+        msg.match(/^improved:/gi) ||
+        msg.match(/^style:/gi)
+      ) {
         changes = changesImprove;
       } else {
         //console.log(msg);

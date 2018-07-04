@@ -63,6 +63,23 @@ function intToVersion(int $version): string
     return $major.".".$minor.".".$patch;
 }
 
+/**
+ * Saves files (composer, package)
+ *
+ * @param string $composerSaveVersion The actual composer version
+ * @param string $npmSaveVersion      The actual npm version
+ * @return void
+ */
+function saveFiles(string $composerSaveVersion, string $npmSaveVersion): void
+{
+    global $composerActualData, $npmActualData;
+    $composerActualData->version = $composerSaveVersion;
+    $npmActualData->version      = $npmSaveVersion;
+    $flags                       = JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES;
+    file_put_contents(__DIR__."/../composer.json", json_encode($composerActualData, $flags).PHP_EOL);
+    file_put_contents(__DIR__."/../package.json", json_encode($npmActualData, $flags).PHP_EOL);
+}
+
 /*
 // Test data
 echo "#1  ".intToVersion(123456789).PHP_EOL;
@@ -73,11 +90,15 @@ echo "#5  ".getVersion(__DIR__."/../composer.json").PHP_EOL;
 echo "#6  ".intToVersion(getVersion(__DIR__."/../composer.json")).PHP_EOL;
 */
 echo "Release a new version".PHP_EOL;
-$composerActualVersion = json_decode(file_get_contents(__DIR__."/../composer.json"))->version;
-$npmActualVersion      = json_decode(file_get_contents(__DIR__."/../package.json"))->version;
+$composerActualData = json_decode(file_get_contents(__DIR__."/../composer.json"));
+$npmActualData      = json_decode(file_get_contents(__DIR__."/../package.json"));
+
+$composerActualVersion = $composerActualData->version;
+$npmActualVersion      = $npmActualData->version;
 
 $composerSaveVersion = $composerActualVersion;
 $npmSaveVersion      = $npmActualVersion;
+
 
 
 $itemCallable = function (CliMenu $menu): void {
@@ -99,6 +120,7 @@ $itemCallable = function (CliMenu $menu): void {
 
     $menu->close();
     echo "Saved versions, composer: $composerSaveVersion, npm: $npmSaveVersion";
+    saveFiles($composerSaveVersion, $npmSaveVersion);
 };
 
 $cbManual = function (CliMenu $menu): void {
@@ -127,6 +149,7 @@ $cbManual = function (CliMenu $menu): void {
     $npmSaveVersion = $result->fetch();
     $menu->close();
     echo "Saved versions, composer: $composerSaveVersion, npm: $npmSaveVersion";
+    saveFiles($composerSaveVersion, $npmSaveVersion);
 };
 
 $menu = (new CliMenuBuilder())->setTitle('Bump version')

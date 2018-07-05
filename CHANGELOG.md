@@ -7,17 +7,32 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+- [e95b8dc](https://github.com/williamdes/mariadb-mysql-kbs/commit/e95b8dc10379bf00236ed0ee24abc0723b6a743a) added: phpcs rules
+- [e402e0c](https://github.com/williamdes/mariadb-mysql-kbs/commit/e402e0c03086b8712b68d084bca1f5118ec282af) added: getVariable
+- [4e7ae6f](https://github.com/williamdes/mariadb-mysql-kbs/commit/4e7ae6f4e2b349f25f68c028b1e5c3dab171b8b5) added: badges and install intructions :book:
+- [9bed254](https://github.com/williamdes/mariadb-mysql-kbs/commit/9bed254abc3ac85b46aa8f6ddd3eb0fd03f32008) added: npm ignore
+- [47c5d56](https://github.com/williamdes/mariadb-mysql-kbs/commit/47c5d56b7549050fc7b71da971cc5fc64f5790fb) added: changelog :book:
 - [bbeed46](https://github.com/williamdes/mariadb-mysql-kbs/commit/bbeed466908936e25fa7685509e4b0834d2636f6) added: changelog generator :book:
 - [5cf8a17](https://github.com/williamdes/mariadb-mysql-kbs/commit/5cf8a17fe58762591da828de2aeb930d55d70027) added: [MariaDB] more documentation
 
 ### Changed
+- [56208a0](https://github.com/williamdes/mariadb-mysql-kbs/commit/56208a0c74097e4609f4995d499fbddac953140e) updated: prettier
+- [2190164](https://github.com/williamdes/mariadb-mysql-kbs/commit/21901640230b9b7f6e1d824d68307feda54beebe) updated: [MySQL] & [MariaDB] data
+- [17758ff](https://github.com/williamdes/mariadb-mysql-kbs/commit/17758ff79655cffb6189cbdf729d1fa62f99fe8d) updated: release script
+- [5140d06](https://github.com/williamdes/mariadb-mysql-kbs/commit/5140d062bb32ea80fe9155843d99f6a32e178782) updated: api docs
+- [2bc0164](https://github.com/williamdes/mariadb-mysql-kbs/commit/2bc016434ed62141a45f3890cf5711bbd0f8755f) updated: composer.lock :lock:
+- [c6cb704](https://github.com/williamdes/mariadb-mysql-kbs/commit/c6cb704b8711f2510769494362c60c63cc7cab6f) updated: composer.json & package.json
 - [e2c6706](https://github.com/williamdes/mariadb-mysql-kbs/commit/e2c6706c74d9274f63f4185b108e6b335ecff14f) updated: changelog generator :book:
 - [fb4cabe](https://github.com/williamdes/mariadb-mysql-kbs/commit/fb4cabe90393f1a7ec863f759be3795cdea36f84) updated: submodule commit hash
 
 ### Fixed
+- [06737df](https://github.com/williamdes/mariadb-mysql-kbs/commit/06737dfb47665487ce9fb5cf7b490f54614fc0b2) fixed: phpcs rule
+- [9acaab8](https://github.com/williamdes/mariadb-mysql-kbs/commit/9acaab87b15b2e9be1a21d9a3703faeb04bcaaf8) fixes: @throws is allowed in phpdoc
 - [d4870a6](https://github.com/williamdes/mariadb-mysql-kbs/commit/d4870a6d02ff314001403cc1a1c45b93cce734ea) fixes: dataType bug
 
 ### Improvements
+- [c2b4954](https://github.com/williamdes/mariadb-mysql-kbs/commit/c2b49541e51a0fb44316b11bd95a7576655a6ae8) style: composer.json & package.json
+- [5241c13](https://github.com/williamdes/mariadb-mysql-kbs/commit/5241c1338a87293d25ed25413aac50a801c1bcb2) style: phpcs & prettier
 - [e5d987c](https://github.com/williamdes/mariadb-mysql-kbs/commit/e5d987c475b64bc002ffac46daab7068a8d7f506) style: phpcs & prettier
 
 

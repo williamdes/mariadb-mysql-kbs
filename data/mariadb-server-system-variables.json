@@ -1367,7 +1367,7 @@
     },
     {
       "cli": "--max-allowed-packet=#",
-      "dynamic": true,
+      "dynamic": false,
       "id": "max_allowed_packet",
       "name": "max_allowed_packet",
       "range": {
@@ -1375,7 +1375,8 @@
         "to": 1073741824
       },
       "scope": [
-        "global"
+        "global",
+        "session"
       ],
       "type": "integer"
     },
@@ -2231,8 +2232,18 @@
       "type": "integer"
     },
     {
+      "cli": "none",
+      "dynamic": true,
       "id": "rand_seed1",
-      "name": "rand_seed1"
+      "name": "rand_seed1",
+      "range": {
+        "from": 0,
+        "to": 18446744073709552000
+      },
+      "scope": [
+        "session"
+      ],
+      "type": "integer"
     },
     {
       "id": "rand_seed2",

@@ -308,12 +308,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--master-retry-count=#",
-      "default": "86400",
-      "id": "master_retry_count",
-      "name": "master_retry_count"
-    },
-    {
       "cli": "--master-verify-checksum=[0|1]",
       "default": "OFF (0)",
       "id": "master_verify_checksum",

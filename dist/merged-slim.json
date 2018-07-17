@@ -5540,19 +5540,6 @@
                 "24#option_mysqld_log-slave-updates"
             ]
         },
-        "master_retry_count": {
-            "cli": "--master-retry-count=#",
-            "default": "86400",
-            "name": "master_retry_count",
-            "range": {
-                "from": 0
-            },
-            "type": "integer",
-            "ids": [
-                "8#master_retry_count",
-                "24#option_mysqld_master-retry-count"
-            ]
-        },
         "master_verify_checksum": {
             "default": "0",
             "dynamic": true,
@@ -12286,12 +12273,15 @@
         },
         "max_allowed_packet": {
             "cli": "--max-allowed-packet=#",
-            "dynamic": true,
             "name": "max_allowed_packet",
             "range": {
                 "from": 1024,
                 "to": 1073741824
             },
+            "scope": [
+                "global",
+                "session"
+            ],
             "type": "integer",
             "ids": [
                 "29#max_allowed_packet",
@@ -13308,7 +13298,17 @@
             ]
         },
         "rand_seed1": {
+            "cli": "none",
+            "dynamic": true,
             "name": "rand_seed1",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
             "ids": [
                 "29#rand_seed1"
             ]
@@ -26096,6 +26096,18 @@
                 "24#option_mysqld_master-info-file"
             ]
         },
+        "master_retry_count": {
+            "cli": "--master-retry-count=#",
+            "default": "86400",
+            "name": "master_retry_count",
+            "range": {
+                "from": 0
+            },
+            "type": "integer",
+            "ids": [
+                "24#option_mysqld_master-retry-count"
+            ]
+        },
         "replicate_same_server_id": {
             "cli": "--replicate-same-server-id",
             "default": "false",
@@ -27448,6 +27460,19 @@
                 "10#sysvar_password_history"
             ]
         },
+        "password_require_current": {
+            "cli": "--password-require-current[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "password_require_current",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "10#sysvar_password_require_current"
+            ]
+        },
         "password_reuse_interval": {
             "cli": "--password-reuse-interval=#",
             "default": "0",
@@ -27701,6 +27726,20 @@
             "type": "boolean",
             "ids": [
                 "10#sysvar_show_old_temporals"
+            ]
+        },
+        "sql_require_primary_key": {
+            "cli": "--sql-require-primary-key[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "sql_require_primary_key",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "10#sysvar_sql_require_primary_key"
             ]
         },
         "ssl_fips_mode": {

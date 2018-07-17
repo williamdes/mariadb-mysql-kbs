@@ -5875,21 +5875,6 @@
 |dev.mysql.com|[sysvar_log_slave_updates](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_log_slave_updates)|
 |dev.mysql.com|[option_mysqld_log-slave-updates](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_log-slave-updates)|
 
-## master_retry_count
-|name|value|
-|----|-----|
-|Name|`master_retry_count`|
-|Command line|`--master-retry-count=#`|
-|Type of variable|`integer`|
-|Default value|`86400`|
-|Range|from: `0`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[master_retry_count](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#master_retry_count)|
-|dev.mysql.com|[option_mysqld_master-retry-count](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_master-retry-count)|
-
 ## master_verify_checksum
 |name|value|
 |----|-----|
@@ -13298,7 +13283,7 @@
 |Name|`max_allowed_packet`|
 |Command line|`--max-allowed-packet=#`|
 |Type of variable|`integer`|
-|Dynamic|`true`|
+|Scope|`global`, `session`|
 |Range|from: `1024` to: `1073741824`|
 
 ### Documentation(s)
@@ -14300,6 +14285,11 @@
 |name|value|
 |----|-----|
 |Name|`rand_seed1`|
+|Command line|`none`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28554,6 +28544,20 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_master-info-file](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_master-info-file)|
 
+## master_retry_count
+|name|value|
+|----|-----|
+|Name|`master_retry_count`|
+|Command line|`--master-retry-count=#`|
+|Type of variable|`integer`|
+|Default value|`86400`|
+|Range|from: `0`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_master-retry-count](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_master-retry-count)|
+
 ## replicate_same_server_id
 |name|value|
 |----|-----|
@@ -30129,6 +30133,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_password_history](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_password_history)|
 
+## password_require_current
+|name|value|
+|----|-----|
+|Name|`password_require_current`|
+|Command line|`--password-require-current[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_password_require_current](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_password_require_current)|
+
 ## password_reuse_interval
 |name|value|
 |----|-----|
@@ -30387,6 +30406,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_show_old_temporals](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_old_temporals)|
+
+## sql_require_primary_key
+|name|value|
+|----|-----|
+|Name|`sql_require_primary_key`|
+|Command line|`--sql-require-primary-key[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_sql_require_primary_key](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_require_primary_key)|
 
 ## ssl_fips_mode
 |name|value|

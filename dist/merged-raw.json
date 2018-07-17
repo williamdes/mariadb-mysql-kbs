@@ -7013,25 +7013,6 @@
                 }
             ]
         },
-        "master_retry_count": {
-            "cli": "--master-retry-count=#",
-            "default": "86400",
-            "name": "master_retry_count",
-            "range": {
-                "from": 0
-            },
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "master_retry_count",
-                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_master-retry-count",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
-                }
-            ]
-        },
         "master_verify_checksum": {
             "default": "0",
             "dynamic": true,
@@ -15979,12 +15960,15 @@
         },
         "max_allowed_packet": {
             "cli": "--max-allowed-packet=#",
-            "dynamic": true,
             "name": "max_allowed_packet",
             "range": {
                 "from": 1024,
                 "to": 1073741824
             },
+            "scope": [
+                "global",
+                "session"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -17349,7 +17333,17 @@
             ]
         },
         "rand_seed1": {
+            "cli": "none",
+            "dynamic": true,
             "name": "rand_seed1",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
             "ids": [
                 {
                     "anchor": "rand_seed1",
@@ -34010,6 +34004,21 @@
                 }
             ]
         },
+        "master_retry_count": {
+            "cli": "--master-retry-count=#",
+            "default": "86400",
+            "name": "master_retry_count",
+            "range": {
+                "from": 0
+            },
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_master-retry-count",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
+                }
+            ]
+        },
         "replicate_same_server_id": {
             "cli": "--replicate-same-server-id",
             "default": "false",
@@ -35728,6 +35737,22 @@
                 }
             ]
         },
+        "password_require_current": {
+            "cli": "--password-require-current[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "password_require_current",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_password_require_current",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "password_reuse_interval": {
             "cli": "--password-reuse-interval=#",
             "default": "0",
@@ -36030,6 +36055,23 @@
             "ids": [
                 {
                     "anchor": "sysvar_show_old_temporals",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "sql_require_primary_key": {
+            "cli": "--sql-require-primary-key[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "sql_require_primary_key",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_sql_require_primary_key",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

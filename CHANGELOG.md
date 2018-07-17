@@ -6,11 +6,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+
+
+## [v1.2.3]
+
 ### Added
 - [03cb762](https://github.com/williamdes/mariadb-mysql-kbs/commit/03cb7629b06f8d64e7b6ebced942a10d3d59c410) added: json schema validation for merged-ultraslim.json
 - [fd46f68](https://github.com/williamdes/mariadb-mysql-kbs/commit/fd46f68ba96ffe28c53eeda1c2e41bb9e157d936) added: swaggest/json-schema
 
 ### Changed
+- [8076644](https://github.com/williamdes/mariadb-mysql-kbs/commit/80766444c4443ba3101e4da6d0b3cfeef3c06351) updated: composer.json & package.json - version 1.2.3
+- [9bd0602](https://github.com/williamdes/mariadb-mysql-kbs/commit/9bd06026ca172822f806a7d0625b2ddf85e47e54) updated: api docs :book:
+- [fb2f2f6](https://github.com/williamdes/mariadb-mysql-kbs/commit/fb2f2f6f6cdba32d4518529a272cbbf3ed37391f) updated: changelog :book:
 - [6696ca7](https://github.com/williamdes/mariadb-mysql-kbs/commit/6696ca745ce172a24d1fb5ae1fefe82ae10b222a) updated: merged data
 - [143e1f2](https://github.com/williamdes/mariadb-mysql-kbs/commit/143e1f24f559469f2f13bab7da5366d59d54e2fd) updated: [MariaDB] data
 - [c99e2f7](https://github.com/williamdes/mariadb-mysql-kbs/commit/c99e2f7e07faedef1db039c5fc5c7c44f5dc8c52) updated: [MySQL] data
@@ -196,7 +203,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 
-[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.2...HEAD
+[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.3...HEAD
+[v1.2.3]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.2...v1.2.3
 [v1.2.2]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.1...v1.2.2
 [v1.2.1]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.1.0...v1.2.0

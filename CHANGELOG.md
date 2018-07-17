@@ -6,6 +6,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- [03cb762](https://github.com/williamdes/mariadb-mysql-kbs/commit/03cb7629b06f8d64e7b6ebced942a10d3d59c410) added: json schema validation for merged-ultraslim.json
+- [fd46f68](https://github.com/williamdes/mariadb-mysql-kbs/commit/fd46f68ba96ffe28c53eeda1c2e41bb9e157d936) added: swaggest/json-schema
+
+### Changed
+- [6696ca7](https://github.com/williamdes/mariadb-mysql-kbs/commit/6696ca745ce172a24d1fb5ae1fefe82ae10b222a) updated: merged data
+- [143e1f2](https://github.com/williamdes/mariadb-mysql-kbs/commit/143e1f24f559469f2f13bab7da5366d59d54e2fd) updated: [MariaDB] data
+- [c99e2f7](https://github.com/williamdes/mariadb-mysql-kbs/commit/c99e2f7e07faedef1db039c5fc5c7c44f5dc8c52) updated: [MySQL] data
+- [c2903a2](https://github.com/williamdes/mariadb-mysql-kbs/commit/c2903a29e2f2f60988276f21dc1f23464133ac4b) updated: composer.lock :lock:
+- [5378614](https://github.com/williamdes/mariadb-mysql-kbs/commit/53786144f25bf89d0a040f3be6bc0378a17661f0) updated: changelog :book:
+
+### Removed
+- [2ab9b3c](https://github.com/williamdes/mariadb-mysql-kbs/commit/2ab9b3ce7aa43af77c47d0c096b3c7363203a053) removed: validate file
+- [84fe040](https://github.com/williamdes/mariadb-mysql-kbs/commit/84fe040254d39f239286bbe77427298d590e5547) removed: testbench file
+
+### Fixed
+- [8abb014](https://github.com/williamdes/mariadb-mysql-kbs/commit/8abb01492af0b8c054cb878fa79560b774a637be) fixed: npm ignore
+
+### Improvements
+- [c920fd8](https://github.com/williamdes/mariadb-mysql-kbs/commit/c920fd8ea1c9a4be5d01237dd93ab3aef8caaa4e) improved: Tests :rocket: :package:
 
 
 ## [v1.2.2]

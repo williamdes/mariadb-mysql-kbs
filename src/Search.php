@@ -47,6 +47,18 @@ class Search
     }
 
     /**
+     * Load test data
+     *
+     * @param SlimData $slimData The SlimData object
+     * @return void
+     */
+    public static function loadTestData(SlimData $slimData): void
+    {
+        Search::$data   = json_decode((string) json_encode($slimData));
+        Search::$loaded = true;
+    }
+
+    /**
      * get the first link to doc available
      *
      * @param string $name Name of variable
@@ -58,16 +70,18 @@ class Search
     {
         self::loadData();
         $kbEntrys = self::getVariable($name);
-        foreach ($kbEntrys->a as $kbEntry) {
-            if ($type === Search::ANY) {
-                return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
-            } elseif ($type === Search::MYSQL) {
-                if ($kbEntry->t === Search::MYSQL) {
+        if (isset($kbEntrys->a)) {
+            foreach ($kbEntrys->a as $kbEntry) {
+                if ($type === Search::ANY) {
                     return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
-                }
-            } elseif ($type === Search::MARIADB) {
-                if ($kbEntry->t === Search::MARIADB) {
-                    return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
+                } elseif ($type === Search::MYSQL) {
+                    if ($kbEntry->t === Search::MYSQL) {
+                        return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
+                    }
+                } elseif ($type === Search::MARIADB) {
+                    if ($kbEntry->t === Search::MARIADB) {
+                        return Search::$data->urls[$kbEntry->u]."#".$kbEntry->a;
+                    }
                 }
             }
         }

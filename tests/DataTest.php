@@ -51,6 +51,8 @@ class DataTest extends TestCase
     {
         $slimData = json_decode((string) file_get_contents(__DIR__."/../dist/merged-ultraslim.json"));
         $this->assertTrue(self::validate($slimData, "urn:williamdes:mariadb-mysql-kbs:slimdata"));
+        $slimDataTestData = json_decode((string) file_get_contents(__DIR__."/data/slimDataTestWithVariables.json"));
+        $this->assertTrue(self::validate($slimDataTestData, "urn:williamdes:mariadb-mysql-kbs:slimdata"));
     }
 
 }

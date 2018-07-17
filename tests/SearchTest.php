@@ -8,16 +8,31 @@ class SearchTest extends TestCase
 {
 
     /**
+     * Load slim data
+     *
+     * @return void
+     */
+    public static function setUpBeforeClass(): void
+    {
+        $sd = new SlimData();
+        $sd->addVariable("variable-1", "boolean", true);
+        $sd->addVariable("variable-2", null, null);
+        $sd->addVariable("variable-3", null, true);
+        $variable4 = $sd->addVariable("variable-4", null, false);
+        $variable4->addDocumentation("https://mariadb.com/testurl/for/variable/4", "myanchor");
+        $variable4->addDocumentation("https://dev.mysql.com/testurl_for-variable/4", "my_anchor");
+        Search::loadTestData($sd);
+    }
+
+    /**
      * test get by name
      *
      * @return void
      */
     public function testGetByName(): void
     {
-        $found = Search::getByName("max_relay_log_size");
-        $this->assertContains("http", $found);
-        $this->assertContains("://", $found);
-        $this->assertContains("#", $found);
+        $found = Search::getByName("variable-4");
+        $this->assertEquals("https://mariadb.com/testurl/for/variable/4#myanchor", $found);
     }
 
     /**
@@ -27,17 +42,8 @@ class SearchTest extends TestCase
      */
     public function testGetByNameMYSQL(): void
     {
-        $found = Search::getByName("max_relay_log_size", Search::MYSQL);
-        $this->assertContains("http", $found);
-        $this->assertContains("://", $found);
-        $this->assertContains("mysql.com", $found);
-        $this->assertContains("#", $found);
-
-        $found = Search::getByName("innodb_compression_level", Search::MYSQL);
-        $this->assertContains("http", $found);
-        $this->assertContains("://", $found);
-        $this->assertContains("mysql.com", $found);
-        $this->assertContains("#", $found);
+        $found = Search::getByName("variable-4", Search::MYSQL);
+        $this->assertEquals("https://dev.mysql.com/testurl_for-variable/4#my_anchor", $found);
     }
 
     /**
@@ -47,17 +53,8 @@ class SearchTest extends TestCase
      */
     public function testGetByNameMARIADB(): void
     {
-        $found = Search::getByName("use_stat_tables", Search::MARIADB);
-        $this->assertContains("http", $found);
-        $this->assertContains("://", $found);
-        $this->assertContains("mariadb.com", $found);
-        $this->assertContains("#", $found);
-
-        $found = Search::getByName("innodb_compression_level", Search::MARIADB);
-        $this->assertContains("http", $found);
-        $this->assertContains("://", $found);
-        $this->assertContains("mariadb.com", $found);
-        $this->assertContains("#", $found);
+        $found = Search::getByName("variable-4", Search::MARIADB);
+        $this->assertEquals("https://mariadb.com/testurl/for/variable/4#myanchor", $found);
     }
 
     /**
@@ -71,7 +68,7 @@ class SearchTest extends TestCase
      */
     public function testException(): void
     {
-        Search::getByName("mysql_native_password_proxy_users", Search::MARIADB);
+        Search::getByName("variable-3", Search::MARIADB);
     }
 
     /**
@@ -144,8 +141,8 @@ class SearchTest extends TestCase
         $this->assertEquals($dynamic, Search::getDynamicVariables());
         $static = Search::getVariablesWithDynamic(false);
         $this->assertEquals($static, Search::getStaticVariables());
-        $this->assertGreaterThan(10, count($dynamic));
-        $this->assertGreaterThan(10, count($static));
+        $this->assertEquals(2, count($dynamic));
+        $this->assertEquals(1, count($static));
         $common = \array_intersect($dynamic, $static);
         $this->assertEquals(0, count($common));// Impossible to be dynamic and not
     }
@@ -161,7 +158,7 @@ class SearchTest extends TestCase
      */
     public function testExceptionGetVariableType(): void
     {
-        Search::getVariableType("wsrep_forced_binlog_format");
+        Search::getVariableType("variable-2");
     }
 
     /**
@@ -171,7 +168,7 @@ class SearchTest extends TestCase
      */
     public function testGetVariableType(): void
     {
-        $type = Search::getVariableType("innodb_stats_persistent");
+        $type = Search::getVariableType("variable-1");
         $this->assertEquals("boolean", $type);
     }
 

@@ -2078,6 +2078,17 @@
       "type": "integer"
     },
     {
+      "cli": "--password-require-current[={OFF|ON}]",
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_password_require_current",
+      "name": "password_require_current",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--password-reuse-interval=#",
       "default": "0",
       "dynamic": true,
@@ -2800,6 +2811,18 @@
         "session"
       ],
       "type": "set"
+    },
+    {
+      "cli": "--sql-require-primary-key[={OFF|ON}]",
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_sql_require_primary_key",
+      "name": "sql_require_primary_key",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
     },
     {
       "dynamic": true,

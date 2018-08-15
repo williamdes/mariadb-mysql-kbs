@@ -2561,6 +2561,23 @@
       "type": "string"
     },
     {
+      "cli": "--session-track-transaction-info=value",
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_session_track_transaction_info",
+      "name": "session_track_transaction_info",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "STATE",
+        "CHARACTERISTICS"
+      ]
+    },
+    {
       "cli": "--sha256-password-auto-generate-rsa-keys[={OFF|ON}]",
       "default": "on",
       "dynamic": false,
@@ -3362,6 +3379,21 @@
         "session"
       ],
       "type": "boolean"
+    },
+    {
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_use_secondary_engine",
+      "name": "use_secondary_engine",
+      "scope": [
+        "session"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "ON",
+        "FORCE"
+      ]
     },
     {
       "default": "on",

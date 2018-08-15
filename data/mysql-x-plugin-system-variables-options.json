@@ -169,16 +169,6 @@
       "type": "string"
     },
     {
-      "cli": "--mysqlx-ssl=#",
-      "dynamic": false,
-      "id": "option_mysqld_mysqlx-ssl",
-      "name": "mysqlx_ssl",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--mysqlx-ssl-ca=file-name",
       "dynamic": false,
       "id": "option_mysqld_mysqlx-ssl-ca",

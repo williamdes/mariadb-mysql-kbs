@@ -857,6 +857,21 @@
       "type": "integer"
     },
     {
+      "cli": "--innodb-fsync-threshold=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_innodb_fsync_threshold",
+      "name": "innodb_fsync_threshold",
+      "range": {
+        "from": 0,
+        "to": 2
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--innodb-ft-aux-table=#",
       "dynamic": true,
       "id": "sysvar_innodb_ft_aux_table",
@@ -1873,6 +1888,17 @@
         "global"
       ],
       "type": "string"
+    },
+    {
+      "cli": "--innodb-temp-tablespaces-dir=dir_name",
+      "default": ".#innodb_temp",
+      "dynamic": false,
+      "id": "sysvar_innodb_temp_tablespaces_dir",
+      "name": "innodb_temp_tablespaces_dir",
+      "scope": [
+        "global"
+      ],
+      "type": "directory name"
     },
     {
       "cli": "--innodb-thread-concurrency=#",

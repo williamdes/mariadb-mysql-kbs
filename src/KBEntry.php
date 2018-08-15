@@ -109,7 +109,7 @@ class KBEntry extends stdClass implements JsonSerializable
     }
 
     /**
-     * Add cocumentation link
+     * Add documentation link
      *
      * @param string      $url    The URL
      * @param string|null $anchor The anchor

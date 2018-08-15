@@ -213,6 +213,10 @@ const custom = [
     url: 'replication/optimization-and-tuning/system-variables/server-system-variables/',
     name: 'server-system-variables',
   },
+  {
+    url: 'system-versioned-tables/',
+    name: 'versioned-tables-system-variables',
+  },
 ];
 
 custom.forEach(cu => {

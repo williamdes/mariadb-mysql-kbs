@@ -244,7 +244,7 @@
     },
     {
       "cli": "--wsrep-node-address=value",
-      "default": "eth0",
+      "default": "0.0.0.0",
       "dynamic": false,
       "id": "wsrep_node_address",
       "name": "wsrep_node_address",

@@ -1013,13 +1013,13 @@
     },
     {
       "cli": "--rocksdb-max-row-locks=#",
-      "default": "1073741824",
+      "default": "1048576",
       "dynamic": true,
       "id": "rocksdb_max_row_locks",
       "name": "rocksdb_max_row_locks",
       "range": {
         "from": 1,
-        "to": 1073741824
+        "to": 1048576
       },
       "scope": [
         "global",

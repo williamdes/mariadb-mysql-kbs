@@ -444,7 +444,17 @@
       "name": "ndb_report_thresh_binlog_mem_usage",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
+    },
+    {
+      "dynamic": true,
+      "id": "sysvar_ndb_row_checksum",
+      "name": "ndb_row_checksum",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "dynamic": true,

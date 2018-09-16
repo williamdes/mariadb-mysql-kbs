@@ -475,6 +475,7 @@
       "type": "integer"
     },
     {
+      "default": "on",
       "dynamic": true,
       "id": "sysvar_sql_log_bin",
       "name": "sql_log_bin",

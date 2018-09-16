@@ -1230,7 +1230,7 @@
         "admin",
         "filesort",
         "filesort_on_disk",
-        "filsort_priority_queue",
+        "filesort_priority_queue",
         "full_join",
         "full_scan",
         "query_cache",
@@ -2826,6 +2826,17 @@
         "global"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--tcp-nodelay={0|1}",
+      "default": "1",
+      "dynamic": true,
+      "id": "tcp_nodelay",
+      "name": "tcp_nodelay",
+      "scope": [
+        "session"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--thread-cache-size=#",

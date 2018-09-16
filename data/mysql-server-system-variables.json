@@ -13,20 +13,28 @@
     },
     {
       "cli": "--authentication-windows-log-level",
-      "default": "0",
+      "default": "2",
+      "dynamic": false,
       "id": "sysvar_authentication_windows_log_level",
       "name": "authentication_windows_log_level",
       "range": {
         "from": 0,
         "to": 4
       },
+      "scope": [
+        "global"
+      ],
       "type": "integer"
     },
     {
       "cli": "--authentication-windows-use-principal-name",
       "default": "on",
+      "dynamic": false,
       "id": "sysvar_authentication_windows_use_principal_name",
       "name": "authentication_windows_use_principal_name",
+      "scope": [
+        "global"
+      ],
       "type": "boolean"
     },
     {
@@ -685,7 +693,7 @@
       "type": "integer"
     },
     {
-      "default": "1",
+      "default": "on",
       "dynamic": true,
       "id": "sysvar_foreign_key_checks",
       "name": "foreign_key_checks",
@@ -2304,6 +2312,15 @@
       "type": "integer"
     },
     {
+      "dynamic": true,
+      "id": "sysvar_rand_seed1",
+      "name": "rand_seed1",
+      "scope": [
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--range-alloc-block-size=#",
       "default": "4096",
       "dynamic": true,
@@ -2662,7 +2679,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--show-old-temporals={OFF|ON}",
@@ -2775,7 +2793,7 @@
       "type": "integer"
     },
     {
-      "default": "0",
+      "default": "off",
       "dynamic": true,
       "id": "sysvar_sql_auto_is_null",
       "name": "sql_auto_is_null",
@@ -2786,7 +2804,7 @@
       "type": "boolean"
     },
     {
-      "default": "1",
+      "default": "on",
       "dynamic": true,
       "id": "sysvar_sql_big_selects",
       "name": "sql_big_selects",
@@ -2797,7 +2815,7 @@
       "type": "boolean"
     },
     {
-      "default": "0",
+      "default": "off",
       "dynamic": true,
       "id": "sysvar_sql_buffer_result",
       "name": "sql_buffer_result",
@@ -2808,7 +2826,7 @@
       "type": "boolean"
     },
     {
-      "default": "0",
+      "default": "off",
       "dynamic": true,
       "id": "sysvar_sql_log_off",
       "name": "sql_log_off",
@@ -2816,7 +2834,11 @@
         "global",
         "session"
       ],
-      "type": "boolean"
+      "type": "boolean",
+      "validValues": [
+        "OFF",
+        "ON"
+      ]
     },
     {
       "cli": "--sql-mode=name",
@@ -2830,11 +2852,44 @@
       "type": "set"
     },
     {
+      "default": "on",
+      "dynamic": true,
+      "id": "sysvar_sql_notes",
+      "name": "sql_notes",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "default": "on",
+      "dynamic": true,
+      "id": "sysvar_sql_quote_show_create",
+      "name": "sql_quote_show_create",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--sql-require-primary-key[={OFF|ON}]",
       "default": "off",
       "dynamic": true,
       "id": "sysvar_sql_require_primary_key",
       "name": "sql_require_primary_key",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_sql_safe_updates",
+      "name": "sql_safe_updates",
       "scope": [
         "global",
         "session"
@@ -2850,6 +2905,17 @@
         "session"
       ],
       "type": "integer"
+    },
+    {
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_sql_warnings",
+      "name": "sql_warnings",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--ssl-ca=file_name",
@@ -3358,7 +3424,7 @@
       "type": "boolean"
     },
     {
-      "default": "1",
+      "default": "on",
       "dynamic": true,
       "id": "sysvar_unique_checks",
       "name": "unique_checks",

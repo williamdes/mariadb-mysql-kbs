@@ -346,6 +346,17 @@
       "type": "file name"
     },
     {
+      "cli": "--innodb-buffer-pool-in-core-file",
+      "default": "on",
+      "dynamic": true,
+      "id": "sysvar_innodb_buffer_pool_in_core_file",
+      "name": "innodb_buffer_pool_in_core_file",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-buffer-pool-instances=#",
       "dynamic": false,
       "id": "sysvar_innodb_buffer_pool_instances",
@@ -914,7 +925,8 @@
       "id": "sysvar_innodb_ft_enable_stopword",
       "name": "innodb_ft_enable_stopword",
       "scope": [
-        "global"
+        "global",
+        "session"
       ],
       "type": "boolean"
     },
@@ -1096,6 +1108,28 @@
         "to": 4294967295
       },
       "type": "integer"
+    },
+    {
+      "cli": "--innodb-log-checkpoint-fuzzy-now",
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_innodb_log_checkpoint_fuzzy_now",
+      "name": "innodb_log_checkpoint_fuzzy_now",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--innodb-log-checkpoint-now",
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_innodb_log_checkpoint_now",
+      "name": "innodb_log_checkpoint_now",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--innodb-log-checksums=#",
@@ -1466,11 +1500,6 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "4k",
-        "8k",
-        "16k",
-        "32k",
-        "64k",
         "4096",
         "8192",
         "16384",
@@ -1891,7 +1920,7 @@
     },
     {
       "cli": "--innodb-temp-tablespaces-dir=dir_name",
-      "default": ".#innodb_temp",
+      "default": "#innodb_temp",
       "dynamic": false,
       "id": "sysvar_innodb_temp_tablespaces_dir",
       "name": "innodb_temp_tablespaces_dir",

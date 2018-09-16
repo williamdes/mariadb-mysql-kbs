@@ -1017,10 +1017,7 @@
       "dynamic": true,
       "id": "rocksdb_max_row_locks",
       "name": "rocksdb_max_row_locks",
-      "range": {
-        "from": 1,
-        "to": 1048576
-      },
+      "range": {},
       "scope": [
         "global",
         "session"

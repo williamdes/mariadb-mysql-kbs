@@ -1,65 +1,66 @@
 dist: trusty
-
 language: php
-
-php:
-  - "7.1"
-  - "7.2"
-
 sudo: required
-
 env:
-  matrix:
-    - CI_TYPE=phpunit
-
+  global:
+  - secure: ero5yP/IVodwL7BrYRJHpYXiLjW4soMPMaEL7bHgZxK56HWouU0YNTye9tdc1PU/1m/lTdfWrO8ajElb1k/ofQlvudME1GP5FmPWvVp7ygBWX8EZ1FL9nhLNIknC8Usmb5+HJ1xUph24GGMV4poXL19b96AWB6p7n9nIdyTsk6YYHrBXy59OpqPWSKNOw2cT6x7dgqwl0qCKUKvvi/NXmkzmBD+p3W+bVze5ty5+QCppKfYX3OzM1BNfEgOePex3ccjjFXJrqb6Kvm7tvdmAhWQ9Cou+QiaXGWrkrCOj0uLMYo9X8Ja7GPeCscg+fv5X7pAIC5z+y6dsC8MFl8eTM0a5OfKT/84G1XFSf0qKw6o0leXdqT7cidxc92teJp0a3BvCj89tUdbamd1Vhjg6X67N3nv/GqYshaxfTlmHh34Tf27+hnvYs2B0zO098L97dsGz0IlW+/vH0U9CtmKpkQ6EDDHOe2b/FBHfTIBrkMLumbHp+fKCRorHdb9cWStIqW2GaCQ7+/aGIVwTernTSVhWbvOJeuNSx+e49lKAb9DdQysle7ilqGj7QLDaaYkxroAWr/gzacUj+j/Yq5IkpZJ9RFZkgpf6gkHySzR8sjbwekINjjcSIJnCnpA1bn5qzsT3UjRqacA8T6ybCNFYZkrz6BGRscJVW1uSu9ZOsGY=
+  - secure: VqQpe6UZPEdgE4eSeNjfoMgf1aZzMaDb9egxD5r2Gz0oPOuZ8WSfBaSr0aANOGCeXGAhUWBr8o0PrthCWk4kqhCiYsaxE2PYCyQ1hUNQth5+i+nf6UXGxGUHmWKmk7qvksUGK1SXbTcG3N41NYyYldnW03dIkCgizhjbhFjS8QuWf3wm/3eoxJTt4r5iET6LjDUoF+OpTlPk7VdTcw/SmfTBXgJfK/enV2yNgCujKStohn7npemrxAUFRT8eZ6BluLmghF2aZoiFxnbG3CCv24CwL61KY3vtpB/v2LMexy/90msWvcxT9kPb6NjXn1ZPYIGXIybbslxvueWlyJfYJe5aDEPT8U3Q1QbQHDpW8Try1yL2ZVI9Obx/dYZRrXCVUisHCwO7PEm7PgIGffGB8aYdjhEhI1CSgan1gPjWyFxe22QlKLx2DOAsf6jFp8PS4XQ+ZwOFzjFDUqG4RiwEOyW6I6dDAMhLTo4FE1i3kfLUXOM8k7bdnXoOmUaQJq6HH0J/pJTCoO2m5WUXkgwTKIKRAYArAsKdBQ4nXKWlkX5CNaX5cR0csO1xmFTi+9X6hLuqezxXHVmLXLY6NS+jQSirj+1+9/6Hd1Dd92emxSDxwDD5DXDHulwIsZbAmdHpA//colZWH/gTZe2SUconuqcqVc6B/fmT5/dauS2mU/g=
+before_install:
+- openssl aes-256-cbc -K $encrypted_ab8f92ccaef0_key -iv $encrypted_ab8f92ccaef0_iv
+  -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d
 before_script:
-  - ./scripts/ci/install-reporters.sh
-  - ./scripts/ci/install.sh
-
+- "./scripts/ci/install-reporters.sh"
+- "./scripts/ci/install.sh"
 script:
-  - ./scripts/ci/ci-$CI_TYPE.sh
-
+- ./scripts/ci/ci-$CI_TYPE.sh
 install:
-    # flags to pass to install
-    - flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"
-    # install dependencies using system provided composer binary
-    - composer install $flags
-
+- flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest
+  --no-progress"
+- composer install $flags
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
-
+- bash <(curl -s https://codecov.io/bash)
 after_script:
-  - ./codacy-coverage.phar clover build/logs/clover.xml
-
-matrix:
-  fast_finish: true
+- "./codacy-coverage.phar clover build/logs/clover.xml"
+stages:
+  - name: tests
+    if: NOT type = cron
+  - name: robot
+    if: type = cron
+jobs:
   include:
-    - php: "7.2"
+    - stage: tests
+      php: '7.2'
       env: CI_TYPE=phpstan
-
-    - php: "7.2"
+    - stage: tests
+      php: '7.2'
       env: CI_TYPE=phpcs
-
-    - os: osx
+    - stage: tests
+      php: '7.1'
+      env: CI_TYPE=phpunit
+    - stage: tests
+      php: '7.2'
+      env: CI_TYPE=phpunit
+    - stage: tests
+      os: osx
       language: generic
-      php: "7.2"
+      php: '7.2'
       env: CI_TYPE=phpunit
       before_install:
-        - ./scripts/ci/install-osx.sh
-
+        - "./scripts/ci/install-osx.sh"
+    - stage: robot
+      php: '7.2'
+      env: CI_TYPE=cron
 cache:
   apt: true
   directories:
-    - $HOME/.composer/cache/
-    - $HOME/.cache/bower
-    - $HOME/.npm
-    - $HOME/.cache/ci
-    - /var/cache/apt
-    - ~/Library/Caches/Homebrew
-
+  - "$HOME/.composer/cache/"
+  - "$HOME/.cache/bower"
+  - "$HOME/.npm"
+  - "$HOME/.cache/ci"
+  - "/var/cache/apt"
+  - "~/Library/Caches/Homebrew"
 addons:
   apt:
     update: false
-
 git:
   submodules: false

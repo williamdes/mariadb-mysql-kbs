@@ -9,14 +9,34 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 	exit 1;
 fi
 
+therealpath ()
+{
+    f=$@;
+    if [ -d "$f" ]; then
+        base="";
+        dir="$f";
+    else
+        base="/$(basename "$f")";
+        dir=$(dirname "$f");
+    fi;
+    dir=$(cd "$dir" && /bin/pwd);
+    echo "$dir$base"
+}
+
+
 ME="$(dirname $0)"
 
-BOT_DIR_FILES="$(realpath $ME/../sudo-bot)"
+BOT_DIR_FILES="$(therealpath $ME/../sudo-bot)"
 
-BOT_DIR_GIT="$(realpath $ME/../sudo-bot-git)"
+BOT_DIR_GIT="$(therealpath $ME/../sudo-bot-git)"
 
-REPO_DIR="$(realpath $ME/../../)"
+REPO_DIR="$(therealpath $ME/../../)"
 
+echo "BOT_DIR_FILES = $BOT_DIR_FILES"
+echo "BOT_DIR_GIT = $BOT_DIR_GIT"
+echo "REPO_DIR = $REPO_DIR"
+
+echo "Clone repo"
 git clone https://github.com/sudo-bot/sudo-bot.git --depth 1 $BOT_DIR_GIT
 
 REPO="mariadb-mysql-kbs"
@@ -32,17 +52,30 @@ GPG_PUB_PATH="$BOT_DIR_FILES/pubkey.asc"
 BOT_NAME="Sudo Bot"
 BOT_EMAIL="sudo-bot@wdes.fr"
 
+echo "Create env file"
+
 echo -e "JWT_PRIV_KEY_PATH=$JWT_PRIV_KEY_PATH\nGPG_PRIV_PATH=$GPG_PRIV_PATH\nGPG_PUB_PATH=$GPG_PUB_PATH\nGPG_PRIV_PASSWORD=$GPG_PRIV_PASSWORD\nREPO=$REPO\nOWNER=$OWNER\nINSTALLATION_ID=$INSTALLATION_ID\nBOT_NAME=$BOT_NAME\nBOT_EMAIL=$BOT_EMAIL\nREPO_DIR=$REPO_DIR" > $BOT_DIR_GIT/.env
+
+echo "Run nodejs scripts"
 
 nodejs "$REPO_DIR/src/MySQL.js"
 nodejs "$REPO_DIR/src/MariaDB.js"
 nodejs "$REPO_DIR/src/spy.js"
 
+echo "Run merge script"
+
 php -f "$REPO_DIR/src/merge.php"
+
+echo "Install sudo-bot npm"
 
 cd $BOT_DIR_GIT
 npm install
 cd $REPO_DIR
+
+echo "Launch sudo-bot"
+
 nodejs "$BOT_DIR_GIT/index.js"
+
+echo "Delete sudo-bot local repo"
 
 rm -rf $BOT_DIR_GIT

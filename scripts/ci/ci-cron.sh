@@ -58,9 +58,9 @@ echo -e "JWT_PRIV_KEY_PATH=$JWT_PRIV_KEY_PATH\nGPG_PRIV_PATH=$GPG_PRIV_PATH\nGPG
 
 echo "Run nodejs scripts"
 
-nodejs "$REPO_DIR/src/MySQL.js"
-nodejs "$REPO_DIR/src/MariaDB.js"
-nodejs "$REPO_DIR/src/spy.js"
+node "$REPO_DIR/src/MySQL.js"
+node "$REPO_DIR/src/MariaDB.js"
+node "$REPO_DIR/src/spy.js"
 
 echo "Run merge script"
 
@@ -74,7 +74,7 @@ cd $REPO_DIR
 
 echo "Launch sudo-bot"
 
-nodejs "$BOT_DIR_GIT/index.js"
+node "$BOT_DIR_GIT/index.js"
 
 echo "Delete sudo-bot local repo"
 

@@ -5,6 +5,7 @@ sudo: required
 before_install:
 - openssl aes-256-cbc -K $encrypted_ab8f92ccaef0_key -iv $encrypted_ab8f92ccaef0_iv
   -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d
+- tar -C scripts/sudo-bot/ -xvf scripts/sudo-bot/keys.tar
 before_script:
 - "./scripts/ci/install-reporters.sh"
 - "./scripts/ci/install.sh"

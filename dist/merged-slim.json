@@ -1398,7 +1398,7 @@
         },
         "wsrep_node_address": {
             "cli": "--wsrep-node-address=value",
-            "default": "eth0",
+            "default": "0.0.0.0",
             "dynamic": false,
             "name": "wsrep_node_address",
             "scope": [
@@ -1733,10 +1733,16 @@
                 "6#wsrep_sync_wait"
             ]
         },
+        "current_pos": {
+            "name": "current_pos",
+            "ids": [
+                "8#current_pos-vs-slave_pos"
+            ]
+        },
         "gtid_slave_pos": {
             "name": "gtid_slave_pos",
             "ids": [
-                "8#gtid_slave_pos"
+                "7#gtid_slave_pos"
             ]
         },
         "gtid_binlog_pos": {
@@ -3824,13 +3830,10 @@
         },
         "rocksdb_max_row_locks": {
             "cli": "--rocksdb-max-row-locks=#",
-            "default": "1073741824",
+            "default": "1048576",
             "dynamic": true,
             "name": "rocksdb_max_row_locks",
-            "range": {
-                "from": 1,
-                "to": 1073741824
-            },
+            "range": {},
             "scope": [
                 "global",
                 "session"
@@ -6244,6 +6247,7 @@
             ]
         },
         "sql_log_bin": {
+            "default": "1",
             "dynamic": true,
             "name": "sql_log_bin",
             "scope": [
@@ -12118,7 +12122,7 @@
                 "admin",
                 "filesort",
                 "filesort_on_disk",
-                "filsort_priority_queue",
+                "filesort_priority_queue",
                 "full_join",
                 "full_scan",
                 "query_cache",
@@ -13298,19 +13302,15 @@
             ]
         },
         "rand_seed1": {
-            "cli": "none",
             "dynamic": true,
             "name": "rand_seed1",
-            "range": {
-                "from": 0,
-                "to": 1.8446744073709552e+19
-            },
             "scope": [
                 "session"
             ],
             "type": "integer",
             "ids": [
-                "29#rand_seed1"
+                "29#rand_seed1",
+                "10#sysvar_rand_seed1"
             ]
         },
         "rand_seed2": {
@@ -13516,20 +13516,21 @@
         },
         "session_track_transaction_info": {
             "cli": "--session-track-transaction-info=value",
-            "default": "OFF",
             "dynamic": true,
             "name": "session_track_transaction_info",
             "scope": [
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "validValues": [
                 "OFF",
                 "STATE",
                 "CHARACTERISTICS"
             ],
             "ids": [
-                "29#session_track_transaction_info"
+                "29#session_track_transaction_info",
+                "10#sysvar_session_track_transaction_info"
             ]
         },
         "shared_memory": {
@@ -13744,6 +13745,10 @@
             "dynamic": true,
             "name": "sql_log_off",
             "type": "boolean",
+            "validValues": [
+                "OFF",
+                "ON"
+            ],
             "ids": [
                 "29#sql_log_off",
                 "10#sysvar_sql_log_off"
@@ -13783,7 +13788,6 @@
             ]
         },
         "sql_notes": {
-            "cli": "none",
             "default": "1",
             "dynamic": true,
             "name": "sql_notes",
@@ -13793,7 +13797,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "29#sql_notes"
+                "29#sql_notes",
+                "10#sysvar_sql_notes"
             ]
         },
         "sql_quote_show_create": {
@@ -13806,16 +13811,22 @@
             ],
             "type": "boolean",
             "ids": [
-                "29#sql_quote_show_create"
+                "29#sql_quote_show_create",
+                "10#sysvar_sql_quote_show_create"
             ]
         },
         "sql_safe_updates": {
-            "default": "OFF (0)",
+            "default": "0",
             "dynamic": true,
             "name": "sql_safe_updates",
+            "scope": [
+                "global",
+                "session"
+            ],
             "type": "boolean",
             "ids": [
-                "29#sql_safe_updates"
+                "29#sql_safe_updates",
+                "10#sysvar_sql_safe_updates"
             ]
         },
         "sql_select_limit": {
@@ -13832,7 +13843,7 @@
             ]
         },
         "sql_warnings": {
-            "default": "OFF (0)",
+            "default": "0",
             "dynamic": true,
             "name": "sql_warnings",
             "scope": [
@@ -13841,7 +13852,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "29#sql_warnings"
+                "29#sql_warnings",
+                "10#sysvar_sql_warnings"
             ]
         },
         "storage_engine": {
@@ -14035,6 +14047,19 @@
             "type": "integer",
             "ids": [
                 "29#tcp_keepalive_time"
+            ]
+        },
+        "tcp_nodelay": {
+            "cli": "--tcp-nodelay={0|1}",
+            "default": "1",
+            "dynamic": true,
+            "name": "tcp_nodelay",
+            "scope": [
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "29#tcp_nodelay"
             ]
         },
         "thread_cache_size": {
@@ -18605,6 +18630,50 @@
                 "37#tokudb_write_status_frequency"
             ]
         },
+        "system_versioning_alter_history": {
+            "cli": "--system-versioning-alter-history=value",
+            "default": "ERROR",
+            "dynamic": true,
+            "name": "system_versioning_alter_history",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "validValues": [
+                "ERROR",
+                "KEEP"
+            ],
+            "ids": [
+                "39#system_versioning_alter_history"
+            ]
+        },
+        "system_versioning_asof": {
+            "cli": "none",
+            "default": "DEFAULT",
+            "dynamic": true,
+            "name": "system_versioning_asof",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                "38#system_versioning_asof"
+            ]
+        },
+        "system_versioning_innodb_algorithm_simple": {
+            "cli": "--system-versioning-innodb-algorithm-simple[={0|1}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "system_versioning_innodb_algorithm_simple",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "38#system_versioning_innodb_algorithm_simple"
+            ]
+        },
         "Innodb_adaptive_hash_cells": {
             "name": "Innodb_adaptive_hash_cells",
             "scope": [
@@ -18612,7 +18681,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_adaptive_hash_cells"
+                "40#innodb_adaptive_hash_cells"
             ]
         },
         "Innodb_adaptive_hash_hash_searches": {
@@ -18622,7 +18691,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_adaptive_hash_hash_searches"
+                "39#innodb_adaptive_hash_hash_searches"
             ]
         },
         "Innodb_adaptive_hash_heap_buffers": {
@@ -18632,7 +18701,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_adaptive_hash_heap_buffers"
+                "39#innodb_adaptive_hash_heap_buffers"
             ]
         },
         "Innodb_adaptive_hash_non_hash_searches": {
@@ -18642,7 +18711,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_adaptive_hash_non_hash_searches"
+                "39#innodb_adaptive_hash_non_hash_searches"
             ]
         },
         "Innodb_available_undo_logs": {
@@ -18652,7 +18721,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_available_undo_logs"
+                "39#innodb_available_undo_logs"
             ]
         },
         "Innodb_background_log_sync": {
@@ -18662,7 +18731,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_background_log_sync"
+                "39#innodb_background_log_sync"
             ]
         },
         "Innodb_buffer_pool_bytes_data": {
@@ -18672,7 +18741,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_bytes_data"
+                "39#innodb_buffer_pool_bytes_data"
             ]
         },
         "Innodb_buffer_pool_bytes_dirty": {
@@ -18682,7 +18751,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_bytes_dirty"
+                "39#innodb_buffer_pool_bytes_dirty"
             ]
         },
         "Innodb_buffer_pool_dump_status": {
@@ -18692,7 +18761,7 @@
             ],
             "type": "string",
             "ids": [
-                "38#innodb_buffer_pool_dump_status"
+                "39#innodb_buffer_pool_dump_status"
             ]
         },
         "Innodb_buffer_pool_load_incomplete": {
@@ -18702,7 +18771,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "38#innodb_buffer_pool_load_incomplete"
+                "39#innodb_buffer_pool_load_incomplete"
             ]
         },
         "Innodb_buffer_pool_load_status": {
@@ -18712,7 +18781,7 @@
             ],
             "type": "string",
             "ids": [
-                "38#innodb_buffer_pool_load_status"
+                "39#innodb_buffer_pool_load_status"
             ]
         },
         "Innodb_buffer_pool_pages_data": {
@@ -18722,7 +18791,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_pages_data"
+                "39#innodb_buffer_pool_pages_data"
             ]
         },
         "Innodb_buffer_pool_pages_dirty": {
@@ -18732,7 +18801,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_pages_dirty"
+                "39#innodb_buffer_pool_pages_dirty"
             ]
         },
         "Innodb_buffer_pool_pages_flushed": {
@@ -18742,7 +18811,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_pages_flushed"
+                "39#innodb_buffer_pool_pages_flushed"
             ]
         },
         "Innodb_buffer_pool_pages_LRU_flushed": {
@@ -18752,7 +18821,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_pages_lru_flushed"
+                "39#innodb_buffer_pool_pages_lru_flushed"
             ]
         },
         "Innodb_buffer_pool_pages_free": {
@@ -18762,7 +18831,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_pages_free"
+                "39#innodb_buffer_pool_pages_free"
             ]
         },
         "Innodb_buffer_pool_pages_made_not_young": {
@@ -18772,7 +18841,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_pages_made_not_young"
+                "39#innodb_buffer_pool_pages_made_not_young"
             ]
         },
         "Innodb_buffer_pool_pages_made_young": {
@@ -18782,7 +18851,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_pages_made_young"
+                "39#innodb_buffer_pool_pages_made_young"
             ]
         },
         "Innodb_buffer_pool_pages_misc": {
@@ -18792,7 +18861,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_pages_misc"
+                "39#innodb_buffer_pool_pages_misc"
             ]
         },
         "Innodb_buffer_pool_pages_old": {
@@ -18802,7 +18871,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_pages_old"
+                "39#innodb_buffer_pool_pages_old"
             ]
         },
         "Innodb_buffer_pool_pages_total": {
@@ -18812,7 +18881,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_pages_total"
+                "39#innodb_buffer_pool_pages_total"
             ]
         },
         "Innodb_buffer_pool_read_ahead": {
@@ -18822,7 +18891,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_read_ahead"
+                "39#innodb_buffer_pool_read_ahead"
             ]
         },
         "Innodb_buffer_pool_read_ahead_evicted": {
@@ -18832,7 +18901,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_read_ahead_evicted"
+                "39#innodb_buffer_pool_read_ahead_evicted"
             ]
         },
         "Innodb_buffer_pool_read_ahead_rnd": {
@@ -18842,7 +18911,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_read_ahead_rnd"
+                "39#innodb_buffer_pool_read_ahead_rnd"
             ]
         },
         "Innodb_buffer_pool_read_requests": {
@@ -18852,7 +18921,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_read_requests"
+                "39#innodb_buffer_pool_read_requests"
             ]
         },
         "Innodb_buffer_pool_reads": {
@@ -18862,7 +18931,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_reads"
+                "39#innodb_buffer_pool_reads"
             ]
         },
         "Innodb_buffer_pool_resize_status": {
@@ -18872,7 +18941,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_resize_status"
+                "39#innodb_buffer_pool_resize_status"
             ]
         },
         "Innodb_buffer_pool_wait_free": {
@@ -18882,7 +18951,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_wait_free"
+                "39#innodb_buffer_pool_wait_free"
             ]
         },
         "Innodb_buffer_pool_write_requests": {
@@ -18892,7 +18961,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_buffer_pool_write_requests"
+                "39#innodb_buffer_pool_write_requests"
             ]
         },
         "Innodb_checkpoint_age": {
@@ -18902,7 +18971,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_checkpoint_age"
+                "39#innodb_checkpoint_age"
             ]
         },
         "Innodb_checkpoint_max_age": {
@@ -18912,7 +18981,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_checkpoint_max_age"
+                "39#innodb_checkpoint_max_age"
             ]
         },
         "Innodb_checkpoint_target_age": {
@@ -18922,7 +18991,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_checkpoint_target_age"
+                "39#innodb_checkpoint_target_age"
             ]
         },
         "Innodb_current_row_locks": {
@@ -18932,7 +19001,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_current_row_locks"
+                "39#innodb_current_row_locks"
             ]
         },
         "Innodb_data_fsyncs": {
@@ -18942,7 +19011,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_data_fsyncs"
+                "39#innodb_data_fsyncs"
             ]
         },
         "Innodb_data_pending_fsyncs": {
@@ -18952,7 +19021,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_data_pending_fsyncs"
+                "39#innodb_data_pending_fsyncs"
             ]
         },
         "Innodb_data_pending_reads": {
@@ -18962,7 +19031,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_data_pending_reads"
+                "39#innodb_data_pending_reads"
             ]
         },
         "Innodb_data_pending_writes": {
@@ -18972,7 +19041,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_data_pending_writes"
+                "39#innodb_data_pending_writes"
             ]
         },
         "Innodb_data_read": {
@@ -18982,7 +19051,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_data_read"
+                "39#innodb_data_read"
             ]
         },
         "Innodb_data_reads": {
@@ -18992,7 +19061,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_data_reads"
+                "39#innodb_data_reads"
             ]
         },
         "Innodb_data_writes": {
@@ -19002,7 +19071,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_data_writes"
+                "39#innodb_data_writes"
             ]
         },
         "Innodb_data_written": {
@@ -19012,7 +19081,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_data_written"
+                "39#innodb_data_written"
             ]
         },
         "Innodb_dblwr_pages_written": {
@@ -19022,7 +19091,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_dblwr_pages_written"
+                "39#innodb_dblwr_pages_written"
             ]
         },
         "Innodb_dblwr_writes": {
@@ -19032,7 +19101,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_dblwr_writes"
+                "39#innodb_dblwr_writes"
             ]
         },
         "Innodb_deadlocks": {
@@ -19042,7 +19111,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_deadlocks"
+                "39#innodb_deadlocks"
             ]
         },
         "Innodb_defragment_compression_failures": {
@@ -19052,7 +19121,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_defragment_compression_failures"
+                "39#innodb_defragment_compression_failures"
             ]
         },
         "Innodb_defragment_count": {
@@ -19062,7 +19131,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_defragment_count"
+                "39#innodb_defragment_count"
             ]
         },
         "Innodb_defragment_failures": {
@@ -19072,7 +19141,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_defragment_failures"
+                "39#innodb_defragment_failures"
             ]
         },
         "Innodb_dict_tables": {
@@ -19082,7 +19151,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_dict_tables"
+                "39#innodb_dict_tables"
             ]
         },
         "Innodb_encryption_n_merge_blocks_decrypted": {
@@ -19092,7 +19161,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_encryption_n_merge_blocks_decrypted"
+                "39#innodb_encryption_n_merge_blocks_decrypted"
             ]
         },
         "Innodb_encryption_n_merge_blocks_encrypted": {
@@ -19102,7 +19171,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_encryption_n_merge_blocks_encrypted"
+                "39#innodb_encryption_n_merge_blocks_encrypted"
             ]
         },
         "Innodb_encryption_n_rowlog_blocks_decrypted": {
@@ -19112,7 +19181,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_encryption_n_rowlog_blocks_decrypted"
+                "39#innodb_encryption_n_rowlog_blocks_decrypted"
             ]
         },
         "Innodb_encryption_n_rowlog_blocks_encrypted": {
@@ -19122,7 +19191,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_encryption_n_rowlog_blocks_encrypted"
+                "39#innodb_encryption_n_rowlog_blocks_encrypted"
             ]
         },
         "Innodb_encryption_num_key_requests": {
@@ -19132,7 +19201,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_encryption_num_key_requests"
+                "39#innodb_encryption_num_key_requests"
             ]
         },
         "Innodb_encryption_rotation_estimated_iops": {
@@ -19142,7 +19211,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_encryption_rotation_estimated_iops"
+                "39#innodb_encryption_rotation_estimated_iops"
             ]
         },
         "Innodb_encryption_rotation_pages_flushed": {
@@ -19152,7 +19221,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_encryption_rotation_pages_flushed"
+                "39#innodb_encryption_rotation_pages_flushed"
             ]
         },
         "Innodb_encryption_rotation_pages_modified": {
@@ -19162,7 +19231,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_encryption_rotation_pages_modified"
+                "39#innodb_encryption_rotation_pages_modified"
             ]
         },
         "Innodb_encryption_rotation_pages_read_from_cache": {
@@ -19172,7 +19241,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_encryption_rotation_pages_read_from_cache"
+                "39#innodb_encryption_rotation_pages_read_from_cache"
             ]
         },
         "Innodb_encryption_rotation_pages_read_from_disk": {
@@ -19182,7 +19251,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_encryption_rotation_pages_read_from_disk"
+                "39#innodb_encryption_rotation_pages_read_from_disk"
             ]
         },
         "Innodb_have_atomic_builtins": {
@@ -19192,7 +19261,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "38#innodb_have_atomic_builtins"
+                "39#innodb_have_atomic_builtins"
             ]
         },
         "Innodb_have_bzip2": {
@@ -19202,7 +19271,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "38#innodb_have_bzip2"
+                "39#innodb_have_bzip2"
             ]
         },
         "Innodb_have_lz4": {
@@ -19212,7 +19281,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "38#innodb_have_lz4"
+                "39#innodb_have_lz4"
             ]
         },
         "Innodb_have_lzma": {
@@ -19222,7 +19291,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "38#innodb_have_lzma"
+                "39#innodb_have_lzma"
             ]
         },
         "Innodb_have_lzo": {
@@ -19232,7 +19301,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "38#innodb_have_lzo"
+                "39#innodb_have_lzo"
             ]
         },
         "Innodb_have_punch_hole": {
@@ -19242,7 +19311,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_have_punch_hole"
+                "39#innodb_have_punch_hole"
             ]
         },
         "Innodb_have_snappy": {
@@ -19252,7 +19321,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "38#innodb_have_snappy"
+                "39#innodb_have_snappy"
             ]
         },
         "Innodb_history_list_length": {
@@ -19262,7 +19331,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_history_list_length"
+                "39#innodb_history_list_length"
             ]
         },
         "Innodb_ibuf_discarded_delete_marks": {
@@ -19272,7 +19341,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_ibuf_discarded_delete_marks"
+                "39#innodb_ibuf_discarded_delete_marks"
             ]
         },
         "Innodb_ibuf_discarded_deletes": {
@@ -19282,7 +19351,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_ibuf_discarded_deletes"
+                "39#innodb_ibuf_discarded_deletes"
             ]
         },
         "Innodb_ibuf_discarded_inserts": {
@@ -19292,7 +19361,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_ibuf_discarded_inserts"
+                "39#innodb_ibuf_discarded_inserts"
             ]
         },
         "Innodb_ibuf_free_list": {
@@ -19302,7 +19371,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_ibuf_free_list"
+                "39#innodb_ibuf_free_list"
             ]
         },
         "Innodb_ibuf_merged_delete_marks": {
@@ -19312,7 +19381,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_ibuf_merged_delete_marks"
+                "39#innodb_ibuf_merged_delete_marks"
             ]
         },
         "Innodb_ibuf_merged_deletes": {
@@ -19322,7 +19391,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_ibuf_merged_deletes"
+                "39#innodb_ibuf_merged_deletes"
             ]
         },
         "Innodb_ibuf_merged_inserts": {
@@ -19332,7 +19401,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_ibuf_merged_inserts"
+                "39#innodb_ibuf_merged_inserts"
             ]
         },
         "Innodb_ibuf_merges": {
@@ -19342,7 +19411,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_ibuf_merges"
+                "39#innodb_ibuf_merges"
             ]
         },
         "Innodb_ibuf_segment_size": {
@@ -19352,7 +19421,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_ibuf_segment_size"
+                "39#innodb_ibuf_segment_size"
             ]
         },
         "Innodb_ibuf_size": {
@@ -19362,7 +19431,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_ibuf_size"
+                "39#innodb_ibuf_size"
             ]
         },
         "Innodb_instant_alter_column": {
@@ -19372,7 +19441,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_instant_alter_column"
+                "39#innodb_instant_alter_column"
             ]
         },
         "Innodb_log_waits": {
@@ -19382,7 +19451,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_log_waits"
+                "39#innodb_log_waits"
             ]
         },
         "Innodb_log_write_requests": {
@@ -19392,7 +19461,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_log_write_requests"
+                "39#innodb_log_write_requests"
             ]
         },
         "Innodb_log_writes": {
@@ -19402,7 +19471,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_log_writes"
+                "39#innodb_log_writes"
             ]
         },
         "Innodb_lsn_current": {
@@ -19412,7 +19481,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_lsn_current"
+                "39#innodb_lsn_current"
             ]
         },
         "Innodb_lsn_flushed": {
@@ -19422,7 +19491,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_lsn_flushed"
+                "39#innodb_lsn_flushed"
             ]
         },
         "Innodb_lsn_last_checkpoint": {
@@ -19432,7 +19501,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_lsn_last_checkpoint"
+                "39#innodb_lsn_last_checkpoint"
             ]
         },
         "Innodb_master_thread_1_second_loops": {
@@ -19442,7 +19511,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_master_thread_1_second_loops"
+                "39#innodb_master_thread_1_second_loops"
             ]
         },
         "Innodb_master_thread_10_second_loops": {
@@ -19452,7 +19521,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_master_thread_10_second_loops"
+                "39#innodb_master_thread_10_second_loops"
             ]
         },
         "Innodb_master_thread_active_loops": {
@@ -19462,7 +19531,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_master_thread_active_loops"
+                "39#innodb_master_thread_active_loops"
             ]
         },
         "Innodb_master_thread_background_loops": {
@@ -19472,7 +19541,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_master_thread_background_loops"
+                "39#innodb_master_thread_background_loops"
             ]
         },
         "Innodb_master_thread_idle_loops": {
@@ -19482,7 +19551,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_master_thread_idle_loops"
+                "39#innodb_master_thread_idle_loops"
             ]
         },
         "Innodb_master_thread_main_flush_loops": {
@@ -19492,7 +19561,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_master_thread_main_flush_loops"
+                "39#innodb_master_thread_main_flush_loops"
             ]
         },
         "Innodb_master_thread_sleeps": {
@@ -19502,7 +19571,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_master_thread_sleeps"
+                "39#innodb_master_thread_sleeps"
             ]
         },
         "Innodb_max_trx_id": {
@@ -19512,7 +19581,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_max_trx_id"
+                "39#innodb_max_trx_id"
             ]
         },
         "Innodb_mem_adaptive_hash": {
@@ -19522,7 +19591,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_mem_adaptive_hash"
+                "39#innodb_mem_adaptive_hash"
             ]
         },
         "Innodb_mem_dictionary": {
@@ -19532,7 +19601,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_mem_dictionary"
+                "39#innodb_mem_dictionary"
             ]
         },
         "Innodb_mem_total": {
@@ -19542,7 +19611,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_mem_total"
+                "39#innodb_mem_total"
             ]
         },
         "Innodb_mutex_os_waits": {
@@ -19552,7 +19621,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_mutex_os_waits"
+                "39#innodb_mutex_os_waits"
             ]
         },
         "Innodb_mutex_spin_rounds": {
@@ -19562,7 +19631,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_mutex_spin_rounds"
+                "39#innodb_mutex_spin_rounds"
             ]
         },
         "Innodb_mutex_spin_waits": {
@@ -19572,7 +19641,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_mutex_spin_waits"
+                "39#innodb_mutex_spin_waits"
             ]
         },
         "Innodb_num_index_pages_written": {
@@ -19580,7 +19649,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_num_index_pages_written"
+                "39#innodb_num_index_pages_written"
             ]
         },
         "Innodb_num_non_index_pages_written": {
@@ -19588,7 +19657,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_num_non_index_pages_written"
+                "39#innodb_num_non_index_pages_written"
             ]
         },
         "Innodb_num_open_files": {
@@ -19598,7 +19667,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_num_open_files"
+                "39#innodb_num_open_files"
             ]
         },
         "Innodb_num_page_compressed_trim_op": {
@@ -19608,7 +19677,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_num_page_compressed_trim_op"
+                "39#innodb_num_page_compressed_trim_op"
             ]
         },
         "Innodb_num_page_compressed_trim_op_saved": {
@@ -19618,7 +19687,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_num_page_compressed_trim_op_saved"
+                "39#innodb_num_page_compressed_trim_op_saved"
             ]
         },
         "Innodb_num_pages_decrypted": {
@@ -19628,7 +19697,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_num_pages_decrypted"
+                "39#innodb_num_pages_decrypted"
             ]
         },
         "Innodb_num_pages_encrypted": {
@@ -19638,7 +19707,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_num_pages_encrypted"
+                "39#innodb_num_pages_encrypted"
             ]
         },
         "Innodb_num_pages_page_compressed": {
@@ -19648,7 +19717,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_num_pages_page_compressed"
+                "39#innodb_num_pages_page_compressed"
             ]
         },
         "Innodb_num_pages_page_compression_error": {
@@ -19658,7 +19727,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_num_pages_page_compression_error"
+                "39#innodb_num_pages_page_compression_error"
             ]
         },
         "Innodb_num_pages_page_decompressed": {
@@ -19668,7 +19737,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_num_pages_page_decompressed"
+                "39#innodb_num_pages_page_decompressed"
             ]
         },
         "Innodb_num_pages_page_encryption_error": {
@@ -19678,7 +19747,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_num_pages_page_encryption_error"
+                "39#innodb_num_pages_page_encryption_error"
             ]
         },
         "Innodb_oldest_view_low_limit_trx_id": {
@@ -19688,7 +19757,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_oldest_view_low_limit_trx_id"
+                "39#innodb_oldest_view_low_limit_trx_id"
             ]
         },
         "Innodb_onlineddl_pct_progress": {
@@ -19698,7 +19767,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_onlineddl_pct_progress"
+                "39#innodb_onlineddl_pct_progress"
             ]
         },
         "Innodb_onlineddl_rowlog_pct_used": {
@@ -19708,7 +19777,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_onlineddl_rowlog_pct_used"
+                "39#innodb_onlineddl_rowlog_pct_used"
             ]
         },
         "Innodb_onlineddl_rowlog_rows": {
@@ -19718,7 +19787,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_onlineddl_rowlog_rows"
+                "39#innodb_onlineddl_rowlog_rows"
             ]
         },
         "Innodb_os_log_fsyncs": {
@@ -19728,7 +19797,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_os_log_fsyncs"
+                "39#innodb_os_log_fsyncs"
             ]
         },
         "Innodb_os_log_pending_fsyncs": {
@@ -19738,7 +19807,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_os_log_pending_fsyncs"
+                "39#innodb_os_log_pending_fsyncs"
             ]
         },
         "Innodb_os_log_pending_writes": {
@@ -19748,7 +19817,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_os_log_pending_writes"
+                "39#innodb_os_log_pending_writes"
             ]
         },
         "Innodb_os_log_written": {
@@ -19758,7 +19827,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_os_log_written"
+                "39#innodb_os_log_written"
             ]
         },
         "Innodb_page_compression_saved": {
@@ -19766,7 +19835,7 @@
             "scope": [],
             "type": "byte",
             "ids": [
-                "38#innodb_page_compression_saved"
+                "39#innodb_page_compression_saved"
             ]
         },
         "Innodb_page_compression_trim_sect512": {
@@ -19774,7 +19843,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_page_compression_trim_sect512"
+                "39#innodb_page_compression_trim_sect512"
             ]
         },
         "Innodb_page_compression_trim_sect1024": {
@@ -19782,7 +19851,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_page_compression_trim_sect1024"
+                "39#innodb_page_compression_trim_sect1024"
             ]
         },
         "Innodb_page_compression_trim_sect2048": {
@@ -19790,7 +19859,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_page_compression_trim_sect2048"
+                "39#innodb_page_compression_trim_sect2048"
             ]
         },
         "Innodb_page_compression_trim_sect4096": {
@@ -19798,7 +19867,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_page_compression_trim_sect4096"
+                "39#innodb_page_compression_trim_sect4096"
             ]
         },
         "Innodb_page_compression_trim_sect8192": {
@@ -19806,7 +19875,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_page_compression_trim_sect8192"
+                "39#innodb_page_compression_trim_sect8192"
             ]
         },
         "Innodb_page_compression_trim_sect16384": {
@@ -19814,7 +19883,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_page_compression_trim_sect16384"
+                "39#innodb_page_compression_trim_sect16384"
             ]
         },
         "Innodb_page_compression_trim_sect32768": {
@@ -19822,7 +19891,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_page_compression_trim_sect32768"
+                "39#innodb_page_compression_trim_sect32768"
             ]
         },
         "Innodb_page_size": {
@@ -19832,7 +19901,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_page_size"
+                "39#innodb_page_size"
             ]
         },
         "Innodb_pages_created": {
@@ -19842,7 +19911,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_pages_created"
+                "39#innodb_pages_created"
             ]
         },
         "Innodb_pages_read": {
@@ -19852,7 +19921,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_pages_read"
+                "39#innodb_pages_read"
             ]
         },
         "Innodb_pages0_read": {
@@ -19862,7 +19931,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_pages0_read"
+                "39#innodb_pages0_read"
             ]
         },
         "Innodb_pages_written": {
@@ -19872,7 +19941,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_pages_written"
+                "39#innodb_pages_written"
             ]
         },
         "Innodb_purge_trx_id": {
@@ -19882,7 +19951,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_purge_trx_id"
+                "39#innodb_purge_trx_id"
             ]
         },
         "Innodb_purge_undo_no": {
@@ -19892,7 +19961,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_purge_undo_no"
+                "39#innodb_purge_undo_no"
             ]
         },
         "Innodb_read_views_memory": {
@@ -19902,7 +19971,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_read_views_memory"
+                "39#innodb_read_views_memory"
             ]
         },
         "Innodb_row_lock_current_waits": {
@@ -19912,7 +19981,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_row_lock_current_waits"
+                "39#innodb_row_lock_current_waits"
             ]
         },
         "Innodb_row_lock_numbers": {
@@ -19922,7 +19991,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_row_lock_numbers"
+                "39#innodb_row_lock_numbers"
             ]
         },
         "Innodb_row_lock_time": {
@@ -19932,7 +20001,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_row_lock_time"
+                "39#innodb_row_lock_time"
             ]
         },
         "Innodb_row_lock_time_avg": {
@@ -19942,7 +20011,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_row_lock_time_avg"
+                "39#innodb_row_lock_time_avg"
             ]
         },
         "Innodb_row_lock_time_max": {
@@ -19952,7 +20021,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_row_lock_time_max"
+                "39#innodb_row_lock_time_max"
             ]
         },
         "Innodb_row_lock_time_waits": {
@@ -19962,7 +20031,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_row_lock_time_waits"
+                "39#innodb_row_lock_time_waits"
             ]
         },
         "Innodb_rows_deleted": {
@@ -19972,7 +20041,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_rows_deleted"
+                "39#innodb_rows_deleted"
             ]
         },
         "Innodb_rows_inserted": {
@@ -19982,7 +20051,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_rows_inserted"
+                "39#innodb_rows_inserted"
             ]
         },
         "Innodb_rows_read": {
@@ -19992,7 +20061,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_rows_read"
+                "39#innodb_rows_read"
             ]
         },
         "Innodb_rows_updated": {
@@ -20002,7 +20071,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_rows_updated"
+                "39#innodb_rows_updated"
             ]
         },
         "Innodb_s_lock_os_waits": {
@@ -20012,7 +20081,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_s_lock_os_waits"
+                "39#innodb_s_lock_os_waits"
             ]
         },
         "Innodb_s_lock_spin_rounds": {
@@ -20022,7 +20091,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_s_lock_spin_rounds"
+                "39#innodb_s_lock_spin_rounds"
             ]
         },
         "Innodb_s_lock_spin_waits": {
@@ -20032,7 +20101,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_s_lock_spin_waits"
+                "39#innodb_s_lock_spin_waits"
             ]
         },
         "Innodb_scrub_background_page_reorganizations": {
@@ -20042,7 +20111,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_scrub_background_page_reorganizations"
+                "39#innodb_scrub_background_page_reorganizations"
             ]
         },
         "Innodb_scrub_background_page_split_failures_missing_index": {
@@ -20052,7 +20121,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_scrub_background_page_split_failures_missing_index"
+                "39#innodb_scrub_background_page_split_failures_missing_index"
             ]
         },
         "Innodb_scrub_background_page_split_failures_out_of_filespace": {
@@ -20062,7 +20131,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_scrub_background_page_split_failures_out_of_filespace"
+                "39#innodb_scrub_background_page_split_failures_out_of_filespace"
             ]
         },
         "Innodb_scrub_background_page_split_failures_underflow": {
@@ -20072,7 +20141,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_scrub_background_page_split_failures_underflow"
+                "39#innodb_scrub_background_page_split_failures_underflow"
             ]
         },
         "Innodb_scrub_background_page_split_failures_unknown": {
@@ -20082,7 +20151,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_scrub_background_page_split_failures_unknown"
+                "39#innodb_scrub_background_page_split_failures_unknown"
             ]
         },
         "Innodb_scrub_background_page_splits": {
@@ -20092,7 +20161,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_scrub_background_page_splits"
+                "39#innodb_scrub_background_page_splits"
             ]
         },
         "Innodb_scrub_log": {
@@ -20102,7 +20171,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_scrub_log"
+                "39#innodb_scrub_log"
             ]
         },
         "Innodb_secondary_index_triggered_cluster_reads": {
@@ -20112,7 +20181,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_secondary_index_triggered_cluster_reads"
+                "39#innodb_secondary_index_triggered_cluster_reads"
             ]
         },
         "Innodb_secondary_index_triggered_cluster_reads_avoided": {
@@ -20122,7 +20191,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_secondary_index_triggered_cluster_reads_avoided"
+                "39#innodb_secondary_index_triggered_cluster_reads_avoided"
             ]
         },
         "Innodb_system_rows_deleted": {
@@ -20130,7 +20199,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_system_rows_deleted"
+                "39#innodb_system_rows_deleted"
             ]
         },
         "Innodb_system_rows_inserted": {
@@ -20138,7 +20207,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_system_rows_inserted"
+                "39#innodb_system_rows_inserted"
             ]
         },
         "Innodb_system_rows_read": {
@@ -20146,7 +20215,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_system_rows_read"
+                "39#innodb_system_rows_read"
             ]
         },
         "Innodb_system_rows_updated": {
@@ -20154,7 +20223,7 @@
             "scope": [],
             "type": "integer",
             "ids": [
-                "38#innodb_system_rows_updated"
+                "39#innodb_system_rows_updated"
             ]
         },
         "Innodb_truncated_status_writes": {
@@ -20164,7 +20233,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_truncated_status_writes"
+                "39#innodb_truncated_status_writes"
             ]
         },
         "Innodb_x_lock_os_waits": {
@@ -20174,7 +20243,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_x_lock_os_waits"
+                "39#innodb_x_lock_os_waits"
             ]
         },
         "Innodb_x_lock_spin_rounds": {
@@ -20184,7 +20253,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_x_lock_spin_rounds"
+                "39#innodb_x_lock_spin_rounds"
             ]
         },
         "Innodb_x_lock_spin_waits": {
@@ -20194,7 +20263,7 @@
             ],
             "type": "integer",
             "ids": [
-                "38#innodb_x_lock_spin_waits"
+                "39#innodb_x_lock_spin_waits"
             ]
         },
         "have_innodb": {
@@ -20204,7 +20273,7 @@
                 "global"
             ],
             "ids": [
-                "40#have_innodb"
+                "41#have_innodb"
             ]
         },
         "ignore_builtin_innodb": {
@@ -20216,9 +20285,9 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#ignore_builtin_innodb",
-                "41#option_mysqld_ignore-builtin-innodb",
-                "40#sysvar_ignore_builtin_innodb"
+                "40#ignore_builtin_innodb",
+                "42#option_mysqld_ignore-builtin-innodb",
+                "41#sysvar_ignore_builtin_innodb"
             ]
         },
         "innodb_adaptive_checkpoint": {
@@ -20241,7 +20310,7 @@
                 "3"
             ],
             "ids": [
-                "39#innodb_adaptive_checkpoint"
+                "40#innodb_adaptive_checkpoint"
             ]
         },
         "innodb_adaptive_flushing": {
@@ -20253,8 +20322,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_adaptive_flushing",
-                "40#sysvar_innodb_adaptive_flushing"
+                "40#innodb_adaptive_flushing",
+                "41#sysvar_innodb_adaptive_flushing"
             ]
         },
         "innodb_adaptive_flushing_lwm": {
@@ -20271,8 +20340,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_adaptive_flushing_lwm",
-                "40#sysvar_innodb_adaptive_flushing_lwm"
+                "40#innodb_adaptive_flushing_lwm",
+                "41#sysvar_innodb_adaptive_flushing_lwm"
             ]
         },
         "innodb_adaptive_flushing_method": {
@@ -20293,7 +20362,7 @@
                 "2"
             ],
             "ids": [
-                "39#innodb_adaptive_flushing_method"
+                "40#innodb_adaptive_flushing_method"
             ]
         },
         "innodb_adaptive_hash_index": {
@@ -20305,8 +20374,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_adaptive_hash_index",
-                "40#sysvar_innodb_adaptive_hash_index"
+                "40#innodb_adaptive_hash_index",
+                "41#sysvar_innodb_adaptive_hash_index"
             ]
         },
         "innodb_adaptive_hash_index_partitions": {
@@ -20323,7 +20392,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_adaptive_hash_index_partitions"
+                "40#innodb_adaptive_hash_index_partitions"
             ]
         },
         "innodb_adaptive_hash_index_parts": {
@@ -20340,8 +20409,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_adaptive_hash_index_parts",
-                "40#sysvar_innodb_adaptive_hash_index_parts"
+                "40#innodb_adaptive_hash_index_parts",
+                "41#sysvar_innodb_adaptive_hash_index_parts"
             ]
         },
         "innodb_adaptive_max_sleep_delay": {
@@ -20358,8 +20427,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_adaptive_max_sleep_delay",
-                "40#sysvar_innodb_adaptive_max_sleep_delay"
+                "40#innodb_adaptive_max_sleep_delay",
+                "41#sysvar_innodb_adaptive_max_sleep_delay"
             ]
         },
         "innodb_additional_mem_pool_size": {
@@ -20376,7 +20445,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_additional_mem_pool_size"
+                "40#innodb_additional_mem_pool_size"
             ]
         },
         "innodb_api_bk_commit_interval": {
@@ -20393,8 +20462,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_api_bk_commit_interval",
-                "40#sysvar_innodb_api_bk_commit_interval"
+                "40#innodb_api_bk_commit_interval",
+                "41#sysvar_innodb_api_bk_commit_interval"
             ]
         },
         "innodb_api_disable_rowlock": {
@@ -20406,8 +20475,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_api_disable_rowlock",
-                "40#sysvar_innodb_api_disable_rowlock"
+                "40#innodb_api_disable_rowlock",
+                "41#sysvar_innodb_api_disable_rowlock"
             ]
         },
         "innodb_api_enable_binlog": {
@@ -20419,8 +20488,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_api_enable_binlog",
-                "40#sysvar_innodb_api_enable_binlog"
+                "40#innodb_api_enable_binlog",
+                "41#sysvar_innodb_api_enable_binlog"
             ]
         },
         "innodb_api_enable_mdl": {
@@ -20432,8 +20501,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_api_enable_mdl",
-                "40#sysvar_innodb_api_enable_mdl"
+                "40#innodb_api_enable_mdl",
+                "41#sysvar_innodb_api_enable_mdl"
             ]
         },
         "innodb_api_trx_level": {
@@ -20446,15 +20515,15 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_api_trx_level",
-                "40#sysvar_innodb_api_trx_level"
+                "40#innodb_api_trx_level",
+                "41#sysvar_innodb_api_trx_level"
             ]
         },
         "innodb_auto_lru_dump": {
             "cli": "--innodb-auto-lru-dump=#",
             "name": "innodb_auto_lru_dump",
             "ids": [
-                "39#innodb_auto_lru_dump"
+                "40#innodb_auto_lru_dump"
             ]
         },
         "innodb_autoextend_increment": {
@@ -20470,8 +20539,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_autoextend_increment",
-                "40#sysvar_innodb_autoextend_increment"
+                "40#innodb_autoextend_increment",
+                "41#sysvar_innodb_autoextend_increment"
             ]
         },
         "innodb_autoinc_lock_mode": {
@@ -20488,8 +20557,8 @@
                 "2"
             ],
             "ids": [
-                "39#innodb_autoinc_lock_mode",
-                "40#sysvar_innodb_autoinc_lock_mode"
+                "40#innodb_autoinc_lock_mode",
+                "41#sysvar_innodb_autoinc_lock_mode"
             ]
         },
         "innodb_background_scrub_data_check_interval": {
@@ -20506,7 +20575,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_background_scrub_data_check_interval"
+                "40#innodb_background_scrub_data_check_interval"
             ]
         },
         "innodb_background_scrub_data_compressed": {
@@ -20519,7 +20588,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_background_scrub_data_compressed"
+                "40#innodb_background_scrub_data_compressed"
             ]
         },
         "innodb_background_scrub_data_interval": {
@@ -20536,7 +20605,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_background_scrub_data_interval"
+                "40#innodb_background_scrub_data_interval"
             ]
         },
         "innodb_background_scrub_data_uncompressed": {
@@ -20549,7 +20618,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_background_scrub_data_uncompressed"
+                "40#innodb_background_scrub_data_uncompressed"
             ]
         },
         "innodb_blocking_buffer_pool_restore": {
@@ -20562,7 +20631,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_blocking_buffer_pool_restore"
+                "40#innodb_blocking_buffer_pool_restore"
             ]
         },
         "innodb_buf_dump_status_frequency": {
@@ -20579,7 +20648,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_buf_dump_status_frequency"
+                "40#innodb_buf_dump_status_frequency"
             ]
         },
         "innodb_buffer_pool_chunk_size": {
@@ -20595,8 +20664,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_buffer_pool_chunk_size",
-                "40#sysvar_innodb_buffer_pool_chunk_size"
+                "40#innodb_buffer_pool_chunk_size",
+                "41#sysvar_innodb_buffer_pool_chunk_size"
             ]
         },
         "innodb_buffer_pool_dump_at_shutdown": {
@@ -20609,8 +20678,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_buffer_pool_dump_at_shutdown",
-                "40#sysvar_innodb_buffer_pool_dump_at_shutdown"
+                "40#innodb_buffer_pool_dump_at_shutdown",
+                "41#sysvar_innodb_buffer_pool_dump_at_shutdown"
             ]
         },
         "innodb_buffer_pool_dump_now": {
@@ -20622,8 +20691,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_buffer_pool_dump_now",
-                "40#sysvar_innodb_buffer_pool_dump_now"
+                "40#innodb_buffer_pool_dump_now",
+                "41#sysvar_innodb_buffer_pool_dump_now"
             ]
         },
         "innodb_buffer_pool_dump_pct": {
@@ -20639,8 +20708,8 @@
                 "global"
             ],
             "ids": [
-                "39#innodb_buffer_pool_dump_pct",
-                "40#sysvar_innodb_buffer_pool_dump_pct"
+                "40#innodb_buffer_pool_dump_pct",
+                "41#sysvar_innodb_buffer_pool_dump_pct"
             ]
         },
         "innodb_buffer_pool_evict": {
@@ -20654,7 +20723,7 @@
             "type": "string",
             "validValues": [],
             "ids": [
-                "39#innodb_buffer_pool_evict"
+                "40#innodb_buffer_pool_evict"
             ]
         },
         "innodb_buffer_pool_filename": {
@@ -20666,8 +20735,8 @@
                 "global"
             ],
             "ids": [
-                "39#innodb_buffer_pool_filename",
-                "40#sysvar_innodb_buffer_pool_filename"
+                "40#innodb_buffer_pool_filename",
+                "41#sysvar_innodb_buffer_pool_filename"
             ]
         },
         "innodb_buffer_pool_instances": {
@@ -20683,8 +20752,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_buffer_pool_instances",
-                "40#sysvar_innodb_buffer_pool_instances"
+                "40#innodb_buffer_pool_instances",
+                "41#sysvar_innodb_buffer_pool_instances"
             ]
         },
         "innodb_buffer_pool_load_abort": {
@@ -20696,8 +20765,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_buffer_pool_load_abort",
-                "40#sysvar_innodb_buffer_pool_load_abort"
+                "40#innodb_buffer_pool_load_abort",
+                "41#sysvar_innodb_buffer_pool_load_abort"
             ]
         },
         "innodb_buffer_pool_load_at_startup": {
@@ -20710,8 +20779,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_buffer_pool_load_at_startup",
-                "40#sysvar_innodb_buffer_pool_load_at_startup"
+                "40#innodb_buffer_pool_load_at_startup",
+                "41#sysvar_innodb_buffer_pool_load_at_startup"
             ]
         },
         "innodb_buffer_pool_load_now": {
@@ -20723,8 +20792,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_buffer_pool_load_now",
-                "40#sysvar_innodb_buffer_pool_load_now"
+                "40#innodb_buffer_pool_load_now",
+                "41#sysvar_innodb_buffer_pool_load_now"
             ]
         },
         "innodb_buffer_pool_populate": {
@@ -20737,7 +20806,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_buffer_pool_populate"
+                "40#innodb_buffer_pool_populate"
             ]
         },
         "innodb_buffer_pool_restore_at_startup": {
@@ -20750,7 +20819,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_buffer_pool_restore_at_startup"
+                "40#innodb_buffer_pool_restore_at_startup"
             ]
         },
         "innodb_buffer_pool_shm_checksum": {
@@ -20763,7 +20832,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_buffer_pool_shm_checksum"
+                "40#innodb_buffer_pool_shm_checksum"
             ]
         },
         "innodb_buffer_pool_shm_key": {
@@ -20776,7 +20845,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_buffer_pool_shm_key"
+                "40#innodb_buffer_pool_shm_key"
             ]
         },
         "innodb_buffer_pool_size": {
@@ -20792,8 +20861,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_buffer_pool_size",
-                "40#sysvar_innodb_buffer_pool_size"
+                "40#innodb_buffer_pool_size",
+                "41#sysvar_innodb_buffer_pool_size"
             ]
         },
         "innodb_change_buffer_max_size": {
@@ -20810,8 +20879,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_change_buffer_max_size",
-                "40#sysvar_innodb_change_buffer_max_size"
+                "40#innodb_change_buffer_max_size",
+                "41#sysvar_innodb_change_buffer_max_size"
             ]
         },
         "innodb_change_buffering": {
@@ -20832,8 +20901,8 @@
                 "all"
             ],
             "ids": [
-                "39#innodb_change_buffering",
-                "40#sysvar_innodb_change_buffering"
+                "40#innodb_change_buffering",
+                "41#sysvar_innodb_change_buffering"
             ]
         },
         "innodb_change_buffering_debug": {
@@ -20846,8 +20915,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_change_buffering_debug",
-                "40#sysvar_innodb_change_buffering_debug"
+                "40#innodb_change_buffering_debug",
+                "41#sysvar_innodb_change_buffering_debug"
             ]
         },
         "innodb_checkpoint_age_target": {
@@ -20864,7 +20933,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_checkpoint_age_target"
+                "40#innodb_checkpoint_age_target"
             ]
         },
         "innodb_checksum_algorithm": {
@@ -20885,8 +20954,8 @@
                 "strict_none"
             ],
             "ids": [
-                "39#innodb_checksum_algorithm",
-                "40#sysvar_innodb_checksum_algorithm"
+                "40#innodb_checksum_algorithm",
+                "41#sysvar_innodb_checksum_algorithm"
             ]
         },
         "innodb_checksums": {
@@ -20899,7 +20968,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_checksums"
+                "40#innodb_checksums"
             ]
         },
         "innodb_cleaner_lsn_age_factor": {
@@ -20911,7 +20980,7 @@
             ],
             "validValues": [],
             "ids": [
-                "39#innodb_cleaner_lsn_age_factor"
+                "40#innodb_cleaner_lsn_age_factor"
             ]
         },
         "innodb_cmp_per_index_enabled": {
@@ -20927,8 +20996,8 @@
                 "ON"
             ],
             "ids": [
-                "39#innodb_cmp_per_index_enabled",
-                "40#sysvar_innodb_cmp_per_index_enabled"
+                "40#innodb_cmp_per_index_enabled",
+                "41#sysvar_innodb_cmp_per_index_enabled"
             ]
         },
         "innodb_commit_concurrency": {
@@ -20945,8 +21014,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_commit_concurrency",
-                "40#sysvar_innodb_commit_concurrency"
+                "40#innodb_commit_concurrency",
+                "41#sysvar_innodb_commit_concurrency"
             ]
         },
         "innodb_compression_algorithm": {
@@ -20967,7 +21036,7 @@
                 "snappy"
             ],
             "ids": [
-                "39#innodb_compression_algorithm"
+                "40#innodb_compression_algorithm"
             ]
         },
         "innodb_compression_default": {
@@ -20981,7 +21050,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_compression_default"
+                "40#innodb_compression_default"
             ]
         },
         "innodb_compression_failure_threshold_pct": {
@@ -20998,8 +21067,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_compression_failure_threshold_pct",
-                "40#sysvar_innodb_compression_failure_threshold_pct"
+                "40#innodb_compression_failure_threshold_pct",
+                "41#sysvar_innodb_compression_failure_threshold_pct"
             ]
         },
         "innodb_compression_level": {
@@ -21016,8 +21085,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_compression_level",
-                "40#sysvar_innodb_compression_level"
+                "40#innodb_compression_level",
+                "41#sysvar_innodb_compression_level"
             ]
         },
         "innodb_compression_pad_pct_max": {
@@ -21034,8 +21103,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_compression_pad_pct_max",
-                "40#sysvar_innodb_compression_pad_pct_max"
+                "40#innodb_compression_pad_pct_max",
+                "41#sysvar_innodb_compression_pad_pct_max"
             ]
         },
         "innodb_concurrency_tickets": {
@@ -21051,8 +21120,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_concurrency_tickets",
-                "40#sysvar_innodb_concurrency_tickets"
+                "40#innodb_concurrency_tickets",
+                "41#sysvar_innodb_concurrency_tickets"
             ]
         },
         "innodb_corrupt_table_action": {
@@ -21065,7 +21134,7 @@
             "type": "enumeration",
             "validValues": [],
             "ids": [
-                "39#innodb_corrupt_table_action"
+                "40#innodb_corrupt_table_action"
             ]
         },
         "innodb_data_file_path": {
@@ -21077,8 +21146,8 @@
                 "global"
             ],
             "ids": [
-                "39#innodb_data_file_path",
-                "40#sysvar_innodb_data_file_path"
+                "40#innodb_data_file_path",
+                "41#sysvar_innodb_data_file_path"
             ]
         },
         "innodb_data_home_dir": {
@@ -21090,8 +21159,8 @@
             ],
             "type": "directory name",
             "ids": [
-                "39#innodb_data_home_dir",
-                "40#sysvar_innodb_data_home_dir"
+                "40#innodb_data_home_dir",
+                "41#sysvar_innodb_data_home_dir"
             ]
         },
         "innodb_deadlock_detect": {
@@ -21104,8 +21173,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_deadlock_detect",
-                "40#sysvar_innodb_deadlock_detect"
+                "40#innodb_deadlock_detect",
+                "41#sysvar_innodb_deadlock_detect"
             ]
         },
         "innodb_default_page_encryption_key": {
@@ -21122,7 +21191,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_default_page_encryption_key"
+                "40#innodb_default_page_encryption_key"
             ]
         },
         "innodb_default_encryption_key_id": {
@@ -21140,7 +21209,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_default_encryption_key_id"
+                "40#innodb_default_encryption_key_id"
             ]
         },
         "innodb_default_row_format": {
@@ -21158,8 +21227,8 @@
                 "dynamic"
             ],
             "ids": [
-                "39#innodb_default_row_format",
-                "40#sysvar_innodb_default_row_format"
+                "40#innodb_default_row_format",
+                "41#sysvar_innodb_default_row_format"
             ]
         },
         "innodb_defragment": {
@@ -21172,7 +21241,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_defragment"
+                "40#innodb_defragment"
             ]
         },
         "innodb_defragment_fill_factor": {
@@ -21188,7 +21257,7 @@
                 "global"
             ],
             "ids": [
-                "39#innodb_defragment_fill_factor"
+                "40#innodb_defragment_fill_factor"
             ]
         },
         "innodb_defragment_fill_factor_n_recs": {
@@ -21205,7 +21274,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_defragment_fill_factor_n_recs"
+                "40#innodb_defragment_fill_factor_n_recs"
             ]
         },
         "innodb_defragment_frequency": {
@@ -21222,7 +21291,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_defragment_frequency"
+                "40#innodb_defragment_frequency"
             ]
         },
         "innodb_defragment_n_pages": {
@@ -21239,7 +21308,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_defragment_n_pages"
+                "40#innodb_defragment_n_pages"
             ]
         },
         "innodb_defragment_stats_accuracy": {
@@ -21256,7 +21325,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_defragment_stats_accuracy"
+                "40#innodb_defragment_stats_accuracy"
             ]
         },
         "innodb_dict_size_limit": {
@@ -21269,7 +21338,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_dict_size_limit"
+                "40#innodb_dict_size_limit"
             ]
         },
         "innodb_disable_sort_file_cache": {
@@ -21281,8 +21350,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_disable_sort_file_cache",
-                "40#sysvar_innodb_disable_sort_file_cache"
+                "40#innodb_disable_sort_file_cache",
+                "41#sysvar_innodb_disable_sort_file_cache"
             ]
         },
         "innodb_disallow_writes": {
@@ -21295,7 +21364,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_disallow_writes"
+                "40#innodb_disallow_writes"
             ]
         },
         "innodb_doublewrite": {
@@ -21307,8 +21376,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_doublewrite",
-                "40#sysvar_innodb_doublewrite"
+                "40#innodb_doublewrite",
+                "41#sysvar_innodb_doublewrite"
             ]
         },
         "innodb_doublewrite_file": {
@@ -21320,7 +21389,7 @@
                 "global"
             ],
             "ids": [
-                "39#innodb_doublewrite_file"
+                "40#innodb_doublewrite_file"
             ]
         },
         "innodb_empty_free_list_algorithm": {
@@ -21332,7 +21401,7 @@
             ],
             "validValues": [],
             "ids": [
-                "39#innodb_empty_free_list_algorithm"
+                "40#innodb_empty_free_list_algorithm"
             ]
         },
         "innodb_enable_unsafe_group_commit": {
@@ -21349,7 +21418,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_enable_unsafe_group_commit"
+                "40#innodb_enable_unsafe_group_commit"
             ]
         },
         "innodb_encrypt_log": {
@@ -21362,7 +21431,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_encrypt_log"
+                "40#innodb_encrypt_log"
             ]
         },
         "innodb_encrypt_tables": {
@@ -21380,7 +21449,7 @@
                 "FORCE"
             ],
             "ids": [
-                "39#innodb_encrypt_tables"
+                "40#innodb_encrypt_tables"
             ]
         },
         "innodb_encryption_rotate_key_age": {
@@ -21397,7 +21466,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_encryption_rotate_key_age"
+                "40#innodb_encryption_rotate_key_age"
             ]
         },
         "innodb_encryption_rotation_iops": {
@@ -21414,7 +21483,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_encryption_rotation_iops"
+                "40#innodb_encryption_rotation_iops"
             ]
         },
         "innodb_encryption_threads": {
@@ -21431,7 +21500,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_encryption_threads"
+                "40#innodb_encryption_threads"
             ]
         },
         "innodb_extra_rsegments": {
@@ -21448,7 +21517,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_extra_rsegments"
+                "40#innodb_extra_rsegments"
             ]
         },
         "innodb_extra_undoslots": {
@@ -21461,7 +21530,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_extra_undoslots"
+                "40#innodb_extra_undoslots"
             ]
         },
         "innodb_fake_changes": {
@@ -21475,7 +21544,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_fake_changes"
+                "40#innodb_fake_changes"
             ]
         },
         "innodb_fast_checksum": {
@@ -21488,7 +21557,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_fast_checksum"
+                "40#innodb_fast_checksum"
             ]
         },
         "innodb_fast_shutdown": {
@@ -21506,8 +21575,8 @@
                 "2"
             ],
             "ids": [
-                "39#innodb_fast_shutdown",
-                "40#sysvar_innodb_fast_shutdown"
+                "40#innodb_fast_shutdown",
+                "41#sysvar_innodb_fast_shutdown"
             ]
         },
         "innodb_fatal_semaphore_wait_threshold": {
@@ -21524,7 +21593,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_fatal_semaphore_wait_threshold"
+                "40#innodb_fatal_semaphore_wait_threshold"
             ]
         },
         "innodb_file_format": {
@@ -21540,7 +21609,7 @@
                 "Barracuda"
             ],
             "ids": [
-                "39#innodb_file_format"
+                "40#innodb_file_format"
             ]
         },
         "innodb_file_format_check": {
@@ -21553,7 +21622,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_file_format_check"
+                "40#innodb_file_format_check"
             ]
         },
         "innodb_file_format_max": {
@@ -21570,7 +21639,7 @@
                 "Barracuda"
             ],
             "ids": [
-                "39#innodb_file_format_max"
+                "40#innodb_file_format_max"
             ]
         },
         "innodb_file_per_table": {
@@ -21582,8 +21651,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_file_per_table",
-                "40#sysvar_innodb_file_per_table"
+                "40#innodb_file_per_table",
+                "41#sysvar_innodb_file_per_table"
             ]
         },
         "innodb_fill_factor": {
@@ -21600,8 +21669,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_fill_factor",
-                "40#sysvar_innodb_fill_factor"
+                "40#innodb_fill_factor",
+                "41#sysvar_innodb_fill_factor"
             ]
         },
         "innodb_flush_log_at_timeout": {
@@ -21613,8 +21682,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_flush_log_at_timeout",
-                "40#sysvar_innodb_flush_log_at_timeout"
+                "40#innodb_flush_log_at_timeout",
+                "41#sysvar_innodb_flush_log_at_timeout"
             ]
         },
         "innodb_flush_log_at_trx_commit": {
@@ -21633,8 +21702,8 @@
                 "3"
             ],
             "ids": [
-                "39#innodb_flush_log_at_trx_commit",
-                "40#sysvar_innodb_flush_log_at_trx_commit"
+                "40#innodb_flush_log_at_trx_commit",
+                "41#sysvar_innodb_flush_log_at_trx_commit"
             ]
         },
         "innodb_flush_method": {
@@ -21645,8 +21714,8 @@
                 "global"
             ],
             "ids": [
-                "39#innodb_flush_method",
-                "40#sysvar_innodb_flush_method"
+                "40#innodb_flush_method",
+                "41#sysvar_innodb_flush_method"
             ]
         },
         "innodb_flush_neighbor_pages": {
@@ -21667,7 +21736,7 @@
                 "2"
             ],
             "ids": [
-                "39#innodb_flush_neighbor_pages"
+                "40#innodb_flush_neighbor_pages"
             ]
         },
         "innodb_flush_neighbors": {
@@ -21684,8 +21753,8 @@
                 "2"
             ],
             "ids": [
-                "39#innodb_flush_neighbors",
-                "40#sysvar_innodb_flush_neighbors"
+                "40#innodb_flush_neighbors",
+                "41#sysvar_innodb_flush_neighbors"
             ]
         },
         "innodb_flush_sync": {
@@ -21698,8 +21767,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_flush_sync",
-                "40#sysvar_innodb_flush_sync"
+                "40#innodb_flush_sync",
+                "41#sysvar_innodb_flush_sync"
             ]
         },
         "innodb_flushing_avg_loops": {
@@ -21716,8 +21785,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_flushing_avg_loops",
-                "40#sysvar_innodb_flushing_avg_loops"
+                "40#innodb_flushing_avg_loops",
+                "41#sysvar_innodb_flushing_avg_loops"
             ]
         },
         "innodb_force_load_corrupted": {
@@ -21729,8 +21798,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_force_load_corrupted",
-                "40#sysvar_innodb_force_load_corrupted"
+                "40#innodb_force_load_corrupted",
+                "41#sysvar_innodb_force_load_corrupted"
             ]
         },
         "innodb_force_primary_key": {
@@ -21743,7 +21812,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_force_primary_key"
+                "40#innodb_force_primary_key"
             ]
         },
         "innodb_force_recovery": {
@@ -21759,8 +21828,8 @@
                 "global"
             ],
             "ids": [
-                "39#innodb_force_recovery",
-                "40#sysvar_innodb_force_recovery"
+                "40#innodb_force_recovery",
+                "41#sysvar_innodb_force_recovery"
             ]
         },
         "innodb_foreground_preflush": {
@@ -21772,7 +21841,7 @@
             ],
             "validValues": [],
             "ids": [
-                "39#innodb_foreground_preflush"
+                "40#innodb_foreground_preflush"
             ]
         },
         "innodb_ft_aux_table": {
@@ -21784,8 +21853,8 @@
             ],
             "type": "string",
             "ids": [
-                "39#innodb_ft_aux_table",
-                "40#sysvar_innodb_ft_aux_table"
+                "40#innodb_ft_aux_table",
+                "41#sysvar_innodb_ft_aux_table"
             ]
         },
         "innodb_ft_cache_size": {
@@ -21802,8 +21871,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_ft_cache_size",
-                "40#sysvar_innodb_ft_cache_size"
+                "40#innodb_ft_cache_size",
+                "41#sysvar_innodb_ft_cache_size"
             ]
         },
         "innodb_ft_enable_diag_print": {
@@ -21815,21 +21884,18 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_ft_enable_diag_print",
-                "40#sysvar_innodb_ft_enable_diag_print"
+                "40#innodb_ft_enable_diag_print",
+                "41#sysvar_innodb_ft_enable_diag_print"
             ]
         },
         "innodb_ft_enable_stopword": {
             "cli": "--innodb-ft-enable-stopword=#",
             "dynamic": true,
             "name": "innodb_ft_enable_stopword",
-            "scope": [
-                "global"
-            ],
             "type": "boolean",
             "ids": [
-                "39#innodb_ft_enable_stopword",
-                "40#sysvar_innodb_ft_enable_stopword"
+                "40#innodb_ft_enable_stopword",
+                "41#sysvar_innodb_ft_enable_stopword"
             ]
         },
         "innodb_ft_max_token_size": {
@@ -21845,8 +21911,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_ft_max_token_size",
-                "40#sysvar_innodb_ft_max_token_size"
+                "40#innodb_ft_max_token_size",
+                "41#sysvar_innodb_ft_max_token_size"
             ]
         },
         "innodb_ft_min_token_size": {
@@ -21863,8 +21929,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_ft_min_token_size",
-                "40#sysvar_innodb_ft_min_token_size"
+                "40#innodb_ft_min_token_size",
+                "41#sysvar_innodb_ft_min_token_size"
             ]
         },
         "innodb_ft_num_word_optimize": {
@@ -21877,8 +21943,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_ft_num_word_optimize",
-                "40#sysvar_innodb_ft_num_word_optimize"
+                "40#innodb_ft_num_word_optimize",
+                "41#sysvar_innodb_ft_num_word_optimize"
             ]
         },
         "innodb_ft_result_cache_limit": {
@@ -21891,8 +21957,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_ft_result_cache_limit",
-                "40#sysvar_innodb_ft_result_cache_limit"
+                "40#innodb_ft_result_cache_limit",
+                "41#sysvar_innodb_ft_result_cache_limit"
             ]
         },
         "innodb_ft_server_stopword_table": {
@@ -21905,8 +21971,8 @@
             ],
             "type": "string",
             "ids": [
-                "39#innodb_ft_server_stopword_table",
-                "40#sysvar_innodb_ft_server_stopword_table"
+                "40#innodb_ft_server_stopword_table",
+                "41#sysvar_innodb_ft_server_stopword_table"
             ]
         },
         "innodb_ft_sort_pll_degree": {
@@ -21923,8 +21989,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_ft_sort_pll_degree",
-                "40#sysvar_innodb_ft_sort_pll_degree"
+                "40#innodb_ft_sort_pll_degree",
+                "41#sysvar_innodb_ft_sort_pll_degree"
             ]
         },
         "innodb_ft_total_cache_size": {
@@ -21941,8 +22007,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_ft_total_cache_size",
-                "40#sysvar_innodb_ft_total_cache_size"
+                "40#innodb_ft_total_cache_size",
+                "41#sysvar_innodb_ft_total_cache_size"
             ]
         },
         "innodb_ft_user_stopword_table": {
@@ -21952,8 +22018,8 @@
             "name": "innodb_ft_user_stopword_table",
             "type": "string",
             "ids": [
-                "39#innodb_ft_user_stopword_table",
-                "40#sysvar_innodb_ft_user_stopword_table"
+                "40#innodb_ft_user_stopword_table",
+                "41#sysvar_innodb_ft_user_stopword_table"
             ]
         },
         "innodb_ibuf_accel_rate": {
@@ -21970,7 +22036,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_ibuf_accel_rate"
+                "40#innodb_ibuf_accel_rate"
             ]
         },
         "innodb_ibuf_active_contract": {
@@ -21987,7 +22053,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_ibuf_active_contract"
+                "40#innodb_ibuf_active_contract"
             ]
         },
         "innodb_ibuf_max_size": {
@@ -22002,7 +22068,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_ibuf_max_size"
+                "40#innodb_ibuf_max_size"
             ]
         },
         "innodb_idle_flush_pct": {
@@ -22019,7 +22085,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_idle_flush_pct"
+                "40#innodb_idle_flush_pct"
             ]
         },
         "innodb_immediate_scrub_data_uncompressed": {
@@ -22032,7 +22098,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_immediate_scrub_data_uncompressed"
+                "40#innodb_immediate_scrub_data_uncompressed"
             ]
         },
         "innodb_import_table_from_xtrabackup": {
@@ -22049,7 +22115,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_import_table_from_xtrabackup"
+                "40#innodb_import_table_from_xtrabackup"
             ]
         },
         "innodb_instrument_semaphores": {
@@ -22062,7 +22128,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_instrument_semaphores"
+                "40#innodb_instrument_semaphores"
             ]
         },
         "innodb_io_capacity": {
@@ -22079,8 +22145,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_io_capacity",
-                "40#sysvar_innodb_io_capacity"
+                "40#innodb_io_capacity",
+                "41#sysvar_innodb_io_capacity"
             ]
         },
         "innodb_io_capacity_max": {
@@ -22095,8 +22161,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_io_capacity_max",
-                "40#sysvar_innodb_io_capacity_max"
+                "40#innodb_io_capacity_max",
+                "41#sysvar_innodb_io_capacity_max"
             ]
         },
         "innodb_kill_idle_transaction": {
@@ -22109,7 +22175,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_kill_idle_transaction"
+                "40#innodb_kill_idle_transaction"
             ]
         },
         "innodb_large_prefix": {
@@ -22121,7 +22187,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_large_prefix"
+                "40#innodb_large_prefix"
             ]
         },
         "innodb_lazy_drop_table": {
@@ -22134,7 +22200,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_lazy_drop_table"
+                "40#innodb_lazy_drop_table"
             ]
         },
         "innodb_lock_schedule_algorithm": {
@@ -22150,7 +22216,7 @@
                 "VATS"
             ],
             "ids": [
-                "39#innodb_lock_schedule_algorithm"
+                "40#innodb_lock_schedule_algorithm"
             ]
         },
         "innodb_lock_wait_timeout": {
@@ -22164,8 +22230,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_lock_wait_timeout",
-                "40#sysvar_innodb_lock_wait_timeout"
+                "40#innodb_lock_wait_timeout",
+                "41#sysvar_innodb_lock_wait_timeout"
             ]
         },
         "innodb_locking_fake_changes": {
@@ -22178,7 +22244,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_locking_fake_changes"
+                "40#innodb_locking_fake_changes"
             ]
         },
         "innodb_locks_unsafe_for_binlog": {
@@ -22191,7 +22257,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_locks_unsafe_for_binlog"
+                "40#innodb_locks_unsafe_for_binlog"
             ]
         },
         "innodb_log_arch_dir": {
@@ -22204,7 +22270,7 @@
             ],
             "type": "string",
             "ids": [
-                "39#innodb_log_arch_dir"
+                "40#innodb_log_arch_dir"
             ]
         },
         "innodb_log_arch_expire_sec": {
@@ -22217,7 +22283,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_log_arch_expire_sec"
+                "40#innodb_log_arch_expire_sec"
             ]
         },
         "innodb_log_archive": {
@@ -22230,7 +22296,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_log_archive"
+                "40#innodb_log_archive"
             ]
         },
         "innodb_log_block_size": {
@@ -22243,7 +22309,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_log_block_size"
+                "40#innodb_log_block_size"
             ]
         },
         "innodb_log_buffer_size": {
@@ -22251,8 +22317,8 @@
             "name": "innodb_log_buffer_size",
             "type": "integer",
             "ids": [
-                "39#innodb_log_buffer_size",
-                "40#sysvar_innodb_log_buffer_size"
+                "40#innodb_log_buffer_size",
+                "41#sysvar_innodb_log_buffer_size"
             ]
         },
         "innodb_log_checksum_algorithm": {
@@ -22264,7 +22330,7 @@
             ],
             "validValues": [],
             "ids": [
-                "39#innodb_log_checksum_algorithm"
+                "40#innodb_log_checksum_algorithm"
             ]
         },
         "innodb_log_checksums": {
@@ -22275,8 +22341,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_log_checksums",
-                "40#sysvar_innodb_log_checksums"
+                "40#innodb_log_checksums",
+                "41#sysvar_innodb_log_checksums"
             ]
         },
         "innodb_log_compressed_pages": {
@@ -22289,8 +22355,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_log_compressed_pages",
-                "40#sysvar_innodb_log_compressed_pages"
+                "40#innodb_log_compressed_pages",
+                "41#sysvar_innodb_log_compressed_pages"
             ]
         },
         "innodb_log_file_size": {
@@ -22302,8 +22368,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_log_file_size",
-                "40#sysvar_innodb_log_file_size"
+                "40#innodb_log_file_size",
+                "41#sysvar_innodb_log_file_size"
             ]
         },
         "innodb_log_files_in_group": {
@@ -22316,8 +22382,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_log_files_in_group",
-                "40#sysvar_innodb_log_files_in_group"
+                "40#innodb_log_files_in_group",
+                "41#sysvar_innodb_log_files_in_group"
             ]
         },
         "innodb_log_group_home_dir": {
@@ -22329,8 +22395,21 @@
             ],
             "type": "directory name",
             "ids": [
-                "39#innodb_log_group_home_dir",
-                "40#sysvar_innodb_log_group_home_dir"
+                "40#innodb_log_group_home_dir",
+                "41#sysvar_innodb_log_group_home_dir"
+            ]
+        },
+        "innodb_log_optimize_ddl": {
+            "cli": "--innodb-log-optimize-ddl={0|1}",
+            "default": "ON",
+            "dynamic": true,
+            "name": "innodb_log_optimize_ddl",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "40#innodb_log_optimize_ddl"
             ]
         },
         "innodb_log_write_ahead_size": {
@@ -22346,8 +22425,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_log_write_ahead_size",
-                "40#sysvar_innodb_log_write_ahead_size"
+                "40#innodb_log_write_ahead_size",
+                "41#sysvar_innodb_log_write_ahead_size"
             ]
         },
         "innodb_lru_scan_depth": {
@@ -22363,8 +22442,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_lru_scan_depth",
-                "40#sysvar_innodb_lru_scan_depth"
+                "40#innodb_lru_scan_depth",
+                "41#sysvar_innodb_lru_scan_depth"
             ]
         },
         "innodb_max_bitmap_file_size": {
@@ -22381,7 +22460,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_max_bitmap_file_size"
+                "40#innodb_max_bitmap_file_size"
             ]
         },
         "innodb_max_changed_pages": {
@@ -22398,7 +22477,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_max_changed_pages"
+                "40#innodb_max_changed_pages"
             ]
         },
         "innodb_max_dirty_pages_pct": {
@@ -22412,8 +22491,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_max_dirty_pages_pct",
-                "40#sysvar_innodb_max_dirty_pages_pct"
+                "40#innodb_max_dirty_pages_pct",
+                "41#sysvar_innodb_max_dirty_pages_pct"
             ]
         },
         "innodb_max_dirty_pages_pct_lwm": {
@@ -22428,8 +22507,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_max_dirty_pages_pct_lwm",
-                "40#sysvar_innodb_max_dirty_pages_pct_lwm"
+                "40#innodb_max_dirty_pages_pct_lwm",
+                "41#sysvar_innodb_max_dirty_pages_pct_lwm"
             ]
         },
         "innodb_max_purge_lag": {
@@ -22446,8 +22525,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_max_purge_lag",
-                "40#sysvar_innodb_max_purge_lag"
+                "40#innodb_max_purge_lag",
+                "41#sysvar_innodb_max_purge_lag"
             ]
         },
         "innodb_max_purge_lag_delay": {
@@ -22463,8 +22542,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_max_purge_lag_delay",
-                "40#sysvar_innodb_max_purge_lag_delay"
+                "40#innodb_max_purge_lag_delay",
+                "41#sysvar_innodb_max_purge_lag_delay"
             ]
         },
         "innodb_max_undo_log_size": {
@@ -22480,8 +22559,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_max_undo_log_size",
-                "40#sysvar_innodb_max_undo_log_size"
+                "40#innodb_max_undo_log_size",
+                "41#sysvar_innodb_max_undo_log_size"
             ]
         },
         "innodb_merge_sort_block_size": {
@@ -22498,13 +22577,13 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_merge_sort_block_size"
+                "40#innodb_merge_sort_block_size"
             ]
         },
         "innodb_mirrored_log_groups": {
             "name": "innodb_mirrored_log_groups",
             "ids": [
-                "39#innodb_mirrored_log_groups"
+                "40#innodb_mirrored_log_groups"
             ]
         },
         "innodb_mtflush_threads": {
@@ -22521,7 +22600,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_mtflush_threads"
+                "40#innodb_mtflush_threads"
             ]
         },
         "innodb_monitor_disable": {
@@ -22532,8 +22611,8 @@
             ],
             "type": "string",
             "ids": [
-                "39#innodb_monitor_disable",
-                "40#sysvar_innodb_monitor_disable"
+                "40#innodb_monitor_disable",
+                "41#sysvar_innodb_monitor_disable"
             ]
         },
         "innodb_monitor_enable": {
@@ -22544,8 +22623,8 @@
             ],
             "type": "string",
             "ids": [
-                "39#innodb_monitor_enable",
-                "40#sysvar_innodb_monitor_enable"
+                "40#innodb_monitor_enable",
+                "41#sysvar_innodb_monitor_enable"
             ]
         },
         "innodb_monitor_reset": {
@@ -22556,8 +22635,8 @@
             ],
             "type": "string",
             "ids": [
-                "39#innodb_monitor_reset",
-                "40#sysvar_innodb_monitor_reset"
+                "40#innodb_monitor_reset",
+                "41#sysvar_innodb_monitor_reset"
             ]
         },
         "innodb_monitor_reset_all": {
@@ -22568,8 +22647,8 @@
             ],
             "type": "string",
             "ids": [
-                "39#innodb_monitor_reset_all",
-                "40#sysvar_innodb_monitor_reset_all"
+                "40#innodb_monitor_reset_all",
+                "41#sysvar_innodb_monitor_reset_all"
             ]
         },
         "innodb_numa_interleave": {
@@ -22580,8 +22659,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_numa_interleave",
-                "40#sysvar_innodb_numa_interleave"
+                "40#innodb_numa_interleave",
+                "41#sysvar_innodb_numa_interleave"
             ]
         },
         "innodb_old_blocks_pct": {
@@ -22598,8 +22677,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_old_blocks_pct",
-                "40#sysvar_innodb_old_blocks_pct"
+                "40#innodb_old_blocks_pct",
+                "41#sysvar_innodb_old_blocks_pct"
             ]
         },
         "innodb_old_blocks_time": {
@@ -22614,8 +22693,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_old_blocks_time",
-                "40#sysvar_innodb_old_blocks_time"
+                "40#innodb_old_blocks_time",
+                "41#sysvar_innodb_old_blocks_time"
             ]
         },
         "innodb_online_alter_log_max_size": {
@@ -22631,8 +22710,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_online_alter_log_max_size",
-                "40#sysvar_innodb_online_alter_log_max_size"
+                "40#innodb_online_alter_log_max_size",
+                "41#sysvar_innodb_online_alter_log_max_size"
             ]
         },
         "innodb_open_files": {
@@ -22648,8 +22727,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_open_files",
-                "40#sysvar_innodb_open_files"
+                "40#innodb_open_files",
+                "41#sysvar_innodb_open_files"
             ]
         },
         "innodb_optimize_fulltext_only": {
@@ -22661,8 +22740,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_optimize_fulltext_only",
-                "40#sysvar_innodb_optimize_fulltext_only"
+                "40#innodb_optimize_fulltext_only",
+                "41#sysvar_innodb_optimize_fulltext_only"
             ]
         },
         "innodb_page_cleaners": {
@@ -22679,8 +22758,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_page_cleaners",
-                "40#sysvar_innodb_page_cleaners"
+                "40#innodb_page_cleaners",
+                "41#sysvar_innodb_page_cleaners"
             ]
         },
         "innodb_page_size": {
@@ -22693,11 +22772,6 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "4k",
-                "8k",
-                "16k",
-                "32k",
-                "64k",
                 "4096",
                 "8192",
                 "16384",
@@ -22705,14 +22779,14 @@
                 "65536"
             ],
             "ids": [
-                "39#innodb_page_size",
-                "40#sysvar_innodb_page_size"
+                "40#innodb_page_size",
+                "41#sysvar_innodb_page_size"
             ]
         },
         "innodb_pass_corrupt_table": {
             "name": "innodb_pass_corrupt_table",
             "ids": [
-                "39#innodb_pass_corrupt_table"
+                "40#innodb_pass_corrupt_table"
             ]
         },
         "innodb_prefix_index_cluster_optimization": {
@@ -22725,7 +22799,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_prefix_index_cluster_optimization"
+                "40#innodb_prefix_index_cluster_optimization"
             ]
         },
         "innodb_print_all_deadlocks": {
@@ -22737,8 +22811,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_print_all_deadlocks",
-                "40#sysvar_innodb_print_all_deadlocks"
+                "40#innodb_print_all_deadlocks",
+                "41#sysvar_innodb_print_all_deadlocks"
             ]
         },
         "innodb_purge_batch_size": {
@@ -22753,8 +22827,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_purge_batch_size",
-                "40#sysvar_innodb_purge_batch_size"
+                "40#innodb_purge_batch_size",
+                "41#sysvar_innodb_purge_batch_size"
             ]
         },
         "innodb_purge_rseg_truncate_frequency": {
@@ -22771,8 +22845,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_purge_rseg_truncate_frequency",
-                "40#sysvar_innodb_purge_rseg_truncate_frequency"
+                "40#innodb_purge_rseg_truncate_frequency",
+                "41#sysvar_innodb_purge_rseg_truncate_frequency"
             ]
         },
         "innodb_purge_threads": {
@@ -22789,8 +22863,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_purge_threads",
-                "40#sysvar_innodb_purge_threads"
+                "40#innodb_purge_threads",
+                "41#sysvar_innodb_purge_threads"
             ]
         },
         "innodb_random_read_ahead": {
@@ -22802,8 +22876,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_random_read_ahead",
-                "40#sysvar_innodb_random_read_ahead"
+                "40#innodb_random_read_ahead",
+                "41#sysvar_innodb_random_read_ahead"
             ]
         },
         "innodb_read_ahead": {
@@ -22822,7 +22896,7 @@
                 "both"
             ],
             "ids": [
-                "39#innodb_read_ahead"
+                "40#innodb_read_ahead"
             ]
         },
         "innodb_read_ahead_threshold": {
@@ -22839,8 +22913,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_read_ahead_threshold",
-                "40#sysvar_innodb_read_ahead_threshold"
+                "40#innodb_read_ahead_threshold",
+                "41#sysvar_innodb_read_ahead_threshold"
             ]
         },
         "innodb_read_io_threads": {
@@ -22857,8 +22931,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_read_io_threads",
-                "40#sysvar_innodb_read_io_threads"
+                "40#innodb_read_io_threads",
+                "41#sysvar_innodb_read_io_threads"
             ]
         },
         "innodb_read_only": {
@@ -22870,8 +22944,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_read_only",
-                "40#sysvar_innodb_read_only"
+                "40#innodb_read_only",
+                "41#sysvar_innodb_read_only"
             ]
         },
         "innodb_recovery_stats": {
@@ -22884,7 +22958,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_recovery_stats"
+                "40#innodb_recovery_stats"
             ]
         },
         "innodb_recovery_update_relay_log": {
@@ -22897,7 +22971,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_recovery_update_relay_log"
+                "40#innodb_recovery_update_relay_log"
             ]
         },
         "innodb_replication_delay": {
@@ -22914,8 +22988,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_replication_delay",
-                "40#sysvar_innodb_replication_delay"
+                "40#innodb_replication_delay",
+                "41#sysvar_innodb_replication_delay"
             ]
         },
         "innodb_rollback_on_timeout": {
@@ -22928,8 +23002,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_rollback_on_timeout",
-                "40#sysvar_innodb_rollback_on_timeout"
+                "40#innodb_rollback_on_timeout",
+                "41#sysvar_innodb_rollback_on_timeout"
             ]
         },
         "innodb_rollback_segments": {
@@ -22946,8 +23020,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_rollback_segments",
-                "40#sysvar_innodb_rollback_segments"
+                "40#innodb_rollback_segments",
+                "41#sysvar_innodb_rollback_segments"
             ]
         },
         "innodb_scrub_log": {
@@ -22960,7 +23034,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_scrub_log"
+                "40#innodb_scrub_log"
             ]
         },
         "innodb_scrub_log_interval": {
@@ -22977,7 +23051,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_scrub_log_interval"
+                "40#innodb_scrub_log_interval"
             ]
         },
         "innodb_scrub_log_speed": {
@@ -22994,7 +23068,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_scrub_log_speed"
+                "40#innodb_scrub_log_speed"
             ]
         },
         "innodb_sched_priority_cleaner": {
@@ -23011,7 +23085,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_sched_priority_cleaner"
+                "40#innodb_sched_priority_cleaner"
             ]
         },
         "innodb_show_locks_held": {
@@ -23028,7 +23102,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_show_locks_held"
+                "40#innodb_show_locks_held"
             ]
         },
         "innodb_show_verbose_locks": {
@@ -23045,7 +23119,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_show_verbose_locks"
+                "40#innodb_show_verbose_locks"
             ]
         },
         "innodb_simulate_comp_failures": {
@@ -23062,7 +23136,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_simulate_comp_failures"
+                "40#innodb_simulate_comp_failures"
             ]
         },
         "innodb_sort_buffer_size": {
@@ -23079,8 +23153,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_sort_buffer_size",
-                "40#sysvar_innodb_sort_buffer_size"
+                "40#innodb_sort_buffer_size",
+                "41#sysvar_innodb_sort_buffer_size"
             ]
         },
         "innodb_spin_wait_delay": {
@@ -23097,8 +23171,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_spin_wait_delay",
-                "40#sysvar_innodb_spin_wait_delay"
+                "40#innodb_spin_wait_delay",
+                "41#sysvar_innodb_spin_wait_delay"
             ]
         },
         "innodb_stats_auto_recalc": {
@@ -23110,8 +23184,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_stats_auto_recalc",
-                "40#sysvar_innodb_stats_auto_recalc"
+                "40#innodb_stats_auto_recalc",
+                "41#sysvar_innodb_stats_auto_recalc"
             ]
         },
         "innodb_stats_auto_update": {
@@ -23123,7 +23197,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_stats_auto_update"
+                "40#innodb_stats_auto_update"
             ]
         },
         "innodb_stats_include_delete_marked": {
@@ -23135,8 +23209,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_stats_include_delete_marked",
-                "40#sysvar_innodb_stats_include_delete_marked"
+                "40#innodb_stats_include_delete_marked",
+                "41#sysvar_innodb_stats_include_delete_marked"
             ]
         },
         "innodb_stats_method": {
@@ -23154,8 +23228,8 @@
                 "nulls_ignored"
             ],
             "ids": [
-                "39#innodb_stats_method",
-                "40#sysvar_innodb_stats_method"
+                "40#innodb_stats_method",
+                "41#sysvar_innodb_stats_method"
             ]
         },
         "innodb_stats_modified_counter": {
@@ -23172,7 +23246,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_stats_modified_counter"
+                "40#innodb_stats_modified_counter"
             ]
         },
         "innodb_stats_on_metadata": {
@@ -23184,8 +23258,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_stats_on_metadata",
-                "40#sysvar_innodb_stats_on_metadata"
+                "40#innodb_stats_on_metadata",
+                "41#sysvar_innodb_stats_on_metadata"
             ]
         },
         "innodb_stats_persistent": {
@@ -23203,8 +23277,8 @@
                 "1"
             ],
             "ids": [
-                "39#innodb_stats_persistent",
-                "40#sysvar_innodb_stats_persistent"
+                "40#innodb_stats_persistent",
+                "41#sysvar_innodb_stats_persistent"
             ]
         },
         "innodb_stats_persistent_sample_pages": {
@@ -23217,8 +23291,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_stats_persistent_sample_pages",
-                "40#sysvar_innodb_stats_persistent_sample_pages"
+                "40#innodb_stats_persistent_sample_pages",
+                "41#sysvar_innodb_stats_persistent_sample_pages"
             ]
         },
         "innodb_stats_sample_pages": {
@@ -23235,7 +23309,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_stats_sample_pages"
+                "40#innodb_stats_sample_pages"
             ]
         },
         "innodb_stats_traditional": {
@@ -23248,7 +23322,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_stats_traditional"
+                "40#innodb_stats_traditional"
             ]
         },
         "innodb_stats_transient_sample_pages": {
@@ -23261,8 +23335,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_stats_transient_sample_pages",
-                "40#sysvar_innodb_stats_transient_sample_pages"
+                "40#innodb_stats_transient_sample_pages",
+                "41#sysvar_innodb_stats_transient_sample_pages"
             ]
         },
         "innodb_stats_update_need_lock": {
@@ -23274,7 +23348,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_stats_update_need_lock"
+                "40#innodb_stats_update_need_lock"
             ]
         },
         "innodb_status_output": {
@@ -23286,8 +23360,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_status_output",
-                "40#sysvar_innodb_status_output"
+                "40#innodb_status_output",
+                "41#sysvar_innodb_status_output"
             ]
         },
         "innodb_status_output_locks": {
@@ -23299,8 +23373,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_status_output_locks",
-                "40#sysvar_innodb_status_output_locks"
+                "40#innodb_status_output_locks",
+                "41#sysvar_innodb_status_output_locks"
             ]
         },
         "innodb_strict_mode": {
@@ -23314,8 +23388,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_strict_mode",
-                "40#sysvar_innodb_strict_mode"
+                "40#innodb_strict_mode",
+                "41#sysvar_innodb_strict_mode"
             ]
         },
         "innodb_support_xa": {
@@ -23329,7 +23403,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_support_xa"
+                "40#innodb_support_xa"
             ]
         },
         "innodb_sync_array_size": {
@@ -23346,8 +23420,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_sync_array_size",
-                "40#sysvar_innodb_sync_array_size"
+                "40#innodb_sync_array_size",
+                "41#sysvar_innodb_sync_array_size"
             ]
         },
         "innodb_sync_spin_loops": {
@@ -23364,8 +23438,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_sync_spin_loops",
-                "40#sysvar_innodb_sync_spin_loops"
+                "40#innodb_sync_spin_loops",
+                "41#sysvar_innodb_sync_spin_loops"
             ]
         },
         "innodb_table_locks": {
@@ -23379,8 +23453,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_table_locks",
-                "40#sysvar_innodb_table_locks"
+                "40#innodb_table_locks",
+                "41#sysvar_innodb_table_locks"
             ]
         },
         "innodb_thread_concurrency": {
@@ -23397,8 +23471,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_thread_concurrency",
-                "40#sysvar_innodb_thread_concurrency"
+                "40#innodb_thread_concurrency",
+                "41#sysvar_innodb_thread_concurrency"
             ]
         },
         "innodb_thread_concurrency_timer_based": {
@@ -23411,7 +23485,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_thread_concurrency_timer_based"
+                "40#innodb_thread_concurrency_timer_based"
             ]
         },
         "innodb_thread_sleep_delay": {
@@ -23428,8 +23502,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_thread_sleep_delay",
-                "40#sysvar_innodb_thread_sleep_delay"
+                "40#innodb_thread_sleep_delay",
+                "41#sysvar_innodb_thread_sleep_delay"
             ]
         },
         "innodb_temp_data_file_path": {
@@ -23441,8 +23515,8 @@
             ],
             "type": "string",
             "ids": [
-                "39#innodb_temp_data_file_path",
-                "40#sysvar_innodb_temp_data_file_path"
+                "40#innodb_temp_data_file_path",
+                "41#sysvar_innodb_temp_data_file_path"
             ]
         },
         "innodb_tmpdir": {
@@ -23451,8 +23525,8 @@
             "dynamic": true,
             "name": "innodb_tmpdir",
             "ids": [
-                "39#innodb_tmpdir",
-                "40#sysvar_innodb_tmpdir"
+                "40#innodb_tmpdir",
+                "41#sysvar_innodb_tmpdir"
             ]
         },
         "innodb_track_changed_pages": {
@@ -23465,7 +23539,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_track_changed_pages"
+                "40#innodb_track_changed_pages"
             ]
         },
         "innodb_track_redo_log_now": {
@@ -23478,7 +23552,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_track_redo_log_now"
+                "40#innodb_track_redo_log_now"
             ]
         },
         "innodb_undo_directory": {
@@ -23488,8 +23562,8 @@
                 "global"
             ],
             "ids": [
-                "39#innodb_undo_directory",
-                "40#sysvar_innodb_undo_directory"
+                "40#innodb_undo_directory",
+                "41#sysvar_innodb_undo_directory"
             ]
         },
         "innodb_undo_log_truncate": {
@@ -23500,8 +23574,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_undo_log_truncate",
-                "40#sysvar_innodb_undo_log_truncate"
+                "40#innodb_undo_log_truncate",
+                "41#sysvar_innodb_undo_log_truncate"
             ]
         },
         "innodb_undo_logs": {
@@ -23514,8 +23588,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_undo_logs",
-                "40#sysvar_innodb_undo_logs"
+                "40#innodb_undo_logs",
+                "41#sysvar_innodb_undo_logs"
             ]
         },
         "innodb_undo_tablespaces": {
@@ -23526,8 +23600,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_undo_tablespaces",
-                "40#sysvar_innodb_undo_tablespaces"
+                "40#innodb_undo_tablespaces",
+                "41#sysvar_innodb_undo_tablespaces"
             ]
         },
         "innodb_use_atomic_writes": {
@@ -23540,7 +23614,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_use_atomic_writes"
+                "40#innodb_use_atomic_writes"
             ]
         },
         "innodb_use_fallocate": {
@@ -23553,7 +23627,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_use_fallocate"
+                "40#innodb_use_fallocate"
             ]
         },
         "innodb_use_global_flush_log_at_trx_commit": {
@@ -23566,7 +23640,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_use_global_flush_log_at_trx_commit"
+                "40#innodb_use_global_flush_log_at_trx_commit"
             ]
         },
         "innodb_use_mtflush": {
@@ -23579,7 +23653,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_use_mtflush"
+                "40#innodb_use_mtflush"
             ]
         },
         "innodb_use_native_aio": {
@@ -23591,8 +23665,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_use_native_aio",
-                "40#sysvar_innodb_use_native_aio"
+                "40#innodb_use_native_aio",
+                "41#sysvar_innodb_use_native_aio"
             ]
         },
         "innodb_use_purge_thread": {
@@ -23609,7 +23683,7 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_use_purge_thread"
+                "40#innodb_use_purge_thread"
             ]
         },
         "innodb_use_stacktrace": {
@@ -23622,7 +23696,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_use_stacktrace"
+                "40#innodb_use_stacktrace"
             ]
         },
         "innodb_use_sys_malloc": {
@@ -23635,7 +23709,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_use_sys_malloc"
+                "40#innodb_use_sys_malloc"
             ]
         },
         "innodb_use_sys_stats_table": {
@@ -23648,7 +23722,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_use_sys_stats_table"
+                "40#innodb_use_sys_stats_table"
             ]
         },
         "innodb_use_trim": {
@@ -23661,7 +23735,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "39#innodb_use_trim"
+                "40#innodb_use_trim"
             ]
         },
         "innodb_version": {
@@ -23672,7 +23746,7 @@
             ],
             "type": "string",
             "ids": [
-                "39#innodb_version"
+                "40#innodb_version"
             ]
         },
         "innodb_write_io_threads": {
@@ -23689,8 +23763,8 @@
             ],
             "type": "integer",
             "ids": [
-                "39#innodb_write_io_threads",
-                "40#sysvar_innodb_write_io_threads"
+                "40#innodb_write_io_threads",
+                "41#sysvar_innodb_write_io_threads"
             ]
         },
         "audit_log": {
@@ -23705,7 +23779,7 @@
                 "FORCE_PLUS_PERMANENT"
             ],
             "ids": [
-                "42#option_mysqld_audit-log"
+                "43#option_mysqld_audit-log"
             ]
         },
         "audit_log_buffer_size": {
@@ -23721,7 +23795,7 @@
             ],
             "type": "integer",
             "ids": [
-                "41#sysvar_audit_log_buffer_size"
+                "42#sysvar_audit_log_buffer_size"
             ]
         },
         "audit_log_compression": {
@@ -23738,7 +23812,7 @@
                 "GZIP"
             ],
             "ids": [
-                "41#sysvar_audit_log_compression"
+                "42#sysvar_audit_log_compression"
             ]
         },
         "audit_log_connection_policy": {
@@ -23756,7 +23830,7 @@
                 "NONE"
             ],
             "ids": [
-                "41#sysvar_audit_log_connection_policy"
+                "42#sysvar_audit_log_connection_policy"
             ]
         },
         "audit_log_current_session": {
@@ -23769,7 +23843,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "41#sysvar_audit_log_current_session"
+                "42#sysvar_audit_log_current_session"
             ]
         },
         "audit_log_encryption": {
@@ -23786,7 +23860,7 @@
                 "AES"
             ],
             "ids": [
-                "41#sysvar_audit_log_encryption"
+                "42#sysvar_audit_log_encryption"
             ]
         },
         "audit_log_exclude_accounts": {
@@ -23799,7 +23873,7 @@
             ],
             "type": "string",
             "ids": [
-                "41#sysvar_audit_log_exclude_accounts"
+                "42#sysvar_audit_log_exclude_accounts"
             ]
         },
         "audit_log_file": {
@@ -23812,7 +23886,7 @@
             ],
             "type": "file name",
             "ids": [
-                "41#sysvar_audit_log_file"
+                "42#sysvar_audit_log_file"
             ]
         },
         "audit_log_filter_id": {
@@ -23824,7 +23898,7 @@
             ],
             "type": "integer",
             "ids": [
-                "41#sysvar_audit_log_filter_id"
+                "42#sysvar_audit_log_filter_id"
             ]
         },
         "audit_log_flush": {
@@ -23836,7 +23910,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "41#sysvar_audit_log_flush"
+                "42#sysvar_audit_log_flush"
             ]
         },
         "audit_log_format": {
@@ -23854,7 +23928,7 @@
                 "JSON"
             ],
             "ids": [
-                "41#sysvar_audit_log_format"
+                "42#sysvar_audit_log_format"
             ]
         },
         "audit_log_include_accounts": {
@@ -23867,7 +23941,7 @@
             ],
             "type": "string",
             "ids": [
-                "41#sysvar_audit_log_include_accounts"
+                "42#sysvar_audit_log_include_accounts"
             ]
         },
         "audit_log_policy": {
@@ -23886,7 +23960,7 @@
                 "NONE"
             ],
             "ids": [
-                "41#sysvar_audit_log_policy"
+                "42#sysvar_audit_log_policy"
             ]
         },
         "audit_log_read_buffer_size": {
@@ -23897,7 +23971,7 @@
             },
             "type": "integer",
             "ids": [
-                "41#sysvar_audit_log_read_buffer_size"
+                "42#sysvar_audit_log_read_buffer_size"
             ]
         },
         "audit_log_rotate_on_size": {
@@ -23910,7 +23984,7 @@
             ],
             "type": "integer",
             "ids": [
-                "41#sysvar_audit_log_rotate_on_size"
+                "42#sysvar_audit_log_rotate_on_size"
             ]
         },
         "audit_log_statement_policy": {
@@ -23928,7 +24002,7 @@
                 "NONE"
             ],
             "ids": [
-                "41#sysvar_audit_log_statement_policy"
+                "42#sysvar_audit_log_statement_policy"
             ]
         },
         "audit_log_strategy": {
@@ -23947,7 +24021,7 @@
                 "SYNCHRONOUS"
             ],
             "ids": [
-                "41#sysvar_audit_log_strategy"
+                "42#sysvar_audit_log_strategy"
             ]
         },
         "innodb": {
@@ -23961,7 +24035,7 @@
                 "FORCE"
             ],
             "ids": [
-                "40#option_mysqld_innodb"
+                "41#option_mysqld_innodb"
             ]
         },
         "innodb_status_file": {
@@ -23970,7 +24044,7 @@
             "name": "innodb_status_file",
             "type": "boolean",
             "ids": [
-                "40#option_mysqld_innodb-status-file"
+                "41#option_mysqld_innodb-status-file"
             ]
         },
         "daemon_memcached_enable_binlog": {
@@ -23983,7 +24057,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_daemon_memcached_enable_binlog"
+                "41#sysvar_daemon_memcached_enable_binlog"
             ]
         },
         "daemon_memcached_engine_lib_name": {
@@ -23996,7 +24070,7 @@
             ],
             "type": "file name",
             "ids": [
-                "40#sysvar_daemon_memcached_engine_lib_name"
+                "41#sysvar_daemon_memcached_engine_lib_name"
             ]
         },
         "daemon_memcached_engine_lib_path": {
@@ -24009,7 +24083,7 @@
             ],
             "type": "directory name",
             "ids": [
-                "40#sysvar_daemon_memcached_engine_lib_path"
+                "41#sysvar_daemon_memcached_engine_lib_path"
             ]
         },
         "daemon_memcached_option": {
@@ -24022,7 +24096,7 @@
             ],
             "type": "string",
             "ids": [
-                "40#sysvar_daemon_memcached_option"
+                "41#sysvar_daemon_memcached_option"
             ]
         },
         "daemon_memcached_r_batch_size": {
@@ -24035,7 +24109,7 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_daemon_memcached_r_batch_size"
+                "41#sysvar_daemon_memcached_r_batch_size"
             ]
         },
         "daemon_memcached_w_batch_size": {
@@ -24048,7 +24122,7 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_daemon_memcached_w_batch_size"
+                "41#sysvar_daemon_memcached_w_batch_size"
             ]
         },
         "innodb_background_drop_list_empty": {
@@ -24061,7 +24135,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_innodb_background_drop_list_empty"
+                "41#sysvar_innodb_background_drop_list_empty"
             ]
         },
         "innodb_buffer_pool_debug": {
@@ -24074,7 +24148,20 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_innodb_buffer_pool_debug"
+                "41#sysvar_innodb_buffer_pool_debug"
+            ]
+        },
+        "innodb_buffer_pool_in_core_file": {
+            "cli": "--innodb-buffer-pool-in-core-file",
+            "default": "on",
+            "dynamic": true,
+            "name": "innodb_buffer_pool_in_core_file",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "41#sysvar_innodb_buffer_pool_in_core_file"
             ]
         },
         "innodb_checkpoint_disabled": {
@@ -24087,7 +24174,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_innodb_checkpoint_disabled"
+                "41#sysvar_innodb_checkpoint_disabled"
             ]
         },
         "innodb_compress_debug": {
@@ -24106,7 +24193,7 @@
                 "lz4hc"
             ],
             "ids": [
-                "40#sysvar_innodb_compress_debug"
+                "41#sysvar_innodb_compress_debug"
             ]
         },
         "innodb_ddl_log_crash_reset_debug": {
@@ -24119,7 +24206,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_innodb_ddl_log_crash_reset_debug"
+                "41#sysvar_innodb_ddl_log_crash_reset_debug"
             ]
         },
         "innodb_dedicated_server": {
@@ -24132,7 +24219,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_innodb_dedicated_server"
+                "41#sysvar_innodb_dedicated_server"
             ]
         },
         "innodb_directories": {
@@ -24144,7 +24231,7 @@
             ],
             "type": "string",
             "ids": [
-                "40#sysvar_innodb_directories"
+                "41#sysvar_innodb_directories"
             ]
         },
         "innodb_fil_make_page_dirty_debug": {
@@ -24160,7 +24247,24 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_innodb_fil_make_page_dirty_debug"
+                "41#sysvar_innodb_fil_make_page_dirty_debug"
+            ]
+        },
+        "innodb_fsync_threshold": {
+            "cli": "--innodb-fsync-threshold=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "innodb_fsync_threshold",
+            "range": {
+                "from": 0,
+                "to": 2
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "41#sysvar_innodb_fsync_threshold"
             ]
         },
         "innodb_limit_optimistic_insert_debug": {
@@ -24177,7 +24281,33 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_innodb_limit_optimistic_insert_debug"
+                "41#sysvar_innodb_limit_optimistic_insert_debug"
+            ]
+        },
+        "innodb_log_checkpoint_fuzzy_now": {
+            "cli": "--innodb-log-checkpoint-fuzzy-now",
+            "default": "off",
+            "dynamic": true,
+            "name": "innodb_log_checkpoint_fuzzy_now",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "41#sysvar_innodb_log_checkpoint_fuzzy_now"
+            ]
+        },
+        "innodb_log_checkpoint_now": {
+            "cli": "--innodb-log-checkpoint-now",
+            "default": "off",
+            "dynamic": true,
+            "name": "innodb_log_checkpoint_now",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "41#sysvar_innodb_log_checkpoint_now"
             ]
         },
         "innodb_log_spin_cpu_abs_lwm": {
@@ -24194,7 +24324,7 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_innodb_log_spin_cpu_abs_lwm"
+                "41#sysvar_innodb_log_spin_cpu_abs_lwm"
             ]
         },
         "innodb_log_spin_cpu_pct_hwm": {
@@ -24211,7 +24341,7 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_innodb_log_spin_cpu_pct_hwm"
+                "41#sysvar_innodb_log_spin_cpu_pct_hwm"
             ]
         },
         "innodb_log_wait_for_flush_spin_hwm": {
@@ -24227,7 +24357,7 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_innodb_log_wait_for_flush_spin_hwm"
+                "41#sysvar_innodb_log_wait_for_flush_spin_hwm"
             ]
         },
         "innodb_merge_threshold_set_all_debug": {
@@ -24244,7 +24374,7 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_innodb_merge_threshold_set_all_debug"
+                "41#sysvar_innodb_merge_threshold_set_all_debug"
             ]
         },
         "innodb_print_ddl_logs": {
@@ -24257,7 +24387,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_innodb_print_ddl_logs"
+                "41#sysvar_innodb_print_ddl_logs"
             ]
         },
         "innodb_redo_log_encrypt": {
@@ -24270,7 +24400,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_innodb_redo_log_encrypt"
+                "41#sysvar_innodb_redo_log_encrypt"
             ]
         },
         "innodb_scan_directories": {
@@ -24283,7 +24413,7 @@
             ],
             "type": "string",
             "ids": [
-                "40#sysvar_innodb_scan_directories"
+                "41#sysvar_innodb_scan_directories"
             ]
         },
         "innodb_saved_page_number_debug": {
@@ -24299,7 +24429,7 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_innodb_saved_page_number_debug"
+                "41#sysvar_innodb_saved_page_number_debug"
             ]
         },
         "innodb_sync_debug": {
@@ -24312,7 +24442,20 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_innodb_sync_debug"
+                "41#sysvar_innodb_sync_debug"
+            ]
+        },
+        "innodb_temp_tablespaces_dir": {
+            "cli": "--innodb-temp-tablespaces-dir=dir_name",
+            "default": "#innodb_temp",
+            "dynamic": false,
+            "name": "innodb_temp_tablespaces_dir",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                "41#sysvar_innodb_temp_tablespaces_dir"
             ]
         },
         "innodb_trx_purge_view_update_only_debug": {
@@ -24325,7 +24468,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_innodb_trx_purge_view_update_only_debug"
+                "41#sysvar_innodb_trx_purge_view_update_only_debug"
             ]
         },
         "innodb_trx_rseg_n_slots_debug": {
@@ -24341,7 +24484,7 @@
             ],
             "type": "integer",
             "ids": [
-                "40#sysvar_innodb_trx_rseg_n_slots_debug"
+                "41#sysvar_innodb_trx_rseg_n_slots_debug"
             ]
         },
         "innodb_undo_log_encrypt": {
@@ -24354,14 +24497,14 @@
             ],
             "type": "boolean",
             "ids": [
-                "40#sysvar_innodb_undo_log_encrypt"
+                "41#sysvar_innodb_undo_log_encrypt"
             ]
         },
         "ndbcluster": {
             "dynamic": false,
             "name": "ndbcluster",
             "ids": [
-                "43#option_mysqld_ndbcluster"
+                "44#option_mysqld_ndbcluster"
             ]
         },
         "ndb_allow_copying_alter_table": {
@@ -24372,7 +24515,7 @@
                 "session"
             ],
             "ids": [
-                "42#option_mysqld_ndb-allow-copying-alter-table"
+                "43#option_mysqld_ndb-allow-copying-alter-table"
             ]
         },
         "ndb_batch_size": {
@@ -24382,7 +24525,7 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-batch-size"
+                "43#option_mysqld_ndb-batch-size"
             ]
         },
         "ndb_cluster_connection_pool": {
@@ -24392,7 +24535,7 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-cluster-connection-pool"
+                "43#option_mysqld_ndb-cluster-connection-pool"
             ]
         },
         "ndb_cluster_connection_pool_nodeids": {
@@ -24402,7 +24545,7 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-cluster-connection-pool-nodeids"
+                "43#option_mysqld_ndb-cluster-connection-pool-nodeids"
             ]
         },
         "ndb_blob_read_batch_bytes": {
@@ -24413,7 +24556,7 @@
                 "session"
             ],
             "ids": [
-                "42#option_mysqld_ndb-blob-read-batch-bytes"
+                "43#option_mysqld_ndb-blob-read-batch-bytes"
             ]
         },
         "ndb_blob_write_batch_bytes": {
@@ -24424,14 +24567,14 @@
                 "session"
             ],
             "ids": [
-                "42#option_mysqld_ndb-blob-write-batch-bytes"
+                "43#option_mysqld_ndb-blob-write-batch-bytes"
             ]
         },
         "ndb_connectstring": {
             "dynamic": false,
             "name": "ndb_connectstring",
             "ids": [
-                "42#option_mysqld_ndb-connectstring"
+                "43#option_mysqld_ndb-connectstring"
             ]
         },
         "ndb_default_column_format": {
@@ -24441,8 +24584,8 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-default-column-format",
-                "42#sysvar_ndb_default_column_format"
+                "43#option_mysqld_ndb-default-column-format",
+                "43#sysvar_ndb_default_column_format"
             ]
         },
         "ndb_deferred_constraints": {
@@ -24453,8 +24596,8 @@
                 "session"
             ],
             "ids": [
-                "42#option_mysqld_ndb-deferred-constraints",
-                "42#sysvar_ndb_deferred_constraints"
+                "43#option_mysqld_ndb-deferred-constraints",
+                "43#sysvar_ndb_deferred_constraints"
             ]
         },
         "ndb_distribution": {
@@ -24464,8 +24607,8 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-distribution",
-                "42#sysvar_ndb_distribution"
+                "43#option_mysqld_ndb-distribution",
+                "43#sysvar_ndb_distribution"
             ]
         },
         "ndb_log_apply_status": {
@@ -24475,8 +24618,8 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-log-apply-status",
-                "42#sysvar_ndb_log_apply_status"
+                "43#option_mysqld_ndb-log-apply-status",
+                "43#sysvar_ndb_log_apply_status"
             ]
         },
         "ndb_log_empty_epochs": {
@@ -24486,8 +24629,8 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-log-empty-epochs",
-                "42#sysvar_ndb_log_empty_epochs"
+                "43#option_mysqld_ndb-log-empty-epochs",
+                "43#sysvar_ndb_log_empty_epochs"
             ]
         },
         "ndb_log_empty_update": {
@@ -24497,8 +24640,8 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-log-empty-update",
-                "42#sysvar_ndb_log_empty_update"
+                "43#option_mysqld_ndb-log-empty-update",
+                "43#sysvar_ndb_log_empty_update"
             ]
         },
         "ndb_log_exclusive_reads": {
@@ -24509,8 +24652,8 @@
                 "session"
             ],
             "ids": [
-                "42#option_mysqld_ndb-log-exclusive-reads",
-                "42#sysvar_ndb_log_exclusive_reads"
+                "43#option_mysqld_ndb-log-exclusive-reads",
+                "43#sysvar_ndb_log_exclusive_reads"
             ]
         },
         "ndb_log_orig": {
@@ -24520,8 +24663,8 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-log-orig",
-                "42#sysvar_ndb_log_orig"
+                "43#option_mysqld_ndb-log-orig",
+                "43#sysvar_ndb_log_orig"
             ]
         },
         "ndb_log_transaction_id": {
@@ -24531,8 +24674,8 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-log-transaction-id",
-                "42#sysvar_ndb_log_transaction_id"
+                "43#option_mysqld_ndb-log-transaction-id",
+                "43#sysvar_ndb_log_transaction_id"
             ]
         },
         "ndb_log_update_minimal": {
@@ -24542,14 +24685,14 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-log-update-minimal"
+                "43#option_mysqld_ndb-log-update-minimal"
             ]
         },
         "ndb_mgmd_host": {
             "dynamic": false,
             "name": "ndb_mgmd_host",
             "ids": [
-                "42#option_mysqld_ndb-mgmd-host"
+                "43#option_mysqld_ndb-mgmd-host"
             ]
         },
         "ndb_nodeid": {
@@ -24559,7 +24702,7 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-nodeid"
+                "43#option_mysqld_ndb-nodeid"
             ]
         },
         "ndb_optimization_delay": {
@@ -24569,15 +24712,15 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb_optimization_delay"
+                "43#option_mysqld_ndb_optimization_delay"
             ]
         },
         "ndb_recv_thread_activation_threshold": {
             "dynamic": false,
             "name": "ndb_recv_thread_activation_threshold",
             "ids": [
-                "42#option_mysqld_ndb-recv-thread-activation-threshold",
-                "42#sysvar_ndb_recv_thread_activation_threshold"
+                "43#option_mysqld_ndb-recv-thread-activation-threshold",
+                "43#sysvar_ndb_recv_thread_activation_threshold"
             ]
         },
         "ndb_recv_thread_cpu_mask": {
@@ -24586,15 +24729,15 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-recv-thread-cpu-mask",
-                "42#sysvar_ndb_recv_thread_cpu_mask"
+                "43#option_mysqld_ndb-recv-thread-cpu-mask",
+                "43#sysvar_ndb_recv_thread_cpu_mask"
             ]
         },
         "ndb-transid-mysql-connection-map=state": {
             "dynamic": false,
             "name": "ndb-transid-mysql-connection-map=state",
             "ids": [
-                "42#option_mysqld_ndb-transid-mysql-connection-map"
+                "43#option_mysqld_ndb-transid-mysql-connection-map"
             ]
         },
         "ndb_wait_connected": {
@@ -24604,7 +24747,7 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-wait-connected"
+                "43#option_mysqld_ndb-wait-connected"
             ]
         },
         "ndb_wait_setup": {
@@ -24614,7 +24757,7 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_ndb-wait-setup"
+                "43#option_mysqld_ndb-wait-setup"
             ]
         },
         "server_id_bits": {
@@ -24624,15 +24767,15 @@
                 "global"
             ],
             "ids": [
-                "42#option_mysqld_server-id-bits",
-                "42#sysvar_server_id_bits"
+                "43#option_mysqld_server-id-bits",
+                "43#sysvar_server_id_bits"
             ]
         },
         "skip_ndbcluster": {
             "dynamic": false,
             "name": "skip_ndbcluster",
             "ids": [
-                "42#option_mysqld_skip-ndbcluster"
+                "43#option_mysqld_skip-ndbcluster"
             ]
         },
         "ndb_autoincrement_prefetch_sz": {
@@ -24643,7 +24786,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_autoincrement_prefetch_sz"
+                "43#sysvar_ndb_autoincrement_prefetch_sz"
             ]
         },
         "ndb_cache_check_time": {
@@ -24653,7 +24796,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_cache_check_time"
+                "43#sysvar_ndb_cache_check_time"
             ]
         },
         "ndb_clear_apply_status": {
@@ -24663,7 +24806,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_clear_apply_status"
+                "43#sysvar_ndb_clear_apply_status"
             ]
         },
         "ndb_data_node_neighbour": {
@@ -24673,7 +24816,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_data_node_neighbour"
+                "43#sysvar_ndb_data_node_neighbour"
             ]
         },
         "ndb_eventbuffer_free_percent": {
@@ -24683,7 +24826,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_eventbuffer_free_percent"
+                "43#sysvar_ndb_eventbuffer_free_percent"
             ]
         },
         "ndb_eventbuffer_max_alloc": {
@@ -24693,7 +24836,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_eventbuffer_max_alloc"
+                "43#sysvar_ndb_eventbuffer_max_alloc"
             ]
         },
         "ndb_extra_logging": {
@@ -24703,7 +24846,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_extra_logging"
+                "43#sysvar_ndb_extra_logging"
             ]
         },
         "ndb_force_send": {
@@ -24714,7 +24857,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_force_send"
+                "43#sysvar_ndb_force_send"
             ]
         },
         "ndb_fully_replicated": {
@@ -24725,7 +24868,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_fully_replicated"
+                "43#sysvar_ndb_fully_replicated"
             ]
         },
         "ndb_index_stat_enable": {
@@ -24736,7 +24879,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_index_stat_enable"
+                "43#sysvar_ndb_index_stat_enable"
             ]
         },
         "ndb_index_stat_option": {
@@ -24747,7 +24890,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_index_stat_option"
+                "43#sysvar_ndb_index_stat_option"
             ]
         },
         "ndb_join_pushdown": {
@@ -24758,7 +24901,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_join_pushdown"
+                "43#sysvar_ndb_join_pushdown"
             ]
         },
         "ndb_log_bin": {
@@ -24769,7 +24912,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_log_bin"
+                "43#sysvar_ndb_log_bin"
             ]
         },
         "ndb_log_binlog_index": {
@@ -24779,7 +24922,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_log_binlog_index"
+                "43#sysvar_ndb_log_binlog_index"
             ]
         },
         "ndb_optimized_node_selection": {
@@ -24789,7 +24932,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_optimized_node_selection"
+                "43#sysvar_ndb_optimized_node_selection"
             ]
         },
         "ndb_read_backup": {
@@ -24799,7 +24942,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_read_backup"
+                "43#sysvar_ndb_read_backup"
             ]
         },
         "ndb_report_thresh_binlog_epoch_slip": {
@@ -24809,7 +24952,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_report_thresh_binlog_epoch_slip"
+                "43#sysvar_ndb_report_thresh_binlog_epoch_slip"
             ]
         },
         "ndb_report_thresh_binlog_mem_usage": {
@@ -24818,8 +24961,20 @@
             "scope": [
                 "global"
             ],
+            "type": "boolean",
             "ids": [
-                "42#sysvar_ndb_report_thresh_binlog_mem_usage"
+                "43#sysvar_ndb_report_thresh_binlog_mem_usage"
+            ]
+        },
+        "ndb_row_checksum": {
+            "dynamic": true,
+            "name": "ndb_row_checksum",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "43#sysvar_ndb_row_checksum"
             ]
         },
         "slave_allow_batching": {
@@ -24832,7 +24987,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "42#sysvar_slave_allow_batching",
+                "43#sysvar_slave_allow_batching",
                 "24#sysvar_slave_allow_batching"
             ]
         },
@@ -24843,7 +24998,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_show_foreign_key_mock_tables"
+                "43#sysvar_ndb_show_foreign_key_mock_tables"
             ]
         },
         "ndb_slave_conflict_role": {
@@ -24853,7 +25008,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_slave_conflict_role"
+                "43#sysvar_ndb_slave_conflict_role"
             ]
         },
         "ndb_table_no_logging": {
@@ -24863,7 +25018,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_table_no_logging"
+                "43#sysvar_ndb_table_no_logging"
             ]
         },
         "ndb_table_temporary": {
@@ -24873,7 +25028,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_table_temporary"
+                "43#sysvar_ndb_table_temporary"
             ]
         },
         "ndb_use_copying_alter_table": {
@@ -24884,7 +25039,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_use_copying_alter_table"
+                "43#sysvar_ndb_use_copying_alter_table"
             ]
         },
         "ndb_use_exact_count": {
@@ -24895,7 +25050,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_use_exact_count"
+                "43#sysvar_ndb_use_exact_count"
             ]
         },
         "ndb_use_transactions": {
@@ -24906,7 +25061,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndb_use_transactions"
+                "43#sysvar_ndb_use_transactions"
             ]
         },
         "ndb_version": {
@@ -24916,7 +25071,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_version"
+                "43#sysvar_ndb_version"
             ]
         },
         "ndb_version_string": {
@@ -24926,7 +25081,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndb_version_string"
+                "43#sysvar_ndb_version_string"
             ]
         },
         "transaction_allow_batching": {
@@ -24936,7 +25091,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_transaction_allow_batching"
+                "43#sysvar_transaction_allow_batching"
             ]
         },
         "ndbinfo_database": {
@@ -24946,7 +25101,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndbinfo_database"
+                "43#sysvar_ndbinfo_database"
             ]
         },
         "ndbinfo_max_bytes": {
@@ -24957,7 +25112,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndbinfo_max_bytes"
+                "43#sysvar_ndbinfo_max_bytes"
             ]
         },
         "ndbinfo_max_rows": {
@@ -24968,7 +25123,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndbinfo_max_rows"
+                "43#sysvar_ndbinfo_max_rows"
             ]
         },
         "ndbinfo_offline": {
@@ -24978,7 +25133,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndbinfo_offline"
+                "43#sysvar_ndbinfo_offline"
             ]
         },
         "ndbinfo_show_hidden": {
@@ -24989,7 +25144,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndbinfo_show_hidden"
+                "43#sysvar_ndbinfo_show_hidden"
             ]
         },
         "ndbinfo_table_prefix": {
@@ -25000,7 +25155,7 @@
                 "session"
             ],
             "ids": [
-                "42#sysvar_ndbinfo_table_prefix"
+                "43#sysvar_ndbinfo_table_prefix"
             ]
         },
         "ndbinfo_version": {
@@ -25010,7 +25165,7 @@
                 "global"
             ],
             "ids": [
-                "42#sysvar_ndbinfo_version"
+                "43#sysvar_ndbinfo_version"
             ]
         },
         "performance_schema_error_size": {
@@ -25190,7 +25345,7 @@
             ],
             "type": "string",
             "ids": [
-                "44#sysvar_authentication_ldap_sasl_auth_method_name"
+                "45#sysvar_authentication_ldap_sasl_auth_method_name"
             ]
         },
         "authentication_ldap_sasl_bind_base_dn": {
@@ -25203,7 +25358,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_bind_base_dn"
+                "44#sysvar_authentication_ldap_sasl_bind_base_dn"
             ]
         },
         "authentication_ldap_sasl_bind_root_dn": {
@@ -25216,7 +25371,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_bind_root_dn"
+                "44#sysvar_authentication_ldap_sasl_bind_root_dn"
             ]
         },
         "authentication_ldap_sasl_bind_root_pwd": {
@@ -25229,7 +25384,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_bind_root_pwd"
+                "44#sysvar_authentication_ldap_sasl_bind_root_pwd"
             ]
         },
         "authentication_ldap_sasl_ca_path": {
@@ -25242,7 +25397,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_ca_path"
+                "44#sysvar_authentication_ldap_sasl_ca_path"
             ]
         },
         "authentication_ldap_sasl_group_search_attr": {
@@ -25255,7 +25410,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_group_search_attr"
+                "44#sysvar_authentication_ldap_sasl_group_search_attr"
             ]
         },
         "authentication_ldap_sasl_group_search_filter": {
@@ -25268,7 +25423,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_group_search_filter"
+                "44#sysvar_authentication_ldap_sasl_group_search_filter"
             ]
         },
         "authentication_ldap_sasl_init_pool_size": {
@@ -25285,7 +25440,7 @@
             ],
             "type": "integer",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_init_pool_size"
+                "44#sysvar_authentication_ldap_sasl_init_pool_size"
             ]
         },
         "authentication_ldap_sasl_log_status": {
@@ -25302,7 +25457,7 @@
             ],
             "type": "integer",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_log_status"
+                "44#sysvar_authentication_ldap_sasl_log_status"
             ]
         },
         "authentication_ldap_sasl_max_pool_size": {
@@ -25319,7 +25474,7 @@
             ],
             "type": "integer",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_max_pool_size"
+                "44#sysvar_authentication_ldap_sasl_max_pool_size"
             ]
         },
         "authentication_ldap_sasl_server_host": {
@@ -25331,7 +25486,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_server_host"
+                "44#sysvar_authentication_ldap_sasl_server_host"
             ]
         },
         "authentication_ldap_sasl_server_port": {
@@ -25348,7 +25503,7 @@
             ],
             "type": "integer",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_server_port"
+                "44#sysvar_authentication_ldap_sasl_server_port"
             ]
         },
         "authentication_ldap_sasl_tls": {
@@ -25361,7 +25516,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_tls"
+                "44#sysvar_authentication_ldap_sasl_tls"
             ]
         },
         "authentication_ldap_sasl_user_search_attr": {
@@ -25374,7 +25529,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_sasl_user_search_attr"
+                "44#sysvar_authentication_ldap_sasl_user_search_attr"
             ]
         },
         "authentication_ldap_simple_auth_method_name": {
@@ -25387,7 +25542,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_auth_method_name"
+                "44#sysvar_authentication_ldap_simple_auth_method_name"
             ]
         },
         "authentication_ldap_simple_bind_base_dn": {
@@ -25400,7 +25555,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_bind_base_dn"
+                "44#sysvar_authentication_ldap_simple_bind_base_dn"
             ]
         },
         "authentication_ldap_simple_bind_root_dn": {
@@ -25413,7 +25568,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_bind_root_dn"
+                "44#sysvar_authentication_ldap_simple_bind_root_dn"
             ]
         },
         "authentication_ldap_simple_bind_root_pwd": {
@@ -25426,7 +25581,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_bind_root_pwd"
+                "44#sysvar_authentication_ldap_simple_bind_root_pwd"
             ]
         },
         "authentication_ldap_simple_ca_path": {
@@ -25439,7 +25594,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_ca_path"
+                "44#sysvar_authentication_ldap_simple_ca_path"
             ]
         },
         "authentication_ldap_simple_group_search_attr": {
@@ -25452,7 +25607,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_group_search_attr"
+                "44#sysvar_authentication_ldap_simple_group_search_attr"
             ]
         },
         "authentication_ldap_simple_group_search_filter": {
@@ -25465,7 +25620,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_group_search_filter"
+                "44#sysvar_authentication_ldap_simple_group_search_filter"
             ]
         },
         "authentication_ldap_simple_init_pool_size": {
@@ -25482,7 +25637,7 @@
             ],
             "type": "integer",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_init_pool_size"
+                "44#sysvar_authentication_ldap_simple_init_pool_size"
             ]
         },
         "authentication_ldap_simple_log_status": {
@@ -25499,7 +25654,7 @@
             ],
             "type": "integer",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_log_status"
+                "44#sysvar_authentication_ldap_simple_log_status"
             ]
         },
         "authentication_ldap_simple_max_pool_size": {
@@ -25516,7 +25671,7 @@
             ],
             "type": "integer",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_max_pool_size"
+                "44#sysvar_authentication_ldap_simple_max_pool_size"
             ]
         },
         "authentication_ldap_simple_server_host": {
@@ -25528,7 +25683,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_server_host"
+                "44#sysvar_authentication_ldap_simple_server_host"
             ]
         },
         "authentication_ldap_simple_server_port": {
@@ -25545,7 +25700,7 @@
             ],
             "type": "integer",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_server_port"
+                "44#sysvar_authentication_ldap_simple_server_port"
             ]
         },
         "authentication_ldap_simple_tls": {
@@ -25558,7 +25713,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_tls"
+                "44#sysvar_authentication_ldap_simple_tls"
             ]
         },
         "authentication_ldap_simple_user_search_attr": {
@@ -25571,7 +25726,7 @@
             ],
             "type": "string",
             "ids": [
-                "43#sysvar_authentication_ldap_simple_user_search_attr"
+                "44#sysvar_authentication_ldap_simple_user_search_attr"
             ]
         },
         "binlog_row_event_max_size": {
@@ -25927,8 +26082,8 @@
                 "WARN"
             ],
             "ids": [
-                "45#option_mysqld_enforce-gtid-consistency",
-                "44#sysvar_enforce_gtid_consistency"
+                "46#option_mysqld_enforce-gtid-consistency",
+                "45#sysvar_enforce_gtid_consistency"
             ]
         },
         "executed_gtids_compression_period": {
@@ -25944,8 +26099,8 @@
             ],
             "type": "integer",
             "ids": [
-                "44#option_mysqld_executed-gtids-compression-period",
-                "44#sysvar_executed_gtids_compression_period"
+                "45#option_mysqld_executed-gtids-compression-period",
+                "45#sysvar_executed_gtids_compression_period"
             ]
         },
         "gtid_mode": {
@@ -25963,8 +26118,8 @@
                 "ON"
             ],
             "ids": [
-                "44#option_mysqld_gtid-mode",
-                "44#sysvar_gtid_mode"
+                "45#option_mysqld_gtid-mode",
+                "45#sysvar_gtid_mode"
             ]
         },
         "gtid_executed_compression_period": {
@@ -25980,8 +26135,8 @@
             ],
             "type": "integer",
             "ids": [
-                "44#option_mysqld_gtid-executed-compression-period",
-                "44#sysvar_gtid_executed_compression_period"
+                "45#option_mysqld_gtid-executed-compression-period",
+                "45#sysvar_gtid_executed_compression_period"
             ]
         },
         "binlog_gtid_simple_recovery": {
@@ -25994,7 +26149,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "44#sysvar_binlog_gtid_simple_recovery"
+                "45#sysvar_binlog_gtid_simple_recovery"
             ]
         },
         "gtid_executed": {
@@ -26006,7 +26161,7 @@
             ],
             "type": "string",
             "ids": [
-                "44#sysvar_gtid_executed"
+                "45#sysvar_gtid_executed"
             ]
         },
         "gtid_next": {
@@ -26023,7 +26178,7 @@
                 "UUID:NUMBER"
             ],
             "ids": [
-                "44#sysvar_gtid_next"
+                "45#sysvar_gtid_next"
             ]
         },
         "gtid_owned": {
@@ -26035,7 +26190,7 @@
             ],
             "type": "string",
             "ids": [
-                "44#sysvar_gtid_owned"
+                "45#sysvar_gtid_owned"
             ]
         },
         "gtid_purged": {
@@ -26046,7 +26201,7 @@
             ],
             "type": "string",
             "ids": [
-                "44#sysvar_gtid_purged"
+                "45#sysvar_gtid_purged"
             ]
         },
         "simplified_binlog_gtid_recovery": {
@@ -26059,7 +26214,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "44#sysvar_simplified_binlog_gtid_recovery"
+                "45#sysvar_simplified_binlog_gtid_recovery"
             ]
         },
         "show_slave_auth_info": {
@@ -26791,12 +26946,16 @@
         },
         "authentication_windows_log_level": {
             "cli": "--authentication-windows-log-level",
-            "default": "0",
+            "default": "2",
+            "dynamic": false,
             "name": "authentication_windows_log_level",
             "range": {
                 "from": 0,
                 "to": 4
             },
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 "10#sysvar_authentication_windows_log_level"
@@ -26805,7 +26964,11 @@
         "authentication_windows_use_principal_name": {
             "cli": "--authentication-windows-use-principal-name",
             "default": "on",
+            "dynamic": false,
             "name": "authentication_windows_use_principal_name",
+            "scope": [
+                "global"
+            ],
             "type": "boolean",
             "ids": [
                 "10#sysvar_authentication_windows_use_principal_name"
@@ -27710,6 +27873,7 @@
                 "global",
                 "session"
             ],
+            "type": "boolean",
             "ids": [
                 "10#sysvar_show_create_table_verbosity"
             ]
@@ -27910,6 +28074,23 @@
                 "10#sysvar_tls_version"
             ]
         },
+        "use_secondary_engine": {
+            "default": "off",
+            "dynamic": true,
+            "name": "use_secondary_engine",
+            "scope": [
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE"
+            ],
+            "ids": [
+                "10#sysvar_use_secondary_engine"
+            ]
+        },
         "validate_user_plugins": {
             "default": "on",
             "dynamic": false,
@@ -27958,7 +28139,7 @@
             ],
             "type": "string",
             "ids": [
-                "46#sysvar_version_tokens_session"
+                "47#sysvar_version_tokens_session"
             ]
         },
         "version_tokens_session_number": {
@@ -27972,7 +28153,7 @@
             ],
             "type": "integer",
             "ids": [
-                "45#sysvar_version_tokens_session_number"
+                "46#sysvar_version_tokens_session_number"
             ]
         },
         "mysqlx": {
@@ -27985,8 +28166,8 @@
             ],
             "type": "boolean",
             "ids": [
-                "47#option_mysqld_mysqlx",
-                "46#sysvar_mysqlx"
+                "48#option_mysqld_mysqlx",
+                "47#sysvar_mysqlx"
             ]
         },
         "mysqlx_bind_address": {
@@ -27999,8 +28180,8 @@
             ],
             "type": "string",
             "ids": [
-                "46#option_mysqld_mysqlx-bind-address",
-                "46#sysvar_mysqlx_bind_address"
+                "47#option_mysqld_mysqlx-bind-address",
+                "47#sysvar_mysqlx_bind_address"
             ]
         },
         "mysqlx_connect_timeout": {
@@ -28017,8 +28198,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-connect-timeout",
-                "46#sysvar_mysqlx_connect_timeout"
+                "47#option_mysqld_mysqlx-connect-timeout",
+                "47#sysvar_mysqlx_connect_timeout"
             ]
         },
         "mysqlx_idle_worker_thread_timeout": {
@@ -28035,8 +28216,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-idle-worker-thread-timeout",
-                "46#sysvar_mysqlx_idle_worker_thread_timeout"
+                "47#option_mysqld_mysqlx-idle-worker-thread-timeout",
+                "47#sysvar_mysqlx_idle_worker_thread_timeout"
             ]
         },
         "mysqlx_interactive_timeout": {
@@ -28053,8 +28234,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-interactive-timeout",
-                "46#sysvar_mysqlx_interactive_timeout"
+                "47#option_mysqld_mysqlx-interactive-timeout",
+                "47#sysvar_mysqlx_interactive_timeout"
             ]
         },
         "mysqlx_max_allowed_packet": {
@@ -28071,8 +28252,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-max-allowed-packet",
-                "46#sysvar_mysqlx_max_allowed_packet"
+                "47#option_mysqld_mysqlx-max-allowed-packet",
+                "47#sysvar_mysqlx_max_allowed_packet"
             ]
         },
         "mysqlx_max_connections": {
@@ -28089,8 +28270,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-max-connections",
-                "46#sysvar_mysqlx_max_connections"
+                "47#option_mysqld_mysqlx-max-connections",
+                "47#sysvar_mysqlx_max_connections"
             ]
         },
         "mysqlx_min_worker_threads": {
@@ -28107,8 +28288,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-min-worker-threads",
-                "46#sysvar_mysqlx_min_worker_threads"
+                "47#option_mysqld_mysqlx-min-worker-threads",
+                "47#sysvar_mysqlx_min_worker_threads"
             ]
         },
         "mysqlx_port": {
@@ -28125,8 +28306,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-port",
-                "46#sysvar_mysqlx_port"
+                "47#option_mysqld_mysqlx-port",
+                "47#sysvar_mysqlx_port"
             ]
         },
         "mysqlx_port_open_timeout": {
@@ -28139,8 +28320,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-port-open-timeout",
-                "46#sysvar_mysqlx_port_open_timeout"
+                "47#option_mysqld_mysqlx-port-open-timeout",
+                "47#sysvar_mysqlx_port_open_timeout"
             ]
         },
         "mysqlx_read_timeout": {
@@ -28157,8 +28338,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-read-timeout",
-                "46#sysvar_mysqlx_read_timeout"
+                "47#option_mysqld_mysqlx-read-timeout",
+                "47#sysvar_mysqlx_read_timeout"
             ]
         },
         "mysqlx_socket": {
@@ -28171,20 +28352,8 @@
             ],
             "type": "string",
             "ids": [
-                "46#option_mysqld_mysqlx-socket",
-                "46#sysvar_mysqlx_socket"
-            ]
-        },
-        "mysqlx_ssl": {
-            "cli": "--mysqlx-ssl=#",
-            "dynamic": false,
-            "name": "mysqlx_ssl",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "46#option_mysqld_mysqlx-ssl"
+                "47#option_mysqld_mysqlx-socket",
+                "47#sysvar_mysqlx_socket"
             ]
         },
         "mysqlx_ssl_ca": {
@@ -28196,7 +28365,7 @@
             ],
             "type": "file name",
             "ids": [
-                "46#option_mysqld_mysqlx-ssl-ca"
+                "47#option_mysqld_mysqlx-ssl-ca"
             ]
         },
         "mysqlx_ssl_capath": {
@@ -28208,7 +28377,7 @@
             ],
             "type": "directory name",
             "ids": [
-                "46#option_mysqld_mysqlx-ssl-capath"
+                "47#option_mysqld_mysqlx-ssl-capath"
             ]
         },
         "mysqlx_ssl_cert": {
@@ -28220,7 +28389,7 @@
             ],
             "type": "file name",
             "ids": [
-                "46#option_mysqld_mysqlx-ssl-cert"
+                "47#option_mysqld_mysqlx-ssl-cert"
             ]
         },
         "mysqlx_ssl_cipher": {
@@ -28228,7 +28397,7 @@
             "name": "mysqlx_ssl_cipher",
             "type": "string",
             "ids": [
-                "46#option_mysqld_mysqlx-ssl-cipher"
+                "47#option_mysqld_mysqlx-ssl-cipher"
             ]
         },
         "mysqlx_ssl_crl": {
@@ -28240,7 +28409,7 @@
             ],
             "type": "file name",
             "ids": [
-                "46#option_mysqld_mysqlx-ssl-crl"
+                "47#option_mysqld_mysqlx-ssl-crl"
             ]
         },
         "mysqlx_ssl_crlpath": {
@@ -28252,7 +28421,7 @@
             ],
             "type": "directory name",
             "ids": [
-                "46#option_mysqld_mysqlx-ssl-crlpath"
+                "47#option_mysqld_mysqlx-ssl-crlpath"
             ]
         },
         "mysqlx_ssl_key": {
@@ -28264,7 +28433,7 @@
             ],
             "type": "file name",
             "ids": [
-                "46#option_mysqld_mysqlx-ssl-key"
+                "47#option_mysqld_mysqlx-ssl-key"
             ]
         },
         "mysqlx_wait_timeout": {
@@ -28281,8 +28450,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-wait-timeout",
-                "46#sysvar_mysqlx_wait_timeout"
+                "47#option_mysqld_mysqlx-wait-timeout",
+                "47#sysvar_mysqlx_wait_timeout"
             ]
         },
         "mysqlx_write_timeout": {
@@ -28299,8 +28468,8 @@
             ],
             "type": "integer",
             "ids": [
-                "46#option_mysqld_mysqlx-write-timeout",
-                "46#sysvar_mysqlx_write_timeout"
+                "47#option_mysqld_mysqlx-write-timeout",
+                "47#sysvar_mysqlx_write_timeout"
             ]
         },
         "mysqlx_document_id_unique_prefix": {
@@ -28317,7 +28486,7 @@
             ],
             "type": "integer",
             "ids": [
-                "46#sysvar_mysqlx_document_id_unique_prefix"
+                "47#sysvar_mysqlx_document_id_unique_prefix"
             ]
         }
     },
@@ -28361,6 +28530,7 @@
         "https://mariadb.com/kb/en/library/documentation/thread-pool-system-and-status-variables/",
         "https://mariadb.com/kb/en/library/documentation/tokudb-status-variables/",
         "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/",
+        "https://mariadb.com/kb/en/library/documentation/system-versioned-tables/",
         "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/",
         "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/",
         "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html",

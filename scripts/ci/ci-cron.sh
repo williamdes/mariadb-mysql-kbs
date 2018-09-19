@@ -56,7 +56,14 @@ echo "Create env file"
 
 echo -e "JWT_PRIV_KEY_PATH=$JWT_PRIV_KEY_PATH\nGPG_PRIV_PATH=$GPG_PRIV_PATH\nGPG_PUB_PATH=$GPG_PUB_PATH\nGPG_PRIV_PASSWORD=$GPG_PRIV_PASSWORD\nREPO=$REPO\nOWNER=$OWNER\nINSTALLATION_ID=$INSTALLATION_ID\nBOT_NAME=$BOT_NAME\nBOT_EMAIL=$BOT_EMAIL\nREPO_DIR=$REPO_DIR" > $BOT_DIR_GIT/.env
 
+
+echo "Install project npm"
+
+
 echo "Run nodejs scripts"
+
+cd $REPO_DIR
+npm install
 
 node "$REPO_DIR/src/MySQL.js"
 node "$REPO_DIR/src/MariaDB.js"

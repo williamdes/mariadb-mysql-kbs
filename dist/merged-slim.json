@@ -10936,6 +10936,20 @@
                 "10#sysvar_connect_timeout"
             ]
         },
+        "core_file": {
+            "default": "off",
+            "dynamic": false,
+            "name": "core_file",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "29#core_file",
+                "16#option_mysqld_core-file",
+                "10#sysvar_core_file"
+            ]
+        },
         "datadir": {
             "cli": "--datadir=path or -h path",
             "dynamic": false,
@@ -11227,6 +11241,23 @@
             "type": "boolean",
             "ids": [
                 "29#engine_condition_pushdown"
+            ]
+        },
+        "eq_range_index_dive_limit": {
+            "dynamic": true,
+            "name": "eq_range_index_dive_limit",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#eq_range_index_dive_limit",
+                "10#sysvar_eq_range_index_dive_limit"
             ]
         },
         "error_count": {
@@ -24377,6 +24408,23 @@
                 "41#sysvar_innodb_merge_threshold_set_all_debug"
             ]
         },
+        "innodb_parallel_read_threads": {
+            "cli": "--innodb-parallel-read-threads=#",
+            "default": "4",
+            "dynamic": true,
+            "name": "innodb_parallel_read_threads",
+            "range": {
+                "from": 1,
+                "to": 256
+            },
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "41#sysvar_innodb_parallel_read_threads"
+            ]
+        },
         "innodb_print_ddl_logs": {
             "cli": "--innodb-print-ddl-logs=#",
             "default": "off",
@@ -26556,19 +26604,6 @@
                 "16#option_mysqld_console"
             ]
         },
-        "core_file": {
-            "default": "off",
-            "dynamic": false,
-            "name": "core_file",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "16#option_mysqld_core-file",
-                "10#sysvar_core_file"
-            ]
-        },
         "daemonize": {
             "cli": "--daemonize[={OFF|ON}]",
             "default": "off",
@@ -27179,23 +27214,6 @@
             "type": "boolean",
             "ids": [
                 "10#sysvar_end_markers_in_json"
-            ]
-        },
-        "eq_range_index_dive_limit": {
-            "default": "200",
-            "dynamic": true,
-            "name": "eq_range_index_dive_limit",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "10#sysvar_eq_range_index_dive_limit"
             ]
         },
         "have_statement_timeout": {

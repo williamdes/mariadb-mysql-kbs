@@ -11877,6 +11877,22 @@
 |mariadb.com|[connect_timeout](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#connect_timeout)|
 |dev.mysql.com|[sysvar_connect_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_connect_timeout)|
 
+## core_file
+|name|value|
+|----|-----|
+|Name|`core_file`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[core_file](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#core_file)|
+|dev.mysql.com|[option_mysqld_core-file](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_core-file)|
+|dev.mysql.com|[sysvar_core_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_core_file)|
+
 ## datadir
 |name|value|
 |----|-----|
@@ -12189,6 +12205,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[engine_condition_pushdown](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#engine_condition_pushdown)|
+
+## eq_range_index_dive_limit
+|name|value|
+|----|-----|
+|Name|`eq_range_index_dive_limit`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[eq_range_index_dive_limit](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#eq_range_index_dive_limit)|
+|dev.mysql.com|[sysvar_eq_range_index_dive_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_eq_range_index_dive_limit)|
 
 ## error_count
 |name|value|
@@ -26639,6 +26670,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_merge_threshold_set_all_debug](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_merge_threshold_set_all_debug)|
 
+## innodb_parallel_read_threads
+|name|value|
+|----|-----|
+|Name|`innodb_parallel_read_threads`|
+|Command line|`--innodb-parallel-read-threads=#`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Default value|`4`|
+|Dynamic|`true`|
+|Range|from: `1` to: `256`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_parallel_read_threads](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_parallel_read_threads)|
+
 ## innodb_print_ddl_logs
 |name|value|
 |----|-----|
@@ -29059,21 +29106,6 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_console](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_console)|
 
-## core_file
-|name|value|
-|----|-----|
-|Name|`core_file`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`off`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_core-file](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_core-file)|
-|dev.mysql.com|[sysvar_core_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_core_file)|
-
 ## daemonize
 |name|value|
 |----|-----|
@@ -29855,21 +29887,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_end_markers_in_json](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_end_markers_in_json)|
-
-## eq_range_index_dive_limit
-|name|value|
-|----|-----|
-|Name|`eq_range_index_dive_limit`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`200`|
-|Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_eq_range_index_dive_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_eq_range_index_dive_limit)|
 
 ## have_statement_timeout
 |name|value|

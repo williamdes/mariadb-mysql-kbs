@@ -275,6 +275,17 @@
       "type": "numeric"
     },
     {
+      "cli": "--core-file",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "core_file",
+      "name": "core_file",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--datadir=path or -h path",
       "dynamic": false,
       "id": "datadir",
@@ -510,6 +521,22 @@
         "session"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--eq-range-index-dive-limit=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "eq_range_index_dive_limit",
+      "name": "eq_range_index_dive_limit",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
     },
     {
       "dynamic": true,

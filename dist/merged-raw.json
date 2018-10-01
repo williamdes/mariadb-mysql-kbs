@@ -14134,6 +14134,29 @@
                 }
             ]
         },
+        "core_file": {
+            "default": "off",
+            "dynamic": false,
+            "name": "core_file",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "core_file",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "option_mysqld_core-file",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                },
+                {
+                    "anchor": "sysvar_core_file",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "datadir": {
             "cli": "--datadir=path or -h path",
             "dynamic": false,
@@ -14532,6 +14555,29 @@
                 {
                     "anchor": "engine_condition_pushdown",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                }
+            ]
+        },
+        "eq_range_index_dive_limit": {
+            "dynamic": true,
+            "name": "eq_range_index_dive_limit",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "eq_range_index_dive_limit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_eq_range_index_dive_limit",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
         },
@@ -31775,6 +31821,26 @@
                 }
             ]
         },
+        "innodb_parallel_read_threads": {
+            "cli": "--innodb-parallel-read-threads=#",
+            "default": "4",
+            "dynamic": true,
+            "name": "innodb_parallel_read_threads",
+            "range": {
+                "from": 1,
+                "to": 256
+            },
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_parallel_read_threads",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
         "innodb_print_ddl_logs": {
             "cli": "--innodb-print-ddl-logs=#",
             "default": "off",
@@ -34605,25 +34671,6 @@
                 }
             ]
         },
-        "core_file": {
-            "default": "off",
-            "dynamic": false,
-            "name": "core_file",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_core-file",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
-                    "anchor": "sysvar_core_file",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
         "daemonize": {
             "cli": "--daemonize[={OFF|ON}]",
             "default": "off",
@@ -35415,26 +35462,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_end_markers_in_json",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
-        "eq_range_index_dive_limit": {
-            "default": "200",
-            "dynamic": true,
-            "name": "eq_range_index_dive_limit",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_eq_range_index_dive_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

@@ -1245,6 +1245,14 @@
       "type": "integer"
     },
     {
+      "id": "innodb_undo_truncations",
+      "name": "Innodb_undo_truncations",
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "innodb_x_lock_os_waits",
       "name": "Innodb_x_lock_os_waits",
       "scope": [

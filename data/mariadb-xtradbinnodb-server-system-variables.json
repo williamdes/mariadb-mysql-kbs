@@ -2338,6 +2338,17 @@
       "type": "integer"
     },
     {
+      "cli": "--loose-skip-innodb-unsafe-truncate",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "innodb_safe_truncate",
+      "name": "innodb_safe_truncate",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-scrub-log",
       "default": "OFF",
       "dynamic": false,

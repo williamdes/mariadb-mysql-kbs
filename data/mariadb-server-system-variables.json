@@ -1185,7 +1185,7 @@
       "type": "set"
     },
     {
-      "cli": "--log-error[=name]",
+      "cli": "--log-error[=name], --skip-log-error",
       "dynamic": false,
       "id": "log_error",
       "name": "log_error",

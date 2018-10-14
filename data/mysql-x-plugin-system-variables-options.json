@@ -200,8 +200,12 @@
     },
     {
       "cli": "--mysqlx-ssl-cipher=name",
+      "dynamic": false,
       "id": "option_mysqld_mysqlx-ssl-cipher",
       "name": "mysqlx_ssl_cipher",
+      "scope": [
+        "global"
+      ],
       "type": "string"
     },
     {
@@ -442,6 +446,16 @@
       "dynamic": false,
       "id": "sysvar_mysqlx_socket",
       "name": "mysqlx_socket",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--mysqlx-ssl-cipher=name",
+      "dynamic": false,
+      "id": "sysvar_mysqlx_ssl_cipher",
+      "name": "mysqlx_ssl_cipher",
       "scope": [
         "global"
       ],

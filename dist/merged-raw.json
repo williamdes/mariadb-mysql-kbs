@@ -26465,6 +26465,19 @@
                 }
             ]
         },
+        "Innodb_undo_truncations": {
+            "name": "Innodb_undo_truncations",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_undo_truncations",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/"
+                }
+            ]
+        },
         "Innodb_x_lock_os_waits": {
             "name": "Innodb_x_lock_os_waits",
             "scope": [
@@ -30111,6 +30124,22 @@
                 {
                     "anchor": "sysvar_innodb_rollback_segments",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
+        "innodb_safe_truncate": {
+            "cli": "--loose-skip-innodb-unsafe-truncate",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "innodb_safe_truncate",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "innodb_safe_truncate",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
                 }
             ]
         },
@@ -36941,11 +36970,19 @@
         },
         "mysqlx_ssl_cipher": {
             "cli": "--mysqlx-ssl-cipher=name",
+            "dynamic": false,
             "name": "mysqlx_ssl_cipher",
+            "scope": [
+                "global"
+            ],
             "type": "string",
             "ids": [
                 {
                     "anchor": "option_mysqld_mysqlx-ssl-cipher",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                },
+                {
+                    "anchor": "sysvar_mysqlx_ssl_cipher",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
                 }
             ]

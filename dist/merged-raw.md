@@ -22385,6 +22385,18 @@
 |------|----|
 |mariadb.com|[innodb_truncated_status_writes](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_truncated_status_writes)|
 
+## Innodb_undo_truncations
+|name|value|
+|----|-----|
+|Name|`Innodb_undo_truncations`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_undo_truncations](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_undo_truncations)|
+
 ## Innodb_x_lock_os_waits
 |name|value|
 |----|-----|
@@ -25247,6 +25259,21 @@
 |------|----|
 |mariadb.com|[innodb_rollback_segments](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_rollback_segments)|
 |dev.mysql.com|[sysvar_innodb_rollback_segments](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_rollback_segments)|
+
+## innodb_safe_truncate
+|name|value|
+|----|-----|
+|Name|`innodb_safe_truncate`|
+|Command line|`--loose-skip-innodb-unsafe-truncate`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_safe_truncate](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_safe_truncate)|
 
 ## innodb_scrub_log
 |name|value|
@@ -31128,11 +31155,14 @@
 |Name|`mysqlx_ssl_cipher`|
 |Command line|`--mysqlx-ssl-cipher=name`|
 |Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_mysqlx-ssl-cipher](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-ssl-cipher)|
+|dev.mysql.com|[sysvar_mysqlx_ssl_cipher](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_cipher)|
 
 ## mysqlx_ssl_crl
 |name|value|

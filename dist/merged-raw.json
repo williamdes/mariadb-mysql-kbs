@@ -852,7 +852,7 @@
             ]
         },
         "connect_class_path": {
-            "cli": "--connect-class_path=value",
+            "cli": "--connect-class-path=value",
             "dynamic": false,
             "name": "connect_class_path",
             "scope": [
@@ -862,6 +862,23 @@
             "ids": [
                 {
                     "anchor": "connect_class_path",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
+                }
+            ]
+        },
+        "connect_cond_push": {
+            "cli": "--connect-cond-push={0|1}",
+            "default": "ON",
+            "dynamic": true,
+            "name": "connect_cond_push",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "connect_cond_push",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
                 }
             ]
@@ -15704,7 +15721,6 @@
         },
         "log_output": {
             "cli": "--log-output=name",
-            "default": "file",
             "dynamic": true,
             "name": "log_output",
             "scope": [
@@ -15720,10 +15736,6 @@
                 {
                     "anchor": "log_output",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_log-output",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_log_output",
@@ -30128,8 +30140,8 @@
             ]
         },
         "innodb_safe_truncate": {
-            "cli": "--loose-skip-innodb-unsafe-truncate",
-            "default": "OFF",
+            "cli": "--innodb-safe-truncate={0|1}",
+            "default": "ON",
             "dynamic": false,
             "name": "innodb_safe_truncate",
             "scope": [
@@ -35207,6 +35219,41 @@
                 }
             ]
         },
+        "admin_address": {
+            "cli": "--admin-address=#",
+            "dynamic": false,
+            "name": "admin_address",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_address",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "admin_port": {
+            "cli": "--admin-port=#",
+            "default": "33062",
+            "dynamic": false,
+            "name": "admin_port",
+            "range": {
+                "from": 0,
+                "to": 65535
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_port",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "authentication_windows_log_level": {
             "cli": "--authentication-windows-log-level",
             "default": "2",
@@ -35352,6 +35399,22 @@
             "ids": [
                 {
                     "anchor": "sysvar_check_proxy_users",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "create_admin_listener_thread": {
+            "cli": "--create-admin-listener-thread",
+            "default": "off",
+            "dynamic": false,
+            "name": "create_admin_listener_thread",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_create_admin_listener_thread",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
@@ -35654,6 +35717,22 @@
             "ids": [
                 {
                     "anchor": "sysvar_log_error_verbosity",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "log_slow_extra": {
+            "cli": "--log-slow-extra[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "log_slow_extra",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_log_slow_extra",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

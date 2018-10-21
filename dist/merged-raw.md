@@ -705,7 +705,7 @@
 |name|value|
 |----|-----|
 |Name|`connect_class_path`|
-|Command line|`--connect-class_path=value`|
+|Command line|`--connect-class-path=value`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -714,6 +714,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[connect_class_path](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_class_path)|
+
+## connect_cond_push
+|name|value|
+|----|-----|
+|Name|`connect_cond_push`|
+|Command line|`--connect-cond-push={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[connect_cond_push](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_cond_push)|
 
 ## connect_conv_size
 |name|value|
@@ -13105,7 +13120,6 @@
 |Command line|`--log-output=name`|
 |Type of variable|`set`|
 |Scope|`global`|
-|Default value|`file`|
 |Dynamic|`true`|
 |Valid value(s)|`TABLE`, `FILE`, `NONE`|
 
@@ -13113,7 +13127,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[log_output](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_output)|
-|dev.mysql.com|[option_mysqld_log-output](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_log-output)|
 |dev.mysql.com|[sysvar_log_output](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_output)|
 
 ## log_queries_not_using_indexes
@@ -25264,10 +25277,10 @@
 |name|value|
 |----|-----|
 |Name|`innodb_safe_truncate`|
-|Command line|`--loose-skip-innodb-unsafe-truncate`|
+|Command line|`--innodb-safe-truncate={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF`|
+|Default value|`ON`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -29660,6 +29673,36 @@
 |------|----|
 |dev.mysql.com|[sysvar_activate_all_roles_on_login](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_activate_all_roles_on_login)|
 
+## admin_address
+|name|value|
+|----|-----|
+|Name|`admin_address`|
+|Command line|`--admin-address=#`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_address](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_address)|
+
+## admin_port
+|name|value|
+|----|-----|
+|Name|`admin_port`|
+|Command line|`--admin-port=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`33062`|
+|Dynamic|`false`|
+|Range|from: `0` to: `65535`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_port](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_port)|
+
 ## authentication_windows_log_level
 |name|value|
 |----|-----|
@@ -29795,6 +29838,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_check_proxy_users](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_check_proxy_users)|
+
+## create_admin_listener_thread
+|name|value|
+|----|-----|
+|Name|`create_admin_listener_thread`|
+|Command line|`--create-admin-listener-thread`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_create_admin_listener_thread](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_create_admin_listener_thread)|
 
 ## cte_max_recursion_depth
 |name|value|
@@ -30051,6 +30109,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_log_error_verbosity](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity)|
+
+## log_slow_extra
+|name|value|
+|----|-----|
+|Name|`log_slow_extra`|
+|Command line|`--log-slow-extra[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_log_slow_extra](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_slow_extra)|
 
 ## log_syslog
 |name|value|

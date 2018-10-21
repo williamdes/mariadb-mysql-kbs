@@ -86,7 +86,7 @@ oFunctions.keys.previous = function(o, id) {
  * @see git-scm.com/docs/git-log#_pretty_formats
  */
 log(
-  { tag: '%d', note: '%N', msg: '%s', hash: '%h', longHash: '%H' },
+  { tag: '%d', note: '%N', msg: '%s', hash: '%h', longHash: '%H', author: '%ae', signature: '%G?', time: '%at' },
 
   // replace \r\n etc from value
   (key, value) => value.replace(/\s\s/g, '')
@@ -113,14 +113,24 @@ log(
         oFunctions.keys.next(changelog, version) || '4282724e1e04d6b27d3c0744e1a37a50be740237',
       end: version,
     });
-    for (commit in changelog[version]) {
+    for (commitid in changelog[version]) {
       let changes = [];
-      let msg = changelog[version][commit].msg.trim();
+      let commit = changelog[version][commitid];
+      commit.time = parseInt(commit.time);
+      let msg = commit.msg.trim();
       /*if (msg.match(/^v([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$/gi)) {
         continue;
       }*/
       if (msg.match(/^added:\s/gi) || msg.match(/^add:/gi) || msg.match(/^test:/gi)) {
         changes = changesAdded;
+      } else if (
+        msg.match(/^Some files to update$/gi)
+        && commit.author === "sudo-bot@wdes.fr"
+        && commit.signature === "G"
+        && commit.time <= 1540120128
+      ) {
+        changes = changesChanged;
+        msg = "updated: [MySQL] & [MariaDB] data";
       } else if (
         msg.match(/^changed:/gi) ||
         msg.match(/^update:/gi) ||
@@ -148,8 +158,8 @@ log(
 
       changes.push({
         msg: msg,
-        hash: changelog[version][commit].hash.trim(),
-        longHash: changelog[version][commit].longHash.trim(),
+        hash: changelog[version][commitid].hash.trim(),
+        longHash: changelog[version][commitid].longHash.trim(),
       });
     }
     versions.push({

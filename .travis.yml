@@ -29,25 +29,31 @@ jobs:
     - stage: tests
       php: '7.2'
       env: CI_TYPE=phpstan
+      name: "PHPSTAN - PHP 7.2"
     - stage: tests
       php: '7.2'
       env: CI_TYPE=phpcs
+      name: "PHPCS - PHP 7.1"
     - stage: tests
       php: '7.1'
       env: CI_TYPE=phpunit
+      name: "PHPUNIT - PHP 7.1"
     - stage: tests
       php: '7.2'
       env: CI_TYPE=phpunit
+      name: "PHPUNIT - PHP 7.2"
     - stage: tests
       os: osx
       language: generic
       php: '7.2'
       env: CI_TYPE=phpunit
+      name: "PHPUNIT - PHP 7.2"
       before_install:
         - "./scripts/ci/install-osx.sh"
     - stage: robot
       php: '7.2'
       env: CI_TYPE=cron
+      name: "Create a pull-request to update data"
 cache:
   apt: true
   directories:

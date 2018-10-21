@@ -378,22 +378,6 @@
       "type": "file name"
     },
     {
-      "cli": "--log-output=name",
-      "default": "file",
-      "dynamic": true,
-      "id": "option_mysqld_log-output",
-      "name": "log_output",
-      "scope": [
-        "global"
-      ],
-      "type": "set",
-      "validValues": [
-        "TABLE",
-        "FILE",
-        "NONE"
-      ]
-    },
-    {
       "cli": "--log-queries-not-using-indexes",
       "default": "off",
       "dynamic": true,

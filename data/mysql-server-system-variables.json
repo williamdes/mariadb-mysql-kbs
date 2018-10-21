@@ -12,6 +12,31 @@
       "type": "boolean"
     },
     {
+      "cli": "--admin-address=#",
+      "dynamic": false,
+      "id": "sysvar_admin_address",
+      "name": "admin_address",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--admin-port=#",
+      "default": "33062",
+      "dynamic": false,
+      "id": "sysvar_admin_port",
+      "name": "admin_port",
+      "range": {
+        "from": 0,
+        "to": 65535
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--authentication-windows-log-level",
       "default": "2",
       "dynamic": false,
@@ -372,6 +397,17 @@
       "dynamic": false,
       "id": "sysvar_core_file",
       "name": "core_file",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--create-admin-listener-thread",
+      "default": "off",
+      "dynamic": false,
+      "id": "sysvar_create_admin_listener_thread",
+      "name": "create_admin_listener_thread",
       "scope": [
         "global"
       ],
@@ -1210,6 +1246,17 @@
       "dynamic": true,
       "id": "sysvar_log_slow_admin_statements",
       "name": "log_slow_admin_statements",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--log-slow-extra[={OFF|ON}]",
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_log_slow_extra",
+      "name": "log_slow_extra",
       "scope": [
         "global"
       ],

@@ -2338,8 +2338,8 @@
       "type": "integer"
     },
     {
-      "cli": "--loose-skip-innodb-unsafe-truncate",
-      "default": "OFF",
+      "cli": "--innodb-safe-truncate={0|1}",
+      "default": "ON",
       "dynamic": false,
       "id": "innodb_safe_truncate",
       "name": "innodb_safe_truncate",

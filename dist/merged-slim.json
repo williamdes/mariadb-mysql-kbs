@@ -702,7 +702,7 @@
             ]
         },
         "connect_class_path": {
-            "cli": "--connect-class_path=value",
+            "cli": "--connect-class-path=value",
             "dynamic": false,
             "name": "connect_class_path",
             "scope": [
@@ -711,6 +711,20 @@
             "type": "string",
             "ids": [
                 "5#connect_class_path"
+            ]
+        },
+        "connect_cond_push": {
+            "cli": "--connect-cond-push={0|1}",
+            "default": "ON",
+            "dynamic": true,
+            "name": "connect_cond_push",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "4#connect_cond_push"
             ]
         },
         "connect_conv_size": {
@@ -12080,7 +12094,6 @@
         },
         "log_output": {
             "cli": "--log-output=name",
-            "default": "file",
             "dynamic": true,
             "name": "log_output",
             "scope": [
@@ -12094,7 +12107,6 @@
             ],
             "ids": [
                 "29#log_output",
-                "16#option_mysqld_log-output",
                 "10#sysvar_log_output"
             ]
         },
@@ -23066,8 +23078,8 @@
             ]
         },
         "innodb_safe_truncate": {
-            "cli": "--loose-skip-innodb-unsafe-truncate",
-            "default": "OFF",
+            "cli": "--innodb-safe-truncate={0|1}",
+            "default": "ON",
             "dynamic": false,
             "name": "innodb_safe_truncate",
             "scope": [
@@ -27002,6 +27014,35 @@
                 "10#sysvar_activate_all_roles_on_login"
             ]
         },
+        "admin_address": {
+            "cli": "--admin-address=#",
+            "dynamic": false,
+            "name": "admin_address",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "10#sysvar_admin_address"
+            ]
+        },
+        "admin_port": {
+            "cli": "--admin-port=#",
+            "default": "33062",
+            "dynamic": false,
+            "name": "admin_port",
+            "range": {
+                "from": 0,
+                "to": 65535
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "10#sysvar_admin_port"
+            ]
+        },
         "authentication_windows_log_level": {
             "cli": "--authentication-windows-log-level",
             "default": "2",
@@ -27122,6 +27163,19 @@
             "type": "boolean",
             "ids": [
                 "10#sysvar_check_proxy_users"
+            ]
+        },
+        "create_admin_listener_thread": {
+            "cli": "--create-admin-listener-thread",
+            "default": "off",
+            "dynamic": false,
+            "name": "create_admin_listener_thread",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "10#sysvar_create_admin_listener_thread"
             ]
         },
         "cte_max_recursion_depth": {
@@ -27373,6 +27427,19 @@
             "type": "integer",
             "ids": [
                 "10#sysvar_log_error_verbosity"
+            ]
+        },
+        "log_slow_extra": {
+            "cli": "--log-slow-extra[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "log_slow_extra",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "10#sysvar_log_slow_extra"
             ]
         },
         "log_syslog": {

@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "cli": "--connect-class_path=value",
+      "cli": "--connect-class-path=value",
       "dynamic": false,
       "id": "connect_class_path",
       "name": "connect_class_path",
@@ -9,6 +9,18 @@
         "global"
       ],
       "type": "string"
+    },
+    {
+      "cli": "--connect-cond-push={0|1}",
+      "default": "ON",
+      "dynamic": true,
+      "id": "connect_cond_push",
+      "name": "connect_cond_push",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--connect-conv-size=#",

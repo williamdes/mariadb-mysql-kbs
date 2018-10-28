@@ -616,17 +616,6 @@
       "type": "integer"
     },
     {
-      "cli": "--slave-allow-batching",
-      "default": "off",
-      "dynamic": true,
-      "id": "sysvar_slave_allow_batching",
-      "name": "slave_allow_batching",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--slave-checkpoint-group=#",
       "default": "512",
       "dynamic": true,

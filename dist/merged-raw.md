@@ -27438,17 +27438,13 @@
 |name|value|
 |----|-----|
 |Name|`slave_allow_batching`|
-|Command line|`--slave-allow-batching`|
-|Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`off`|
 |Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_slave_allow_batching](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_slave_allow_batching)|
-|dev.mysql.com|[sysvar_slave_allow_batching](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_slave_allow_batching)|
 
 ## ndb_show_foreign_key_mock_tables
 |name|value|
@@ -30478,6 +30474,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_persisted_globals_load](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_persisted_globals_load)|
+
+## persist_only_admin_x509_subject
+|name|value|
+|----|-----|
+|Name|`persist_only_admin_x509_subject`|
+|Command line|`--persist-only-admin-x509-subject=string`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`empty string`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_persist_only_admin_x509_subject](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_persist_only_admin_x509_subject)|
 
 ## range_optimizer_max_mem_size
 |name|value|

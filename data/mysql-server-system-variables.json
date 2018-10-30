@@ -2170,6 +2170,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--persist-only-admin-x509-subject=string",
+      "default": "empty string",
+      "dynamic": false,
+      "id": "sysvar_persist_only_admin_x509_subject",
+      "name": "persist_only_admin_x509_subject",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--pid-file=file_name",
       "dynamic": false,
       "id": "sysvar_pid_file",

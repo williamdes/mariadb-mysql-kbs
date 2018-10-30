@@ -25061,17 +25061,13 @@
             ]
         },
         "slave_allow_batching": {
-            "cli": "--slave-allow-batching",
-            "default": "off",
             "dynamic": true,
             "name": "slave_allow_batching",
             "scope": [
                 "global"
             ],
-            "type": "boolean",
             "ids": [
-                "43#sysvar_slave_allow_batching",
-                "24#sysvar_slave_allow_batching"
+                "43#sysvar_slave_allow_batching"
             ]
         },
         "ndb_show_foreign_key_mock_tables": {
@@ -27772,6 +27768,19 @@
             "type": "boolean",
             "ids": [
                 "10#sysvar_persisted_globals_load"
+            ]
+        },
+        "persist_only_admin_x509_subject": {
+            "cli": "--persist-only-admin-x509-subject=string",
+            "default": "empty string",
+            "dynamic": false,
+            "name": "persist_only_admin_x509_subject",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "10#sysvar_persist_only_admin_x509_subject"
             ]
         },
         "range_optimizer_max_mem_size": {

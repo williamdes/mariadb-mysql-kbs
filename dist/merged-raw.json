@@ -32687,22 +32687,15 @@
             ]
         },
         "slave_allow_batching": {
-            "cli": "--slave-allow-batching",
-            "default": "off",
             "dynamic": true,
             "name": "slave_allow_batching",
             "scope": [
                 "global"
             ],
-            "type": "boolean",
             "ids": [
                 {
                     "anchor": "sysvar_slave_allow_batching",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                },
-                {
-                    "anchor": "sysvar_slave_allow_batching",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
             ]
         },
@@ -36137,6 +36130,22 @@
             "ids": [
                 {
                     "anchor": "sysvar_persisted_globals_load",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "persist_only_admin_x509_subject": {
+            "cli": "--persist-only-admin-x509-subject=string",
+            "default": "empty string",
+            "dynamic": false,
+            "name": "persist_only_admin_x509_subject",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sysvar_persist_only_admin_x509_subject",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

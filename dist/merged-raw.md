@@ -24153,6 +24153,7 @@
 |Scope|`global`|
 |Default value|`2000000000`|
 |Dynamic|`true`|
+|Range|from: `1000000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29653,6 +29654,19 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_user](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_user)|
+
+## validate_config
+|name|value|
+|----|-----|
+|Name|`validate_config`|
+|Command line|`--validate-config`|
+|Type of variable|`boolean`|
+|Default value|`off`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_validate-config](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_validate-config)|
 
 ## activate_all_roles_on_login
 |name|value|

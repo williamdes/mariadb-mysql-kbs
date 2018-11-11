@@ -921,6 +921,7 @@
       "type": "integer"
     },
     {
+      "cli": "--ignore-db-dirs=dir.",
       "dynamic": false,
       "id": "ignore_db_dirs",
       "name": "ignore_db_dirs",

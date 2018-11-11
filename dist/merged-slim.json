@@ -11748,6 +11748,7 @@
             ]
         },
         "ignore_db_dirs": {
+            "cli": "--ignore-db-dirs=dir.",
             "dynamic": false,
             "name": "ignore_db_dirs",
             "scope": [
@@ -22005,6 +22006,9 @@
             "default": "2000000000",
             "dynamic": true,
             "name": "innodb_ft_result_cache_limit",
+            "range": {
+                "from": 1000000
+            },
             "scope": [
                 "global"
             ],
@@ -26995,6 +26999,15 @@
             "type": "string",
             "ids": [
                 "16#option_mysqld_user"
+            ]
+        },
+        "validate_config": {
+            "cli": "--validate-config",
+            "default": "off",
+            "name": "validate_config",
+            "type": "boolean",
+            "ids": [
+                "16#option_mysqld_validate-config"
             ]
         },
         "activate_all_roles_on_login": {

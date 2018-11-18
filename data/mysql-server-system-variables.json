@@ -3505,7 +3505,7 @@
       "type": "boolean"
     },
     {
-      "default": "off",
+      "default": "on",
       "dynamic": true,
       "id": "sysvar_use_secondary_engine",
       "name": "use_secondary_engine",

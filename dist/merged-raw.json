@@ -221,21 +221,6 @@
                 }
             ]
         },
-        "aria_log_dir_path": {
-            "cli": "--aria-log-dir-path=#",
-            "default": "SAME AS DATADIR",
-            "dynamic": true,
-            "name": "aria_log_dir_path",
-            "scope": [
-                "global"
-            ],
-            "ids": [
-                {
-                    "anchor": "aria_log_dir_path",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/aria/aria-system-variables/"
-                }
-            ]
-        },
         "aria_log_file_size": {
             "cli": "--aria-log-file-size=#",
             "default": "1073741824",
@@ -2840,6 +2825,22 @@
             "ids": [
                 {
                     "anchor": "mroonga_libgroonga_embedded",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                }
+            ]
+        },
+        "mroonga_libgroonga_support_lz4": {
+            "cli": "none",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "mroonga_libgroonga_support_lz4",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "mroonga_libgroonga_support_lz4",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
                 }
             ]
@@ -15234,6 +15235,7 @@
             ]
         },
         "ignore_db_dirs": {
+            "cli": "--ignore-db-dirs=dir.",
             "dynamic": false,
             "name": "ignore_db_dirs",
             "scope": [
@@ -28716,6 +28718,9 @@
             "default": "2000000000",
             "dynamic": true,
             "name": "innodb_ft_result_cache_limit",
+            "range": {
+                "from": 1000000
+            },
             "scope": [
                 "global"
             ],
@@ -35196,6 +35201,18 @@
                 }
             ]
         },
+        "validate_config": {
+            "cli": "--validate-config",
+            "default": "off",
+            "name": "validate_config",
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_validate-config",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
         "activate_all_roles_on_login": {
             "cli": "--activate-all-roles-on-login",
             "default": "off",
@@ -36640,7 +36657,7 @@
             ]
         },
         "use_secondary_engine": {
-            "default": "off",
+            "default": "on",
             "dynamic": true,
             "name": "use_secondary_engine",
             "scope": [

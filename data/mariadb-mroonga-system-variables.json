@@ -113,6 +113,17 @@
     },
     {
       "cli": "none",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "mroonga_libgroonga_support_lz4",
+      "name": "mroonga_libgroonga_support_lz4",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "none",
       "default": "ON",
       "dynamic": false,
       "id": "mroonga_libgroonga_support_zlib",

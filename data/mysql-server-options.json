@@ -824,6 +824,13 @@
       "id": "option_mysqld_user",
       "name": "user",
       "type": "string"
+    },
+    {
+      "cli": "--validate-config",
+      "default": "off",
+      "id": "option_mysqld_validate-config",
+      "name": "validate_config",
+      "type": "boolean"
     }
   ],
   "name": "server-options",

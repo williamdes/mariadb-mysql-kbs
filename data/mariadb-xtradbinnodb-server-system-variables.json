@@ -1417,7 +1417,7 @@
       "id": "innodb_ft_result_cache_limit",
       "name": "innodb_ft_result_cache_limit",
       "range": {
-        "from": 10000,
+        "from": 1000000,
         "to": 18446744073709552000
       },
       "scope": [

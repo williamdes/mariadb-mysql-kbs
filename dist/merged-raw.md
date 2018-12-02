@@ -200,20 +200,6 @@
 |------|----|
 |mariadb.com|[aria_group_commit_interval](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/aria/aria-system-variables/#aria_group_commit_interval)|
 
-## aria_log_dir_path
-|name|value|
-|----|-----|
-|Name|`aria_log_dir_path`|
-|Command line|`--aria-log-dir-path=#`|
-|Scope|`global`|
-|Default value|`SAME AS DATADIR`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[aria_log_dir_path](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/aria/aria-system-variables/#aria_log_dir_path)|
-
 ## aria_log_file_size
 |name|value|
 |----|-----|
@@ -2516,6 +2502,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[mroonga_libgroonga_embedded](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_libgroonga_embedded)|
+
+## mroonga_libgroonga_support_lz4
+|name|value|
+|----|-----|
+|Name|`mroonga_libgroonga_support_lz4`|
+|Command line|`none`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[mroonga_libgroonga_support_lz4](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_libgroonga_support_lz4)|
 
 ## mroonga_libgroonga_support_zlib
 |name|value|
@@ -12741,6 +12742,7 @@
 |name|value|
 |----|-----|
 |Name|`ignore_db_dirs`|
+|Command line|`--ignore-db-dirs=dir.`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -14907,7 +14909,6 @@
 |Name|`sql_safe_updates`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`0`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -24153,6 +24154,7 @@
 |Scope|`global`|
 |Default value|`2000000000`|
 |Dynamic|`true`|
+|Range|from: `1000000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29654,6 +29656,19 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_user](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_user)|
 
+## validate_config
+|name|value|
+|----|-----|
+|Name|`validate_config`|
+|Command line|`--validate-config`|
+|Type of variable|`boolean`|
+|Default value|`off`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_validate-config](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_validate-config)|
+
 ## activate_all_roles_on_login
 |name|value|
 |----|-----|
@@ -30910,7 +30925,7 @@
 |Name|`use_secondary_engine`|
 |Type of variable|`enumeration`|
 |Scope|`session`|
-|Default value|`off`|
+|Default value|`on`|
 |Dynamic|`true`|
 |Valid value(s)|`OFF`, `ON`, `FORCE`|
 

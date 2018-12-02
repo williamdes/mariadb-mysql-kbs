@@ -921,6 +921,7 @@
       "type": "integer"
     },
     {
+      "cli": "--ignore-db-dirs=dir.",
       "dynamic": false,
       "id": "ignore_db_dirs",
       "name": "ignore_db_dirs",
@@ -2656,14 +2657,20 @@
       "type": "boolean"
     },
     {
-      "default": "OFF (0)",
+      "cli": "--sql-safe-updates[={0|1}]",
+      "default": "OFF",
       "dynamic": true,
       "id": "sql_safe_updates",
       "name": "sql_safe_updates",
+      "scope": [
+        "global",
+        "session"
+      ],
       "type": "boolean"
     },
     {
-      "default": "0",
+      "cli": "none",
+      "default": "18446744073709551615",
       "dynamic": true,
       "id": "sql_select_limit",
       "name": "sql_select_limit",

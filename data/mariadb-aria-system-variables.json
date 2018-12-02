@@ -83,16 +83,6 @@
       "validValues": []
     },
     {
-      "cli": "--aria-log-dir-path=#",
-      "default": "SAME AS DATADIR",
-      "dynamic": true,
-      "id": "aria_log_dir_path",
-      "name": "aria_log_dir_path",
-      "scope": [
-        "global"
-      ]
-    },
-    {
       "cli": "--aria-log-file-size=#",
       "default": "1073741824",
       "dynamic": true,

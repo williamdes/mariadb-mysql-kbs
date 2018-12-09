@@ -1864,6 +1864,20 @@
       "type": "boolean"
     },
     {
+      "default": "everyone",
+      "dynamic": false,
+      "id": "sysvar_named_pipe_full_access_group",
+      "name": "named_pipe_full_access_group",
+      "scope": [
+        "global"
+      ],
+      "type": "string",
+      "validValues": [
+        "everyone",
+        "empty string"
+      ]
+    },
+    {
       "cli": "--net-buffer-length=#",
       "default": "16384",
       "dynamic": true,

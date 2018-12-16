@@ -6502,7 +6502,13 @@
             ]
         },
         "binlog_annotate_row_events": {
+            "cli": "--binlog-annotate-row-events[={0|1}]",
             "name": "binlog_annotate_row_events",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
             "ids": [
                 {
                     "anchor": "binlog_annotate_row_events",
@@ -27135,7 +27141,7 @@
             ]
         },
         "innodb_buffer_pool_filename": {
-            "cli": "--innodb-buffer-pool-filename=file",
+            "cli": "--innodb-buffer-pool-pathname=path-name",
             "default": "ib_buffer_pool",
             "dynamic": true,
             "name": "innodb_buffer_pool_filename",
@@ -27346,7 +27352,7 @@
             ]
         },
         "innodb_change_buffering": {
-            "cli": "--innodb-change-buffering=#",
+            "cli": "--innodb-change-buffering=value",
             "default": "all",
             "dynamic": true,
             "name": "innodb_change_buffering",
@@ -27414,7 +27420,7 @@
             ]
         },
         "innodb_checksum_algorithm": {
-            "cli": "--innodb-checksum-algorithm=#",
+            "cli": "--innodb-checksum-algorithm=value",
             "default": "crc32",
             "dynamic": true,
             "name": "innodb_checksum_algorithm",
@@ -27480,10 +27486,6 @@
                 "global"
             ],
             "type": "boolean",
-            "validValues": [
-                "OFF",
-                "ON"
-            ],
             "ids": [
                 {
                     "anchor": "innodb_cmp_per_index_enabled",
@@ -27672,7 +27674,6 @@
             ]
         },
         "innodb_data_file_path": {
-            "cli": "--innodb-data-file-path=name",
             "default": "ibdata1:12m:autoextend",
             "dynamic": false,
             "name": "innodb_data_file_path",
@@ -28197,7 +28198,6 @@
             ]
         },
         "innodb_fast_shutdown": {
-            "cli": "--innodb-fast-shutdown[=#]",
             "default": "1",
             "dynamic": true,
             "name": "innodb_fast_shutdown",
@@ -28340,6 +28340,7 @@
             ]
         },
         "innodb_flush_log_at_timeout": {
+            "cli": "--innodb-flush-log-at-timeout=#",
             "default": "1",
             "dynamic": true,
             "name": "innodb_flush_log_at_timeout",
@@ -28359,7 +28360,6 @@
             ]
         },
         "innodb_flush_log_at_trx_commit": {
-            "cli": "--innodb-flush-log-at-trx-commit[=#]",
             "default": "1",
             "dynamic": true,
             "name": "innodb_flush_log_at_trx_commit",
@@ -28385,7 +28385,6 @@
             ]
         },
         "innodb_flush_method": {
-            "cli": "--innodb-flush-method=name",
             "dynamic": false,
             "name": "innodb_flush_method",
             "scope": [
@@ -28568,7 +28567,6 @@
             ]
         },
         "innodb_ft_aux_table": {
-            "cli": "--innodb-ft-aux-table=value",
             "dynamic": true,
             "name": "innodb_ft_aux_table",
             "scope": [
@@ -29795,7 +29793,7 @@
             ]
         },
         "innodb_page_size": {
-            "cli": "--innodb-page-size=#k",
+            "cli": "--innodb-page-size=#",
             "default": "16384",
             "dynamic": false,
             "name": "innodb_page_size",
@@ -30378,7 +30376,7 @@
             ]
         },
         "innodb_stats_include_delete_marked": {
-            "cli": "--innodb-stats-include-delete-marked=#",
+            "cli": "--innodb-stats-include-delete-marked",
             "dynamic": true,
             "name": "innodb_stats_include_delete_marked",
             "scope": [
@@ -30397,7 +30395,6 @@
             ]
         },
         "innodb_stats_method": {
-            "cli": "--innodb-stats-method=name",
             "default": "nulls_equal",
             "dynamic": true,
             "name": "innodb_stats_method",
@@ -30461,19 +30458,13 @@
             ]
         },
         "innodb_stats_persistent": {
-            "cli": "--innodb-stats-persistent=setting",
+            "cli": "--innodb-stats-persistent=#",
             "dynamic": true,
             "name": "innodb_stats_persistent",
             "scope": [
                 "global"
             ],
             "type": "boolean",
-            "validValues": [
-                "OFF",
-                "ON",
-                "0",
-                "1"
-            ],
             "ids": [
                 {
                     "anchor": "innodb_stats_persistent",
@@ -30702,7 +30693,6 @@
         },
         "innodb_table_locks": {
             "cli": "--innodb-table-locks",
-            "default": "1",
             "dynamic": true,
             "name": "innodb_table_locks",
             "scope": [
@@ -30786,7 +30776,7 @@
             ]
         },
         "innodb_temp_data_file_path": {
-            "cli": "--innodb-temp-data-path-path=path",
+            "cli": "--innodb-temp-data-path-path=path-name",
             "dynamic": false,
             "name": "innodb_temp_data_file_path",
             "scope": [
@@ -30870,6 +30860,7 @@
             ]
         },
         "innodb_undo_log_truncate": {
+            "cli": "--innodb-undo-log-truncate[={0|1}]",
             "dynamic": true,
             "name": "innodb_undo_log_truncate",
             "scope": [
@@ -31564,7 +31555,7 @@
             ]
         },
         "innodb_background_drop_list_empty": {
-            "cli": "--innodb-background-drop-list-empty=#",
+            "cli": "--innodb-background-drop-list-empty",
             "default": "off",
             "dynamic": true,
             "name": "innodb_background_drop_list_empty",
@@ -31580,7 +31571,7 @@
             ]
         },
         "innodb_buffer_pool_debug": {
-            "cli": "--innodb-buffer-pool-debug=#",
+            "cli": "--innodb-buffer-pool-debug",
             "default": "off",
             "dynamic": false,
             "name": "innodb_buffer_pool_debug",
@@ -31612,7 +31603,7 @@
             ]
         },
         "innodb_checkpoint_disabled": {
-            "cli": "--innodb-checkpoint-disabled=#",
+            "cli": "--innodb-checkpoint-disabled",
             "default": "off",
             "dynamic": true,
             "name": "innodb_checkpoint_disabled",
@@ -31628,7 +31619,7 @@
             ]
         },
         "innodb_compress_debug": {
-            "cli": "--innodb-compress-debug=#",
+            "cli": "--innodb-compress-debug=value",
             "default": "none",
             "dynamic": true,
             "name": "innodb_compress_debug",
@@ -31650,8 +31641,8 @@
             ]
         },
         "innodb_ddl_log_crash_reset_debug": {
-            "cli": "--innodb-ddl-log-crash-reset-debug=#",
-            "default": "false",
+            "cli": "--innodb-ddl-log-crash-reset-debug",
+            "default": "off",
             "dynamic": true,
             "name": "innodb_ddl_log_crash_reset_debug",
             "scope": [
@@ -31666,7 +31657,7 @@
             ]
         },
         "innodb_dedicated_server": {
-            "cli": "--innodb-dedicated-server=#",
+            "cli": "--innodb-dedicated-server",
             "default": "off",
             "dynamic": false,
             "name": "innodb_dedicated_server",
@@ -31682,13 +31673,13 @@
             ]
         },
         "innodb_directories": {
-            "cli": "--innodb-directories=#",
+            "cli": "--innodb-directories=dir_name",
             "dynamic": false,
             "name": "innodb_directories",
             "scope": [
                 "global"
             ],
-            "type": "string",
+            "type": "directory name",
             "ids": [
                 {
                     "anchor": "sysvar_innodb_directories",
@@ -31887,7 +31878,7 @@
             ]
         },
         "innodb_print_ddl_logs": {
-            "cli": "--innodb-print-ddl-logs=#",
+            "cli": "--innodb-print-ddl-logs",
             "default": "off",
             "dynamic": true,
             "name": "innodb_print_ddl_logs",
@@ -31903,7 +31894,7 @@
             ]
         },
         "innodb_redo_log_encrypt": {
-            "cli": "--innodb-redo-log-encrypt=#",
+            "cli": "--innodb-redo-log-encrypt",
             "default": "off",
             "dynamic": true,
             "name": "innodb_redo_log_encrypt",
@@ -31919,14 +31910,14 @@
             ]
         },
         "innodb_scan_directories": {
-            "cli": "--innodb-scan-directories=#",
+            "cli": "--innodb-scan-directories=dir_name",
             "default": "null",
             "dynamic": false,
             "name": "innodb_scan_directories",
             "scope": [
                 "global"
             ],
-            "type": "string",
+            "type": "directory name",
             "ids": [
                 {
                     "anchor": "sysvar_innodb_scan_directories",
@@ -31954,7 +31945,7 @@
             ]
         },
         "innodb_sync_debug": {
-            "cli": "--innodb-sync-debug=#",
+            "cli": "--innodb-sync-debug",
             "default": "off",
             "dynamic": false,
             "name": "innodb_sync_debug",
@@ -31986,7 +31977,7 @@
             ]
         },
         "innodb_trx_purge_view_update_only_debug": {
-            "cli": "--innodb-trx-purge-view-update-only-debug=#",
+            "cli": "--innodb-trx-purge-view-update-only-debug",
             "default": "off",
             "dynamic": true,
             "name": "innodb_trx_purge_view_update_only_debug",
@@ -32021,7 +32012,7 @@
             ]
         },
         "innodb_undo_log_encrypt": {
-            "cli": "--innodb-undo-log-encrypt=#",
+            "cli": "--innodb-undo-log-encrypt",
             "default": "off",
             "dynamic": true,
             "name": "innodb_undo_log_encrypt",
@@ -33612,6 +33603,46 @@
                 }
             ]
         },
+        "binlog_encryption": {
+            "cli": "--binlog-encryption",
+            "default": "off",
+            "dynamic": true,
+            "name": "binlog_encryption",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_binlog-encryption",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                },
+                {
+                    "anchor": "sysvar_binlog_encryption",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "binlog_rotate_encryption_master_key_at_startup": {
+            "cli": "--binlog-rotate-encryption-master-key-at-startup",
+            "default": "off",
+            "dynamic": false,
+            "name": "binlog_rotate_encryption_master_key_at_startup",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_binlog-rotate-encryption-master-key-at-startup",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                },
+                {
+                    "anchor": "sysvar_binlog_rotate_encryption_master_key_at_startup",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                }
+            ]
+        },
         "binlog_row_event_max_size": {
             "cli": "--binlog-row-event-max-size=#",
             "default": "8192",
@@ -33623,6 +33654,10 @@
             "ids": [
                 {
                     "anchor": "option_mysqld_binlog-row-event-max-size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                },
+                {
+                    "anchor": "sysvar_binlog_row_event_max_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
                 },
                 {
@@ -34282,6 +34317,34 @@
             "ids": [
                 {
                     "anchor": "option_mysqld_show-slave-auth-info",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
+                }
+            ]
+        },
+        "immediate_server_version": {
+            "dynamic": true,
+            "name": "immediate_server_version",
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_immediate_server_version",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
+                }
+            ]
+        },
+        "original_server_version": {
+            "dynamic": true,
+            "name": "original_server_version",
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_original_server_version",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
                 }
             ]
@@ -35925,6 +35988,25 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysql_native_password_proxy_users",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "named_pipe_full_access_group": {
+            "default": "everyone",
+            "dynamic": false,
+            "name": "named_pipe_full_access_group",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "validValues": [
+                "everyone",
+                "empty string"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_named_pipe_full_access_group",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

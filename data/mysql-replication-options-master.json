@@ -38,6 +38,24 @@
       "type": "integer"
     },
     {
+      "dynamic": true,
+      "id": "sysvar_immediate_server_version",
+      "name": "immediate_server_version",
+      "scope": [
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "dynamic": true,
+      "id": "sysvar_original_server_version",
+      "name": "original_server_version",
+      "scope": [
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "default": "off",
       "dynamic": true,
       "id": "sysvar_rpl_semi_sync_master_enabled",

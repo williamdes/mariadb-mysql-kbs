@@ -5531,6 +5531,9 @@
 |name|value|
 |----|-----|
 |Name|`binlog_annotate_row_events`|
+|Command line|`--binlog-annotate-row-events[={0|1}]`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -22917,7 +22920,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_buffer_pool_filename`|
-|Command line|`--innodb-buffer-pool-filename=file`|
+|Command line|`--innodb-buffer-pool-pathname=path-name`|
 |Scope|`global`|
 |Default value|`ib_buffer_pool`|
 |Dynamic|`true`|
@@ -23087,7 +23090,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_change_buffering`|
-|Command line|`--innodb-change-buffering=#`|
+|Command line|`--innodb-change-buffering=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`all`|
@@ -23136,7 +23139,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_checksum_algorithm`|
-|Command line|`--innodb-checksum-algorithm=#`|
+|Command line|`--innodb-checksum-algorithm=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`crc32`|
@@ -23185,7 +23188,6 @@
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Dynamic|`true`|
-|Valid value(s)|`OFF`, `ON`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -23325,7 +23327,6 @@
 |name|value|
 |----|-----|
 |Name|`innodb_data_file_path`|
-|Command line|`--innodb-data-file-path=name`|
 |Scope|`global`|
 |Default value|`ibdata1:12m:autoextend`|
 |Dynamic|`false`|
@@ -23757,7 +23758,6 @@
 |name|value|
 |----|-----|
 |Name|`innodb_fast_shutdown`|
-|Command line|`--innodb-fast-shutdown[=#]`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`1`|
@@ -23868,6 +23868,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_flush_log_at_timeout`|
+|Command line|`--innodb-flush-log-at-timeout=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`1`|
@@ -23883,7 +23884,6 @@
 |name|value|
 |----|-----|
 |Name|`innodb_flush_log_at_trx_commit`|
-|Command line|`--innodb-flush-log-at-trx-commit[=#]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`1`|
@@ -23900,7 +23900,6 @@
 |name|value|
 |----|-----|
 |Name|`innodb_flush_method`|
-|Command line|`--innodb-flush-method=name`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -24038,7 +24037,6 @@
 |name|value|
 |----|-----|
 |Name|`innodb_ft_aux_table`|
-|Command line|`--innodb-ft-aux-table=value`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`true`|
@@ -25013,7 +25011,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_page_size`|
-|Command line|`--innodb-page-size=#k`|
+|Command line|`--innodb-page-size=#`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`16384`|
@@ -25468,7 +25466,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_stats_include_delete_marked`|
-|Command line|`--innodb-stats-include-delete-marked=#`|
+|Command line|`--innodb-stats-include-delete-marked`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Dynamic|`true`|
@@ -25483,7 +25481,6 @@
 |name|value|
 |----|-----|
 |Name|`innodb_stats_method`|
-|Command line|`--innodb-stats-method=name`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`nulls_equal`|
@@ -25531,11 +25528,10 @@
 |name|value|
 |----|-----|
 |Name|`innodb_stats_persistent`|
-|Command line|`--innodb-stats-persistent=setting`|
+|Command line|`--innodb-stats-persistent=#`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Dynamic|`true`|
-|Valid value(s)|`OFF`, `ON`, `0`, `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -25722,7 +25718,6 @@
 |Command line|`--innodb-table-locks`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`1`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -25784,7 +25779,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_temp_data_file_path`|
-|Command line|`--innodb-temp-data-path-path=path`|
+|Command line|`--innodb-temp-data-path-path=path-name`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -25856,6 +25851,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_undo_log_truncate`|
+|Command line|`--innodb-undo-log-truncate[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Dynamic|`true`|
@@ -26454,7 +26450,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_background_drop_list_empty`|
-|Command line|`--innodb-background-drop-list-empty=#`|
+|Command line|`--innodb-background-drop-list-empty`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`off`|
@@ -26469,7 +26465,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_buffer_pool_debug`|
-|Command line|`--innodb-buffer-pool-debug=#`|
+|Command line|`--innodb-buffer-pool-debug`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`off`|
@@ -26499,7 +26495,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_checkpoint_disabled`|
-|Command line|`--innodb-checkpoint-disabled=#`|
+|Command line|`--innodb-checkpoint-disabled`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`off`|
@@ -26514,7 +26510,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_compress_debug`|
-|Command line|`--innodb-compress-debug=#`|
+|Command line|`--innodb-compress-debug=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`none`|
@@ -26530,10 +26526,10 @@
 |name|value|
 |----|-----|
 |Name|`innodb_ddl_log_crash_reset_debug`|
-|Command line|`--innodb-ddl-log-crash-reset-debug=#`|
+|Command line|`--innodb-ddl-log-crash-reset-debug`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`false`|
+|Default value|`off`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -26545,7 +26541,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_dedicated_server`|
-|Command line|`--innodb-dedicated-server=#`|
+|Command line|`--innodb-dedicated-server`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`off`|
@@ -26560,8 +26556,8 @@
 |name|value|
 |----|-----|
 |Name|`innodb_directories`|
-|Command line|`--innodb-directories=#`|
-|Type of variable|`string`|
+|Command line|`--innodb-directories=dir_name`|
+|Type of variable|`directory name`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -26732,7 +26728,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_print_ddl_logs`|
-|Command line|`--innodb-print-ddl-logs=#`|
+|Command line|`--innodb-print-ddl-logs`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`off`|
@@ -26747,7 +26743,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_redo_log_encrypt`|
-|Command line|`--innodb-redo-log-encrypt=#`|
+|Command line|`--innodb-redo-log-encrypt`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`off`|
@@ -26762,8 +26758,8 @@
 |name|value|
 |----|-----|
 |Name|`innodb_scan_directories`|
-|Command line|`--innodb-scan-directories=#`|
-|Type of variable|`string`|
+|Command line|`--innodb-scan-directories=dir_name`|
+|Type of variable|`directory name`|
 |Scope|`global`|
 |Default value|`null`|
 |Dynamic|`false`|
@@ -26793,7 +26789,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_sync_debug`|
-|Command line|`--innodb-sync-debug=#`|
+|Command line|`--innodb-sync-debug`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`off`|
@@ -26823,7 +26819,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_trx_purge_view_update_only_debug`|
-|Command line|`--innodb-trx-purge-view-update-only-debug=#`|
+|Command line|`--innodb-trx-purge-view-update-only-debug`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`off`|
@@ -26854,7 +26850,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_undo_log_encrypt`|
-|Command line|`--innodb-undo-log-encrypt=#`|
+|Command line|`--innodb-undo-log-encrypt`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`off`|
@@ -28260,6 +28256,38 @@
 |------|----|
 |dev.mysql.com|[sysvar_authentication_ldap_simple_user_search_attr](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html#sysvar_authentication_ldap_simple_user_search_attr)|
 
+## binlog_encryption
+|name|value|
+|----|-----|
+|Name|`binlog_encryption`|
+|Command line|`--binlog-encryption`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_binlog-encryption](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-encryption)|
+|dev.mysql.com|[sysvar_binlog_encryption](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_encryption)|
+
+## binlog_rotate_encryption_master_key_at_startup
+|name|value|
+|----|-----|
+|Name|`binlog_rotate_encryption_master_key_at_startup`|
+|Command line|`--binlog-rotate-encryption-master-key-at-startup`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_binlog-rotate-encryption-master-key-at-startup](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-rotate-encryption-master-key-at-startup)|
+|dev.mysql.com|[sysvar_binlog_rotate_encryption_master_key_at_startup](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_rotate_encryption_master_key_at_startup)|
+
 ## binlog_row_event_max_size
 |name|value|
 |----|-----|
@@ -28273,6 +28301,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_binlog-row-event-max-size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-row-event-max-size)|
+|dev.mysql.com|[sysvar_binlog_row_event_max_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_event_max_size)|
 |dev.mysql.com|[option_mysqld_binlog-row-event-max-size](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-row-event-max-size)|
 
 ## binlog_rows_query_log_events
@@ -28779,6 +28808,32 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_show-slave-auth-info](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#option_mysqld_show-slave-auth-info)|
+
+## immediate_server_version
+|name|value|
+|----|-----|
+|Name|`immediate_server_version`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_immediate_server_version](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_immediate_server_version)|
+
+## original_server_version
+|name|value|
+|----|-----|
+|Name|`original_server_version`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_original_server_version](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_original_server_version)|
 
 ## rpl_semi_sync_master_wait_for_slave_count
 |name|value|
@@ -30299,6 +30354,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_mysql_native_password_proxy_users](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_mysql_native_password_proxy_users)|
+
+## named_pipe_full_access_group
+|name|value|
+|----|-----|
+|Name|`named_pipe_full_access_group`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`everyone`|
+|Dynamic|`false`|
+|Valid value(s)|`everyone`, `empty string`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_named_pipe_full_access_group](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_named_pipe_full_access_group)|
 
 ## new
 |name|value|

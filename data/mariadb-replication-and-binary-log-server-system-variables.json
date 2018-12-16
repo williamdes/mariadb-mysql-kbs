@@ -33,8 +33,14 @@
       "type": "integer"
     },
     {
+      "cli": "--binlog-annotate-row-events[={0|1}]",
       "id": "binlog_annotate_row_events",
-      "name": "binlog_annotate_row_events"
+      "name": "binlog_annotate_row_events",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--binlog-cache-size=#",

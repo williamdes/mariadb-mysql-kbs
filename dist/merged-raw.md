@@ -2056,6 +2056,21 @@
 |------|----|
 |mariadb.com|[gtid_pos_auto_engines](https://mariadb.com/kb/en/library/documentation/gtid/#gtid_pos_auto_engines)|
 
+## gtid_cleanup_batch_size
+|name|value|
+|----|-----|
+|Name|`gtid_cleanup_batch_size`|
+|Command line|`--gtid-cleanup-batch-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Dynamic|`true`|
+|Range|from: `0` to: `2147483647`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[gtid_cleanup_batch_size](https://mariadb.com/kb/en/library/documentation/gtid/#gtid_cleanup_batch_size)|
+
 ## Server_audit_active
 |name|value|
 |----|-----|
@@ -6357,7 +6372,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[slave_compressed_protocol](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#slave_compressed_protocol)|
-|dev.mysql.com|[option_mysqld_slave_compressed_protocol](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_slave_compressed_protocol)|
 |dev.mysql.com|[sysvar_slave_compressed_protocol](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_slave_compressed_protocol)|
 
 ## slave_ddl_exec_mode
@@ -7858,6 +7872,18 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_assign_to_keycache](https://mariadb.com/kb/en/library/documentation/server-status-variables/#com_assign_to_keycache)|
+
+## Com_backup
+|name|value|
+|----|-----|
+|Name|`Com_backup`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[com_backup](https://mariadb.com/kb/en/library/documentation/server-status-variables/#com_backup)|
 
 ## Com_backup_table
 |name|value|
@@ -28256,38 +28282,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_authentication_ldap_simple_user_search_attr](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html#sysvar_authentication_ldap_simple_user_search_attr)|
 
-## binlog_encryption
-|name|value|
-|----|-----|
-|Name|`binlog_encryption`|
-|Command line|`--binlog-encryption`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`off`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_binlog-encryption](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-encryption)|
-|dev.mysql.com|[sysvar_binlog_encryption](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_encryption)|
-
-## binlog_rotate_encryption_master_key_at_startup
-|name|value|
-|----|-----|
-|Name|`binlog_rotate_encryption_master_key_at_startup`|
-|Command line|`--binlog-rotate-encryption-master-key-at-startup`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`off`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_binlog-rotate-encryption-master-key-at-startup](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-rotate-encryption-master-key-at-startup)|
-|dev.mysql.com|[sysvar_binlog_rotate_encryption_master_key_at_startup](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_rotate_encryption_master_key_at_startup)|
-
 ## binlog_row_event_max_size
 |name|value|
 |----|-----|
@@ -28394,6 +28388,21 @@
 |dev.mysql.com|[option_mysqld_sporadic-binlog-dump-fail](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_sporadic-binlog-dump-fail)|
 |dev.mysql.com|[option_mysqld_sporadic-binlog-dump-fail](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_sporadic-binlog-dump-fail)|
 
+## binlog_encryption
+|name|value|
+|----|-----|
+|Name|`binlog_encryption`|
+|Command line|`--binlog-encryption`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_binlog_encryption](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_encryption)|
+
 ## binlog_error_action
 |name|value|
 |----|-----|
@@ -28489,6 +28498,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_binlog_order_commits](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_order_commits)|
 |dev.mysql.com|[sysvar_binlog_order_commits](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_order_commits)|
+
+## binlog_rotate_encryption_master_key_at_startup
+|name|value|
+|----|-----|
+|Name|`binlog_rotate_encryption_master_key_at_startup`|
+|Command line|`--binlog-rotate-encryption-master-key-at-startup`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_binlog_rotate_encryption_master_key_at_startup](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_rotate_encryption_master_key_at_startup)|
 
 ## binlog_row_metadata
 |name|value|
@@ -30361,9 +30385,9 @@
 |Name|`named_pipe_full_access_group`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`everyone`|
+|Default value|`*everyone*`|
 |Dynamic|`false`|
-|Valid value(s)|`everyone`, `empty string`|
+|Valid value(s)|`*everyone*`, `empty string`|
 
 ### Documentation(s)
 |source|anchor name|

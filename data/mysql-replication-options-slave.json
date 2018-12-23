@@ -246,17 +246,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--slave-compressed-protocol",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_slave_compressed_protocol",
-      "name": "slave_compressed_protocol",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--slave-load-tmpdir=dir_name",
       "default": "/tmp",
       "dynamic": false,

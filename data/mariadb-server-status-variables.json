@@ -255,6 +255,15 @@
       "type": "integer"
     },
     {
+      "id": "com_backup",
+      "name": "Com_backup",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "com_backup_table",
       "name": "Com_backup_table",
       "scope": [

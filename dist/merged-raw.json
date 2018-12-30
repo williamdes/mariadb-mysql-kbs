@@ -2319,6 +2319,25 @@
                 }
             ]
         },
+        "gtid_cleanup_batch_size": {
+            "cli": "--gtid-cleanup-batch-size=#",
+            "dynamic": true,
+            "name": "gtid_cleanup_batch_size",
+            "range": {
+                "from": 0,
+                "to": 2147483647
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "gtid_cleanup_batch_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/gtid/"
+                }
+            ]
+        },
         "Server_audit_active": {
             "name": "Server_audit_active",
             "type": "boolean",
@@ -7655,10 +7674,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_slave_compressed_protocol",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
-                },
-                {
                     "anchor": "sysvar_slave_compressed_protocol",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
@@ -9424,6 +9439,20 @@
             "ids": [
                 {
                     "anchor": "com_assign_to_keycache",
+                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
+                }
+            ]
+        },
+        "Com_backup": {
+            "name": "Com_backup",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "com_backup",
                     "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
                 }
             ]
@@ -33603,46 +33632,6 @@
                 }
             ]
         },
-        "binlog_encryption": {
-            "cli": "--binlog-encryption",
-            "default": "off",
-            "dynamic": true,
-            "name": "binlog_encryption",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_binlog-encryption",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "sysvar_binlog_encryption",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                }
-            ]
-        },
-        "binlog_rotate_encryption_master_key_at_startup": {
-            "cli": "--binlog-rotate-encryption-master-key-at-startup",
-            "default": "off",
-            "dynamic": false,
-            "name": "binlog_rotate_encryption_master_key_at_startup",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_binlog-rotate-encryption-master-key-at-startup",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "sysvar_binlog_rotate_encryption_master_key_at_startup",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                }
-            ]
-        },
         "binlog_row_event_max_size": {
             "cli": "--binlog-row-event-max-size=#",
             "default": "8192",
@@ -33785,6 +33774,22 @@
                 }
             ]
         },
+        "binlog_encryption": {
+            "cli": "--binlog-encryption",
+            "default": "off",
+            "dynamic": true,
+            "name": "binlog_encryption",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_binlog_encryption",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                }
+            ]
+        },
         "binlog_error_action": {
             "cli": "--binlog-error-action[=value]",
             "dynamic": true,
@@ -33914,6 +33919,22 @@
                 {
                     "anchor": "sysvar_binlog_order_commits",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "binlog_rotate_encryption_master_key_at_startup": {
+            "cli": "--binlog-rotate-encryption-master-key-at-startup",
+            "default": "off",
+            "dynamic": false,
+            "name": "binlog_rotate_encryption_master_key_at_startup",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_binlog_rotate_encryption_master_key_at_startup",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
                 }
             ]
         },
@@ -35993,7 +36014,7 @@
             ]
         },
         "named_pipe_full_access_group": {
-            "default": "everyone",
+            "default": "*everyone*",
             "dynamic": false,
             "name": "named_pipe_full_access_group",
             "scope": [
@@ -36001,7 +36022,7 @@
             ],
             "type": "string",
             "validValues": [
-                "everyone",
+                "*everyone*",
                 "empty string"
             ],
             "ids": [

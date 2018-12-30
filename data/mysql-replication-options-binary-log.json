@@ -1,20 +1,6 @@
 {
   "data": [
     {
-      "cli": "--binlog-encryption",
-      "default": "off",
-      "id": "option_mysqld_binlog-encryption",
-      "name": "binlog_encryption",
-      "type": "boolean"
-    },
-    {
-      "cli": "--binlog-rotate-encryption-master-key-at-startup",
-      "default": "off",
-      "id": "option_mysqld_binlog-rotate-encryption-master-key-at-startup",
-      "name": "binlog_rotate_encryption_master_key_at_startup",
-      "type": "boolean"
-    },
-    {
       "cli": "--binlog-row-event-max-size=#",
       "default": "8192",
       "id": "option_mysqld_binlog-row-event-max-size",

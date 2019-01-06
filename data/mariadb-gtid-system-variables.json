@@ -79,6 +79,20 @@
     {
       "id": "gtid_pos_auto_engines",
       "name": "gtid_pos_auto_engines"
+    },
+    {
+      "cli": "--gtid-cleanup-batch-size=#",
+      "dynamic": true,
+      "id": "gtid_cleanup_batch_size",
+      "name": "gtid_cleanup_batch_size",
+      "range": {
+        "from": 0,
+        "to": 2147483647
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     }
   ],
   "name": "gtid-system-variables",

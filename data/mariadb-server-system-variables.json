@@ -304,7 +304,7 @@
       "name": "datetime_format"
     },
     {
-      "cli": "--debug[=debug_options]",
+      "cli": "-#, --debug[=debug_options]",
       "default": "d:t:i:O,\\mysqld.trace",
       "dynamic": true,
       "id": "debug",

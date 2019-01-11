@@ -86,7 +86,16 @@ oFunctions.keys.previous = function(o, id) {
  * @see git-scm.com/docs/git-log#_pretty_formats
  */
 log(
-  { tag: '%d', note: '%N', msg: '%s', hash: '%h', longHash: '%H', author: '%ae', signature: '%G?', time: '%at' },
+  {
+    tag: '%d',
+    note: '%N',
+    msg: '%s',
+    hash: '%h',
+    longHash: '%H',
+    author: '%ae',
+    signature: '%G?',
+    time: '%at',
+  },
 
   // replace \r\n etc from value
   (key, value) => value.replace(/\s\s/g, '')
@@ -124,13 +133,13 @@ log(
       if (msg.match(/^added:\s/gi) || msg.match(/^add:/gi) || msg.match(/^test:/gi)) {
         changes = changesAdded;
       } else if (
-        msg.match(/^Some files to update$/gi)
-        && commit.author === "sudo-bot@wdes.fr"
-        && commit.signature === "G"
-        && commit.time <= 1540120128
+        msg.match(/^Some files to update$/gi) &&
+        commit.author === 'sudo-bot@wdes.fr' &&
+        commit.signature === 'G' &&
+        commit.time <= 1540120128
       ) {
         changes = changesChanged;
-        msg = "updated: [MySQL] & [MariaDB] data";
+        msg = 'updated: [MySQL] & [MariaDB] data';
       } else if (
         msg.match(/^changed:/gi) ||
         msg.match(/^update:/gi) ||

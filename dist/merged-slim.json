@@ -1848,6 +1848,22 @@
                 "7#gtid_pos_auto_engines"
             ]
         },
+        "gtid_cleanup_batch_size": {
+            "cli": "--gtid-cleanup-batch-size=#",
+            "dynamic": true,
+            "name": "gtid_cleanup_batch_size",
+            "range": {
+                "from": 0,
+                "to": 2147483647
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "7#gtid_cleanup_batch_size"
+            ]
+        },
         "Server_audit_active": {
             "name": "Server_audit_active",
             "type": "boolean",
@@ -5457,6 +5473,7 @@
             "scope": [
                 "global"
             ],
+            "type": "boolean",
             "ids": [
                 "8#log_bin",
                 "22#option_mysqld_log-bin",
@@ -5968,7 +5985,6 @@
             "type": "boolean",
             "ids": [
                 "8#slave_compressed_protocol",
-                "24#option_mysqld_slave_compressed_protocol",
                 "24#sysvar_slave_compressed_protocol"
             ]
         },
@@ -7299,6 +7315,17 @@
             "type": "integer",
             "ids": [
                 "28#com_assign_to_keycache"
+            ]
+        },
+        "Com_backup": {
+            "name": "Com_backup",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "28#com_backup"
             ]
         },
         "Com_backup_table": {
@@ -10998,7 +11025,7 @@
             ]
         },
         "debug": {
-            "cli": "--debug[=debug_options]",
+            "cli": "-#, --debug[=debug_options]",
             "dynamic": true,
             "name": "debug",
             "scope": [
@@ -13011,6 +13038,19 @@
             "type": "integer",
             "ids": [
                 "29#optimizer_use_condition_selectivity"
+            ]
+        },
+        "pam_debug": {
+            "cli": "--pam-debug",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "pam_debug",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "29#pam_debug"
             ]
         },
         "pam_use_cleartext_plugin": {
@@ -24438,23 +24478,6 @@
                 "41#sysvar_innodb_merge_threshold_set_all_debug"
             ]
         },
-        "innodb_parallel_read_threads": {
-            "cli": "--innodb-parallel-read-threads=#",
-            "default": "4",
-            "dynamic": true,
-            "name": "innodb_parallel_read_threads",
-            "range": {
-                "from": 1,
-                "to": 256
-            },
-            "scope": [
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "41#sysvar_innodb_parallel_read_threads"
-            ]
-        },
         "innodb_print_ddl_logs": {
             "cli": "--innodb-print-ddl-logs",
             "default": "off",
@@ -24508,6 +24531,23 @@
             "type": "integer",
             "ids": [
                 "41#sysvar_innodb_saved_page_number_debug"
+            ]
+        },
+        "innodb_spin_wait_pause_multiplier": {
+            "cli": "--innodb-spin-wait-pause-multiplier=#",
+            "default": "50",
+            "dynamic": true,
+            "name": "innodb_spin_wait_pause_multiplier",
+            "range": {
+                "from": 1,
+                "to": 100
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "41#sysvar_innodb_spin_wait_pause_multiplier"
             ]
         },
         "innodb_sync_debug": {
@@ -25803,34 +25843,6 @@
                 "44#sysvar_authentication_ldap_simple_user_search_attr"
             ]
         },
-        "binlog_encryption": {
-            "cli": "--binlog-encryption",
-            "default": "off",
-            "dynamic": true,
-            "name": "binlog_encryption",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "22#option_mysqld_binlog-encryption",
-                "22#sysvar_binlog_encryption"
-            ]
-        },
-        "binlog_rotate_encryption_master_key_at_startup": {
-            "cli": "--binlog-rotate-encryption-master-key-at-startup",
-            "default": "off",
-            "dynamic": false,
-            "name": "binlog_rotate_encryption_master_key_at_startup",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "22#option_mysqld_binlog-rotate-encryption-master-key-at-startup",
-                "22#sysvar_binlog_rotate_encryption_master_key_at_startup"
-            ]
-        },
         "binlog_row_event_max_size": {
             "cli": "--binlog-row-event-max-size=#",
             "default": "8192",
@@ -25914,6 +25926,19 @@
             "ids": [
                 "22#option_mysqld_sporadic-binlog-dump-fail",
                 "23#option_mysqld_sporadic-binlog-dump-fail"
+            ]
+        },
+        "binlog_encryption": {
+            "cli": "--binlog-encryption",
+            "default": "off",
+            "dynamic": true,
+            "name": "binlog_encryption",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "22#sysvar_binlog_encryption"
             ]
         },
         "binlog_error_action": {
@@ -26013,6 +26038,19 @@
             "ids": [
                 "22#sysvar_binlog_order_commits",
                 "23#sysvar_binlog_order_commits"
+            ]
+        },
+        "binlog_rotate_encryption_master_key_at_startup": {
+            "cli": "--binlog-rotate-encryption-master-key-at-startup",
+            "default": "off",
+            "dynamic": false,
+            "name": "binlog_rotate_encryption_master_key_at_startup",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "22#sysvar_binlog_rotate_encryption_master_key_at_startup"
             ]
         },
         "binlog_row_metadata": {
@@ -27644,7 +27682,7 @@
             ]
         },
         "named_pipe_full_access_group": {
-            "default": "everyone",
+            "default": "*everyone*",
             "dynamic": false,
             "name": "named_pipe_full_access_group",
             "scope": [
@@ -27652,7 +27690,7 @@
             ],
             "type": "string",
             "validValues": [
-                "everyone",
+                "*everyone*",
                 "empty string"
             ],
             "ids": [
@@ -28198,6 +28236,19 @@
                 "10#sysvar_temptable_max_ram"
             ]
         },
+        "temptable_use_mmap": {
+            "cli": "--temptable-use-mmap",
+            "default": "on",
+            "dynamic": true,
+            "name": "temptable_use_mmap",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "10#sysvar_temptable_use_mmap"
+            ]
+        },
         "thread_pool_algorithm": {
             "cli": "--thread-pool-algorithm=#",
             "default": "0",
@@ -28503,6 +28554,10 @@
             "default": "0",
             "dynamic": false,
             "name": "mysqlx_port_open_timeout",
+            "range": {
+                "from": 0,
+                "to": 120
+            },
             "scope": [
                 "global"
             ],
@@ -28545,7 +28600,7 @@
             ]
         },
         "mysqlx_ssl_ca": {
-            "cli": "--mysqlx-ssl-ca=file-name",
+            "cli": "--mysqlx-ssl-ca=file_name",
             "dynamic": false,
             "name": "mysqlx_ssl_ca",
             "scope": [
@@ -28618,7 +28673,7 @@
             ]
         },
         "mysqlx_ssl_key": {
-            "cli": "--mysqlx-ssl-key=file-name",
+            "cli": "--mysqlx-ssl-key=file_name",
             "dynamic": false,
             "name": "mysqlx_ssl_key",
             "scope": [

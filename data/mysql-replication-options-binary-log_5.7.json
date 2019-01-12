@@ -18,13 +18,9 @@
       "type": "boolean"
     },
     {
-      "cli": "--log-bin",
-      "dynamic": false,
+      "cli": "--log-bin=file_name",
       "id": "option_mysqld_log-bin",
       "name": "log_bin",
-      "scope": [
-        "global"
-      ],
       "type": "file name"
     },
     {
@@ -345,7 +341,8 @@
       "name": "log_bin",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "dynamic": false,

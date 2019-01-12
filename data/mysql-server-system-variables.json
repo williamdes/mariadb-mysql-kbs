@@ -1864,7 +1864,7 @@
       "type": "boolean"
     },
     {
-      "default": "everyone",
+      "default": "*everyone*",
       "dynamic": false,
       "id": "sysvar_named_pipe_full_access_group",
       "name": "named_pipe_full_access_group",
@@ -1873,7 +1873,7 @@
       ],
       "type": "string",
       "validValues": [
-        "everyone",
+        "*everyone*",
         "empty string"
       ]
     },
@@ -3213,6 +3213,17 @@
         "global"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--temptable-use-mmap",
+      "default": "on",
+      "dynamic": true,
+      "id": "sysvar_temptable_use_mmap",
+      "name": "temptable_use_mmap",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--thread-cache-size=#",

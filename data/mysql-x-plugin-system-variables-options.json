@@ -12,7 +12,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--mysqlx-bind-address=#",
+      "cli": "--mysqlx-bind-address=value",
       "default": "*",
       "dynamic": false,
       "id": "option_mysqld_mysqlx-bind-address",
@@ -23,7 +23,7 @@
       "type": "string"
     },
     {
-      "cli": "--mysqlx-connect-timeout=#",
+      "cli": "--mysqlx-connect-timeout=value",
       "default": "30",
       "dynamic": true,
       "id": "option_mysqld_mysqlx-connect-timeout",
@@ -38,7 +38,7 @@
       "type": "integer"
     },
     {
-      "cli": "--mysqlx-idle-worker-thread-timeout=#",
+      "cli": "--mysqlx-idle-worker-thread-timeout=value",
       "default": "60",
       "dynamic": true,
       "id": "option_mysqld_mysqlx-idle-worker-thread-timeout",
@@ -53,7 +53,7 @@
       "type": "integer"
     },
     {
-      "cli": "--mysqlx-interactive-timeout=#",
+      "cli": "--mysqlx-interactive-timeout=value",
       "default": "28800",
       "dynamic": true,
       "id": "option_mysqld_mysqlx-interactive-timeout",
@@ -68,7 +68,7 @@
       "type": "integer"
     },
     {
-      "cli": "--mysqlx-max-allowed-packet=#",
+      "cli": "--mysqlx-max-allowed-packet=value",
       "default": "1048576",
       "dynamic": true,
       "id": "option_mysqld_mysqlx-max-allowed-packet",
@@ -83,7 +83,7 @@
       "type": "integer"
     },
     {
-      "cli": "--mysqlx-max-connections=#",
+      "cli": "--mysqlx-max-connections=value",
       "default": "100",
       "dynamic": true,
       "id": "option_mysqld_mysqlx-max-connections",
@@ -113,7 +113,7 @@
       "type": "integer"
     },
     {
-      "cli": "--mysqlx-port=#",
+      "cli": "--mysqlx-port=value",
       "default": "33060",
       "dynamic": false,
       "id": "option_mysqld_mysqlx-port",
@@ -128,13 +128,13 @@
       "type": "integer"
     },
     {
-      "cli": "--mysqlx-port-open-timeout=#",
+      "cli": "--mysqlx-port-open-timeout=value",
       "default": "0",
       "dynamic": false,
       "id": "option_mysqld_mysqlx-port-open-timeout",
       "name": "mysqlx_port_open_timeout",
       "range": {
-        "from": 1,
+        "from": 0,
         "to": 120
       },
       "scope": [
@@ -143,7 +143,7 @@
       "type": "integer"
     },
     {
-      "cli": "--mysqlx-read-timeout=#",
+      "cli": "--mysqlx-read-timeout=value",
       "default": "28800",
       "dynamic": true,
       "id": "option_mysqld_mysqlx-read-timeout",
@@ -169,7 +169,7 @@
       "type": "string"
     },
     {
-      "cli": "--mysqlx-ssl-ca=file-name",
+      "cli": "--mysqlx-ssl-ca=file_name",
       "dynamic": false,
       "id": "option_mysqld_mysqlx-ssl-ca",
       "name": "mysqlx_ssl_ca",
@@ -229,7 +229,7 @@
       "type": "directory name"
     },
     {
-      "cli": "--mysqlx-ssl-key=file-name",
+      "cli": "--mysqlx-ssl-key=file_name",
       "dynamic": false,
       "id": "option_mysqld_mysqlx-ssl-key",
       "name": "mysqlx_ssl_key",
@@ -418,7 +418,7 @@
       "name": "mysqlx_port_open_timeout",
       "range": {
         "from": 0,
-        "to": 100
+        "to": 120
       },
       "scope": [
         "global"

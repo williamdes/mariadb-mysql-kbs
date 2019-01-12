@@ -304,7 +304,7 @@
       "name": "datetime_format"
     },
     {
-      "cli": "--debug[=debug_options]",
+      "cli": "-#, --debug[=debug_options]",
       "default": "d:t:i:O,\\mysqld.trace",
       "dynamic": true,
       "id": "debug",
@@ -1962,6 +1962,17 @@
         "session"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--pam-debug",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "pam_debug",
+      "name": "pam_debug",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--pam-use-cleartext-plugin",

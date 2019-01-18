@@ -46,7 +46,7 @@
             "/scripts",
             "/data",
             "/dist/merged-raw.json",
-            "/tests",
+            "/test",
             "*.js",
             "/package.json",
             "/package-lock.json",

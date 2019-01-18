@@ -52,7 +52,7 @@
     },
     "directories": {
         "lib": "src",
-        "test": "tests"
+        "test": "test"
     },
     "prettier": {
         "singleQuote": true,

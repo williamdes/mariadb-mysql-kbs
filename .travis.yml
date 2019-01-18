@@ -51,9 +51,10 @@ jobs:
       env: CI_TYPE=cron
       name: 'Create a pull-request to update data'
     - stage: tests
-      node: '10.15'
+      language: node_js
+      node_js: 'stable'
       env: CI_TYPE=mocha
-      name: 'MOCHA - NODE 10.15'
+      name: 'MOCHA - NODE stable'
 cache:
   ccache: true
   apt: true

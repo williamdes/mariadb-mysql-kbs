@@ -1,7 +1,7 @@
 /scripts
 /data
 /dist/merged-raw.json
-/tests
+/test
 *.php
 /composer.json
 /composer.lock

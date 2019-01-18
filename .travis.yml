@@ -9,8 +9,9 @@ before_script:
 script:
   - ./scripts/ci/ci-$CI_TYPE.sh
 install:
-  - flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"
-  - composer install $flags
+  -  if [ "$CI_TYPE" != "mocha" ]; then flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"; fi
+  -  if [ "$CI_TYPE" != "mocha" ]; then composer install $flags; fi
+  -  if [ "$CI_TYPE" = "mocha" ]; then npm install; fi
 after_success:
   - if [ "$CI_TYPE" != "cron" ]; then bash <(curl -s https://codecov.io/bash); else echo "skipped codecov"; fi
 after_script:

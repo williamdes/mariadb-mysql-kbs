@@ -65,7 +65,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Williamdes\\MariaDBMySQLKBS\\": "tests/"
+            "Williamdes\\MariaDBMySQLKBS\\": "test/"
         }
     }
 }

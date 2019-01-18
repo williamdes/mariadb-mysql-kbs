@@ -50,6 +50,10 @@ jobs:
       php: '7.2'
       env: CI_TYPE=cron
       name: 'Create a pull-request to update data'
+    - stage: tests
+      node: '10.15'
+      env: CI_TYPE=mocha
+      name: 'MOCHA - NODE 10.15'
 cache:
   ccache: true
   apt: true

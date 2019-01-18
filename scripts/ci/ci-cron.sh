@@ -27,17 +27,10 @@ therealpath ()
 ME="$(dirname $0)"
 
 BOT_DIR_FILES="$(therealpath $ME/../sudo-bot)"
-
-BOT_DIR_GIT="$(therealpath $ME/../sudo-bot-git)"
-
 REPO_DIR="$(therealpath $ME/../../)"
 
 echo "BOT_DIR_FILES = $BOT_DIR_FILES"
-echo "BOT_DIR_GIT = $BOT_DIR_GIT"
 echo "REPO_DIR = $REPO_DIR"
-
-echo "Clone repo"
-git clone https://github.com/sudo-bot/sudo-bot.git --depth 1 $BOT_DIR_GIT
 
 REPO="mariadb-mysql-kbs"
 OWNER="williamdes"
@@ -54,16 +47,15 @@ BOT_EMAIL="sudo-bot@wdes.fr"
 
 echo "Create env file"
 
-echo -e "JWT_PRIV_KEY_PATH=$JWT_PRIV_KEY_PATH\nGPG_PRIV_PATH=$GPG_PRIV_PATH\nGPG_PUB_PATH=$GPG_PUB_PATH\nGPG_PRIV_PASSWORD=$GPG_PRIV_PASSWORD\nREPO=$REPO\nOWNER=$OWNER\nINSTALLATION_ID=$INSTALLATION_ID\nBOT_NAME=$BOT_NAME\nBOT_EMAIL=$BOT_EMAIL\nREPO_DIR=$REPO_DIR" > $BOT_DIR_GIT/.env
+echo -e "JWT_PRIV_KEY_PATH=$JWT_PRIV_KEY_PATH\nGPG_PRIV_PATH=$GPG_PRIV_PATH\nGPG_PUB_PATH=$GPG_PUB_PATH\nGPG_PRIV_PASSWORD=$GPG_PRIV_PASSWORD\nREPO=$REPO\nOWNER=$OWNER\nINSTALLATION_ID=$INSTALLATION_ID\nBOT_NAME=$BOT_NAME\nBOT_EMAIL=$BOT_EMAIL\nREPO_DIR=$REPO_DIR\nDOT_IGNORE=$BOT_DIR_FILES/.sudobotignore\nTEMPLATE_FILE=$BOT_DIR_FILES/template.js" > $BOT_DIR_FILES/.env
 
 
 echo "Install project npm"
-
+npm install
 
 echo "Run nodejs scripts"
 
 cd $REPO_DIR
-npm install
 
 node "$REPO_DIR/src/MySQL.js"
 node "$REPO_DIR/src/MariaDB.js"
@@ -73,16 +65,8 @@ echo "Run merge script"
 
 php -f "$REPO_DIR/src/merge.php"
 
-echo "Install sudo-bot npm"
+echo "Run sudo-bot"
 
-cd $BOT_DIR_GIT
-npm install
-cd $REPO_DIR
+npm run sudo-bot-pr
 
-echo "Launch sudo-bot"
-
-node "$BOT_DIR_GIT/index.js"
-
-echo "Delete sudo-bot local repo"
-
-rm -rf $BOT_DIR_GIT
+rm -f $BOT_DIR_FILES/.env

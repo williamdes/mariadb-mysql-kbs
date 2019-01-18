@@ -25,7 +25,8 @@
     ],
     "scripts": {
         "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sudo-bot-pr": "sudo-bot --env scripts/sudo-bot/.env"
     },
     "repository": {
         "type": "git",
@@ -41,6 +42,7 @@
     },
     "devDependencies": {
         "prettier": "^1.15.3",
+        "sudo-bot": "^1.1.1",
         "twig": "^1.13.0"
     },
     "directories": {

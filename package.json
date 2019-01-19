@@ -25,7 +25,9 @@
     ],
     "scripts": {
         "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "nyc mocha --ui tdd --reporter spec",
+        "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov",
+        "sudo-bot-pr": "sudo-bot --env scripts/sudo-bot/.env --verbose"
     },
     "repository": {
         "type": "git",
@@ -40,12 +42,17 @@
         "jsdom": "^13.1.0"
     },
     "devDependencies": {
+        "chai": "^4.2.0",
+        "codecov": "^3.1.0",
+        "mocha": "^5.2.0",
+        "nyc": "^13.1.0",
         "prettier": "^1.15.3",
+        "sudo-bot": "^1.1.4",
         "twig": "^1.13.0"
     },
     "directories": {
         "lib": "src",
-        "test": "tests"
+        "test": "test"
     },
     "prettier": {
         "singleQuote": true,

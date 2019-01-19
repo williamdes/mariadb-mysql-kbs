@@ -46,7 +46,7 @@
             "/scripts",
             "/data",
             "/dist/merged-raw.json",
-            "/tests",
+            "/test",
             "*.js",
             "/package.json",
             "/package-lock.json",
@@ -65,7 +65,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Williamdes\\MariaDBMySQLKBS\\": "tests/"
+            "Williamdes\\MariaDBMySQLKBS\\": "test/"
         }
     }
 }

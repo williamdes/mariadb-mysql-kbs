@@ -1425,10 +1425,7 @@
       "dynamic": true,
       "id": "max_connections",
       "name": "max_connections",
-      "range": {
-        "from": 1,
-        "to": 100000
-      },
+      "range": {},
       "scope": [
         "global"
       ],
@@ -1962,28 +1959,6 @@
         "session"
       ],
       "type": "integer"
-    },
-    {
-      "cli": "--pam-debug",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "pam_debug",
-      "name": "pam_debug",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--pam-use-cleartext-plugin",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "pam_use_cleartext_plugin",
-      "name": "pam_use_cleartext_plugin",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
     },
     {
       "cli": "--pid-file=file_name",

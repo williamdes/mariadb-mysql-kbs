@@ -9,9 +9,14 @@ const commitMessage = function(modifiedFiles) {
         .length;
     const nbrMariaDBFiles = modifiedFiles.filter(file => file.match(/mariadb-[a-z-]+.json$/g))
         .length;
+    const nbrMergedData = modifiedFiles.filter(file =>
+        file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g)
+    ).length;
+
     const hasMySQLFiles = nbrMySQLFiles > 0;
     const hasMariaDBFiles = nbrMariaDBFiles > 0;
-    const hasOtherFiles = nbrMySQLFiles + nbrMariaDBFiles !== modifiedFiles.length;
+    const hasOtherFiles =
+        nbrMySQLFiles + nbrMariaDBFiles + nbrMergedData !== modifiedFiles.length;
     if (hasMariaDBFiles && hasMySQLFiles) {
         return '[MariaDB] && [MySQL] updates' + (hasOtherFiles ? ' and other changes' : '');
     } else if (hasMariaDBFiles && !hasMySQLFiles) {
@@ -31,9 +36,14 @@ const prMessage = function(modifiedFiles) {
         .length;
     const nbrMariaDBFiles = modifiedFiles.filter(file => file.match(/mariadb-[a-z-]+.json$/g))
         .length;
+    const nbrMergedData = modifiedFiles.filter(file =>
+        file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g)
+    ).length;
+
     const hasMySQLFiles = nbrMySQLFiles > 0;
     const hasMariaDBFiles = nbrMariaDBFiles > 0;
-    const hasOtherFiles = nbrMySQLFiles + nbrMariaDBFiles !== modifiedFiles.length;
+    const hasOtherFiles =
+        nbrMySQLFiles + nbrMariaDBFiles + nbrMergedData !== modifiedFiles.length;
     if (hasMariaDBFiles && hasMySQLFiles) {
         return '🤖 [MariaDB] && [MySQL] updates' + (hasOtherFiles ? ' 🚨🚨' : '');
     } else if (hasMariaDBFiles && !hasMySQLFiles) {
@@ -49,7 +59,10 @@ const prMessage = function(modifiedFiles) {
  * @returns {string} The pr content
  */
 const prContent = function(modifiedFiles) {
-    let message = 'Dear human 🌻, after running my task the following files where updated:\n';
+    let message =
+        'Dear human 🌻, after running my task the following file' +
+        (modifiedFiles.length > 1 ? 's where updated:' : ' was updated:') +
+        '\n';
     message += modifiedFiles
         .map(file => {
             let emoji = '👽';
@@ -58,6 +71,9 @@ const prContent = function(modifiedFiles) {
             }
             if (file.match(/mariadb-[a-z-]+.json$/g)) {
                 emoji = '🐳';
+            }
+            if (file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g)) {
+                emoji = '📦';
             }
             return '- `' + file + '` ' + emoji + '\n';
         })

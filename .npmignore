@@ -18,3 +18,8 @@
 /build
 /schemas
 CODEOWNERS
+/coverage
+/coverage.lcov
+/.nyc_output
+/.editorconfig
+/.jshintrc

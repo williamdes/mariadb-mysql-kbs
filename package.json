@@ -25,7 +25,7 @@
     ],
     "scripts": {
         "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write",
-        "test": "nyc mocha --ui tdd --reporter spec",
+        "test": "nyc --reporter=lcov mocha --ui tdd --reporter spec",
         "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov",
         "sudo-bot-pr": "sudo-bot --env scripts/sudo-bot/.env --verbose"
     },

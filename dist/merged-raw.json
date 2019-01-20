@@ -16111,10 +16111,6 @@
             "default": "151",
             "dynamic": true,
             "name": "max_connections",
-            "range": {
-                "from": 1,
-                "to": 100000
-            },
             "scope": [
                 "global"
             ],
@@ -16975,38 +16971,6 @@
             "ids": [
                 {
                     "anchor": "optimizer_use_condition_selectivity",
-                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                }
-            ]
-        },
-        "pam_debug": {
-            "cli": "--pam-debug",
-            "default": "OFF",
-            "dynamic": false,
-            "name": "pam_debug",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "pam_debug",
-                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                }
-            ]
-        },
-        "pam_use_cleartext_plugin": {
-            "cli": "--pam-use-cleartext-plugin",
-            "default": "OFF",
-            "dynamic": false,
-            "name": "pam_use_cleartext_plugin",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "pam_use_cleartext_plugin",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 }
             ]

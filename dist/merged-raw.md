@@ -13404,7 +13404,6 @@
 |Scope|`global`|
 |Default value|`151`|
 |Dynamic|`true`|
-|Range|from: `1` to: `100000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -14026,36 +14025,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[optimizer_use_condition_selectivity](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_use_condition_selectivity)|
-
-## pam_debug
-|name|value|
-|----|-----|
-|Name|`pam_debug`|
-|Command line|`--pam-debug`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[pam_debug](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#pam_debug)|
-
-## pam_use_cleartext_plugin
-|name|value|
-|----|-----|
-|Name|`pam_use_cleartext_plugin`|
-|Command line|`--pam-use-cleartext-plugin`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[pam_use_cleartext_plugin](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#pam_use_cleartext_plugin)|
 
 ## pid_file
 |name|value|

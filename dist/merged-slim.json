@@ -12391,10 +12391,6 @@
             "default": "151",
             "dynamic": true,
             "name": "max_connections",
-            "range": {
-                "from": 1,
-                "to": 100000
-            },
             "scope": [
                 "global"
             ],
@@ -13038,32 +13034,6 @@
             "type": "integer",
             "ids": [
                 "29#optimizer_use_condition_selectivity"
-            ]
-        },
-        "pam_debug": {
-            "cli": "--pam-debug",
-            "default": "OFF",
-            "dynamic": false,
-            "name": "pam_debug",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "29#pam_debug"
-            ]
-        },
-        "pam_use_cleartext_plugin": {
-            "cli": "--pam-use-cleartext-plugin",
-            "default": "OFF",
-            "dynamic": false,
-            "name": "pam_use_cleartext_plugin",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "29#pam_use_cleartext_plugin"
             ]
         },
         "pid_file": {

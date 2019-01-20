@@ -1,10 +1,11 @@
 #!/usr/bin/env node
+'use strict';
+
 /**
  * @see gist.github.com/sergey-shpak/40fe8d2534c5e5941b9db9e28132ca0b
  */
 const { exec } = require('child_process');
-const Twig = require('twig'), // Twig module
-    twig = Twig.twig; // Render function
+const Twig = require('twig'); // Twig module
 
 // Compile 'git log' command
 const command = params =>
@@ -24,8 +25,9 @@ const log = (schema, post = (k, v) => v) =>
         const params = keys.map(key => schema[key]);
         // Execute coomand and parse result
         exec(command(params), (err, stdout) => {
-            if (err) reject(err);
-            else
+            if (err) {
+                reject(err);
+            } else {
                 resolve(
                     stdout
                         .split(command.format.line)
@@ -38,6 +40,7 @@ const log = (schema, post = (k, v) => v) =>
                             }, {})
                         )
                 );
+            }
         });
     });
 
@@ -52,7 +55,7 @@ var changelog = {};
 /**
  * @see www.mikedoesweb.com/2014/javascript-object-next-and-previous-keys/
  */
-oFunctions = {};
+var oFunctions = {};
 oFunctions.keys = {};
 
 //NEXT KEY
@@ -100,15 +103,17 @@ log(
     // replace \r\n etc from value
     (key, value) => value.replace(/\s\s/g, '')
 ).then(records => {
-    let tag = (changelog['HEAD'] = []);
+    let tag = (changelog.HEAD = []);
     records.forEach(record => {
         const tagName = isTagName(record.tag);
-        if (tagName) tag = changelog[tagName] = [];
+        if (tagName) {
+            tag = changelog[tagName] = [];
+        }
         tag.push(record);
     });
-    links = [];
-    versions = [];
-    for (version in changelog) {
+    var links = [];
+    var versions = [];
+    for (var version in changelog) {
         const changesAdded = [];
         const changesChanged = [];
         const changesDeprecated = [];
@@ -123,7 +128,7 @@ log(
                 '4282724e1e04d6b27d3c0744e1a37a50be740237',
             end: version,
         });
-        for (commitid in changelog[version]) {
+        for (var commitid in changelog[version]) {
             let changes = [];
             let commit = changelog[version][commitid];
             commit.time = parseInt(commit.time);
@@ -166,8 +171,6 @@ log(
                 msg.match(/^style:/gi)
             ) {
                 changes = changesImprove;
-            } else {
-                //console.log(msg);
             }
 
             changes.push({

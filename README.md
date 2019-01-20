@@ -6,6 +6,8 @@
 [![License](https://poser.pugx.org/williamdes/mariadb-mysql-kbs/license)](https://packagist.org/packages/williamdes/mariadb-mysql-kbs)
 [![Latest Stable Version](https://poser.pugx.org/williamdes/mariadb-mysql-kbs/v/stable)](https://packagist.org/packages/williamdes/mariadb-mysql-kbs)
 [![npm version](https://badge.fury.io/js/mariadb-mysql-kbs.svg)](https://badge.fury.io/js/mariadb-mysql-kbs)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/williamdes/mariadb-mysql-kbs.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/williamdes/mariadb-mysql-kbs/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/williamdes/mariadb-mysql-kbs.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/williamdes/mariadb-mysql-kbs/context:javascript)
 
 [API doc](https://williamdes.github.io/mariadb-mysql-kbs/Williamdes/MariaDBMySQLKBS.html)
 

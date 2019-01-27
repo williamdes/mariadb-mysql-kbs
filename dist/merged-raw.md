@@ -15449,21 +15449,6 @@
 |------|----|
 |mariadb.com|[use_stat_tables](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#use_stat_tables)|
 
-## userstat
-|name|value|
-|----|-----|
-|Name|`userstat`|
-|Command line|`--userstat=1`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[userstat](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#userstat)|
-
 ## version
 |name|value|
 |----|-----|
@@ -26719,6 +26704,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_merge_threshold_set_all_debug](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_merge_threshold_set_all_debug)|
 
+## innodb_parallel_read_threads
+|name|value|
+|----|-----|
+|Name|`innodb_parallel_read_threads`|
+|Command line|`--innodb-parallel-read-threads=#`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Default value|`4`|
+|Dynamic|`true`|
+|Range|from: `1` to: `256`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_parallel_read_threads](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_parallel_read_threads)|
+
 ## innodb_print_ddl_logs
 |name|value|
 |----|-----|
@@ -30677,6 +30678,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_resultset_metadata](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_resultset_metadata)|
 
+## secondary_engine_cost_threshold
+|name|value|
+|----|-----|
+|Name|`secondary_engine_cost_threshold`|
+|Type of variable|`numeric`|
+|Scope|`session`|
+|Default value|`100000.000000`|
+|Dynamic|`true`|
+|Range|from: `0`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_secondary_engine_cost_threshold](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_secondary_engine_cost_threshold)|
+
 ## schema_definition_cache
 |name|value|
 |----|-----|
@@ -31104,17 +31120,15 @@
 |name|value|
 |----|-----|
 |Name|`mysqlx`|
-|Command line|`--mysqlx[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`|
+|Command line|`--mysqlx[=value]`|
+|Type of variable|`enumeration`|
 |Default value|`on`|
-|Dynamic|`false`|
+|Valid value(s)|`ON`, `OFF`, `FORCE`, `FORCE_PLUS_PERMANENT`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_mysqlx](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx)|
-|dev.mysql.com|[sysvar_mysqlx](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx)|
 
 ## mysqlx_bind_address
 |name|value|
@@ -31129,7 +31143,6 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-bind-address](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-bind-address)|
 |dev.mysql.com|[sysvar_mysqlx_bind_address](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_bind_address)|
 
 ## mysqlx_connect_timeout
@@ -31146,293 +31159,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-connect-timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-connect-timeout)|
 |dev.mysql.com|[sysvar_mysqlx_connect_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_connect_timeout)|
-
-## mysqlx_idle_worker_thread_timeout
-|name|value|
-|----|-----|
-|Name|`mysqlx_idle_worker_thread_timeout`|
-|Command line|`--mysqlx-idle-worker-thread-timeout=value`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`60`|
-|Dynamic|`true`|
-|Range|from: `0` to: `3600`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-idle-worker-thread-timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-idle-worker-thread-timeout)|
-|dev.mysql.com|[sysvar_mysqlx_idle_worker_thread_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_idle_worker_thread_timeout)|
-
-## mysqlx_interactive_timeout
-|name|value|
-|----|-----|
-|Name|`mysqlx_interactive_timeout`|
-|Command line|`--mysqlx-interactive-timeout=value`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`28800`|
-|Dynamic|`true`|
-|Range|from: `1` to: `2147483`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-interactive-timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-interactive-timeout)|
-|dev.mysql.com|[sysvar_mysqlx_interactive_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_interactive_timeout)|
-
-## mysqlx_max_allowed_packet
-|name|value|
-|----|-----|
-|Name|`mysqlx_max_allowed_packet`|
-|Command line|`--mysqlx-max-allowed-packet=value`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1048576`|
-|Dynamic|`true`|
-|Range|from: `512` to: `1073741824`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-max-allowed-packet](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-max-allowed-packet)|
-|dev.mysql.com|[sysvar_mysqlx_max_allowed_packet](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_max_allowed_packet)|
-
-## mysqlx_max_connections
-|name|value|
-|----|-----|
-|Name|`mysqlx_max_connections`|
-|Command line|`--mysqlx-max-connections=value`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`100`|
-|Dynamic|`true`|
-|Range|from: `1` to: `65535`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-max-connections](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-max-connections)|
-|dev.mysql.com|[sysvar_mysqlx_max_connections](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_max_connections)|
-
-## mysqlx_min_worker_threads
-|name|value|
-|----|-----|
-|Name|`mysqlx_min_worker_threads`|
-|Command line|`--mysqlx-min-worker-threads=value`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`2`|
-|Dynamic|`true`|
-|Range|from: `1` to: `100`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-min-worker-threads](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-min-worker-threads)|
-|dev.mysql.com|[sysvar_mysqlx_min_worker_threads](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_min_worker_threads)|
-
-## mysqlx_port
-|name|value|
-|----|-----|
-|Name|`mysqlx_port`|
-|Command line|`--mysqlx-port=value`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`33060`|
-|Dynamic|`false`|
-|Range|from: `1` to: `65535`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-port](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-port)|
-|dev.mysql.com|[sysvar_mysqlx_port](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_port)|
-
-## mysqlx_port_open_timeout
-|name|value|
-|----|-----|
-|Name|`mysqlx_port_open_timeout`|
-|Command line|`--mysqlx-port-open-timeout=value`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`0`|
-|Dynamic|`false`|
-|Range|from: `0` to: `120`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-port-open-timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-port-open-timeout)|
-|dev.mysql.com|[sysvar_mysqlx_port_open_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_port_open_timeout)|
-
-## mysqlx_read_timeout
-|name|value|
-|----|-----|
-|Name|`mysqlx_read_timeout`|
-|Command line|`--mysqlx-read-timeout=value`|
-|Type of variable|`integer`|
-|Scope|`session`|
-|Default value|`28800`|
-|Dynamic|`true`|
-|Range|from: `30` to: `2147483`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-read-timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-read-timeout)|
-|dev.mysql.com|[sysvar_mysqlx_read_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_read_timeout)|
-
-## mysqlx_socket
-|name|value|
-|----|-----|
-|Name|`mysqlx_socket`|
-|Command line|`--mysqlx-socket=file_name`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`/tmp/mysqlx.sock`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-socket](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-socket)|
-|dev.mysql.com|[sysvar_mysqlx_socket](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_socket)|
-
-## mysqlx_ssl_ca
-|name|value|
-|----|-----|
-|Name|`mysqlx_ssl_ca`|
-|Command line|`--mysqlx-ssl-ca=file_name`|
-|Type of variable|`file name`|
-|Scope|`global`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-ssl-ca](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-ssl-ca)|
-
-## mysqlx_ssl_capath
-|name|value|
-|----|-----|
-|Name|`mysqlx_ssl_capath`|
-|Command line|`--mysqlx-ssl-capath=dir_name`|
-|Type of variable|`directory name`|
-|Scope|`global`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-ssl-capath](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-ssl-capath)|
-
-## mysqlx_ssl_cert
-|name|value|
-|----|-----|
-|Name|`mysqlx_ssl_cert`|
-|Command line|`--mysqlx-ssl-cert=name`|
-|Type of variable|`file name`|
-|Scope|`global`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-ssl-cert](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-ssl-cert)|
-
-## mysqlx_ssl_cipher
-|name|value|
-|----|-----|
-|Name|`mysqlx_ssl_cipher`|
-|Command line|`--mysqlx-ssl-cipher=name`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-ssl-cipher](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-ssl-cipher)|
-|dev.mysql.com|[sysvar_mysqlx_ssl_cipher](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_cipher)|
-
-## mysqlx_ssl_crl
-|name|value|
-|----|-----|
-|Name|`mysqlx_ssl_crl`|
-|Command line|`--mysqlx-ssl-crl=file_name`|
-|Type of variable|`file name`|
-|Scope|`global`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-ssl-crl](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-ssl-crl)|
-
-## mysqlx_ssl_crlpath
-|name|value|
-|----|-----|
-|Name|`mysqlx_ssl_crlpath`|
-|Command line|`--mysqlx-ssl-crlpath=directory_name`|
-|Type of variable|`directory name`|
-|Scope|`global`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-ssl-crlpath](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-ssl-crlpath)|
-
-## mysqlx_ssl_key
-|name|value|
-|----|-----|
-|Name|`mysqlx_ssl_key`|
-|Command line|`--mysqlx-ssl-key=file_name`|
-|Type of variable|`file name`|
-|Scope|`global`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-ssl-key](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-ssl-key)|
-
-## mysqlx_wait_timeout
-|name|value|
-|----|-----|
-|Name|`mysqlx_wait_timeout`|
-|Command line|`--mysqlx-wait-timeout=value`|
-|Type of variable|`integer`|
-|Scope|`session`|
-|Default value|`28800`|
-|Dynamic|`true`|
-|Range|from: `1` to: `2147483`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-wait-timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-wait-timeout)|
-|dev.mysql.com|[sysvar_mysqlx_wait_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_wait_timeout)|
-
-## mysqlx_write_timeout
-|name|value|
-|----|-----|
-|Name|`mysqlx_write_timeout`|
-|Command line|`--mysqlx-write-timeout=value`|
-|Type of variable|`integer`|
-|Scope|`session`|
-|Default value|`60`|
-|Dynamic|`true`|
-|Range|from: `1` to: `2147483`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_mysqlx-write-timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx-write-timeout)|
-|dev.mysql.com|[sysvar_mysqlx_write_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_write_timeout)|
 
 ## mysqlx_document_id_unique_prefix
 |name|value|
@@ -31449,5 +31176,278 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_mysqlx_document_id_unique_prefix](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_document_id_unique_prefix)|
+
+## mysqlx_idle_worker_thread_timeout
+|name|value|
+|----|-----|
+|Name|`mysqlx_idle_worker_thread_timeout`|
+|Command line|`--mysqlx-idle-worker-thread-timeout=value`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`60`|
+|Dynamic|`true`|
+|Range|from: `0` to: `3600`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_idle_worker_thread_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_idle_worker_thread_timeout)|
+
+## mysqlx_interactive_timeout
+|name|value|
+|----|-----|
+|Name|`mysqlx_interactive_timeout`|
+|Command line|`--mysqlx-interactive-timeout=value`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`28800`|
+|Dynamic|`true`|
+|Range|from: `1` to: `2147483`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_interactive_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_interactive_timeout)|
+
+## mysqlx_max_allowed_packet
+|name|value|
+|----|-----|
+|Name|`mysqlx_max_allowed_packet`|
+|Command line|`--mysqlx-max-allowed-packet=value`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1048576`|
+|Dynamic|`true`|
+|Range|from: `512` to: `1073741824`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_max_allowed_packet](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_max_allowed_packet)|
+
+## mysqlx_max_connections
+|name|value|
+|----|-----|
+|Name|`mysqlx_max_connections`|
+|Command line|`--mysqlx-max-connections=value`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`100`|
+|Dynamic|`true`|
+|Range|from: `1` to: `65535`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_max_connections](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_max_connections)|
+
+## mysqlx_min_worker_threads
+|name|value|
+|----|-----|
+|Name|`mysqlx_min_worker_threads`|
+|Command line|`--mysqlx-min-worker-threads=value`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`2`|
+|Dynamic|`true`|
+|Range|from: `1` to: `100`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_min_worker_threads](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_min_worker_threads)|
+
+## mysqlx_port
+|name|value|
+|----|-----|
+|Name|`mysqlx_port`|
+|Command line|`--mysqlx-port=value`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`33060`|
+|Dynamic|`false`|
+|Range|from: `1` to: `65535`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_port](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_port)|
+
+## mysqlx_port_open_timeout
+|name|value|
+|----|-----|
+|Name|`mysqlx_port_open_timeout`|
+|Command line|`--mysqlx-port-open-timeout=value`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+|Range|from: `0` to: `120`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_port_open_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_port_open_timeout)|
+
+## mysqlx_read_timeout
+|name|value|
+|----|-----|
+|Name|`mysqlx_read_timeout`|
+|Command line|`--mysqlx-read-timeout=value`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Default value|`28800`|
+|Dynamic|`true`|
+|Range|from: `30` to: `2147483`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_read_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_read_timeout)|
+
+## mysqlx_socket
+|name|value|
+|----|-----|
+|Name|`mysqlx_socket`|
+|Command line|`--mysqlx-socket=file_name`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`/tmp/mysqlx.sock`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_socket](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_socket)|
+
+## mysqlx_ssl_ca
+|name|value|
+|----|-----|
+|Name|`mysqlx_ssl_ca`|
+|Command line|`--mysqlx-ssl-ca=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_ssl_ca](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_ca)|
+
+## mysqlx_ssl_capath
+|name|value|
+|----|-----|
+|Name|`mysqlx_ssl_capath`|
+|Command line|`--mysqlx-ssl-capath=dir_name`|
+|Type of variable|`directory name`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_ssl_capath](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_capath)|
+
+## mysqlx_ssl_cert
+|name|value|
+|----|-----|
+|Name|`mysqlx_ssl_cert`|
+|Command line|`--mysqlx-ssl-cert=name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_ssl_cert](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_cert)|
+
+## mysqlx_ssl_cipher
+|name|value|
+|----|-----|
+|Name|`mysqlx_ssl_cipher`|
+|Command line|`--mysqlx-ssl-cipher=name`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_ssl_cipher](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_cipher)|
+
+## mysqlx_ssl_crl
+|name|value|
+|----|-----|
+|Name|`mysqlx_ssl_crl`|
+|Command line|`--mysqlx-ssl-crl=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_ssl_crl](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_crl)|
+
+## mysqlx_ssl_crlpath
+|name|value|
+|----|-----|
+|Name|`mysqlx_ssl_crlpath`|
+|Command line|`--mysqlx-ssl-crlpath=dir_name`|
+|Type of variable|`directory name`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_ssl_crlpath](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_crlpath)|
+
+## mysqlx_ssl_key
+|name|value|
+|----|-----|
+|Name|`mysqlx_ssl_key`|
+|Command line|`--mysqlx-ssl-key=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_ssl_key](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_key)|
+
+## mysqlx_wait_timeout
+|name|value|
+|----|-----|
+|Name|`mysqlx_wait_timeout`|
+|Command line|`--mysqlx-wait-timeout=value`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Default value|`28800`|
+|Dynamic|`true`|
+|Range|from: `1` to: `2147483`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_wait_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_wait_timeout)|
+
+## mysqlx_write_timeout
+|name|value|
+|----|-----|
+|Name|`mysqlx_write_timeout`|
+|Command line|`--mysqlx-write-timeout=value`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Default value|`60`|
+|Dynamic|`true`|
+|Range|from: `1` to: `2147483`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_write_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_write_timeout)|
 
 

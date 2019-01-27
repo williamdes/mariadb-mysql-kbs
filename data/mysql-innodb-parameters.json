@@ -1504,6 +1504,21 @@
       ]
     },
     {
+      "cli": "--innodb-parallel-read-threads=#",
+      "default": "4",
+      "dynamic": true,
+      "id": "sysvar_innodb_parallel_read_threads",
+      "name": "innodb_parallel_read_threads",
+      "range": {
+        "from": 1,
+        "to": 256
+      },
+      "scope": [
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--innodb-print-all-deadlocks",
       "default": "off",
       "dynamic": true,

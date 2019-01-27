@@ -2538,6 +2538,19 @@
       ]
     },
     {
+      "default": "100000.000000",
+      "dynamic": true,
+      "id": "sysvar_secondary_engine_cost_threshold",
+      "name": "secondary_engine_cost_threshold",
+      "range": {
+        "from": 0
+      },
+      "scope": [
+        "session"
+      ],
+      "type": "numeric"
+    },
+    {
       "cli": "--schema-definition-cache=N",
       "default": "256",
       "dynamic": true,

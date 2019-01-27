@@ -3084,17 +3084,6 @@
       ]
     },
     {
-      "cli": "--userstat=1",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "userstat",
-      "name": "userstat",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "-v, --version[=name] (>= mariadb 10.2.1), --version (<= mariadb 10.2.0)",
       "dynamic": false,
       "id": "version",

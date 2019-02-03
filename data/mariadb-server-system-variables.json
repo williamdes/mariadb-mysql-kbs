@@ -1541,6 +1541,21 @@
       "type": "integer"
     },
     {
+      "cli": "--max-password-errors=#",
+      "default": "4294967295",
+      "dynamic": true,
+      "id": "max_password_errors",
+      "name": "max_password_errors",
+      "range": {
+        "from": 1,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--max-prepared-stmt-count=#",
       "default": "16382",
       "dynamic": true,
@@ -1884,8 +1899,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--open-files-limit=count",
+      "dynamic": false,
       "id": "open_files_limit",
       "name": "open_files_limit",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
       "type": "integer"
     },
     {
@@ -2720,6 +2744,10 @@
       "type": "boolean"
     },
     {
+      "id": "symbolic_links",
+      "name": "symbolic_links"
+    },
+    {
       "cli": "--sync-frm",
       "default": "TRUE",
       "dynamic": true,
@@ -2745,10 +2773,7 @@
       "dynamic": true,
       "id": "table_definition_cache",
       "name": "table_definition_cache",
-      "range": {
-        "from": 400,
-        "to": 524288
-      },
+      "range": {},
       "scope": [
         "global"
       ],
@@ -2775,10 +2800,7 @@
       "dynamic": true,
       "id": "table_open_cache",
       "name": "table_open_cache",
-      "range": {
-        "from": 1,
-        "to": 1048576
-      },
+      "range": {},
       "scope": [
         "global"
       ],

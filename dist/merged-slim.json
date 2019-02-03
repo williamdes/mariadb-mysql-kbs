@@ -1735,6 +1735,42 @@
                 "6#wsrep_sync_wait"
             ]
         },
+        "wsrep_trx_fragment_size": {
+            "cli": "--wsrep-trx-fragment-size=#",
+            "default": "2147483647",
+            "dynamic": true,
+            "name": "wsrep_trx_fragment_size",
+            "range": {
+                "from": 0,
+                "to": 2147483647
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "6#wsrep_trx_fragment_size"
+            ]
+        },
+        "wsrep_trx_fragment_unit": {
+            "cli": "--wsrep-trx-fragment-unit=value",
+            "default": "bytes",
+            "dynamic": true,
+            "name": "wsrep_trx_fragment_unit",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "validValues": [
+                "bytes",
+                "rows",
+                "statements"
+            ],
+            "ids": [
+                "6#wsrep_trx_fragment_unit"
+            ]
+        },
         "current_pos": {
             "name": "current_pos",
             "ids": [
@@ -12537,6 +12573,23 @@
                 "29#max_long_data_size"
             ]
         },
+        "max_password_errors": {
+            "cli": "--max-password-errors=#",
+            "default": "4294967295",
+            "dynamic": true,
+            "name": "max_password_errors",
+            "range": {
+                "from": 1,
+                "to": 4294967295
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#max_password_errors"
+            ]
+        },
         "max_prepared_stmt_count": {
             "cli": "--max-prepared-stmt-count=#",
             "default": "16382",
@@ -12937,12 +12990,13 @@
             ]
         },
         "open_files_limit": {
-            "cli": "--open-files-limit=#",
+            "cli": "--open-files-limit=count",
             "default": "5000, with possible adjustment",
             "dynamic": false,
             "name": "open_files_limit",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -13963,6 +14017,15 @@
                 "29#strict_password_validation"
             ]
         },
+        "symbolic_links": {
+            "cli": "--symbolic-links",
+            "name": "symbolic_links",
+            "type": "boolean",
+            "ids": [
+                "29#symbolic_links",
+                "16#option_mysqld_symbolic-links"
+            ]
+        },
         "sync_frm": {
             "cli": "--sync-frm",
             "default": "TRUE",
@@ -13991,10 +14054,6 @@
         "table_definition_cache": {
             "dynamic": true,
             "name": "table_definition_cache",
-            "range": {
-                "from": 400,
-                "to": 524288
-            },
             "scope": [
                 "global"
             ],
@@ -14024,9 +14083,6 @@
         "table_open_cache": {
             "dynamic": true,
             "name": "table_open_cache",
-            "range": {
-                "from": 1
-            },
             "scope": [
                 "global"
             ],
@@ -26955,14 +27011,6 @@
             "type": "boolean",
             "ids": [
                 "16#option_mysqld_super-large-pages"
-            ]
-        },
-        "symbolic_links": {
-            "cli": "--symbolic-links",
-            "name": "symbolic_links",
-            "type": "boolean",
-            "ids": [
-                "16#option_mysqld_symbolic-links"
             ]
         },
         "skip_stack_trace": {

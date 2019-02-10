@@ -1912,6 +1912,37 @@
 |------|----|
 |mariadb.com|[wsrep_sync_wait](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_sync_wait)|
 
+## wsrep_trx_fragment_size
+|name|value|
+|----|-----|
+|Name|`wsrep_trx_fragment_size`|
+|Command line|`--wsrep-trx-fragment-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`2147483647`|
+|Dynamic|`true`|
+|Range|from: `0` to: `2147483647`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_trx_fragment_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_trx_fragment_size)|
+
+## wsrep_trx_fragment_unit
+|name|value|
+|----|-----|
+|Name|`wsrep_trx_fragment_unit`|
+|Command line|`--wsrep-trx-fragment-unit=value`|
+|Scope|`global`, `session`|
+|Default value|`bytes`|
+|Dynamic|`true`|
+|Valid value(s)|`bytes`, `rows`, `statements`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_trx_fragment_unit](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_trx_fragment_unit)|
+
 ## current_pos
 |name|value|
 |----|-----|
@@ -13538,6 +13569,22 @@
 |------|----|
 |mariadb.com|[max_long_data_size](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#max_long_data_size)|
 
+## max_password_errors
+|name|value|
+|----|-----|
+|Name|`max_password_errors`|
+|Command line|`--max-password-errors=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`4294967295`|
+|Dynamic|`true`|
+|Range|from: `1` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[max_password_errors](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#max_password_errors)|
+
 ## max_prepared_stmt_count
 |name|value|
 |----|-----|
@@ -13933,12 +13980,12 @@
 |name|value|
 |----|-----|
 |Name|`open_files_limit`|
-|Command line|`--open-files-limit=#`|
+|Command line|`--open-files-limit=count`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`5000, with possible adjustment`|
 |Dynamic|`false`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15016,6 +15063,19 @@
 |------|----|
 |mariadb.com|[strict_password_validation](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#strict_password_validation)|
 
+## symbolic_links
+|name|value|
+|----|-----|
+|Name|`symbolic_links`|
+|Command line|`--symbolic-links`|
+|Type of variable|`boolean`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[symbolic_links](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#symbolic_links)|
+|dev.mysql.com|[option_mysqld_symbolic-links](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_symbolic-links)|
+
 ## sync_frm
 |name|value|
 |----|-----|
@@ -15052,7 +15112,6 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
-|Range|from: `400` to: `524288`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15083,7 +15142,6 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
-|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17556,7 +17614,6 @@
 |Command line|`--ssl-ca=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17570,7 +17627,6 @@
 |Name|`ssl_capath`|
 |Type of variable|`directory name`|
 |Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17584,7 +17640,6 @@
 |Name|`ssl_cert`|
 |Type of variable|`file name`|
 |Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17598,7 +17653,6 @@
 |Name|`ssl_cipher`|
 |Command line|`--ssl-cipher=name`|
 |Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17612,7 +17666,6 @@
 |Name|`ssl_crl`|
 |Type of variable|`file name`|
 |Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17626,7 +17679,6 @@
 |Name|`ssl_crlpath`|
 |Type of variable|`directory name`|
 |Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17639,7 +17691,6 @@
 |----|-----|
 |Name|`ssl_key`|
 |Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29601,18 +29652,6 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_super-large-pages](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_super-large-pages)|
 
-## symbolic_links
-|name|value|
-|----|-----|
-|Name|`symbolic_links`|
-|Command line|`--symbolic-links`|
-|Type of variable|`boolean`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_symbolic-links](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_symbolic-links)|
-
 ## skip_stack_trace
 |name|value|
 |----|-----|
@@ -31015,6 +31054,20 @@
 |------|----|
 |dev.mysql.com|[sysvar_thread_pool_max_unused_threads](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_max_unused_threads)|
 
+## tls_ciphersuites
+|name|value|
+|----|-----|
+|Name|`tls_ciphersuites`|
+|Command line|`--tls-ciphersuites=ciphersuite_list`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_tls_ciphersuites](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tls_ciphersuites)|
+
 ## tls_version
 |name|value|
 |----|-----|
@@ -31022,7 +31075,6 @@
 |Command line|`--tls-version=protocol_list`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31216,7 +31268,7 @@
 |Command line|`--mysqlx-max-allowed-packet=value`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1048576`|
+|Default value|`67108864`|
 |Dynamic|`true`|
 |Range|from: `512` to: `1073741824`|
 

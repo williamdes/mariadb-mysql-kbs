@@ -104,6 +104,14 @@
       "name": "wsrep_local_send_queue_avg"
     },
     {
+      "id": "wsrep_local_state",
+      "name": "wsrep_local_state"
+    },
+    {
+      "id": "wsrep_local_state_comment",
+      "name": "wsrep_local_state_comment"
+    },
+    {
       "id": "wsrep_local_state_uuid",
       "name": "wsrep_local_state_uuid"
     },

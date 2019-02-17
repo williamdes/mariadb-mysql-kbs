@@ -820,6 +820,19 @@
       "type": "directory name"
     },
     {
+      "cli": "--upgrade=value",
+      "default": "auto",
+      "id": "option_mysqld_upgrade",
+      "name": "upgrade",
+      "type": "enumeration",
+      "validValues": [
+        "AUTO",
+        "NONE",
+        "MINIMAL",
+        "FORCE"
+      ]
+    },
+    {
       "cli": "--user=name",
       "id": "option_mysqld_user",
       "name": "user",

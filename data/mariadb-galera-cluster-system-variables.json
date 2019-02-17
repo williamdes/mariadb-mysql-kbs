@@ -530,6 +530,38 @@
         "session"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--wsrep-trx-fragment-size=#",
+      "default": "2147483647",
+      "dynamic": true,
+      "id": "wsrep_trx_fragment_size",
+      "name": "wsrep_trx_fragment_size",
+      "range": {
+        "from": 0,
+        "to": 2147483647
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--wsrep-trx-fragment-unit=value",
+      "default": "bytes",
+      "dynamic": true,
+      "id": "wsrep_trx_fragment_unit",
+      "name": "wsrep_trx_fragment_unit",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "validValues": [
+        "bytes",
+        "rows",
+        "statements"
+      ]
     }
   ],
   "name": "galera-cluster-system-variables",

@@ -3004,7 +3004,6 @@
     },
     {
       "cli": "--ssl-ca=file_name",
-      "dynamic": false,
       "id": "sysvar_ssl_ca",
       "name": "ssl_ca",
       "scope": [
@@ -3014,7 +3013,6 @@
     },
     {
       "cli": "--ssl-capath=dir_name",
-      "dynamic": false,
       "id": "sysvar_ssl_capath",
       "name": "ssl_capath",
       "scope": [
@@ -3024,7 +3022,6 @@
     },
     {
       "cli": "--ssl-cert=file_name",
-      "dynamic": false,
       "id": "sysvar_ssl_cert",
       "name": "ssl_cert",
       "scope": [
@@ -3034,7 +3031,6 @@
     },
     {
       "cli": "--ssl-cipher=name",
-      "dynamic": false,
       "id": "sysvar_ssl_cipher",
       "name": "ssl_cipher",
       "scope": [
@@ -3044,7 +3040,6 @@
     },
     {
       "cli": "--ssl-crl=file_name",
-      "dynamic": false,
       "id": "sysvar_ssl_crl",
       "name": "ssl_crl",
       "scope": [
@@ -3054,7 +3049,6 @@
     },
     {
       "cli": "--ssl-crlpath=dir_name",
-      "dynamic": false,
       "id": "sysvar_ssl_crlpath",
       "name": "ssl_crlpath",
       "scope": [
@@ -3080,7 +3074,6 @@
     },
     {
       "cli": "--ssl-key=file_name",
-      "dynamic": false,
       "id": "sysvar_ssl_key",
       "name": "ssl_key",
       "scope": [
@@ -3394,8 +3387,17 @@
       "type": "numeric"
     },
     {
+      "cli": "--tls-ciphersuites=ciphersuite_list",
+      "dynamic": true,
+      "id": "sysvar_tls_ciphersuites",
+      "name": "tls_ciphersuites",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--tls-version=protocol_list",
-      "dynamic": false,
       "id": "sysvar_tls_version",
       "name": "tls_version",
       "scope": [

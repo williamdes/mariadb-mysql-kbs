@@ -86,7 +86,7 @@
     },
     {
       "cli": "--mysqlx-max-allowed-packet=value",
-      "default": "1048576",
+      "default": "67108864",
       "dynamic": true,
       "id": "sysvar_mysqlx_max_allowed_packet",
       "name": "mysqlx_max_allowed_packet",

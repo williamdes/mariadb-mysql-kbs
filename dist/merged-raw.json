@@ -1302,6 +1302,24 @@
                 }
             ]
         },
+        "wsrep_local_state": {
+            "name": "wsrep_local_state",
+            "ids": [
+                {
+                    "anchor": "wsrep_local_state",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_local_state_comment": {
+            "name": "wsrep_local_state_comment",
+            "ids": [
+                {
+                    "anchor": "wsrep_local_state_comment",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
         "wsrep_local_state_uuid": {
             "name": "wsrep_local_state_uuid",
             "ids": [
@@ -2158,12 +2176,45 @@
                 }
             ]
         },
-        "current_pos": {
-            "name": "current_pos",
+        "wsrep_trx_fragment_size": {
+            "cli": "--wsrep-trx-fragment-size=#",
+            "default": "2147483647",
+            "dynamic": true,
+            "name": "wsrep_trx_fragment_size",
+            "range": {
+                "from": 0,
+                "to": 2147483647
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
             "ids": [
                 {
-                    "anchor": "current_pos-vs-slave_pos",
-                    "url": "https://mariadb.com/kb/en/library/documentation/gtid/"
+                    "anchor": "wsrep_trx_fragment_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
+                }
+            ]
+        },
+        "wsrep_trx_fragment_unit": {
+            "cli": "--wsrep-trx-fragment-unit=value",
+            "default": "bytes",
+            "dynamic": true,
+            "name": "wsrep_trx_fragment_unit",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "validValues": [
+                "bytes",
+                "rows",
+                "statements"
+            ],
+            "ids": [
+                {
+                    "anchor": "wsrep_trx_fragment_unit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
                 }
             ]
         },
@@ -16308,6 +16359,26 @@
                 }
             ]
         },
+        "max_password_errors": {
+            "cli": "--max-password-errors=#",
+            "default": "4294967295",
+            "dynamic": true,
+            "name": "max_password_errors",
+            "range": {
+                "from": 1,
+                "to": 4294967295
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "max_password_errors",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                }
+            ]
+        },
         "max_prepared_stmt_count": {
             "cli": "--max-prepared-stmt-count=#",
             "default": "16382",
@@ -16843,12 +16914,13 @@
             ]
         },
         "open_files_limit": {
-            "cli": "--open-files-limit=#",
+            "cli": "--open-files-limit=count",
             "default": "5000, with possible adjustment",
             "dynamic": false,
             "name": "open_files_limit",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -18280,6 +18352,21 @@
                 }
             ]
         },
+        "symbolic_links": {
+            "cli": "--symbolic-links",
+            "name": "symbolic_links",
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "symbolic_links",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "option_mysqld_symbolic-links",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
         "sync_frm": {
             "cli": "--sync-frm",
             "default": "TRUE",
@@ -18317,10 +18404,6 @@
         "table_definition_cache": {
             "dynamic": true,
             "name": "table_definition_cache",
-            "range": {
-                "from": 400,
-                "to": 524288
-            },
             "scope": [
                 "global"
             ],
@@ -18359,9 +18442,6 @@
         "table_open_cache": {
             "dynamic": true,
             "name": "table_open_cache",
-            "range": {
-                "from": 1
-            },
             "scope": [
                 "global"
             ],
@@ -21452,7 +21532,6 @@
         },
         "ssl_ca": {
             "cli": "--ssl-ca=file_name",
-            "dynamic": false,
             "name": "ssl_ca",
             "scope": [
                 "global"
@@ -21470,7 +21549,6 @@
             ]
         },
         "ssl_capath": {
-            "dynamic": false,
             "name": "ssl_capath",
             "scope": [
                 "global"
@@ -21488,7 +21566,6 @@
             ]
         },
         "ssl_cert": {
-            "dynamic": false,
             "name": "ssl_cert",
             "scope": [
                 "global"
@@ -21507,7 +21584,6 @@
         },
         "ssl_cipher": {
             "cli": "--ssl-cipher=name",
-            "dynamic": false,
             "name": "ssl_cipher",
             "scope": [
                 "global"
@@ -21524,7 +21600,6 @@
             ]
         },
         "ssl_crl": {
-            "dynamic": false,
             "name": "ssl_crl",
             "scope": [
                 "global"
@@ -21542,7 +21617,6 @@
             ]
         },
         "ssl_crlpath": {
-            "dynamic": false,
             "name": "ssl_crlpath",
             "scope": [
                 "global"
@@ -21560,7 +21634,6 @@
             ]
         },
         "ssl_key": {
-            "dynamic": false,
             "name": "ssl_key",
             "scope": [
                 "global"
@@ -35138,17 +35211,6 @@
                 }
             ]
         },
-        "symbolic_links": {
-            "cli": "--symbolic-links",
-            "name": "symbolic_links",
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_symbolic-links",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                }
-            ]
-        },
         "skip_stack_trace": {
             "cli": "--skip-stack-trace",
             "name": "skip_stack_trace",
@@ -35255,6 +35317,24 @@
                 {
                     "anchor": "sysvar_transaction_read_only",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "upgrade": {
+            "cli": "--upgrade=value",
+            "default": "auto",
+            "name": "upgrade",
+            "type": "enumeration",
+            "validValues": [
+                "AUTO",
+                "NONE",
+                "MINIMAL",
+                "FORCE"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_upgrade",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 }
             ]
         },
@@ -36762,9 +36842,23 @@
                 }
             ]
         },
+        "tls_ciphersuites": {
+            "cli": "--tls-ciphersuites=ciphersuite_list",
+            "dynamic": true,
+            "name": "tls_ciphersuites",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sysvar_tls_ciphersuites",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "tls_version": {
             "cli": "--tls-version=protocol_list",
-            "dynamic": false,
             "name": "tls_version",
             "scope": [
                 "global"
@@ -36993,7 +37087,7 @@
         },
         "mysqlx_max_allowed_packet": {
             "cli": "--mysqlx-max-allowed-packet=value",
-            "default": "1048576",
+            "default": "67108864",
             "dynamic": true,
             "name": "mysqlx_max_allowed_packet",
             "range": {

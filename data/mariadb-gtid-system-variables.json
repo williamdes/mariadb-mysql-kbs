@@ -1,10 +1,6 @@
 {
   "data": [
     {
-      "id": "current_pos-vs-slave_pos",
-      "name": "current_pos"
-    },
-    {
       "id": "gtid_slave_pos",
       "name": "gtid_slave_pos"
     },

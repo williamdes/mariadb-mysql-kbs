@@ -276,7 +276,7 @@
     },
     {
       "cli": "--core-file",
-      "default": "OFF",
+      "default": "ON",
       "dynamic": false,
       "id": "core_file",
       "name": "core_file",
@@ -1977,6 +1977,36 @@
       "range": {
         "from": 1,
         "to": 5
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--optimizer-trace=value",
+      "default": "enabled=off",
+      "dynamic": true,
+      "id": "optimizer_trace",
+      "name": "optimizer_trace",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "validValues": [
+        "enabled={on|off|default}"
+      ]
+    },
+    {
+      "cli": "--optimizer-trace-max-mem-size=#",
+      "default": "1048576",
+      "dynamic": true,
+      "id": "optimizer_trace_max_mem_size",
+      "name": "optimizer_trace_max_mem_size",
+      "range": {
+        "from": 1,
+        "to": 18446744073709552000
       },
       "scope": [
         "global",

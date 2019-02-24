@@ -178,6 +178,21 @@
       "type": "boolean"
     },
     {
+      "cli": "--wsrep-ignore-apply-errors",
+      "default": "0",
+      "dynamic": true,
+      "id": "wsrep_ignore_apply_errors",
+      "name": "wsrep_ignore_apply_errors",
+      "range": {
+        "from": 0,
+        "to": 7
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--wsrep-load-data-splitting[={0|1}]",
       "default": "ON",
       "dynamic": true,
@@ -448,6 +463,20 @@
       "type": "boolean"
     },
     {
+      "cli": "--wsrep-sr-store=val",
+      "default": "table",
+      "dynamic": false,
+      "id": "wsrep_sr_store",
+      "name": "wsrep_sr_store",
+      "scope": [
+        "global"
+      ],
+      "validValues": [
+        "table",
+        "none"
+      ]
+    },
+    {
       "cli": "--wsrep-sst-auth=value",
       "dynamic": true,
       "id": "wsrep_sst_auth",
@@ -533,7 +562,7 @@
     },
     {
       "cli": "--wsrep-trx-fragment-size=#",
-      "default": "2147483647",
+      "default": "0",
       "dynamic": true,
       "id": "wsrep_trx_fragment_size",
       "name": "wsrep_trx_fragment_size",

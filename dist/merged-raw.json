@@ -1677,6 +1677,26 @@
                 }
             ]
         },
+        "wsrep_ignore_apply_errors": {
+            "cli": "--wsrep-ignore-apply-errors",
+            "default": "0",
+            "dynamic": true,
+            "name": "wsrep_ignore_apply_errors",
+            "range": {
+                "from": 0,
+                "to": 7
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_ignore_apply_errors",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
+                }
+            ]
+        },
         "wsrep_load_data_splitting": {
             "cli": "--wsrep-load-data-splitting[={0|1}]",
             "default": "ON",
@@ -2057,6 +2077,25 @@
                 }
             ]
         },
+        "wsrep_sr_store": {
+            "cli": "--wsrep-sr-store=val",
+            "default": "table",
+            "dynamic": false,
+            "name": "wsrep_sr_store",
+            "scope": [
+                "global"
+            ],
+            "validValues": [
+                "table",
+                "none"
+            ],
+            "ids": [
+                {
+                    "anchor": "wsrep_sr_store",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
+                }
+            ]
+        },
         "wsrep_sst_auth": {
             "cli": "--wsrep-sst-auth=value",
             "dynamic": true,
@@ -2178,7 +2217,7 @@
         },
         "wsrep_trx_fragment_size": {
             "cli": "--wsrep-trx-fragment-size=#",
-            "default": "2147483647",
+            "default": "0",
             "dynamic": true,
             "name": "wsrep_trx_fragment_size",
             "range": {
@@ -17047,6 +17086,44 @@
                 }
             ]
         },
+        "optimizer_trace": {
+            "dynamic": true,
+            "name": "optimizer_trace",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "optimizer_trace",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_optimizer_trace",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "optimizer_trace_max_mem_size": {
+            "dynamic": true,
+            "name": "optimizer_trace_max_mem_size",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "optimizer_trace_max_mem_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_optimizer_trace_max_mem_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "pid_file": {
             "cli": "--pid-file=file_name",
             "dynamic": false,
@@ -27498,10 +27575,12 @@
             "validValues": [
                 "innodb",
                 "crc32",
+                "full_crc32",
                 "none",
                 "strict_innodb",
                 "strict_crc32",
-                "strict_none"
+                "strict_none",
+                "strict_full_crc32"
             ],
             "ids": [
                 {
@@ -36150,21 +36229,6 @@
                 }
             ]
         },
-        "optimizer_trace": {
-            "dynamic": true,
-            "name": "optimizer_trace",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "sysvar_optimizer_trace",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
         "optimizer_trace_features": {
             "dynamic": true,
             "name": "optimizer_trace_features",
@@ -36192,21 +36256,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_optimizer_trace_limit",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
-        "optimizer_trace_max_mem_size": {
-            "dynamic": true,
-            "name": "optimizer_trace_max_mem_size",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_optimizer_trace_max_mem_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

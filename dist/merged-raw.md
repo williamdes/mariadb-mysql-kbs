@@ -1499,6 +1499,22 @@
 |------|----|
 |mariadb.com|[wsrep_gtid_mode](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_gtid_mode)|
 
+## wsrep_ignore_apply_errors
+|name|value|
+|----|-----|
+|Name|`wsrep_ignore_apply_errors`|
+|Command line|`--wsrep-ignore-apply-errors`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `7`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_ignore_apply_errors](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_ignore_apply_errors)|
+
 ## wsrep_load_data_splitting
 |name|value|
 |----|-----|
@@ -1827,6 +1843,21 @@
 |------|----|
 |mariadb.com|[wsrep_slave_uk_checks](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_slave_uk_checks)|
 
+## wsrep_sr_store
+|name|value|
+|----|-----|
+|Name|`wsrep_sr_store`|
+|Command line|`--wsrep-sr-store=val`|
+|Scope|`global`|
+|Default value|`table`|
+|Dynamic|`false`|
+|Valid value(s)|`table`, `none`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_sr_store](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_sr_store)|
+
 ## wsrep_sst_auth
 |name|value|
 |----|-----|
@@ -1939,7 +1970,7 @@
 |Command line|`--wsrep-trx-fragment-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`2147483647`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `0` to: `2147483647`|
 
@@ -14083,6 +14114,34 @@
 |------|----|
 |mariadb.com|[optimizer_use_condition_selectivity](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_use_condition_selectivity)|
 
+## optimizer_trace
+|name|value|
+|----|-----|
+|Name|`optimizer_trace`|
+|Type of variable|`string`|
+|Scope|`global`, `session`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[optimizer_trace](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_trace)|
+|dev.mysql.com|[sysvar_optimizer_trace](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace)|
+
+## optimizer_trace_max_mem_size
+|name|value|
+|----|-----|
+|Name|`optimizer_trace_max_mem_size`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[optimizer_trace_max_mem_size](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_trace_max_mem_size)|
+|dev.mysql.com|[sysvar_optimizer_trace_max_mem_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace_max_mem_size)|
+
 ## pid_file
 |name|value|
 |----|-----|
@@ -23201,7 +23260,7 @@
 |Scope|`global`|
 |Default value|`crc32`|
 |Dynamic|`true`|
-|Valid value(s)|`innodb`, `crc32`, `none`, `strict_innodb`, `strict_crc32`, `strict_none`|
+|Valid value(s)|`innodb`, `crc32`, `full_crc32`, `none`, `strict_innodb`, `strict_crc32`, `strict_none`, `strict_full_crc32`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -30489,19 +30548,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_offline_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_offline_mode)|
 
-## optimizer_trace
-|name|value|
-|----|-----|
-|Name|`optimizer_trace`|
-|Type of variable|`string`|
-|Scope|`global`, `session`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_optimizer_trace](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace)|
-
 ## optimizer_trace_features
 |name|value|
 |----|-----|
@@ -30528,19 +30574,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_optimizer_trace_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace_limit)|
-
-## optimizer_trace_max_mem_size
-|name|value|
-|----|-----|
-|Name|`optimizer_trace_max_mem_size`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_optimizer_trace_max_mem_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace_max_mem_size)|
 
 ## optimizer_trace_offset
 |name|value|

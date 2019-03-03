@@ -567,10 +567,12 @@
       "validValues": [
         "innodb",
         "crc32",
+        "full_crc32",
         "none",
         "strict_innodb",
         "strict_crc32",
-        "strict_none"
+        "strict_none",
+        "strict_full_crc32"
       ]
     },
     {

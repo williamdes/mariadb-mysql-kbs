@@ -19,6 +19,22 @@
       ]
     },
     {
+      "cli": "--analyze-sample-percentage=#",
+      "default": "100.000000",
+      "dynamic": true,
+      "id": "analyze_sample_percentage",
+      "name": "analyze_sample_percentage",
+      "range": {
+        "from": 0,
+        "to": 100
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--autocommit[=#]",
       "default": "1",
       "dynamic": true,
@@ -276,7 +292,7 @@
     },
     {
       "cli": "--core-file",
-      "default": "OFF",
+      "default": "ON",
       "dynamic": false,
       "id": "core_file",
       "name": "core_file",
@@ -335,6 +351,21 @@
         "session"
       ],
       "type": "string"
+    },
+    {
+      "cli": "--default-password-lifetime=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "default_password_lifetime",
+      "name": "default_password_lifetime",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "numeric"
     },
     {
       "id": "default_regex_flags",
@@ -445,6 +476,17 @@
         "global"
       ],
       "type": "numeric"
+    },
+    {
+      "cli": "--disconnect-on-expired-password[={0|1}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "disconnect_on_expired_password",
+      "name": "disconnect_on_expired_password",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--div-precision-increment=#",
@@ -1587,6 +1629,22 @@
       "type": "integer"
     },
     {
+      "cli": "--max-rowid-filter-size=#",
+      "default": "131072",
+      "dynamic": true,
+      "id": "max_rowid_filter_size",
+      "name": "max_rowid_filter_size",
+      "range": {
+        "from": 1024,
+        "to": 18446744073709552000
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--max-seeks-for-key=#",
       "default": "4294967295",
       "dynamic": true,
@@ -1977,6 +2035,36 @@
       "range": {
         "from": 1,
         "to": 5
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--optimizer-trace=value",
+      "default": "enabled=off",
+      "dynamic": true,
+      "id": "optimizer_trace",
+      "name": "optimizer_trace",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "validValues": [
+        "enabled={on|off|default}"
+      ]
+    },
+    {
+      "cli": "--optimizer-trace-max-mem-size=#",
+      "default": "1048576",
+      "dynamic": true,
+      "id": "optimizer_trace_max_mem_size",
+      "name": "optimizer_trace_max_mem_size",
+      "range": {
+        "from": 1,
+        "to": 18446744073709552000
       },
       "scope": [
         "global",

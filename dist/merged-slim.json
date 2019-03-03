@@ -895,10 +895,16 @@
                 "4#connect_xtrace"
             ]
         },
+        "wsrep": {
+            "name": "wsrep",
+            "ids": [
+                "6#wsrep"
+            ]
+        },
         "wsrep_apply_oooe": {
             "name": "wsrep_apply_oooe",
             "ids": [
-                "6#wsrep_apply_oooe"
+                "5#wsrep_apply_oooe"
             ]
         },
         "wsrep_apply_oool": {
@@ -911,6 +917,12 @@
             "name": "wsrep_cert_deps_distance",
             "ids": [
                 "5#wsrep_cert_deps_distance"
+            ]
+        },
+        "wsrep_cluster_capabilities": {
+            "name": "wsrep_cluster_capabilities",
+            "ids": [
+                "5#wsrep_cluster_capabilities"
             ]
         },
         "wsrep_cluster_conf_id": {
@@ -1155,6 +1167,23 @@
                 "6#wsrep_causal_reads"
             ]
         },
+        "wsrep_certification_rules": {
+            "cli": "--wsrep-certifcation-rules",
+            "default": "strict",
+            "dynamic": true,
+            "name": "wsrep_certification_rules",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "strict",
+                "optimized"
+            ],
+            "ids": [
+                "6#wsrep_certification_rules"
+            ]
+        },
         "wsrep_certify_nonPK": {
             "cli": "--wsrep-certify-nonpk[={0|1}]",
             "default": "ON",
@@ -1238,7 +1267,6 @@
             "scope": [
                 "global"
             ],
-            "type": "boolean",
             "ids": [
                 "6#wsrep_debug"
             ]
@@ -1333,6 +1361,23 @@
             "type": "boolean",
             "ids": [
                 "6#wsrep_gtid_mode"
+            ]
+        },
+        "wsrep_ignore_apply_errors": {
+            "cli": "--wsrep-ignore-apply-errors",
+            "default": "0",
+            "dynamic": true,
+            "name": "wsrep_ignore_apply_errors",
+            "range": {
+                "from": 0,
+                "to": 7
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "6#wsrep_ignore_apply_errors"
             ]
         },
         "wsrep_load_data_splitting": {
@@ -1649,6 +1694,22 @@
                 "6#wsrep_slave_uk_checks"
             ]
         },
+        "wsrep_sr_store": {
+            "cli": "--wsrep-sr-store=val",
+            "default": "table",
+            "dynamic": false,
+            "name": "wsrep_sr_store",
+            "scope": [
+                "global"
+            ],
+            "validValues": [
+                "table",
+                "none"
+            ],
+            "ids": [
+                "6#wsrep_sr_store"
+            ]
+        },
         "wsrep_sst_auth": {
             "cli": "--wsrep-sst-auth=value",
             "dynamic": true,
@@ -1749,7 +1810,7 @@
         },
         "wsrep_trx_fragment_size": {
             "cli": "--wsrep-trx-fragment-size=#",
-            "default": "2147483647",
+            "default": "0",
             "dynamic": true,
             "name": "wsrep_trx_fragment_size",
             "range": {
@@ -7370,6 +7431,17 @@
                 "28#com_backup"
             ]
         },
+        "Com_backup_lock": {
+            "name": "Com_backup_lock",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "28#com_backup_lock"
+            ]
+        },
         "Com_backup_table": {
             "name": "Com_backup_table",
             "scope": [
@@ -10693,6 +10765,24 @@
                 "30#alter_algorithm"
             ]
         },
+        "analyze_sample_percentage": {
+            "cli": "--analyze-sample-percentage=#",
+            "default": "100.000000",
+            "dynamic": true,
+            "name": "analyze_sample_percentage",
+            "range": {
+                "from": 0,
+                "to": 100
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#analyze_sample_percentage"
+            ]
+        },
         "autocommit": {
             "cli": "--autocommit[=#]",
             "default": "1",
@@ -11106,6 +11196,23 @@
                 "10#sysvar_debug_sync"
             ]
         },
+        "default_password_lifetime": {
+            "cli": "--default-password-lifetime=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "default_password_lifetime",
+            "range": {
+                "from": 0
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#default_password_lifetime",
+                "10#sysvar_default_password_lifetime"
+            ]
+        },
         "default_regex_flags": {
             "name": "default_regex_flags",
             "ids": [
@@ -11242,6 +11349,17 @@
             "ids": [
                 "29#delayed_queue_size",
                 "10#sysvar_delayed_queue_size"
+            ]
+        },
+        "disconnect_on_expired_password": {
+            "name": "disconnect_on_expired_password",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "29#disconnect_on_expired_password",
+                "10#sysvar_disconnect_on_expired_password"
             ]
         },
         "div_precision_increment": {
@@ -12631,6 +12749,24 @@
                 "29#max_recursive_iterations"
             ]
         },
+        "max_rowid_filter_size": {
+            "cli": "--max-rowid-filter-size=#",
+            "default": "131072",
+            "dynamic": true,
+            "name": "max_rowid_filter_size",
+            "range": {
+                "from": 1024,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#max_rowid_filter_size"
+            ]
+        },
         "max_seeks_for_key": {
             "cli": "--max-seeks-for-key=#",
             "dynamic": true,
@@ -13094,6 +13230,32 @@
             "type": "integer",
             "ids": [
                 "29#optimizer_use_condition_selectivity"
+            ]
+        },
+        "optimizer_trace": {
+            "dynamic": true,
+            "name": "optimizer_trace",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "string",
+            "ids": [
+                "29#optimizer_trace",
+                "10#sysvar_optimizer_trace"
+            ]
+        },
+        "optimizer_trace_max_mem_size": {
+            "dynamic": true,
+            "name": "optimizer_trace_max_mem_size",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#optimizer_trace_max_mem_size",
+                "10#sysvar_optimizer_trace_max_mem_size"
             ]
         },
         "pid_file": {
@@ -16614,6 +16776,7 @@
             "scope": [
                 "global"
             ],
+            "type": "string",
             "ids": [
                 "34#ssl_cipher",
                 "10#sysvar_ssl_cipher"
@@ -21060,10 +21223,12 @@
             "validValues": [
                 "innodb",
                 "crc32",
+                "full_crc32",
                 "none",
                 "strict_innodb",
                 "strict_crc32",
-                "strict_none"
+                "strict_none",
+                "strict_full_crc32"
             ],
             "ids": [
                 "40#innodb_checksum_algorithm",
@@ -27349,23 +27514,6 @@
                 "10#sysvar_default_collation_for_utf8mb4"
             ]
         },
-        "default_password_lifetime": {
-            "cli": "--default-password-lifetime=#",
-            "default": "0",
-            "dynamic": true,
-            "name": "default_password_lifetime",
-            "range": {
-                "from": 0,
-                "to": 65535
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "10#sysvar_default_password_lifetime"
-            ]
-        },
         "disabled_storage_engines": {
             "cli": "--disabled-storage-engines=engine[,engine]...",
             "default": "empty string",
@@ -27377,19 +27525,6 @@
             "type": "string",
             "ids": [
                 "10#sysvar_disabled_storage_engines"
-            ]
-        },
-        "disconnect_on_expired_password": {
-            "cli": "--disconnect-on-expired-password[=#]",
-            "default": "on",
-            "dynamic": false,
-            "name": "disconnect_on_expired_password",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "10#sysvar_disconnect_on_expired_password"
             ]
         },
         "dragnet.log_error_filter_rules": {
@@ -27777,18 +27912,6 @@
                 "10#sysvar_offline_mode"
             ]
         },
-        "optimizer_trace": {
-            "dynamic": true,
-            "name": "optimizer_trace",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "string",
-            "ids": [
-                "10#sysvar_optimizer_trace"
-            ]
-        },
         "optimizer_trace_features": {
             "dynamic": true,
             "name": "optimizer_trace_features",
@@ -27812,18 +27935,6 @@
             "type": "integer",
             "ids": [
                 "10#sysvar_optimizer_trace_limit"
-            ]
-        },
-        "optimizer_trace_max_mem_size": {
-            "dynamic": true,
-            "name": "optimizer_trace_max_mem_size",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "10#sysvar_optimizer_trace_max_mem_size"
             ]
         },
         "optimizer_trace_offset": {
@@ -28456,335 +28567,6 @@
             "ids": [
                 "46#sysvar_version_tokens_session_number"
             ]
-        },
-        "mysqlx": {
-            "cli": "--mysqlx[=value]",
-            "default": "on",
-            "name": "mysqlx",
-            "type": "enumeration",
-            "validValues": [
-                "ON",
-                "OFF",
-                "FORCE",
-                "FORCE_PLUS_PERMANENT"
-            ],
-            "ids": [
-                "48#option_mysqld_mysqlx"
-            ]
-        },
-        "mysqlx_bind_address": {
-            "cli": "--mysqlx-bind-address=value",
-            "default": "*",
-            "dynamic": false,
-            "name": "mysqlx_bind_address",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                "47#sysvar_mysqlx_bind_address"
-            ]
-        },
-        "mysqlx_connect_timeout": {
-            "cli": "--mysqlx-connect-timeout=value",
-            "default": "30",
-            "dynamic": true,
-            "name": "mysqlx_connect_timeout",
-            "range": {
-                "from": 1,
-                "to": 1000000000
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_connect_timeout"
-            ]
-        },
-        "mysqlx_document_id_unique_prefix": {
-            "cli": "--mysqlx-document-id-unique-prefix=value",
-            "default": "0",
-            "dynamic": true,
-            "name": "mysqlx_document_id_unique_prefix",
-            "range": {
-                "from": 0,
-                "to": 65535
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_document_id_unique_prefix"
-            ]
-        },
-        "mysqlx_idle_worker_thread_timeout": {
-            "cli": "--mysqlx-idle-worker-thread-timeout=value",
-            "default": "60",
-            "dynamic": true,
-            "name": "mysqlx_idle_worker_thread_timeout",
-            "range": {
-                "from": 0,
-                "to": 3600
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_idle_worker_thread_timeout"
-            ]
-        },
-        "mysqlx_interactive_timeout": {
-            "cli": "--mysqlx-interactive-timeout=value",
-            "default": "28800",
-            "dynamic": true,
-            "name": "mysqlx_interactive_timeout",
-            "range": {
-                "from": 1,
-                "to": 2147483
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_interactive_timeout"
-            ]
-        },
-        "mysqlx_max_allowed_packet": {
-            "cli": "--mysqlx-max-allowed-packet=value",
-            "default": "67108864",
-            "dynamic": true,
-            "name": "mysqlx_max_allowed_packet",
-            "range": {
-                "from": 512,
-                "to": 1073741824
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_max_allowed_packet"
-            ]
-        },
-        "mysqlx_max_connections": {
-            "cli": "--mysqlx-max-connections=value",
-            "default": "100",
-            "dynamic": true,
-            "name": "mysqlx_max_connections",
-            "range": {
-                "from": 1,
-                "to": 65535
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_max_connections"
-            ]
-        },
-        "mysqlx_min_worker_threads": {
-            "cli": "--mysqlx-min-worker-threads=value",
-            "default": "2",
-            "dynamic": true,
-            "name": "mysqlx_min_worker_threads",
-            "range": {
-                "from": 1,
-                "to": 100
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_min_worker_threads"
-            ]
-        },
-        "mysqlx_port": {
-            "cli": "--mysqlx-port=value",
-            "default": "33060",
-            "dynamic": false,
-            "name": "mysqlx_port",
-            "range": {
-                "from": 1,
-                "to": 65535
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_port"
-            ]
-        },
-        "mysqlx_port_open_timeout": {
-            "cli": "--mysqlx-port-open-timeout=value",
-            "default": "0",
-            "dynamic": false,
-            "name": "mysqlx_port_open_timeout",
-            "range": {
-                "from": 0,
-                "to": 120
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_port_open_timeout"
-            ]
-        },
-        "mysqlx_read_timeout": {
-            "cli": "--mysqlx-read-timeout=value",
-            "default": "28800",
-            "dynamic": true,
-            "name": "mysqlx_read_timeout",
-            "range": {
-                "from": 30,
-                "to": 2147483
-            },
-            "scope": [
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_read_timeout"
-            ]
-        },
-        "mysqlx_socket": {
-            "cli": "--mysqlx-socket=file_name",
-            "default": "/tmp/mysqlx.sock",
-            "dynamic": false,
-            "name": "mysqlx_socket",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                "47#sysvar_mysqlx_socket"
-            ]
-        },
-        "mysqlx_ssl_ca": {
-            "cli": "--mysqlx-ssl-ca=file_name",
-            "dynamic": false,
-            "name": "mysqlx_ssl_ca",
-            "scope": [
-                "global"
-            ],
-            "type": "file name",
-            "ids": [
-                "47#sysvar_mysqlx_ssl_ca"
-            ]
-        },
-        "mysqlx_ssl_capath": {
-            "cli": "--mysqlx-ssl-capath=dir_name",
-            "dynamic": false,
-            "name": "mysqlx_ssl_capath",
-            "scope": [
-                "global"
-            ],
-            "type": "directory name",
-            "ids": [
-                "47#sysvar_mysqlx_ssl_capath"
-            ]
-        },
-        "mysqlx_ssl_cert": {
-            "cli": "--mysqlx-ssl-cert=name",
-            "dynamic": false,
-            "name": "mysqlx_ssl_cert",
-            "scope": [
-                "global"
-            ],
-            "type": "file name",
-            "ids": [
-                "47#sysvar_mysqlx_ssl_cert"
-            ]
-        },
-        "mysqlx_ssl_cipher": {
-            "cli": "--mysqlx-ssl-cipher=name",
-            "dynamic": false,
-            "name": "mysqlx_ssl_cipher",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                "47#sysvar_mysqlx_ssl_cipher"
-            ]
-        },
-        "mysqlx_ssl_crl": {
-            "cli": "--mysqlx-ssl-crl=file_name",
-            "dynamic": false,
-            "name": "mysqlx_ssl_crl",
-            "scope": [
-                "global"
-            ],
-            "type": "file name",
-            "ids": [
-                "47#sysvar_mysqlx_ssl_crl"
-            ]
-        },
-        "mysqlx_ssl_crlpath": {
-            "cli": "--mysqlx-ssl-crlpath=dir_name",
-            "dynamic": false,
-            "name": "mysqlx_ssl_crlpath",
-            "scope": [
-                "global"
-            ],
-            "type": "directory name",
-            "ids": [
-                "47#sysvar_mysqlx_ssl_crlpath"
-            ]
-        },
-        "mysqlx_ssl_key": {
-            "cli": "--mysqlx-ssl-key=file_name",
-            "dynamic": false,
-            "name": "mysqlx_ssl_key",
-            "scope": [
-                "global"
-            ],
-            "type": "file name",
-            "ids": [
-                "47#sysvar_mysqlx_ssl_key"
-            ]
-        },
-        "mysqlx_wait_timeout": {
-            "cli": "--mysqlx-wait-timeout=value",
-            "default": "28800",
-            "dynamic": true,
-            "name": "mysqlx_wait_timeout",
-            "range": {
-                "from": 1,
-                "to": 2147483
-            },
-            "scope": [
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_wait_timeout"
-            ]
-        },
-        "mysqlx_write_timeout": {
-            "cli": "--mysqlx-write-timeout=value",
-            "default": "60",
-            "dynamic": true,
-            "name": "mysqlx_write_timeout",
-            "range": {
-                "from": 1,
-                "to": 2147483
-            },
-            "scope": [
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#sysvar_mysqlx_write_timeout"
-            ]
         }
     },
     "version": 1,
@@ -28835,7 +28617,6 @@
         "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html",
         "https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html",
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html",
-        "https://dev.mysql.com/doc/refman/8.0/en/version-tokens-reference.html",
-        "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+        "https://dev.mysql.com/doc/refman/8.0/en/version-tokens-reference.html"
     ]
 }

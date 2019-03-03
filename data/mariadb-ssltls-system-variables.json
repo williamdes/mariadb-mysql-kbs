@@ -54,7 +54,7 @@
       "scope": [
         "global"
       ],
-      "type": "file name"
+      "type": "string"
     },
     {
       "cli": "--ssl-crl=name",

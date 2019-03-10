@@ -264,6 +264,15 @@
       "type": "integer"
     },
     {
+      "id": "com_backup_lock",
+      "name": "Com_backup_lock",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "com_backup_table",
       "name": "Com_backup_table",
       "scope": [

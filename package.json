@@ -39,6 +39,8 @@
         ]
     },
     "scripts": {
+        "changelog": "changelog-generator-twig --owner williamdes --repo mariadb-mysql-kbs --repoDir ./ --baseCommit 28e9e010dc027dee17a55f5eedad776dcf983e95",
+        "changelog-file": "npm run --silent changelog > CHANGELOG.md",
         "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write",
         "test": "nyc mocha --ui tdd",
         "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov",
@@ -53,17 +55,16 @@
         "name": "William Desportes",
         "url": "https://william.wdes.fr"
     },
-    "dependencies": {
-        "jsdom": "^13.1.0"
-    },
+    "dependencies": {},
     "devDependencies": {
         "chai": "^4.2.0",
-        "codecov": "^3.1.0",
-        "mocha": "^5.2.0",
-        "nyc": "^13.1.0",
-        "prettier": "^1.15.3",
-        "sudo-bot": "^1.1.4",
-        "twig": "^1.13.0"
+        "changelog-generator-twig": "^1.0.0",
+        "codecov": "^3.2.0",
+        "jsdom": "^14.0.0",
+        "mocha": "^6.0.2",
+        "nyc": "^13.3.0",
+        "prettier": "^1.16.4",
+        "sudo-bot": "^1.1.4"
     },
     "directories": {
         "lib": "src",

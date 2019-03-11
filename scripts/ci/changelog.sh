@@ -1,4 +1,4 @@
 #!/bin/bash
 npm install --only=dev
-./scripts/changelog.js > CHANGELOG.md
+npm run changelog-file
 git diff --no-prefix CHANGELOG.md

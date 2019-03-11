@@ -2504,16 +2504,16 @@
         },
         {
             "name": "swaggest/json-schema",
-            "version": "v0.12.6",
+            "version": "v0.12.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swaggest/php-json-schema.git",
-                "reference": "93347a53914b5d737f9bd5a15848953c014de6cb"
+                "reference": "d4042175a957c8911ee2a312f179c8859f11b68d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swaggest/php-json-schema/zipball/93347a53914b5d737f9bd5a15848953c014de6cb",
-                "reference": "93347a53914b5d737f9bd5a15848953c014de6cb",
+                "url": "https://api.github.com/repos/swaggest/php-json-schema/zipball/d4042175a957c8911ee2a312f179c8859f11b68d",
+                "reference": "d4042175a957c8911ee2a312f179c8859f11b68d",
                 "shasum": ""
             },
             "require": {
@@ -2546,7 +2546,7 @@
                 }
             ],
             "description": "High definition PHP structures with JSON-schema based validation",
-            "time": "2018-12-16T16:37:21+00:00"
+            "time": "2019-01-27T23:26:12+00:00"
         },
         {
             "name": "symfony/console",
@@ -2779,7 +2779,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",

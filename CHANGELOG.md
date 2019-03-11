@@ -6,6 +6,37 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- [3fa4313](https://github.com/williamdes/mariadb-mysql-kbs/commit/3fa43131b44f8b5407bb63411589ffa61dcb75b9) added: dependabot config
+- [571ccf3](https://github.com/williamdes/mariadb-mysql-kbs/commit/571ccf3edc1b3b5cfa0245d5518063a9434d0835) added: LGTM and fixed changelog
+- [a068fde](https://github.com/williamdes/mariadb-mysql-kbs/commit/a068fde4a0421f96d4e1897170b409d638f9aabe) added: merged data and tests to PR template
+- [effd148](https://github.com/williamdes/mariadb-mysql-kbs/commit/effd1487a0227d1092455838abd73e145808fd01) added: template for sudo-bot and mocha
+- [d17883b](https://github.com/williamdes/mariadb-mysql-kbs/commit/d17883bc5b41d187f9c3132a8577fd470fb3213e) added: sudo-bot
+
+### Changed
+- [e031ee1](https://github.com/williamdes/mariadb-mysql-kbs/commit/e031ee1af193878dfccf7892c2aa553bc76f4f00) updated: package.json & package-lock.json
+- [b4675f3](https://github.com/williamdes/mariadb-mysql-kbs/commit/b4675f313ad67ef4bee7a661014d0ffcf9911bd2) updated: sudo-bot
+- [dd0ff5c](https://github.com/williamdes/mariadb-mysql-kbs/commit/dd0ff5c9448f65dde6d5ef829589e2115292aa20) updated: [MySQL] & [MariaDB] data
+- [852b3a2](https://github.com/williamdes/mariadb-mysql-kbs/commit/852b3a2a527f620310fe2b90877d15ef315a60c9) updated: composer.lock and package-lock.json and updated package.json
+- [ef766fd](https://github.com/williamdes/mariadb-mysql-kbs/commit/ef766fd9991e4fd1e80bb7b14abb2a352ecd4689) updated: changelog 📖
+
+### Removed
+- [ab83775](https://github.com/williamdes/mariadb-mysql-kbs/commit/ab83775286f122b186526c106079e798525ca307) removed: deploy on tag
+
+### Fixed
+- [1b433f8](https://github.com/williamdes/mariadb-mysql-kbs/commit/1b433f8f30c6f1cb4ad42540f869614f13239fbb) fixed: nyc coverage
+- [2f24409](https://github.com/williamdes/mariadb-mysql-kbs/commit/2f244099934d2d125d01d55dbe5c2388c09693ff) fixed: Coverage report and ignore files
+- [8bee75a](https://github.com/williamdes/mariadb-mysql-kbs/commit/8bee75af85dc02e8be72fae9ff9e29c0670c7b77) fixed: CI coverage
+- [ae75ce8](https://github.com/williamdes/mariadb-mysql-kbs/commit/ae75ce8c4fd44cdae42748f3ab769cdd0401868c) fixed: CI & mocha tests installation
+- [8fa12ea](https://github.com/williamdes/mariadb-mysql-kbs/commit/8fa12eaab4a917677828a4f12f0b07f936c8a023) fixed: composer namespace
+- [ee2c058](https://github.com/williamdes/mariadb-mysql-kbs/commit/ee2c05800e170ed0743b5905db43450359ca10e6) fixed: travis CI and other files
+- [a4974c5](https://github.com/williamdes/mariadb-mysql-kbs/commit/a4974c5050132cd38945d2c639fdd614fb080d11) fix: OSX CI
+- [a6a9ed8](https://github.com/williamdes/mariadb-mysql-kbs/commit/a6a9ed8d17fc672413bbebc5908928a1ad80a679) fix: OSX on CI
+- [4762da9](https://github.com/williamdes/mariadb-mysql-kbs/commit/4762da9723c8da0378d990a3a9062b89ac71f4f6) fixed: npm ignore
+
+### Improvements
+- [f4cd7a0](https://github.com/williamdes/mariadb-mysql-kbs/commit/f4cd7a000f32939649796c8880f34dc2c8ceee93) style: prettier
+- [40ca56a](https://github.com/williamdes/mariadb-mysql-kbs/commit/40ca56af22aafc5fc314e1c1dee7520ae2cf69b9) style: prettier on changelog.js
 
 
 ## [v1.2.4]
@@ -237,6 +268,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 [v1.2.1]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.1.0...v1.2.0
 [v1.1.0]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.0.0...v1.1.0
-[v1.0.0]: https://github.com/williamdes/mariadb-mysql-kbs/compare/4282724e1e04d6b27d3c0744e1a37a50be740237...v1.0.0
+[v1.0.0]: https://github.com/williamdes/mariadb-mysql-kbs/compare/28e9e010dc027dee17a55f5eedad776dcf983e95...v1.0.0
 
 

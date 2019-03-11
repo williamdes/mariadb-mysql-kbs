@@ -8,6 +8,8 @@
 [![npm version](https://badge.fury.io/js/mariadb-mysql-kbs.svg)](https://badge.fury.io/js/mariadb-mysql-kbs)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/williamdes/mariadb-mysql-kbs.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/williamdes/mariadb-mysql-kbs/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/williamdes/mariadb-mysql-kbs.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/williamdes/mariadb-mysql-kbs/context:javascript)
+[![Known Vulnerabilities](https://snyk.io/test/github/williamdes/mariadb-mysql-kbs/badge.svg)](https://snyk.io/test/github/williamdes/mariadb-mysql-kbs)
+[![Dependabot](https://badgen.net/badge/Dependabot/enabled/green?icon=dependabot)](https://dependabot.com/)
 
 [API doc](https://williamdes.github.io/mariadb-mysql-kbs/Williamdes/MariaDBMySQLKBS.html)
 

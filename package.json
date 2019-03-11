@@ -23,9 +23,24 @@
         "composer-package",
         "npm-package"
     ],
+    "nyc": {
+        "exclude": [
+            "apidocs",
+            "data",
+            "test",
+            "build",
+            "vendor",
+            "coverage",
+            ".nyc_output"
+        ],
+        "reporter": [
+            "text",
+            "text-summary"
+        ]
+    },
     "scripts": {
         "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write",
-        "test": "nyc --reporter=lcov mocha --ui tdd --reporter spec",
+        "test": "nyc mocha --ui tdd",
         "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov",
         "sudo-bot-pr": "sudo-bot --env scripts/sudo-bot/.env --verbose"
     },

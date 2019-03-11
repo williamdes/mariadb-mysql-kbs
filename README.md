@@ -31,6 +31,6 @@ composer require williamdes/mariadb-mysql-kbs
 ```
 
 ```
-npm install --save williamdes/mariadb-mysql-kbs
+npm install --save mariadb-mysql-kbs
 ```
 

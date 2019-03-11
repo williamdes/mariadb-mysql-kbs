@@ -31316,7 +31316,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[option_mysqld_mysqlx](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#option_mysqld_mysqlx)|
+|dev.mysql.com|[option_mysqld_mysqlx](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#option_mysqld_mysqlx)|
 
 ## mysqlx_bind_address
 |name|value|
@@ -31331,7 +31331,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_bind_address](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_bind_address)|
+|dev.mysql.com|[sysvar_mysqlx_bind_address](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_bind_address)|
 
 ## mysqlx_connect_timeout
 |name|value|
@@ -31347,7 +31347,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_connect_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_connect_timeout)|
+|dev.mysql.com|[sysvar_mysqlx_connect_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_connect_timeout)|
 
 ## mysqlx_document_id_unique_prefix
 |name|value|
@@ -31363,7 +31363,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_document_id_unique_prefix](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_document_id_unique_prefix)|
+|dev.mysql.com|[sysvar_mysqlx_document_id_unique_prefix](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_document_id_unique_prefix)|
 
 ## mysqlx_idle_worker_thread_timeout
 |name|value|
@@ -31379,7 +31379,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_idle_worker_thread_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_idle_worker_thread_timeout)|
+|dev.mysql.com|[sysvar_mysqlx_idle_worker_thread_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_idle_worker_thread_timeout)|
 
 ## mysqlx_interactive_timeout
 |name|value|
@@ -31395,7 +31395,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_interactive_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_interactive_timeout)|
+|dev.mysql.com|[sysvar_mysqlx_interactive_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_interactive_timeout)|
 
 ## mysqlx_max_allowed_packet
 |name|value|
@@ -31411,7 +31411,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_max_allowed_packet](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_max_allowed_packet)|
+|dev.mysql.com|[sysvar_mysqlx_max_allowed_packet](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_max_allowed_packet)|
 
 ## mysqlx_max_connections
 |name|value|
@@ -31427,7 +31427,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_max_connections](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_max_connections)|
+|dev.mysql.com|[sysvar_mysqlx_max_connections](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_max_connections)|
 
 ## mysqlx_min_worker_threads
 |name|value|
@@ -31443,7 +31443,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_min_worker_threads](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_min_worker_threads)|
+|dev.mysql.com|[sysvar_mysqlx_min_worker_threads](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_min_worker_threads)|
 
 ## mysqlx_port
 |name|value|
@@ -31459,7 +31459,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_port](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_port)|
+|dev.mysql.com|[sysvar_mysqlx_port](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_port)|
 
 ## mysqlx_port_open_timeout
 |name|value|
@@ -31475,7 +31475,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_port_open_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_port_open_timeout)|
+|dev.mysql.com|[sysvar_mysqlx_port_open_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_port_open_timeout)|
 
 ## mysqlx_read_timeout
 |name|value|
@@ -31491,7 +31491,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_read_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_read_timeout)|
+|dev.mysql.com|[sysvar_mysqlx_read_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_read_timeout)|
 
 ## mysqlx_socket
 |name|value|
@@ -31506,7 +31506,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_socket](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_socket)|
+|dev.mysql.com|[sysvar_mysqlx_socket](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_socket)|
 
 ## mysqlx_ssl_ca
 |name|value|
@@ -31520,7 +31520,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_ssl_ca](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_ca)|
+|dev.mysql.com|[sysvar_mysqlx_ssl_ca](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_ssl_ca)|
 
 ## mysqlx_ssl_capath
 |name|value|
@@ -31534,7 +31534,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_ssl_capath](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_capath)|
+|dev.mysql.com|[sysvar_mysqlx_ssl_capath](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_ssl_capath)|
 
 ## mysqlx_ssl_cert
 |name|value|
@@ -31548,7 +31548,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_ssl_cert](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_cert)|
+|dev.mysql.com|[sysvar_mysqlx_ssl_cert](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_ssl_cert)|
 
 ## mysqlx_ssl_cipher
 |name|value|
@@ -31562,7 +31562,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_ssl_cipher](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_cipher)|
+|dev.mysql.com|[sysvar_mysqlx_ssl_cipher](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_ssl_cipher)|
 
 ## mysqlx_ssl_crl
 |name|value|
@@ -31576,7 +31576,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_ssl_crl](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_crl)|
+|dev.mysql.com|[sysvar_mysqlx_ssl_crl](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_ssl_crl)|
 
 ## mysqlx_ssl_crlpath
 |name|value|
@@ -31590,7 +31590,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_ssl_crlpath](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_crlpath)|
+|dev.mysql.com|[sysvar_mysqlx_ssl_crlpath](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_ssl_crlpath)|
 
 ## mysqlx_ssl_key
 |name|value|
@@ -31604,7 +31604,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_ssl_key](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_ssl_key)|
+|dev.mysql.com|[sysvar_mysqlx_ssl_key](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_ssl_key)|
 
 ## mysqlx_wait_timeout
 |name|value|
@@ -31620,7 +31620,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_wait_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_wait_timeout)|
+|dev.mysql.com|[sysvar_mysqlx_wait_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_wait_timeout)|
 
 ## mysqlx_write_timeout
 |name|value|
@@ -31636,6 +31636,6 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_mysqlx_write_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html#sysvar_mysqlx_write_timeout)|
+|dev.mysql.com|[sysvar_mysqlx_write_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_write_timeout)|
 
 

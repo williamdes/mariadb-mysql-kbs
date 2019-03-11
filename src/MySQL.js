@@ -160,10 +160,10 @@ parsePage(KB_URL + 'performance-schema-system-variables.html', (data, url) => {
     writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
 });
 
-parsePage(KB_URL + 'x-plugin-system-variables-options.html', (data, url) => {
+parsePage(KB_URL + 'x-plugin-options-system-variables.html', (data, url) => {
     let page = {
         url: url,
-        name: 'x-plugin-system-variables-options',
+        name: 'x-plugin-options-system-variables',
         data: data,
     };
     writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);

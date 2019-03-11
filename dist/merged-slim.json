@@ -28947,6 +28947,6 @@
         "https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html",
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html",
         "https://dev.mysql.com/doc/refman/8.0/en/version-tokens-reference.html",
-        "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+        "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
     ]
 }

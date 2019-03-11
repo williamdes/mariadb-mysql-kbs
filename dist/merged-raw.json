@@ -37132,7 +37132,7 @@
             "ids": [
                 {
                     "anchor": "option_mysqld_mysqlx",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37148,7 +37148,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_bind_address",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37168,7 +37168,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_connect_timeout",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37188,7 +37188,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_document_id_unique_prefix",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37208,7 +37208,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_idle_worker_thread_timeout",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37228,7 +37228,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_interactive_timeout",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37248,7 +37248,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_max_allowed_packet",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37268,7 +37268,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_max_connections",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37288,7 +37288,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_min_worker_threads",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37308,7 +37308,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_port",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37328,7 +37328,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_port_open_timeout",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37348,7 +37348,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_read_timeout",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37364,7 +37364,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_socket",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37379,7 +37379,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_ssl_ca",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37394,7 +37394,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_ssl_capath",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37409,7 +37409,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_ssl_cert",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37424,7 +37424,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_ssl_cipher",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37439,7 +37439,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_ssl_crl",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37454,7 +37454,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_ssl_crlpath",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37469,7 +37469,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_ssl_key",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37489,7 +37489,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_wait_timeout",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         },
@@ -37509,7 +37509,7 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_write_timeout",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-system-variables-options.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
         }

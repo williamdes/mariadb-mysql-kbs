@@ -28,11 +28,11 @@ jobs:
         - stage: tests
           php: '7.2'
           env: CI_TYPE=phpcs
-          name: 'PHPCS - PHP 7.1'
+          name: 'PHPCS - PHP 7.2'
         - stage: tests
-          php: '7.1'
+          php: '7.2'
           env: CI_TYPE=phpunit
-          name: 'PHPUNIT - PHP 7.1'
+          name: 'PHPUNIT - PHP 7.2'
           after_success:
               - bash <(curl -s https://codecov.io/bash) -cF php
         - stage: tests

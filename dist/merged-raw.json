@@ -1084,6 +1084,15 @@
                 }
             ]
         },
+        "wsrep": {
+            "name": "wsrep",
+            "ids": [
+                {
+                    "anchor": "wsrep",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
         "wsrep_apply_oooe": {
             "name": "wsrep_apply_oooe",
             "ids": [
@@ -1107,6 +1116,15 @@
             "ids": [
                 {
                     "anchor": "wsrep_cert_deps_distance",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_cluster_capabilities": {
+            "name": "wsrep_cluster_capabilities",
+            "ids": [
+                {
+                    "anchor": "wsrep_cluster_capabilities",
                     "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
                 }
             ]
@@ -1458,6 +1476,26 @@
                 }
             ]
         },
+        "wsrep_certification_rules": {
+            "cli": "--wsrep-certifcation-rules",
+            "default": "strict",
+            "dynamic": true,
+            "name": "wsrep_certification_rules",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "strict",
+                "optimized"
+            ],
+            "ids": [
+                {
+                    "anchor": "wsrep_certification_rules",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
+                }
+            ]
+        },
         "wsrep_certify_nonPK": {
             "cli": "--wsrep-certify-nonpk[={0|1}]",
             "default": "ON",
@@ -1559,7 +1597,6 @@
             "scope": [
                 "global"
             ],
-            "type": "boolean",
             "ids": [
                 {
                     "anchor": "wsrep_debug",
@@ -1673,6 +1710,26 @@
             "ids": [
                 {
                     "anchor": "wsrep_gtid_mode",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
+                }
+            ]
+        },
+        "wsrep_ignore_apply_errors": {
+            "cli": "--wsrep-ignore-apply-errors",
+            "default": "0",
+            "dynamic": true,
+            "name": "wsrep_ignore_apply_errors",
+            "range": {
+                "from": 0,
+                "to": 7
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_ignore_apply_errors",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
                 }
             ]
@@ -2057,6 +2114,25 @@
                 }
             ]
         },
+        "wsrep_sr_store": {
+            "cli": "--wsrep-sr-store=val",
+            "default": "table",
+            "dynamic": false,
+            "name": "wsrep_sr_store",
+            "scope": [
+                "global"
+            ],
+            "validValues": [
+                "table",
+                "none"
+            ],
+            "ids": [
+                {
+                    "anchor": "wsrep_sr_store",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
+                }
+            ]
+        },
         "wsrep_sst_auth": {
             "cli": "--wsrep-sst-auth=value",
             "dynamic": true,
@@ -2178,7 +2254,7 @@
         },
         "wsrep_trx_fragment_size": {
             "cli": "--wsrep-trx-fragment-size=#",
-            "default": "2147483647",
+            "default": "0",
             "dynamic": true,
             "name": "wsrep_trx_fragment_size",
             "range": {
@@ -9509,6 +9585,20 @@
                 }
             ]
         },
+        "Com_backup_lock": {
+            "name": "Com_backup_lock",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "com_backup_lock",
+                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
+                }
+            ]
+        },
         "Com_backup_table": {
             "name": "Com_backup_table",
             "scope": [
@@ -13756,6 +13846,27 @@
                 }
             ]
         },
+        "analyze_sample_percentage": {
+            "cli": "--analyze-sample-percentage=#",
+            "default": "100.000000",
+            "dynamic": true,
+            "name": "analyze_sample_percentage",
+            "range": {
+                "from": 0,
+                "to": 100
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "analyze_sample_percentage",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                }
+            ]
+        },
         "autocommit": {
             "cli": "--autocommit[=#]",
             "default": "1",
@@ -14361,6 +14472,29 @@
                 }
             ]
         },
+        "default_password_lifetime": {
+            "cli": "--default-password-lifetime=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "default_password_lifetime",
+            "range": {
+                "from": 0
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "default_password_lifetime",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_default_password_lifetime",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "default_regex_flags": {
             "name": "default_regex_flags",
             "ids": [
@@ -14549,6 +14683,23 @@
                 },
                 {
                     "anchor": "sysvar_delayed_queue_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "disconnect_on_expired_password": {
+            "name": "disconnect_on_expired_password",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "disconnect_on_expired_password",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_disconnect_on_expired_password",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
@@ -16423,6 +16574,27 @@
                 }
             ]
         },
+        "max_rowid_filter_size": {
+            "cli": "--max-rowid-filter-size=#",
+            "default": "131072",
+            "dynamic": true,
+            "name": "max_rowid_filter_size",
+            "range": {
+                "from": 1024,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "max_rowid_filter_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                }
+            ]
+        },
         "max_seeks_for_key": {
             "cli": "--max-seeks-for-key=#",
             "dynamic": true,
@@ -17044,6 +17216,44 @@
                 {
                     "anchor": "optimizer_use_condition_selectivity",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                }
+            ]
+        },
+        "optimizer_trace": {
+            "dynamic": true,
+            "name": "optimizer_trace",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "optimizer_trace",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_optimizer_trace",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "optimizer_trace_max_mem_size": {
+            "dynamic": true,
+            "name": "optimizer_trace_max_mem_size",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "optimizer_trace_max_mem_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_optimizer_trace_max_mem_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
         },
@@ -21588,6 +21798,7 @@
             "scope": [
                 "global"
             ],
+            "type": "string",
             "ids": [
                 {
                     "anchor": "ssl_cipher",
@@ -27498,10 +27709,12 @@
             "validValues": [
                 "innodb",
                 "crc32",
+                "full_crc32",
                 "none",
                 "strict_innodb",
                 "strict_crc32",
-                "strict_none"
+                "strict_none",
+                "strict_full_crc32"
             ],
             "ids": [
                 {
@@ -35632,26 +35845,6 @@
                 }
             ]
         },
-        "default_password_lifetime": {
-            "cli": "--default-password-lifetime=#",
-            "default": "0",
-            "dynamic": true,
-            "name": "default_password_lifetime",
-            "range": {
-                "from": 0,
-                "to": 65535
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_default_password_lifetime",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
         "disabled_storage_engines": {
             "cli": "--disabled-storage-engines=engine[,engine]...",
             "default": "empty string",
@@ -35664,22 +35857,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_disabled_storage_engines",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
-        "disconnect_on_expired_password": {
-            "cli": "--disconnect-on-expired-password[=#]",
-            "default": "on",
-            "dynamic": false,
-            "name": "disconnect_on_expired_password",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_disconnect_on_expired_password",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
@@ -36150,21 +36327,6 @@
                 }
             ]
         },
-        "optimizer_trace": {
-            "dynamic": true,
-            "name": "optimizer_trace",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "sysvar_optimizer_trace",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
         "optimizer_trace_features": {
             "dynamic": true,
             "name": "optimizer_trace_features",
@@ -36192,21 +36354,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_optimizer_trace_limit",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
-        "optimizer_trace_max_mem_size": {
-            "dynamic": true,
-            "name": "optimizer_trace_max_mem_size",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_optimizer_trace_max_mem_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

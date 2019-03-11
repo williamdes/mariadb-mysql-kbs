@@ -1,6 +1,10 @@
 {
   "data": [
     {
+      "id": "wsrep",
+      "name": "wsrep"
+    },
+    {
       "id": "wsrep_apply_oooe",
       "name": "wsrep_apply_oooe"
     },
@@ -11,6 +15,10 @@
     {
       "id": "wsrep_cert_deps_distance",
       "name": "wsrep_cert_deps_distance"
+    },
+    {
+      "id": "wsrep_cluster_capabilities",
+      "name": "wsrep_cluster_capabilities"
     },
     {
       "id": "wsrep_cluster_conf_id",

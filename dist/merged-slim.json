@@ -895,10 +895,16 @@
                 "4#connect_xtrace"
             ]
         },
+        "wsrep": {
+            "name": "wsrep",
+            "ids": [
+                "6#wsrep"
+            ]
+        },
         "wsrep_apply_oooe": {
             "name": "wsrep_apply_oooe",
             "ids": [
-                "6#wsrep_apply_oooe"
+                "5#wsrep_apply_oooe"
             ]
         },
         "wsrep_apply_oool": {
@@ -911,6 +917,12 @@
             "name": "wsrep_cert_deps_distance",
             "ids": [
                 "5#wsrep_cert_deps_distance"
+            ]
+        },
+        "wsrep_cluster_capabilities": {
+            "name": "wsrep_cluster_capabilities",
+            "ids": [
+                "5#wsrep_cluster_capabilities"
             ]
         },
         "wsrep_cluster_conf_id": {
@@ -1155,6 +1167,23 @@
                 "6#wsrep_causal_reads"
             ]
         },
+        "wsrep_certification_rules": {
+            "cli": "--wsrep-certifcation-rules",
+            "default": "strict",
+            "dynamic": true,
+            "name": "wsrep_certification_rules",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "strict",
+                "optimized"
+            ],
+            "ids": [
+                "6#wsrep_certification_rules"
+            ]
+        },
         "wsrep_certify_nonPK": {
             "cli": "--wsrep-certify-nonpk[={0|1}]",
             "default": "ON",
@@ -1238,7 +1267,6 @@
             "scope": [
                 "global"
             ],
-            "type": "boolean",
             "ids": [
                 "6#wsrep_debug"
             ]
@@ -1333,6 +1361,23 @@
             "type": "boolean",
             "ids": [
                 "6#wsrep_gtid_mode"
+            ]
+        },
+        "wsrep_ignore_apply_errors": {
+            "cli": "--wsrep-ignore-apply-errors",
+            "default": "0",
+            "dynamic": true,
+            "name": "wsrep_ignore_apply_errors",
+            "range": {
+                "from": 0,
+                "to": 7
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "6#wsrep_ignore_apply_errors"
             ]
         },
         "wsrep_load_data_splitting": {
@@ -1649,6 +1694,22 @@
                 "6#wsrep_slave_uk_checks"
             ]
         },
+        "wsrep_sr_store": {
+            "cli": "--wsrep-sr-store=val",
+            "default": "table",
+            "dynamic": false,
+            "name": "wsrep_sr_store",
+            "scope": [
+                "global"
+            ],
+            "validValues": [
+                "table",
+                "none"
+            ],
+            "ids": [
+                "6#wsrep_sr_store"
+            ]
+        },
         "wsrep_sst_auth": {
             "cli": "--wsrep-sst-auth=value",
             "dynamic": true,
@@ -1749,7 +1810,7 @@
         },
         "wsrep_trx_fragment_size": {
             "cli": "--wsrep-trx-fragment-size=#",
-            "default": "2147483647",
+            "default": "0",
             "dynamic": true,
             "name": "wsrep_trx_fragment_size",
             "range": {
@@ -7370,6 +7431,17 @@
                 "28#com_backup"
             ]
         },
+        "Com_backup_lock": {
+            "name": "Com_backup_lock",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "28#com_backup_lock"
+            ]
+        },
         "Com_backup_table": {
             "name": "Com_backup_table",
             "scope": [
@@ -10693,6 +10765,24 @@
                 "30#alter_algorithm"
             ]
         },
+        "analyze_sample_percentage": {
+            "cli": "--analyze-sample-percentage=#",
+            "default": "100.000000",
+            "dynamic": true,
+            "name": "analyze_sample_percentage",
+            "range": {
+                "from": 0,
+                "to": 100
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#analyze_sample_percentage"
+            ]
+        },
         "autocommit": {
             "cli": "--autocommit[=#]",
             "default": "1",
@@ -11106,6 +11196,23 @@
                 "10#sysvar_debug_sync"
             ]
         },
+        "default_password_lifetime": {
+            "cli": "--default-password-lifetime=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "default_password_lifetime",
+            "range": {
+                "from": 0
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#default_password_lifetime",
+                "10#sysvar_default_password_lifetime"
+            ]
+        },
         "default_regex_flags": {
             "name": "default_regex_flags",
             "ids": [
@@ -11242,6 +11349,17 @@
             "ids": [
                 "29#delayed_queue_size",
                 "10#sysvar_delayed_queue_size"
+            ]
+        },
+        "disconnect_on_expired_password": {
+            "name": "disconnect_on_expired_password",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "29#disconnect_on_expired_password",
+                "10#sysvar_disconnect_on_expired_password"
             ]
         },
         "div_precision_increment": {
@@ -12631,6 +12749,24 @@
                 "29#max_recursive_iterations"
             ]
         },
+        "max_rowid_filter_size": {
+            "cli": "--max-rowid-filter-size=#",
+            "default": "131072",
+            "dynamic": true,
+            "name": "max_rowid_filter_size",
+            "range": {
+                "from": 1024,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#max_rowid_filter_size"
+            ]
+        },
         "max_seeks_for_key": {
             "cli": "--max-seeks-for-key=#",
             "dynamic": true,
@@ -13094,6 +13230,32 @@
             "type": "integer",
             "ids": [
                 "29#optimizer_use_condition_selectivity"
+            ]
+        },
+        "optimizer_trace": {
+            "dynamic": true,
+            "name": "optimizer_trace",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "string",
+            "ids": [
+                "29#optimizer_trace",
+                "10#sysvar_optimizer_trace"
+            ]
+        },
+        "optimizer_trace_max_mem_size": {
+            "dynamic": true,
+            "name": "optimizer_trace_max_mem_size",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#optimizer_trace_max_mem_size",
+                "10#sysvar_optimizer_trace_max_mem_size"
             ]
         },
         "pid_file": {
@@ -16614,6 +16776,7 @@
             "scope": [
                 "global"
             ],
+            "type": "string",
             "ids": [
                 "34#ssl_cipher",
                 "10#sysvar_ssl_cipher"
@@ -21060,10 +21223,12 @@
             "validValues": [
                 "innodb",
                 "crc32",
+                "full_crc32",
                 "none",
                 "strict_innodb",
                 "strict_crc32",
-                "strict_none"
+                "strict_none",
+                "strict_full_crc32"
             ],
             "ids": [
                 "40#innodb_checksum_algorithm",
@@ -27349,23 +27514,6 @@
                 "10#sysvar_default_collation_for_utf8mb4"
             ]
         },
-        "default_password_lifetime": {
-            "cli": "--default-password-lifetime=#",
-            "default": "0",
-            "dynamic": true,
-            "name": "default_password_lifetime",
-            "range": {
-                "from": 0,
-                "to": 65535
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "10#sysvar_default_password_lifetime"
-            ]
-        },
         "disabled_storage_engines": {
             "cli": "--disabled-storage-engines=engine[,engine]...",
             "default": "empty string",
@@ -27377,19 +27525,6 @@
             "type": "string",
             "ids": [
                 "10#sysvar_disabled_storage_engines"
-            ]
-        },
-        "disconnect_on_expired_password": {
-            "cli": "--disconnect-on-expired-password[=#]",
-            "default": "on",
-            "dynamic": false,
-            "name": "disconnect_on_expired_password",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "10#sysvar_disconnect_on_expired_password"
             ]
         },
         "dragnet.log_error_filter_rules": {
@@ -27777,18 +27912,6 @@
                 "10#sysvar_offline_mode"
             ]
         },
-        "optimizer_trace": {
-            "dynamic": true,
-            "name": "optimizer_trace",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "string",
-            "ids": [
-                "10#sysvar_optimizer_trace"
-            ]
-        },
         "optimizer_trace_features": {
             "dynamic": true,
             "name": "optimizer_trace_features",
@@ -27812,18 +27935,6 @@
             "type": "integer",
             "ids": [
                 "10#sysvar_optimizer_trace_limit"
-            ]
-        },
-        "optimizer_trace_max_mem_size": {
-            "dynamic": true,
-            "name": "optimizer_trace_max_mem_size",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "10#sysvar_optimizer_trace_max_mem_size"
             ]
         },
         "optimizer_trace_offset": {

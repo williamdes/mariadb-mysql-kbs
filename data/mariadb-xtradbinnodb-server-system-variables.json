@@ -567,10 +567,12 @@
       "validValues": [
         "innodb",
         "crc32",
+        "full_crc32",
         "none",
         "strict_innodb",
         "strict_crc32",
-        "strict_none"
+        "strict_none",
+        "strict_full_crc32"
       ]
     },
     {
@@ -1587,7 +1589,7 @@
     },
     {
       "cli": "--innodb-io-capacity-max=#",
-      "default": "200",
+      "default": "2000",
       "dynamic": true,
       "id": "innodb_io_capacity_max",
       "name": "innodb_io_capacity_max",

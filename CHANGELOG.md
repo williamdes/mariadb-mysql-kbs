@@ -8,9 +8,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- [3d40b93](https://github.com/williamdes/mariadb-mysql-kbs/commit/3d40b93def4019373f273e3a5d72bfdedbe95fab) added: verbose echos for osx
-- [b720fa4](https://github.com/williamdes/mariadb-mysql-kbs/commit/b720fa4d69c70c5ba399512df82cf8dfb39a25da) added: Remove old php versions
-- [9727305](https://github.com/williamdes/mariadb-mysql-kbs/commit/972730584f28ee8690d4e4e01df1c7418e44daf0) added: brew list
 - [2491c41](https://github.com/williamdes/mariadb-mysql-kbs/commit/2491c415adaa65ab37b47d52cfb322d95fe7767d) added: snyk and dependabot to README.md
 - [3fa4313](https://github.com/williamdes/mariadb-mysql-kbs/commit/3fa43131b44f8b5407bb63411589ffa61dcb75b9) added: dependabot config
 - [571ccf3](https://github.com/williamdes/mariadb-mysql-kbs/commit/571ccf3edc1b3b5cfa0245d5518063a9434d0835) added: LGTM and fixed changelog

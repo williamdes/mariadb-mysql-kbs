@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [5366e10](https://github.com/williamdes/mariadb-mysql-kbs/commit/5366e10a0625fa9f95f7eac7a43dfb9af43f72b6) updated: package-lock.json and package.json and changelog
 - [2786d1a](https://github.com/williamdes/mariadb-mysql-kbs/commit/2786d1a5c98dd3b93bfca8706cc9d7e92b1770a7) updated: MySQL data
 - [9cffbf6](https://github.com/williamdes/mariadb-mysql-kbs/commit/9cffbf64046836229d9c3f83674b213848833036) updated: MariaDB data
 - [13d7ba4](https://github.com/williamdes/mariadb-mysql-kbs/commit/13d7ba4510e9957352790a02551eb247f4b17ad6) updated: composer.json && updated: composer.lock

@@ -511,6 +511,17 @@
       "type": "enumeration"
     },
     {
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_default_table_encryption",
+      "name": "default_table_encryption",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--default-tmp-storage-engine=name",
       "default": "innodb",
       "dynamic": true,
@@ -3177,6 +3188,16 @@
         "global"
       ],
       "type": "integer"
+    },
+    {
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_table_encryption_privilege_check",
+      "name": "table_encryption_privilege_check",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "dynamic": true,

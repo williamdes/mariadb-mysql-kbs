@@ -30206,6 +30206,20 @@
 |------|----|
 |dev.mysql.com|[sysvar_default_collation_for_utf8mb4](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_collation_for_utf8mb4)|
 
+## default_table_encryption
+|name|value|
+|----|-----|
+|Name|`default_table_encryption`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_default_table_encryption](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_table_encryption)|
+
 ## disabled_storage_engines
 |name|value|
 |----|-----|
@@ -31110,6 +31124,20 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_syseventlog.tag](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_syseventlog.tag)|
+
+## table_encryption_privilege_check
+|name|value|
+|----|-----|
+|Name|`table_encryption_privilege_check`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_table_encryption_privilege_check](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_table_encryption_privilege_check)|
 
 ## temptable_max_ram
 |name|value|

@@ -27514,6 +27514,19 @@
                 "10#sysvar_default_collation_for_utf8mb4"
             ]
         },
+        "default_table_encryption": {
+            "default": "off",
+            "dynamic": true,
+            "name": "default_table_encryption",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "10#sysvar_default_table_encryption"
+            ]
+        },
         "disabled_storage_engines": {
             "cli": "--disabled-storage-engines=engine[,engine]...",
             "default": "empty string",
@@ -28379,6 +28392,18 @@
             "type": "string",
             "ids": [
                 "10#sysvar_syseventlog.tag"
+            ]
+        },
+        "table_encryption_privilege_check": {
+            "default": "off",
+            "dynamic": true,
+            "name": "table_encryption_privilege_check",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "10#sysvar_table_encryption_privilege_check"
             ]
         },
         "temptable_max_ram": {

@@ -35845,6 +35845,22 @@
                 }
             ]
         },
+        "default_table_encryption": {
+            "default": "off",
+            "dynamic": true,
+            "name": "default_table_encryption",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_default_table_encryption",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "disabled_storage_engines": {
             "cli": "--disabled-storage-engines=engine[,engine]...",
             "default": "empty string",
@@ -36888,6 +36904,21 @@
             "ids": [
                 {
                     "anchor": "sysvar_syseventlog.tag",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "table_encryption_privilege_check": {
+            "default": "off",
+            "dynamic": true,
+            "name": "table_encryption_privilege_check",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_table_encryption_privilege_check",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

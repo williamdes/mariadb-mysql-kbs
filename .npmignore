@@ -24,3 +24,4 @@ CODEOWNERS
 /.editorconfig
 /.jshintrc
 /.dependabot
+/.git

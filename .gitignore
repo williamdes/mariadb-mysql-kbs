@@ -6,3 +6,4 @@ node_modules
 /.nyc_output
 /coverage
 /coverage.lcov
+/williamdes-mariadb-mysql-kbs-*.tar

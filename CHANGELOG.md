@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v1.2.5]
+
 ### Added
 
 - [046c3fe](https://github.com/williamdes/mariadb-mysql-kbs/commit/046c3fe15cbf57d89e283b62f5a8b03c576a0337) added: php7.3 and osx php7.3 to test matrix
@@ -18,6 +20,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [44264b0](https://github.com/williamdes/mariadb-mysql-kbs/commit/44264b03e02d0908749b696f68721fac99cbd133) update: package version to 1.2.5
+- [f3d6a5e](https://github.com/williamdes/mariadb-mysql-kbs/commit/f3d6a5e272515af74ed793cf74a2719d0f1a22af) updated: changelog 📖
 - [97ec035](https://github.com/williamdes/mariadb-mysql-kbs/commit/97ec035605cca060e3b7abf92d46ada85465a6d2) update: [MySQL] updates
 - [9eb743f](https://github.com/williamdes/mariadb-mysql-kbs/commit/9eb743f65f4a1fbc80abab0247fe6e3896c98930) update: commit message format
 - [5366e10](https://github.com/williamdes/mariadb-mysql-kbs/commit/5366e10a0625fa9f95f7eac7a43dfb9af43f72b6) updated: package-lock.json and package.json and changelog
@@ -41,6 +45,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- [741b07e](https://github.com/williamdes/mariadb-mysql-kbs/commit/741b07e927b55cf35e918085462e0052153ff8dc) fix: .npmignore .gitignore and composer archive ignore
 - [3e5ca71](https://github.com/williamdes/mariadb-mysql-kbs/commit/3e5ca71a782aeedd4e6a726ae1737905ca74d7e6) fix: composer non feature branches and nyc coverage
 - [b00a8b0](https://github.com/williamdes/mariadb-mysql-kbs/commit/b00a8b09496f193c3289bf6f3c2ece4cd3a95967) fix: osx CI
 - [9ac6e9b](https://github.com/williamdes/mariadb-mysql-kbs/commit/9ac6e9bf898de7760f7f53ddabdc28a2c5a548bb) fixed: changelog

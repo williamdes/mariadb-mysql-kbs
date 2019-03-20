@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- [9143014](https://github.com/williamdes/mariadb-mysql-kbs/commit/91430143cc7687ca6650761b66f20ea39ff9ebc8) fixed: .npmignore
+
 ## [v1.2.5]
 
 ### Added
@@ -20,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [c3f4f4e](https://github.com/williamdes/mariadb-mysql-kbs/commit/c3f4f4e8c3a45f11adc9eec372d8780bdb3c10a8) updated: changelog 📖
 - [44264b0](https://github.com/williamdes/mariadb-mysql-kbs/commit/44264b03e02d0908749b696f68721fac99cbd133) update: package version to 1.2.5
 - [f3d6a5e](https://github.com/williamdes/mariadb-mysql-kbs/commit/f3d6a5e272515af74ed793cf74a2719d0f1a22af) updated: changelog 📖
 - [97ec035](https://github.com/williamdes/mariadb-mysql-kbs/commit/97ec035605cca060e3b7abf92d46ada85465a6d2) update: [MySQL] updates
@@ -307,7 +312,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [d9cd2a8](https://github.com/williamdes/mariadb-mysql-kbs/commit/d9cd2a8123a67d6adfddf0414988b98fcac9f082) fixed: bug in MariaDB script
 
 
-[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.4...HEAD
+[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.5...HEAD
+[v1.2.5]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.4...v1.2.5
 [v1.2.4]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.3...v1.2.4
 [v1.2.3]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.2...v1.2.3
 [v1.2.2]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.1...v1.2.2

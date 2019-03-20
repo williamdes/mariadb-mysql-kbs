@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- [046c3fe](https://github.com/williamdes/mariadb-mysql-kbs/commit/046c3fe15cbf57d89e283b62f5a8b03c576a0337) added: php7.3 and osx php7.3 to test matrix
 - [2491c41](https://github.com/williamdes/mariadb-mysql-kbs/commit/2491c415adaa65ab37b47d52cfb322d95fe7767d) added: snyk and dependabot to README.md
 - [3fa4313](https://github.com/williamdes/mariadb-mysql-kbs/commit/3fa43131b44f8b5407bb63411589ffa61dcb75b9) added: dependabot config
 - [571ccf3](https://github.com/williamdes/mariadb-mysql-kbs/commit/571ccf3edc1b3b5cfa0245d5518063a9434d0835) added: LGTM and fixed changelog
@@ -17,6 +18,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [97ec035](https://github.com/williamdes/mariadb-mysql-kbs/commit/97ec035605cca060e3b7abf92d46ada85465a6d2) update: [MySQL] updates
+- [9eb743f](https://github.com/williamdes/mariadb-mysql-kbs/commit/9eb743f65f4a1fbc80abab0247fe6e3896c98930) update: commit message format
 - [5366e10](https://github.com/williamdes/mariadb-mysql-kbs/commit/5366e10a0625fa9f95f7eac7a43dfb9af43f72b6) updated: package-lock.json and package.json and changelog
 - [2786d1a](https://github.com/williamdes/mariadb-mysql-kbs/commit/2786d1a5c98dd3b93bfca8706cc9d7e92b1770a7) updated: MySQL data
 - [9cffbf6](https://github.com/williamdes/mariadb-mysql-kbs/commit/9cffbf64046836229d9c3f83674b213848833036) updated: MariaDB data
@@ -32,11 +35,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 
+- [16a3d25](https://github.com/williamdes/mariadb-mysql-kbs/commit/16a3d259263d00eab648fa9bce2249e993be0aeb) removed: composer.lock
 - [b0f997d](https://github.com/williamdes/mariadb-mysql-kbs/commit/b0f997d2abc033740a35d14cf16982356b207f16) removed: old changelog script
 - [ab83775](https://github.com/williamdes/mariadb-mysql-kbs/commit/ab83775286f122b186526c106079e798525ca307) removed: deploy on tag
 
 ### Fixed
 
+- [3e5ca71](https://github.com/williamdes/mariadb-mysql-kbs/commit/3e5ca71a782aeedd4e6a726ae1737905ca74d7e6) fix: composer non feature branches and nyc coverage
+- [b00a8b0](https://github.com/williamdes/mariadb-mysql-kbs/commit/b00a8b09496f193c3289bf6f3c2ece4cd3a95967) fix: osx CI
+- [9ac6e9b](https://github.com/williamdes/mariadb-mysql-kbs/commit/9ac6e9bf898de7760f7f53ddabdc28a2c5a548bb) fixed: changelog
+- [127889d](https://github.com/williamdes/mariadb-mysql-kbs/commit/127889df59911291084b8b7815b98519002abd04) fixed: changelog
 - [2b23349](https://github.com/williamdes/mariadb-mysql-kbs/commit/2b23349f867450f308a37045486ac6b61eb25a99) fixed: Travis CI
 - [5377cec](https://github.com/williamdes/mariadb-mysql-kbs/commit/5377cec845b0cc0888a23a8185e24553f7c2a476) fixed: NPM package name in README.md
 - [1b433f8](https://github.com/williamdes/mariadb-mysql-kbs/commit/1b433f8f30c6f1cb4ad42540f869614f13239fbb) fixed: nyc coverage

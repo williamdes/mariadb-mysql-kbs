@@ -136,14 +136,14 @@ module.exports = function() {
                 'ab/cd/ef.json',
                 'README.md',
             ]);
-            expect(commmitMsg).to.equal('🤖 Some updates 🤖');
+            expect(commmitMsg).to.equal('update: 🤖 Some updates 🤖');
             done();
         });
         test('commitMessage for MariaDB files', function(done) {
             const commmitMsg = templates.commitMessage([
                 'data/mariadb-aria-server-status-variables.json',
             ]);
-            expect(commmitMsg).to.equal('[MariaDB] updates');
+            expect(commmitMsg).to.equal('update: [MariaDB] updates');
             done();
         });
         test('commitMessage for MariaDB files and others', function(done) {
@@ -153,12 +153,12 @@ module.exports = function() {
                 'README.md',
                 'data/mariadb-aria-server-status-variables.json',
             ]);
-            expect(commmitMsg).to.equal('[MariaDB] updates and other changes');
+            expect(commmitMsg).to.equal('update: [MariaDB] updates and other changes');
             done();
         });
         test('commitMessage for MySQL files', function(done) {
             const commmitMsg = templates.commitMessage(['data/mysql-server-options.json']);
-            expect(commmitMsg).to.equal('[MySQL] updates');
+            expect(commmitMsg).to.equal('update: [MySQL] updates');
             done();
         });
         test('commitMessage for MySQL files and others', function(done) {
@@ -168,7 +168,7 @@ module.exports = function() {
                 'README.md',
                 'data/mysql-server-options.json',
             ]);
-            expect(commmitMsg).to.equal('[MySQL] updates and other changes');
+            expect(commmitMsg).to.equal('update: [MySQL] updates and other changes');
             done();
         });
         test('commitMessage for MySQL and MariaDB files', function(done) {
@@ -176,7 +176,7 @@ module.exports = function() {
                 'data/mariadb-aria-server-status-variables.json',
                 'data/mysql-server-options.json',
             ]);
-            expect(commmitMsg).to.equal('[MariaDB] && [MySQL] updates');
+            expect(commmitMsg).to.equal('update: [MariaDB] && [MySQL] updates');
             done();
         });
         test('commitMessage for MySQL and MariaDB files and others', function(done) {
@@ -187,7 +187,7 @@ module.exports = function() {
                 'data/mariadb-aria-server-status-variables.json',
                 'data/mysql-server-options.json',
             ]);
-            expect(commmitMsg).to.equal('[MariaDB] && [MySQL] updates and other changes');
+            expect(commmitMsg).to.equal('update: [MariaDB] && [MySQL] updates and other changes');
             done();
         });
     });

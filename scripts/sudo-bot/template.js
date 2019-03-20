@@ -18,13 +18,13 @@ const commitMessage = function(modifiedFiles) {
     const hasOtherFiles =
         nbrMySQLFiles + nbrMariaDBFiles + nbrMergedData !== modifiedFiles.length;
     if (hasMariaDBFiles && hasMySQLFiles) {
-        return '[MariaDB] && [MySQL] updates' + (hasOtherFiles ? ' and other changes' : '');
+        return 'update: [MariaDB] && [MySQL] updates' + (hasOtherFiles ? ' and other changes' : '');
     } else if (hasMariaDBFiles && !hasMySQLFiles) {
-        return '[MariaDB] updates' + (hasOtherFiles ? ' and other changes' : '');
+        return 'update: [MariaDB] updates' + (hasOtherFiles ? ' and other changes' : '');
     } else if (!hasMariaDBFiles && hasMySQLFiles) {
-        return '[MySQL] updates' + (hasOtherFiles ? ' and other changes' : '');
+        return 'update: [MySQL] updates' + (hasOtherFiles ? ' and other changes' : '');
     }
-    return '🤖 Some updates 🤖';
+    return 'update: 🤖 Some updates 🤖';
 };
 
 /**

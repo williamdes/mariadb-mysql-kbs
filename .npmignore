@@ -25,3 +25,4 @@ CODEOWNERS
 /.jshintrc
 /.dependabot
 /.git
+/williamdes-mariadb-mysql-kbs-*.tar

@@ -11,7 +11,7 @@ script:
 install:
     - if [ "$CI_TYPE" != "mocha" ]; then flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"; fi
     - if [ "$CI_TYPE" != "mocha" ]; then composer install $flags; fi
-    - if [ "$CI_TYPE" = "mocha" ]; then npm install; fi
+    - if [ "$CI_TYPE" = "mocha" ]; then npm ci; fi
 after_script:
     - if [ "$CI_TYPE" != "cron" ]; then ./codacy-coverage.phar clover build/logs/clover.xml; else echo "skipped codacy"; fi
 stages:
@@ -30,9 +30,9 @@ jobs:
           env: CI_TYPE=phpcs
           name: 'PHPCS - PHP 7.2'
         - stage: tests
-          php: '7.2'
+          php: '7.1'
           env: CI_TYPE=phpunit
-          name: 'PHPUNIT - PHP 7.2'
+          name: 'PHPUNIT - PHP 7.1'
           after_success:
               - bash <(curl -s https://codecov.io/bash) -cF php
         - stage: tests
@@ -43,12 +43,20 @@ jobs:
               - bash <(curl -s https://codecov.io/bash) -cF php
         - stage: tests
           os: osx
-          language: generic
-          php: '7.2'
+          language: node_js
+          node_js: 10
           env: CI_TYPE=phpunit
-          name: 'PHPUNIT - PHP 7.2'
+          name: 'PHPUNIT - PHP 7.1'
+          addons:
+              homebrew:
+                  packages:
+                      - php@7.1
+                      - composer
           before_install:
-              - './scripts/ci/install-osx.sh'
+            - mkdir ~/.homebrew_logs
+            - export HOMEBREW_LOGS="~/.homebrew_logs"
+            - export HOMEBREW_TEMP="/tmp"
+            - export HOMEBREW_INSTALL_BADGE="🌻"
           after_success:
               - bash <(curl -s https://codecov.io/bash) -cF php
         - stage: robot

@@ -22,13 +22,13 @@ stages:
 jobs:
     include:
         - stage: tests
-          php: '7.2'
+          php: '7.3'
           env: CI_TYPE=phpstan
-          name: 'PHPSTAN - PHP 7.2'
+          name: 'PHPSTAN - PHP 7.3'
         - stage: tests
-          php: '7.2'
+          php: '7.3'
           env: CI_TYPE=phpcs
-          name: 'PHPCS - PHP 7.2'
+          name: 'PHPCS - PHP 7.3'
         - stage: tests
           php: '7.1'
           env: CI_TYPE=phpunit
@@ -42,6 +42,12 @@ jobs:
           after_success:
               - bash <(curl -s https://codecov.io/bash) -cF php
         - stage: tests
+          php: '7.3'
+          env: CI_TYPE=phpunit
+          name: 'PHPUNIT - PHP 7.3'
+          after_success:
+              - bash <(curl -s https://codecov.io/bash) -cF php
+        - stage: tests
           os: osx
           language: node_js
           node_js: 10
@@ -51,6 +57,42 @@ jobs:
               homebrew:
                   packages:
                       - php@7.1
+                      - composer
+          before_install:
+            - mkdir ~/.homebrew_logs
+            - export HOMEBREW_LOGS="~/.homebrew_logs"
+            - export HOMEBREW_TEMP="/tmp"
+            - export HOMEBREW_INSTALL_BADGE="🌻"
+          after_success:
+              - bash <(curl -s https://codecov.io/bash) -cF php
+        - stage: tests
+          os: osx
+          language: node_js
+          node_js: 10
+          env: CI_TYPE=phpunit
+          name: 'PHPUNIT - PHP 7.2'
+          addons:
+              homebrew:
+                  packages:
+                      - php@7.2
+                      - composer
+          before_install:
+            - mkdir ~/.homebrew_logs
+            - export HOMEBREW_LOGS="~/.homebrew_logs"
+            - export HOMEBREW_TEMP="/tmp"
+            - export HOMEBREW_INSTALL_BADGE="🌻"
+          after_success:
+              - bash <(curl -s https://codecov.io/bash) -cF php
+        - stage: tests
+          os: osx
+          language: node_js
+          node_js: 10
+          env: CI_TYPE=phpunit
+          name: 'PHPUNIT - PHP 7.3'
+          addons:
+              homebrew:
+                  packages:
+                      - php@7.3
                       - composer
           before_install:
             - mkdir ~/.homebrew_logs

@@ -67,5 +67,6 @@
         "psr-4": {
             "Williamdes\\MariaDBMySQLKBS\\": "test/"
         }
-    }
+    },
+    "non-feature-branches": ["update/*"]
 }

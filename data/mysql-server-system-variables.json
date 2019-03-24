@@ -2258,6 +2258,18 @@
       "type": "integer"
     },
     {
+      "cli": "--print-identified-with-as-hex[={OFF|ON}]",
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_print_identified_with_as_hex",
+      "name": "print_identified_with_as_hex",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
       "dynamic": false,
       "id": "sysvar_protocol_version",
       "name": "protocol_version",
@@ -3409,6 +3421,7 @@
     },
     {
       "cli": "--tls-ciphersuites=ciphersuite_list",
+      "default": "empty string",
       "dynamic": true,
       "id": "sysvar_tls_ciphersuites",
       "name": "tls_ciphersuites",

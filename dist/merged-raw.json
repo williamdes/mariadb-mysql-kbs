@@ -17035,10 +17035,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_old-alter-table",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
                     "anchor": "sysvar_old_alter_table",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
@@ -17102,10 +17098,6 @@
                 {
                     "anchor": "open_files_limit",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_open-files-limit",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_open_files_limit",
@@ -36497,6 +36489,23 @@
                 }
             ]
         },
+        "print_identified_with_as_hex": {
+            "cli": "--print-identified-with-as-hex[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "print_identified_with_as_hex",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_print_identified_with_as_hex",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "range_optimizer_max_mem_size": {
             "cli": "--range-optimizer-max-mem-size=N",
             "default": "8388608",
@@ -37022,6 +37031,7 @@
         },
         "tls_ciphersuites": {
             "cli": "--tls-ciphersuites=ciphersuite_list",
+            "default": "empty string",
             "dynamic": true,
             "name": "tls_ciphersuites",
             "scope": [

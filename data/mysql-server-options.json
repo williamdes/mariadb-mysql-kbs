@@ -507,37 +507,11 @@
       "type": "boolean"
     },
     {
-      "cli": "--old-alter-table",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_old-alter-table",
-      "name": "old_alter_table",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--old-style-user-limits",
       "default": "false",
       "id": "option_mysqld_old-style-user-limits",
       "name": "old_style_user_limits",
       "type": "boolean"
-    },
-    {
-      "cli": "--open-files-limit=#",
-      "default": "5000, with possible adjustment",
-      "dynamic": false,
-      "id": "option_mysqld_open-files-limit",
-      "name": "open_files_limit",
-      "range": {
-        "from": 0
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
     },
     {
       "cli": "--pid-file=file_name",

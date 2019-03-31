@@ -11811,7 +11811,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[bind_address](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#bind_address)|
-|dev.mysql.com|[option_mysqld_bind-address](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_bind-address)|
 |dev.mysql.com|[sysvar_bind_address](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_bind_address)|
 
 ## bulk_insert_buffer_size
@@ -14093,7 +14092,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[old_alter_table](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#old_alter_table)|
-|dev.mysql.com|[option_mysqld_old-alter-table](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_old-alter-table)|
 |dev.mysql.com|[sysvar_old_alter_table](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_old_alter_table)|
 
 ## old_mode
@@ -14141,7 +14139,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[open_files_limit](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#open_files_limit)|
-|dev.mysql.com|[option_mysqld_open-files-limit](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_open-files-limit)|
 |dev.mysql.com|[sysvar_open_files_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_open_files_limit)|
 
 ## optimizer_prune_level
@@ -30774,6 +30771,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_persist_only_admin_x509_subject](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_persist_only_admin_x509_subject)|
 
+## print_identified_with_as_hex
+|name|value|
+|----|-----|
+|Name|`print_identified_with_as_hex`|
+|Command line|`--print-identified-with-as-hex[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_print_identified_with_as_hex](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_print_identified_with_as_hex)|
+
 ## range_optimizer_max_mem_size
 |name|value|
 |----|-----|
@@ -31225,6 +31237,7 @@
 |Command line|`--tls-ciphersuites=ciphersuite_list`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`empty string`|
 |Dynamic|`true`|
 
 ### Documentation(s)

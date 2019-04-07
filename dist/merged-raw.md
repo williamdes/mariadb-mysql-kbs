@@ -10846,6 +10846,18 @@
 |------|----|
 |mariadb.com|[opened_files](https://mariadb.com/kb/en/library/documentation/server-status-variables/#opened_files)|
 
+## Opened_plugin_libraries
+|name|value|
+|----|-----|
+|Name|`Opened_plugin_libraries`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[opened_plugin_libraries](https://mariadb.com/kb/en/library/documentation/server-status-variables/#opened_plugin_libraries)|
+
 ## Opened_table_definitions
 |name|value|
 |----|-----|
@@ -11037,6 +11049,18 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[performance_schema_rwlock_instances_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_rwlock_instances_lost)|
+
+## Performance_schema_session_connect_attrs_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_session_connect_attrs_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_session_connect_attrs_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_session_connect_attrs_lost)|
 
 ## Performance_schema_socket_classes_lost
 |name|value|
@@ -31405,6 +31429,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_mysqlx_document_id_unique_prefix](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_document_id_unique_prefix)|
+
+## mysqlx_enable_hello_notice
+|name|value|
+|----|-----|
+|Name|`mysqlx_enable_hello_notice`|
+|Command line|`--mysqlx-document-id-unique-prefix=value`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`on`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_enable_hello_notice](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_enable_hello_notice)|
 
 ## mysqlx_idle_worker_thread_timeout
 |name|value|

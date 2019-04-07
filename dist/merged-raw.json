@@ -12876,6 +12876,19 @@
                 }
             ]
         },
+        "Opened_plugin_libraries": {
+            "name": "Opened_plugin_libraries",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "opened_plugin_libraries",
+                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
+                }
+            ]
+        },
         "Opened_table_definitions": {
             "name": "Opened_table_definitions",
             "scope": [
@@ -13096,6 +13109,20 @@
             "ids": [
                 {
                     "anchor": "performance_schema_rwlock_instances_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_session_connect_attrs_lost": {
+            "name": "Performance_schema_session_connect_attrs_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_session_connect_attrs_lost",
                     "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
                 }
             ]
@@ -37225,6 +37252,22 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_document_id_unique_prefix",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
+                }
+            ]
+        },
+        "mysqlx_enable_hello_notice": {
+            "cli": "--mysqlx-document-id-unique-prefix=value",
+            "default": "on",
+            "dynamic": true,
+            "name": "mysqlx_enable_hello_notice",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_mysqlx_enable_hello_notice",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]

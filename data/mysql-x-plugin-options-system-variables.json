@@ -55,6 +55,17 @@
       "type": "integer"
     },
     {
+      "cli": "--mysqlx-document-id-unique-prefix=value",
+      "default": "on",
+      "dynamic": true,
+      "id": "sysvar_mysqlx_enable_hello_notice",
+      "name": "mysqlx_enable_hello_notice",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--mysqlx-idle-worker-thread-timeout=value",
       "default": "60",
       "dynamic": true,

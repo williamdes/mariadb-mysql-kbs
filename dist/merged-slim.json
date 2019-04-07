@@ -10008,6 +10008,16 @@
                 "28#opened_files"
             ]
         },
+        "Opened_plugin_libraries": {
+            "name": "Opened_plugin_libraries",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "28#opened_plugin_libraries"
+            ]
+        },
         "Opened_table_definitions": {
             "name": "Opened_table_definitions",
             "scope": [
@@ -10182,6 +10192,17 @@
             "type": "integer",
             "ids": [
                 "28#performance_schema_rwlock_instances_lost"
+            ]
+        },
+        "Performance_schema_session_connect_attrs_lost": {
+            "name": "Performance_schema_session_connect_attrs_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "28#performance_schema_session_connect_attrs_lost"
             ]
         },
         "Performance_schema_socket_classes_lost": {
@@ -28665,6 +28686,19 @@
             "type": "integer",
             "ids": [
                 "47#sysvar_mysqlx_document_id_unique_prefix"
+            ]
+        },
+        "mysqlx_enable_hello_notice": {
+            "cli": "--mysqlx-document-id-unique-prefix=value",
+            "default": "on",
+            "dynamic": true,
+            "name": "mysqlx_enable_hello_notice",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "47#sysvar_mysqlx_enable_hello_notice"
             ]
         },
         "mysqlx_idle_worker_thread_timeout": {

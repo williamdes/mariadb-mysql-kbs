@@ -10869,7 +10869,6 @@
             "type": "string",
             "ids": [
                 "29#bind_address",
-                "16#option_mysqld_bind-address",
                 "10#sysvar_bind_address"
             ]
         },
@@ -13095,7 +13094,6 @@
             "type": "boolean",
             "ids": [
                 "29#old_alter_table",
-                "16#option_mysqld_old-alter-table",
                 "10#sysvar_old_alter_table"
             ]
         },
@@ -13146,7 +13144,6 @@
             "type": "integer",
             "ids": [
                 "29#open_files_limit",
-                "16#option_mysqld_open-files-limit",
                 "10#sysvar_open_files_limit"
             ]
         },
@@ -28052,6 +28049,20 @@
                 "10#sysvar_persist_only_admin_x509_subject"
             ]
         },
+        "print_identified_with_as_hex": {
+            "cli": "--print-identified-with-as-hex[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "print_identified_with_as_hex",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "10#sysvar_print_identified_with_as_hex"
+            ]
+        },
         "range_optimizer_max_mem_size": {
             "cli": "--range-optimizer-max-mem-size=N",
             "default": "8388608",
@@ -28490,6 +28501,7 @@
         },
         "tls_ciphersuites": {
             "cli": "--tls-ciphersuites=ciphersuite_list",
+            "default": "empty string",
             "dynamic": true,
             "name": "tls_ciphersuites",
             "scope": [

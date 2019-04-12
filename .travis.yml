@@ -9,8 +9,8 @@ before_script:
 script:
     - ./scripts/ci/ci-$CI_TYPE.sh
 install:
-    - if [ "$CI_TYPE" != "mocha" ] && [ "$CI_TYPE" != "style" ]; then composer install --ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress; fi
-    - if [ "$CI_TYPE" = "mocha" ] || [ "$CI_TYPE" = "style" ]; then npm ci; fi
+    - if [ "$CI_TYPE" != "mocha" ] && [ "$CI_TYPE" != "lint" ]; then composer install --ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress; fi
+    - if [ "$CI_TYPE" = "mocha" ] || [ "$CI_TYPE" = "lint" ]; then npm ci; fi
 after_script:
     - if [ "$CI_TYPE" != "cron" ]; then ./codacy-coverage.phar clover build/logs/clover.xml; else echo "skipped codacy"; fi
 stages:
@@ -116,7 +116,7 @@ jobs:
         - stage: lint
           language: node_js
           node_js: 'stable'
-          env: CI_TYPE=style
+          env: CI_TYPE=lint
           name: 'LINT - NODE stable'
 cache:
     ccache: true

@@ -12,7 +12,7 @@ install:
     - if [ "$CI_TYPE" != "mocha" ] && [ "$CI_TYPE" != "lint" ]; then composer install --ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress; fi
     - if [ "$CI_TYPE" = "mocha" ] || [ "$CI_TYPE" = "lint" ]; then npm ci; fi
 after_script:
-    - if [ "$CI_TYPE" != "cron" ]; then ./codacy-coverage.phar clover build/logs/clover.xml; else echo "skipped codacy"; fi
+    - if [ "$TRAVIS_BUILD_STAGE_NAME" = "tests" ] && [ "$CI_TYPE" != "mocha" ]; then ./codacy-coverage.phar clover build/logs/clover.xml; else echo "skipped codacy"; fi
 stages:
     - name: lint
       if: NOT type = cron

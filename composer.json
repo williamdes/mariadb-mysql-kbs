@@ -63,7 +63,8 @@
             "/phpcs.xml",
             "/phpstan.neon",
             "/.travis.yml",
-            "/dist/merged-raw.md"
+            "/dist/merged-raw.md",
+            "/.jshintignore"
         ]
     },
     "autoload": {

@@ -26,3 +26,4 @@ CODEOWNERS
 /.dependabot
 /.git
 /williamdes-mariadb-mysql-kbs-*.tar
+/.jshintignore

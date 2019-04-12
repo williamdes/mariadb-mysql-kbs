@@ -9,12 +9,13 @@ before_script:
 script:
     - ./scripts/ci/ci-$CI_TYPE.sh
 install:
-    - if [ "$CI_TYPE" != "mocha" ]; then flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"; fi
-    - if [ "$CI_TYPE" != "mocha" ]; then composer install $flags; fi
-    - if [ "$CI_TYPE" = "mocha" ]; then npm ci; fi
+    - if [ "$CI_TYPE" != "mocha" ] && [ "$CI_TYPE" != "style" ]; then composer install --ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress; fi
+    - if [ "$CI_TYPE" = "mocha" ] || [ "$CI_TYPE" = "style" ]; then npm ci; fi
 after_script:
     - if [ "$CI_TYPE" != "cron" ]; then ./codacy-coverage.phar clover build/logs/clover.xml; else echo "skipped codacy"; fi
 stages:
+    - name: lint
+      if: NOT type = cron
     - name: tests
       if: NOT type = cron
     - name: robot
@@ -50,7 +51,7 @@ jobs:
         - stage: tests
           os: osx
           language: node_js
-          node_js: 10
+          node_js: '10'
           env: CI_TYPE=phpunit
           name: 'PHPUNIT - PHP 7.1'
           addons:
@@ -68,7 +69,7 @@ jobs:
         - stage: tests
           os: osx
           language: node_js
-          node_js: 10
+          node_js: '10'
           env: CI_TYPE=phpunit
           name: 'PHPUNIT - PHP 7.2'
           addons:
@@ -86,7 +87,7 @@ jobs:
         - stage: tests
           os: osx
           language: node_js
-          node_js: 10
+          node_js: '10'
           env: CI_TYPE=phpunit
           name: 'PHPUNIT - PHP 7.3'
           addons:
@@ -112,6 +113,11 @@ jobs:
           name: 'MOCHA - NODE stable'
           after_success:
               - bash <(curl -s https://codecov.io/bash) -cF javascript
+        - stage: lint
+          language: node_js
+          node_js: 'stable'
+          env: CI_TYPE=style
+          name: 'LINT - NODE stable'
 cache:
     ccache: true
     apt: true

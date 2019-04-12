@@ -1,3 +1,5 @@
+'use strict';
+
 const common = require(__dirname + '/common');
 const dataDir = __dirname + '/../data/';
 const realTypes = [
@@ -42,15 +44,17 @@ common.listDirectory(dataDir, files => {
                 }
                 if (doc.dataType !== undefined) {
                     doc.type = '' + doc.dataType;
-                    if (doc.type === 'numeric') doc.type = 'integer';
+                    if (doc.type === 'numeric') {
+                        doc.type = 'integer';
+                    }
                     delete doc.dataType;
                 }
                 if (doc.cli !== undefined) {
-                    if (doc.cli.match(/\<code\>/i) || doc.cli.match(/\<\/code\>/i)) {
-                        doc.cli = doc.cli.replace(/\<code\>/gi, '');
-                        doc.cli = doc.cli.replace(/\<\/code\>/gi, '');
+                    if (doc.cli.match(/<code\>/i) || doc.cli.match(/<\/code\>/i)) {
+                        doc.cli = doc.cli.replace(/<code\>/gi, '');
+                        doc.cli = doc.cli.replace(/<\/code\>/gi, '');
                         doc.cli = doc.cli.replace(/\>/gi, '');
-                        doc.cli = doc.cli.replace(/\</gi, '');
+                        doc.cli = doc.cli.replace(/</gi, '');
                     }
                 }
                 if (doc.type === undefined) {

@@ -1,3 +1,5 @@
+'use strict';
+
 const jsdom = require('jsdom').JSDOM;
 const path = require('path');
 const writeJSON = require(__dirname + '/common').writeJSON;
@@ -13,16 +15,14 @@ function parsePage(url, cbSuccess) {
             let doc = { id: element.id };
             doc.name = element.childNodes[0].textContent.trim();
             try {
+                /* jshint -W083 */
                 // Parse ul > li
                 element.nextSibling.nextSibling.childNodes.forEach(liChild => {
                     liChild.childNodes.forEach(elementDescr => {
                         if (elementDescr.nodeName.toLocaleLowerCase() === 'strong') {
                             switch (elementDescr.innerHTML.toLowerCase().trim()) {
                                 case 'dynamic:':
-                                    doc.dynamic =
-                                        elementDescr.nextSibling.textContent
-                                            .toLowerCase()
-                                            .trim() === 'yes';
+                                    doc.dynamic = elementDescr.nextSibling.textContent.toLowerCase().trim() === 'yes';
                                     break;
                                 case 'scope:':
                                     doc.scope = elementDescr.nextSibling.textContent
@@ -42,22 +42,16 @@ function parsePage(url, cbSuccess) {
                                     });
                                     break;
                                 case 'type:':
-                                    doc.type = elementDescr.nextSibling.textContent
-                                        .toLowerCase()
-                                        .trim();
+                                    doc.type = elementDescr.nextSibling.textContent.toLowerCase().trim();
                                     break;
                                 case 'data type:':
                                     /*
                                      * Default method, <li> has a <code> child
                                      * Example: <li><strong>Data Type:</strong> <code>numeric</code></li>
                                      */
-                                    let dataType = elementDescr.parentElement.getElementsByTagName(
-                                        'code'
-                                    );
+                                    let dataType = elementDescr.parentElement.getElementsByTagName('code');
                                     if (dataType[0] !== undefined) {
-                                        doc.dataType = dataType[0].textContent
-                                            .toLowerCase()
-                                            .trim();
+                                        doc.dataType = dataType[0].textContent.toLowerCase().trim();
                                     } else {
                                         /*
                                          * Fallback method, <li> has text
@@ -75,15 +69,11 @@ function parsePage(url, cbSuccess) {
                                     }
                                     break;
                                 case 'description:':
-                                    doc.type = elementDescr.nextSibling.textContent
-                                        .toLowerCase()
-                                        .trim();
+                                    doc.type = elementDescr.nextSibling.textContent.toLowerCase().trim();
                                     break;
                                 case 'default value:':
                                     elementDescr.parentNode.childNodes.forEach(codeChild => {
-                                        if (
-                                            codeChild.nodeName.toLowerCase().trim() === 'code'
-                                        ) {
+                                        if (codeChild.nodeName.toLowerCase().trim() === 'code') {
                                             doc.default = codeChild.textContent;
                                         }
                                     });
@@ -91,9 +81,7 @@ function parsePage(url, cbSuccess) {
                                 case 'valid values:':
                                     doc.validValues = [];
                                     elementDescr.parentNode.childNodes.forEach(codeChild => {
-                                        if (
-                                            codeChild.nodeName.toLowerCase().trim() === 'code'
-                                        ) {
+                                        if (codeChild.nodeName.toLowerCase().trim() === 'code') {
                                             doc.validValues.push(codeChild.textContent);
                                         }
                                     });
@@ -101,48 +89,32 @@ function parsePage(url, cbSuccess) {
                                 case 'range:':
                                     doc.range = [];
                                     elementDescr.parentNode.childNodes.forEach(codeChild => {
-                                        if (
-                                            codeChild.nodeName.toLowerCase().trim() === 'code'
-                                        ) {
+                                        if (codeChild.nodeName.toLowerCase().trim() === 'code') {
                                             doc.range.push(codeChild.textContent);
                                         }
                                     });
                                     if (doc.range.length === 1) {
                                         // try x-y
-                                        doc.range = doc.range[0]
-                                            .split('-')
-                                            .map(item => item.trim());
+                                        doc.range = doc.range[0].split('-').map(item => item.trim());
                                     }
                                     if (doc.range.length === 1) {
                                         // try x to y
-                                        doc.range = doc.range[0]
-                                            .split('to')
-                                            .map(item => item.trim());
+                                        doc.range = doc.range[0].split('to').map(item => item.trim());
                                     }
                                     if (doc.range[1] !== undefined) {
                                         doc.range[1] = parseFloat(doc.range[1]);
                                     }
                                     if (doc.range.length === 1) {
                                         // try x upwards
-                                        elementDescr.parentNode.childNodes.forEach(
-                                            codeChild => {
-                                                if (
-                                                    codeChild.nodeName.toLowerCase().trim() ===
-                                                    '#text'
-                                                ) {
-                                                    var txtOriginal = codeChild.textContent.trim();
-                                                    var txtSansUpwards = codeChild.textContent
-                                                        .trim()
-                                                        .replace('upwards');
-                                                    if (
-                                                        txtOriginal.length !=
-                                                        txtSansUpwards.length
-                                                    ) {
-                                                        doc.range[1] = txtOriginal;
-                                                    }
+                                        elementDescr.parentNode.childNodes.forEach(codeChild => {
+                                            if (codeChild.nodeName.toLowerCase().trim() === '#text') {
+                                                var txtOriginal = codeChild.textContent.trim();
+                                                var txtSansUpwards = codeChild.textContent.trim().replace('upwards');
+                                                if (txtOriginal.length != txtSansUpwards.length) {
+                                                    doc.range[1] = txtOriginal;
                                                 }
                                             }
-                                        );
+                                        });
                                     }
                                     // Could be oneday a float
                                     doc.range = {
@@ -164,6 +136,7 @@ function parsePage(url, cbSuccess) {
                         }
                     });
                 });
+                /* jshint +W083 */
             } catch (e) {
                 console.error(e);
                 console.log('Error at : ' + url + '#' + doc.id);
@@ -180,16 +153,7 @@ function parsePage(url, cbSuccess) {
 
 const KB_URL = 'https://mariadb.com/kb/en/library/documentation/';
 
-const storageEngines = [
-    'aria',
-    'myrocks',
-    'cassandra',
-    'galera-cluster',
-    'mroonga',
-    'myisam',
-    'tokudb',
-    'connect',
-];
+const storageEngines = ['aria', 'myrocks', 'cassandra', 'galera-cluster', 'mroonga', 'myisam', 'tokudb', 'connect'];
 
 storageEngines.forEach(se => {
     console.log('Parsing storage engine : ' + se);
@@ -203,30 +167,21 @@ storageEngines.forEach(se => {
             '-system-variables/'
     );
     parsePage(
-        KB_URL +
-            'columns-storage-engines-and-plugins/storage-engines/' +
-            se +
-            '/' +
-            se +
-            '-system-variables/',
+        KB_URL + 'columns-storage-engines-and-plugins/storage-engines/' + se + '/' + se + '-system-variables/',
         (data, url) => {
             let page = {
                 url: url,
                 name: se + '-system-variables',
                 data: data,
             };
-            writeJSON(
-                path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'),
-                page
-            );
+            writeJSON(path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'), page);
         }
     );
 });
 
 const custom = [
     {
-        url:
-            'columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/',
+        url: 'columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/',
         name: 'spider-server-system-variables',
     },
     {
@@ -298,12 +253,7 @@ status.forEach(statusName => {
     });
 });
 
-const systemVariables = [
-    'xtradbinnodb-server',
-    'mariadb-audit-plugin',
-    'ssltls',
-    'performance-schema',
-];
+const systemVariables = ['xtradbinnodb-server', 'mariadb-audit-plugin', 'ssltls', 'performance-schema'];
 
 systemVariables.forEach(systemVariableName => {
     console.log('Parsing : ', systemVariableName);

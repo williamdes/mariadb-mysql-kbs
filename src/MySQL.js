@@ -1,3 +1,5 @@
+'use strict';
+
 const jsdom = require('jsdom').JSDOM;
 const path = require('path');
 const writeJSON = require(__dirname + '/common').writeJSON;
@@ -31,9 +33,7 @@ function completeDoc(rows, doc) {
                 if (scope === 'both') {
                     // found on mysql-cluster-options-variables.html
                     doc.scope = ['global', 'session'];
-                } else if (scope == '') {
-                    // empty scope
-                } else {
+                } else if (scope != '') {
                     doc.scope = scope.split(',').map(item => {
                         if (item.match(/session/)) {
                             return 'session';
@@ -52,7 +52,9 @@ function completeDoc(rows, doc) {
                 break;
             case 'type':
                 let type = value.textContent.toLowerCase().trim();
-                if (type != '') doc.type = type;
+                if (type != '') {
+                    doc.type = type;
+                }
                 break;
             case 'default value':
                 doc.default = value.textContent.toLowerCase().trim();

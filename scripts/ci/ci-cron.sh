@@ -50,12 +50,17 @@ echo "Create env file"
 echo -e "JWT_PRIV_KEY_PATH=$JWT_PRIV_KEY_PATH\nGPG_PRIV_PATH=$GPG_PRIV_PATH\nGPG_PUB_PATH=$GPG_PUB_PATH\nGPG_PRIV_PASSWORD=$GPG_PRIV_PASSWORD\nREPO=$REPO\nOWNER=$OWNER\nINSTALLATION_ID=$INSTALLATION_ID\nBOT_NAME=$BOT_NAME\nBOT_EMAIL=$BOT_EMAIL\nREPO_DIR=$REPO_DIR\nDOT_IGNORE=$BOT_DIR_FILES/.sudobotignore\nTEMPLATE_FILE=$BOT_DIR_FILES/template.js" > $BOT_DIR_FILES/.env
 
 
+cd $REPO_DIR
+
 echo "Install project npm"
-npm install
+
+if [ -f "$REPO_DIR/package-lock.json" ]; then
+    npm ci
+else
+    npm install
+fi
 
 echo "Run nodejs scripts"
-
-cd $REPO_DIR
 
 node "$REPO_DIR/src/MySQL.js"
 node "$REPO_DIR/src/MariaDB.js"

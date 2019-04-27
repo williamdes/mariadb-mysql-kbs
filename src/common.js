@@ -31,10 +31,14 @@ function sortObject(obj, arraySorter) {
     }
     return temp;
 }
-exports.writeJSON = function writeJSON(filename, data) {
+exports.writeJSON = function writeJSON(filename, data, cbSuccess = null) {
     fs.writeFile(filename, JSON.stringify(sortObject(data), null, 2) + '\n', function(err) {
         if (err) {
             return console.log(err);
+        } else {
+            if (cbSuccess !== null) {
+                cbSuccess();
+            }
         }
     });
 };

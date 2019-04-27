@@ -30,6 +30,9 @@
             "email": "williamdes@wdes.fr"
         }
     ],
+    "scripts": {
+        "build": "php src/merge.php"
+    },
     "require": {
         "php": "^7.1"
     },

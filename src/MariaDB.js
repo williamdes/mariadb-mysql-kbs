@@ -63,6 +63,8 @@ function parsePage(url, cbSuccess) {
                                         dataType = dataType.toLowerCase().trim();
                                         if (dataType !== '') {
                                             doc.dataType = dataType;
+                                        } else if (dataType === '') {
+                                            console.log('Empty datatype found for : ' + doc.id);
                                         } else {
                                             console.log('No datatype found for : ' + doc.id);
                                         }
@@ -155,29 +157,7 @@ const KB_URL = 'https://mariadb.com/kb/en/library/documentation/';
 
 const storageEngines = ['aria', 'myrocks', 'cassandra', 'galera-cluster', 'mroonga', 'myisam', 'tokudb', 'connect'];
 
-storageEngines.forEach(se => {
-    console.log('Parsing storage engine : ' + se);
-    console.log(
-        'URL : ' +
-            KB_URL +
-            'columns-storage-engines-and-plugins/storage-engines/' +
-            se +
-            '/' +
-            se +
-            '-system-variables/'
-    );
-    parsePage(
-        KB_URL + 'columns-storage-engines-and-plugins/storage-engines/' + se + '/' + se + '-system-variables/',
-        (data, url) => {
-            let page = {
-                url: url,
-                name: se + '-system-variables',
-                data: data,
-            };
-            writeJSON(path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'), page);
-        }
-    );
-});
+const systemVariables = ['xtradbinnodb-server', 'mariadb-audit-plugin', 'ssltls', 'performance-schema'];
 
 const custom = [
     {
@@ -210,19 +190,6 @@ const custom = [
     },
 ];
 
-custom.forEach(cu => {
-    console.log('Parsing : ', cu.name);
-    console.log('URL : ', cu.url);
-    parsePage(KB_URL + cu.url, (data, url) => {
-        let page = {
-            url: url,
-            name: cu.name,
-            data: data,
-        };
-        writeJSON(path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'), page);
-    });
-});
-
 const status = [
     'server',
     'galera-cluster',
@@ -240,30 +207,104 @@ const status = [
     'mariadb-audit-plugin',
     'semisynchronous-replication-plugin',
 ];
-status.forEach(statusName => {
-    console.log('Parsing : ', statusName);
-    console.log('URL : ' + KB_URL + statusName + '-status-variables/');
-    parsePage(KB_URL + statusName + '-status-variables/', (data, url) => {
-        let page = {
-            url: url,
-            name: statusName + '-status-variables',
-            data: data,
-        };
-        writeJSON(path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'), page);
-    });
-});
 
-const systemVariables = ['xtradbinnodb-server', 'mariadb-audit-plugin', 'ssltls', 'performance-schema'];
+module.exports = {
+    run: () => {
+        return new Promise(resolve => {
+            var nbrPagesProcessed = 0;
+            const totalPages = storageEngines.length + custom.length + status.length + systemVariables.length;
+            const endSuccessFile = () => {
+                nbrPagesProcessed++;
+                if (nbrPagesProcessed === totalPages) {
+                    resolve();
+                }
+            };
 
-systemVariables.forEach(systemVariableName => {
-    console.log('Parsing : ', systemVariableName);
-    console.log('URL : ' + KB_URL + systemVariableName + '-system-variables/');
-    parsePage(KB_URL + systemVariableName + '-system-variables/', (data, url) => {
-        let page = {
-            url: url,
-            name: systemVariableName + '-system-variables',
-            data: data,
-        };
-        writeJSON(path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'), page);
-    });
-});
+            storageEngines.forEach(se => {
+                console.log();
+                console.log(
+                    'Parsing storage engine : ' + se,
+                    'URL : ' +
+                        KB_URL +
+                        'columns-storage-engines-and-plugins/storage-engines/' +
+                        se +
+                        '/' +
+                        se +
+                        '-system-variables/'
+                );
+                parsePage(
+                    KB_URL +
+                        'columns-storage-engines-and-plugins/storage-engines/' +
+                        se +
+                        '/' +
+                        se +
+                        '-system-variables/',
+                    (data, url) => {
+                        let page = {
+                            url: url,
+                            name: se + '-system-variables',
+                            data: data,
+                        };
+                        writeJSON(
+                            path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'),
+                            page,
+                            endSuccessFile
+                        );
+                    }
+                );
+            });
+
+            custom.forEach(cu => {
+                console.log('Parsing : ', cu.name, 'URL : ', cu.url);
+                parsePage(KB_URL + cu.url, (data, url) => {
+                    let page = {
+                        url: url,
+                        name: cu.name,
+                        data: data,
+                    };
+                    writeJSON(
+                        path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'),
+                        page,
+                        endSuccessFile
+                    );
+                });
+            });
+
+            status.forEach(statusName => {
+                console.log('Parsing : ', statusName, 'URL : ' + KB_URL + statusName + '-status-variables/');
+                parsePage(KB_URL + statusName + '-status-variables/', (data, url) => {
+                    let page = {
+                        url: url,
+                        name: statusName + '-status-variables',
+                        data: data,
+                    };
+                    writeJSON(
+                        path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'),
+                        page,
+                        endSuccessFile
+                    );
+                });
+            });
+
+            systemVariables.forEach(systemVariableName => {
+                console.log(
+                    'Parsing : ',
+                    systemVariableName,
+                    'URL : ' + KB_URL + systemVariableName + '-system-variables/'
+                );
+                parsePage(KB_URL + systemVariableName + '-system-variables/', (data, url) => {
+                    let page = {
+                        url: url,
+                        name: systemVariableName + '-system-variables',
+                        data: data,
+                    };
+                    writeJSON(
+                        path.join(__dirname, '../', 'data', 'mariadb-' + page.name + '.json'),
+                        page,
+                        endSuccessFile
+                    );
+                });
+            });
+        });
+    },
+};

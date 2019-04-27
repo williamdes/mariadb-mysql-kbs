@@ -108,6 +108,7 @@ function createDoc(element, anchors) {
 }
 
 function parsePage(url, cbSuccess) {
+    console.log('URL : ' + url);
     var anchors = [];
     jsdom.fromURL(url).then(dom => {
         var window = dom.window;
@@ -135,137 +136,88 @@ function parsePage(url, cbSuccess) {
 const KB_URL = 'https://dev.mysql.com/doc/refman/8.0/en/';
 const KB_URL57 = 'https://dev.mysql.com/doc/refman/5.7/en/';
 
-parsePage(KB_URL + 'server-system-variables.html', (data, url) => {
-    let page = {
-        url: url,
+const pages = [
+    {
+        url: KB_URL + 'server-system-variables.html',
         name: 'server-system-variables',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'innodb-parameters.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'innodb-parameters.html',
         name: 'innodb-parameters',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'performance-schema-system-variables.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'performance-schema-system-variables.html',
         name: 'performance-schema-system-variables',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'x-plugin-options-system-variables.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'x-plugin-options-system-variables.html',
         name: 'x-plugin-options-system-variables',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'replication-options-binary-log.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'replication-options-binary-log.html',
         name: 'replication-options-binary-log',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL57 + 'replication-options-binary-log.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL57 + 'replication-options-binary-log.html',
         name: 'replication-options-binary-log_5.7',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'pluggable-authentication-system-variables.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'pluggable-authentication-system-variables.html',
         name: 'pluggable-authentication-system-variables',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'audit-log-reference.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'audit-log-reference.html',
         name: 'audit-log-reference',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'replication-options-gtids.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'replication-options-gtids.html',
         name: 'replication-options-gtids',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'replication-options-slave.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'replication-options-slave.html',
         name: 'replication-options-slave',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'replication-options-master.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'replication-options-master.html',
         name: 'replication-options-master',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'replication-options.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'replication-options.html',
         name: 'replication-options',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL57 + 'mysql-cluster-options-variables.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL57 + 'mysql-cluster-options-variables.html',
         name: 'mysql-cluster-options-variables',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'server-options.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'server-options.html',
         name: 'server-options',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
-
-parsePage(KB_URL + 'version-tokens-reference.html', (data, url) => {
-    let page = {
-        url: url,
+    },
+    {
+        url: KB_URL + 'version-tokens-reference.html',
         name: 'version-tokens-reference',
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + page.name + '.json'), page);
-});
+    },
+];
+
+module.exports = {
+    run: () => {
+        return new Promise(resolve => {
+            var nbrPagesProcessed = 0;
+            pages.forEach(page => {
+                parsePage(page.url, (data, url) => {
+                    let pageKB = {
+                        url: url,
+                        name: page.name,
+                        data: data,
+                    };
+                    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + pageKB.name + '.json'), pageKB, () => {
+                        nbrPagesProcessed++;
+                        if (nbrPagesProcessed === pages.length) {
+                            resolve();
+                        }
+                    });
+                });
+            });
+        });
+    },
+};

@@ -786,7 +786,7 @@
     },
     {
       "cli": "--innodb-default-row-format=value",
-      "default": "dynamic",
+      "default": "compact",
       "dynamic": true,
       "id": "innodb_default_row_format",
       "name": "innodb_default_row_format",

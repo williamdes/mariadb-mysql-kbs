@@ -56,8 +56,8 @@
       "type": "integer"
     },
     {
-      "cli": "--binlog-gtid-simple-recovery",
-      "default": "true",
+      "cli": "--binlog-gtid-simple-recovery[={OFF|ON}]",
+      "default": "on",
       "dynamic": false,
       "id": "sysvar_binlog_gtid_simple_recovery",
       "name": "binlog_gtid_simple_recovery",
@@ -171,8 +171,8 @@
       "type": "string"
     },
     {
-      "cli": "--simplified-binlog-gtid-recovery",
-      "default": "false",
+      "cli": "--simplified-binlog-gtid-recovery[={OFF|ON}]",
+      "default": "off",
       "dynamic": false,
       "id": "sysvar_simplified_binlog_gtid_recovery",
       "name": "simplified_binlog_gtid_recovery",

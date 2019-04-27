@@ -849,7 +849,6 @@
     },
     {
       "cli": "--slave-transaction_retry-errors=[error_code1,error_code2,...]",
-      "default": "1213,1205",
       "dynamic": false,
       "id": "slave_transaction_retry_errors",
       "name": "slave_transaction_retry_errors",

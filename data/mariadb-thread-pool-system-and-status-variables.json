@@ -139,8 +139,8 @@
       "id": "thread_pool_stall_limit",
       "name": "thread_pool_stall_limit",
       "range": {
-        "from": 4,
-        "to": 600
+        "from": 10,
+        "to": 4294967295
       },
       "scope": [
         "global"

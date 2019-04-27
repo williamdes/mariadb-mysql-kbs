@@ -61,14 +61,10 @@ else
 fi
 
 echo "Run nodejs scripts"
-
-node "$REPO_DIR/src/MySQL.js"
-node "$REPO_DIR/src/MariaDB.js"
-node "$REPO_DIR/src/spy.js"
+npm run build
 
 echo "Run merge script"
-
-php -f "$REPO_DIR/src/merge.php"
+composer run build
 
 echo "Run sudo-bot"
 

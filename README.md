@@ -23,14 +23,23 @@ Merged data : `/dist/`
 - JSON format (raw, slim, ultraslim)
 - PHP format (ultraslim)
 
+### Update the data
+
+```bash
+npm run build
+```
+
+```bash
+composer run build
+```
 
 ### Install
 
-```
+```bash
 composer require williamdes/mariadb-mysql-kbs
 ```
 
-```
+```bash
 npm install --save mariadb-mysql-kbs
 ```
 

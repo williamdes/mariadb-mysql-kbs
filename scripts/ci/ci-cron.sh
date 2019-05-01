@@ -55,7 +55,8 @@ cd $REPO_DIR
 echo "Install project npm"
 
 if [ -f "$REPO_DIR/package-lock.json" ]; then
-    npm ci
+    # use npm ci when node version is updated to handle this command
+    npm install
 else
     npm install
 fi

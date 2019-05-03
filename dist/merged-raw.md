@@ -5771,7 +5771,6 @@
 |Command line|`--binlog-format=format`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`row`|
 |Dynamic|`true`|
 |Valid value(s)|`ROW`, `STATEMENT`, `MIXED`|
 
@@ -5781,7 +5780,6 @@
 |mariadb.com|[binlog_format](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_format)|
 |dev.mysql.com|[sysvar_binlog_format](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_format)|
 |dev.mysql.com|[sysvar_binlog_format](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_format)|
-|dev.mysql.com|[option_mysqld_binlog-format](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_binlog-format)|
 
 ## binlog_optimize_thread_scheduling
 |name|value|
@@ -11822,7 +11820,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[big_tables](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#big_tables)|
-|dev.mysql.com|[option_mysqld_big-tables](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_big-tables)|
 |dev.mysql.com|[sysvar_big_tables](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_big_tables)|
 
 ## bind_address
@@ -11914,7 +11911,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[character_set_filesystem](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#character_set_filesystem)|
-|dev.mysql.com|[option_mysqld_character-set-filesystem](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_character-set-filesystem)|
 |dev.mysql.com|[sysvar_character_set_filesystem](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_filesystem)|
 
 ## character_set_results
@@ -11935,7 +11931,7 @@
 |name|value|
 |----|-----|
 |Name|`character_set_server`|
-|Command line|`--character-set-server`|
+|Command line|`--character-set-server=name`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
@@ -11944,7 +11940,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[character_set_server](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#character_set_server)|
-|dev.mysql.com|[option_mysqld_character-set-server](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_character-set-server)|
 |dev.mysql.com|[sysvar_character_set_server](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server)|
 
 ## character_set_system
@@ -12033,7 +12028,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[collation_server](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#collation_server)|
-|dev.mysql.com|[option_mysqld_collation-server](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_collation-server)|
 |dev.mysql.com|[sysvar_collation_server](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server)|
 
 ## completion_type
@@ -28514,24 +28508,6 @@
 |dev.mysql.com|[sysvar_binlog_row_event_max_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_event_max_size)|
 |dev.mysql.com|[option_mysqld_binlog-row-event-max-size](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-row-event-max-size)|
 
-## binlog_rows_query_log_events
-|name|value|
-|----|-----|
-|Name|`binlog_rows_query_log_events`|
-|Command line|`--binlog-rows-query-log-events[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`off`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_binlog-rows-query-log-events](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-rows-query-log-events)|
-|dev.mysql.com|[sysvar_binlog_rows_query_log_events](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events)|
-|dev.mysql.com|[option_mysqld_binlog-rows-query-log-events](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-rows-query-log-events)|
-|dev.mysql.com|[sysvar_binlog_rows_query_log_events](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events)|
-
 ## log_bin_use_v1_row_events
 |name|value|
 |----|-----|
@@ -28763,6 +28739,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_binlog_row_value_options](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_value_options)|
+
+## binlog_rows_query_log_events
+|name|value|
+|----|-----|
+|Name|`binlog_rows_query_log_events`|
+|Command line|`--binlog-rows-query-log-events[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_binlog_rows_query_log_events](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events)|
+|dev.mysql.com|[sysvar_binlog_rows_query_log_events](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events)|
 
 ## binlog_transaction_dependency_tracking
 |name|value|

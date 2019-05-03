@@ -6814,7 +6814,6 @@
         },
         "binlog_format": {
             "cli": "--binlog-format=format",
-            "default": "row",
             "dynamic": true,
             "name": "binlog_format",
             "scope": [
@@ -6839,10 +6838,6 @@
                 {
                     "anchor": "sysvar_binlog_format",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "option_mysqld_binlog-format",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 }
             ]
         },
@@ -13997,10 +13992,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_big-tables",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
                     "anchor": "sysvar_big_tables",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
@@ -14123,10 +14114,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_character-set-filesystem",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
                     "anchor": "sysvar_character_set_filesystem",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
@@ -14152,7 +14139,7 @@
             ]
         },
         "character_set_server": {
-            "cli": "--character-set-server",
+            "cli": "--character-set-server=name",
             "dynamic": true,
             "name": "character_set_server",
             "scope": [
@@ -14164,10 +14151,6 @@
                 {
                     "anchor": "character_set_server",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_character-set-server",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_character_set_server",
@@ -14284,10 +14267,6 @@
                 {
                     "anchor": "collation_server",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_collation-server",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_collation_server",
@@ -33917,35 +33896,6 @@
                 }
             ]
         },
-        "binlog_rows_query_log_events": {
-            "cli": "--binlog-rows-query-log-events[={OFF|ON}]",
-            "default": "off",
-            "dynamic": true,
-            "name": "binlog_rows_query_log_events",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_binlog-rows-query-log-events",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "sysvar_binlog_rows_query_log_events",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "option_mysqld_binlog-rows-query-log-events",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "sysvar_binlog_rows_query_log_events",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                }
-            ]
-        },
         "log_bin_use_v1_row_events": {
             "cli": "--log-bin-use-v1-row-events[={OFF|ON}]",
             "default": "off",
@@ -34239,6 +34189,27 @@
                 {
                     "anchor": "sysvar_binlog_row_value_options",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "binlog_rows_query_log_events": {
+            "cli": "--binlog-rows-query-log-events[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "binlog_rows_query_log_events",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_binlog_rows_query_log_events",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                },
+                {
+                    "anchor": "sysvar_binlog_rows_query_log_events",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
                 }
             ]
         },

@@ -28,35 +28,6 @@
       "type": "directory name"
     },
     {
-      "cli": "--big-tables[={OFF|ON}]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_big-tables",
-      "name": "big_tables",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--binlog-format=format",
-      "default": "row",
-      "dynamic": true,
-      "id": "option_mysqld_binlog-format",
-      "name": "binlog_format",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "ROW",
-        "STATEMENT",
-        "MIXED"
-      ]
-    },
-    {
       "cli": "--character-sets-dir=dir_name",
       "dynamic": false,
       "id": "option_mysqld_character-sets-dir",
@@ -74,44 +45,10 @@
       "type": "boolean"
     },
     {
-      "cli": "--character-set-filesystem=name",
-      "default": "binary",
-      "dynamic": true,
-      "id": "option_mysqld_character-set-filesystem",
-      "name": "character_set_filesystem",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "string"
-    },
-    {
-      "cli": "--character-set-server",
-      "dynamic": true,
-      "id": "option_mysqld_character-set-server",
-      "name": "character_set_server",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "string"
-    },
-    {
       "cli": "--chroot=dir_name",
       "id": "option_mysqld_chroot",
       "name": "chroot",
       "type": "directory name"
-    },
-    {
-      "cli": "--collation-server",
-      "dynamic": true,
-      "id": "option_mysqld_collation-server",
-      "name": "collation_server",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "string"
     },
     {
       "cli": "--console",

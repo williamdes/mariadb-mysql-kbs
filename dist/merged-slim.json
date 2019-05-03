@@ -5440,7 +5440,6 @@
         },
         "binlog_format": {
             "cli": "--binlog-format=format",
-            "default": "row",
             "dynamic": true,
             "name": "binlog_format",
             "scope": [
@@ -5456,8 +5455,7 @@
             "ids": [
                 "8#binlog_format",
                 "22#sysvar_binlog_format",
-                "23#sysvar_binlog_format",
-                "16#option_mysqld_binlog-format"
+                "23#sysvar_binlog_format"
             ]
         },
         "binlog_optimize_thread_scheduling": {
@@ -10876,7 +10874,6 @@
             "type": "boolean",
             "ids": [
                 "29#big_tables",
-                "16#option_mysqld_big-tables",
                 "10#sysvar_big_tables"
             ]
         },
@@ -10963,7 +10960,6 @@
             "type": "string",
             "ids": [
                 "29#character_set_filesystem",
-                "16#option_mysqld_character-set-filesystem",
                 "10#sysvar_character_set_filesystem"
             ]
         },
@@ -10981,7 +10977,7 @@
             ]
         },
         "character_set_server": {
-            "cli": "--character-set-server",
+            "cli": "--character-set-server=name",
             "dynamic": true,
             "name": "character_set_server",
             "scope": [
@@ -10991,7 +10987,6 @@
             "type": "string",
             "ids": [
                 "29#character_set_server",
-                "16#option_mysqld_character-set-server",
                 "10#sysvar_character_set_server"
             ]
         },
@@ -11072,7 +11067,6 @@
             "type": "string",
             "ids": [
                 "29#collation_server",
-                "16#option_mysqld_collation-server",
                 "10#sysvar_collation_server"
             ]
         },
@@ -26045,23 +26039,6 @@
                 "23#option_mysqld_binlog-row-event-max-size"
             ]
         },
-        "binlog_rows_query_log_events": {
-            "cli": "--binlog-rows-query-log-events[={OFF|ON}]",
-            "default": "off",
-            "dynamic": true,
-            "name": "binlog_rows_query_log_events",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "boolean",
-            "ids": [
-                "22#option_mysqld_binlog-rows-query-log-events",
-                "22#sysvar_binlog_rows_query_log_events",
-                "23#option_mysqld_binlog-rows-query-log-events",
-                "23#sysvar_binlog_rows_query_log_events"
-            ]
-        },
         "log_bin_use_v1_row_events": {
             "cli": "--log-bin-use-v1-row-events[={OFF|ON}]",
             "default": "off",
@@ -26275,6 +26252,21 @@
             ],
             "ids": [
                 "22#sysvar_binlog_row_value_options"
+            ]
+        },
+        "binlog_rows_query_log_events": {
+            "cli": "--binlog-rows-query-log-events[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "binlog_rows_query_log_events",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "22#sysvar_binlog_rows_query_log_events",
+                "23#sysvar_binlog_rows_query_log_events"
             ]
         },
         "binlog_transaction_dependency_tracking": {

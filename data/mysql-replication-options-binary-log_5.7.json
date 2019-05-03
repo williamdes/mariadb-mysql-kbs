@@ -11,13 +11,6 @@
       "type": "integer"
     },
     {
-      "cli": "--binlog-rows-query-log-events[={OFF|ON}]",
-      "default": "off",
-      "id": "option_mysqld_binlog-rows-query-log-events",
-      "name": "binlog_rows_query_log_events",
-      "type": "boolean"
-    },
-    {
       "cli": "--log-bin=file_name",
       "id": "option_mysqld_log-bin",
       "name": "log_bin",

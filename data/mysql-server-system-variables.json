@@ -268,7 +268,7 @@
       "type": "string"
     },
     {
-      "cli": "--character-set-server",
+      "cli": "--character-set-server=name",
       "dynamic": true,
       "id": "sysvar_character_set_server",
       "name": "character_set_server",
@@ -330,7 +330,7 @@
       "type": "string"
     },
     {
-      "cli": "--collation-server",
+      "cli": "--collation-server=name",
       "dynamic": true,
       "id": "sysvar_collation_server",
       "name": "collation_server",

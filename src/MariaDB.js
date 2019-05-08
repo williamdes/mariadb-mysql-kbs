@@ -3,6 +3,7 @@
 const jsdom = require('jsdom').JSDOM;
 const path = require('path');
 const writeJSON = require(__dirname + '/common').writeJSON;
+const cleaner = require(__dirname + '/cleaner');
 
 function parsePage(url, cbSuccess) {
     var anchors = [];
@@ -42,7 +43,9 @@ function parsePage(url, cbSuccess) {
                                     });
                                     break;
                                 case 'type:':
-                                    doc.type = elementDescr.nextSibling.textContent.toLowerCase().trim();
+                                    doc.type = cleaner.cleanType(
+                                        elementDescr.nextSibling.textContent.toLowerCase().trim()
+                                    );
                                     break;
                                 case 'data type:':
                                     /*
@@ -123,13 +126,16 @@ function parsePage(url, cbSuccess) {
                                         from: parseFloat(doc.range[0]),
                                         to: doc.range[1],
                                     };
+                                    doc.range = cleaner.cleanRange(doc.range);
 
                                     break;
                                 case 'commandline:':
-                                    doc.cli = elementDescr.parentNode.textContent
-                                        .toLowerCase()
-                                        .replace('commandline: ', '')
-                                        .trim();
+                                    doc.cli = cleaner.cleanCli(
+                                        elementDescr.parentNode.textContent
+                                            .toLowerCase()
+                                            .replace('commandline: ', '')
+                                            .trim()
+                                    );
                                     break;
                                 default:
                                     //console.log(elementDescr.innerHTML);
@@ -144,6 +150,14 @@ function parsePage(url, cbSuccess) {
                 console.log('Error at : ' + url + '#' + doc.id);
             }
             if (element.firstChild.nodeName.toLowerCase() === 'code') {
+                if (doc.dataType !== undefined) {
+                    //FIXME: remove strange hack
+                    doc.type = '' + doc.dataType;
+                    if (doc.type === 'numeric') {
+                        doc.type = 'integer';
+                    }
+                    delete doc.dataType;
+                }
                 anchors.push(doc);
             }
             //console.log(element.nextSibling.nextSibling.nodeName);

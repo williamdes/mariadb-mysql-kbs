@@ -1,11 +1,12 @@
 'use strict';
 
 const fs = require('fs');
+
 /**
  * Sort the object keys
  * @see https://stackoverflow.com/a/48112249/5155484
- * @param {object} obj The object
- * @param {function} arraySorter The sorter callback
+ * @param {Object} obj The object
+ * @param {Function} arraySorter The sorter callback
  */
 function sortObject(obj, arraySorter) {
     if (typeof obj !== 'object') {
@@ -31,7 +32,7 @@ function sortObject(obj, arraySorter) {
     }
     return temp;
 }
-exports.writeJSON = function writeJSON(filename, data, cbSuccess = null) {
+const writeJSON = function writeJSON(filename, data, cbSuccess = null) {
     fs.writeFile(filename, JSON.stringify(sortObject(data), null, 2) + '\n', function(err) {
         if (err) {
             return console.log(err);
@@ -43,7 +44,7 @@ exports.writeJSON = function writeJSON(filename, data, cbSuccess = null) {
     });
 };
 
-exports.readJSON = function readJSON(filename, callbackSuccess) {
+const readJSON = function readJSON(filename, callbackSuccess) {
     fs.readFile(filename, 'utf8', function(err, data) {
         if (err) {
             return console.log(err);
@@ -52,11 +53,17 @@ exports.readJSON = function readJSON(filename, callbackSuccess) {
     });
 };
 
-exports.listDirectory = function readJSON(dirname, callbackSuccess) {
+const listDirectory = function readJSON(dirname, callbackSuccess) {
     fs.readdir(dirname, (err, files) => {
         if (err) {
             return console.log(err);
         }
         callbackSuccess(files, dirname);
     });
+};
+
+module.exports = {
+    listDirectory: listDirectory,
+    readJSON: readJSON,
+    writeJSON: writeJSON,
 };

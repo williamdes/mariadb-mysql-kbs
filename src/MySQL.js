@@ -3,11 +3,13 @@
 const jsdom = require('jsdom').JSDOM;
 const path = require('path');
 const writeJSON = require(__dirname + '/common').writeJSON;
+const cleaner = require(__dirname + '/cleaner');
 const regexCli = /([-]{2})([0-9a-z-_]+)/i;
 
 /**
  * Complete a doc element with info found in table
  * @param {HTMLTableRowElement[]} rows The table rows
+ * @param {Object} doc The doc object
  */
 function completeDoc(rows, doc) {
     for (let i = 0; i < rows.length; i++) {
@@ -53,7 +55,7 @@ function completeDoc(rows, doc) {
             case 'type':
                 let type = value.textContent.toLowerCase().trim();
                 if (type != '') {
-                    doc.type = type;
+                    doc.type = cleaner.cleanType(type);
                 }
                 break;
             case 'default value':
@@ -80,7 +82,7 @@ function completeDoc(rows, doc) {
                 doc.range.to = parseFloat(value.textContent.trim());
                 break;
             case 'command-line format':
-                doc.cli = value.textContent.trim();
+                doc.cli = cleaner.cleanCli(value.textContent.trim());
                 break;
         }
     }
@@ -103,6 +105,9 @@ function createDoc(element, anchors) {
     var tbody = element.getElementsByTagName('tbody')[0];
 
     completeDoc(tbody.getElementsByTagName('tr'), doc);
+    if (doc.range !== undefined) {
+        doc.range = cleaner.cleanRange(doc.range);
+    }
 
     return doc;
 }

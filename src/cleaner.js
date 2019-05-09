@@ -60,15 +60,13 @@ const cleanCli = function(cli) {
 const cleanRange = function(range) {
     if (range !== undefined) {
         // clean range
-        if (range.from !== undefined) {
-            if (typeof range.from !== 'number') {
-                delete range.from;
-            }
+        if (typeof range.from !== 'number' || isNaN(range.from)) {
+            delete range.from;
         }
-        if (range.to !== undefined) {
-            if (typeof range.to !== 'number' && range.to !== 'upwards') {
-                delete range.to;
-            }
+        if (typeof range.to === 'string' && range.to.match(/upwards/i)) {
+            range.to = 'upwards';
+        } else if (typeof range.to !== 'number' || isNaN(range.to)) {
+            delete range.to;
         }
     }
     return range;

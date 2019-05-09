@@ -74,7 +74,9 @@ function parsePage(url, cbSuccess) {
                                     }
                                     break;
                                 case 'description:':
-                                    doc.type = elementDescr.nextSibling.textContent.toLowerCase().trim();
+                                    doc.type = cleaner.cleanType(
+                                        elementDescr.nextSibling.textContent.toLowerCase().trim()
+                                    );
                                     break;
                                 case 'default value:':
                                     elementDescr.parentNode.childNodes.forEach(codeChild => {
@@ -113,10 +115,9 @@ function parsePage(url, cbSuccess) {
                                         // try x upwards
                                         elementDescr.parentNode.childNodes.forEach(codeChild => {
                                             if (codeChild.nodeName.toLowerCase().trim() === '#text') {
-                                                var txtOriginal = codeChild.textContent.trim();
-                                                var txtSansUpwards = codeChild.textContent.trim().replace('upwards');
-                                                if (txtOriginal.length != txtSansUpwards.length) {
-                                                    doc.range[1] = txtOriginal;
+                                                let rangeText = codeChild.textContent.trim();
+                                                if (rangeText.includes('upwards')) {
+                                                    doc.range[1] = rangeText;
                                                 }
                                             }
                                         });
@@ -156,6 +157,7 @@ function parsePage(url, cbSuccess) {
                     if (doc.type === 'numeric') {
                         doc.type = 'integer';
                     }
+                    doc.type = cleaner.cleanType(doc.type);
                     delete doc.dataType;
                 }
                 anchors.push(doc);

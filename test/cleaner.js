@@ -30,6 +30,58 @@ module.exports = function() {
             expect(range).to.deep.equal(undefined);
             done();
         });
+        test('clean range.from typeof object (dataset-1)', function(done) {
+            const range = cleaner.cleanRange({
+                from: null,
+                to: null,
+            });
+            expect(range).to.deep.equal({});
+            done();
+        });
+        test('clean range.from typeof object (dataset-2)', function(done) {
+            const range = cleaner.cleanRange({
+                to: null,
+            });
+            expect(range).to.deep.equal({});
+            done();
+        });
+        test('clean range.from typeof object (dataset-3)', function(done) {
+            const range = cleaner.cleanRange({
+                from: null,
+            });
+            expect(range).to.deep.equal({});
+            done();
+        });
+        test('clean range.from typeof object (dataset-4)', function(done) {
+            const range = cleaner.cleanRange({
+                from: undefined,
+                to: undefined,
+            });
+            expect(range).to.deep.equal({});
+            done();
+        });
+        test('clean range.from typeof object (dataset-5)', function(done) {
+            const range = cleaner.cleanRange({
+                to: undefined,
+            });
+            expect(range).to.deep.equal({});
+            done();
+        });
+        test('clean range.from typeof object (dataset-6)', function(done) {
+            const range = cleaner.cleanRange({
+                from: undefined,
+            });
+            expect(range).to.deep.equal({});
+            done();
+        });
+        test('clean range.from typeof object (dataset-7)', function(done) {
+            const range = cleaner.cleanRange({
+                from: NaN,
+                to: NaN,
+            });
+            expect(range).to.deep.equal({});
+            done();
+        });
         test('clean range.from typeof int', function(done) {
             const range = cleaner.cleanRange({
                 from: 1024,
@@ -72,6 +124,15 @@ module.exports = function() {
         test('clean range to upwards', function(done) {
             const range = cleaner.cleanRange({
                 to: 'upwards',
+            });
+            expect(range).to.deep.equal({
+                to: 'upwards',
+            });
+            done();
+        });
+        test('clean range to upwards match', function(done) {
+            const range = cleaner.cleanRange({
+                to: '(128KB) upwards',
             });
             expect(range).to.deep.equal({
                 to: 'upwards',

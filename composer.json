@@ -31,7 +31,8 @@
         }
     ],
     "scripts": {
-        "build": "php src/merge.php"
+        "build": "php src/merge.php",
+        "test": "phpunit --configuration ./test/phpunit.xml"
     },
     "require": {
         "php": "^7.1"

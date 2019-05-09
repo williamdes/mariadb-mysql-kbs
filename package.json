@@ -58,12 +58,13 @@
         "name": "William Desportes",
         "url": "https://william.wdes.fr"
     },
-    "dependencies": {},
+    "dependencies": {
+        "crawler": "^1.2.1"
+    },
     "devDependencies": {
         "chai": "^4.2.0",
         "changelog-generator-twig": "^1.1.0",
         "codecov": "^3.3.0",
-        "jsdom": "^15.0.0",
         "jshint": "^2.10.2",
         "mocha": "^6.1.4",
         "nyc": "^14.0.0",

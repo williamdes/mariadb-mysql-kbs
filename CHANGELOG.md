@@ -8,12 +8,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- [a55aa0c](https://github.com/williamdes/mariadb-mysql-kbs/commit/a55aa0c33ed0f9a70921a5b5ee205f3a79442413) added: php lint to CI and removed apt cache key
+- [b3edac6](https://github.com/williamdes/mariadb-mysql-kbs/commit/b3edac617d653623b1840f7dbc89bac9276c3f82) add: .phpunit.result.cache to ignores
+- [77830b6](https://github.com/williamdes/mariadb-mysql-kbs/commit/77830b64be3803c7880702e0ba900d5946a11501) add: test command to composer.json
 - [0daf1a8](https://github.com/williamdes/mariadb-mysql-kbs/commit/0daf1a866d8ae22033297df652e6795052ab2ebe) added: jshint to dev dependencies
 - [3987131](https://github.com/williamdes/mariadb-mysql-kbs/commit/398713113a0387a3b666d52c55766a8dbb8bbad5) added: .jshintignore
 - [66f3d12](https://github.com/williamdes/mariadb-mysql-kbs/commit/66f3d124003a2c0b80f829e3a439e53d419ca145) added: root dir to prettier
 
 ### Changed
 
+- [22a609b](https://github.com/williamdes/mariadb-mysql-kbs/commit/22a609b4072296a943102965f79b6e9a2be61fc2) updated: swaggest/json-schema from 0.12.3+ to 0.12.9+ & phpunit command
+- [18d2e32](https://github.com/williamdes/mariadb-mysql-kbs/commit/18d2e3237f3ed8a316fe3c4c2683012196b2ac9d) update: [MySQL] data
+- [c5cafc6](https://github.com/williamdes/mariadb-mysql-kbs/commit/c5cafc66b59aee56e0db8ca42a0ddb8e0fc14f7e) update: [MariaDB] && [MySQL] updates
+- [b2f66ca](https://github.com/williamdes/mariadb-mysql-kbs/commit/b2f66ca3851a5908d491769cacb4cbc726c558bd) updated: dependencies and package-lock.json
+- [8597f00](https://github.com/williamdes/mariadb-mysql-kbs/commit/8597f005702c10777345408543cf5625809b4c88) updated: changelog 📖
 - [ac490c2](https://github.com/williamdes/mariadb-mysql-kbs/commit/ac490c2c6f3b7267fb72cb06d7990e547dd435d3) update: @sudo-bot cron script and README.md
 - [13b93dc](https://github.com/williamdes/mariadb-mysql-kbs/commit/13b93dc37cb2f2e1d5ebfe6cc990a1065920da7a) update: [MariaDB] && [MySQL] updates
 - [a9ddf62](https://github.com/williamdes/mariadb-mysql-kbs/commit/a9ddf62d554500b04a52ca0d425cceab955a656a) updated: prettier and mocha dependencies
@@ -24,6 +32,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- [70a480c](https://github.com/williamdes/mariadb-mysql-kbs/commit/70a480ca3a2b50556e76db7dec6b6121b450c4cf) fix: phpdoc block
+- [f106ca1](https://github.com/williamdes/mariadb-mysql-kbs/commit/f106ca1f2e2e6ba92bbae29bf343de90b0292717) fix: CI and .gitignore and phpstan command
+- [ba2631e](https://github.com/williamdes/mariadb-mysql-kbs/commit/ba2631e1fd3265e58764ee06ce1a8bc37ab11813) fix: cleaner and add tests
+- [e80c410](https://github.com/williamdes/mariadb-mysql-kbs/commit/e80c410f72cb8f899cab74eb72026db1026e6457) fix: @sudo-bot CI
 - [a7cf7bd](https://github.com/williamdes/mariadb-mysql-kbs/commit/a7cf7bdf0a9ce4e49d6f7b56e26a58c71fa79ec0) fix: remove renamed file
 - [8fd2d9f](https://github.com/williamdes/mariadb-mysql-kbs/commit/8fd2d9fc7a0507f35a44266a0c1a84f927f1a770) fix: @sudo-bot CI
 - [cc7aac7](https://github.com/williamdes/mariadb-mysql-kbs/commit/cc7aac74f2ba0341661b65ab49b65ebd1afd1e41) fixed: CI reporting for non mocha tests
@@ -34,6 +46,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Improvements
 
+- [be05dea](https://github.com/williamdes/mariadb-mysql-kbs/commit/be05dea67bb8cbc8f0ebb766d6236fdcfd89fea3) improved: CI install of npm and composer packages
+- [057e76b](https://github.com/williamdes/mariadb-mysql-kbs/commit/057e76b90346e8854d9bbdcc087b4633c0cbe70d) style: phpcs fixes
+- [e4b65db](https://github.com/williamdes/mariadb-mysql-kbs/commit/e4b65dbc851f623564afb3464014dc4ff49ada52) improved: Moved phpcs and phpcbf commands to composer
+- [53bd313](https://github.com/williamdes/mariadb-mysql-kbs/commit/53bd31394c5b4a3f42692a54933f083d94347e9b) improved: Use namespace for tests
+- [97f6095](https://github.com/williamdes/mariadb-mysql-kbs/commit/97f609580f412cdcd38ff61b20bfa69507661e60) improved: schemas testing
+- [ed45a4d](https://github.com/williamdes/mariadb-mysql-kbs/commit/ed45a4db9216193a1e9ef42ea06a11fdd1c089ab) improved: added tests for each .json file format
+- [5b51377](https://github.com/williamdes/mariadb-mysql-kbs/commit/5b51377f96821bb8778cf301f05d8573ea873c52) improved: Use phpunit for exception expectations
+- [e646cd4](https://github.com/williamdes/mariadb-mysql-kbs/commit/e646cd4118a57131b99bdd8ac3d4d15b700b0ca4) improved: Move spy to cleaner and add tests
 - [bc65814](https://github.com/williamdes/mariadb-mysql-kbs/commit/bc658145bde334580b3b495211081aa361099a4f) improved: extract scripts and use Promise and callbacks
 
 ## [v1.2.5]

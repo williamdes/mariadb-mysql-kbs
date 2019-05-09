@@ -4,25 +4,46 @@ namespace Williamdes\MariaDBMySQLKBS;
 
 use \PHPUnit\Framework\TestCase;
 use \Swaggest\JsonSchema\Schema;
+use \Swaggest\JsonSchema\Context;
+use \Swaggest\JsonSchema\RemoteRefProvider;
 use \Exception;
 use \stdClass;
 
-class DataTest extends TestCase
-{
-    private static $schemas = [];
+class RefProvider implements RemoteRefProvider {
 
     /**
-     * Load all schemas in memory
+     * Preloaded urn schemas
      *
-     * @return void
+     * @var array
      */
-    public static function setUpBeforeClass(): void
-    {
-        foreach (glob(__DIR__."/../schemas/*.json") as $filename) {
-            $doc                          = json_decode((string) file_get_contents($filename));
-            self::$schemas[$doc->{'$id'}] = $doc;
+    private $urnSchemas = [];
+
+    public function __construct(){
+        foreach (glob(__DIR__ . "/../schemas/*.json") as $filename) {
+            $schema = json_decode(file_get_contents($filename));
+            if(isset($schema) && isset($schema->{'$id'})) {
+                $this->urnSchemas[$schema->{'$id'}] = $schema;
+            }
         }
     }
+
+    /**
+     * @param string $url
+     * @return \stdClass|false json_decode of $url resource content
+     */
+    public function getSchemaData($url)
+    {
+        if(isset($this->urnSchemas[$url])) {// Handle urn: urls
+            return $this->urnSchemas[$url];
+        } else if(is_file($url)) {// Handle file
+            return json_decode(file_get_contents($url));
+        } else {// Handle URL
+            return json_decode(file_get_contents(rawurldecode($url)));
+        }
+    }
+};
+class DataTest extends TestCase
+{
 
     /**
      * Validate json data
@@ -34,10 +55,10 @@ class DataTest extends TestCase
      */
     public static function validate(stdClass $contents, string $id): bool
     {
-        if (isset(self::$schemas[$id]) === false) {
-            throw new Exception("No schema found !");
-        }
-        $schema = Schema::import(self::$schemas[$id]);
+
+        $options = new Context();
+        $options->setRemoteRefProvider(new RefProvider());
+        $schema = Schema::import($id, $options);
         $schema->in($contents);
         return true;// No exception occured
     }
@@ -49,8 +70,8 @@ class DataTest extends TestCase
      */
     public function testFileSample(): void
     {
-        $slimDataTestData = json_decode((string) file_get_contents(__DIR__."/data/slimDataTestWithVariables.json"));
-        $this->assertTrue(self::validate($slimDataTestData, "urn:williamdes:mariadb-mysql-kbs:slimdata"));
+        $slimDataTestData = json_decode((string) file_get_contents(__DIR__."/data/ultraSlimDataTestWithVariables.json"));
+        $this->assertTrue(self::validate($slimDataTestData, "urn:williamdes:mariadb-mysql-kbs:ultraslimdata"));
     }
 
     /**

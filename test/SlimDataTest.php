@@ -50,7 +50,7 @@ class SlimDataTest extends TestCase
         $kbe->addDocumentation("https://mariadb.com/");
         $kbe->addDocumentation("https://mariadb.com/", "anchorname");
         $this->assertEquals(
-            file_get_contents(__DIR__."/data/slimDataTestWithVariables.json"),
+            file_get_contents(__DIR__."/data/ultraSlimDataTestWithVariables.json"),
             json_encode($slimData, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT)
         );
     }

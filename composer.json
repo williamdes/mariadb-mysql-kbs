@@ -32,7 +32,8 @@
     ],
     "scripts": {
         "build": "php src/merge.php",
-        "test": "phpunit --testdox --configuration ./test/phpunit.xml"
+        "test": "phpunit --testdox --configuration ./test/phpunit.xml",
+        "phpstan": "phpstan analyse src test --configuration=phpstan.neon --level=max --memory-limit=100M"
     },
     "require": {
         "php": "^7.1"

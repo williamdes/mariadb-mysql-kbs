@@ -52,15 +52,6 @@ echo -e "JWT_PRIV_KEY_PATH=$JWT_PRIV_KEY_PATH\nGPG_PRIV_PATH=$GPG_PRIV_PATH\nGPG
 
 cd $REPO_DIR
 
-echo "Install project npm"
-
-if [ -f "$REPO_DIR/package-lock.json" ]; then
-    # use npm ci when node version is updated to handle this command
-    npm install
-else
-    npm install
-fi
-
 echo "Run nodejs scripts"
 npm run build
 

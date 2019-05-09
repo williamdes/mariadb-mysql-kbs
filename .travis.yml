@@ -119,9 +119,14 @@ jobs:
           node_js: 'stable'
           env: CI_TYPE=lint
           name: 'LINT - NODE stable'
+        - stage: lint
+          language: php
+          php: '7.3'
+          env: CI_TYPE=lint
+          name: 'LINT - PHP 7.3'
+          script: composer run phpcs
 cache:
     ccache: true
-    apt: true
     directories:
         - $HOME/.composer/cache/
         - $HOME/.cache/bower

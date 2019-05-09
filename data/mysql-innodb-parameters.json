@@ -1370,23 +1370,37 @@
     },
     {
       "cli": "--innodb-monitor-reset={counter|module|pattern|all}",
+      "default": "empty string",
       "dynamic": true,
       "id": "sysvar_innodb_monitor_reset",
       "name": "innodb_monitor_reset",
       "scope": [
         "global"
       ],
-      "type": "string"
+      "type": "enumeration",
+      "validValues": [
+        "counter",
+        "module",
+        "pattern",
+        "all"
+      ]
     },
     {
       "cli": "--innodb-monitor-reset-all={counter|module|pattern|all}",
+      "default": "empty string",
       "dynamic": true,
       "id": "sysvar_innodb_monitor_reset_all",
       "name": "innodb_monitor_reset_all",
       "scope": [
         "global"
       ],
-      "type": "string"
+      "type": "enumeration",
+      "validValues": [
+        "counter",
+        "module",
+        "pattern",
+        "all"
+      ]
     },
     {
       "cli": "--innodb-numa-interleave[={OFF|ON}]",

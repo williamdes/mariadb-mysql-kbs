@@ -25102,9 +25102,10 @@
 |name|value|
 |----|-----|
 |Name|`innodb_monitor_reset`|
-|Type of variable|`string`|
 |Scope|`global`|
+|Default value|`empty string`|
 |Dynamic|`true`|
+|Valid value(s)|`counter`, `module`, `pattern`, `all`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -25116,9 +25117,10 @@
 |name|value|
 |----|-----|
 |Name|`innodb_monitor_reset_all`|
-|Type of variable|`string`|
 |Scope|`global`|
+|Default value|`empty string`|
 |Dynamic|`true`|
+|Valid value(s)|`counter`, `module`, `pattern`, `all`|
 
 ### Documentation(s)
 |source|anchor name|

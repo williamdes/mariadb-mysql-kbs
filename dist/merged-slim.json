@@ -22899,24 +22899,36 @@
             ]
         },
         "innodb_monitor_reset": {
+            "default": "empty string",
             "dynamic": true,
             "name": "innodb_monitor_reset",
             "scope": [
                 "global"
             ],
-            "type": "string",
+            "validValues": [
+                "counter",
+                "module",
+                "pattern",
+                "all"
+            ],
             "ids": [
                 "40#innodb_monitor_reset",
                 "41#sysvar_innodb_monitor_reset"
             ]
         },
         "innodb_monitor_reset_all": {
+            "default": "empty string",
             "dynamic": true,
             "name": "innodb_monitor_reset_all",
             "scope": [
                 "global"
             ],
-            "type": "string",
+            "validValues": [
+                "counter",
+                "module",
+                "pattern",
+                "all"
+            ],
             "ids": [
                 "40#innodb_monitor_reset_all",
                 "41#sysvar_innodb_monitor_reset_all"

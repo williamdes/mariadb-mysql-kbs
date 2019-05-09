@@ -27,3 +27,4 @@ CODEOWNERS
 /.git
 /williamdes-mariadb-mysql-kbs-*.tar
 /.jshintignore
+/.phpunit.result.cache

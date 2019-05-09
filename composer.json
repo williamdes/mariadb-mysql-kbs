@@ -68,7 +68,8 @@
             "/phpstan.neon",
             "/.travis.yml",
             "/dist/merged-raw.md",
-            "/.jshintignore"
+            "/.jshintignore",
+            "/.phpunit.result.cache"
         ]
     },
     "autoload": {

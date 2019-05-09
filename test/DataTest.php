@@ -47,12 +47,42 @@ class DataTest extends TestCase
      *
      * @return void
      */
-    public function testFiles(): void
+    public function testFileSample(): void
     {
-        $slimData = json_decode((string) file_get_contents(__DIR__."/../dist/merged-ultraslim.json"));
-        $this->assertTrue(self::validate($slimData, "urn:williamdes:mariadb-mysql-kbs:slimdata"));
         $slimDataTestData = json_decode((string) file_get_contents(__DIR__."/data/slimDataTestWithVariables.json"));
         $this->assertTrue(self::validate($slimDataTestData, "urn:williamdes:mariadb-mysql-kbs:slimdata"));
     }
 
+    /**
+     * test slim data
+     *
+     * @return void
+     */
+    public function testFileSlim(): void
+    {
+        $slimData = json_decode((string) file_get_contents(__DIR__."/../dist/merged-slim.json"));
+        $this->assertTrue(self::validate($slimData, "urn:williamdes:mariadb-mysql-kbs:slimdata"));
+    }
+
+    /**
+     * test ultra slim data
+     *
+     * @return void
+     */
+    public function testFileUltraSlim(): void
+    {
+        $slimData = json_decode((string) file_get_contents(__DIR__."/../dist/merged-ultraslim.json"));
+        $this->assertTrue(self::validate($slimData, "urn:williamdes:mariadb-mysql-kbs:ultraslimdata"));
+    }
+
+    /**
+     * test ultra slim data
+     *
+     * @return void
+     */
+    public function testFileRaw(): void
+    {
+        $slimData = json_decode((string) file_get_contents(__DIR__."/../dist/merged-raw.json"));
+        $this->assertTrue(self::validate($slimData, "urn:williamdes:mariadb-mysql-kbs:rawdata"));
+    }
 }

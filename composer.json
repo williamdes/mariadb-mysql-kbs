@@ -32,7 +32,7 @@
     ],
     "scripts": {
         "build": "php src/merge.php",
-        "test": "phpunit --do-not-cache-result --testdox --configuration ./test/phpunit.xml"
+        "test": "phpunit --testdox --configuration ./test/phpunit.xml"
     },
     "require": {
         "php": "^7.1"
@@ -79,7 +79,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Williamdes\\MariaDBMySQLKBS\\": "test/"
+            "Williamdes\\MariaDBMySQLKBS\\Test\\": "test/"
         }
     },
     "non-feature-branches": ["update/*"]

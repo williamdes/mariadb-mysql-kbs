@@ -1,8 +1,11 @@
 <?php
 declare(strict_types = 1);
-namespace Williamdes\MariaDBMySQLKBS;
+namespace Williamdes\MariaDBMySQLKBS\Test;
 
 use \PHPUnit\Framework\TestCase;
+use \Williamdes\MariaDBMySQLKBS\SlimData;
+use \Williamdes\MariaDBMySQLKBS\Search;
+use \Williamdes\MariaDBMySQLKBS\KBException;
 
 class SearchTest extends TestCase
 {

@@ -1,8 +1,9 @@
 <?php
 declare(strict_types = 1);
-namespace Williamdes\MariaDBMySQLKBS;
+namespace Williamdes\MariaDBMySQLKBS\Test;
 
 use \PHPUnit\Framework\TestCase;
+use \Williamdes\MariaDBMySQLKBS\SlimData;
 
 class SlimDataTest extends TestCase
 {

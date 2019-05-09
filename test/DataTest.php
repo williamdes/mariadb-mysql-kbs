@@ -1,47 +1,13 @@
 <?php
 declare(strict_types = 1);
-namespace Williamdes\MariaDBMySQLKBS;
+namespace Williamdes\MariaDBMySQLKBS\Test;
 
 use \PHPUnit\Framework\TestCase;
+use \Williamdes\MariaDBMySQLKBS\Test\RefProvider;
 use \Swaggest\JsonSchema\Schema;
 use \Swaggest\JsonSchema\Context;
-use \Swaggest\JsonSchema\RemoteRefProvider;
-use \Exception;
 use \stdClass;
 
-class RefProvider implements RemoteRefProvider {
-
-    /**
-     * Preloaded urn schemas
-     *
-     * @var array
-     */
-    private $urnSchemas = [];
-
-    public function __construct(){
-        foreach (glob(__DIR__ . "/../schemas/*.json") as $filename) {
-            $schema = json_decode(file_get_contents($filename));
-            if(isset($schema) && isset($schema->{'$id'})) {
-                $this->urnSchemas[$schema->{'$id'}] = $schema;
-            }
-        }
-    }
-
-    /**
-     * @param string $url
-     * @return \stdClass|false json_decode of $url resource content
-     */
-    public function getSchemaData($url)
-    {
-        if(isset($this->urnSchemas[$url])) {// Handle urn: urls
-            return $this->urnSchemas[$url];
-        } else if(is_file($url)) {// Handle file
-            return json_decode(file_get_contents($url));
-        } else {// Handle URL
-            return json_decode(file_get_contents(rawurldecode($url)));
-        }
-    }
-};
 class DataTest extends TestCase
 {
 

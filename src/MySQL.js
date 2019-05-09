@@ -1,8 +1,6 @@
 'use strict';
 
-const jsdom = require('jsdom').JSDOM;
-const path = require('path');
-const writeJSON = require(__dirname + '/common').writeJSON;
+const common = require(__dirname + '/common');
 const cleaner = require(__dirname + '/cleaner');
 const regexCli = /([-]{2})([0-9a-z-_]+)/i;
 
@@ -11,17 +9,28 @@ const regexCli = /([-]{2})([0-9a-z-_]+)/i;
  * @param {HTMLTableRowElement[]} rows The table rows
  * @param {Object} doc The doc object
  */
-function completeDoc(rows, doc) {
-    for (let i = 0; i < rows.length; i++) {
-        const tr = rows[i];
-        var name = tr.firstElementChild.textContent.toLowerCase().trim();
-        var value = tr.lastElementChild;
+function completeDoc($, rows, doc) {
+    $(rows).each((i, elem) => {
+        let tds = $(elem).find('td'); // first is key and last is value
+        var name = tds
+            .first()
+            .text()
+            .toLowerCase()
+            .trim();
+        var value = tds.last();
         switch (name) {
             case 'dynamic':
-                doc.dynamic = value.textContent.toLowerCase().trim() === 'yes';
+                doc.dynamic =
+                    value
+                        .text()
+                        .toLowerCase()
+                        .trim() === 'yes';
                 break;
             case 'system variable':
-                var theName = value.textContent.toLowerCase().trim();
+                var theName = value
+                    .text()
+                    .toLowerCase()
+                    .trim();
                 if (doc.name !== undefined) {
                     if (doc.name.match(regexCli)) {
                         doc.name = theName;
@@ -31,7 +40,7 @@ function completeDoc(rows, doc) {
                 }
                 break;
             case 'scope':
-                let scope = value.textContent.toLowerCase();
+                let scope = value.text().toLowerCase();
                 if (scope === 'both') {
                     // found on mysql-cluster-options-variables.html
                     doc.scope = ['global', 'session'];
@@ -53,39 +62,43 @@ function completeDoc(rows, doc) {
                 }
                 break;
             case 'type':
-                let type = value.textContent.toLowerCase().trim();
+                let type = value
+                    .text()
+                    .toLowerCase()
+                    .trim();
                 if (type != '') {
                     doc.type = cleaner.cleanType(type);
                 }
                 break;
             case 'default value':
-                doc.default = value.textContent.toLowerCase().trim();
+                doc.default = value
+                    .text()
+                    .toLowerCase()
+                    .trim();
                 break;
             case 'valid values':
-                doc.validValues = [];
-                var codes = value.getElementsByTagName('code');
-                for (let j = 0; j < codes.length; j++) {
-                    const code = codes[j];
-                    doc.validValues.push(code.textContent);
-                }
+                doc.validValues = $(value)
+                    .find('code')
+                    .get()
+                    .map(el => $(el).text());
                 break;
             case 'minimum value':
                 if (doc.range == undefined) {
                     doc.range = {};
                 }
-                doc.range.from = parseFloat(value.textContent.trim());
+                doc.range.from = parseFloat(value.text().trim());
                 break;
             case 'maximum value':
                 if (doc.range == undefined) {
                     doc.range = {};
                 }
-                doc.range.to = parseFloat(value.textContent.trim());
+                doc.range.to = parseFloat(value.text().trim());
                 break;
             case 'command-line format':
-                doc.cli = cleaner.cleanCli(value.textContent.trim());
+                doc.cli = cleaner.cleanCli(value.text().trim());
                 break;
         }
-    }
+    });
 }
 
 /**
@@ -93,18 +106,26 @@ function completeDoc(rows, doc) {
  * @param {Element} element The root element
  * @returns object The doc object
  */
-function createDoc(element, anchors) {
+function createDoc($, element) {
     let doc = {};
-    doc.id = element.parentElement.getElementsByTagName('a')[0].name;
-    doc.name = element.parentElement.getElementsByTagName('code')[0].textContent.trim();
+    doc.id = $(element)
+        .parent()
+        .find('a')
+        .first()
+        .attr('name');
+    doc.name = $(element)
+        .parent()
+        .find('code')
+        .first()
+        .text()
+        .trim();
     var cli = doc.name.match(regexCli);
     if (cli) {
         // cli format
         doc.name = cli[2].replace(/-/g, '_'); //Try to clean format
     }
-    var tbody = element.getElementsByTagName('tbody')[0];
 
-    completeDoc(tbody.getElementsByTagName('tr'), doc);
+    completeDoc($, $(element).find('tbody > tr'), doc);
     if (doc.range !== undefined) {
         doc.range = cleaner.cleanRange(doc.range);
     }
@@ -112,30 +133,53 @@ function createDoc(element, anchors) {
     return doc;
 }
 
-function parsePage(url, cbSuccess) {
-    console.log('URL : ' + url);
+function parsePage($, cbSuccess) {
     var anchors = [];
-    jsdom.fromURL(url).then(dom => {
-        var window = dom.window;
-        var document = window.document;
-        var elements = document.getElementsByClassName('informaltable');
-        for (let i = 0; i < elements.length; i++) {
-            let element = elements[i];
-            if (element.getElementsByTagName('th')[0].textContent != 'Property') {
-                continue;
-            }
-            anchors.push(createDoc(element));
-        }
-        elements = document.getElementsByClassName('table');
-        for (let i = 0; i < elements.length; i++) {
-            let element = elements[i];
-            if (element.getElementsByTagName('a')[0].name.match(/-detailtable/) === null) {
-                continue;
-            }
-            anchors.push(createDoc(element));
-        }
-        cbSuccess(anchors, url);
-    });
+    $('.informaltable')
+        .filter(function(i, elem) {
+            var thText = $(elem)
+                .find('th')
+                .first()
+                .text();
+            return thText === 'Property';
+        })
+        .each(function(i, el) {
+            anchors.push(createDoc($, el));
+        });
+
+    // Find all anchors on the webpage
+    $('.table')
+        .find('a')
+        .filter(function(i, el) {
+            var elName = $(el).attr('name');
+            return typeof elName === 'string' && elName.match(/-detailtable$/);
+        })
+        .each(function(i, el) {
+            var doc = createDoc(
+                $,
+                $(el)
+                    .parent()
+                    .find('table')
+                    .get()
+            );
+            doc.id = $(el)
+                .parent()
+                .prev()
+                .find('a')
+                .first()
+                .attr('name');
+            doc.cli = cleaner.cleanCli(
+                $(el)
+                    .parent()
+                    .prev()
+                    .find('code')
+                    .first()
+                    .text()
+                    .trim()
+            );
+            anchors.push(doc);
+        });
+    cbSuccess(anchors);
 }
 
 const KB_URL = 'https://dev.mysql.com/doc/refman/8.0/en/';
@@ -206,23 +250,6 @@ const pages = [
 
 module.exports = {
     run: () => {
-        return new Promise(resolve => {
-            var nbrPagesProcessed = 0;
-            pages.forEach(page => {
-                parsePage(page.url, (data, url) => {
-                    let pageKB = {
-                        url: url,
-                        name: page.name,
-                        data: data,
-                    };
-                    writeJSON(path.join(__dirname, '../', 'data', 'mysql-' + pageKB.name + '.json'), pageKB, () => {
-                        nbrPagesProcessed++;
-                        if (nbrPagesProcessed === pages.length) {
-                            resolve();
-                        }
-                    });
-                });
-            });
-        });
+        return common.processDataExtraction(pages, 'mysql-', parsePage);
     },
 };

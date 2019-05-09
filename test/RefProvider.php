@@ -10,7 +10,7 @@ class RefProvider implements RemoteRefProvider
     /**
      * Preloaded urn schemas
      *
-     * @var stdClass[]
+     * @var \stdClass[]
      */
     private $urnSchemas = [];
 

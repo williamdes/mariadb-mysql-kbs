@@ -3,7 +3,6 @@ declare(strict_types = 1);
 namespace Williamdes\MariaDBMySQLKBS\Test;
 
 use \PHPUnit\Framework\TestCase;
-use \Williamdes\MariaDBMySQLKBS\Test\RefProvider;
 use \Swaggest\JsonSchema\Schema;
 use \Swaggest\JsonSchema\Context;
 use \stdClass;
@@ -21,7 +20,6 @@ class DataTest extends TestCase
      */
     public static function validate(stdClass $contents, string $id): bool
     {
-
         $options = new Context();
         $options->setRemoteRefProvider(new RefProvider());
         $schema = Schema::import($id, $options);
@@ -72,4 +70,5 @@ class DataTest extends TestCase
         $slimData = json_decode((string) file_get_contents(__DIR__."/../dist/merged-raw.json"));
         $this->assertTrue(self::validate($slimData, "urn:williamdes:mariadb-mysql-kbs:rawdata"));
     }
+
 }

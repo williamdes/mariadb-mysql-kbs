@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- [61a933f](https://github.com/williamdes/mariadb-mysql-kbs/commit/61a933f6e0d67f4287ba73243f2d69417b76f609) added: dependencies up to date badge
 - [a55aa0c](https://github.com/williamdes/mariadb-mysql-kbs/commit/a55aa0c33ed0f9a70921a5b5ee205f3a79442413) added: php lint to CI and removed apt cache key
 - [b3edac6](https://github.com/williamdes/mariadb-mysql-kbs/commit/b3edac617d653623b1840f7dbc89bac9276c3f82) add: .phpunit.result.cache to ignores
 - [77830b6](https://github.com/williamdes/mariadb-mysql-kbs/commit/77830b64be3803c7880702e0ba900d5946a11501) add: test command to composer.json
@@ -17,6 +18,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [f679d22](https://github.com/williamdes/mariadb-mysql-kbs/commit/f679d2207b5c8d99044471de6e492b3ccd5b4a78) updated: dependencies and package-lock.json
+- [46f52d8](https://github.com/williamdes/mariadb-mysql-kbs/commit/46f52d8c91a332480b7f5907d28fea3e391662df) update: [MySQL] data
+- [364ae58](https://github.com/williamdes/mariadb-mysql-kbs/commit/364ae5840e6afdfa8e5c60d4a2552d6f041556a1) updated: changelog 📖
 - [22a609b](https://github.com/williamdes/mariadb-mysql-kbs/commit/22a609b4072296a943102965f79b6e9a2be61fc2) updated: swaggest/json-schema from 0.12.3+ to 0.12.9+ & phpunit command
 - [18d2e32](https://github.com/williamdes/mariadb-mysql-kbs/commit/18d2e3237f3ed8a316fe3c4c2683012196b2ac9d) update: [MySQL] data
 - [c5cafc6](https://github.com/williamdes/mariadb-mysql-kbs/commit/c5cafc66b59aee56e0db8ca42a0ddb8e0fc14f7e) update: [MariaDB] && [MySQL] updates
@@ -29,6 +33,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [1862d41](https://github.com/williamdes/mariadb-mysql-kbs/commit/1862d4158b6b285da798b9919af39686de683205) updated: sudo-bot and codecov npm dependencies
 - [d2c8b8e](https://github.com/williamdes/mariadb-mysql-kbs/commit/d2c8b8ebdcdc603084c4235e78f93fd4c9f24c8d) update: [MySQL] updates
 - [c4610e5](https://github.com/williamdes/mariadb-mysql-kbs/commit/c4610e576d8cecf7d07746c264e3cb498b41b741) updated: changelog 📖
+
+### Removed
+
+- [f2d43b0](https://github.com/williamdes/mariadb-mysql-kbs/commit/f2d43b099df2442e5599130c86a72200811c4dbf) removed: spy script (useless)
 
 ### Fixed
 
@@ -46,6 +54,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Improvements
 
+- [b4d600b](https://github.com/williamdes/mariadb-mysql-kbs/commit/b4d600b77993743c52b2f962b444a54be34b1107) improved: Improved extraction process and fixed bugs
+- [7e81a29](https://github.com/williamdes/mariadb-mysql-kbs/commit/7e81a2943dd7bb6bfa369f056548b3239b9fbbaf) improved: move MariaDB and MySQL script to crawler and jquery
+- [8190342](https://github.com/williamdes/mariadb-mysql-kbs/commit/8190342314ab1fa767c25b3960d2f8c17660a145) improved: Replace jsdom by crawler
 - [be05dea](https://github.com/williamdes/mariadb-mysql-kbs/commit/be05dea67bb8cbc8f0ebb766d6236fdcfd89fea3) improved: CI install of npm and composer packages
 - [057e76b](https://github.com/williamdes/mariadb-mysql-kbs/commit/057e76b90346e8854d9bbdcc087b4633c0cbe70d) style: phpcs fixes
 - [e4b65db](https://github.com/williamdes/mariadb-mysql-kbs/commit/e4b65dbc851f623564afb3464014dc4ff49ada52) improved: Moved phpcs and phpcbf commands to composer

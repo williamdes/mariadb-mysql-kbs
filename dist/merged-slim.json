@@ -1917,8 +1917,7 @@
             "ids": [
                 "7#server_id",
                 "9#server_id",
-                "10#replication-options",
-                "9#replication-options",
+                "10#option_mysqld_server-id",
                 "11#sysvar_server_id"
             ]
         },
@@ -6174,6 +6173,7 @@
             "type": "integer",
             "ids": [
                 "8#slave_max_allowed_packet",
+                "24#option_mysqld_slave-max-allowed-packet",
                 "24#sysvar_slave_max_allowed_packet"
             ]
         },
@@ -24819,9 +24819,9 @@
                 "44#option_mysqld_ndbcluster"
             ]
         },
-        "ndb_allow_copying_alter_table": {
+        "ndb-allow-copying-alter-table": {
             "dynamic": true,
-            "name": "ndb_allow_copying_alter_table",
+            "name": "ndb-allow-copying-alter-table",
             "scope": [
                 "global",
                 "session"
@@ -24830,9 +24830,9 @@
                 "43#option_mysqld_ndb-allow-copying-alter-table"
             ]
         },
-        "ndb_batch_size": {
+        "ndb-batch-size": {
             "dynamic": false,
-            "name": "ndb_batch_size",
+            "name": "ndb-batch-size",
             "scope": [
                 "global"
             ],
@@ -24840,9 +24840,9 @@
                 "43#option_mysqld_ndb-batch-size"
             ]
         },
-        "ndb_cluster_connection_pool": {
+        "ndb-cluster-connection-pool": {
             "dynamic": false,
-            "name": "ndb_cluster_connection_pool",
+            "name": "ndb-cluster-connection-pool",
             "scope": [
                 "global"
             ],
@@ -24850,9 +24850,9 @@
                 "43#option_mysqld_ndb-cluster-connection-pool"
             ]
         },
-        "ndb_cluster_connection_pool_nodeids": {
+        "ndb-cluster-connection-pool-nodeids": {
             "dynamic": false,
-            "name": "ndb_cluster_connection_pool_nodeids",
+            "name": "ndb-cluster-connection-pool-nodeids",
             "scope": [
                 "global"
             ],
@@ -24860,9 +24860,9 @@
                 "43#option_mysqld_ndb-cluster-connection-pool-nodeids"
             ]
         },
-        "ndb_blob_read_batch_bytes": {
+        "ndb-blob-read-batch-bytes": {
             "dynamic": true,
-            "name": "ndb_blob_read_batch_bytes",
+            "name": "ndb-blob-read-batch-bytes",
             "scope": [
                 "global",
                 "session"
@@ -24871,9 +24871,9 @@
                 "43#option_mysqld_ndb-blob-read-batch-bytes"
             ]
         },
-        "ndb_blob_write_batch_bytes": {
+        "ndb-blob-write-batch-bytes": {
             "dynamic": true,
-            "name": "ndb_blob_write_batch_bytes",
+            "name": "ndb-blob-write-batch-bytes",
             "scope": [
                 "global",
                 "session"
@@ -24882,117 +24882,108 @@
                 "43#option_mysqld_ndb-blob-write-batch-bytes"
             ]
         },
-        "ndb_connectstring": {
+        "ndb-connectstring": {
             "dynamic": false,
-            "name": "ndb_connectstring",
+            "name": "ndb-connectstring",
             "ids": [
                 "43#option_mysqld_ndb-connectstring"
             ]
         },
-        "ndb_default_column_format": {
+        "ndb-default-column-format": {
             "dynamic": true,
-            "name": "ndb_default_column_format",
+            "name": "ndb-default-column-format",
             "scope": [
                 "global"
             ],
             "ids": [
-                "43#option_mysqld_ndb-default-column-format",
-                "43#sysvar_ndb_default_column_format"
+                "43#option_mysqld_ndb-default-column-format"
             ]
         },
-        "ndb_deferred_constraints": {
+        "ndb-deferred-constraints": {
             "dynamic": true,
-            "name": "ndb_deferred_constraints",
+            "name": "ndb-deferred-constraints",
             "scope": [
                 "global",
                 "session"
             ],
             "ids": [
-                "43#option_mysqld_ndb-deferred-constraints",
-                "43#sysvar_ndb_deferred_constraints"
+                "43#option_mysqld_ndb-deferred-constraints"
             ]
         },
-        "ndb_distribution": {
+        "ndb-distribution": {
             "dynamic": true,
-            "name": "ndb_distribution",
+            "name": "ndb-distribution",
             "scope": [
                 "global"
             ],
             "ids": [
-                "43#option_mysqld_ndb-distribution",
-                "43#sysvar_ndb_distribution"
+                "43#option_mysqld_ndb-distribution"
             ]
         },
-        "ndb_log_apply_status": {
+        "ndb-log-apply-status": {
             "dynamic": false,
-            "name": "ndb_log_apply_status",
+            "name": "ndb-log-apply-status",
             "scope": [
                 "global"
             ],
             "ids": [
-                "43#option_mysqld_ndb-log-apply-status",
-                "43#sysvar_ndb_log_apply_status"
+                "43#option_mysqld_ndb-log-apply-status"
             ]
         },
-        "ndb_log_empty_epochs": {
+        "ndb-log-empty-epochs": {
             "dynamic": true,
-            "name": "ndb_log_empty_epochs",
+            "name": "ndb-log-empty-epochs",
             "scope": [
                 "global"
             ],
             "ids": [
-                "43#option_mysqld_ndb-log-empty-epochs",
-                "43#sysvar_ndb_log_empty_epochs"
+                "43#option_mysqld_ndb-log-empty-epochs"
             ]
         },
-        "ndb_log_empty_update": {
+        "ndb-log-empty-update": {
             "dynamic": true,
-            "name": "ndb_log_empty_update",
+            "name": "ndb-log-empty-update",
             "scope": [
                 "global"
             ],
             "ids": [
-                "43#option_mysqld_ndb-log-empty-update",
-                "43#sysvar_ndb_log_empty_update"
+                "43#option_mysqld_ndb-log-empty-update"
             ]
         },
-        "ndb_log_exclusive_reads": {
+        "ndb-log-exclusive-reads": {
             "dynamic": true,
-            "name": "ndb_log_exclusive_reads",
+            "name": "ndb-log-exclusive-reads",
             "scope": [
                 "global",
                 "session"
             ],
             "ids": [
-                "43#option_mysqld_ndb-log-exclusive-reads",
-                "43#sysvar_ndb_log_exclusive_reads"
+                "43#option_mysqld_ndb-log-exclusive-reads"
             ]
         },
-        "ndb_log_orig": {
+        "ndb-log-orig": {
             "dynamic": false,
-            "name": "ndb_log_orig",
+            "name": "ndb-log-orig",
             "scope": [
                 "global"
             ],
             "ids": [
-                "43#option_mysqld_ndb-log-orig",
-                "43#sysvar_ndb_log_orig"
+                "43#option_mysqld_ndb-log-orig"
             ]
         },
-        "ndb_log_transaction_id": {
+        "ndb-log-transaction-id": {
             "dynamic": false,
-            "name": "ndb_log_transaction_id",
+            "name": "ndb-log-transaction-id",
             "scope": [
                 "global"
             ],
             "ids": [
-                "43#option_mysqld_ndb-log-transaction-id",
-                "43#sysvar_ndb_log_transaction_id"
+                "43#option_mysqld_ndb-log-transaction-id"
             ]
         },
-        "ndb_log_update_minimal": {
+        "ndb-log-update-minimal": {
             "dynamic": true,
-            "name": "ndb_log_update_minimal",
+            "name": "ndb-log-update-minimal",
             "scope": [
                 "global"
             ],
@@ -25000,16 +24991,16 @@
                 "43#option_mysqld_ndb-log-update-minimal"
             ]
         },
-        "ndb_mgmd_host": {
+        "ndb-mgmd-host": {
             "dynamic": false,
-            "name": "ndb_mgmd_host",
+            "name": "ndb-mgmd-host",
             "ids": [
                 "43#option_mysqld_ndb-mgmd-host"
             ]
         },
-        "ndb_nodeid": {
+        "ndb-nodeid": {
             "dynamic": false,
-            "name": "ndb_nodeid",
+            "name": "ndb-nodeid",
             "scope": [
                 "global"
             ],
@@ -25017,9 +25008,9 @@
                 "43#option_mysqld_ndb-nodeid"
             ]
         },
-        "ndb_optimization_delay": {
+        "ndb-optimization-delay": {
             "dynamic": true,
-            "name": "ndb_optimization_delay",
+            "name": "ndb-optimization-delay",
             "scope": [
                 "global"
             ],
@@ -25027,34 +25018,30 @@
                 "43#option_mysqld_ndb-optimization-delay"
             ]
         },
-        "ndb_recv_thread_activation_threshold": {
+        "ndb-recv-thread-activation-threshold": {
             "dynamic": false,
-            "name": "ndb_recv_thread_activation_threshold",
+            "name": "ndb-recv-thread-activation-threshold",
             "ids": [
-                "43#option_mysqld_ndb-recv-thread-activation-threshold",
-                "43#sysvar_ndb_recv_thread_activation_threshold"
+                "43#option_mysqld_ndb-recv-thread-activation-threshold"
             ]
         },
-        "ndb_recv_thread_cpu_mask": {
-            "name": "ndb_recv_thread_cpu_mask",
-            "scope": [
-                "global"
-            ],
+        "ndb-recv-thread-cpu-mask": {
+            "dynamic": false,
+            "name": "ndb-recv-thread-cpu-mask",
             "ids": [
-                "43#option_mysqld_ndb-recv-thread-cpu-mask",
-                "43#sysvar_ndb_recv_thread_cpu_mask"
+                "43#option_mysqld_ndb-recv-thread-cpu-mask"
             ]
         },
-        "ndb-transid-mysql-connection-map=state": {
+        "ndb-transid-mysql-connection-map": {
             "dynamic": false,
-            "name": "ndb-transid-mysql-connection-map=state",
+            "name": "ndb-transid-mysql-connection-map",
             "ids": [
                 "43#option_mysqld_ndb-transid-mysql-connection-map"
             ]
         },
-        "ndb_wait_connected": {
+        "ndb-wait-connected": {
             "dynamic": false,
-            "name": "ndb_wait_connected",
+            "name": "ndb-wait-connected",
             "scope": [
                 "global"
             ],
@@ -25062,9 +25049,9 @@
                 "43#option_mysqld_ndb-wait-connected"
             ]
         },
-        "ndb_wait_setup": {
+        "ndb-wait-setup": {
             "dynamic": false,
-            "name": "ndb_wait_setup",
+            "name": "ndb-wait-setup",
             "scope": [
                 "global"
             ],
@@ -25072,20 +25059,19 @@
                 "43#option_mysqld_ndb-wait-setup"
             ]
         },
-        "server_id_bits": {
+        "server-id-bits": {
             "dynamic": false,
-            "name": "server_id_bits",
+            "name": "server-id-bits",
             "scope": [
                 "global"
             ],
             "ids": [
-                "43#option_mysqld_server-id-bits",
-                "43#sysvar_server_id_bits"
+                "43#option_mysqld_server-id-bits"
             ]
         },
-        "skip_ndbcluster": {
+        "skip-ndbcluster": {
             "dynamic": false,
-            "name": "skip_ndbcluster",
+            "name": "skip-ndbcluster",
             "ids": [
                 "43#option_mysqld_skip-ndbcluster"
             ]
@@ -25129,6 +25115,37 @@
             ],
             "ids": [
                 "43#sysvar_ndb_data_node_neighbour"
+            ]
+        },
+        "ndb_default_column_format": {
+            "dynamic": true,
+            "name": "ndb_default_column_format",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_ndb_default_column_format"
+            ]
+        },
+        "ndb_deferred_constraints": {
+            "dynamic": true,
+            "name": "ndb_deferred_constraints",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                "43#sysvar_ndb_deferred_constraints"
+            ]
+        },
+        "ndb_distribution": {
+            "dynamic": true,
+            "name": "ndb_distribution",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_ndb_distribution"
             ]
         },
         "ndb_eventbuffer_free_percent": {
@@ -25216,6 +25233,16 @@
                 "43#sysvar_ndb_join_pushdown"
             ]
         },
+        "ndb_log_apply_status": {
+            "dynamic": false,
+            "name": "ndb_log_apply_status",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_ndb_log_apply_status"
+            ]
+        },
         "ndb_log_bin": {
             "dynamic": true,
             "name": "ndb_log_bin",
@@ -25237,6 +25264,57 @@
                 "43#sysvar_ndb_log_binlog_index"
             ]
         },
+        "ndb_log_empty_epochs": {
+            "dynamic": true,
+            "name": "ndb_log_empty_epochs",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_ndb_log_empty_epochs"
+            ]
+        },
+        "ndb_log_empty_update": {
+            "dynamic": true,
+            "name": "ndb_log_empty_update",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_ndb_log_empty_update"
+            ]
+        },
+        "ndb_log_exclusive_reads": {
+            "dynamic": true,
+            "name": "ndb_log_exclusive_reads",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                "43#sysvar_ndb_log_exclusive_reads"
+            ]
+        },
+        "ndb_log_orig": {
+            "dynamic": false,
+            "name": "ndb_log_orig",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_ndb_log_orig"
+            ]
+        },
+        "ndb_log_transaction_id": {
+            "dynamic": false,
+            "name": "ndb_log_transaction_id",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_ndb_log_transaction_id"
+            ]
+        },
         "ndb_optimized_node_selection": {
             "dynamic": false,
             "name": "ndb_optimized_node_selection",
@@ -25255,6 +25333,23 @@
             ],
             "ids": [
                 "43#sysvar_ndb_read_backup"
+            ]
+        },
+        "ndb_recv_thread_activation_threshold": {
+            "dynamic": false,
+            "name": "ndb_recv_thread_activation_threshold",
+            "ids": [
+                "43#sysvar_ndb_recv_thread_activation_threshold"
+            ]
+        },
+        "ndb_recv_thread_cpu_mask": {
+            "dynamic": true,
+            "name": "ndb_recv_thread_cpu_mask",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_ndb_recv_thread_cpu_mask"
             ]
         },
         "ndb_report_thresh_binlog_epoch_slip": {
@@ -25284,7 +25379,7 @@
             "scope": [
                 "global"
             ],
-            "type": "boolean",
+            "type": "integer",
             "ids": [
                 "43#sysvar_ndb_row_checksum"
             ]
@@ -25390,6 +25485,16 @@
             ],
             "ids": [
                 "43#sysvar_ndb_version_string"
+            ]
+        },
+        "server_id_bits": {
+            "dynamic": false,
+            "name": "server_id_bits",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_server_id_bits"
             ]
         },
         "transaction_allow_batching": {
@@ -26693,19 +26798,6 @@
                 "24#option_mysqld_skip-slave-start"
             ]
         },
-        "slave-max-allowed-packet=bytes": {
-            "cli": "--slave-max-allowed-packet=#",
-            "default": "1073741824",
-            "name": "slave-max-allowed-packet=bytes",
-            "range": {
-                "from": 1024,
-                "to": 1073741824
-            },
-            "type": "integer",
-            "ids": [
-                "24#option_mysqld_slave-max-allowed-packet"
-            ]
-        },
         "slave_parallel_type": {
             "cli": "--slave-parallel-type=type",
             "default": "database",
@@ -26716,12 +26808,16 @@
                 "LOGICAL_CLOCK"
             ],
             "ids": [
-                "24#option_mysqld_slave-parallel-type"
+                "24#option_mysqld_slave-parallel-type",
+                "24#sysvar_slave_parallel_type"
             ]
         },
-        "slave-rows-search-algorithms=list": {
-            "cli": "--slave-rows-search-algorithms=list",
-            "name": "slave-rows-search-algorithms=list",
+        "slave_rows_search_algorithms": {
+            "dynamic": true,
+            "name": "slave_rows_search_algorithms",
+            "scope": [
+                "global"
+            ],
             "type": "set",
             "validValues": [
                 "TABLE_SCAN,INDEX_SCAN",
@@ -26730,7 +26826,8 @@
                 "TABLE_SCAN,INDEX_SCAN,HASH_SCAN"
             ],
             "ids": [
-                "24#option_mysqld_slave-rows-search-algorithms"
+                "24#option_mysqld_slave-rows-search-algorithms",
+                "24#sysvar_slave_rows_search_algorithms"
             ]
         },
         "abort_slave_event_count": {
@@ -26821,19 +26918,6 @@
                 "24#sysvar_rpl_stop_slave_timeout"
             ]
         },
-        "slave_parallel_type=type": {
-            "cli": "--slave-parallel-type=type",
-            "default": "database",
-            "name": "slave_parallel_type=type",
-            "type": "enumeration",
-            "validValues": [
-                "DATABASE",
-                "LOGICAL_CLOCK"
-            ],
-            "ids": [
-                "24#sysvar_slave_parallel_type"
-            ]
-        },
         "slave_preserve_commit_order": {
             "cli": "--slave-preserve-commit-order[={OFF|ON}]",
             "default": "off",
@@ -26847,22 +26931,15 @@
                 "24#sysvar_slave_preserve_commit_order"
             ]
         },
-        "slave_rows_search_algorithms": {
-            "cli": "--slave-rows-search-algorithms=value",
-            "dynamic": true,
-            "name": "slave_rows_search_algorithms",
+        "server_uuid": {
+            "dynamic": false,
+            "name": "server_uuid",
             "scope": [
                 "global"
             ],
-            "type": "set",
-            "validValues": [
-                "TABLE_SCAN,INDEX_SCAN",
-                "INDEX_SCAN,HASH_SCAN",
-                "TABLE_SCAN,HASH_SCAN",
-                "TABLE_SCAN,INDEX_SCAN,HASH_SCAN"
-            ],
+            "type": "string",
             "ids": [
-                "24#sysvar_slave_rows_search_algorithms"
+                "9#sysvar_server_uuid"
             ]
         },
         "help": {
@@ -27137,9 +27214,9 @@
                 "16#option_mysqld_safe-user-create"
             ]
         },
-        "skip_event_scheduler": {
+        "skip_event_scheduler__disable_event_scheduler": {
             "cli": "--skip-event-scheduler--disable-event-scheduler",
-            "name": "skip_event_scheduler",
+            "name": "skip_event_scheduler__disable_event_scheduler",
             "ids": [
                 "16#option_mysqld_skip-event-scheduler"
             ]

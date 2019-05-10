@@ -260,7 +260,7 @@
       "cli": "--slave-max-allowed-packet=#",
       "default": "1073741824",
       "id": "option_mysqld_slave-max-allowed-packet",
-      "name": "slave-max-allowed-packet=bytes",
+      "name": "slave_max_allowed_packet",
       "range": {
         "from": 1024,
         "to": 1073741824
@@ -295,7 +295,7 @@
     {
       "cli": "--slave-rows-search-algorithms=list",
       "id": "option_mysqld_slave-rows-search-algorithms",
-      "name": "slave-rows-search-algorithms=list",
+      "name": "slave_rows_search_algorithms",
       "type": "set",
       "validValues": [
         "TABLE_SCAN,INDEX_SCAN",
@@ -704,7 +704,7 @@
       "cli": "--slave-parallel-type=type",
       "default": "database",
       "id": "sysvar_slave_parallel_type",
-      "name": "slave_parallel_type=type",
+      "name": "slave_parallel_type",
       "type": "enumeration",
       "validValues": [
         "DATABASE",

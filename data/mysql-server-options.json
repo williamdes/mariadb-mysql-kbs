@@ -550,7 +550,7 @@
     {
       "cli": "--skip-event-scheduler--disable-event-scheduler",
       "id": "option_mysqld_skip-event-scheduler",
-      "name": "skip_event_scheduler"
+      "name": "skip_event_scheduler__disable_event_scheduler"
     },
     {
       "cli": "--skip-grant-tables[={OFF|ON}]",

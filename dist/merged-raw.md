@@ -2122,8 +2122,7 @@
 |------|----|
 |mariadb.com|[server_id](https://mariadb.com/kb/en/library/documentation/gtid/#server_id)|
 |mariadb.com|[server_id](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#server_id)|
-|dev.mysql.com|[replication-options](https://dev.mysql.com/doc/refman/8.0/en/replication-options.html#replication-options)|
-|dev.mysql.com|[replication-options](https://dev.mysql.com/doc/refman/8.0/en/replication-options.html#replication-options)|
+|dev.mysql.com|[option_mysqld_server-id](https://dev.mysql.com/doc/refman/8.0/en/replication-options.html#option_mysqld_server-id)|
 |dev.mysql.com|[sysvar_server_id](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_server_id)|
 
 ## gtid_seq_no
@@ -6564,6 +6563,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[slave_max_allowed_packet](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#slave_max_allowed_packet)|
+|dev.mysql.com|[option_mysqld_slave-max-allowed-packet](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_slave-max-allowed-packet)|
 |dev.mysql.com|[sysvar_slave_max_allowed_packet](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_slave_max_allowed_packet)|
 
 ## slave_net_timeout
@@ -27110,10 +27110,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndbcluster](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndbcluster)|
 
-## ndb_allow_copying_alter_table
+## ndb-allow-copying-alter-table
 |name|value|
 |----|-----|
-|Name|`ndb_allow_copying_alter_table`|
+|Name|`ndb-allow-copying-alter-table`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
 
@@ -27122,10 +27122,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-allow-copying-alter-table](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-allow-copying-alter-table)|
 
-## ndb_batch_size
+## ndb-batch-size
 |name|value|
 |----|-----|
-|Name|`ndb_batch_size`|
+|Name|`ndb-batch-size`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -27134,10 +27134,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-batch-size](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-batch-size)|
 
-## ndb_cluster_connection_pool
+## ndb-cluster-connection-pool
 |name|value|
 |----|-----|
-|Name|`ndb_cluster_connection_pool`|
+|Name|`ndb-cluster-connection-pool`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -27146,10 +27146,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-cluster-connection-pool](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-cluster-connection-pool)|
 
-## ndb_cluster_connection_pool_nodeids
+## ndb-cluster-connection-pool-nodeids
 |name|value|
 |----|-----|
-|Name|`ndb_cluster_connection_pool_nodeids`|
+|Name|`ndb-cluster-connection-pool-nodeids`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -27158,10 +27158,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-cluster-connection-pool-nodeids](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-cluster-connection-pool-nodeids)|
 
-## ndb_blob_read_batch_bytes
+## ndb-blob-read-batch-bytes
 |name|value|
 |----|-----|
-|Name|`ndb_blob_read_batch_bytes`|
+|Name|`ndb-blob-read-batch-bytes`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
 
@@ -27170,10 +27170,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-blob-read-batch-bytes](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-blob-read-batch-bytes)|
 
-## ndb_blob_write_batch_bytes
+## ndb-blob-write-batch-bytes
 |name|value|
 |----|-----|
-|Name|`ndb_blob_write_batch_bytes`|
+|Name|`ndb-blob-write-batch-bytes`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
 
@@ -27182,10 +27182,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-blob-write-batch-bytes](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-blob-write-batch-bytes)|
 
-## ndb_connectstring
+## ndb-connectstring
 |name|value|
 |----|-----|
-|Name|`ndb_connectstring`|
+|Name|`ndb-connectstring`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27193,10 +27193,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-connectstring](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-connectstring)|
 
-## ndb_default_column_format
+## ndb-default-column-format
 |name|value|
 |----|-----|
-|Name|`ndb_default_column_format`|
+|Name|`ndb-default-column-format`|
 |Scope|`global`|
 |Dynamic|`true`|
 
@@ -27204,12 +27204,11 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-default-column-format](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-default-column-format)|
-|dev.mysql.com|[sysvar_ndb_default_column_format](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_default_column_format)|
 
-## ndb_deferred_constraints
+## ndb-deferred-constraints
 |name|value|
 |----|-----|
-|Name|`ndb_deferred_constraints`|
+|Name|`ndb-deferred-constraints`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
 
@@ -27217,12 +27216,11 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-deferred-constraints](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-deferred-constraints)|
-|dev.mysql.com|[sysvar_ndb_deferred_constraints](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_deferred_constraints)|
 
-## ndb_distribution
+## ndb-distribution
 |name|value|
 |----|-----|
-|Name|`ndb_distribution`|
+|Name|`ndb-distribution`|
 |Scope|`global`|
 |Dynamic|`true`|
 
@@ -27230,12 +27228,11 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-distribution](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-distribution)|
-|dev.mysql.com|[sysvar_ndb_distribution](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_distribution)|
 
-## ndb_log_apply_status
+## ndb-log-apply-status
 |name|value|
 |----|-----|
-|Name|`ndb_log_apply_status`|
+|Name|`ndb-log-apply-status`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -27243,12 +27240,11 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-log-apply-status](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-apply-status)|
-|dev.mysql.com|[sysvar_ndb_log_apply_status](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_apply_status)|
 
-## ndb_log_empty_epochs
+## ndb-log-empty-epochs
 |name|value|
 |----|-----|
-|Name|`ndb_log_empty_epochs`|
+|Name|`ndb-log-empty-epochs`|
 |Scope|`global`|
 |Dynamic|`true`|
 
@@ -27256,12 +27252,11 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-log-empty-epochs](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-empty-epochs)|
-|dev.mysql.com|[sysvar_ndb_log_empty_epochs](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_empty_epochs)|
 
-## ndb_log_empty_update
+## ndb-log-empty-update
 |name|value|
 |----|-----|
-|Name|`ndb_log_empty_update`|
+|Name|`ndb-log-empty-update`|
 |Scope|`global`|
 |Dynamic|`true`|
 
@@ -27269,12 +27264,11 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-log-empty-update](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-empty-update)|
-|dev.mysql.com|[sysvar_ndb_log_empty_update](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_empty_update)|
 
-## ndb_log_exclusive_reads
+## ndb-log-exclusive-reads
 |name|value|
 |----|-----|
-|Name|`ndb_log_exclusive_reads`|
+|Name|`ndb-log-exclusive-reads`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
 
@@ -27282,12 +27276,11 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-log-exclusive-reads](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-exclusive-reads)|
-|dev.mysql.com|[sysvar_ndb_log_exclusive_reads](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_exclusive_reads)|
 
-## ndb_log_orig
+## ndb-log-orig
 |name|value|
 |----|-----|
-|Name|`ndb_log_orig`|
+|Name|`ndb-log-orig`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -27295,12 +27288,11 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-log-orig](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-orig)|
-|dev.mysql.com|[sysvar_ndb_log_orig](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_orig)|
 
-## ndb_log_transaction_id
+## ndb-log-transaction-id
 |name|value|
 |----|-----|
-|Name|`ndb_log_transaction_id`|
+|Name|`ndb-log-transaction-id`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -27308,12 +27300,11 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-log-transaction-id](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-transaction-id)|
-|dev.mysql.com|[sysvar_ndb_log_transaction_id](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_transaction_id)|
 
-## ndb_log_update_minimal
+## ndb-log-update-minimal
 |name|value|
 |----|-----|
-|Name|`ndb_log_update_minimal`|
+|Name|`ndb-log-update-minimal`|
 |Scope|`global`|
 |Dynamic|`true`|
 
@@ -27322,10 +27313,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-log-update-minimal](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-update-minimal)|
 
-## ndb_mgmd_host
+## ndb-mgmd-host
 |name|value|
 |----|-----|
-|Name|`ndb_mgmd_host`|
+|Name|`ndb-mgmd-host`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27333,10 +27324,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-mgmd-host](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-mgmd-host)|
 
-## ndb_nodeid
+## ndb-nodeid
 |name|value|
 |----|-----|
-|Name|`ndb_nodeid`|
+|Name|`ndb-nodeid`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -27345,10 +27336,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-nodeid](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-nodeid)|
 
-## ndb_optimization_delay
+## ndb-optimization-delay
 |name|value|
 |----|-----|
-|Name|`ndb_optimization_delay`|
+|Name|`ndb-optimization-delay`|
 |Scope|`global`|
 |Dynamic|`true`|
 
@@ -27357,34 +27348,32 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-optimization-delay](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-optimization-delay)|
 
-## ndb_recv_thread_activation_threshold
+## ndb-recv-thread-activation-threshold
 |name|value|
 |----|-----|
-|Name|`ndb_recv_thread_activation_threshold`|
+|Name|`ndb-recv-thread-activation-threshold`|
 |Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-recv-thread-activation-threshold](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-recv-thread-activation-threshold)|
-|dev.mysql.com|[sysvar_ndb_recv_thread_activation_threshold](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_recv_thread_activation_threshold)|
 
-## ndb_recv_thread_cpu_mask
+## ndb-recv-thread-cpu-mask
 |name|value|
 |----|-----|
-|Name|`ndb_recv_thread_cpu_mask`|
-|Scope|`global`|
+|Name|`ndb-recv-thread-cpu-mask`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-recv-thread-cpu-mask](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-recv-thread-cpu-mask)|
-|dev.mysql.com|[sysvar_ndb_recv_thread_cpu_mask](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_recv_thread_cpu_mask)|
 
-## ndb-transid-mysql-connection-map=state
+## ndb-transid-mysql-connection-map
 |name|value|
 |----|-----|
-|Name|`ndb-transid-mysql-connection-map=state`|
+|Name|`ndb-transid-mysql-connection-map`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27392,10 +27381,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-transid-mysql-connection-map](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-transid-mysql-connection-map)|
 
-## ndb_wait_connected
+## ndb-wait-connected
 |name|value|
 |----|-----|
-|Name|`ndb_wait_connected`|
+|Name|`ndb-wait-connected`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -27404,10 +27393,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-wait-connected](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-wait-connected)|
 
-## ndb_wait_setup
+## ndb-wait-setup
 |name|value|
 |----|-----|
-|Name|`ndb_wait_setup`|
+|Name|`ndb-wait-setup`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -27416,10 +27405,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-wait-setup](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-wait-setup)|
 
-## server_id_bits
+## server-id-bits
 |name|value|
 |----|-----|
-|Name|`server_id_bits`|
+|Name|`server-id-bits`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -27427,12 +27416,11 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_server-id-bits](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_server-id-bits)|
-|dev.mysql.com|[sysvar_server_id_bits](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_server_id_bits)|
 
-## skip_ndbcluster
+## skip-ndbcluster
 |name|value|
 |----|-----|
-|Name|`skip_ndbcluster`|
+|Name|`skip-ndbcluster`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27487,6 +27475,42 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_ndb_data_node_neighbour](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_data_node_neighbour)|
+
+## ndb_default_column_format
+|name|value|
+|----|-----|
+|Name|`ndb_default_column_format`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_default_column_format](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_default_column_format)|
+
+## ndb_deferred_constraints
+|name|value|
+|----|-----|
+|Name|`ndb_deferred_constraints`|
+|Scope|`global`, `session`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_deferred_constraints](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_deferred_constraints)|
+
+## ndb_distribution
+|name|value|
+|----|-----|
+|Name|`ndb_distribution`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_distribution](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_distribution)|
 
 ## ndb_eventbuffer_free_percent
 |name|value|
@@ -27584,6 +27608,18 @@
 |------|----|
 |dev.mysql.com|[sysvar_ndb_join_pushdown](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_join_pushdown)|
 
+## ndb_log_apply_status
+|name|value|
+|----|-----|
+|Name|`ndb_log_apply_status`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_log_apply_status](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_apply_status)|
+
 ## ndb_log_bin
 |name|value|
 |----|-----|
@@ -27608,6 +27644,66 @@
 |------|----|
 |dev.mysql.com|[sysvar_ndb_log_binlog_index](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_binlog_index)|
 
+## ndb_log_empty_epochs
+|name|value|
+|----|-----|
+|Name|`ndb_log_empty_epochs`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_log_empty_epochs](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_empty_epochs)|
+
+## ndb_log_empty_update
+|name|value|
+|----|-----|
+|Name|`ndb_log_empty_update`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_log_empty_update](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_empty_update)|
+
+## ndb_log_exclusive_reads
+|name|value|
+|----|-----|
+|Name|`ndb_log_exclusive_reads`|
+|Scope|`global`, `session`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_log_exclusive_reads](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_exclusive_reads)|
+
+## ndb_log_orig
+|name|value|
+|----|-----|
+|Name|`ndb_log_orig`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_log_orig](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_orig)|
+
+## ndb_log_transaction_id
+|name|value|
+|----|-----|
+|Name|`ndb_log_transaction_id`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_log_transaction_id](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_transaction_id)|
+
 ## ndb_optimized_node_selection
 |name|value|
 |----|-----|
@@ -27631,6 +27727,29 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_ndb_read_backup](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_read_backup)|
+
+## ndb_recv_thread_activation_threshold
+|name|value|
+|----|-----|
+|Name|`ndb_recv_thread_activation_threshold`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_recv_thread_activation_threshold](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_recv_thread_activation_threshold)|
+
+## ndb_recv_thread_cpu_mask
+|name|value|
+|----|-----|
+|Name|`ndb_recv_thread_cpu_mask`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ndb_recv_thread_cpu_mask](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_recv_thread_cpu_mask)|
 
 ## ndb_report_thresh_binlog_epoch_slip
 |name|value|
@@ -27661,7 +27780,7 @@
 |name|value|
 |----|-----|
 |Name|`ndb_row_checksum`|
-|Type of variable|`boolean`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
 
@@ -27789,6 +27908,18 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_ndb_version_string](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_version_string)|
+
+## server_id_bits
+|name|value|
+|----|-----|
+|Name|`server_id_bits`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_server_id_bits](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_server_id_bits)|
 
 ## transaction_allow_batching
 |name|value|
@@ -29191,20 +29322,6 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_skip-slave-start](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_skip-slave-start)|
 
-## slave-max-allowed-packet=bytes
-|name|value|
-|----|-----|
-|Name|`slave-max-allowed-packet=bytes`|
-|Command line|`--slave-max-allowed-packet=#`|
-|Type of variable|`integer`|
-|Default value|`1073741824`|
-|Range|from: `1024` to: `1073741824`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_slave-max-allowed-packet](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_slave-max-allowed-packet)|
-
 ## slave_parallel_type
 |name|value|
 |----|-----|
@@ -29218,19 +29335,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_slave-parallel-type](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_slave-parallel-type)|
+|dev.mysql.com|[sysvar_slave_parallel_type](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_slave_parallel_type)|
 
-## slave-rows-search-algorithms=list
+## slave_rows_search_algorithms
 |name|value|
 |----|-----|
-|Name|`slave-rows-search-algorithms=list`|
-|Command line|`--slave-rows-search-algorithms=list`|
+|Name|`slave_rows_search_algorithms`|
 |Type of variable|`set`|
+|Scope|`global`|
+|Dynamic|`true`|
 |Valid value(s)|`TABLE_SCAN,INDEX_SCAN`, `INDEX_SCAN,HASH_SCAN`, `TABLE_SCAN,HASH_SCAN`, `TABLE_SCAN,INDEX_SCAN,HASH_SCAN`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_slave-rows-search-algorithms](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_slave-rows-search-algorithms)|
+|dev.mysql.com|[sysvar_slave_rows_search_algorithms](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_slave_rows_search_algorithms)|
 
 ## abort_slave_event_count
 |name|value|
@@ -29322,20 +29442,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_rpl_stop_slave_timeout](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_rpl_stop_slave_timeout)|
 
-## slave_parallel_type=type
-|name|value|
-|----|-----|
-|Name|`slave_parallel_type=type`|
-|Command line|`--slave-parallel-type=type`|
-|Type of variable|`enumeration`|
-|Default value|`database`|
-|Valid value(s)|`DATABASE`, `LOGICAL_CLOCK`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_slave_parallel_type](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_slave_parallel_type)|
-
 ## slave_preserve_commit_order
 |name|value|
 |----|-----|
@@ -29351,20 +29457,18 @@
 |------|----|
 |dev.mysql.com|[sysvar_slave_preserve_commit_order](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_slave_preserve_commit_order)|
 
-## slave_rows_search_algorithms
+## server_uuid
 |name|value|
 |----|-----|
-|Name|`slave_rows_search_algorithms`|
-|Command line|`--slave-rows-search-algorithms=value`|
-|Type of variable|`set`|
+|Name|`server_uuid`|
+|Type of variable|`string`|
 |Scope|`global`|
-|Dynamic|`true`|
-|Valid value(s)|`TABLE_SCAN,INDEX_SCAN`, `INDEX_SCAN,HASH_SCAN`, `TABLE_SCAN,HASH_SCAN`, `TABLE_SCAN,INDEX_SCAN,HASH_SCAN`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_slave_rows_search_algorithms](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_slave_rows_search_algorithms)|
+|dev.mysql.com|[sysvar_server_uuid](https://dev.mysql.com/doc/refman/8.0/en/replication-options.html#sysvar_server_uuid)|
 
 ## help
 |name|value|
@@ -29770,10 +29874,10 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_safe-user-create](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_safe-user-create)|
 
-## skip_event_scheduler
+## skip_event_scheduler__disable_event_scheduler
 |name|value|
 |----|-----|
-|Name|`skip_event_scheduler`|
+|Name|`skip_event_scheduler__disable_event_scheduler`|
 |Command line|`--skip-event-scheduler--disable-event-scheduler`|
 
 ### Documentation(s)

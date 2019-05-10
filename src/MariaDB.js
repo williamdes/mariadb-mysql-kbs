@@ -18,127 +18,138 @@ const createDoc = function($, element) {
     try {
         /* jshint -W083 */
         // Parse ul > li
-        $(element)
+        const ulLiList = $(element)
             .next('ul')
-            .find('li')
-            .each((i, elementDescr) => {
-                const valueKey = $(elementDescr);
-                const key = valueKey
-                    .find('strong')
-                    .text()
-                    .toLowerCase()
-                    .trim();
-                const value = $(elementDescr)
-                    .text()
-                    .replace(valueKey.find('strong').text(), '')
-                    .trim();
-                switch (key) {
-                    case 'dynamic:':
-                        doc.dynamic = value.toLowerCase() === 'yes';
-                        break;
-                    case 'scope:':
-                        doc.scope = value
-                            .toLowerCase()
-                            .split(',')
-                            .map(item => {
-                                if (item.match(/session/)) {
-                                    return 'session';
-                                } else if (item.match(/global/)) {
-                                    return 'global';
-                                } else {
-                                    return item.trim();
-                                }
-                            });
-                        doc.scope = doc.scope.filter(function(e) {
-                            return e === 0 || e;
+            .find('li');
+        if (ulLiList.length === 0) {
+            doc = {};
+            return;
+        }
+        ulLiList.each((i, elementDescr) => {
+            const valueKey = $(elementDescr);
+            const key = valueKey
+                .find('strong')
+                .text()
+                .toLowerCase()
+                .trim();
+            const value = $(elementDescr)
+                .text()
+                .replace(valueKey.find('strong').text(), '')
+                .trim();
+            switch (key) {
+                case 'dynamic:':
+                    doc.dynamic = value.toLowerCase() === 'yes';
+                    break;
+                case 'scope:':
+                    doc.scope = value
+                        .toLowerCase()
+                        .split(',')
+                        .map(item => {
+                            if (item.match(/session/)) {
+                                return 'session';
+                            } else if (item.match(/global/)) {
+                                return 'global';
+                            } else {
+                                return item.trim();
+                            }
                         });
-                        break;
-                    case 'type:':
-                        doc.type = cleaner.cleanType(value.toLowerCase());
-                        break;
-                    case 'data type:':
-                        /*
-                         * Default method, <li> has a <code> child
-                         * Example: <li><strong>Data Type:</strong> <code>numeric</code></li>
-                         */
-                        let dataType = valueKey.find('code');
-                        if (dataType.length > 0) {
-                            doc.type = dataType
+                    doc.scope = doc.scope.filter(function(e) {
+                        return e === 0 || e;
+                    });
+                    break;
+                case 'type:':
+                    doc.type = cleaner.cleanType(value.toLowerCase());
+                    break;
+                case 'data type:':
+                    /*
+                     * Default method, <li> has a <code> child
+                     * Example: <li><strong>Data Type:</strong> <code>numeric</code></li>
+                     */
+                    let dataType = valueKey.find('code');
+                    if (dataType.length > 0) {
+                        doc.type = cleaner.cleanType(
+                            dataType
                                 .first()
                                 .text()
                                 .toLowerCase()
-                                .trim();
+                                .trim()
+                        );
+                    } else {
+                        /*
+                         * Fallback method, <li> has text
+                         * Example: <li><strong>Data Type:</strong> boolean</li>
+                         */
+                        let dataType = value.replace(/undefined/gi, '');
+                        dataType = dataType.toLowerCase().trim();
+                        if (dataType !== '') {
+                            doc.dataType = dataType;
+                        } else if (dataType === '') {
+                            console.log('Empty datatype found for : ' + doc.id);
                         } else {
-                            /*
-                             * Fallback method, <li> has text
-                             * Example: <li><strong>Data Type:</strong> boolean</li>
-                             */
-                            let dataType = value.replace(/undefined/gi, '');
-                            dataType = dataType.toLowerCase().trim();
-                            if (dataType !== '') {
-                                doc.dataType = dataType;
-                            } else if (dataType === '') {
-                                console.log('Empty datatype found for : ' + doc.id);
-                            } else {
-                                console.log('No datatype found for : ' + doc.id);
-                            }
+                            console.log('No datatype found for : ' + doc.id);
                         }
-                        break;
-                    case 'description:':
-                        doc.type = cleaner.cleanType(value.toLowerCase());
-                        break;
-                    case 'default value:':
-                        doc.default = valueKey
-                            .find('code')
-                            .first()
-                            .text();
-                        break;
-                    case 'valid values:':
-                        doc.validValues = valueKey
-                            .find('code')
-                            .get()
-                            .map(el => $(el).text());
-                        break;
-                    case 'range:':
-                        doc.range = valueKey
-                            .find('code')
-                            .get()
-                            .map(el => $(el).text());
-                        if (doc.range.length === 1) {
-                            // try x-y
-                            doc.range = doc.range[0].split('-').map(item => item.trim());
+                    }
+                    break;
+                case 'description:':
+                    doc.type = cleaner.cleanType(value.toLowerCase());
+                    break;
+                case 'default value:':
+                    doc.default = valueKey
+                        .find('code')
+                        .first()
+                        .text();
+                    break;
+                case 'valid values:':
+                    doc.validValues = valueKey
+                        .find('code')
+                        .get()
+                        .map(el => $(el).text());
+                    break;
+                case 'range:':
+                    doc.range = valueKey
+                        .find('code')
+                        .get()
+                        .map(el => $(el).text());
+                    if (doc.range.length === 1) {
+                        // try x-y
+                        doc.range = doc.range[0].split('-').map(item => item.trim());
+                    }
+                    if (doc.range.length === 1) {
+                        // try x to y
+                        doc.range = doc.range[0].split('to').map(item => item.trim());
+                    }
+                    if (doc.range[1] !== undefined) {
+                        doc.range[1] = parseFloat(doc.range[1]);
+                    }
+                    if (doc.range.length === 1) {
+                        // try x upwards
+                        if (value.includes('upwards')) {
+                            doc.range[1] = value;
                         }
-                        if (doc.range.length === 1) {
-                            // try x to y
-                            doc.range = doc.range[0].split('to').map(item => item.trim());
-                        }
-                        if (doc.range[1] !== undefined) {
-                            doc.range[1] = parseFloat(doc.range[1]);
-                        }
-                        if (doc.range.length === 1) {
-                            // try x upwards
-                            if (value.includes('upwards')) {
-                                doc.range[1] = value;
-                            }
-                        }
-                        // Could be oneday a float
-                        doc.range = {
-                            from: parseFloat(doc.range[0]),
-                            to: doc.range[1],
-                        };
-                        doc.range = cleaner.cleanRange(doc.range);
+                    }
+                    // Could be oneday a float
+                    doc.range = {
+                        from: parseFloat(doc.range[0]),
+                        to: doc.range[1],
+                    };
+                    doc.range = cleaner.cleanRange(doc.range);
 
-                        break;
-                    case 'commandline:':
-                        doc.cli = cleaner.cleanCli(value);
-                        if (typeof value === 'string' && value.toLowerCase() === 'no') {
-                            delete doc.cli;
-                        }
-                        break;
-                    default:
-                        break;
-                }
-            });
+                    break;
+                case 'commandline:':
+                    doc.cli = cleaner.cleanCli(value);
+                    if (
+                        typeof value === 'string' &&
+                        (value.toLowerCase() === 'no' ||
+                            value.toLowerCase() === 'none' ||
+                            value.toLowerCase() === 'N/A')
+                    ) {
+                        delete doc.cli;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        });
         /* jshint +W083 */
     } catch (e) {
         console.error(e);
@@ -165,7 +176,10 @@ const createDoc = function($, element) {
 function parsePage($, cbSuccess) {
     var anchors = [];
     $('.anchored_heading').each(function(i, el) {
-        anchors.push(createDoc($, el));
+        let doc = createDoc($, el);
+        if (doc && doc.id && typeof doc.id === 'string') {
+            anchors.push(doc);
+        }
     });
     cbSuccess(anchors);
 }
@@ -188,10 +202,6 @@ const custom = [
     {
         url: 'replication-and-binary-log-server-system-variables/',
         name: 'replication-and-binary-log-server-system-variables',
-    },
-    {
-        url: 'gtid/',
-        name: 'gtid-system-variables',
     },
     {
         url: 'gtid/',
@@ -230,7 +240,7 @@ const pages = [];
 storageEngines.forEach(se => {
     pages.push({
         url: KB_URL + 'columns-storage-engines-and-plugins/storage-engines/' + se + '/' + se + '-system-variables/',
-        name: 'server-system-variables',
+        name: se + '-system-variables',
     });
 });
 

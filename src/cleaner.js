@@ -28,12 +28,19 @@ const cleanType = function(type) {
             type.match(/in seconds/i)
         ) {
             type = 'integer';
+        } else if (
+            type.match(/numeric (64-bit unsigned integer)/i) ||
+            type.match(/numeric (32-bit unsigned integer)/i)
+        ) {
+            type = 'numeric';
         } else {
             type = undefined;
         }
     }
     return type;
 };
+
+const regexCli = /([-]{2})([0-9a-z-_]+)/i;
 
 /**
  * Clean cli argument
@@ -48,6 +55,9 @@ const cleanCli = function(cli) {
             cli = cli.replace(/\>/gi, '');
             cli = cli.replace(/</gi, '');
         }
+    }
+    if (!cli.match(regexCli)) {
+        cli = undefined;
     }
     return cli;
 };
@@ -73,6 +83,7 @@ const cleanRange = function(range) {
 };
 
 module.exports = {
+    regexCli: regexCli,
     cleanType: cleanType,
     cleanCli: cleanCli,
     cleanRange: cleanRange,

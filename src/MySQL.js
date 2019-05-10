@@ -2,7 +2,6 @@
 
 const common = require(__dirname + '/common');
 const cleaner = require(__dirname + '/cleaner');
-const regexCli = /([-]{2})([0-9a-z-_]+)/i;
 
 /**
  * Complete a doc element with info found in table
@@ -26,17 +25,16 @@ function completeDoc($, rows, doc) {
                         .toLowerCase()
                         .trim() === 'yes';
                 break;
+            case 'name':
+                doc.name = value.text().trim();
+                break;
             case 'system variable':
-                var theName = value
-                    .text()
-                    .toLowerCase()
-                    .trim();
-                if (doc.name !== undefined) {
-                    if (doc.name.match(regexCli)) {
-                        doc.name = theName;
-                    }
-                } else {
-                    doc.name = theName;
+                // Do not overwrite the name
+                if (typeof doc.name === 'undefined') {
+                    doc.name = value
+                        .text()
+                        .toLowerCase()
+                        .trim();
                 }
                 break;
             case 'scope':
@@ -106,28 +104,14 @@ function completeDoc($, rows, doc) {
  * @param {Element} element The root element
  * @returns object The doc object
  */
-function createDoc($, element) {
-    let doc = {};
-    doc.id = $(element)
-        .parent()
-        .find('a')
-        .first()
-        .attr('name');
-    doc.name = $(element)
-        .parent()
-        .find('code')
-        .first()
-        .text()
-        .trim();
-    var cli = doc.name.match(regexCli);
-    if (cli) {
-        // cli format
-        doc.name = cli[2].replace(/-/g, '_'); //Try to clean format
-    }
-
+function createDoc($, element, doc) {
     completeDoc($, $(element).find('tbody > tr'), doc);
     if (doc.range !== undefined) {
         doc.range = cleaner.cleanRange(doc.range);
+    }
+
+    if (doc.name && doc.name.match(cleaner.regexCli)) {
+        delete doc.name;
     }
 
     return doc;
@@ -135,50 +119,34 @@ function createDoc($, element) {
 
 function parsePage($, cbSuccess) {
     var anchors = [];
-    $('.informaltable')
+    $('.informaltable, .table')
         .filter(function(i, elem) {
-            var thText = $(elem)
-                .find('th')
-                .first()
-                .text();
-            return thText === 'Property';
-        })
-        .each(function(i, el) {
-            anchors.push(createDoc($, el));
-        });
-
-    // Find all anchors on the webpage
-    $('.table')
-        .find('a')
-        .filter(function(i, el) {
-            var elName = $(el).attr('name');
-            return typeof elName === 'string' && elName.match(/-detailtable$/);
-        })
-        .each(function(i, el) {
-            var doc = createDoc(
-                $,
-                $(el)
-                    .parent()
-                    .find('table')
-                    .get()
-            );
-            doc.id = $(el)
-                .parent()
-                .prev()
-                .find('a')
-                .first()
-                .attr('name');
-            doc.cli = cleaner.cleanCli(
-                $(el)
-                    .parent()
-                    .prev()
-                    .find('code')
+            return (
+                $(elem)
+                    .find('th')
                     .first()
-                    .text()
-                    .trim()
+                    .text() === 'Property'
             );
+        })
+        .each(function(i, elem) {
+            let doc = {
+                id: $(elem)
+                    .prevAll()
+                    .find('a')
+                    .filter(function(i, el) {
+                        return typeof $(el).attr('name') === 'string' && typeof $(el).attr('class') === 'undefined';
+                    })
+                    .first()
+                    .attr('name'),
+            };
+            createDoc($, elem, doc);
+            if (!doc.name && doc.cli) {
+                var matches = doc.cli.match(cleaner.regexCli);
+                doc.name = matches[2].replace(/-/g, '_');
+            }
             anchors.push(doc);
         });
+
     cbSuccess(anchors);
 }
 

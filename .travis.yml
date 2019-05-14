@@ -11,6 +11,7 @@ script:
 install:
     - if [ "$CI_COMPOSER" = "yes" ]; then composer install --ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress; fi
     - if [ "$CI_NPM" = "yes" ]; then npm ci; fi
+    - if [ "$CI_OLD_NPM" = "yes" ]; then npm install; fi
 after_script:
     - if [ "$TRAVIS_BUILD_STAGE_NAME" = "tests" ] && [ "$CI_TYPE" != "mocha" ]; then ./codacy-coverage.phar clover build/logs/clover.xml; else echo "skipped codacy"; fi
 stages:
@@ -119,12 +120,11 @@ jobs:
           after_success:
               - bash <(curl -s https://codecov.io/bash) -cF php
         - stage: robot
-          language: node_js
           php: '7.2'
           node_js: 'stable'
           env:
             - CI_TYPE=cron
-            - CI_NPM=yes
+            - CI_OLD_NPM=yes
             - CI_COMPOSER=yes
           name: 'Create a pull-request to update data'
         - stage: tests

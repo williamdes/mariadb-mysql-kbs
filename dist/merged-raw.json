@@ -7943,7 +7943,7 @@
         },
         "slave_load_tmpdir": {
             "cli": "--slave-load-tmpdir=path",
-            "default": "/tmp",
+            "default": "value of --tmpdir",
             "dynamic": false,
             "name": "slave_load_tmpdir",
             "scope": [

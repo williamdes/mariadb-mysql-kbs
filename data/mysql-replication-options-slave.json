@@ -247,7 +247,7 @@
     },
     {
       "cli": "--slave-load-tmpdir=dir_name",
-      "default": "/tmp",
+      "default": "value of --tmpdir",
       "dynamic": false,
       "id": "option_mysqld_slave-load-tmpdir",
       "name": "slave_load_tmpdir",
@@ -662,7 +662,7 @@
     },
     {
       "cli": "--slave-load-tmpdir=dir_name",
-      "default": "/tmp",
+      "default": "value of --tmpdir",
       "dynamic": false,
       "id": "sysvar_slave_load_tmpdir",
       "name": "slave_load_tmpdir",

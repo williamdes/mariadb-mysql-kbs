@@ -6590,7 +6590,7 @@
 |Command line|`--slave-load-tmpdir=path`|
 |Type of variable|`directory name`|
 |Scope|`global`|
-|Default value|`/tmp`|
+|Default value|`value of --tmpdir`|
 |Dynamic|`false`|
 
 ### Documentation(s)

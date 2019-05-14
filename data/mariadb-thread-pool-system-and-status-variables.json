@@ -55,6 +55,7 @@
     },
     {
       "cli": "thread-pool-max-threads=#",
+      "default": "65536 (>= MariaDB 10.2.4), 1000 (<= MariaDB 10.2.3, >= MariaDB 10.1), 500 (<= MariaDB 10.0)",
       "dynamic": true,
       "id": "thread_pool_max_threads",
       "name": "thread_pool_max_threads",
@@ -120,6 +121,7 @@
     },
     {
       "cli": "--thread-pool-size=#",
+      "default": "Based on the number of processors (but see MDEV-7806).",
       "dynamic": true,
       "id": "thread_pool_size",
       "name": "thread_pool_size",

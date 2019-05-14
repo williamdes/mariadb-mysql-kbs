@@ -180,6 +180,7 @@
 |Scope|`global`|
 |Default value|`none`|
 |Dynamic|`false`|
+|Valid value(s)|`none`, `hard`, `soft`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -191,9 +192,11 @@
 |----|-----|
 |Name|`aria_group_commit_interval`|
 |Command line|`--aria_group_commit_interval=#`|
-|Type of variable|`numeric`|
+|Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`0 (no waiting)`|
 |Dynamic|`false`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -285,7 +288,7 @@
 |Command line|`--aria-pagecache-buffer-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`134217720`|
+|Default value|`134217720 (128MB)`|
 |Dynamic|`false`|
 |Range|from: `131072` to: `upwards`|
 
@@ -343,6 +346,7 @@
 |Command line|`--aria-recover[=#]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
+|Default value|`BACKUP,QUICK (>= MariaDB 10.2.4), NORMAL (<= MariaDB 10.2.3)`|
 |Dynamic|`true`|
 |Valid value(s)|`NORMAL`, `BACKUP`, `FORCE`, `QUICK`, `OFF`|
 
@@ -373,7 +377,7 @@
 |Command line|`--aria-sort-buffer-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`134217728`|
+|Default value|`268434432 (from MariaDB 10.0.3), 134217728 (before MariaDB 10.0.3)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -417,7 +421,6 @@
 |name|value|
 |----|-----|
 |Name|`aria_used_for_temp_tables`|
-|Command line|`no`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON`|
@@ -694,6 +697,7 @@
 |Command line|`--connect-class-path=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|``|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -722,7 +726,7 @@
 |Name|`connect_conv_size`|
 |Command line|`--connect-conv-size=#`|
 |Type of variable|`integer`|
-|Scope|`session`|
+|Scope|`session`, `global`|
 |Default value|`8192`|
 |Dynamic|`true`|
 |Range|from: `0` to: `65500`|
@@ -830,6 +834,7 @@
 |Command line|`--connect-jvm_path=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|``|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -842,8 +847,8 @@
 |----|-----|
 |Name|`connect_type_conv`|
 |Command line|`--connect-type-conv=#`|
-|Scope|`session`|
-|Default value|`NO`|
+|Scope|`session`, `global`|
+|Default value|`YES (>= Connect 1.06.006), NO (<= Connect 1.06.005)`|
 |Dynamic|`true`|
 |Valid value(s)|`NO`, `YES`, `SKIP`|
 
@@ -1345,7 +1350,7 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_certify_nonPK`|
-|Command line|`--wsrep-certify-nonpk[={0|1}]`|
+|Command line|`--wsrep-certify-nonPK[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON`|
@@ -1389,7 +1394,7 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_convert_LOCK_to_trx`|
-|Command line|`--wsrep-convert-lock-to-trx[={0|1}]`|
+|Command line|`--wsrep-convert-LOCK-to-trx[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -1407,6 +1412,7 @@
 |Command line|`--wsrep-data-home-dir=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`The datadir variable value.`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -1434,7 +1440,7 @@
 |Name|`wsrep_debug`|
 |Command line|`--wsrep-debug[={0|1}]`|
 |Scope|`global`|
-|Default value|`OFF`|
+|Default value|`NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -1557,7 +1563,7 @@
 |Command line|`--wsrep-load-data-splitting[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON`|
+|Default value|`OFF (>= MariaDB 10.4.3), ON (<= MariaDB 10.4.2)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -1587,6 +1593,7 @@
 |Command line|`--wsrep-max-ws-rows=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`0 (>= MariaDB Galera 10.0.27, MariaDB 10.1.17), 131072 (<= MariaDB Galera 10.0.26, MariaDB 10.1.16)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1048576`|
 
@@ -1602,6 +1609,7 @@
 |Command line|`--wsrep-max-ws-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`2147483647 (2GB, >= MariaDB Galera 10.0.27, MariaDB 10.1.17), 1073741824 (1GB, <= MariaDB Galera 10.0.26, MariaDB 10.1.16)`|
 |Dynamic|`true`|
 |Range|from: `1024` to: `2147483647`|
 
@@ -1633,7 +1641,7 @@
 |Command line|`--wsrep-node-address=value`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`0.0.0.0`|
+|Default value|`Primary network address, usually eth0 with a default port of 4567, or 0.0.0.0 if no IP address.`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -1663,6 +1671,7 @@
 |Command line|`--wsrep-node-name=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`The server's hostname.`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -1677,6 +1686,7 @@
 |Command line|`--wsrep-notify-command=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`Empty`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -1691,7 +1701,7 @@
 |Command line|`--wsrep-on[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`ON`|
+|Default value|`OFF (>= MariaDB 10.1), ON (<= MariaDB Galera Cluster 10.0),`|
 |Dynamic|`true`|
 |Valid value(s)|`ON`, `OFF`|
 
@@ -1704,7 +1714,7 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_OSU_method`|
-|Command line|`--wsrep-osu-method[=value]`|
+|Command line|`--wsrep-OSU-method[=value]`|
 |Scope|`global`, `session`|
 |Default value|`TOI`|
 |Dynamic|`true`|
@@ -1719,9 +1729,9 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_patch_version`|
-|Command line|`none`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`None`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -1736,6 +1746,7 @@
 |Command line|`--wsrep-provider=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`None`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -1750,6 +1761,7 @@
 |Command line|`--wsrep-provider-options=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`Empty`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -1838,9 +1850,10 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_slave_FK_checks`|
-|Command line|`--wsrep-slave-fk-checks[={0|1}]`|
+|Command line|`--wsrep-slave-FK-checks[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -1868,9 +1881,10 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_slave_UK_checks`|
-|Command line|`--wsrep-slave-uk-checks[={0|1}]`|
+|Command line|`--wsrep-slave-UK-checks[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -1900,6 +1914,7 @@
 |Command line|`--wsrep-sst-auth=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -1914,6 +1929,7 @@
 |Command line|`--wsrep-sst-donor=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|``|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -1974,7 +1990,7 @@
 |Command line|`--wsrep-start-position=value`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|` 00000000-0000-0000-0000-000000000000:-1`|
+|Default value|`00000000-0000-0000-0000-000000000000:-1`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -1991,7 +2007,7 @@
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range||
+|Range|from: `0` to: `15`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2033,6 +2049,10 @@
 |name|value|
 |----|-----|
 |Name|`gtid_slave_pos`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Null`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2043,6 +2063,10 @@
 |name|value|
 |----|-----|
 |Name|`gtid_binlog_pos`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Null`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2053,6 +2077,10 @@
 |name|value|
 |----|-----|
 |Name|`gtid_binlog_state`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Null`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2063,21 +2091,15 @@
 |name|value|
 |----|-----|
 |Name|`gtid_current_pos`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Null`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[gtid_current_pos](https://mariadb.com/kb/en/library/documentation/gtid/#gtid_current_pos)|
-
-## gtid_strict_mode
-|name|value|
-|----|-----|
-|Name|`gtid_strict_mode`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[gtid_strict_mode](https://mariadb.com/kb/en/library/documentation/gtid/#gtid_strict_mode)|
 
 ## gtid_domain_id
 |name|value|
@@ -2129,8 +2151,8 @@
 |name|value|
 |----|-----|
 |Name|`gtid_seq_no`|
-|Command line|`none`|
 |Scope|`session`|
+|Default value|`Null`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -2145,6 +2167,7 @@
 |Command line|`--gtid-ignore-duplicates=#`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -2156,6 +2179,11 @@
 |name|value|
 |----|-----|
 |Name|`gtid_pos_auto_engines`|
+|Command line|`--gtid-pos-auto-engines=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`empty`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2169,6 +2197,7 @@
 |Command line|`--gtid-cleanup-batch-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`64`|
 |Dynamic|`true`|
 |Range|from: `0` to: `2147483647`|
 
@@ -2229,6 +2258,7 @@
 |Command line|`--server-audit-events=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`Empty string`|
 |Dynamic|`true`|
 |Valid value(s)|`CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `QUERY_DCL`, `QUERY_DML_NO_SELECT`|
 
@@ -2244,6 +2274,7 @@
 |Command line|`--server-audit-excl-users=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`Empty string`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -2319,6 +2350,7 @@
 |Command line|`--server-audit-incl-users=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`Empty string`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -2330,9 +2362,9 @@
 |name|value|
 |----|-----|
 |Name|`server_audit_loc_info`|
-|Command line|`n/a`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`Empty string`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -2434,6 +2466,7 @@
 |Command line|`--server-audit-syslog-info=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`Empty string`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -2513,6 +2546,7 @@
 |Command line|`--mroonga-database-path-prefix=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -2557,6 +2591,7 @@
 |Command line|`--mroonga-default-wrapper-engine=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -2613,7 +2648,6 @@
 |name|value|
 |----|-----|
 |Name|`mroonga_libgroonga_embedded`|
-|Command line|`none`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON`|
@@ -2628,7 +2662,6 @@
 |name|value|
 |----|-----|
 |Name|`mroonga_libgroonga_support_lz4`|
-|Command line|`none`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -2643,7 +2676,6 @@
 |name|value|
 |----|-----|
 |Name|`mroonga_libgroonga_support_zlib`|
-|Command line|`none`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON`|
@@ -2658,7 +2690,6 @@
 |name|value|
 |----|-----|
 |Name|`mroonga_libgroonga_support_zstd`|
-|Command line|`none`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -2673,7 +2704,6 @@
 |name|value|
 |----|-----|
 |Name|`mroonga_libgroonga_version`|
-|Command line|`none`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -2767,6 +2797,7 @@
 |Command line|`--mroonga-query-log-file=filename`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty string)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -2781,7 +2812,7 @@
 |Command line|`--mroonga-vector-column-delimiter=value`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|` `|
+|Default value|`(white space)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -2793,7 +2824,6 @@
 |name|value|
 |----|-----|
 |Name|`mroonga_version`|
-|Command line|`none`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -2891,9 +2921,9 @@
 |----|-----|
 |Name|`key_cache_segments`|
 |Command line|`--key-cache-segments=#`|
-|Type of variable|`numeric`|
+|Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0`|
+|Default value|`0 (non-segmented)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `64`|
 
@@ -3011,7 +3041,6 @@
 |Command line|`--myisam-sort-buffer-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`8388608`|
 |Dynamic|`true`|
 |Range|from: `4096` to: `1.844674407371E+19`|
 
@@ -3369,6 +3398,7 @@
 |Command line|`--rocksdb-compact-cf=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -3477,6 +3507,7 @@
 |Command line|`--rocksdb-create-checkpoint=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -3661,6 +3692,7 @@
 |Command line|`--rocksdb-default-cf-options=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -3920,6 +3952,7 @@
 |Command line|`--rocksdb-git-hash=value=#`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`As per git revision.`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -4248,7 +4281,7 @@
 |Scope|`global`, `session`|
 |Default value|`1048576`|
 |Dynamic|`true`|
-|Range||
+|Range|from: `1` to: `1073741824`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -4372,6 +4405,7 @@
 |Command line|`--rocksdb-override-cf-options=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -4432,6 +4466,7 @@
 |Command line|`--rocksdb-persistent-cache-path=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -4508,6 +4543,7 @@
 |Command line|`--rocksdb-read-free-rpl-tables=value`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
+|Default value|`(Empty)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -4707,6 +4743,7 @@
 |Command line|`--rocksdb-strict-collation-exceptions=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -4768,6 +4805,7 @@
 |Command line|`--rocksdb-tmpdir[=value]`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
+|Default value|`(Empty)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -4811,6 +4849,7 @@
 |Name|`rocksdb_update_cf_options`|
 |Command line|`--rocksdb-update-cf-options=value`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -4947,6 +4986,7 @@
 |Command line|`--rocksdb-wal-dir=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(Empty)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5134,6 +5174,7 @@
 |Command line|`--performance-schema-accounts-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -5150,6 +5191,7 @@
 |Command line|`--performance-schema-digests-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1`|
 
@@ -5166,6 +5208,7 @@
 |Command line|`--performance-schema-events-stages-history-long-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5181,6 +5224,7 @@
 |Command line|`--performance-schema-events-stages-history-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5196,6 +5240,7 @@
 |Command line|`--performance-schema-events-statements-history-long-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5211,6 +5256,7 @@
 |Command line|`--performance-schema-events-statements-history-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5226,6 +5272,7 @@
 |Command line|`--performance-schema-events-waits-history-long-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5241,6 +5288,7 @@
 |Command line|`--performance-schema-events-waits-history-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5256,6 +5304,7 @@
 |Command line|`--performance-schema-hosts-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -5289,6 +5338,7 @@
 |Command line|`--performance-schema-max-cond-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5353,6 +5403,7 @@
 |Command line|`--performance-schema-max-file-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5384,6 +5435,7 @@
 |Command line|`--performance-schema-max-mutex-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5416,6 +5468,7 @@
 |Command line|`--performance-schema-max-rwlock-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5464,7 +5517,6 @@
 |Command line|`--performance-schema-max-stage-classes=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`150`|
 |Dynamic|`false`|
 |Range|from: `0` to: `256`|
 
@@ -5481,7 +5533,6 @@
 |Command line|`--performance-schema-max-statement-classes=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5497,6 +5548,7 @@
 |Command line|`--performance-schema-max-table-handles=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5512,6 +5564,7 @@
 |Command line|`--performance-schema-max-table-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5543,6 +5596,7 @@
 |Command line|`--performance-schema-max-thread-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5654,6 +5708,7 @@
 |Command line|`--binlog-annotate-row-events[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
+|Default value|`ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -5835,10 +5890,9 @@
 |name|value|
 |----|-----|
 |Name|`default_master_connection`|
-|Command line|`none`|
 |Type of variable|`string`|
 |Scope|`session`|
-|Default value|`''`|
+|Default value|`'' (empty string)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -6000,7 +6054,6 @@
 |Command line|`--log-slow-slave-statements[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`off`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -6124,7 +6177,7 @@
 |Command line|`--read-binlog-speed-limit=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0`|
+|Default value|`0 (no limit)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.844674407371E+19`|
 
@@ -6256,6 +6309,7 @@
 |Command line|`--replicate-annotate-row-events`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -6440,7 +6494,6 @@
 |name|value|
 |----|-----|
 |Name|`skip_parallel_replication`|
-|Command line|`none`|
 |Type of variable|`boolean`|
 |Scope|`session`|
 |Default value|`OFF`|
@@ -6455,7 +6508,6 @@
 |name|value|
 |----|-----|
 |Name|`skip_replication`|
-|Command line|`none`|
 |Type of variable|`boolean`|
 |Scope|`session`|
 |Default value|`OFF`|
@@ -6575,7 +6627,7 @@
 |Scope|`global`|
 |Default value|`60`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `upwards`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6604,7 +6656,6 @@
 |name|value|
 |----|-----|
 |Name|`slave_parallel_mode`|
-|Command line|`none`|
 |Scope|`global`|
 |Default value|`conservative`|
 |Dynamic|`false`|
@@ -6722,6 +6773,7 @@
 |Command line|`--slave-transaction_retry-errors=[error_code1,error_code2,...]`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`1158,1159,1160,1161,1205,1213,1429,2013,12701 (>= MariaDB 10.4.5), 1213,1205 (>= MariaDB 10.3.3)`|
 |Dynamic|`false`|
 |Valid value(s)|`comma-separated list of error codes`|
 
@@ -6816,6 +6868,7 @@
 |Command line|`--sync-master-info=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`10000`|
 |Dynamic|`true`|
 |Range|from: `0`|
 
@@ -6832,6 +6885,7 @@
 |Command line|`--sync-relay-log=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`10000`|
 |Dynamic|`true`|
 |Range|from: `0`|
 
@@ -6848,6 +6902,7 @@
 |Command line|`--sync-relay-log-info=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`10000`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -11780,7 +11835,6 @@
 |Command line|`--back-log=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `1` to: `65535`|
 
@@ -11980,6 +12034,7 @@
 |Command line|`--check-constraint-checks=[0|1]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -12053,6 +12108,7 @@
 |Name|`concurrent_insert`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
+|Default value|`auto`|
 |Dynamic|`true`|
 |Valid value(s)|`NEVER`, `AUTO`, `ALWAYS`, `0`, `1`, `2`|
 
@@ -12085,7 +12141,7 @@
 |Name|`core_file`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`off`|
+|Default value|`0`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -12386,7 +12442,7 @@
 |Command line|`--encrypt-tmp-files[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON`|
+|Default value|`OFF (>= MariaDB 10.1.7), ON (<= MariaDB 10.1.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -12413,7 +12469,6 @@
 |name|value|
 |----|-----|
 |Name|`enforce_storage_engine`|
-|Command line|`none`|
 |Type of variable|`string`|
 |Scope|`session`|
 |Default value|`none`|
@@ -12431,6 +12486,7 @@
 |Command line|`--engine-condition-pushdown`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
+|Default value|`OFF (MariaDB 5.5), ON (<= MariaDB 5.3)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -12445,6 +12501,7 @@
 |Command line|`--eq-range-index-dive-limit=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`200`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -12696,7 +12753,6 @@
 |Command line|`--group-concat-max-len=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`1024`|
 |Dynamic|`true`|
 |Range|from: `4`|
 
@@ -12845,7 +12901,7 @@
 |Command line|`--histogram-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`0`|
+|Default value|`254 (>= MariaDB 10.4.3), 0 (<= MariaDB 10.4.2)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `255`|
 
@@ -12861,7 +12917,7 @@
 |Command line|`--histogram-type=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`SINGLE_PREC_HB`|
+|Default value|`DOUBLE_PREC_HB (>= MariaDB 10.4.3), SINGLE_PREC_HB(<= MariaDB 10.4.2)`|
 |Dynamic|`true`|
 |Valid value(s)|`SINGLE_PREC_HB`, `DOUBLE_PREC_HB`|
 
@@ -12973,7 +13029,6 @@
 |name|value|
 |----|-----|
 |Name|`in_transaction`|
-|Command line|`no`|
 |Type of variable|`boolean`|
 |Scope|`session`|
 |Default value|`0`|
@@ -13052,6 +13107,7 @@
 |Command line|`--join-buffer-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`262144`|
 |Dynamic|`true`|
 |Range|from: `128`|
 
@@ -13111,7 +13167,7 @@
 |name|value|
 |----|-----|
 |Name|`language`|
-|Command line|`--language=name, -l`|
+|Command line|`--language=name, -L`|
 |Type of variable|`directory name`|
 |Scope|`global`|
 |Default value|`/usr/local/mysql/share/mysql/english/`|
@@ -13264,7 +13320,6 @@
 |Command line|`--lock-wait-timeout=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`31536000`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -13308,6 +13363,7 @@
 |Command line|`--log-disabled_statements=value`|
 |Type of variable|`set`|
 |Scope|`global`, `session`|
+|Default value|`(empty string)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -13371,7 +13427,6 @@
 |Command line|`--log-slow-admin-statements[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`off`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -13402,6 +13457,7 @@
 |Command line|`log-slow-filter=value1[,value2...]`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
+|Default value|`admin, filesort, filesort_on_disk, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk (<= MariaDB 10.3.0), admin, filesort, filesort_on_disk, filesort_priority_queue, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk (>= MariaDB 10.3.1)`|
 |Dynamic|`true`|
 |Valid value(s)|`admin`, `filesort`, `filesort_on_disk`, `filesort_priority_queue`, `full_join`, `full_scan`, `query_cache`, `query_cache_miss`, `tmp_table`, `tmp_table_on_disk`|
 
@@ -13448,6 +13504,7 @@
 |Command line|`log-slow-verbosity=value1[,value2...]`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
+|Default value|`(Empty)`|
 |Dynamic|`true`|
 |Valid value(s)|`query_plan`, `innodb`, `explain`|
 
@@ -13542,6 +13599,7 @@
 |Command line|`--lower-case-table-names[=#]`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`0`|
 |Dynamic|`false`|
 |Range|from: `0` to: `2`|
 
@@ -13573,6 +13631,7 @@
 |Command line|`--max-connect-errors=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`100`|
 |Dynamic|`true`|
 |Range|from: `1`|
 
@@ -13685,6 +13744,7 @@
 |Command line|`--max-join-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`18446744073709551615`|
 |Dynamic|`true`|
 |Range|from: `1` to: `1.844674407371E+19`|
 
@@ -13717,6 +13777,7 @@
 |Command line|`--max-long-data-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`16777216 (16M) >= MariaDB 10.2.4, 4194304 (4M) <= MariaDB 10.2.3, >= MariaDB 10.1.7, 1048576 (1M) <= MariaDB 10.1.6`|
 |Dynamic|`false`|
 |Range|from: `1024` to: `4294967295`|
 
@@ -13813,7 +13874,7 @@
 |Command line|`--max-session-mem-used=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`9223372036854775807`|
+|Default value|`9223372036854775807 (8192 PB)`|
 |Dynamic|`true`|
 |Range|from: `8192` to: `1.844674407371E+19`|
 
@@ -13862,7 +13923,7 @@
 |Command line|`--max-statement-time[=#]`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`0`|
+|Default value|`0.000000 >= MariaDB 10.1.13, 0 <= MariaDB 10.1.12`|
 |Dynamic|`true`|
 |Range|from: `0` to: `upwards`|
 
@@ -14158,7 +14219,6 @@
 |Command line|`--open-files-limit=count`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`5000, with possible adjustment`|
 |Dynamic|`false`|
 |Range|from: `0` to: `4294967295`|
 
@@ -14236,7 +14296,7 @@
 |Command line|`--optimizer-use-condition-selectivity=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`1`|
+|Default value|`4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)`|
 |Dynamic|`true`|
 |Range|from: `1` to: `5`|
 
@@ -14312,7 +14372,7 @@
 |Name|`plugin_maturity`|
 |Command line|`--plugin-maturity=level`|
 |Scope|`global`|
-|Default value|`unknown`|
+|Default value|`One less than the server maturity (>= MariaDB 10.3.3), unknown (<= MariaDB 10.3.2)`|
 |Dynamic|`false`|
 |Valid value(s)|`unknown`, `experimental`, `alpha`, `beta`, `gamma`, `stable`|
 
@@ -14393,7 +14453,7 @@
 |Command line|`--progress-report-time=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`5`|
+|Default value|`56 before MariaDB 5.5.39 and MariaDB 10.0.10, 5 as of MariaDB 5.5.40 and MariaDB 10.0.11`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -14423,6 +14483,7 @@
 |Command line|`--proxy-protocol-networks=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`(empty)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -14479,7 +14540,6 @@
 |Command line|`--query-alloc-block-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`8192`|
 |Dynamic|`true`|
 |Range|from: `1024` to: `4294967295`|
 
@@ -14544,7 +14604,7 @@
 |Name|`query_cache_strip_comments`|
 |Command line|`query-cache-strip-comments`|
 |Type of variable|`boolean`|
-|Scope|`session`|
+|Scope|`session`, `global`|
 |Default value|`OFF`|
 |Dynamic|`true`|
 
@@ -14560,6 +14620,7 @@
 |Command line|`--query-cache-type=#`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Valid value(s)|`0`, `OFF`, `1`, `ON`, `2`, `DEMAND`|
 
@@ -14591,7 +14652,6 @@
 |Command line|`--query-prealloc-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`8192`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -14719,7 +14779,7 @@
 |name|value|
 |----|-----|
 |Name|`safe_show_database`|
-|Command line|`--safe-show-database (until mysql 4.1.1)`|
+|Command line|`--safe-show-database (until MySQL 4.1.1)`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Dynamic|`true`|
@@ -14736,7 +14796,7 @@
 |Command line|`--secure-auth[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`on`|
+|Default value|`1`|
 |Dynamic|`true`|
 |Valid value(s)|`ON`|
 
@@ -15312,6 +15372,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
+|Range|from: `400`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15343,6 +15404,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15547,7 +15609,7 @@
 |Command line|`--tmp-disk-table-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`18446744073709551615`|
+|Default value|`18446744073709551615 (max unsigned integer, no limit)`|
 |Dynamic|`true`|
 |Range|from: `1024` to: `1.844674407371E+19`|
 
@@ -15700,7 +15762,7 @@
 |Name|`use_stat_tables`|
 |Command line|`--use-stat-tables=mode`|
 |Scope|`global`, `session`|
-|Default value|`never`|
+|Default value|`preferably_for_queries (>= MariaDB 10.4.1), never (<= MariaDB 10.4.0)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -15712,7 +15774,7 @@
 |name|value|
 |----|-----|
 |Name|`version`|
-|Command line|`-v, --version[=name] (>= mariadb 10.2.1), --version (<= mariadb 10.2.0)`|
+|Command line|`-V, --version[=name] (>= MariaDB 10.2.1), --version (<= MariaDB 10.2.0)`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -15768,7 +15830,6 @@
 |name|value|
 |----|-----|
 |Name|`version_malloc_library`|
-|Command line|`no`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -15782,7 +15843,6 @@
 |name|value|
 |----|-----|
 |Name|`version_source_revision`|
-|Command line|`none`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -15813,7 +15873,7 @@
 |name|value|
 |----|-----|
 |Name|`warning_count`|
-|Type of variable|`numeric`|
+|Type of variable|`integer`|
 |Scope|`session`|
 |Dynamic|`false`|
 
@@ -17906,6 +17966,7 @@
 |Name|`version_ssl_library`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`None`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -17983,6 +18044,7 @@
 |Command line|`thread-pool-max-threads=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`65536 (>= MariaDB 10.2.4), 1000 (<= MariaDB 10.2.3, >= MariaDB 10.1), 500 (<= MariaDB 10.0)`|
 |Dynamic|`true`|
 |Range|from: `1` to: `65536`|
 
@@ -18055,7 +18117,6 @@
 |Command line|`--thread-pool-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`16`|
 |Range|from: `1`|
 
 ### Documentation(s)
@@ -20044,7 +20105,7 @@
 |Name|`tokudb_block_size`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`4194304`|
+|Default value|`4194304 (4MB)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.844674407371E+19`|
 
@@ -20072,6 +20133,7 @@
 |----|-----|
 |Name|`tokudb_cache_size`|
 |Type of variable|`integer`|
+|Default value|`Half of the total system memory`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -20200,6 +20262,7 @@
 |----|-----|
 |Name|`tokudb_data_dir`|
 |Type of variable|`string`|
+|Default value|`Empty (the MariaDB datadir is used)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -20354,6 +20417,7 @@
 |----|-----|
 |Name|`tokudb_last_lock_timeout`|
 |Scope|`global`, `session`|
+|Default value|`Empty`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -20381,7 +20445,7 @@
 |Name|`tokudb_loader_memory_size`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`100000000`|
+|Default value|`100000000 (100M)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.844674407371E+19`|
 
@@ -20396,7 +20460,7 @@
 |Name|`tokudb_lock_timeout`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`4000`|
+|Default value|`4000 (4 seconds)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.844674407371E+19`|
 
@@ -20424,6 +20488,7 @@
 |----|-----|
 |Name|`tokudb_log_dir`|
 |Type of variable|`string`|
+|Default value|`Empty (the MariaDB datadir is used)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -20466,6 +20531,7 @@
 |Name|`tokudb_optimize_index_name`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
+|Default value|`None`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -20522,7 +20588,7 @@
 |Name|`tokudb_read_block_size`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`65536`|
+|Default value|`65536 (64KB)`|
 |Dynamic|`true`|
 |Range|from: `4096` to: `4294967295`|
 
@@ -20537,7 +20603,7 @@
 |Name|`tokudb_read_buf_size`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`131072`|
+|Default value|`131072 (128KB)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1048576`|
 
@@ -20664,6 +20730,7 @@
 |----|-----|
 |Name|`tokudb_tmp_dir`|
 |Type of variable|`directory name`|
+|Default value|`Empty (the MariaDB datadir is used)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -20717,7 +20784,6 @@
 |name|value|
 |----|-----|
 |Name|`system_versioning_asof`|
-|Command line|`none`|
 |Scope|`global`, `session`|
 |Default value|`DEFAULT`|
 |Dynamic|`true`|
@@ -22962,6 +23028,7 @@
 |Command line|`--innodb-autoextend-increment=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`64`|
 |Dynamic|`true`|
 |Range|from: `1` to: `1000`|
 
@@ -23103,7 +23170,7 @@
 |Name|`innodb_buffer_pool_dump_at_shutdown`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`on`|
+|Default value|`1`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -23208,7 +23275,7 @@
 |Name|`innodb_buffer_pool_load_at_startup`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`on`|
+|Default value|`1`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -23411,7 +23478,9 @@
 |Name|`innodb_cleaner_lsn_age_factor`|
 |Command line|`--innodb-cleaner-lsn-age-factor=value`|
 |Scope|`global`|
+|Default value|`deprecated (>= MariaDB 10.2.6), high_checkpoint (<= MariaDB 10.1)`|
 |Dynamic|`true`|
+|Valid value(s)|`high_checkpoint`, `legacy`, `deprecated`, `high_checkpoint`, `legacy`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -23455,7 +23524,7 @@
 |Name|`innodb_compression_algorithm`|
 |Command line|`--innodb-compression-algorithm=value`|
 |Scope|`global`|
-|Default value|`none`|
+|Default value|`zlib (>= MariaDB 10.2.4, MariaDB 10.1.22), none (<= MariaDB 10.2.3, MariaDB 10.1.21)`|
 |Dynamic|`true`|
 |Valid value(s)|`none`, `zlib`, `lz4`, `lzo`, `lzma`, `bzip2`, `snappy`|
 
@@ -23537,6 +23606,7 @@
 |Command line|`--innodb-concurrency-tickets=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`5000`|
 |Dynamic|`true`|
 |Range|from: `1` to: `4294967295`|
 
@@ -23553,7 +23623,9 @@
 |Command line|`innodb-corrupt-table-action=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
+|Default value|`assert (<= MariaDB 10.1), deprecated (<= MariaDB 10.2.6)`|
 |Dynamic|`true`|
+|Valid value(s)|`deprecated`, `assert`, `warn`, `salvage`, `assert`, `warn`, `salvage`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -23781,7 +23853,6 @@
 |name|value|
 |----|-----|
 |Name|`innodb_disallow_writes`|
-|Command line|`none`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -23826,7 +23897,9 @@
 |Name|`innodb_empty_free_list_algorithm`|
 |Command line|`innodb-empty-free-list-algorithm=value`|
 |Scope|`global`|
+|Default value|`deprecated (>= MariaDB 10.2.6), legacy (>= MariaDB 10.1.24), backoff (<= MariaDB 10.1.23)`|
 |Dynamic|`true`|
+|Valid value(s)|`deprecated`, `backoff`, `legacy`, `backoff`, `legacy`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -24028,6 +24101,7 @@
 |Command line|`--innodb-file-format=value`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`Barracuda (>= MariaDB 10.2.2), Antelope (<= MariaDB 10.2.1)`|
 |Dynamic|`true`|
 |Valid value(s)|`Antelope`, `Barracuda`|
 
@@ -24043,7 +24117,7 @@
 |Command line|`--innodb-file-format-check=#`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON`|
+|Default value|`ON (>= MariaDB 5.5)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -24074,6 +24148,7 @@
 |Command line|`--innodb-path-per-table[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`1`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -24260,7 +24335,9 @@
 |Name|`innodb_foreground_preflush`|
 |Command line|`innodb-foreground-preflush=value`|
 |Scope|`global`|
+|Default value|`deprecated (>= MariaDB 10.2.6), exponential_backoff (<= MariaDB 10.1)`|
 |Dynamic|`true`|
+|Valid value(s)|`deprecated`, `exponential_backoff`, `sync_preflush`, `exponential_backoff`, `sync_preflush`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -24496,6 +24573,7 @@
 |Command line|`innodb-ibuf-max-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`1/2 the size of the InnoDB buffer pool`|
 |Dynamic|`false`|
 |Range|from: `0`|
 
@@ -24621,6 +24699,7 @@
 |Command line|`--innodb-large-prefix`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`ON (>= MariaDB 10.2.2), OFF (<= MariaDB 10.2.1)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -24649,7 +24728,7 @@
 |Name|`innodb_lock_schedule_algorithm`|
 |Command line|`--innodb-lock-schedule-algorithm=#`|
 |Scope|`global`|
-|Default value|`FCFS`|
+|Default value|`VATS (10.2), FCFS (10.1)`|
 |Dynamic|`false`|
 |Valid value(s)|`FCFS`, `VATS`|
 
@@ -24770,6 +24849,7 @@
 |Name|`innodb_log_buffer_size`|
 |Command line|`--innodb-log-buffer-size=#`|
 |Type of variable|`integer`|
+|Default value|`16777216`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -24783,7 +24863,9 @@
 |Name|`innodb_log_checksum_algorithm`|
 |Command line|`innodb-log-checksum-algorithm=value`|
 |Scope|`global`|
+|Default value|`deprecated (>= MariaDB 10.2.6), innodb (<= MariaDB 10.1)`|
 |Dynamic|`true`|
+|Valid value(s)|`deprecated`, `innodb`, `none`, `crc32`, `strict_none`, `strict_innodb`, `strict_crc32`, `innodb`, `none`, `crc32`, `strict_none`, `strict_innodb`, `strict_crc32`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -24810,7 +24892,7 @@
 |Name|`innodb_log_compressed_pages`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`on`|
+|Default value|`1`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -24826,6 +24908,7 @@
 |Command line|`--innodb-log-file-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`50331648`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -24921,7 +25004,7 @@
 |Command line|`innodb-max-bitmap-file-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`4096`|
+|Default value|`4096 (4KB)`|
 |Dynamic|`true`|
 |Range|from: `4096` to: `1.844674407371E+19`|
 
@@ -25018,7 +25101,6 @@
 |Command line|`--innodb-max-undo-log-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1073741824`|
 |Dynamic|`true`|
 |Range|from: `10485760`|
 
@@ -25035,7 +25117,7 @@
 |Command line|`innodb-merge-sort-block-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1048576`|
+|Default value|`1048576 (1M)`|
 |Dynamic|`true`|
 |Range|from: `1048576` to: `1073741824`|
 
@@ -25166,6 +25248,7 @@
 |Command line|`--innodb-old-blocks-time=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`1000`|
 |Dynamic|`true`|
 |Range|from: `0`|
 
@@ -25426,7 +25509,6 @@
 |name|value|
 |----|-----|
 |Name|`innodb_recovery_stats`|
-|Command line|`no`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -25616,7 +25698,6 @@
 |name|value|
 |----|-----|
 |Name|`innodb_simulate_comp_failures`|
-|Command line|`none`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`0`|
@@ -25652,7 +25733,6 @@
 |Command line|`--innodb-spin-wait-delay=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`6`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -25744,6 +25824,7 @@
 |Command line|`--innodb-stats-on-metadata[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`0`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -25877,7 +25958,7 @@
 |Name|`innodb_strict_mode`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`on`|
+|Default value|`1`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -26122,7 +26203,7 @@
 |Command line|`innodb-use-atomic-writes={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF`|
+|Default value|`ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -26257,7 +26338,7 @@
 |Command line|`--innodb-use-trim=#`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF`|
+|Default value|`ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)`|
 |Dynamic|`false`|
 
 ### Documentation(s)

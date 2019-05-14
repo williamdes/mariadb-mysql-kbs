@@ -44,10 +44,11 @@ const regexCli = /([-]{2})([0-9a-z-_]+)/i;
 
 /**
  * Clean cli argument
- * @param {String} cli
+ * @param {String} cli The command line string
+ * @param {boolean} skipRegex Skip regex check
  * @returns {String} The cleaned cli
  */
-const cleanCli = function(cli) {
+const cleanCli = function(cli, skipRegex = false) {
     if (cli !== undefined && typeof cli === 'string') {
         if (cli.match(/<code\>/i) || cli.match(/<\/code\>/i)) {
             cli = cli.replace(/<code\>/gi, '');
@@ -56,7 +57,7 @@ const cleanCli = function(cli) {
             cli = cli.replace(/</gi, '');
         }
     }
-    if (!cli.match(regexCli)) {
+    if (!cli.match(regexCli) && skipRegex === false) {
         cli = undefined;
     }
     return cli;

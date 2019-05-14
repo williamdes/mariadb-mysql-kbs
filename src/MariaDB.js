@@ -18,14 +18,14 @@ const createDoc = function($, element) {
     try {
         /* jshint -W083 */
         // Parse ul > li
-        const ulLiList = $(element)
-            .next('ul')
-            .find('li');
-        if (ulLiList.length === 0) {
-            doc = {};
-            return;
+        const ulElementList = $(element)
+            .nextAll()
+            .not('p')
+            .first();
+        if (ulElementList.find('li > strong').length === 0) {
+            return { id: null };
         }
-        ulLiList.each((i, elementDescr) => {
+        ulElementList.find('li').each((i, elementDescr) => {
             const valueKey = $(elementDescr);
             const key = valueKey
                 .find('strong')
@@ -82,7 +82,7 @@ const createDoc = function($, element) {
                         let dataType = value.replace(/undefined/gi, '');
                         dataType = dataType.toLowerCase().trim();
                         if (dataType !== '') {
-                            doc.dataType = dataType;
+                            doc.type = cleaner.cleanType(dataType);
                         } else if (dataType === '') {
                             console.log('Empty datatype found for : ' + doc.id);
                         } else {
@@ -94,10 +94,25 @@ const createDoc = function($, element) {
                     doc.type = cleaner.cleanType(value.toLowerCase());
                     break;
                 case 'default value:':
+                case 'default:':
+                    /*var defaults = valueKey
+                    .find('code')
+                    .get()
+                    .map(el => $(el).text());
+                    if (defaults.length === 0) {
+                        doc.default = valueKey.text().replace(valueKey.find('strong').text(), '').trim();
+                        doc.default = doc.default.split('\n').join(',');
+                    } else {
+                        doc.default = defaults.join(',');
+                    }*/
                     doc.default = valueKey
-                        .find('code')
-                        .first()
-                        .text();
+                        .text()
+                        .replace(valueKey.find('strong').text(), '')
+                        .trim();
+                    doc.default = doc.default
+                        .split('\n')
+                        .map(el => el.trim())
+                        .join(', ');
                     break;
                 case 'valid values:':
                     doc.validValues = valueKey
@@ -136,14 +151,14 @@ const createDoc = function($, element) {
 
                     break;
                 case 'commandline:':
-                    doc.cli = cleaner.cleanCli(value);
                     if (
                         typeof value === 'string' &&
-                        (value.toLowerCase() === 'no' ||
-                            value.toLowerCase() === 'none' ||
-                            value.toLowerCase() === 'N/A')
+                        (value.toLowerCase() !== 'no' &&
+                            value.toLowerCase() !== 'none' &&
+                            value.toLowerCase() !== 'n/a' &&
+                            value.toLowerCase() !== 'no commandline option')
                     ) {
-                        delete doc.cli;
+                        doc.cli = cleaner.cleanCli(value, true);
                     }
                     break;
                 default:
@@ -155,19 +170,9 @@ const createDoc = function($, element) {
         console.error(e);
         console.log('Error at : #' + doc.id);
     }
-    if (
-        $(element)
-            .first()
-            .find('code').length > 0
-    ) {
-        if (doc.dataType !== undefined) {
-            //FIXME: remove strange hack
-            doc.type = '' + doc.dataType;
-            if (doc.type === 'numeric') {
-                doc.type = 'integer';
-            }
-            doc.type = cleaner.cleanType(doc.type);
-            delete doc.dataType;
+    if (doc.type !== undefined) {
+        if (doc.type === 'numeric') {
+            doc.type = 'integer';
         }
     }
     return doc;
@@ -267,6 +272,12 @@ systemVariables.forEach(systemVariableName => {
 
 module.exports = {
     run: () => {
+        /*var pages = [
+            {
+                url: 'http://7.2.local/Global%20Transaction%20ID%20-%20MariaDB%20Knowledge%20Base.html',
+                name: 'gtid-system-variables'
+            }
+        ]*/
         return common.processDataExtraction(pages, 'mariadb-', parsePage);
     },
 };

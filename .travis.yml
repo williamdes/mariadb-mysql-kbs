@@ -119,6 +119,7 @@ jobs:
           after_success:
               - bash <(curl -s https://codecov.io/bash) -cF php
         - stage: robot
+          language: node_js
           php: '7.2'
           node_js: 'stable'
           env:

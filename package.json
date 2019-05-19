@@ -68,7 +68,7 @@
         "mocha": "^6.1.4",
         "nyc": "^14.1.1",
         "prettier": "^1.17.1",
-        "sudo-bot": "^1.1.7"
+        "sudo-bot": "^1.1.8"
     },
     "directories": {
         "lib": "src",

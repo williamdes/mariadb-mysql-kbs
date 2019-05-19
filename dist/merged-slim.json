@@ -26676,23 +26676,6 @@
                 "45#sysvar_enforce_gtid_consistency"
             ]
         },
-        "executed_gtids_compression_period": {
-            "default": "1000",
-            "dynamic": true,
-            "name": "executed_gtids_compression_period",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "45#option_mysqld_executed-gtids-compression-period",
-                "45#sysvar_executed_gtids_compression_period"
-            ]
-        },
         "gtid_mode": {
             "default": "off",
             "dynamic": true,
@@ -26792,19 +26775,6 @@
             "type": "string",
             "ids": [
                 "45#sysvar_gtid_purged"
-            ]
-        },
-        "simplified_binlog_gtid_recovery": {
-            "cli": "--simplified-binlog-gtid-recovery[={OFF|ON}]",
-            "default": "off",
-            "dynamic": false,
-            "name": "simplified_binlog_gtid_recovery",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "45#sysvar_simplified_binlog_gtid_recovery"
             ]
         },
         "show_slave_auth_info": {

@@ -34662,29 +34662,6 @@
                 }
             ]
         },
-        "executed_gtids_compression_period": {
-            "default": "1000",
-            "dynamic": true,
-            "name": "executed_gtids_compression_period",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_executed-gtids-compression-period",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                },
-                {
-                    "anchor": "sysvar_executed_gtids_compression_period",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                }
-            ]
-        },
         "gtid_mode": {
             "default": "off",
             "dynamic": true,
@@ -34809,22 +34786,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_gtid_purged",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                }
-            ]
-        },
-        "simplified_binlog_gtid_recovery": {
-            "cli": "--simplified-binlog-gtid-recovery[={OFF|ON}]",
-            "default": "off",
-            "dynamic": false,
-            "name": "simplified_binlog_gtid_recovery",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_simplified_binlog_gtid_recovery",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
                 }
             ]

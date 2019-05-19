@@ -182,7 +182,7 @@ function parsePage($, cbSuccess) {
     var anchors = [];
     $('.anchored_heading').each(function(i, el) {
         let doc = createDoc($, el);
-        if (doc && doc.id && typeof doc.id === 'string') {
+        if (doc.id && typeof doc.id === 'string') {
             anchors.push(doc);
         }
     });

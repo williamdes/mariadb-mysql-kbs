@@ -7702,6 +7702,18 @@
 |------|----|
 |mariadb.com|[aborted_connects](https://mariadb.com/kb/en/library/documentation/server-status-variables/#aborted_connects)|
 
+## Aborted_connects_preauth
+|name|value|
+|----|-----|
+|Name|`Aborted_connects_preauth`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[aborted_connects_preauth](https://mariadb.com/kb/en/library/documentation/server-status-variables/#aborted_connects_preauth)|
+
 ## Access_denied_errors
 |name|value|
 |----|-----|
@@ -10149,6 +10161,18 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[executed_triggers](https://mariadb.com/kb/en/library/documentation/server-status-variables/#executed_triggers)|
+
+## Feature_application_time_periods
+|name|value|
+|----|-----|
+|Name|`Feature_application_time_periods`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[feature_application_time_periods](https://mariadb.com/kb/en/library/documentation/server-status-variables/#feature_application_time_periods)|
 
 ## Feature_check_constraint
 |name|value|
@@ -29113,22 +29137,6 @@
 |dev.mysql.com|[option_mysqld_enforce-gtid-consistency](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#option_mysqld_enforce-gtid-consistency)|
 |dev.mysql.com|[sysvar_enforce_gtid_consistency](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_enforce_gtid_consistency)|
 
-## executed_gtids_compression_period
-|name|value|
-|----|-----|
-|Name|`executed_gtids_compression_period`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1000`|
-|Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_executed-gtids-compression-period](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#option_mysqld_executed-gtids-compression-period)|
-|dev.mysql.com|[sysvar_executed_gtids_compression_period](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_executed_gtids_compression_period)|
-
 ## gtid_mode
 |name|value|
 |----|-----|
@@ -29229,21 +29237,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_gtid_purged](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_gtid_purged)|
-
-## simplified_binlog_gtid_recovery
-|name|value|
-|----|-----|
-|Name|`simplified_binlog_gtid_recovery`|
-|Command line|`--simplified-binlog-gtid-recovery[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`off`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_simplified_binlog_gtid_recovery](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_simplified_binlog_gtid_recovery)|
 
 ## show_slave_auth_info
 |name|value|

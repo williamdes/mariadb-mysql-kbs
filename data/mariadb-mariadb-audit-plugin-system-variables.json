@@ -211,6 +211,18 @@
         "LOG_INFO",
         "LOG_DEBUG"
       ]
+    },
+    {
+      "cli": "--server-audit=val",
+      "default": "ON",
+      "id": "server_audit",
+      "name": "server_audit",
+      "validValues": [
+        "OFF",
+        "ON",
+        "FORCE",
+        "FORCE_PLUS_PERMANENT"
+      ]
     }
   ],
   "name": "mariadb-audit-plugin-system-variables",

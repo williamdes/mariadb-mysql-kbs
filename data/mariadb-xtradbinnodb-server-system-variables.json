@@ -561,7 +561,7 @@
     },
     {
       "cli": "--innodb-checksum-algorithm=#",
-      "default": "crc32 (>= MariaDB 10.2.2), innodb (<= MariaDB 10.2.1)",
+      "default": "full_crc32 (>= MariaDB 10.5.0), crc32 (>= MariaDB 10.2.2), innodb (<= MariaDB 10.2.1)",
       "dynamic": true,
       "id": "innodb_checksum_algorithm",
       "name": "innodb_checksum_algorithm",

@@ -2292,6 +2292,20 @@
                 "12#server_audit_syslog_priority"
             ]
         },
+        "server_audit": {
+            "cli": "--server-audit=val",
+            "default": "ON",
+            "name": "server_audit",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                "12#server_audit"
+            ]
+        },
         "Mroonga_count_skip": {
             "name": "Mroonga_count_skip",
             "type": "integer",
@@ -7188,6 +7202,34 @@
                 "24#sysvar_rpl_semi_sync_slave_trace_level"
             ]
         },
+        "rpl_semi_sync_master": {
+            "cli": "--rpl-semi-sync-master=value",
+            "default": "ON",
+            "name": "rpl_semi_sync_master",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                "27#rpl_semi_sync_master"
+            ]
+        },
+        "rpl_semi_sync_slave": {
+            "cli": "--rpl-semi-sync-slave=value",
+            "default": "ON",
+            "name": "rpl_semi_sync_slave",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                "27#rpl_semi_sync_slave"
+            ]
+        },
         "Aborted_clients": {
             "name": "Aborted_clients",
             "scope": [
@@ -7206,6 +7248,16 @@
             "type": "integer",
             "ids": [
                 "28#aborted_connects"
+            ]
+        },
+        "Aborted_connects_preauth": {
+            "name": "Aborted_connects_preauth",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "28#aborted_connects_preauth"
             ]
         },
         "Access_denied_errors": {
@@ -9424,6 +9476,17 @@
                 "28#executed_triggers"
             ]
         },
+        "Feature_application_time_periods": {
+            "name": "Feature_application_time_periods",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "28#feature_application_time_periods"
+            ]
+        },
         "Feature_check_constraint": {
             "name": "Feature_check_constraint",
             "scope": [
@@ -11095,7 +11158,6 @@
             "type": "directory name",
             "ids": [
                 "29#character_sets_dir",
-                "16#option_mysqld_character-sets-dir",
                 "10#sysvar_character_sets_dir"
             ]
         },
@@ -11381,8 +11443,6 @@
             ]
         },
         "delay_key_write": {
-            "cli": "--delay-key-write[=name]",
-            "default": "on",
             "dynamic": true,
             "name": "delay_key_write",
             "scope": [
@@ -11396,7 +11456,6 @@
             ],
             "ids": [
                 "29#delay_key_write",
-                "16#option_mysqld_delay-key-write",
                 "10#sysvar_delay_key_write"
             ]
         },
@@ -13095,6 +13154,7 @@
             ]
         },
         "named_pipe": {
+            "cli": "--named-pipe[={OFF|ON}]",
             "dynamic": false,
             "name": "named_pipe",
             "scope": [
@@ -16986,6 +17046,28 @@
             "ids": [
                 "35#thread_handling",
                 "10#sysvar_thread_handling"
+            ]
+        },
+        "thread_pool_dedicated_listener": {
+            "cli": "thread-pool-dedicated-listener={0|1}",
+            "default": "0",
+            "dynamic": false,
+            "name": "thread_pool_dedicated_listener",
+            "scope": [],
+            "type": "boolean",
+            "ids": [
+                "35#thread_pool_dedicated_listener"
+            ]
+        },
+        "thread_pool_exact_stats": {
+            "cli": "thread-pool-exact-stats={0|1}",
+            "default": "0",
+            "dynamic": false,
+            "name": "thread_pool_exact_stats",
+            "scope": [],
+            "type": "boolean",
+            "ids": [
+                "35#thread_pool_exact_stats"
             ]
         },
         "thread_pool_idle_timeout": {
@@ -26676,23 +26758,6 @@
                 "45#sysvar_enforce_gtid_consistency"
             ]
         },
-        "executed_gtids_compression_period": {
-            "default": "1000",
-            "dynamic": true,
-            "name": "executed_gtids_compression_period",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "45#option_mysqld_executed-gtids-compression-period",
-                "45#sysvar_executed_gtids_compression_period"
-            ]
-        },
         "gtid_mode": {
             "default": "off",
             "dynamic": true,
@@ -26792,19 +26857,6 @@
             "type": "string",
             "ids": [
                 "45#sysvar_gtid_purged"
-            ]
-        },
-        "simplified_binlog_gtid_recovery": {
-            "cli": "--simplified-binlog-gtid-recovery[={OFF|ON}]",
-            "default": "off",
-            "dynamic": false,
-            "name": "simplified_binlog_gtid_recovery",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "45#sysvar_simplified_binlog_gtid_recovery"
             ]
         },
         "show_slave_auth_info": {
@@ -27324,7 +27376,11 @@
         },
         "plugin_load": {
             "cli": "--plugin-load=plugin_list",
+            "dynamic": false,
             "name": "plugin_load",
+            "scope": [
+                "global"
+            ],
             "type": "string",
             "ids": [
                 "16#option_mysqld_plugin-load"
@@ -27332,7 +27388,11 @@
         },
         "plugin_load_add": {
             "cli": "--plugin-load-add=plugin_list",
+            "dynamic": false,
             "name": "plugin_load_add",
+            "scope": [
+                "global"
+            ],
             "type": "string",
             "ids": [
                 "16#option_mysqld_plugin-load-add"

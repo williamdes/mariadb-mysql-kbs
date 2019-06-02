@@ -553,7 +553,7 @@
       "type": "integer"
     },
     {
-      "cli": "--delay-key-write[=name]",
+      "cli": "--delay-key-write[={OFF|ON|ALL}]",
       "default": "on",
       "dynamic": true,
       "id": "sysvar_delay_key_write",

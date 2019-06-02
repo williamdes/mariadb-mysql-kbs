@@ -28,16 +28,6 @@
       "type": "directory name"
     },
     {
-      "cli": "--character-sets-dir=dir_name",
-      "dynamic": false,
-      "id": "option_mysqld_character-sets-dir",
-      "name": "character_sets_dir",
-      "scope": [
-        "global"
-      ],
-      "type": "directory name"
-    },
-    {
       "cli": "--character-set-client-handshake[={OFF|ON}]",
       "default": "on",
       "id": "option_mysqld_character-set-client-handshake",
@@ -113,22 +103,6 @@
       "id": "option_mysqld_default-time-zone",
       "name": "default_time_zone",
       "type": "string"
-    },
-    {
-      "cli": "--delay-key-write[=name]",
-      "default": "on",
-      "dynamic": true,
-      "id": "option_mysqld_delay-key-write",
-      "name": "delay_key_write",
-      "scope": [
-        "global"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "ON",
-        "OFF",
-        "ALL"
-      ]
     },
     {
       "cli": "--des-key-file=file_name",
@@ -451,14 +425,22 @@
     },
     {
       "cli": "--plugin-load=plugin_list",
+      "dynamic": false,
       "id": "option_mysqld_plugin-load",
       "name": "plugin_load",
+      "scope": [
+        "global"
+      ],
       "type": "string"
     },
     {
       "cli": "--plugin-load-add=plugin_list",
+      "dynamic": false,
       "id": "option_mysqld_plugin-load-add",
       "name": "plugin_load_add",
+      "scope": [
+        "global"
+      ],
       "type": "string"
     },
     {

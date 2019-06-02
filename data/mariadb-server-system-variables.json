@@ -1852,7 +1852,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--enable-named-pipe",
+      "cli": "--named-pipe",
       "default": "OFF",
       "dynamic": false,
       "id": "named_pipe",

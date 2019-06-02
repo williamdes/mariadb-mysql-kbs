@@ -2489,6 +2489,19 @@
 |------|----|
 |mariadb.com|[server_audit_syslog_priority](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_syslog_priority)|
 
+## server_audit
+|name|value|
+|----|-----|
+|Name|`server_audit`|
+|Command line|`--server-audit=val`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit)|
+
 ## Mroonga_count_skip
 |name|value|
 |----|-----|
@@ -7678,6 +7691,32 @@
 |mariadb.com|[rpl_semi_sync_slave_trace_level](https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/#rpl_semi_sync_slave_trace_level)|
 |dev.mysql.com|[sysvar_rpl_semi_sync_slave_trace_level](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_rpl_semi_sync_slave_trace_level)|
 
+## rpl_semi_sync_master
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_master`|
+|Command line|`--rpl-semi-sync-master=value`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rpl_semi_sync_master](https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/#rpl_semi_sync_master)|
+
+## rpl_semi_sync_slave
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_slave`|
+|Command line|`--rpl-semi-sync-slave=value`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rpl_semi_sync_slave](https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/#rpl_semi_sync_slave)|
+
 ## Aborted_clients
 |name|value|
 |----|-----|
@@ -7701,6 +7740,18 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[aborted_connects](https://mariadb.com/kb/en/library/documentation/server-status-variables/#aborted_connects)|
+
+## Aborted_connects_preauth
+|name|value|
+|----|-----|
+|Name|`Aborted_connects_preauth`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[aborted_connects_preauth](https://mariadb.com/kb/en/library/documentation/server-status-variables/#aborted_connects_preauth)|
 
 ## Access_denied_errors
 |name|value|
@@ -10150,6 +10201,18 @@
 |------|----|
 |mariadb.com|[executed_triggers](https://mariadb.com/kb/en/library/documentation/server-status-variables/#executed_triggers)|
 
+## Feature_application_time_periods
+|name|value|
+|----|-----|
+|Name|`Feature_application_time_periods`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[feature_application_time_periods](https://mariadb.com/kb/en/library/documentation/server-status-variables/#feature_application_time_periods)|
+
 ## Feature_check_constraint
 |name|value|
 |----|-----|
@@ -12024,7 +12087,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[character_sets_dir](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#character_sets_dir)|
-|dev.mysql.com|[option_mysqld_character-sets-dir](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_character-sets-dir)|
 |dev.mysql.com|[sysvar_character_sets_dir](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_sets_dir)|
 
 ## check_constraint_checks
@@ -12326,10 +12388,8 @@
 |name|value|
 |----|-----|
 |Name|`delay_key_write`|
-|Command line|`--delay-key-write[=name]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`on`|
 |Dynamic|`true`|
 |Valid value(s)|`ON`, `OFF`, `ALL`|
 
@@ -12337,7 +12397,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[delay_key_write](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#delay_key_write)|
-|dev.mysql.com|[option_mysqld_delay-key-write](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_delay-key-write)|
 |dev.mysql.com|[sysvar_delay_key_write](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_delay_key_write)|
 
 ## delayed_insert_limit
@@ -14074,6 +14133,7 @@
 |name|value|
 |----|-----|
 |Name|`named_pipe`|
+|Command line|`--named-pipe[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -18021,6 +18081,36 @@
 |------|----|
 |mariadb.com|[thread_handling](https://mariadb.com/kb/en/library/documentation/thread-pool-system-and-status-variables/#thread_handling)|
 |dev.mysql.com|[sysvar_thread_handling](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_handling)|
+
+## thread_pool_dedicated_listener
+|name|value|
+|----|-----|
+|Name|`thread_pool_dedicated_listener`|
+|Command line|`thread-pool-dedicated-listener={0|1}`|
+|Type of variable|`boolean`|
+|Scope|``|
+|Default value|`0`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[thread_pool_dedicated_listener](https://mariadb.com/kb/en/library/documentation/thread-pool-system-and-status-variables/#thread_pool_dedicated_listener)|
+
+## thread_pool_exact_stats
+|name|value|
+|----|-----|
+|Name|`thread_pool_exact_stats`|
+|Command line|`thread-pool-exact-stats={0|1}`|
+|Type of variable|`boolean`|
+|Scope|``|
+|Default value|`0`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[thread_pool_exact_stats](https://mariadb.com/kb/en/library/documentation/thread-pool-system-and-status-variables/#thread_pool_exact_stats)|
 
 ## thread_pool_idle_timeout
 |name|value|
@@ -29113,22 +29203,6 @@
 |dev.mysql.com|[option_mysqld_enforce-gtid-consistency](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#option_mysqld_enforce-gtid-consistency)|
 |dev.mysql.com|[sysvar_enforce_gtid_consistency](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_enforce_gtid_consistency)|
 
-## executed_gtids_compression_period
-|name|value|
-|----|-----|
-|Name|`executed_gtids_compression_period`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1000`|
-|Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_executed-gtids-compression-period](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#option_mysqld_executed-gtids-compression-period)|
-|dev.mysql.com|[sysvar_executed_gtids_compression_period](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_executed_gtids_compression_period)|
-
 ## gtid_mode
 |name|value|
 |----|-----|
@@ -29229,21 +29303,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_gtid_purged](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_gtid_purged)|
-
-## simplified_binlog_gtid_recovery
-|name|value|
-|----|-----|
-|Name|`simplified_binlog_gtid_recovery`|
-|Command line|`--simplified-binlog-gtid-recovery[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`off`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_simplified_binlog_gtid_recovery](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_simplified_binlog_gtid_recovery)|
 
 ## show_slave_auth_info
 |name|value|
@@ -29900,6 +29959,8 @@
 |Name|`plugin_load`|
 |Command line|`--plugin-load=plugin_list`|
 |Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29912,6 +29973,8 @@
 |Name|`plugin_load_add`|
 |Command line|`--plugin-load-add=plugin_list`|
 |Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|

@@ -43,6 +43,24 @@
       ]
     },
     {
+      "cli": "thread-pool-dedicated-listener={0|1}",
+      "default": "0",
+      "dynamic": false,
+      "id": "thread_pool_dedicated_listener",
+      "name": "thread_pool_dedicated_listener",
+      "scope": [],
+      "type": "boolean"
+    },
+    {
+      "cli": "thread-pool-exact-stats={0|1}",
+      "default": "0",
+      "dynamic": false,
+      "id": "thread_pool_exact_stats",
+      "name": "thread_pool_exact_stats",
+      "scope": [],
+      "type": "boolean"
+    },
+    {
       "cli": "thread-pool-idle-timeout=#",
       "default": "60",
       "dynamic": true,

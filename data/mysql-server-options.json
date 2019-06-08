@@ -117,11 +117,6 @@
       "type": "string"
     },
     {
-      "cli": "--enable-named-pipe",
-      "id": "option_mysqld_enable-named-pipe",
-      "name": "enable_named_pipe"
-    },
-    {
       "cli": "--event-scheduler[=value]",
       "dynamic": true,
       "id": "option_mysqld_event-scheduler",
@@ -506,28 +501,6 @@
         "dirname",
         "NULL"
       ]
-    },
-    {
-      "cli": "--shared-memory[={OFF|ON}]",
-      "default": "off",
-      "dynamic": false,
-      "id": "option_mysqld_shared-memory",
-      "name": "shared_memory",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--shared-memory-base-name=name",
-      "default": "mysql",
-      "dynamic": false,
-      "id": "option_mysqld_shared-memory-base-name",
-      "name": "shared_memory_base_name",
-      "scope": [
-        "global"
-      ],
-      "type": "string"
     },
     {
       "cli": "--skip-event-scheduler--disable-event-scheduler",

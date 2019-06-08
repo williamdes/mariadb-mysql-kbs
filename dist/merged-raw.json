@@ -15820,26 +15820,6 @@
                 }
             ]
         },
-        "language": {
-            "cli": "--language=name, -L",
-            "default": "/usr/local/mysql/share/mysql/english/",
-            "dynamic": false,
-            "name": "language",
-            "scope": [
-                "global"
-            ],
-            "type": "directory name",
-            "ids": [
-                {
-                    "anchor": "language",
-                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_language",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                }
-            ]
-        },
         "large_files_support": {
             "dynamic": false,
             "name": "large_files_support",
@@ -18186,10 +18166,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_shared-memory",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
                     "anchor": "sysvar_shared_memory",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
@@ -18197,7 +18173,6 @@
         },
         "shared_memory_base_name": {
             "cli": "--shared-memory-base-name=name",
-            "default": "mysql",
             "dynamic": false,
             "name": "shared_memory_base_name",
             "scope": [
@@ -18208,10 +18183,6 @@
                 {
                     "anchor": "shared_memory_base_name",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_shared-memory-base-name",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_shared_memory_base_name",
@@ -18458,7 +18429,15 @@
             ]
         },
         "sql_big_tables": {
+            "cli": "--sql-big-tables",
+            "default": "0",
+            "dynamic": true,
             "name": "sql_big_tables",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
             "ids": [
                 {
                     "anchor": "sql_big_tables",
@@ -18516,7 +18495,15 @@
             ]
         },
         "sql_low_priority_updates": {
+            "cli": "--sql-low-priority-updates",
+            "default": "0",
+            "dynamic": true,
             "name": "sql_low_priority_updates",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
             "ids": [
                 {
                     "anchor": "sql_low_priority_updates",
@@ -18714,21 +18701,6 @@
                 {
                     "anchor": "strict_password_validation",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                }
-            ]
-        },
-        "symbolic_links": {
-            "cli": "--symbolic-links[={OFF|ON}]",
-            "name": "symbolic_links",
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "symbolic_links",
-                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_symbolic-links",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 }
             ]
         },
@@ -35376,16 +35348,6 @@
                 }
             ]
         },
-        "enable_named_pipe": {
-            "cli": "--enable-named-pipe",
-            "name": "enable_named_pipe",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_enable-named-pipe",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                }
-            ]
-        },
         "exit_info": {
             "cli": "--exit-info[=flags]",
             "name": "exit_info",
@@ -35461,6 +35423,22 @@
             "ids": [
                 {
                     "anchor": "option_mysqld_install-manual",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
+        "language": {
+            "cli": "--language=name",
+            "default": "/usr/local/mysql/share/mysql/english/",
+            "dynamic": false,
+            "name": "language",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_language",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 }
             ]
@@ -35688,6 +35666,17 @@
                 }
             ]
         },
+        "symbolic_links": {
+            "cli": "--symbolic-links[={OFF|ON}]",
+            "name": "symbolic_links",
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_symbolic-links",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
         "skip_stack_trace": {
             "cli": "--skip-stack-trace",
             "name": "skip_stack_trace",
@@ -35855,7 +35844,7 @@
             ]
         },
         "admin_address": {
-            "cli": "--admin-address=#",
+            "cli": "--admin-address=addr",
             "dynamic": false,
             "name": "admin_address",
             "scope": [
@@ -37496,7 +37485,7 @@
             ]
         },
         "mysqlx_bind_address": {
-            "cli": "--mysqlx-bind-address=value",
+            "cli": "--mysqlx-bind-address=addr",
             "default": "*",
             "dynamic": false,
             "name": "mysqlx_bind_address",

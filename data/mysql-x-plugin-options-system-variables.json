@@ -14,7 +14,7 @@
       ]
     },
     {
-      "cli": "--mysqlx-bind-address=value",
+      "cli": "--mysqlx-bind-address=addr",
       "default": "*",
       "dynamic": false,
       "id": "sysvar_mysqlx_bind_address",

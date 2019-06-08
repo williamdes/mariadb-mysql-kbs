@@ -1083,17 +1083,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--language=name, -L",
-      "default": "/usr/local/mysql/share/mysql/english/",
-      "dynamic": false,
-      "id": "language",
-      "name": "language",
-      "scope": [
-        "global"
-      ],
-      "type": "directory name"
-    },
-    {
       "dynamic": false,
       "id": "large_files_support",
       "name": "large_files_support",
@@ -2738,8 +2727,16 @@
       "type": "boolean"
     },
     {
+      "cli": "--sql-big-tables",
+      "default": "0",
+      "dynamic": true,
       "id": "sql_big_tables",
-      "name": "sql_big_tables"
+      "name": "sql_big_tables",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
     },
     {
       "default": "0",
@@ -2767,8 +2764,16 @@
       "name": "sql_log_update"
     },
     {
+      "cli": "--sql-low-priority-updates",
+      "default": "0",
+      "dynamic": true,
       "id": "sql_low_priority_updates",
-      "name": "sql_low_priority_updates"
+      "name": "sql_low_priority_updates",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
     },
     {
       "id": "sql_max_join_size",
@@ -2884,10 +2889,6 @@
         "global"
       ],
       "type": "boolean"
-    },
-    {
-      "id": "symbolic_links",
-      "name": "symbolic_links"
     },
     {
       "cli": "--sync-frm",

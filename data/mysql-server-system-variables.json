@@ -12,7 +12,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--admin-address=#",
+      "cli": "--admin-address=addr",
       "dynamic": false,
       "id": "sysvar_admin_address",
       "name": "admin_address",

@@ -13222,22 +13222,6 @@
 |mariadb.com|[keep_files_on_create](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#keep_files_on_create)|
 |dev.mysql.com|[sysvar_keep_files_on_create](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_keep_files_on_create)|
 
-## language
-|name|value|
-|----|-----|
-|Name|`language`|
-|Command line|`--language=name, -L`|
-|Type of variable|`directory name`|
-|Scope|`global`|
-|Default value|`/usr/local/mysql/share/mysql/english/`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[language](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#language)|
-|dev.mysql.com|[option_mysqld_language](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_language)|
-
 ## large_files_support
 |name|value|
 |----|-----|
@@ -14973,7 +14957,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[shared_memory](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#shared_memory)|
-|dev.mysql.com|[option_mysqld_shared-memory](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_shared-memory)|
 |dev.mysql.com|[sysvar_shared_memory](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_shared_memory)|
 
 ## shared_memory_base_name
@@ -14983,14 +14966,12 @@
 |Command line|`--shared-memory-base-name=name`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`mysql`|
 |Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[shared_memory_base_name](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#shared_memory_base_name)|
-|dev.mysql.com|[option_mysqld_shared-memory-base-name](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_shared-memory-base-name)|
 |dev.mysql.com|[sysvar_shared_memory_base_name](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_shared_memory_base_name)|
 
 ## skip_external_locking
@@ -15171,6 +15152,11 @@
 |name|value|
 |----|-----|
 |Name|`sql_big_tables`|
+|Command line|`--sql-big-tables`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`0`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15221,6 +15207,11 @@
 |name|value|
 |----|-----|
 |Name|`sql_low_priority_updates`|
+|Command line|`--sql-low-priority-updates`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`0`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15381,19 +15372,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[strict_password_validation](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#strict_password_validation)|
-
-## symbolic_links
-|name|value|
-|----|-----|
-|Name|`symbolic_links`|
-|Command line|`--symbolic-links[={OFF|ON}]`|
-|Type of variable|`boolean`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[symbolic_links](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#symbolic_links)|
-|dev.mysql.com|[option_mysqld_symbolic-links](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_symbolic-links)|
 
 ## sync_frm
 |name|value|
@@ -29742,17 +29720,6 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_early-plugin-load](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_early-plugin-load)|
 
-## enable_named_pipe
-|name|value|
-|----|-----|
-|Name|`enable_named_pipe`|
-|Command line|`--enable-named-pipe`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_enable-named-pipe](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_enable-named-pipe)|
-
 ## exit_info
 |name|value|
 |----|-----|
@@ -29838,6 +29805,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_install-manual](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_install-manual)|
+
+## language
+|name|value|
+|----|-----|
+|Name|`language`|
+|Command line|`--language=name`|
+|Type of variable|`directory name`|
+|Scope|`global`|
+|Default value|`/usr/local/mysql/share/mysql/english/`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_language](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_language)|
 
 ## local_service
 |name|value|
@@ -30077,6 +30059,18 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_super-large-pages](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_super-large-pages)|
 
+## symbolic_links
+|name|value|
+|----|-----|
+|Name|`symbolic_links`|
+|Command line|`--symbolic-links[={OFF|ON}]`|
+|Type of variable|`boolean`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_symbolic-links](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_symbolic-links)|
+
 ## skip_stack_trace
 |name|value|
 |----|-----|
@@ -30231,7 +30225,7 @@
 |name|value|
 |----|-----|
 |Name|`admin_address`|
-|Command line|`--admin-address=#`|
+|Command line|`--admin-address=addr`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -31653,7 +31647,7 @@
 |name|value|
 |----|-----|
 |Name|`mysqlx_bind_address`|
-|Command line|`--mysqlx-bind-address=value`|
+|Command line|`--mysqlx-bind-address=addr`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Default value|`*`|

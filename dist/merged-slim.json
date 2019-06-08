@@ -12247,20 +12247,6 @@
                 "10#sysvar_keep_files_on_create"
             ]
         },
-        "language": {
-            "cli": "--language=name, -L",
-            "default": "/usr/local/mysql/share/mysql/english/",
-            "dynamic": false,
-            "name": "language",
-            "scope": [
-                "global"
-            ],
-            "type": "directory name",
-            "ids": [
-                "29#language",
-                "16#option_mysqld_language"
-            ]
-        },
         "large_files_support": {
             "dynamic": false,
             "name": "large_files_support",
@@ -13994,13 +13980,11 @@
             "type": "boolean",
             "ids": [
                 "29#shared_memory",
-                "16#option_mysqld_shared-memory",
                 "10#sysvar_shared_memory"
             ]
         },
         "shared_memory_base_name": {
             "cli": "--shared-memory-base-name=name",
-            "default": "mysql",
             "dynamic": false,
             "name": "shared_memory_base_name",
             "scope": [
@@ -14009,7 +13993,6 @@
             "type": "string",
             "ids": [
                 "29#shared_memory_base_name",
-                "16#option_mysqld_shared-memory-base-name",
                 "10#sysvar_shared_memory_base_name"
             ]
         },
@@ -14171,7 +14154,15 @@
             ]
         },
         "sql_big_tables": {
+            "cli": "--sql-big-tables",
+            "default": "0",
+            "dynamic": true,
             "name": "sql_big_tables",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
             "ids": [
                 "29#sql_big_tables"
             ]
@@ -14211,7 +14202,15 @@
             ]
         },
         "sql_low_priority_updates": {
+            "cli": "--sql-low-priority-updates",
+            "default": "0",
+            "dynamic": true,
             "name": "sql_low_priority_updates",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
             "ids": [
                 "29#sql_low_priority_updates"
             ]
@@ -14350,15 +14349,6 @@
             "type": "boolean",
             "ids": [
                 "29#strict_password_validation"
-            ]
-        },
-        "symbolic_links": {
-            "cli": "--symbolic-links[={OFF|ON}]",
-            "name": "symbolic_links",
-            "type": "boolean",
-            "ids": [
-                "29#symbolic_links",
-                "16#option_mysqld_symbolic-links"
             ]
         },
         "sync_frm": {
@@ -27231,13 +27221,6 @@
                 "16#option_mysqld_early-plugin-load"
             ]
         },
-        "enable_named_pipe": {
-            "cli": "--enable-named-pipe",
-            "name": "enable_named_pipe",
-            "ids": [
-                "16#option_mysqld_enable-named-pipe"
-            ]
-        },
         "exit_info": {
             "cli": "--exit-info[=flags]",
             "name": "exit_info",
@@ -27294,6 +27277,19 @@
             "name": "install_manual",
             "ids": [
                 "16#option_mysqld_install-manual"
+            ]
+        },
+        "language": {
+            "cli": "--language=name",
+            "default": "/usr/local/mysql/share/mysql/english/",
+            "dynamic": false,
+            "name": "language",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                "16#option_mysqld_language"
             ]
         },
         "local_service": {
@@ -27462,6 +27458,14 @@
                 "16#option_mysqld_super-large-pages"
             ]
         },
+        "symbolic_links": {
+            "cli": "--symbolic-links[={OFF|ON}]",
+            "name": "symbolic_links",
+            "type": "boolean",
+            "ids": [
+                "16#option_mysqld_symbolic-links"
+            ]
+        },
         "skip_stack_trace": {
             "cli": "--skip-stack-trace",
             "name": "skip_stack_trace",
@@ -27590,7 +27594,7 @@
             ]
         },
         "admin_address": {
-            "cli": "--admin-address=#",
+            "cli": "--admin-address=addr",
             "dynamic": false,
             "name": "admin_address",
             "scope": [
@@ -28949,7 +28953,7 @@
             ]
         },
         "mysqlx_bind_address": {
-            "cli": "--mysqlx-bind-address=value",
+            "cli": "--mysqlx-bind-address=addr",
             "default": "*",
             "dynamic": false,
             "name": "mysqlx_bind_address",

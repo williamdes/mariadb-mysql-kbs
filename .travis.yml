@@ -23,13 +23,13 @@ stages:
       if: type = cron
 jobs:
     include:
-        - stage: tests
+        - stage: lint
           php: '7.3'
           env:
             - CI_TYPE=phpstan
             - CI_COMPOSER=yes
           name: 'PHPSTAN - PHP 7.3'
-        - stage: tests
+        - stage: lint
           php: '7.3'
           env:
             - CI_TYPE=phpcs

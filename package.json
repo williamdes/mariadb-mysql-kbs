@@ -1,5 +1,6 @@
 {
     "name": "mariadb-mysql-kbs",
+    "repository": "williamdes/mariadb-mysql-kbs",
     "version": "1.2.6",
     "description": "An index of the MariaDB and MySQL Knowledge bases",
     "main": "src/index.js",
@@ -48,10 +49,6 @@
         "build": "node ./src/index.js",
         "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov",
         "sudo-bot-pr": "sudo-bot --env scripts/sudo-bot/.env --verbose"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/williamdes/mariadb-mysql-kbs.git"
     },
     "author": {
         "email": "williamdes@wdes.fr",

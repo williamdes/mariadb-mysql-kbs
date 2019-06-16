@@ -18,8 +18,12 @@
     },
     {
       "cli": "--log-bin-index=file_name",
+      "dynamic": false,
       "id": "option_mysqld_log-bin-index",
       "name": "log_bin_index",
+      "scope": [
+        "global"
+      ],
       "type": "file name"
     },
     {

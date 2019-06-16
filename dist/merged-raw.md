@@ -2260,7 +2260,7 @@
 |Scope|`global`|
 |Default value|`Empty string`|
 |Dynamic|`true`|
-|Valid value(s)|`CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `QUERY_DCL`, `QUERY_DML_NO_SELECT`|
+|Valid value(s)|`CONNECT`, `QUERY`, `TABLE`, `CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `QUERY_DCL`, `CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `QUERY_DCL`, `QUERY_DML_NO_SELECT`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -4929,6 +4929,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[rocksdb_use_direct_reads](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myrocks/myrocks-system-variables/#rocksdb_use_direct_reads)|
+
+## rocksdb_use_direct_writes
+|name|value|
+|----|-----|
+|Name|`rocksdb_use_direct_writes`|
+|Command line|`--rocksdb-use-direct-reads={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_use_direct_writes](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myrocks/myrocks-system-variables/#rocksdb_use_direct_writes)|
 
 ## rocksdb_use_fsync
 |name|value|

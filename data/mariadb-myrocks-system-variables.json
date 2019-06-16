@@ -1556,6 +1556,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--rocksdb-use-direct-reads={0|1}",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "rocksdb_use_direct_writes",
+      "name": "rocksdb_use_direct_writes",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--rocksdb-use-fsync={0|1}",
       "default": "OFF",
       "dynamic": false,

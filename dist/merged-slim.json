@@ -2061,6 +2061,20 @@
                 "CONNECT",
                 "QUERY",
                 "TABLE",
+                "CONNECT",
+                "QUERY",
+                "TABLE",
+                "QUERY_DDL",
+                "QUERY_DML",
+                "CONNECT",
+                "QUERY",
+                "TABLE",
+                "QUERY_DDL",
+                "QUERY_DML",
+                "QUERY_DCL",
+                "CONNECT",
+                "QUERY",
+                "TABLE",
                 "QUERY_DDL",
                 "QUERY_DML",
                 "QUERY_DCL",
@@ -4654,6 +4668,19 @@
             "type": "boolean",
             "ids": [
                 "17#rocksdb_use_direct_reads"
+            ]
+        },
+        "rocksdb_use_direct_writes": {
+            "cli": "--rocksdb-use-direct-reads={0|1}",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "rocksdb_use_direct_writes",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "17#rocksdb_use_direct_writes"
             ]
         },
         "rocksdb_use_fsync": {

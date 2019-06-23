@@ -22023,6 +22023,23 @@
                 }
             ]
         },
+        "tls_version": {
+            "name": "tls_version",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "tls_version",
+                    "url": "https://mariadb.com/kb/en/library/documentation/ssltls-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_tls_version",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "version_ssl_library": {
             "default": "None",
             "dynamic": false,
@@ -32400,6 +32417,22 @@
                 }
             ]
         },
+        "innodb_redo_log_archive_dirs": {
+            "cli": "--innodb-redo-log-archive-dirs",
+            "default": "null",
+            "dynamic": true,
+            "name": "innodb_redo_log_archive_dirs",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_redo_log_archive_dirs",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
         "innodb_redo_log_encrypt": {
             "cli": "--innodb-redo-log-encrypt[={OFF|ON}]",
             "default": "off",
@@ -36820,6 +36853,27 @@
                 }
             ]
         },
+        "protocol_compression_algorithms": {
+            "cli": "--protocol-compression-algorithms=value",
+            "default": "zlib,zstd,uncompressed",
+            "dynamic": true,
+            "name": "protocol_compression_algorithms",
+            "scope": [
+                "global"
+            ],
+            "type": "set",
+            "validValues": [
+                "zlib",
+                "zstd",
+                "compressed"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_protocol_compression_algorithms",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "range_optimizer_max_mem_size": {
             "cli": "--range-optimizer-max-mem-size=#",
             "default": "8388608",
@@ -37377,20 +37431,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_tls_ciphersuites",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
-        "tls_version": {
-            "cli": "--tls-version=protocol_list",
-            "name": "tls_version",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "sysvar_tls_version",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

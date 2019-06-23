@@ -92,6 +92,22 @@
       "type": "string"
     },
     {
+      "cli": "--tls-version=name",
+      "default": "TLSv1.1,TLSv1.2,TLSv1.3",
+      "dynamic": false,
+      "id": "tls_version",
+      "name": "tls_version",
+      "scope": [
+        "global"
+      ],
+      "validValues": [
+        "TLSv1.0",
+        "TLSv1.1",
+        "TLSv1.2",
+        "TLSv1.3"
+      ]
+    },
+    {
       "default": "None",
       "dynamic": false,
       "id": "version_ssl_library",

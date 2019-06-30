@@ -5,8 +5,8 @@
  * @returns {string} The commit message
  */
 const commitMessage = function(modifiedFiles) {
-    const nbrMySQLFiles = modifiedFiles.filter(file => file.match(/mysql-[a-z-]+.json$/g)).length;
-    const nbrMariaDBFiles = modifiedFiles.filter(file => file.match(/mariadb-[a-z-]+.json$/g)).length;
+    const nbrMySQLFiles = modifiedFiles.filter(file => file.match(/mysql-[a-z\-\.]+.json$/g)).length;
+    const nbrMariaDBFiles = modifiedFiles.filter(file => file.match(/mariadb-[a-z\-\.]+.json$/g)).length;
     const nbrMergedData = modifiedFiles.filter(file => file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g))
         .length;
 

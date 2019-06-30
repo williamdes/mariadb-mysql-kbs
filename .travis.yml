@@ -109,6 +109,9 @@ jobs:
             - CI_TYPE=phpunit
             - CI_COMPOSER=yes
           name: 'PHPUNIT - PHP 7.3'
+          before_install:
+            - echo "memory_limit=-1" > /usr/local/etc/php/7.3/conf.d/50-travis-ci.ini
+            - echo "pcre.jit=0" >> /usr/local/etc/php/7.3/conf.d/50-travis-ci.ini
           addons:
               homebrew:
                   update: true

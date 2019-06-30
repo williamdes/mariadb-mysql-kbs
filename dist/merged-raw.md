@@ -18013,6 +18013,19 @@
 |mariadb.com|[ssl_key](https://mariadb.com/kb/en/library/documentation/ssltls-system-variables/#ssl_key)|
 |dev.mysql.com|[sysvar_ssl_key](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_key)|
 
+## tls_version
+|name|value|
+|----|-----|
+|Name|`tls_version`|
+|Type of variable|`string`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[tls_version](https://mariadb.com/kb/en/library/documentation/ssltls-system-variables/#tls_version)|
+|dev.mysql.com|[sysvar_tls_version](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tls_version)|
+
 ## version_ssl_library
 |name|value|
 |----|-----|
@@ -24036,6 +24049,22 @@
 |------|----|
 |mariadb.com|[innodb_encrypt_tables](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_encrypt_tables)|
 
+## innodb_encrypt_temporary_tables
+|name|value|
+|----|-----|
+|Name|`innodb_encrypt_temporary_tables`|
+|Command line|`--innodb-encrypt-temporary-tables=value`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`false`|
+|Valid value(s)|`ON`, `OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_encrypt_temporary_tables](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_encrypt_temporary_tables)|
+
 ## innodb_encryption_rotate_key_age
 |name|value|
 |----|-----|
@@ -24768,7 +24797,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range||
+|Range|from: `0` to: `9.2233720368548E+18`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27124,6 +27153,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_innodb_print_ddl_logs](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_ddl_logs)|
+
+## innodb_redo_log_archive_dirs
+|name|value|
+|----|-----|
+|Name|`innodb_redo_log_archive_dirs`|
+|Command line|`--innodb-redo-log-archive-dirs`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`null`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_redo_log_archive_dirs](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_redo_log_archive_dirs)|
 
 ## innodb_redo_log_encrypt
 |name|value|
@@ -30465,7 +30509,7 @@
 |name|value|
 |----|-----|
 |Name|`default_table_encryption`|
-|Command line|`--default-table-encryption=#`|
+|Command line|`--default-table-encryption[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`off`|
@@ -31066,6 +31110,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_print_identified_with_as_hex](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_print_identified_with_as_hex)|
 
+## protocol_compression_algorithms
+|name|value|
+|----|-----|
+|Name|`protocol_compression_algorithms`|
+|Command line|`--protocol-compression-algorithms=value`|
+|Type of variable|`set`|
+|Scope|`global`|
+|Default value|`zlib,zstd,uncompressed`|
+|Dynamic|`true`|
+|Valid value(s)|`zlib`, `zstd`, `uncompressed`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_protocol_compression_algorithms](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_protocol_compression_algorithms)|
+
 ## range_optimizer_max_mem_size
 |name|value|
 |----|-----|
@@ -31542,19 +31602,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_tls_ciphersuites](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tls_ciphersuites)|
-
-## tls_version
-|name|value|
-|----|-----|
-|Name|`tls_version`|
-|Command line|`--tls-version=protocol_list`|
-|Type of variable|`string`|
-|Scope|`global`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_tls_version](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tls_version)|
 
 ## use_secondary_engine
 |name|value|

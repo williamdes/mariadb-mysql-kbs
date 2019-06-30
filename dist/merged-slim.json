@@ -17004,6 +17004,17 @@
                 "10#sysvar_ssl_key"
             ]
         },
+        "tls_version": {
+            "name": "tls_version",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "34#tls_version",
+                "10#sysvar_tls_version"
+            ]
+        },
         "version_ssl_library": {
             "default": "None",
             "dynamic": false,
@@ -21949,6 +21960,23 @@
                 "40#innodb_encrypt_tables"
             ]
         },
+        "innodb_encrypt_temporary_tables": {
+            "cli": "--innodb-encrypt-temporary-tables=value",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "innodb_encrypt_temporary_tables",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "validValues": [
+                "ON",
+                "OFF"
+            ],
+            "ids": [
+                "40#innodb_encrypt_temporary_tables"
+            ]
+        },
         "innodb_encryption_rotate_key_age": {
             "cli": "--innodb-encryption-rotate-key-age=#",
             "default": "1",
@@ -22673,7 +22701,10 @@
             "default": "0",
             "dynamic": true,
             "name": "innodb_kill_idle_transaction",
-            "range": {},
+            "range": {
+                "from": 0,
+                "to": 9.223372036854776e+18
+            },
             "scope": [
                 "global"
             ],
@@ -24931,6 +24962,19 @@
             "type": "boolean",
             "ids": [
                 "41#sysvar_innodb_print_ddl_logs"
+            ]
+        },
+        "innodb_redo_log_archive_dirs": {
+            "cli": "--innodb-redo-log-archive-dirs",
+            "default": "null",
+            "dynamic": true,
+            "name": "innodb_redo_log_archive_dirs",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "41#sysvar_innodb_redo_log_archive_dirs"
             ]
         },
         "innodb_redo_log_encrypt": {
@@ -27831,7 +27875,7 @@
             ]
         },
         "default_table_encryption": {
-            "cli": "--default-table-encryption=#",
+            "cli": "--default-table-encryption[={OFF|ON}]",
             "default": "off",
             "dynamic": true,
             "name": "default_table_encryption",
@@ -28402,6 +28446,24 @@
                 "10#sysvar_print_identified_with_as_hex"
             ]
         },
+        "protocol_compression_algorithms": {
+            "cli": "--protocol-compression-algorithms=value",
+            "default": "zlib,zstd,uncompressed",
+            "dynamic": true,
+            "name": "protocol_compression_algorithms",
+            "scope": [
+                "global"
+            ],
+            "type": "set",
+            "validValues": [
+                "zlib",
+                "zstd",
+                "uncompressed"
+            ],
+            "ids": [
+                "10#sysvar_protocol_compression_algorithms"
+            ]
+        },
         "range_optimizer_max_mem_size": {
             "cli": "--range-optimizer-max-mem-size=#",
             "default": "8388608",
@@ -28868,17 +28930,6 @@
             "type": "string",
             "ids": [
                 "10#sysvar_tls_ciphersuites"
-            ]
-        },
-        "tls_version": {
-            "cli": "--tls-version=protocol_list",
-            "name": "tls_version",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                "10#sysvar_tls_version"
             ]
         },
         "use_secondary_engine": {

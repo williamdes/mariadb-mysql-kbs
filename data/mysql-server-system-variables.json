@@ -513,7 +513,7 @@
       "type": "enumeration"
     },
     {
-      "cli": "--default-table-encryption=#",
+      "cli": "--default-table-encryption[={OFF|ON}]",
       "default": "off",
       "dynamic": true,
       "id": "sysvar_default_table_encryption",
@@ -2305,6 +2305,22 @@
         "session"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--protocol-compression-algorithms=value",
+      "default": "zlib,zstd,uncompressed",
+      "dynamic": true,
+      "id": "sysvar_protocol_compression_algorithms",
+      "name": "protocol_compression_algorithms",
+      "scope": [
+        "global"
+      ],
+      "type": "set",
+      "validValues": [
+        "zlib",
+        "zstd",
+        "uncompressed"
+      ]
     },
     {
       "dynamic": false,

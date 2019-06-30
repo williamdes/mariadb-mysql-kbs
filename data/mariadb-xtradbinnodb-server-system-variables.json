@@ -1018,6 +1018,21 @@
       ]
     },
     {
+      "cli": "--innodb-encrypt-temporary-tables=value",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "innodb_encrypt_temporary_tables",
+      "name": "innodb_encrypt_temporary_tables",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean",
+      "validValues": [
+        "ON",
+        "OFF"
+      ]
+    },
+    {
       "cli": "--innodb-encryption-rotate-key-age=#",
       "default": "1",
       "dynamic": true,
@@ -1651,7 +1666,10 @@
       "dynamic": true,
       "id": "innodb_kill_idle_transaction",
       "name": "innodb_kill_idle_transaction",
-      "range": {},
+      "range": {
+        "from": 0,
+        "to": 9223372036854776000
+      },
       "scope": [
         "global"
       ],

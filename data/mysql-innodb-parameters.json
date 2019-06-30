@@ -1652,6 +1652,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--innodb-redo-log-archive-dirs",
+      "default": "null",
+      "dynamic": true,
+      "id": "sysvar_innodb_redo_log_archive_dirs",
+      "name": "innodb_redo_log_archive_dirs",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--innodb-redo-log-encrypt[={OFF|ON}]",
       "default": "off",
       "dynamic": true,

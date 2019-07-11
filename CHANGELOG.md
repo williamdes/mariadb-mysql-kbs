@@ -6,8 +6,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v1.2.7]
+
+### Changed
+
+- [520d89c](https://github.com/williamdes/mariadb-mysql-kbs/commit/520d89cbe75a088444e3536e7a2f0be31449efba) update: [security] bump lodash from 4.17.11 to 4.17.14
+- [cf60c43](https://github.com/williamdes/mariadb-mysql-kbs/commit/cf60c43cc4e7d7c284fa5181707343145f2d88f5) update: [security] bump lodash.merge from 4.6.1 to 4.6.2
+- [dfda544](https://github.com/williamdes/mariadb-mysql-kbs/commit/dfda544ecf47bf8cd995e3aebfb445d07f25bf5c) update: [MariaDB] && [MySQL] updates
+- [4b31b18](https://github.com/williamdes/mariadb-mysql-kbs/commit/4b31b18c50a25f3e32a19d2b13218ef18166daa8) update: [MariaDB] && [MySQL] updates and other changes
+
+## [v1.2.6]
+
 ### Added
 
+- [1c5ccf2](https://github.com/williamdes/mariadb-mysql-kbs/commit/1c5ccf288d2f96e8e18451bf17964de4bc8f38f4) add: SECURITY.md
 - [61a933f](https://github.com/williamdes/mariadb-mysql-kbs/commit/61a933f6e0d67f4287ba73243f2d69417b76f609) added: dependencies up to date badge
 - [a55aa0c](https://github.com/williamdes/mariadb-mysql-kbs/commit/a55aa0c33ed0f9a70921a5b5ee205f3a79442413) added: php lint to CI and removed apt cache key
 - [b3edac6](https://github.com/williamdes/mariadb-mysql-kbs/commit/b3edac617d653623b1840f7dbc89bac9276c3f82) add: .phpunit.result.cache to ignores
@@ -17,6 +29,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [09de4e1](https://github.com/williamdes/mariadb-mysql-kbs/commit/09de4e1288b236fb38686f926c5567b88d2bb661) update: prettier from 1.17.1 to 1.18.2
+- [e4a96c9](https://github.com/williamdes/mariadb-mysql-kbs/commit/e4a96c94f85ca7e1fefe3a93761d20895790f857) update: package version to 1.2.6
+- [57a2f9c](https://github.com/williamdes/mariadb-mysql-kbs/commit/57a2f9cac2a45792cdc1ae214bc33308614cf9f2) update: [MariaDB] && [MySQL] updates
+- [1ba2bdd](https://github.com/williamdes/mariadb-mysql-kbs/commit/1ba2bdd21b634d29aff5dd4dd0620e24b4fee2c7) update: [MariaDB] && [MySQL] updates
+- [10e8854](https://github.com/williamdes/mariadb-mysql-kbs/commit/10e88548866862ef2c4313ec591c075ac7d70fa6) update: .travis.yml
+- [414e4a6](https://github.com/williamdes/mariadb-mysql-kbs/commit/414e4a670f64056824c9712d6d3f067fcd27c6bc) update: @sudo-bot from 1.1.7 to 1.1.8
+- [2f8f42c](https://github.com/williamdes/mariadb-mysql-kbs/commit/2f8f42c8ceeae3c3cfdaeebd93d5ac299fad2c0e) update: @sudo-bot from 1.1.6 to 1.1.7
+- [9477c48](https://github.com/williamdes/mariadb-mysql-kbs/commit/9477c4866349d8e997ffd534a53297bd88e4b690) update: @sudo-bot from 1.1.5 to 1.1.6
 - [824f4f0](https://github.com/williamdes/mariadb-mysql-kbs/commit/824f4f01517dbf5e0654d486402545001d3f2015) update: [MySQL] data
 - [55d6f72](https://github.com/williamdes/mariadb-mysql-kbs/commit/55d6f72913e24c2f32f2c9c3df285ba117f10f8a) update: [MariaDB] data
 - [f679d22](https://github.com/williamdes/mariadb-mysql-kbs/commit/f679d2207b5c8d99044471de6e492b3ccd5b4a78) updated: dependencies and package-lock.json
@@ -38,6 +58,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- [4277ed2](https://github.com/williamdes/mariadb-mysql-kbs/commit/4277ed250f2500cb4c47253796f35dfba69d88b2) fix: alert detected by lgtm
 - [6d386ce](https://github.com/williamdes/mariadb-mysql-kbs/commit/6d386ce5f1a7f225dd8b38f82f7a0c4aa2f3bdd2) fix: CI @sudo-bot script
 - [b8ab559](https://github.com/williamdes/mariadb-mysql-kbs/commit/b8ab5592c5d54a35a6767b3a10c26d7fd53a7689) fix: MariaDB script
 - [2362512](https://github.com/williamdes/mariadb-mysql-kbs/commit/2362512aa8da242158303620d4d2509229769e85) fix: move crawler to dev-dependencies
@@ -361,7 +382,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [d9cd2a8](https://github.com/williamdes/mariadb-mysql-kbs/commit/d9cd2a8123a67d6adfddf0414988b98fcac9f082) fixed: bug in MariaDB script
 
 
-[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.5...HEAD
+[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.6...HEAD
+[v1.2.6]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.5...v1.2.6
 [v1.2.5]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.4...v1.2.5
 [v1.2.4]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.3...v1.2.4
 [v1.2.3]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.2...v1.2.3

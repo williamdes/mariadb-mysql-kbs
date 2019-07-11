@@ -5,11 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-
 ## [v1.2.7]
 
 ### Changed
 
+- [6416780](https://github.com/williamdes/mariadb-mysql-kbs/commit/64167803686aff4090f72a6d89826364b1d88d7d) update: package version to 1.2.7
 - [520d89c](https://github.com/williamdes/mariadb-mysql-kbs/commit/520d89cbe75a088444e3536e7a2f0be31449efba) update: [security] bump lodash from 4.17.11 to 4.17.14
 - [cf60c43](https://github.com/williamdes/mariadb-mysql-kbs/commit/cf60c43cc4e7d7c284fa5181707343145f2d88f5) update: [security] bump lodash.merge from 4.6.1 to 4.6.2
 - [dfda544](https://github.com/williamdes/mariadb-mysql-kbs/commit/dfda544ecf47bf8cd995e3aebfb445d07f25bf5c) update: [MariaDB] && [MySQL] updates
@@ -382,7 +382,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [d9cd2a8](https://github.com/williamdes/mariadb-mysql-kbs/commit/d9cd2a8123a67d6adfddf0414988b98fcac9f082) fixed: bug in MariaDB script
 
 
-[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.6...HEAD
+[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.7...HEAD
+[v1.2.7]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.6...v1.2.7
 [v1.2.6]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.5...v1.2.6
 [v1.2.5]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.4...v1.2.5
 [v1.2.4]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.3...v1.2.4

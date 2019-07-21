@@ -2045,20 +2045,6 @@
 |------|----|
 |mariadb.com|[wsrep_trx_fragment_unit](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_trx_fragment_unit)|
 
-## gtid_slave_pos
-|name|value|
-|----|-----|
-|Name|`gtid_slave_pos`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`Null`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[gtid_slave_pos](https://mariadb.com/kb/en/library/documentation/gtid/#gtid_slave_pos)|
-
 ## gtid_binlog_pos
 |name|value|
 |----|-----|

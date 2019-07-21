@@ -2,16 +2,6 @@
   "data": [
     {
       "default": "Null",
-      "dynamic": true,
-      "id": "gtid_slave_pos",
-      "name": "gtid_slave_pos",
-      "scope": [
-        "global"
-      ],
-      "type": "string"
-    },
-    {
-      "default": "Null",
       "dynamic": false,
       "id": "gtid_binlog_pos",
       "name": "gtid_binlog_pos",

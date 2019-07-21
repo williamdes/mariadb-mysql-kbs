@@ -2320,21 +2320,6 @@
                 }
             ]
         },
-        "gtid_slave_pos": {
-            "default": "Null",
-            "dynamic": true,
-            "name": "gtid_slave_pos",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "gtid_slave_pos",
-                    "url": "https://mariadb.com/kb/en/library/documentation/gtid/"
-                }
-            ]
-        },
         "gtid_binlog_pos": {
             "default": "Null",
             "dynamic": false,

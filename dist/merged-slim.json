@@ -1870,18 +1870,6 @@
                 "6#wsrep_trx_fragment_unit"
             ]
         },
-        "gtid_slave_pos": {
-            "default": "Null",
-            "dynamic": true,
-            "name": "gtid_slave_pos",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                "8#gtid_slave_pos"
-            ]
-        },
         "gtid_binlog_pos": {
             "default": "Null",
             "dynamic": false,
@@ -1891,7 +1879,7 @@
             ],
             "type": "string",
             "ids": [
-                "7#gtid_binlog_pos"
+                "8#gtid_binlog_pos"
             ]
         },
         "gtid_binlog_state": {
@@ -5441,6 +5429,7 @@
         "binlog_annotate_row_events": {
             "cli": "--binlog-annotate-row-events[={0|1}]",
             "default": "ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)",
+            "dynamic": true,
             "name": "binlog_annotate_row_events",
             "scope": [
                 "global",
@@ -13156,7 +13145,7 @@
         "mysql56_temporal_format": {
             "cli": "--mysql56-temporal-format",
             "default": "ON",
-            "dynamic": false,
+            "dynamic": true,
             "name": "mysql56_temporal_format",
             "scope": [
                 "global"
@@ -14212,6 +14201,10 @@
             "default": "0",
             "dynamic": true,
             "name": "sql_log_off",
+            "scope": [
+                "global",
+                "session"
+            ],
             "type": "boolean",
             "validValues": [
                 "OFF",
@@ -24501,6 +24494,23 @@
                 "42#sysvar_audit_log_include_accounts"
             ]
         },
+        "audit_log_password_history_keep_days": {
+            "cli": "--audit-log-password-history-keep-days=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "audit_log_password_history_keep_days",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "42#sysvar_audit_log_password_history_keep_days"
+            ]
+        },
         "audit_log_policy": {
             "cli": "--audit-log-policy=value",
             "default": "all",
@@ -28943,7 +28953,7 @@
             "validValues": [
                 "OFF",
                 "ON",
-                "FORCE"
+                "FORCED"
             ],
             "ids": [
                 "10#sysvar_use_secondary_engine"

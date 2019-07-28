@@ -154,6 +154,21 @@
       "type": "string"
     },
     {
+      "cli": "--audit-log-password-history-keep-days=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_audit_log_password_history_keep_days",
+      "name": "audit_log_password_history_keep_days",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--audit-log-policy=value",
       "default": "all",
       "dynamic": false,

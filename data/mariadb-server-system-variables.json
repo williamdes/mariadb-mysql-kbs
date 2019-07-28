@@ -1832,7 +1832,7 @@
     {
       "cli": "--mysql56-temporal-format",
       "default": "ON",
-      "dynamic": false,
+      "dynamic": true,
       "id": "mysql56_temporal_format",
       "name": "mysql56_temporal_format",
       "scope": [
@@ -2755,6 +2755,7 @@
       "id": "sql_log_off",
       "name": "sql_log_off",
       "scope": [
+        "global",
         "session"
       ],
       "type": "boolean"
@@ -2956,7 +2957,7 @@
       "type": "integer"
     },
     {
-      "default": "8 (>= MariaDB 10.2.2), 1 (<= MariaDB 10.0.6)",
+      "default": "8 (>= MariaDB 10.2.2)",
       "dynamic": false,
       "id": "table_open_cache_instances",
       "name": "table_open_cache_instances",

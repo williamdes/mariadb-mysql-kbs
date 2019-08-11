@@ -2045,20 +2045,6 @@
 |------|----|
 |mariadb.com|[wsrep_trx_fragment_unit](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_trx_fragment_unit)|
 
-## gtid_slave_pos
-|name|value|
-|----|-----|
-|Name|`gtid_slave_pos`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`Null`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[gtid_slave_pos](https://mariadb.com/kb/en/library/documentation/gtid/#gtid_slave_pos)|
-
 ## gtid_binlog_pos
 |name|value|
 |----|-----|
@@ -5737,6 +5723,7 @@
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -13141,7 +13128,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[init_file](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#init_file)|
-|dev.mysql.com|[option_mysqld_init-file](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_init-file)|
 |dev.mysql.com|[sysvar_init_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_init_file)|
 
 ## insert_id
@@ -14121,7 +14107,7 @@
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON`|
-|Dynamic|`false`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -14881,7 +14867,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[secure_file_priv](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#secure_file_priv)|
-|dev.mysql.com|[option_mysqld_secure-file-priv](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_secure-file-priv)|
 |dev.mysql.com|[sysvar_secure_file_priv](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_secure_file_priv)|
 
 ## secure_timestamp
@@ -15198,6 +15183,7 @@
 |----|-----|
 |Name|`sql_log_off`|
 |Type of variable|`boolean`|
+|Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
 |Valid value(s)|`OFF`, `ON`|
@@ -26668,6 +26654,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_audit_log_include_accounts](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_include_accounts)|
 
+## audit_log_password_history_keep_days
+|name|value|
+|----|-----|
+|Name|`audit_log_password_history_keep_days`|
+|Command line|`--audit-log-password-history-keep-days=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_audit_log_password_history_keep_days](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_password_history_keep_days)|
+
 ## audit_log_policy
 |name|value|
 |----|-----|
@@ -31611,7 +31613,7 @@
 |Scope|`session`|
 |Default value|`on`|
 |Dynamic|`true`|
-|Valid value(s)|`OFF`, `ON`, `FORCE`|
+|Valid value(s)|`OFF`, `ON`, `FORCED`|
 
 ### Documentation(s)
 |source|anchor name|

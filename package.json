@@ -62,10 +62,10 @@
         "codecov": "^3.5.0",
         "crawler": "^1.2.1",
         "jshint": "^2.10.2",
-        "mocha": "^6.1.4",
+        "mocha": "^6.2.0",
         "nyc": "^14.1.1",
         "prettier": "^1.18.2",
-        "sudo-bot": "^1.1.8"
+        "sudo-bot": "^1.1.10"
     },
     "directories": {
         "lib": "src",

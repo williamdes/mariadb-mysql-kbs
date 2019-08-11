@@ -188,16 +188,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--init-file=file_name",
-      "dynamic": false,
-      "id": "option_mysqld_init-file",
-      "name": "init_file",
-      "scope": [
-        "global"
-      ],
-      "type": "file name"
-    },
-    {
       "cli": "--install [service_name]",
       "id": "option_mysqld_install",
       "name": "install"
@@ -484,22 +474,6 @@
       "type": "boolean",
       "validValues": [
         "ON"
-      ]
-    },
-    {
-      "cli": "--secure-file-priv=dir_name",
-      "default": "platform specific",
-      "dynamic": false,
-      "id": "option_mysqld_secure-file-priv",
-      "name": "secure_file_priv",
-      "scope": [
-        "global"
-      ],
-      "type": "string",
-      "validValues": [
-        "empty string",
-        "dirname",
-        "NULL"
       ]
     },
     {

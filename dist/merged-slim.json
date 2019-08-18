@@ -22608,7 +22608,8 @@
             ],
             "type": "integer",
             "ids": [
-                "40#innodb_idle_flush_pct"
+                "40#innodb_idle_flush_pct",
+                "41#sysvar_innodb_idle_flush_pct"
             ]
         },
         "innodb_immediate_scrub_data_uncompressed": {

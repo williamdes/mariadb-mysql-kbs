@@ -1036,6 +1036,21 @@
       "type": "string"
     },
     {
+      "cli": "--innodb-idle-flush-pct=#",
+      "default": "100",
+      "dynamic": true,
+      "id": "sysvar_innodb_idle_flush_pct",
+      "name": "innodb_idle_flush_pct",
+      "range": {
+        "from": 0,
+        "to": 100
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--innodb-io-capacity=#",
       "default": "200",
       "dynamic": true,

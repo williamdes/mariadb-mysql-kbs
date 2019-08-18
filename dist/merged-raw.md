@@ -24695,6 +24695,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[innodb_idle_flush_pct](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_idle_flush_pct)|
+|dev.mysql.com|[sysvar_innodb_idle_flush_pct](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_idle_flush_pct)|
 
 ## innodb_immediate_scrub_data_uncompressed
 |name|value|

@@ -12885,7 +12885,8 @@
             "dynamic": true,
             "name": "max_prepared_stmt_count",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -17178,7 +17179,8 @@
             "cli": "--thread-pool-size=#",
             "name": "thread_pool_size",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 128
             },
             "scope": [
                 "global"
@@ -25685,16 +25687,6 @@
                 "43#sysvar_ndb_row_checksum"
             ]
         },
-        "slave_allow_batching": {
-            "dynamic": true,
-            "name": "slave_allow_batching",
-            "scope": [
-                "global"
-            ],
-            "ids": [
-                "43#sysvar_slave_allow_batching"
-            ]
-        },
         "ndb_show_foreign_key_mock_tables": {
             "dynamic": true,
             "name": "ndb_show_foreign_key_mock_tables",
@@ -25796,6 +25788,16 @@
             ],
             "ids": [
                 "43#sysvar_server_id_bits"
+            ]
+        },
+        "slave_allow_batching": {
+            "dynamic": true,
+            "name": "slave_allow_batching",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_slave_allow_batching"
             ]
         },
         "transaction_allow_batching": {
@@ -26163,8 +26165,7 @@
             "dynamic": true,
             "name": "authentication_ldap_sasl_log_status",
             "range": {
-                "from": 1,
-                "to": 5
+                "from": 1
             },
             "scope": [
                 "global"
@@ -26360,8 +26361,7 @@
             "dynamic": true,
             "name": "authentication_ldap_simple_log_status",
             "range": {
-                "from": 1,
-                "to": 5
+                "from": 1
             },
             "scope": [
                 "global"
@@ -28909,6 +28909,23 @@
             "type": "integer",
             "ids": [
                 "10#sysvar_thread_pool_high_priority_connection"
+            ]
+        },
+        "thread_pool_max_active_query_threads": {
+            "cli": "--thread-pool-max-active-query-threads",
+            "default": "0",
+            "dynamic": true,
+            "name": "thread_pool_max_active_query_threads",
+            "range": {
+                "from": 0,
+                "to": 512
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "10#sysvar_thread_pool_max_active_query_threads"
             ]
         },
         "thread_pool_max_unused_threads": {

@@ -13855,7 +13855,7 @@
 |Scope|`global`|
 |Default value|`16382`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18199,7 +18199,7 @@
 |Command line|`--thread-pool-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Range|from: `1`|
+|Range|from: `1` to: `128`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28000,18 +28000,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_ndb_row_checksum](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_row_checksum)|
 
-## slave_allow_batching
-|name|value|
-|----|-----|
-|Name|`slave_allow_batching`|
-|Scope|`global`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_slave_allow_batching](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_slave_allow_batching)|
-
 ## ndb_show_foreign_key_mock_tables
 |name|value|
 |----|-----|
@@ -28131,6 +28119,18 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_server_id_bits](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_server_id_bits)|
+
+## slave_allow_batching
+|name|value|
+|----|-----|
+|Name|`slave_allow_batching`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_slave_allow_batching](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_slave_allow_batching)|
 
 ## transaction_allow_batching
 |name|value|
@@ -28540,7 +28540,7 @@
 |Scope|`global`|
 |Default value|`1`|
 |Dynamic|`true`|
-|Range|from: `1` to: `5`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28753,7 +28753,7 @@
 |Scope|`global`|
 |Default value|`1`|
 |Dynamic|`true`|
-|Range|from: `1` to: `5`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31574,6 +31574,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_thread_pool_high_priority_connection](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_high_priority_connection)|
+
+## thread_pool_max_active_query_threads
+|name|value|
+|----|-----|
+|Name|`thread_pool_max_active_query_threads`|
+|Command line|`--thread-pool-max-active-query-threads`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `512`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_thread_pool_max_active_query_threads](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_max_active_query_threads)|
 
 ## thread_pool_max_unused_threads
 |name|value|

@@ -16686,7 +16686,8 @@
             "dynamic": true,
             "name": "max_prepared_stmt_count",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -22236,7 +22237,8 @@
             "cli": "--thread-pool-size=#",
             "name": "thread_pool_size",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 128
             },
             "scope": [
                 "global"
@@ -33362,19 +33364,6 @@
                 }
             ]
         },
-        "slave_allow_batching": {
-            "dynamic": true,
-            "name": "slave_allow_batching",
-            "scope": [
-                "global"
-            ],
-            "ids": [
-                {
-                    "anchor": "sysvar_slave_allow_batching",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
         "ndb_show_foreign_key_mock_tables": {
             "dynamic": true,
             "name": "ndb_show_foreign_key_mock_tables",
@@ -33504,6 +33493,19 @@
             "ids": [
                 {
                     "anchor": "sysvar_server_id_bits",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "slave_allow_batching": {
+            "dynamic": true,
+            "name": "slave_allow_batching",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_slave_allow_batching",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
@@ -33957,8 +33959,7 @@
             "dynamic": true,
             "name": "authentication_ldap_sasl_log_status",
             "range": {
-                "from": 1,
-                "to": 5
+                "from": 1
             },
             "scope": [
                 "global"
@@ -34196,8 +34197,7 @@
             "dynamic": true,
             "name": "authentication_ldap_simple_log_status",
             "range": {
-                "from": 1,
-                "to": 5
+                "from": 1
             },
             "scope": [
                 "global"
@@ -37424,6 +37424,26 @@
             "ids": [
                 {
                     "anchor": "sysvar_thread_pool_high_priority_connection",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "thread_pool_max_active_query_threads": {
+            "cli": "--thread-pool-max-active-query-threads",
+            "default": "0",
+            "dynamic": true,
+            "name": "thread_pool_max_active_query_threads",
+            "range": {
+                "from": 0,
+                "to": 512
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_thread_pool_max_active_query_threads",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

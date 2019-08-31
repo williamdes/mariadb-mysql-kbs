@@ -6057,9 +6057,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[log_bin_trust_function_creators](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#log_bin_trust_function_creators)|
-|dev.mysql.com|[option_mysqld_log-bin-trust-function-creators](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_log-bin-trust-function-creators)|
 |dev.mysql.com|[sysvar_log_bin_trust_function_creators](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_log_bin_trust_function_creators)|
-|dev.mysql.com|[option_mysqld_log-bin-trust-function-creators](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_log-bin-trust-function-creators)|
 |dev.mysql.com|[sysvar_log_bin_trust_function_creators](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_log_bin_trust_function_creators)|
 
 ## log_slow_slave_statements
@@ -11922,7 +11920,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[basedir](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#basedir)|
-|dev.mysql.com|[option_mysqld_basedir](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_basedir)|
+|dev.mysql.com|[](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#)|
 |dev.mysql.com|[sysvar_basedir](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_basedir)|
 
 ## big_tables
@@ -12228,7 +12226,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[datadir](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#datadir)|
-|dev.mysql.com|[option_mysqld_datadir](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_datadir)|
+|dev.mysql.com|[](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#)|
 |dev.mysql.com|[sysvar_datadir](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_datadir)|
 
 ## date_format
@@ -12337,7 +12335,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[default_storage_engine](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#default_storage_engine)|
-|dev.mysql.com|[option_mysqld_default-storage-engine](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-storage-engine)|
 |dev.mysql.com|[sysvar_default_storage_engine](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_storage_engine)|
 
 ## default_table_type
@@ -12599,7 +12596,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[event_scheduler](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#event_scheduler)|
-|dev.mysql.com|[option_mysqld_event-scheduler](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_event-scheduler)|
 |dev.mysql.com|[sysvar_event_scheduler](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_event_scheduler)|
 
 ## expensive_subquery_limit
@@ -12788,7 +12784,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[general_log](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#general_log)|
-|dev.mysql.com|[option_mysqld_general-log](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_general-log)|
 |dev.mysql.com|[sysvar_general_log](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_general_log)|
 
 ## general_log_file
@@ -13855,7 +13850,7 @@
 |Scope|`global`|
 |Default value|`16382`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15059,7 +15054,6 @@
 |Name|`slow_query_log`|
 |Command line|`--slow-query-log[={OFF|ON}]`|
 |Type of variable|`boolean`|
-|Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
 
@@ -15067,7 +15061,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[slow_query_log](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#slow_query_log)|
-|dev.mysql.com|[option_mysqld_slow-query-log](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_slow-query-log)|
 |dev.mysql.com|[sysvar_slow_query_log](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log)|
 
 ## slow_query_log_file
@@ -18199,7 +18192,7 @@
 |Command line|`--thread-pool-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Range|from: `1`|
+|Range|from: `1` to: `128`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -22871,7 +22864,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[ignore_builtin_innodb](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#ignore_builtin_innodb)|
-|dev.mysql.com|[option_mysqld_ignore-builtin-innodb](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#option_mysqld_ignore-builtin-innodb)|
 |dev.mysql.com|[sysvar_ignore_builtin_innodb](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_ignore_builtin_innodb)|
 
 ## innodb_adaptive_checkpoint
@@ -28000,18 +27992,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_ndb_row_checksum](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_row_checksum)|
 
-## slave_allow_batching
-|name|value|
-|----|-----|
-|Name|`slave_allow_batching`|
-|Scope|`global`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_slave_allow_batching](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_slave_allow_batching)|
-
 ## ndb_show_foreign_key_mock_tables
 |name|value|
 |----|-----|
@@ -28131,6 +28111,18 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_server_id_bits](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_server_id_bits)|
+
+## slave_allow_batching
+|name|value|
+|----|-----|
+|Name|`slave_allow_batching`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_slave_allow_batching](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_slave_allow_batching)|
 
 ## transaction_allow_batching
 |name|value|
@@ -28540,7 +28532,7 @@
 |Scope|`global`|
 |Default value|`1`|
 |Dynamic|`true`|
-|Range|from: `1` to: `5`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28753,7 +28745,7 @@
 |Scope|`global`|
 |Default value|`1`|
 |Dynamic|`true`|
-|Range|from: `1` to: `5`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28851,24 +28843,6 @@
 |dev.mysql.com|[option_mysqld_binlog-row-event-max-size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-row-event-max-size)|
 |dev.mysql.com|[sysvar_binlog_row_event_max_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_event_max_size)|
 |dev.mysql.com|[option_mysqld_binlog-row-event-max-size](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-row-event-max-size)|
-
-## log_bin_use_v1_row_events
-|name|value|
-|----|-----|
-|Name|`log_bin_use_v1_row_events`|
-|Command line|`--log-bin-use-v1-row-events[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`off`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_log-bin-use-v1-row-events](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_log-bin-use-v1-row-events)|
-|dev.mysql.com|[sysvar_log_bin_use_v1_row_events](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_log_bin_use_v1_row_events)|
-|dev.mysql.com|[option_mysqld_log-bin-use-v1-row-events](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_log-bin-use-v1-row-events)|
-|dev.mysql.com|[sysvar_log_bin_use_v1_row_events](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_log_bin_use_v1_row_events)|
 
 ## binlog_do_db
 |name|value|
@@ -29133,6 +29107,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_binlog_transaction_dependency_history_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_history_size)|
 |dev.mysql.com|[sysvar_binlog_transaction_dependency_history_size](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_transaction_dependency_history_size)|
+
+## log_bin_use_v1_row_events
+|name|value|
+|----|-----|
+|Name|`log_bin_use_v1_row_events`|
+|Command line|`--log-bin-use-v1-row-events[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_log_bin_use_v1_row_events](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_log_bin_use_v1_row_events)|
+|dev.mysql.com|[sysvar_log_bin_use_v1_row_events](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_log_bin_use_v1_row_events)|
 
 ## log_builtin_as_identified_by_password
 |name|value|
@@ -30061,17 +30051,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_safe-user-create](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_safe-user-create)|
-
-## skip_event_scheduler__disable_event_scheduler
-|name|value|
-|----|-----|
-|Name|`skip_event_scheduler__disable_event_scheduler`|
-|Command line|`--skip-event-scheduler--disable-event-scheduler`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_skip-event-scheduler](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_skip-event-scheduler)|
 
 ## skip_grant_tables
 |name|value|
@@ -31344,6 +31323,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_show_compatibility_56](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_compatibility_56)|
 
+## show_create_table_skip_secondary_engine
+|name|value|
+|----|-----|
+|Name|`show_create_table_skip_secondary_engine`|
+|Command line|`--show-create-table-skip-secondary-engine[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`session`|
+|Default value|`off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_show_create_table_skip_secondary_engine](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_create_table_skip_secondary_engine)|
+
 ## show_create_table_verbosity
 |name|value|
 |----|-----|
@@ -31574,6 +31568,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_thread_pool_high_priority_connection](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_high_priority_connection)|
+
+## thread_pool_max_active_query_threads
+|name|value|
+|----|-----|
+|Name|`thread_pool_max_active_query_threads`|
+|Command line|`--thread-pool-max-active-query-threads`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `512`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_thread_pool_max_active_query_threads](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_max_active_query_threads)|
 
 ## thread_pool_max_unused_threads
 |name|value|

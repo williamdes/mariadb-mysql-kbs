@@ -458,14 +458,6 @@
     },
     {
       "dynamic": true,
-      "id": "sysvar_slave_allow_batching",
-      "name": "slave_allow_batching",
-      "scope": [
-        "global"
-      ]
-    },
-    {
-      "dynamic": true,
       "id": "sysvar_ndb_show_foreign_key_mock_tables",
       "name": "ndb_show_foreign_key_mock_tables",
       "scope": [
@@ -543,6 +535,14 @@
       "dynamic": false,
       "id": "sysvar_server_id_bits",
       "name": "server_id_bits",
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "dynamic": true,
+      "id": "sysvar_slave_allow_batching",
+      "name": "slave_allow_batching",
       "scope": [
         "global"
       ]

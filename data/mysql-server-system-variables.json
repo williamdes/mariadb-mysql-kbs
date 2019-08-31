@@ -1608,8 +1608,7 @@
       "id": "sysvar_max_prepared_stmt_count",
       "name": "max_prepared_stmt_count",
       "range": {
-        "from": 0,
-        "to": 1048576
+        "from": 0
       },
       "scope": [
         "global"
@@ -2833,6 +2832,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--show-create-table-skip-secondary-engine[={OFF|ON}]",
+      "default": "off",
+      "dynamic": true,
+      "id": "sysvar_show_create_table_skip_secondary_engine",
+      "name": "show_create_table_skip_secondary_engine",
+      "scope": [
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--show-create-table-verbosity[={OFF|ON}]",
       "default": "off",
       "dynamic": true,
@@ -3400,6 +3410,21 @@
       "type": "integer"
     },
     {
+      "cli": "--thread-pool-max-active-query-threads",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_thread_pool_max_active_query_threads",
+      "name": "thread_pool_max_active_query_threads",
+      "range": {
+        "from": 0,
+        "to": 512
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--thread-pool-max-unused-threads=#",
       "default": "0",
       "dynamic": true,
@@ -3437,8 +3462,7 @@
       "id": "sysvar_thread_pool_size",
       "name": "thread_pool_size",
       "range": {
-        "from": 1,
-        "to": 64
+        "from": 1
       },
       "scope": [
         "global"

@@ -1,16 +1,6 @@
 {
   "data": [
     {
-      "cli": "--ignore-builtin-innodb[={OFF|ON}]",
-      "dynamic": false,
-      "id": "option_mysqld_ignore-builtin-innodb",
-      "name": "ignore_builtin_innodb",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--innodb[=value]",
       "default": "on",
       "id": "option_mysqld_innodb",

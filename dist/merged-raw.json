@@ -7230,16 +7230,8 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_log-bin-trust-function-creators",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
                     "anchor": "sysvar_log_bin_trust_function_creators",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "option_mysqld_log-bin-trust-function-creators",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
                 },
                 {
                     "anchor": "sysvar_log_bin_trust_function_creators",
@@ -14140,7 +14132,7 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_basedir",
+                    "anchor": null,
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
@@ -14561,7 +14553,7 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_datadir",
+                    "anchor": null,
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
@@ -14692,10 +14684,6 @@
                 {
                     "anchor": "default_storage_engine",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_default-storage-engine",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_default_storage_engine",
@@ -15042,10 +15030,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_event-scheduler",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
                     "anchor": "sysvar_event_scheduler",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
@@ -15292,10 +15276,6 @@
                 {
                     "anchor": "general_log",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_general-log",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_general_log",
@@ -16686,7 +16666,8 @@
             "dynamic": true,
             "name": "max_prepared_stmt_count",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -18311,18 +18292,11 @@
             "default": "0",
             "dynamic": true,
             "name": "slow_query_log",
-            "scope": [
-                "global"
-            ],
             "type": "boolean",
             "ids": [
                 {
                     "anchor": "slow_query_log",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_slow-query-log",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_slow_query_log",
@@ -22236,7 +22210,8 @@
             "cli": "--thread-pool-size=#",
             "name": "thread_pool_size",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 128
             },
             "scope": [
                 "global"
@@ -27031,10 +27006,6 @@
                 {
                     "anchor": "ignore_builtin_innodb",
                     "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_ignore-builtin-innodb",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
                 },
                 {
                     "anchor": "sysvar_ignore_builtin_innodb",
@@ -33362,19 +33333,6 @@
                 }
             ]
         },
-        "slave_allow_batching": {
-            "dynamic": true,
-            "name": "slave_allow_batching",
-            "scope": [
-                "global"
-            ],
-            "ids": [
-                {
-                    "anchor": "sysvar_slave_allow_batching",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
         "ndb_show_foreign_key_mock_tables": {
             "dynamic": true,
             "name": "ndb_show_foreign_key_mock_tables",
@@ -33504,6 +33462,19 @@
             "ids": [
                 {
                     "anchor": "sysvar_server_id_bits",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "slave_allow_batching": {
+            "dynamic": true,
+            "name": "slave_allow_batching",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_slave_allow_batching",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
@@ -33957,8 +33928,7 @@
             "dynamic": true,
             "name": "authentication_ldap_sasl_log_status",
             "range": {
-                "from": 1,
-                "to": 5
+                "from": 1
             },
             "scope": [
                 "global"
@@ -34196,8 +34166,7 @@
             "dynamic": true,
             "name": "authentication_ldap_simple_log_status",
             "range": {
-                "from": 1,
-                "to": 5
+                "from": 1
             },
             "scope": [
                 "global"
@@ -34316,34 +34285,6 @@
                 },
                 {
                     "anchor": "option_mysqld_binlog-row-event-max-size",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                }
-            ]
-        },
-        "log_bin_use_v1_row_events": {
-            "cli": "--log-bin-use-v1-row-events[={OFF|ON}]",
-            "default": "off",
-            "dynamic": false,
-            "name": "log_bin_use_v1_row_events",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_log-bin-use-v1-row-events",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "sysvar_log_bin_use_v1_row_events",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "option_mysqld_log-bin-use-v1-row-events",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "sysvar_log_bin_use_v1_row_events",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
                 }
             ]
@@ -34682,6 +34623,26 @@
                 },
                 {
                     "anchor": "sysvar_binlog_transaction_dependency_history_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "log_bin_use_v1_row_events": {
+            "cli": "--log-bin-use-v1-row-events[={OFF|ON}]",
+            "default": "off",
+            "dynamic": false,
+            "name": "log_bin_use_v1_row_events",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_log_bin_use_v1_row_events",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                },
+                {
+                    "anchor": "sysvar_log_bin_use_v1_row_events",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
                 }
             ]
@@ -35700,16 +35661,6 @@
             "ids": [
                 {
                     "anchor": "option_mysqld_safe-user-create",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                }
-            ]
-        },
-        "skip_event_scheduler__disable_event_scheduler": {
-            "cli": "--skip-event-scheduler--disable-event-scheduler",
-            "name": "skip_event_scheduler__disable_event_scheduler",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_skip-event-scheduler",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 }
             ]
@@ -37159,6 +37110,22 @@
                 }
             ]
         },
+        "show_create_table_skip_secondary_engine": {
+            "cli": "--show-create-table-skip-secondary-engine[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "show_create_table_skip_secondary_engine",
+            "scope": [
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_show_create_table_skip_secondary_engine",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "show_create_table_verbosity": {
             "cli": "--show-create-table-verbosity[={OFF|ON}]",
             "default": "off",
@@ -37424,6 +37391,26 @@
             "ids": [
                 {
                     "anchor": "sysvar_thread_pool_high_priority_connection",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "thread_pool_max_active_query_threads": {
+            "cli": "--thread-pool-max-active-query-threads",
+            "default": "0",
+            "dynamic": true,
+            "name": "thread_pool_max_active_query_threads",
+            "range": {
+                "from": 0,
+                "to": 512
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_thread_pool_max_active_query_threads",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

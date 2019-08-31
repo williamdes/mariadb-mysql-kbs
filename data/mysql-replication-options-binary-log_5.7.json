@@ -27,28 +27,6 @@
       "type": "file name"
     },
     {
-      "cli": "--log-bin-trust-function-creators[={OFF|ON}]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_log-bin-trust-function-creators",
-      "name": "log_bin_trust_function_creators",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--log-bin-use-v1-row-events[={OFF|ON}]",
-      "default": "off",
-      "dynamic": false,
-      "id": "option_mysqld_log-bin-use-v1-row-events",
-      "name": "log_bin_use_v1_row_events",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--binlog-do-db=name",
       "id": "option_mysqld_binlog-do-db",
       "name": "binlog_do_db",

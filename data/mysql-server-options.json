@@ -20,7 +20,6 @@
     {
       "cli": "--basedir=dir_name",
       "dynamic": false,
-      "id": "option_mysqld_basedir",
       "name": "basedir",
       "scope": [
         "global"
@@ -62,7 +61,6 @@
     {
       "cli": "--datadir=dir_name",
       "dynamic": false,
-      "id": "option_mysqld_datadir",
       "name": "datadir",
       "scope": [
         "global"
@@ -87,18 +85,6 @@
       "type": "integer"
     },
     {
-      "cli": "--default-storage-engine=name",
-      "default": "innodb",
-      "dynamic": true,
-      "id": "option_mysqld_default-storage-engine",
-      "name": "default_storage_engine",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "enumeration"
-    },
-    {
       "cli": "--default-time-zone=name",
       "id": "option_mysqld_default-time-zone",
       "name": "default_time_zone",
@@ -115,21 +101,6 @@
       "id": "option_mysqld_early-plugin-load",
       "name": "early_plugin_load",
       "type": "string"
-    },
-    {
-      "cli": "--event-scheduler[=value]",
-      "dynamic": true,
-      "id": "option_mysqld_event-scheduler",
-      "name": "event_scheduler",
-      "scope": [
-        "global"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "ON",
-        "OFF",
-        "DISABLED"
-      ]
     },
     {
       "cli": "--exit-info[=flags]",
@@ -160,17 +131,6 @@
       "default": "off",
       "id": "option_mysqld_gdb",
       "name": "gdb",
-      "type": "boolean"
-    },
-    {
-      "cli": "--general-log[={OFF|ON}]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_general-log",
-      "name": "general_log",
-      "scope": [
-        "global"
-      ],
       "type": "boolean"
     },
     {
@@ -477,11 +437,6 @@
       ]
     },
     {
-      "cli": "--skip-event-scheduler--disable-event-scheduler",
-      "id": "option_mysqld_skip-event-scheduler",
-      "name": "skip_event_scheduler__disable_event_scheduler"
-    },
-    {
       "cli": "--skip-grant-tables[={OFF|ON}]",
       "default": "off",
       "id": "option_mysqld_skip-grant-tables",
@@ -544,17 +499,6 @@
       "cli": "--skip-stack-trace",
       "id": "option_mysqld_skip-stack-trace",
       "name": "skip_stack_trace"
-    },
-    {
-      "cli": "--slow-query-log[={OFF|ON}]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_slow-query-log",
-      "name": "slow_query_log",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
     },
     {
       "cli": "--slow-start-timeout=#",

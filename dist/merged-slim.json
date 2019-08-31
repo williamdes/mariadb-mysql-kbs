@@ -5759,9 +5759,7 @@
             "type": "boolean",
             "ids": [
                 "8#log_bin_trust_function_creators",
-                "22#option_mysqld_log-bin-trust-function-creators",
                 "22#sysvar_log_bin_trust_function_creators",
-                "23#option_mysqld_log-bin-trust-function-creators",
                 "23#sysvar_log_bin_trust_function_creators"
             ]
         },
@@ -11019,7 +11017,7 @@
             "type": "directory name",
             "ids": [
                 "29#basedir",
-                "16#option_mysqld_basedir",
+                "16#",
                 "10#sysvar_basedir"
             ]
         },
@@ -11317,7 +11315,7 @@
             "type": "directory name",
             "ids": [
                 "29#datadir",
-                "16#option_mysqld_datadir",
+                "16#",
                 "10#sysvar_datadir"
             ]
         },
@@ -11408,7 +11406,6 @@
             "type": "enumeration",
             "ids": [
                 "29#default_storage_engine",
-                "16#option_mysqld_default-storage-engine",
                 "10#sysvar_default_storage_engine"
             ]
         },
@@ -11672,7 +11669,6 @@
             ],
             "ids": [
                 "29#event_scheduler",
-                "16#option_mysqld_event-scheduler",
                 "10#sysvar_event_scheduler"
             ]
         },
@@ -11849,7 +11845,6 @@
             "type": "boolean",
             "ids": [
                 "29#general_log",
-                "16#option_mysqld_general-log",
                 "10#sysvar_general_log"
             ]
         },
@@ -12885,7 +12880,8 @@
             "dynamic": true,
             "name": "max_prepared_stmt_count",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -14084,13 +14080,9 @@
             "default": "0",
             "dynamic": true,
             "name": "slow_query_log",
-            "scope": [
-                "global"
-            ],
             "type": "boolean",
             "ids": [
                 "29#slow_query_log",
-                "16#option_mysqld_slow-query-log",
                 "10#sysvar_slow_query_log"
             ]
         },
@@ -17178,7 +17170,8 @@
             "cli": "--thread-pool-size=#",
             "name": "thread_pool_size",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 128
             },
             "scope": [
                 "global"
@@ -20777,8 +20770,7 @@
             "type": "boolean",
             "ids": [
                 "40#ignore_builtin_innodb",
-                "42#option_mysqld_ignore-builtin-innodb",
-                "41#sysvar_ignore_builtin_innodb"
+                "42#sysvar_ignore_builtin_innodb"
             ]
         },
         "innodb_adaptive_checkpoint": {
@@ -25685,16 +25677,6 @@
                 "43#sysvar_ndb_row_checksum"
             ]
         },
-        "slave_allow_batching": {
-            "dynamic": true,
-            "name": "slave_allow_batching",
-            "scope": [
-                "global"
-            ],
-            "ids": [
-                "43#sysvar_slave_allow_batching"
-            ]
-        },
         "ndb_show_foreign_key_mock_tables": {
             "dynamic": true,
             "name": "ndb_show_foreign_key_mock_tables",
@@ -25796,6 +25778,16 @@
             ],
             "ids": [
                 "43#sysvar_server_id_bits"
+            ]
+        },
+        "slave_allow_batching": {
+            "dynamic": true,
+            "name": "slave_allow_batching",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#sysvar_slave_allow_batching"
             ]
         },
         "transaction_allow_batching": {
@@ -26163,8 +26155,7 @@
             "dynamic": true,
             "name": "authentication_ldap_sasl_log_status",
             "range": {
-                "from": 1,
-                "to": 5
+                "from": 1
             },
             "scope": [
                 "global"
@@ -26360,8 +26351,7 @@
             "dynamic": true,
             "name": "authentication_ldap_simple_log_status",
             "range": {
-                "from": 1,
-                "to": 5
+                "from": 1
             },
             "scope": [
                 "global"
@@ -26455,22 +26445,6 @@
                 "22#option_mysqld_binlog-row-event-max-size",
                 "22#sysvar_binlog_row_event_max_size",
                 "23#option_mysqld_binlog-row-event-max-size"
-            ]
-        },
-        "log_bin_use_v1_row_events": {
-            "cli": "--log-bin-use-v1-row-events[={OFF|ON}]",
-            "default": "off",
-            "dynamic": false,
-            "name": "log_bin_use_v1_row_events",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "22#option_mysqld_log-bin-use-v1-row-events",
-                "22#sysvar_log_bin_use_v1_row_events",
-                "23#option_mysqld_log-bin-use-v1-row-events",
-                "23#sysvar_log_bin_use_v1_row_events"
             ]
         },
         "binlog_do_db": {
@@ -26722,6 +26696,20 @@
             "ids": [
                 "22#sysvar_binlog_transaction_dependency_history_size",
                 "23#sysvar_binlog_transaction_dependency_history_size"
+            ]
+        },
+        "log_bin_use_v1_row_events": {
+            "cli": "--log-bin-use-v1-row-events[={OFF|ON}]",
+            "default": "off",
+            "dynamic": false,
+            "name": "log_bin_use_v1_row_events",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "22#sysvar_log_bin_use_v1_row_events",
+                "23#sysvar_log_bin_use_v1_row_events"
             ]
         },
         "log_builtin_as_identified_by_password": {
@@ -27497,13 +27485,6 @@
             "type": "boolean",
             "ids": [
                 "16#option_mysqld_safe-user-create"
-            ]
-        },
-        "skip_event_scheduler__disable_event_scheduler": {
-            "cli": "--skip-event-scheduler--disable-event-scheduler",
-            "name": "skip_event_scheduler__disable_event_scheduler",
-            "ids": [
-                "16#option_mysqld_skip-event-scheduler"
             ]
         },
         "skip_grant_tables": {
@@ -28687,6 +28668,19 @@
                 "10#sysvar_show_compatibility_56"
             ]
         },
+        "show_create_table_skip_secondary_engine": {
+            "cli": "--show-create-table-skip-secondary-engine[={OFF|ON}]",
+            "default": "off",
+            "dynamic": true,
+            "name": "show_create_table_skip_secondary_engine",
+            "scope": [
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "10#sysvar_show_create_table_skip_secondary_engine"
+            ]
+        },
         "show_create_table_verbosity": {
             "cli": "--show-create-table-verbosity[={OFF|ON}]",
             "default": "off",
@@ -28909,6 +28903,23 @@
             "type": "integer",
             "ids": [
                 "10#sysvar_thread_pool_high_priority_connection"
+            ]
+        },
+        "thread_pool_max_active_query_threads": {
+            "cli": "--thread-pool-max-active-query-threads",
+            "default": "0",
+            "dynamic": true,
+            "name": "thread_pool_max_active_query_threads",
+            "range": {
+                "from": 0,
+                "to": 512
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "10#sysvar_thread_pool_max_active_query_threads"
             ]
         },
         "thread_pool_max_unused_threads": {

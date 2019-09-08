@@ -1,39 +1,6 @@
 {
   "data": [
     {
-      "cli": "--enforce-gtid-consistency[=value]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_enforce-gtid-consistency",
-      "name": "enforce_gtid_consistency",
-      "scope": [
-        "global"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "ON",
-        "WARN"
-      ]
-    },
-    {
-      "cli": "--gtid-mode=MODE",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_gtid-mode",
-      "name": "gtid_mode",
-      "scope": [
-        "global"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "OFF_PERMISSIVE",
-        "ON_PERMISSIVE",
-        "ON"
-      ]
-    },
-    {
       "cli": "--gtid-executed-compression-period=#",
       "default": "1000",
       "id": "option_mysqld_gtid-executed-compression-period",
@@ -96,6 +63,7 @@
       "type": "integer"
     },
     {
+      "cli": "--gtid-mode=MODE",
       "default": "off",
       "dynamic": true,
       "id": "sysvar_gtid_mode",

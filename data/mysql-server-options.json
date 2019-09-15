@@ -223,17 +223,6 @@
       "type": "file name"
     },
     {
-      "cli": "--log-queries-not-using-indexes[={OFF|ON}]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_log-queries-not-using-indexes",
-      "name": "log_queries_not_using_indexes",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--log-raw[={OFF|ON}]",
       "default": "off",
       "id": "option_mysqld_log-raw",
@@ -279,33 +268,6 @@
       "type": "integer"
     },
     {
-      "cli": "--low-priority-updates[={OFF|ON}]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_low-priority-updates",
-      "name": "low_priority_updates",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--min-examined-row-limit=#",
-      "default": "0",
-      "dynamic": true,
-      "id": "option_mysqld_min-examined-row-limit",
-      "name": "min_examined_row_limit",
-      "range": {
-        "from": 0
-      },
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--memlock[={OFF|ON}]",
       "default": "off",
       "id": "option_mysqld_memlock",
@@ -322,20 +284,6 @@
         "to": 16384
       },
       "type": "integer"
-    },
-    {
-      "cli": "--myisam-recover-options[=name]",
-      "default": "off",
-      "id": "option_mysqld_myisam-recover-options",
-      "name": "myisam_recover_options",
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "DEFAULT",
-        "BACKUP",
-        "FORCE",
-        "QUICK"
-      ]
     },
     {
       "cli": "--no-dd-upgrade[={OFF|ON}]",
@@ -357,16 +305,6 @@
       "id": "option_mysqld_old-style-user-limits",
       "name": "old_style_user_limits",
       "type": "boolean"
-    },
-    {
-      "cli": "--pid-file=file_name",
-      "dynamic": false,
-      "id": "option_mysqld_pid-file",
-      "name": "pid_file",
-      "scope": [
-        "global"
-      ],
-      "type": "file name"
     },
     {
       "cli": "--plugin-load=plugin_list",

@@ -879,7 +879,7 @@
         },
         "connect_conv_size": {
             "cli": "--connect-conv-size=#",
-            "default": "8192",
+            "default": ">= MariaDB 10.4.8, MariaDB 10.3.18, MariaDB 10.2.27: 1024, <= MariaDB 10.4.7, MariaDB 10.3.17, MariaDB 10.2.26: 8192",
             "dynamic": true,
             "name": "connect_conv_size",
             "range": {
@@ -3466,19 +3466,25 @@
             ]
         },
         "myisam_recover_options": {
+            "default": "0",
             "dynamic": false,
             "name": "myisam_recover_options",
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "DEFAULT",
+                "BACKUP",
+                "BACKUP_ALL",
+                "FORCE",
+                "QUICK"
+            ],
             "ids": [
                 {
                     "anchor": "myisam_recover_options",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myisam/myisam-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_myisam-recover-options",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_myisam_recover_options",
@@ -7260,6 +7266,7 @@
         },
         "log_slave_updates": {
             "cli": "--log-slave-updates[={OFF|ON}]",
+            "default": "off",
             "dynamic": false,
             "name": "log_slave_updates",
             "scope": [
@@ -7278,10 +7285,6 @@
                 {
                     "anchor": "sysvar_log_slave_updates",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "option_mysqld_log-slave-updates",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
             ]
         },
@@ -7463,10 +7466,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_relay-log",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
-                },
-                {
                     "anchor": "sysvar_relay_log",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
@@ -7491,22 +7490,16 @@
             ]
         },
         "relay_log_index": {
-            "cli": "--relay-log-index=file_name",
             "default": "*host_name*-relay-bin.index",
             "dynamic": false,
             "name": "relay_log_index",
             "scope": [
                 "global"
             ],
-            "type": "file name",
             "ids": [
                 {
                     "anchor": "relay_log_index",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_relay-log-index",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 },
                 {
                     "anchor": "sysvar_relay_log_index",
@@ -7522,15 +7515,10 @@
             "scope": [
                 "global"
             ],
-            "type": "file name",
             "ids": [
                 {
                     "anchor": "relay_log_info_file",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_relay-log-info-file",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 },
                 {
                     "anchor": "sysvar_relay_log_info_file",
@@ -7769,17 +7757,12 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_report-host",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
-                },
-                {
                     "anchor": "sysvar_report_host",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
             ]
         },
         "report_password": {
-            "cli": "--report-password=name",
             "dynamic": false,
             "name": "report_password",
             "scope": [
@@ -7790,10 +7773,6 @@
                 {
                     "anchor": "report_password",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_report-password",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 },
                 {
                     "anchor": "sysvar_report_password",
@@ -7820,10 +7799,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_report-port",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
-                },
-                {
                     "anchor": "sysvar_report_port",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
@@ -7841,10 +7816,6 @@
                 {
                     "anchor": "report_user",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_report-user",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 },
                 {
                     "anchor": "sysvar_report_user",
@@ -16109,7 +16080,6 @@
         },
         "log_queries_not_using_indexes": {
             "cli": "--log-queries-not-using-indexes[={OFF|ON}]",
-            "default": "off",
             "dynamic": true,
             "name": "log_queries_not_using_indexes",
             "scope": [
@@ -16120,10 +16090,6 @@
                 {
                     "anchor": "log_queries_not_using_indexes",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_log-queries-not-using-indexes",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_log_queries_not_using_indexes",
@@ -16337,10 +16303,6 @@
                 {
                     "anchor": "low_priority_updates",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_low-priority-updates",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_low_priority_updates",
@@ -16953,10 +16915,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_min-examined-row-limit",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
                     "anchor": "sysvar_min_examined_row_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
@@ -17399,10 +17357,6 @@
                 {
                     "anchor": "pid_file",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_pid-file",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_pid_file",
@@ -33132,7 +33086,7 @@
             ],
             "ids": [
                 {
-                    "anchor": "sysvar_ndb_join_pushdown",
+                    "anchor": null,
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
@@ -34759,56 +34713,6 @@
                 }
             ]
         },
-        "enforce_gtid_consistency": {
-            "cli": "--enforce-gtid-consistency[=value]",
-            "default": "off",
-            "dynamic": true,
-            "name": "enforce_gtid_consistency",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "ON",
-                "WARN"
-            ],
-            "ids": [
-                {
-                    "anchor": "option_mysqld_enforce-gtid-consistency",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                },
-                {
-                    "anchor": "sysvar_enforce_gtid_consistency",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                }
-            ]
-        },
-        "gtid_mode": {
-            "default": "off",
-            "dynamic": true,
-            "name": "gtid_mode",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "OFF_PERMISSIVE",
-                "ON_PERMISSIVE",
-                "ON"
-            ],
-            "ids": [
-                {
-                    "anchor": "option_mysqld_gtid-mode",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                },
-                {
-                    "anchor": "sysvar_gtid_mode",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                }
-            ]
-        },
         "gtid_executed_compression_period": {
             "default": "1000",
             "dynamic": true,
@@ -34848,6 +34752,27 @@
                 }
             ]
         },
+        "enforce_gtid_consistency": {
+            "cli": "--enforce-gtid-consistency[=value]",
+            "default": "off",
+            "dynamic": true,
+            "name": "enforce_gtid_consistency",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "WARN"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_enforce_gtid_consistency",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
+                }
+            ]
+        },
         "gtid_executed": {
             "dynamic": false,
             "name": "gtid_executed",
@@ -34859,6 +34784,28 @@
             "ids": [
                 {
                     "anchor": "sysvar_gtid_executed",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
+                }
+            ]
+        },
+        "gtid_mode": {
+            "cli": "--gtid-mode=MODE",
+            "default": "off",
+            "dynamic": true,
+            "name": "gtid_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "OFF_PERMISSIVE",
+                "ON_PERMISSIVE",
+                "ON"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_gtid_mode",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
                 }
             ]
@@ -36203,6 +36150,27 @@
             "ids": [
                 {
                     "anchor": "sysvar_end_markers_in_json",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "generated_random_password_length": {
+            "cli": "--generated-random-password-length=#",
+            "default": "20",
+            "dynamic": true,
+            "name": "generated_random_password_length",
+            "range": {
+                "from": 5,
+                "to": 255
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_generated_random_password_length",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

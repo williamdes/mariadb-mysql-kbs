@@ -328,7 +328,6 @@
     },
     {
       "dynamic": true,
-      "id": "sysvar_ndb_join_pushdown",
       "name": "ndb_join_pushdown",
       "scope": [
         "global",

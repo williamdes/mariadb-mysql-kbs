@@ -727,7 +727,7 @@
 |Command line|`--connect-conv-size=#`|
 |Type of variable|`integer`|
 |Scope|`session`, `global`|
-|Default value|`8192`|
+|Default value|`>= MariaDB 10.4.8, MariaDB 10.3.18, MariaDB 10.2.27: 1024, <= MariaDB 10.4.7, MariaDB 10.3.17, MariaDB 10.2.26: 8192`|
 |Dynamic|`true`|
 |Range|from: `0` to: `65500`|
 
@@ -3006,14 +3006,16 @@
 |name|value|
 |----|-----|
 |Name|`myisam_recover_options`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
+|Default value|`0`|
 |Dynamic|`false`|
+|Valid value(s)|`OFF`, `DEFAULT`, `BACKUP`, `BACKUP_ALL`, `FORCE`, `QUICK`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[myisam_recover_options](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myisam/myisam-system-variables/#myisam_recover_options)|
-|dev.mysql.com|[option_mysqld_myisam-recover-options](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_myisam-recover-options)|
 |dev.mysql.com|[sysvar_myisam_recover_options](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_myisam_recover_options)|
 
 ## myisam_repair_threads
@@ -5883,6 +5885,21 @@
 |dev.mysql.com|[sysvar_binlog_row_image](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_image)|
 |dev.mysql.com|[sysvar_binlog_row_image](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image)|
 
+## binlog_row_metadata
+|name|value|
+|----|-----|
+|Name|`binlog_row_metadata`|
+|Type of variable|`enumeration`|
+|Default value|`minimal`|
+|Dynamic|`true`|
+|Valid value(s)|`NO_LOG`, `MINIMAL`, `FULL`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_row_metadata](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_row_metadata)|
+|dev.mysql.com|[sysvar_binlog_row_metadata](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_metadata)|
+
 ## binlog_stmt_cache_size
 |name|value|
 |----|-----|
@@ -6082,6 +6099,7 @@
 |Command line|`--log-slave-updates[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`off`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -6090,7 +6108,6 @@
 |mariadb.com|[log_slave_updates](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#log_slave_updates)|
 |dev.mysql.com|[sysvar_log_slave_updates](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_log_slave_updates)|
 |dev.mysql.com|[sysvar_log_slave_updates](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_log_slave_updates)|
-|dev.mysql.com|[option_mysqld_log-slave-updates](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_log-slave-updates)|
 
 ## master_verify_checksum
 |name|value|
@@ -6212,7 +6229,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[relay_log](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#relay_log)|
-|dev.mysql.com|[option_mysqld_relay-log](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_relay-log)|
 |dev.mysql.com|[sysvar_relay_log](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_relay_log)|
 
 ## relay_log_basename
@@ -6233,8 +6249,6 @@
 |name|value|
 |----|-----|
 |Name|`relay_log_index`|
-|Command line|`--relay-log-index=file_name`|
-|Type of variable|`file name`|
 |Scope|`global`|
 |Default value|`*host_name*-relay-bin.index`|
 |Dynamic|`false`|
@@ -6243,7 +6257,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[relay_log_index](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#relay_log_index)|
-|dev.mysql.com|[option_mysqld_relay-log-index](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_relay-log-index)|
 |dev.mysql.com|[sysvar_relay_log_index](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_relay_log_index)|
 
 ## relay_log_info_file
@@ -6251,7 +6264,6 @@
 |----|-----|
 |Name|`relay_log_info_file`|
 |Command line|`--relay-log-info-file=file_name`|
-|Type of variable|`file name`|
 |Scope|`global`|
 |Default value|`relay-log.info`|
 |Dynamic|`false`|
@@ -6260,7 +6272,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[relay_log_info_file](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#relay_log_info_file)|
-|dev.mysql.com|[option_mysqld_relay-log-info-file](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_relay-log-info-file)|
 |dev.mysql.com|[sysvar_relay_log_info_file](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_relay_log_info_file)|
 
 ## relay_log_purge
@@ -6450,14 +6461,12 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[report_host](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#report_host)|
-|dev.mysql.com|[option_mysqld_report-host](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_report-host)|
 |dev.mysql.com|[sysvar_report_host](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_report_host)|
 
 ## report_password
 |name|value|
 |----|-----|
 |Name|`report_password`|
-|Command line|`--report-password=name`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -6466,7 +6475,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[report_password](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#report_password)|
-|dev.mysql.com|[option_mysqld_report-password](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_report-password)|
 |dev.mysql.com|[sysvar_report_password](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_report_password)|
 
 ## report_port
@@ -6484,7 +6492,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[report_port](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#report_port)|
-|dev.mysql.com|[option_mysqld_report-port](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_report-port)|
 |dev.mysql.com|[sysvar_report_port](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_report_port)|
 
 ## report_user
@@ -6500,7 +6507,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[report_user](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#report_user)|
-|dev.mysql.com|[option_mysqld_report-user](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#option_mysqld_report-user)|
 |dev.mysql.com|[sysvar_report_user](https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html#sysvar_report_user)|
 
 ## skip_parallel_replication
@@ -13449,14 +13455,12 @@
 |Command line|`--log-queries-not-using-indexes[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`off`|
 |Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[log_queries_not_using_indexes](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_queries_not_using_indexes)|
-|dev.mysql.com|[option_mysqld_log-queries-not-using-indexes](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_log-queries-not-using-indexes)|
 |dev.mysql.com|[sysvar_log_queries_not_using_indexes](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_queries_not_using_indexes)|
 
 ## log_slow_admin_statements
@@ -13614,7 +13618,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[low_priority_updates](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#low_priority_updates)|
-|dev.mysql.com|[option_mysqld_low-priority-updates](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_low-priority-updates)|
 |dev.mysql.com|[sysvar_low_priority_updates](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_low_priority_updates)|
 
 ## lower_case_file_system
@@ -14059,7 +14062,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[min_examined_row_limit](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#min_examined_row_limit)|
-|dev.mysql.com|[option_mysqld_min-examined-row-limit](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_min-examined-row-limit)|
 |dev.mysql.com|[sysvar_min_examined_row_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_min_examined_row_limit)|
 
 ## mrr_buffer_size
@@ -14388,7 +14390,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[pid_file](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#pid_file)|
-|dev.mysql.com|[option_mysqld_pid-file](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_pid-file)|
 |dev.mysql.com|[sysvar_pid_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_pid_file)|
 
 ## plugin_dir
@@ -27809,7 +27810,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|dev.mysql.com|[sysvar_ndb_join_pushdown](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_join_pushdown)|
+|dev.mysql.com|[](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#)|
 
 ## ndb_log_apply_status
 |name|value|
@@ -29026,22 +29027,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_binlog_rotate_encryption_master_key_at_startup](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_rotate_encryption_master_key_at_startup)|
 
-## binlog_row_metadata
-|name|value|
-|----|-----|
-|Name|`binlog_row_metadata`|
-|Command line|`--binlog-row-metadata=metadata_type`|
-|Type of variable|`enumeration`|
-|Scope|`global`|
-|Default value|`minimal`|
-|Dynamic|`true`|
-|Valid value(s)|`FULL`, `MINIMAL`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_binlog_row_metadata](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_metadata)|
-
 ## binlog_row_value_options
 |name|value|
 |----|-----|
@@ -29216,39 +29201,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_log_backward_compatible_user_definitions](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_log_backward_compatible_user_definitions)|
 
-## enforce_gtid_consistency
-|name|value|
-|----|-----|
-|Name|`enforce_gtid_consistency`|
-|Command line|`--enforce-gtid-consistency[=value]`|
-|Type of variable|`enumeration`|
-|Scope|`global`|
-|Default value|`off`|
-|Dynamic|`true`|
-|Valid value(s)|`OFF`, `ON`, `WARN`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_enforce-gtid-consistency](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#option_mysqld_enforce-gtid-consistency)|
-|dev.mysql.com|[sysvar_enforce_gtid_consistency](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_enforce_gtid_consistency)|
-
-## gtid_mode
-|name|value|
-|----|-----|
-|Name|`gtid_mode`|
-|Type of variable|`enumeration`|
-|Scope|`global`|
-|Default value|`off`|
-|Dynamic|`true`|
-|Valid value(s)|`OFF`, `OFF_PERMISSIVE`, `ON_PERMISSIVE`, `ON`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_gtid-mode](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#option_mysqld_gtid-mode)|
-|dev.mysql.com|[sysvar_gtid_mode](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_gtid_mode)|
-
 ## gtid_executed_compression_period
 |name|value|
 |----|-----|
@@ -29280,6 +29232,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_binlog_gtid_simple_recovery](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_binlog_gtid_simple_recovery)|
 
+## enforce_gtid_consistency
+|name|value|
+|----|-----|
+|Name|`enforce_gtid_consistency`|
+|Command line|`--enforce-gtid-consistency[=value]`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`true`|
+|Valid value(s)|`OFF`, `ON`, `WARN`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_enforce_gtid_consistency](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_enforce_gtid_consistency)|
+
 ## gtid_executed
 |name|value|
 |----|-----|
@@ -29292,6 +29260,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_gtid_executed](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_gtid_executed)|
+
+## gtid_mode
+|name|value|
+|----|-----|
+|Name|`gtid_mode`|
+|Command line|`--gtid-mode=MODE`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`off`|
+|Dynamic|`true`|
+|Valid value(s)|`OFF`, `OFF_PERMISSIVE`, `ON_PERMISSIVE`, `ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_gtid_mode](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_gtid_mode)|
 
 ## gtid_next
 |name|value|
@@ -30547,6 +30531,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_end_markers_in_json](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_end_markers_in_json)|
 
+## generated_random_password_length
+|name|value|
+|----|-----|
+|Name|`generated_random_password_length`|
+|Command line|`--generated-random-password-length=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`20`|
+|Dynamic|`true`|
+|Range|from: `5` to: `255`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_generated_random_password_length](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_generated_random_password_length)|
+
 ## have_statement_timeout
 |name|value|
 |----|-----|
@@ -31769,7 +31769,7 @@
 |name|value|
 |----|-----|
 |Name|`mysqlx_enable_hello_notice`|
-|Command line|`--mysqlx-document-id-unique-prefix[={OFF|ON}]`|
+|Command line|`--mysqlx-enable-hello-notice[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`on`|

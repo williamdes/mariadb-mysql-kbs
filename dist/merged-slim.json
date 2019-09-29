@@ -726,7 +726,7 @@
         },
         "connect_conv_size": {
             "cli": "--connect-conv-size=#",
-            "default": "8192",
+            "default": ">= MariaDB 10.4.8, MariaDB 10.3.18, MariaDB 10.2.27: 1024, <= MariaDB 10.4.7, MariaDB 10.3.17, MariaDB 10.2.26: 8192",
             "dynamic": true,
             "name": "connect_conv_size",
             "range": {
@@ -907,16 +907,10 @@
                 "4#connect_xtrace"
             ]
         },
-        "wsrep": {
-            "name": "wsrep",
-            "ids": [
-                "6#wsrep"
-            ]
-        },
         "wsrep_apply_oooe": {
             "name": "wsrep_apply_oooe",
             "ids": [
-                "5#wsrep_apply_oooe"
+                "6#wsrep_apply_oooe"
             ]
         },
         "wsrep_apply_oool": {
@@ -925,10 +919,30 @@
                 "5#wsrep_apply_oool"
             ]
         },
+        "wsrep_apply_window": {
+            "name": "wsrep_apply_window",
+            "ids": [
+                "5#wsrep_apply_window"
+            ]
+        },
         "wsrep_cert_deps_distance": {
             "name": "wsrep_cert_deps_distance",
             "ids": [
                 "5#wsrep_cert_deps_distance"
+            ]
+        },
+        "wsrep_cert_index_size": {
+            "name": "wsrep_cert_index_size",
+            "type": "integer",
+            "ids": [
+                "5#wsrep_cert_index_size"
+            ]
+        },
+        "wsrep_cert_interval": {
+            "name": "wsrep_cert_interval",
+            "type": "integer",
+            "ids": [
+                "5#wsrep_cert_interval"
             ]
         },
         "wsrep_cluster_capabilities": {
@@ -963,10 +977,65 @@
                 "5#wsrep_cluster_status"
             ]
         },
+        "wsrep_cluster_weight": {
+            "name": "wsrep_cluster_weight",
+            "ids": [
+                "5#wsrep_cluster_weight"
+            ]
+        },
+        "wsrep_commit_oooe": {
+            "name": "wsrep_commit_oooe",
+            "ids": [
+                "5#wsrep_commit_oooe"
+            ]
+        },
+        "wsrep_commit_oool": {
+            "name": "wsrep_commit_oool",
+            "ids": [
+                "5#wsrep_commit_oool"
+            ]
+        },
+        "wsrep_commit_window": {
+            "name": "wsrep_commit_window",
+            "ids": [
+                "5#wsrep_commit_window"
+            ]
+        },
         "wsrep_connected": {
             "name": "wsrep_connected",
             "ids": [
                 "5#wsrep_connected"
+            ]
+        },
+        "wsrep_desync_count": {
+            "name": "wsrep_desync_count",
+            "type": "integer",
+            "ids": [
+                "5#wsrep_desync_count"
+            ]
+        },
+        "wsrep_evs_delayed": {
+            "name": "wsrep_evs_delayed",
+            "ids": [
+                "5#wsrep_evs_delayed"
+            ]
+        },
+        "wsrep_evs_evict_list": {
+            "name": "wsrep_evs_evict_list",
+            "ids": [
+                "5#wsrep_evs_evict_list"
+            ]
+        },
+        "wsrep_evs_repl_latency": {
+            "name": "wsrep_evs_repl_latency",
+            "ids": [
+                "5#wsrep_evs_repl_latency"
+            ]
+        },
+        "wsrep_evs_state": {
+            "name": "wsrep_evs_state",
+            "ids": [
+                "5#wsrep_evs_state"
             ]
         },
         "wsrep_flow_control_paused": {
@@ -1001,6 +1070,12 @@
                 "5#wsrep_gcomm_uuid"
             ]
         },
+        "wsrep_incoming_addresses": {
+            "name": "wsrep_incoming_addresses",
+            "ids": [
+                "5#wsrep_incoming_addresses"
+            ]
+        },
         "wsrep_last_committed": {
             "name": "wsrep_last_committed",
             "type": "integer",
@@ -1013,6 +1088,12 @@
             "type": "integer",
             "ids": [
                 "5#wsrep_local_bf_aborts"
+            ]
+        },
+        "wsrep_local_cached_downto": {
+            "name": "wsrep_local_cached_downto",
+            "ids": [
+                "5#wsrep_local_cached_downto"
             ]
         },
         "wsrep_local_cert_failures": {
@@ -1048,6 +1129,18 @@
                 "5#wsrep_local_recv_queue_avg"
             ]
         },
+        "wsrep_local_recv_queue_max": {
+            "name": "wsrep_local_recv_queue_max",
+            "ids": [
+                "5#wsrep_local_recv_queue_max"
+            ]
+        },
+        "wsrep_local_recv_queue_min": {
+            "name": "wsrep_local_recv_queue_min",
+            "ids": [
+                "5#wsrep_local_recv_queue_min"
+            ]
+        },
         "wsrep_local_replays": {
             "name": "wsrep_local_replays",
             "type": "integer",
@@ -1068,6 +1161,18 @@
                 "5#wsrep_local_send_queue_avg"
             ]
         },
+        "wsrep_local_send_queue_max": {
+            "name": "wsrep_local_send_queue_max",
+            "ids": [
+                "5#wsrep_local_send_queue_max"
+            ]
+        },
+        "wsrep_local_send_queue_min": {
+            "name": "wsrep_local_send_queue_min",
+            "ids": [
+                "5#wsrep_local_send_queue_min"
+            ]
+        },
         "wsrep_local_state": {
             "name": "wsrep_local_state",
             "ids": [
@@ -1084,6 +1189,20 @@
             "name": "wsrep_local_state_uuid",
             "ids": [
                 "5#wsrep_local_state_uuid"
+            ]
+        },
+        "wsrep_open_connections": {
+            "name": "wsrep_open_connections",
+            "type": "integer",
+            "ids": [
+                "5#wsrep_open_connections"
+            ]
+        },
+        "wsrep_open_transactions": {
+            "name": "wsrep_open_transactions",
+            "type": "integer",
+            "ids": [
+                "5#wsrep_open_transactions"
             ]
         },
         "wsrep_protocol_version": {
@@ -1129,6 +1248,34 @@
             "type": "byte",
             "ids": [
                 "5#wsrep_received_bytes"
+            ]
+        },
+        "wsrep_repl_data_bytes": {
+            "name": "wsrep_repl_data_bytes",
+            "type": "integer",
+            "ids": [
+                "5#wsrep_repl_data_bytes"
+            ]
+        },
+        "wsrep_repl_keys": {
+            "name": "wsrep_repl_keys",
+            "type": "integer",
+            "ids": [
+                "5#wsrep_repl_keys"
+            ]
+        },
+        "wsrep_repl_keys_bytes": {
+            "name": "wsrep_repl_keys_bytes",
+            "type": "integer",
+            "ids": [
+                "5#wsrep_repl_keys_bytes"
+            ]
+        },
+        "wsrep_repl_other_bytes": {
+            "name": "wsrep_repl_other_bytes",
+            "type": "integer",
+            "ids": [
+                "5#wsrep_repl_other_bytes"
             ]
         },
         "wsrep_replicated": {
@@ -2785,14 +2932,23 @@
             ]
         },
         "myisam_recover_options": {
+            "default": "0",
             "dynamic": false,
             "name": "myisam_recover_options",
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "DEFAULT",
+                "BACKUP",
+                "BACKUP_ALL",
+                "FORCE",
+                "QUICK"
+            ],
             "ids": [
                 "15#myisam_recover_options",
-                "16#option_mysqld_myisam-recover-options",
                 "10#sysvar_myisam_recover_options"
             ]
         },
@@ -5603,6 +5759,21 @@
                 "23#sysvar_binlog_row_image"
             ]
         },
+        "binlog_row_metadata": {
+            "default": "minimal",
+            "dynamic": true,
+            "name": "binlog_row_metadata",
+            "type": "enumeration",
+            "validValues": [
+                "NO_LOG",
+                "MINIMAL",
+                "FULL"
+            ],
+            "ids": [
+                "8#binlog_row_metadata",
+                "22#sysvar_binlog_row_metadata"
+            ]
+        },
         "binlog_stmt_cache_size": {
             "cli": "--binlog-stmt-cache-size=#",
             "default": "32768",
@@ -5778,6 +5949,7 @@
         },
         "log_slave_updates": {
             "cli": "--log-slave-updates[={OFF|ON}]",
+            "default": "off",
             "dynamic": false,
             "name": "log_slave_updates",
             "scope": [
@@ -5787,8 +5959,7 @@
             "ids": [
                 "8#log_slave_updates",
                 "22#sysvar_log_slave_updates",
-                "23#sysvar_log_slave_updates",
-                "24#option_mysqld_log-slave-updates"
+                "23#sysvar_log_slave_updates"
             ]
         },
         "master_verify_checksum": {
@@ -5911,7 +6082,6 @@
             "type": "file name",
             "ids": [
                 "8#relay_log",
-                "24#option_mysqld_relay-log",
                 "24#sysvar_relay_log"
             ]
         },
@@ -5928,17 +6098,14 @@
             ]
         },
         "relay_log_index": {
-            "cli": "--relay-log-index=file_name",
             "default": "*host_name*-relay-bin.index",
             "dynamic": false,
             "name": "relay_log_index",
             "scope": [
                 "global"
             ],
-            "type": "file name",
             "ids": [
                 "8#relay_log_index",
-                "24#option_mysqld_relay-log-index",
                 "24#sysvar_relay_log_index"
             ]
         },
@@ -5950,10 +6117,8 @@
             "scope": [
                 "global"
             ],
-            "type": "file name",
             "ids": [
                 "8#relay_log_info_file",
-                "24#option_mysqld_relay-log-info-file",
                 "24#sysvar_relay_log_info_file"
             ]
         },
@@ -6109,12 +6274,10 @@
             "type": "string",
             "ids": [
                 "8#report_host",
-                "24#option_mysqld_report-host",
                 "24#sysvar_report_host"
             ]
         },
         "report_password": {
-            "cli": "--report-password=name",
             "dynamic": false,
             "name": "report_password",
             "scope": [
@@ -6123,7 +6286,6 @@
             "type": "string",
             "ids": [
                 "8#report_password",
-                "24#option_mysqld_report-password",
                 "24#sysvar_report_password"
             ]
         },
@@ -6142,7 +6304,6 @@
             "type": "integer",
             "ids": [
                 "8#report_port",
-                "24#option_mysqld_report-port",
                 "24#sysvar_report_port"
             ]
         },
@@ -6156,7 +6317,6 @@
             "type": "string",
             "ids": [
                 "8#report_user",
-                "24#option_mysqld_report-user",
                 "24#sysvar_report_user"
             ]
         },
@@ -12461,7 +12621,6 @@
         },
         "log_queries_not_using_indexes": {
             "cli": "--log-queries-not-using-indexes[={OFF|ON}]",
-            "default": "off",
             "dynamic": true,
             "name": "log_queries_not_using_indexes",
             "scope": [
@@ -12470,7 +12629,6 @@
             "type": "boolean",
             "ids": [
                 "29#log_queries_not_using_indexes",
-                "16#option_mysqld_log-queries-not-using-indexes",
                 "10#sysvar_log_queries_not_using_indexes"
             ]
         },
@@ -12636,7 +12794,6 @@
             "type": "boolean",
             "ids": [
                 "29#low_priority_updates",
-                "16#option_mysqld_low-priority-updates",
                 "10#sysvar_low_priority_updates"
             ]
         },
@@ -13100,7 +13257,6 @@
             "type": "integer",
             "ids": [
                 "29#min_examined_row_limit",
-                "16#option_mysqld_min-examined-row-limit",
                 "10#sysvar_min_examined_row_limit"
             ]
         },
@@ -13434,7 +13590,6 @@
             "type": "file name",
             "ids": [
                 "29#pid_file",
-                "16#option_mysqld_pid-file",
                 "10#sysvar_pid_file"
             ]
         },
@@ -21554,10 +21709,6 @@
             "default": "6",
             "dynamic": true,
             "name": "innodb_compression_level",
-            "range": {
-                "from": 0,
-                "to": 9
-            },
             "scope": [
                 "global"
             ],
@@ -25523,7 +25674,7 @@
                 "session"
             ],
             "ids": [
-                "43#sysvar_ndb_join_pushdown"
+                "43#"
             ]
         },
         "ndb_log_apply_status": {
@@ -26612,23 +26763,6 @@
                 "22#sysvar_binlog_rotate_encryption_master_key_at_startup"
             ]
         },
-        "binlog_row_metadata": {
-            "cli": "--binlog-row-metadata=metadata_type",
-            "default": "minimal",
-            "dynamic": true,
-            "name": "binlog_row_metadata",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "FULL",
-                "MINIMAL"
-            ],
-            "ids": [
-                "22#sysvar_binlog_row_metadata"
-            ]
-        },
         "binlog_row_value_options": {
             "cli": "--binlog-row-value-options=#",
             "default": "''",
@@ -26797,44 +26931,6 @@
                 "23#sysvar_log_backward_compatible_user_definitions"
             ]
         },
-        "enforce_gtid_consistency": {
-            "cli": "--enforce-gtid-consistency[=value]",
-            "default": "off",
-            "dynamic": true,
-            "name": "enforce_gtid_consistency",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "ON",
-                "WARN"
-            ],
-            "ids": [
-                "46#option_mysqld_enforce-gtid-consistency",
-                "45#sysvar_enforce_gtid_consistency"
-            ]
-        },
-        "gtid_mode": {
-            "default": "off",
-            "dynamic": true,
-            "name": "gtid_mode",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "OFF_PERMISSIVE",
-                "ON_PERMISSIVE",
-                "ON"
-            ],
-            "ids": [
-                "45#option_mysqld_gtid-mode",
-                "45#sysvar_gtid_mode"
-            ]
-        },
         "gtid_executed_compression_period": {
             "default": "1000",
             "dynamic": true,
@@ -26848,7 +26944,7 @@
             ],
             "type": "integer",
             "ids": [
-                "45#option_mysqld_gtid-executed-compression-period",
+                "46#option_mysqld_gtid-executed-compression-period",
                 "45#sysvar_gtid_executed_compression_period"
             ]
         },
@@ -26865,6 +26961,24 @@
                 "45#sysvar_binlog_gtid_simple_recovery"
             ]
         },
+        "enforce_gtid_consistency": {
+            "cli": "--enforce-gtid-consistency[=value]",
+            "default": "off",
+            "dynamic": true,
+            "name": "enforce_gtid_consistency",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "WARN"
+            ],
+            "ids": [
+                "45#sysvar_enforce_gtid_consistency"
+            ]
+        },
         "gtid_executed": {
             "dynamic": false,
             "name": "gtid_executed",
@@ -26875,6 +26989,25 @@
             "type": "string",
             "ids": [
                 "45#sysvar_gtid_executed"
+            ]
+        },
+        "gtid_mode": {
+            "cli": "--gtid-mode=MODE",
+            "default": "off",
+            "dynamic": true,
+            "name": "gtid_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "OFF_PERMISSIVE",
+                "ON_PERMISSIVE",
+                "ON"
+            ],
+            "ids": [
+                "45#sysvar_gtid_mode"
             ]
         },
         "gtid_next": {
@@ -27916,6 +28049,24 @@
             "type": "boolean",
             "ids": [
                 "10#sysvar_end_markers_in_json"
+            ]
+        },
+        "generated_random_password_length": {
+            "cli": "--generated-random-password-length=#",
+            "default": "20",
+            "dynamic": true,
+            "name": "generated_random_password_length",
+            "range": {
+                "from": 5,
+                "to": 255
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "10#sysvar_generated_random_password_length"
             ]
         },
         "have_statement_timeout": {
@@ -29098,7 +29249,7 @@
             ]
         },
         "mysqlx_enable_hello_notice": {
-            "cli": "--mysqlx-document-id-unique-prefix[={OFF|ON}]",
+            "cli": "--mysqlx-enable-hello-notice[={OFF|ON}]",
             "default": "on",
             "dynamic": true,
             "name": "mysqlx_enable_hello_notice",

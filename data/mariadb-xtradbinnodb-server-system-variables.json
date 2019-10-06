@@ -687,7 +687,7 @@
       "id": "innodb_compression_level",
       "name": "innodb_compression_level",
       "range": {
-        "from": 0,
+        "from": 1,
         "to": 9
       },
       "scope": [

@@ -55,7 +55,7 @@
       "type": "integer"
     },
     {
-      "cli": "--mysqlx-document-id-unique-prefix[={OFF|ON}]",
+      "cli": "--mysqlx-enable-hello-notice[={OFF|ON}]",
       "default": "on",
       "dynamic": true,
       "id": "sysvar_mysqlx_enable_hello_notice",

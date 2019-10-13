@@ -294,7 +294,7 @@
     },
     {
       "cli": "--core-file",
-      "default": "OFF, ON (Windows only >= MariaDB 10.4.3)",
+      "default": "Windows >= MariaDB 10.4.3: ON, All other systems: OFF",
       "dynamic": false,
       "id": "core_file",
       "name": "core_file",

@@ -208,7 +208,7 @@
       "name": "aria_recover"
     },
     {
-      "cli": "--aria-recover[=#]",
+      "cli": "--aria-recover-options[=#]",
       "default": "BACKUP,QUICK (>= MariaDB 10.2.4), NORMAL (<= MariaDB 10.2.3)",
       "dynamic": true,
       "id": "aria_recover_options",

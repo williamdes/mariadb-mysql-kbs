@@ -175,6 +175,22 @@
       ]
     },
     {
+      "cli": "--binlog-row-metadata=value",
+      "default": "NO_LOG",
+      "dynamic": true,
+      "id": "binlog_row_metadata",
+      "name": "binlog_row_metadata",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "validValues": [
+        "NO_LOG",
+        "MINIMAL",
+        "FULL"
+      ]
+    },
+    {
       "cli": "--binlog-stmt-cache-size=#",
       "default": "32768",
       "dynamic": true,

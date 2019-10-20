@@ -392,7 +392,7 @@
             ]
         },
         "aria_recover_options": {
-            "cli": "--aria-recover[=#]",
+            "cli": "--aria-recover-options[=#]",
             "default": "BACKUP,QUICK (>= MariaDB 10.2.4), NORMAL (<= MariaDB 10.2.3)",
             "dynamic": true,
             "name": "aria_recover_options",
@@ -879,7 +879,7 @@
         },
         "connect_conv_size": {
             "cli": "--connect-conv-size=#",
-            "default": "8192",
+            "default": ">= MariaDB 10.4.8, MariaDB 10.3.18, MariaDB 10.2.27: 1024, <= MariaDB 10.4.7, MariaDB 10.3.17, MariaDB 10.2.26: 8192",
             "dynamic": true,
             "name": "connect_conv_size",
             "range": {
@@ -1096,15 +1096,6 @@
                 }
             ]
         },
-        "wsrep": {
-            "name": "wsrep",
-            "ids": [
-                {
-                    "anchor": "wsrep",
-                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
-                }
-            ]
-        },
         "wsrep_apply_oooe": {
             "name": "wsrep_apply_oooe",
             "ids": [
@@ -1123,11 +1114,40 @@
                 }
             ]
         },
+        "wsrep_apply_window": {
+            "name": "wsrep_apply_window",
+            "ids": [
+                {
+                    "anchor": "wsrep_apply_window",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
         "wsrep_cert_deps_distance": {
             "name": "wsrep_cert_deps_distance",
             "ids": [
                 {
                     "anchor": "wsrep_cert_deps_distance",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_cert_index_size": {
+            "name": "wsrep_cert_index_size",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_cert_index_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_cert_interval": {
+            "name": "wsrep_cert_interval",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_cert_interval",
                     "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
                 }
             ]
@@ -1179,11 +1199,93 @@
                 }
             ]
         },
+        "wsrep_cluster_weight": {
+            "name": "wsrep_cluster_weight",
+            "ids": [
+                {
+                    "anchor": "wsrep_cluster_weight",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_commit_oooe": {
+            "name": "wsrep_commit_oooe",
+            "ids": [
+                {
+                    "anchor": "wsrep_commit_oooe",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_commit_oool": {
+            "name": "wsrep_commit_oool",
+            "ids": [
+                {
+                    "anchor": "wsrep_commit_oool",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_commit_window": {
+            "name": "wsrep_commit_window",
+            "ids": [
+                {
+                    "anchor": "wsrep_commit_window",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
         "wsrep_connected": {
             "name": "wsrep_connected",
             "ids": [
                 {
                     "anchor": "wsrep_connected",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_desync_count": {
+            "name": "wsrep_desync_count",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_desync_count",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_evs_delayed": {
+            "name": "wsrep_evs_delayed",
+            "ids": [
+                {
+                    "anchor": "wsrep_evs_delayed",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_evs_evict_list": {
+            "name": "wsrep_evs_evict_list",
+            "ids": [
+                {
+                    "anchor": "wsrep_evs_evict_list",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_evs_repl_latency": {
+            "name": "wsrep_evs_repl_latency",
+            "ids": [
+                {
+                    "anchor": "wsrep_evs_repl_latency",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_evs_state": {
+            "name": "wsrep_evs_state",
+            "ids": [
+                {
+                    "anchor": "wsrep_evs_state",
                     "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
                 }
             ]
@@ -1235,6 +1337,15 @@
                 }
             ]
         },
+        "wsrep_incoming_addresses": {
+            "name": "wsrep_incoming_addresses",
+            "ids": [
+                {
+                    "anchor": "wsrep_incoming_addresses",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
         "wsrep_last_committed": {
             "name": "wsrep_last_committed",
             "type": "integer",
@@ -1251,6 +1362,15 @@
             "ids": [
                 {
                     "anchor": "wsrep_local_bf_aborts",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_local_cached_downto": {
+            "name": "wsrep_local_cached_downto",
+            "ids": [
+                {
+                    "anchor": "wsrep_local_cached_downto",
                     "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
                 }
             ]
@@ -1303,6 +1423,24 @@
                 }
             ]
         },
+        "wsrep_local_recv_queue_max": {
+            "name": "wsrep_local_recv_queue_max",
+            "ids": [
+                {
+                    "anchor": "wsrep_local_recv_queue_max",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_local_recv_queue_min": {
+            "name": "wsrep_local_recv_queue_min",
+            "ids": [
+                {
+                    "anchor": "wsrep_local_recv_queue_min",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
         "wsrep_local_replays": {
             "name": "wsrep_local_replays",
             "type": "integer",
@@ -1332,6 +1470,24 @@
                 }
             ]
         },
+        "wsrep_local_send_queue_max": {
+            "name": "wsrep_local_send_queue_max",
+            "ids": [
+                {
+                    "anchor": "wsrep_local_send_queue_max",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_local_send_queue_min": {
+            "name": "wsrep_local_send_queue_min",
+            "ids": [
+                {
+                    "anchor": "wsrep_local_send_queue_min",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
         "wsrep_local_state": {
             "name": "wsrep_local_state",
             "ids": [
@@ -1355,6 +1511,26 @@
             "ids": [
                 {
                     "anchor": "wsrep_local_state_uuid",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_open_connections": {
+            "name": "wsrep_open_connections",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_open_connections",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_open_transactions": {
+            "name": "wsrep_open_transactions",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_open_transactions",
                     "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
                 }
             ]
@@ -1421,6 +1597,46 @@
             "ids": [
                 {
                     "anchor": "wsrep_received_bytes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_repl_data_bytes": {
+            "name": "wsrep_repl_data_bytes",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_repl_data_bytes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_repl_keys": {
+            "name": "wsrep_repl_keys",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_repl_keys",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_repl_keys_bytes": {
+            "name": "wsrep_repl_keys_bytes",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_repl_keys_bytes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_repl_other_bytes": {
+            "name": "wsrep_repl_other_bytes",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_repl_other_bytes",
                     "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
                 }
             ]
@@ -2400,16 +2616,8 @@
             ]
         },
         "server_id": {
-            "cli": "--server-id=#",
             "dynamic": true,
             "name": "server_id",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
-            "scope": [
-                "global"
-            ],
             "type": "integer",
             "ids": [
                 {
@@ -2421,12 +2629,8 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_server-id",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options.html"
-                },
-                {
                     "anchor": "sysvar_server_id",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options.html"
                 }
             ]
         },
@@ -3466,19 +3670,25 @@
             ]
         },
         "myisam_recover_options": {
+            "default": "0",
             "dynamic": false,
             "name": "myisam_recover_options",
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "DEFAULT",
+                "BACKUP",
+                "BACKUP_ALL",
+                "FORCE",
+                "QUICK"
+            ],
             "ids": [
                 {
                     "anchor": "myisam_recover_options",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myisam/myisam-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_myisam-recover-options",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_myisam_recover_options",
@@ -6995,6 +7205,27 @@
                 }
             ]
         },
+        "binlog_row_metadata": {
+            "default": "minimal",
+            "dynamic": true,
+            "name": "binlog_row_metadata",
+            "type": "enumeration",
+            "validValues": [
+                "NO_LOG",
+                "MINIMAL",
+                "FULL"
+            ],
+            "ids": [
+                {
+                    "anchor": "binlog_row_metadata",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_binlog_row_metadata",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                }
+            ]
+        },
         "binlog_stmt_cache_size": {
             "cli": "--binlog-stmt-cache-size=#",
             "default": "32768",
@@ -7260,6 +7491,7 @@
         },
         "log_slave_updates": {
             "cli": "--log-slave-updates[={OFF|ON}]",
+            "default": "off",
             "dynamic": false,
             "name": "log_slave_updates",
             "scope": [
@@ -7278,10 +7510,6 @@
                 {
                     "anchor": "sysvar_log_slave_updates",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "option_mysqld_log-slave-updates",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
             ]
         },
@@ -7463,10 +7691,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_relay-log",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
-                },
-                {
                     "anchor": "sysvar_relay_log",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
@@ -7491,22 +7715,16 @@
             ]
         },
         "relay_log_index": {
-            "cli": "--relay-log-index=file_name",
             "default": "*host_name*-relay-bin.index",
             "dynamic": false,
             "name": "relay_log_index",
             "scope": [
                 "global"
             ],
-            "type": "file name",
             "ids": [
                 {
                     "anchor": "relay_log_index",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_relay-log-index",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 },
                 {
                     "anchor": "sysvar_relay_log_index",
@@ -7522,15 +7740,10 @@
             "scope": [
                 "global"
             ],
-            "type": "file name",
             "ids": [
                 {
                     "anchor": "relay_log_info_file",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_relay-log-info-file",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 },
                 {
                     "anchor": "sysvar_relay_log_info_file",
@@ -7564,8 +7777,6 @@
         },
         "relay_log_recovery": {
             "cli": "--relay-log-recovery[={OFF|ON}]",
-            "default": "off",
-            "dynamic": false,
             "name": "relay_log_recovery",
             "scope": [
                 "global"
@@ -7575,10 +7786,6 @@
                 {
                     "anchor": "relay_log_recovery",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_relay-log-recovery",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 },
                 {
                     "anchor": "sysvar_relay_log_recovery",
@@ -7769,17 +7976,12 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_report-host",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
-                },
-                {
                     "anchor": "sysvar_report_host",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
             ]
         },
         "report_password": {
-            "cli": "--report-password=name",
             "dynamic": false,
             "name": "report_password",
             "scope": [
@@ -7790,10 +7992,6 @@
                 {
                     "anchor": "report_password",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_report-password",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 },
                 {
                     "anchor": "sysvar_report_password",
@@ -7820,10 +8018,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_report-port",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
-                },
-                {
                     "anchor": "sysvar_report_port",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 }
@@ -7841,10 +8035,6 @@
                 {
                     "anchor": "report_user",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_report-user",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
                 },
                 {
                     "anchor": "sysvar_report_user",
@@ -16109,7 +16299,6 @@
         },
         "log_queries_not_using_indexes": {
             "cli": "--log-queries-not-using-indexes[={OFF|ON}]",
-            "default": "off",
             "dynamic": true,
             "name": "log_queries_not_using_indexes",
             "scope": [
@@ -16120,10 +16309,6 @@
                 {
                     "anchor": "log_queries_not_using_indexes",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_log-queries-not-using-indexes",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_log_queries_not_using_indexes",
@@ -16337,10 +16522,6 @@
                 {
                     "anchor": "low_priority_updates",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_low-priority-updates",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_low_priority_updates",
@@ -16953,10 +17134,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_min-examined-row-limit",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
                     "anchor": "sysvar_min_examined_row_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
@@ -17399,10 +17576,6 @@
                 {
                     "anchor": "pid_file",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_pid-file",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_pid_file",
@@ -18007,10 +18180,6 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_secure-auth",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
                     "anchor": "sysvar_secure_auth",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
@@ -18214,30 +18383,24 @@
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 },
                 {
-                    "anchor": "option_mysqld_skip-name-resolve",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
                     "anchor": "sysvar_skip_name_resolve",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
         },
         "skip_networking": {
-            "cli": "--skip-networking",
+            "cli": "--skip-networking[={OFF|ON}]",
+            "default": "0",
             "dynamic": false,
             "name": "skip_networking",
             "scope": [
                 "global"
             ],
+            "type": "boolean",
             "ids": [
                 {
                     "anchor": "skip_networking",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_skip-networking",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 },
                 {
                     "anchor": "sysvar_skip_networking",
@@ -28031,10 +28194,6 @@
             "default": "6",
             "dynamic": true,
             "name": "innodb_compression_level",
-            "range": {
-                "from": 0,
-                "to": 9
-            },
             "scope": [
                 "global"
             ],
@@ -33132,7 +33291,7 @@
             ],
             "ids": [
                 {
-                    "anchor": "sysvar_ndb_join_pushdown",
+                    "anchor": null,
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
@@ -34517,26 +34676,6 @@
                 }
             ]
         },
-        "binlog_row_metadata": {
-            "cli": "--binlog-row-metadata=metadata_type",
-            "default": "minimal",
-            "dynamic": true,
-            "name": "binlog_row_metadata",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "FULL",
-                "MINIMAL"
-            ],
-            "ids": [
-                {
-                    "anchor": "sysvar_binlog_row_metadata",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                }
-            ]
-        },
         "binlog_row_value_options": {
             "cli": "--binlog-row-value-options=#",
             "default": "''",
@@ -34759,56 +34898,6 @@
                 }
             ]
         },
-        "enforce_gtid_consistency": {
-            "cli": "--enforce-gtid-consistency[=value]",
-            "default": "off",
-            "dynamic": true,
-            "name": "enforce_gtid_consistency",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "ON",
-                "WARN"
-            ],
-            "ids": [
-                {
-                    "anchor": "option_mysqld_enforce-gtid-consistency",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                },
-                {
-                    "anchor": "sysvar_enforce_gtid_consistency",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                }
-            ]
-        },
-        "gtid_mode": {
-            "default": "off",
-            "dynamic": true,
-            "name": "gtid_mode",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "OFF_PERMISSIVE",
-                "ON_PERMISSIVE",
-                "ON"
-            ],
-            "ids": [
-                {
-                    "anchor": "option_mysqld_gtid-mode",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                },
-                {
-                    "anchor": "sysvar_gtid_mode",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                }
-            ]
-        },
         "gtid_executed_compression_period": {
             "default": "1000",
             "dynamic": true,
@@ -34848,6 +34937,27 @@
                 }
             ]
         },
+        "enforce_gtid_consistency": {
+            "cli": "--enforce-gtid-consistency[=value]",
+            "default": "off",
+            "dynamic": true,
+            "name": "enforce_gtid_consistency",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "WARN"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_enforce_gtid_consistency",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
+                }
+            ]
+        },
         "gtid_executed": {
             "dynamic": false,
             "name": "gtid_executed",
@@ -34859,6 +34969,28 @@
             "ids": [
                 {
                     "anchor": "sysvar_gtid_executed",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
+                }
+            ]
+        },
+        "gtid_mode": {
+            "cli": "--gtid-mode=MODE",
+            "default": "off",
+            "dynamic": true,
+            "name": "gtid_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "OFF_PERMISSIVE",
+                "ON_PERMISSIVE",
+                "ON"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_gtid_mode",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
                 }
             ]
@@ -35687,6 +35819,38 @@
                 }
             ]
         },
+        "skip_new": {
+            "cli": "--skip-new",
+            "name": "skip_new",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_skip-new",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
+        "skip_stack_trace": {
+            "cli": "--skip-stack-trace",
+            "name": "skip_stack_trace",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_skip-stack-trace",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
+        "slow_start_timeout": {
+            "cli": "--slow-start-timeout=#",
+            "default": "15000",
+            "name": "slow_start_timeout",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_slow-start-timeout",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
         "standalone": {
             "cli": "--standalone",
             "name": "standalone",
@@ -35716,28 +35880,6 @@
             "ids": [
                 {
                     "anchor": "option_mysqld_symbolic-links",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                }
-            ]
-        },
-        "skip_stack_trace": {
-            "cli": "--skip-stack-trace",
-            "name": "skip_stack_trace",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_skip-stack-trace",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                }
-            ]
-        },
-        "slow_start_timeout": {
-            "cli": "--slow-start-timeout=#",
-            "default": "15000",
-            "name": "slow_start_timeout",
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_slow-start-timeout",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 }
             ]
@@ -36203,6 +36345,27 @@
             "ids": [
                 {
                     "anchor": "sysvar_end_markers_in_json",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "generated_random_password_length": {
+            "cli": "--generated-random-password-length=#",
+            "default": "20",
+            "dynamic": true,
+            "name": "generated_random_password_length",
+            "range": {
+                "from": 5,
+                "to": 255
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_generated_random_password_length",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
@@ -37627,7 +37790,7 @@
             ]
         },
         "mysqlx_enable_hello_notice": {
-            "cli": "--mysqlx-document-id-unique-prefix[={OFF|ON}]",
+            "cli": "--mysqlx-enable-hello-notice[={OFF|ON}]",
             "default": "on",
             "dynamic": true,
             "name": "mysqlx_enable_hello_notice",

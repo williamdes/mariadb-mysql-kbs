@@ -223,17 +223,6 @@
       "type": "file name"
     },
     {
-      "cli": "--log-queries-not-using-indexes[={OFF|ON}]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_log-queries-not-using-indexes",
-      "name": "log_queries_not_using_indexes",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--log-raw[={OFF|ON}]",
       "default": "off",
       "id": "option_mysqld_log-raw",
@@ -279,33 +268,6 @@
       "type": "integer"
     },
     {
-      "cli": "--low-priority-updates[={OFF|ON}]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_low-priority-updates",
-      "name": "low_priority_updates",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--min-examined-row-limit=#",
-      "default": "0",
-      "dynamic": true,
-      "id": "option_mysqld_min-examined-row-limit",
-      "name": "min_examined_row_limit",
-      "range": {
-        "from": 0
-      },
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--memlock[={OFF|ON}]",
       "default": "off",
       "id": "option_mysqld_memlock",
@@ -322,20 +284,6 @@
         "to": 16384
       },
       "type": "integer"
-    },
-    {
-      "cli": "--myisam-recover-options[=name]",
-      "default": "off",
-      "id": "option_mysqld_myisam-recover-options",
-      "name": "myisam_recover_options",
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "DEFAULT",
-        "BACKUP",
-        "FORCE",
-        "QUICK"
-      ]
     },
     {
       "cli": "--no-dd-upgrade[={OFF|ON}]",
@@ -357,16 +305,6 @@
       "id": "option_mysqld_old-style-user-limits",
       "name": "old_style_user_limits",
       "type": "boolean"
-    },
-    {
-      "cli": "--pid-file=file_name",
-      "dynamic": false,
-      "id": "option_mysqld_pid-file",
-      "name": "pid_file",
-      "scope": [
-        "global"
-      ],
-      "type": "file name"
     },
     {
       "cli": "--plugin-load=plugin_list",
@@ -423,20 +361,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--secure-auth[={OFF|ON}]",
-      "default": "on",
-      "dynamic": true,
-      "id": "option_mysqld_secure-auth",
-      "name": "secure_auth",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean",
-      "validValues": [
-        "ON"
-      ]
-    },
-    {
       "cli": "--skip-grant-tables[={OFF|ON}]",
       "default": "off",
       "id": "option_mysqld_skip-grant-tables",
@@ -449,42 +373,9 @@
       "name": "skip_host_cache"
     },
     {
-      "cli": "--skip-name-resolve[={OFF|ON}]",
-      "default": "off",
-      "dynamic": false,
-      "id": "option_mysqld_skip-name-resolve",
-      "name": "skip_name_resolve",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--skip-networking",
-      "dynamic": false,
-      "id": "option_mysqld_skip-networking",
-      "name": "skip_networking",
-      "scope": [
-        "global"
-      ]
-    },
-    {
-      "cli": "--standalone",
-      "id": "option_mysqld_standalone",
-      "name": "standalone"
-    },
-    {
-      "cli": "--super-large-pages[={OFF|ON}]",
-      "default": "off",
-      "id": "option_mysqld_super-large-pages",
-      "name": "super_large_pages",
-      "type": "boolean"
-    },
-    {
-      "cli": "--symbolic-links[={OFF|ON}]",
-      "id": "option_mysqld_symbolic-links",
-      "name": "symbolic_links",
-      "type": "boolean"
+      "cli": "--skip-new",
+      "id": "option_mysqld_skip-new",
+      "name": "skip_new"
     },
     {
       "cli": "--skip-show-database",
@@ -527,6 +418,24 @@
         "session"
       ],
       "type": "set"
+    },
+    {
+      "cli": "--standalone",
+      "id": "option_mysqld_standalone",
+      "name": "standalone"
+    },
+    {
+      "cli": "--super-large-pages[={OFF|ON}]",
+      "default": "off",
+      "id": "option_mysqld_super-large-pages",
+      "name": "super_large_pages",
+      "type": "boolean"
+    },
+    {
+      "cli": "--symbolic-links[={OFF|ON}]",
+      "id": "option_mysqld_symbolic-links",
+      "name": "symbolic_links",
+      "type": "boolean"
     },
     {
       "cli": "--sysdate-is-now[={OFF|ON}]",

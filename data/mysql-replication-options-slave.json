@@ -1,16 +1,6 @@
 {
   "data": [
     {
-      "cli": "--log-slave-updates[={OFF|ON}]",
-      "dynamic": false,
-      "id": "option_mysqld_log-slave-updates",
-      "name": "log_slave_updates",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--master-info-file=file_name",
       "default": "master.info",
       "id": "option_mysqld_master-info-file",
@@ -43,33 +33,6 @@
       "type": "integer"
     },
     {
-      "cli": "--relay-log=file_name",
-      "dynamic": false,
-      "id": "option_mysqld_relay-log",
-      "name": "relay_log",
-      "scope": [
-        "global"
-      ],
-      "type": "file name"
-    },
-    {
-      "cli": "--relay-log-index=file_name",
-      "dynamic": false,
-      "id": "option_mysqld_relay-log-index",
-      "name": "relay_log_index",
-      "scope": [
-        "global"
-      ],
-      "type": "file name"
-    },
-    {
-      "cli": "--relay-log-info-file=file_name",
-      "default": "relay-log.info",
-      "id": "option_mysqld_relay-log-info-file",
-      "name": "relay_log_info_file",
-      "type": "file name"
-    },
-    {
       "cli": "--relay-log-purge[={OFF|ON}]",
       "default": "on",
       "dynamic": true,
@@ -78,13 +41,6 @@
       "scope": [
         "global"
       ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--relay-log-recovery[={OFF|ON}]",
-      "default": "off",
-      "id": "option_mysqld_relay-log-recovery",
-      "name": "relay_log_recovery",
       "type": "boolean"
     },
     {
@@ -148,51 +104,6 @@
       "cli": "--replicate-wild-ignore-table=name",
       "id": "option_mysqld_replicate-wild-ignore-table",
       "name": "replicate_wild_ignore_table",
-      "type": "string"
-    },
-    {
-      "cli": "--report-host=host_name",
-      "dynamic": false,
-      "id": "option_mysqld_report-host",
-      "name": "report_host",
-      "scope": [
-        "global"
-      ],
-      "type": "string"
-    },
-    {
-      "cli": "--report-password=name",
-      "dynamic": false,
-      "id": "option_mysqld_report-password",
-      "name": "report_password",
-      "scope": [
-        "global"
-      ],
-      "type": "string"
-    },
-    {
-      "cli": "--report-port=port_num",
-      "default": "[slave_port]",
-      "dynamic": false,
-      "id": "option_mysqld_report-port",
-      "name": "report_port",
-      "range": {
-        "from": 0,
-        "to": 65535
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--report-user=name",
-      "dynamic": false,
-      "id": "option_mysqld_report-user",
-      "name": "report_user",
-      "scope": [
-        "global"
-      ],
       "type": "string"
     },
     {

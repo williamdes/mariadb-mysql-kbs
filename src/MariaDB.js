@@ -95,24 +95,12 @@ const createDoc = function($, element) {
                     break;
                 case 'default value:':
                 case 'default:':
-                    /*var defaults = valueKey
-                    .find('code')
-                    .get()
-                    .map(el => $(el).text());
-                    if (defaults.length === 0) {
-                        doc.default = valueKey.text().replace(valueKey.find('strong').text(), '').trim();
-                        doc.default = doc.default.split('\n').join(',');
-                    } else {
-                        doc.default = defaults.join(',');
-                    }*/
-                    doc.default = valueKey
-                        .text()
-                        .replace(valueKey.find('strong').text(), '')
-                        .trim();
-                    doc.default = doc.default
-                        .split('\n')
-                        .map(el => cleaner.cleanDefault(el.trim()))
-                        .join(', ');
+                    doc.default = cleaner.cleanDefault(
+                        valueKey
+                            .text()
+                            .replace(valueKey.find('strong').text(), '')
+                            .trim()
+                    );
                     break;
                 case 'valid values:':
                     doc.validValues = valueKey

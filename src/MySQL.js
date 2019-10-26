@@ -69,12 +69,8 @@ function completeDoc($, rows, doc) {
                 }
                 break;
             case 'default value':
-                doc.default = cleaner.cleanDefault(
-                    value
-                        .text()
-                        .toLowerCase()
-                        .trim()
-                );
+            case 'default, range':
+                doc.default = cleaner.cleanDefault(value.text().trim());
                 break;
             case 'valid values':
                 doc.validValues = $(value)
@@ -96,6 +92,15 @@ function completeDoc($, rows, doc) {
                 break;
             case 'command-line format':
                 doc.cli = cleaner.cleanCli(value.text().trim());
+                break;
+            case 'command line':
+                if (typeof doc.cli !== 'string') {
+                    doc.cli =
+                        value
+                            .text()
+                            .toLowerCase()
+                            .trim() === 'yes';
+                }
                 break;
         }
     });
@@ -141,7 +146,25 @@ function parsePage($, cbSuccess) {
                     .first()
                     .attr('name'),
             };
+            if (typeof doc.id !== 'string') {
+                doc.id = $(elem)
+                    .prevAll()
+                    .find('.link')
+                    .first()
+                    .attr('href')
+                    .split('#')[1];
+            }
             createDoc($, elem, doc);
+            if (typeof doc.cli === 'boolean') {
+                doc.cli = $(elem)
+                    .prevAll()
+                    .find('.option')
+                    .first()
+                    .text();
+                if (doc.cli === '') {
+                    delete doc.cli;
+                }
+            }
             if (!doc.name && doc.cli) {
                 var matches = doc.cli.match(cleaner.regexCli);
                 doc.name = matches[2].replace(/-/g, '_');
@@ -219,6 +242,9 @@ const pages = [
 ];
 
 module.exports = {
+    parsePage: parsePage,
+    createDoc: createDoc,
+    completeDoc: completeDoc,
     run: () => {
         return common.processDataExtraction(pages, 'mysql-', parsePage);
     },

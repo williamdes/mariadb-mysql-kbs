@@ -86,24 +86,37 @@ const cleanRange = function(range) {
 /**
  * Clean a default value
  * @param {String} defaultValue The default value
+ * @returns {String} The same or an alternative formated text
  */
 const cleanDefault = function(defaultValue) {
-    if (defaultValue === 'Autosized (see description)') {
-        defaultValue = '(autosized)';
+    return defaultValue
+        .split('\n')
+        .map(el => cleanTextDefault(el.trim()))
+        .join(', ');
+};
+
+/**
+ * Clean text of a default value
+ * @param {String} defaultTextValue The default text value
+ * @returns {String} The same or an alternative text
+ */
+const cleanTextDefault = function(defaultTextValue) {
+    if (defaultTextValue === 'Autosized (see description)') {
+        defaultTextValue = '(autosized)';
     }
-    if (defaultValue.indexOf('Based on the number of processors') !== -1) {
-        defaultValue = '(based on the number of processors)';
+    if (defaultTextValue.indexOf('Based on the number of processors') !== -1) {
+        defaultTextValue = '(based on the number of processors)';
     }
-    if (defaultValue === 'The MariaDB data directory') {
-        defaultValue = '(the MariaDB data directory)';
+    if (defaultTextValue === 'The MariaDB data directory') {
+        defaultTextValue = '(the MariaDB data directory)';
     }
-    if (defaultValue.match(/-1 \(signifies (autoscaling); do not assign this literal value\)/g)) {
-        defaultValue = '(-1 signifies autoscaling; do not use -1)';
+    if (defaultTextValue.match(/-1 \(signifies (autoscaling); do not assign this literal value\)/g)) {
+        defaultTextValue = '(-1 signifies autoscaling; do not use -1)';
     }
-    if (defaultValue.match(/-1 \(signifies (autosizing); do not assign this literal value\)/g)) {
-        defaultValue = '(-1 signifies autosizing; do not use -1)';
+    if (defaultTextValue.match(/-1 \(signifies (autosizing); do not assign this literal value\)/g)) {
+        defaultTextValue = '(-1 signifies autosizing; do not use -1)';
     }
-    return defaultValue;
+    return defaultTextValue;
 };
 
 module.exports = {

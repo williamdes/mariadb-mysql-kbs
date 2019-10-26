@@ -2,7 +2,7 @@
   "data": [
     {
       "cli": "--audit-log[=value]",
-      "default": "on",
+      "default": "ON",
       "id": "option_mysqld_audit-log",
       "name": "audit_log",
       "type": "enumeration",
@@ -29,7 +29,7 @@
     },
     {
       "cli": "--audit-log-compression=value",
-      "default": "none",
+      "default": "NONE",
       "dynamic": false,
       "id": "sysvar_audit_log_compression",
       "name": "audit_log_compression",
@@ -44,7 +44,7 @@
     },
     {
       "cli": "--audit-log-connection-policy=value",
-      "default": "all",
+      "default": "ALL",
       "dynamic": true,
       "id": "sysvar_audit_log_connection_policy",
       "name": "audit_log_connection_policy",
@@ -71,7 +71,7 @@
     },
     {
       "cli": "--audit-log-encryption=value",
-      "default": "none",
+      "default": "NONE",
       "dynamic": false,
       "id": "sysvar_audit_log_encryption",
       "name": "audit_log_encryption",
@@ -86,7 +86,7 @@
     },
     {
       "cli": "--audit-log-exclude-accounts=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_audit_log_exclude_accounts",
       "name": "audit_log_exclude_accounts",
@@ -117,7 +117,7 @@
       "type": "integer"
     },
     {
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_audit_log_flush",
       "name": "audit_log_flush",
@@ -128,7 +128,7 @@
     },
     {
       "cli": "--audit-log-format=value",
-      "default": "new",
+      "default": "NEW",
       "dynamic": false,
       "id": "sysvar_audit_log_format",
       "name": "audit_log_format",
@@ -144,7 +144,7 @@
     },
     {
       "cli": "--audit-log-include-accounts=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_audit_log_include_accounts",
       "name": "audit_log_include_accounts",
@@ -170,7 +170,7 @@
     },
     {
       "cli": "--audit-log-policy=value",
-      "default": "all",
+      "default": "ALL",
       "dynamic": false,
       "id": "sysvar_audit_log_policy",
       "name": "audit_log_policy",
@@ -207,7 +207,7 @@
     },
     {
       "cli": "--audit-log-statement-policy=value",
-      "default": "all",
+      "default": "ALL",
       "dynamic": true,
       "id": "sysvar_audit_log_statement_policy",
       "name": "audit_log_statement_policy",
@@ -223,7 +223,7 @@
     },
     {
       "cli": "--audit-log-strategy=value",
-      "default": "asynchronous",
+      "default": "ASYNCHRONOUS",
       "dynamic": false,
       "id": "sysvar_audit_log_strategy",
       "name": "audit_log_strategy",

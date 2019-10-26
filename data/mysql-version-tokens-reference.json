@@ -2,7 +2,7 @@
   "data": [
     {
       "cli": "--version-tokens-session=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_version_tokens_session",
       "name": "version_tokens_session",

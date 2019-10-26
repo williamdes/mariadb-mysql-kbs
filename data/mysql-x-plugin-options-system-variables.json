@@ -2,7 +2,7 @@
   "data": [
     {
       "cli": "--mysqlx[=value]",
-      "default": "on",
+      "default": "ON",
       "id": "option_mysqld_mysqlx",
       "name": "mysqlx",
       "type": "enumeration",
@@ -56,7 +56,7 @@
     },
     {
       "cli": "--mysqlx-enable-hello-notice[={OFF|ON}]",
-      "default": "on",
+      "default": "ON",
       "dynamic": true,
       "id": "sysvar_mysqlx_enable_hello_notice",
       "name": "mysqlx_enable_hello_notice",

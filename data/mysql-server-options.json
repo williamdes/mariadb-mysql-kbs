@@ -7,7 +7,7 @@
     },
     {
       "cli": "--allow-suspicious-udfs[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_allow-suspicious-udfs",
       "name": "allow_suspicious_udfs",
       "type": "boolean"
@@ -20,6 +20,7 @@
     {
       "cli": "--basedir=dir_name",
       "dynamic": false,
+      "id": "sysvar_basedir",
       "name": "basedir",
       "scope": [
         "global"
@@ -28,7 +29,7 @@
     },
     {
       "cli": "--character-set-client-handshake[={OFF|ON}]",
-      "default": "on",
+      "default": "ON",
       "id": "option_mysqld_character-set-client-handshake",
       "name": "character_set_client_handshake",
       "type": "boolean"
@@ -46,14 +47,14 @@
     },
     {
       "cli": "--core-file[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_core-file",
       "name": "core_file",
       "type": "boolean"
     },
     {
       "cli": "--daemonize[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_daemonize",
       "name": "daemonize",
       "type": "boolean"
@@ -61,6 +62,7 @@
     {
       "cli": "--datadir=dir_name",
       "dynamic": false,
+      "id": "sysvar_datadir",
       "name": "datadir",
       "scope": [
         "global"
@@ -110,14 +112,14 @@
     },
     {
       "cli": "--external-locking[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_external-locking",
       "name": "external_locking",
       "type": "boolean"
     },
     {
       "cli": "--flush[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "option_mysqld_flush",
       "name": "flush",
@@ -128,21 +130,21 @@
     },
     {
       "cli": "--gdb[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_gdb",
       "name": "gdb",
       "type": "boolean"
     },
     {
       "cli": "--initialize[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_initialize",
       "name": "initialize",
       "type": "boolean"
     },
     {
       "cli": "--initialize-insecure[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_initialize-insecure",
       "name": "initialize_insecure",
       "type": "boolean"
@@ -170,7 +172,7 @@
     },
     {
       "cli": "--large-pages[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": false,
       "id": "option_mysqld_large-pages",
       "name": "large_pages",
@@ -181,7 +183,7 @@
     },
     {
       "cli": "--lc-messages=name",
-      "default": "en_us",
+      "default": "en_US",
       "dynamic": true,
       "id": "option_mysqld_lc-messages",
       "name": "lc_messages",
@@ -223,26 +225,15 @@
       "type": "file name"
     },
     {
-      "cli": "--log-queries-not-using-indexes[={OFF|ON}]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_log-queries-not-using-indexes",
-      "name": "log_queries_not_using_indexes",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--log-raw[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_log-raw",
       "name": "log_raw",
       "type": "boolean"
     },
     {
       "cli": "--log-short-format[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_log-short-format",
       "name": "log_short_format",
       "type": "boolean"
@@ -279,35 +270,8 @@
       "type": "integer"
     },
     {
-      "cli": "--low-priority-updates[={OFF|ON}]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_low-priority-updates",
-      "name": "low_priority_updates",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--min-examined-row-limit=#",
-      "default": "0",
-      "dynamic": true,
-      "id": "option_mysqld_min-examined-row-limit",
-      "name": "min_examined_row_limit",
-      "range": {
-        "from": 0
-      },
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--memlock[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_memlock",
       "name": "memlock",
       "type": "boolean"
@@ -324,49 +288,25 @@
       "type": "integer"
     },
     {
-      "cli": "--myisam-recover-options[=name]",
-      "default": "off",
-      "id": "option_mysqld_myisam-recover-options",
-      "name": "myisam_recover_options",
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "DEFAULT",
-        "BACKUP",
-        "FORCE",
-        "QUICK"
-      ]
-    },
-    {
       "cli": "--no-dd-upgrade[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_no-dd-upgrade",
       "name": "no_dd_upgrade",
       "type": "boolean"
     },
     {
       "cli": "--no-monitor[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_no-monitor",
       "name": "no_monitor",
       "type": "boolean"
     },
     {
       "cli": "--old-style-user-limits[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_old-style-user-limits",
       "name": "old_style_user_limits",
       "type": "boolean"
-    },
-    {
-      "cli": "--pid-file=file_name",
-      "dynamic": false,
-      "id": "option_mysqld_pid-file",
-      "name": "pid_file",
-      "scope": [
-        "global"
-      ],
-      "type": "file name"
     },
     {
       "cli": "--plugin-load=plugin_list",
@@ -417,28 +357,14 @@
     },
     {
       "cli": "--safe-user-create[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_safe-user-create",
       "name": "safe_user_create",
       "type": "boolean"
     },
     {
-      "cli": "--secure-auth[={OFF|ON}]",
-      "default": "on",
-      "dynamic": true,
-      "id": "option_mysqld_secure-auth",
-      "name": "secure_auth",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean",
-      "validValues": [
-        "ON"
-      ]
-    },
-    {
       "cli": "--skip-grant-tables[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_skip-grant-tables",
       "name": "skip_grant_tables",
       "type": "boolean"
@@ -449,42 +375,9 @@
       "name": "skip_host_cache"
     },
     {
-      "cli": "--skip-name-resolve[={OFF|ON}]",
-      "default": "off",
-      "dynamic": false,
-      "id": "option_mysqld_skip-name-resolve",
-      "name": "skip_name_resolve",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--skip-networking",
-      "dynamic": false,
-      "id": "option_mysqld_skip-networking",
-      "name": "skip_networking",
-      "scope": [
-        "global"
-      ]
-    },
-    {
-      "cli": "--standalone",
-      "id": "option_mysqld_standalone",
-      "name": "standalone"
-    },
-    {
-      "cli": "--super-large-pages[={OFF|ON}]",
-      "default": "off",
-      "id": "option_mysqld_super-large-pages",
-      "name": "super_large_pages",
-      "type": "boolean"
-    },
-    {
-      "cli": "--symbolic-links[={OFF|ON}]",
-      "id": "option_mysqld_symbolic-links",
-      "name": "symbolic_links",
-      "type": "boolean"
+      "cli": "--skip-new",
+      "id": "option_mysqld_skip-new",
+      "name": "skip_new"
     },
     {
       "cli": "--skip-show-database",
@@ -535,7 +428,7 @@
     },
     {
       "cli": "--super-large-pages[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_super-large-pages",
       "name": "super_large_pages",
       "type": "boolean"
@@ -548,14 +441,14 @@
     },
     {
       "cli": "--sysdate-is-now[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_sysdate-is-now",
       "name": "sysdate_is_now",
       "type": "boolean"
     },
     {
       "cli": "--tc-heuristic-recover=name",
-      "default": "commit",
+      "default": "COMMIT",
       "id": "option_mysqld_tc-heuristic-recover",
       "name": "tc_heuristic_recover",
       "type": "enumeration",
@@ -572,7 +465,7 @@
     },
     {
       "cli": "--transaction-isolation=name",
-      "default": "repeatable-read",
+      "default": "REPEATABLE-READ",
       "dynamic": true,
       "id": "option_mysqld_transaction-isolation",
       "name": "transaction_isolation",
@@ -590,7 +483,7 @@
     },
     {
       "cli": "--transaction-read-only[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "option_mysqld_transaction-read-only",
       "name": "transaction_read_only",
@@ -612,7 +505,7 @@
     },
     {
       "cli": "--upgrade=value",
-      "default": "auto",
+      "default": "AUTO",
       "id": "option_mysqld_upgrade",
       "name": "upgrade",
       "type": "enumeration",
@@ -631,7 +524,7 @@
     },
     {
       "cli": "--validate-config[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_validate-config",
       "name": "validate_config",
       "type": "boolean"

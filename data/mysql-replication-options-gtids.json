@@ -1,52 +1,8 @@
 {
   "data": [
     {
-      "cli": "--enforce-gtid-consistency[=value]",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_enforce-gtid-consistency",
-      "name": "enforce_gtid_consistency",
-      "scope": [
-        "global"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "ON",
-        "WARN"
-      ]
-    },
-    {
-      "cli": "--gtid-mode=MODE",
-      "default": "off",
-      "dynamic": true,
-      "id": "option_mysqld_gtid-mode",
-      "name": "gtid_mode",
-      "scope": [
-        "global"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "OFF_PERMISSIVE",
-        "ON_PERMISSIVE",
-        "ON"
-      ]
-    },
-    {
-      "cli": "--gtid-executed-compression-period=#",
-      "default": "1000",
-      "id": "option_mysqld_gtid-executed-compression-period",
-      "name": "gtid_executed_compression_period",
-      "range": {
-        "from": 0,
-        "to": 4294967295
-      },
-      "type": "integer"
-    },
-    {
       "cli": "--binlog-gtid-simple-recovery[={OFF|ON}]",
-      "default": "on",
+      "default": "ON",
       "dynamic": false,
       "id": "sysvar_binlog_gtid_simple_recovery",
       "name": "binlog_gtid_simple_recovery",
@@ -57,7 +13,7 @@
     },
     {
       "cli": "--enforce-gtid-consistency[=value]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_enforce_gtid_consistency",
       "name": "enforce_gtid_consistency",
@@ -98,7 +54,7 @@
     },
     {
       "cli": "--gtid-mode=MODE",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_gtid_mode",
       "name": "gtid_mode",
@@ -114,7 +70,7 @@
       ]
     },
     {
-      "default": "automatic",
+      "default": "AUTOMATIC",
       "dynamic": true,
       "id": "sysvar_gtid_next",
       "name": "gtid_next",

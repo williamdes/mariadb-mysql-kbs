@@ -40,7 +40,7 @@
     },
     {
       "cli": "--binlog-checksum=type",
-      "default": "crc32",
+      "default": "CRC32",
       "id": "option_mysqld_binlog-checksum",
       "name": "binlog_checksum",
       "type": "string",
@@ -48,13 +48,6 @@
         "NONE",
         "CRC32"
       ]
-    },
-    {
-      "cli": "--master-verify-checksum[={OFF|ON}]",
-      "default": "off",
-      "id": "option_mysqld_master-verify-checksum",
-      "name": "master_verify_checksum",
-      "type": "boolean"
     },
     {
       "cli": "--max-binlog-dump-events=#",
@@ -65,7 +58,7 @@
     },
     {
       "cli": "--sporadic-binlog-dump-fail[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "id": "option_mysqld_sporadic-binlog-dump-fail",
       "name": "sporadic_binlog_dump_fail",
       "type": "boolean"
@@ -86,7 +79,7 @@
     },
     {
       "cli": "--binlog-checksum=name",
-      "default": "crc32",
+      "default": "CRC32",
       "dynamic": true,
       "id": "sysvar_binlog_checksum",
       "name": "binlog_checksum",
@@ -101,7 +94,7 @@
     },
     {
       "cli": "--binlog-direct-non-transactional-updates[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_binlog_direct_non_transactional_updates",
       "name": "binlog_direct_non_transactional_updates",
@@ -113,7 +106,7 @@
     },
     {
       "cli": "--binlog-encryption[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_binlog_encryption",
       "name": "binlog_encryption",
@@ -124,7 +117,7 @@
     },
     {
       "cli": "--binlog-error-action[=value]",
-      "default": "abort_server",
+      "default": "ABORT_SERVER",
       "dynamic": true,
       "id": "sysvar_binlog_error_action",
       "name": "binlog_error_action",
@@ -153,7 +146,7 @@
     },
     {
       "cli": "--binlog-format=format",
-      "default": "row",
+      "default": "ROW",
       "dynamic": true,
       "id": "sysvar_binlog_format",
       "name": "binlog_format",
@@ -215,7 +208,7 @@
     },
     {
       "cli": "--binlog-order-commits[={OFF|ON}]",
-      "default": "on",
+      "default": "ON",
       "dynamic": true,
       "id": "sysvar_binlog_order_commits",
       "name": "binlog_order_commits",
@@ -226,7 +219,7 @@
     },
     {
       "cli": "--binlog-rotate-encryption-master-key-at-startup[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": false,
       "id": "sysvar_binlog_rotate_encryption_master_key_at_startup",
       "name": "binlog_rotate_encryption_master_key_at_startup",
@@ -264,7 +257,7 @@
     },
     {
       "cli": "--binlog-row-metadata=metadata_type",
-      "default": "minimal",
+      "default": "MINIMAL",
       "dynamic": true,
       "id": "sysvar_binlog_row_metadata",
       "name": "binlog_row_metadata",
@@ -294,7 +287,7 @@
     },
     {
       "cli": "--binlog-rows-query-log-events[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_binlog_rows_query_log_events",
       "name": "binlog_rows_query_log_events",
@@ -320,7 +313,7 @@
     },
     {
       "cli": "--binlog-transaction-dependency-tracking=value",
-      "default": "commit_order",
+      "default": "COMMIT_ORDER",
       "dynamic": true,
       "id": "sysvar_binlog_transaction_dependency_tracking",
       "name": "binlog_transaction_dependency_tracking",
@@ -393,7 +386,7 @@
     },
     {
       "cli": "--log-bin-trust-function-creators[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_log_bin_trust_function_creators",
       "name": "log_bin_trust_function_creators",
@@ -404,7 +397,7 @@
     },
     {
       "cli": "--log-bin-use-v1-row-events[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": false,
       "id": "sysvar_log_bin_use_v1_row_events",
       "name": "log_bin_use_v1_row_events",
@@ -415,7 +408,7 @@
     },
     {
       "cli": "--log-builtin-as-identified-by-password[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_log_builtin_as_identified_by_password",
       "name": "log_builtin_as_identified_by_password",
@@ -436,7 +429,7 @@
     },
     {
       "cli": "--log-statements-unsafe-for-binlog[={OFF|ON}]",
-      "default": "on",
+      "default": "ON",
       "dynamic": true,
       "id": "sysvar_log_statements_unsafe_for_binlog",
       "name": "log_statements_unsafe_for_binlog",
@@ -447,7 +440,7 @@
     },
     {
       "cli": "--master-verify-checksum[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_master_verify_checksum",
       "name": "master_verify_checksum",
@@ -511,7 +504,7 @@
       "type": "numeric"
     },
     {
-      "default": "on",
+      "default": "ON",
       "dynamic": true,
       "id": "sysvar_sql_log_bin",
       "name": "sql_log_bin",
@@ -537,7 +530,7 @@
     },
     {
       "cli": "--transaction-write-set-extraction[=value]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_transaction_write_set_extraction",
       "name": "transaction_write_set_extraction",

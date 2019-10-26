@@ -2,7 +2,7 @@
   "data": [
     {
       "cli": "--performance-schema[={OFF|ON}]",
-      "default": "on",
+      "default": "ON",
       "dynamic": false,
       "id": "sysvar_performance_schema",
       "name": "performance_schema",

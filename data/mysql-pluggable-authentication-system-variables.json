@@ -2,7 +2,7 @@
   "data": [
     {
       "cli": "--authentication-ldap-sasl-auth-method-name=value",
-      "default": "scram-sha-1",
+      "default": "SCRAM-SHA-1",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_sasl_auth_method_name",
       "name": "authentication_ldap_sasl_auth_method_name",
@@ -13,7 +13,7 @@
     },
     {
       "cli": "--authentication-ldap-sasl-bind-base-dn=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_sasl_bind_base_dn",
       "name": "authentication_ldap_sasl_bind_base_dn",
@@ -24,7 +24,7 @@
     },
     {
       "cli": "--authentication-ldap-sasl-bind-root-dn=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_sasl_bind_root_dn",
       "name": "authentication_ldap_sasl_bind_root_dn",
@@ -35,7 +35,7 @@
     },
     {
       "cli": "--authentication-ldap-sasl-bind-root-pwd=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_sasl_bind_root_pwd",
       "name": "authentication_ldap_sasl_bind_root_pwd",
@@ -46,7 +46,7 @@
     },
     {
       "cli": "--authentication-ldap-sasl-ca-path=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_sasl_ca_path",
       "name": "authentication_ldap_sasl_ca_path",
@@ -68,7 +68,7 @@
     },
     {
       "cli": "--authentication-ldap-sasl-group-search-filter=value",
-      "default": "(|(&(objectclass=posixgroup)(memberuid=%s))(&(objectclass=group)(member=%s)))",
+      "default": "(|(&(objectClass=posixGroup)(memberUid=%s))(&(objectClass=group)(member=%s)))",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_sasl_group_search_filter",
       "name": "authentication_ldap_sasl_group_search_filter",
@@ -148,7 +148,7 @@
     },
     {
       "cli": "--authentication-ldap-sasl-tls[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_sasl_tls",
       "name": "authentication_ldap_sasl_tls",
@@ -170,7 +170,7 @@
     },
     {
       "cli": "--authentication-ldap-simple-auth-method-name=value",
-      "default": "simple",
+      "default": "SIMPLE",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_simple_auth_method_name",
       "name": "authentication_ldap_simple_auth_method_name",
@@ -181,7 +181,7 @@
     },
     {
       "cli": "--authentication-ldap-simple-bind-base-dn=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_simple_bind_base_dn",
       "name": "authentication_ldap_simple_bind_base_dn",
@@ -192,7 +192,7 @@
     },
     {
       "cli": "--authentication-ldap-simple-bind-root-dn=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_simple_bind_root_dn",
       "name": "authentication_ldap_simple_bind_root_dn",
@@ -203,7 +203,7 @@
     },
     {
       "cli": "--authentication-ldap-simple-bind-root-pwd=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_simple_bind_root_pwd",
       "name": "authentication_ldap_simple_bind_root_pwd",
@@ -214,7 +214,7 @@
     },
     {
       "cli": "--authentication-ldap-simple-ca-path=value",
-      "default": "null",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_simple_ca_path",
       "name": "authentication_ldap_simple_ca_path",
@@ -236,7 +236,7 @@
     },
     {
       "cli": "--authentication-ldap-simple-group-search-filter=value",
-      "default": "(|(&(objectclass=posixgroup)(memberuid=%s))(&(objectclass=group)(member=%s)))",
+      "default": "(|(&(objectClass=posixGroup)(memberUid=%s))(&(objectClass=group)(member=%s)))",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_simple_group_search_filter",
       "name": "authentication_ldap_simple_group_search_filter",
@@ -316,7 +316,7 @@
     },
     {
       "cli": "--authentication-ldap-simple-tls[={OFF|ON}]",
-      "default": "off",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_simple_tls",
       "name": "authentication_ldap_simple_tls",

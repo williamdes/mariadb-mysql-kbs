@@ -361,7 +361,7 @@
       ]
     },
     {
-      "cli": "--concurrent-insert[=#]",
+      "cli": "--concurrent-insert[=value]",
       "default": "auto",
       "dynamic": true,
       "id": "sysvar_concurrent_insert",
@@ -839,6 +839,22 @@
         "global"
       ],
       "type": "file name"
+    },
+    {
+      "cli": "--generated-random-password-length=#",
+      "default": "20",
+      "dynamic": true,
+      "id": "sysvar_generated_random_password_length",
+      "name": "generated_random_password_length",
+      "range": {
+        "from": 5,
+        "to": 255
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
     },
     {
       "cli": "--group-concat-max-len=#",
@@ -1799,11 +1815,21 @@
       "type": "integer"
     },
     {
+      "cli": "--myisam-recover-options[=list]",
+      "default": "off",
       "dynamic": false,
       "id": "sysvar_myisam_recover_options",
       "name": "myisam_recover_options",
       "scope": [
         "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "DEFAULT",
+        "BACKUP",
+        "FORCE",
+        "QUICK"
       ]
     },
     {
@@ -2889,13 +2915,15 @@
       "type": "boolean"
     },
     {
-      "cli": "--skip-networking",
+      "cli": "--skip-networking[={OFF|ON}]",
+      "default": "off",
       "dynamic": false,
       "id": "sysvar_skip_networking",
       "name": "skip_networking",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--skip-show-database",

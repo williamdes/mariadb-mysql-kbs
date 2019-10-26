@@ -701,10 +701,14 @@
       "type": "integer"
     },
     {
-      "cli": "--slave-parallel-type=type",
+      "cli": "--slave-parallel-type=value",
       "default": "database",
+      "dynamic": true,
       "id": "sysvar_slave_parallel_type",
       "name": "slave_parallel_type",
+      "scope": [
+        "global"
+      ],
       "type": "enumeration",
       "validValues": [
         "DATABASE",

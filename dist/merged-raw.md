@@ -343,7 +343,7 @@
 |name|value|
 |----|-----|
 |Name|`aria_recover_options`|
-|Command line|`--aria-recover[=#]`|
+|Command line|`--aria-recover-options[=#]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`BACKUP,QUICK (>= MariaDB 10.2.4), NORMAL (<= MariaDB 10.2.3)`|
@@ -903,16 +903,6 @@
 |------|----|
 |mariadb.com|[connect_xtrace](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_xtrace)|
 
-## wsrep
-|name|value|
-|----|-----|
-|Name|`wsrep`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[wsrep](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep)|
-
 ## wsrep_apply_oooe
 |name|value|
 |----|-----|
@@ -933,6 +923,16 @@
 |------|----|
 |mariadb.com|[wsrep_apply_oool](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_apply_oool)|
 
+## wsrep_apply_window
+|name|value|
+|----|-----|
+|Name|`wsrep_apply_window`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_apply_window](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_apply_window)|
+
 ## wsrep_cert_deps_distance
 |name|value|
 |----|-----|
@@ -942,6 +942,28 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[wsrep_cert_deps_distance](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_cert_deps_distance)|
+
+## wsrep_cert_index_size
+|name|value|
+|----|-----|
+|Name|`wsrep_cert_index_size`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_cert_index_size](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_cert_index_size)|
+
+## wsrep_cert_interval
+|name|value|
+|----|-----|
+|Name|`wsrep_cert_interval`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_cert_interval](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_cert_interval)|
 
 ## wsrep_cluster_capabilities
 |name|value|
@@ -995,6 +1017,46 @@
 |------|----|
 |mariadb.com|[wsrep_cluster_status](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_cluster_status)|
 
+## wsrep_cluster_weight
+|name|value|
+|----|-----|
+|Name|`wsrep_cluster_weight`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_cluster_weight](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_cluster_weight)|
+
+## wsrep_commit_oooe
+|name|value|
+|----|-----|
+|Name|`wsrep_commit_oooe`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_commit_oooe](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_commit_oooe)|
+
+## wsrep_commit_oool
+|name|value|
+|----|-----|
+|Name|`wsrep_commit_oool`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_commit_oool](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_commit_oool)|
+
+## wsrep_commit_window
+|name|value|
+|----|-----|
+|Name|`wsrep_commit_window`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_commit_window](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_commit_window)|
+
 ## wsrep_connected
 |name|value|
 |----|-----|
@@ -1004,6 +1066,57 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[wsrep_connected](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_connected)|
+
+## wsrep_desync_count
+|name|value|
+|----|-----|
+|Name|`wsrep_desync_count`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_desync_count](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_desync_count)|
+
+## wsrep_evs_delayed
+|name|value|
+|----|-----|
+|Name|`wsrep_evs_delayed`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_evs_delayed](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_evs_delayed)|
+
+## wsrep_evs_evict_list
+|name|value|
+|----|-----|
+|Name|`wsrep_evs_evict_list`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_evs_evict_list](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_evs_evict_list)|
+
+## wsrep_evs_repl_latency
+|name|value|
+|----|-----|
+|Name|`wsrep_evs_repl_latency`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_evs_repl_latency](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_evs_repl_latency)|
+
+## wsrep_evs_state
+|name|value|
+|----|-----|
+|Name|`wsrep_evs_state`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_evs_state](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_evs_state)|
 
 ## wsrep_flow_control_paused
 |name|value|
@@ -1057,6 +1170,16 @@
 |------|----|
 |mariadb.com|[wsrep_gcomm_uuid](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_gcomm_uuid)|
 
+## wsrep_incoming_addresses
+|name|value|
+|----|-----|
+|Name|`wsrep_incoming_addresses`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_incoming_addresses](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_incoming_addresses)|
+
 ## wsrep_last_committed
 |name|value|
 |----|-----|
@@ -1078,6 +1201,16 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[wsrep_local_bf_aborts](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_local_bf_aborts)|
+
+## wsrep_local_cached_downto
+|name|value|
+|----|-----|
+|Name|`wsrep_local_cached_downto`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_local_cached_downto](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_local_cached_downto)|
 
 ## wsrep_local_cert_failures
 |name|value|
@@ -1132,6 +1265,26 @@
 |------|----|
 |mariadb.com|[wsrep_local_recv_queue_avg](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_local_recv_queue_avg)|
 
+## wsrep_local_recv_queue_max
+|name|value|
+|----|-----|
+|Name|`wsrep_local_recv_queue_max`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_local_recv_queue_max](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_local_recv_queue_max)|
+
+## wsrep_local_recv_queue_min
+|name|value|
+|----|-----|
+|Name|`wsrep_local_recv_queue_min`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_local_recv_queue_min](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_local_recv_queue_min)|
+
 ## wsrep_local_replays
 |name|value|
 |----|-----|
@@ -1164,6 +1317,26 @@
 |------|----|
 |mariadb.com|[wsrep_local_send_queue_avg](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_local_send_queue_avg)|
 
+## wsrep_local_send_queue_max
+|name|value|
+|----|-----|
+|Name|`wsrep_local_send_queue_max`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_local_send_queue_max](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_local_send_queue_max)|
+
+## wsrep_local_send_queue_min
+|name|value|
+|----|-----|
+|Name|`wsrep_local_send_queue_min`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_local_send_queue_min](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_local_send_queue_min)|
+
 ## wsrep_local_state
 |name|value|
 |----|-----|
@@ -1193,6 +1366,28 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[wsrep_local_state_uuid](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_local_state_uuid)|
+
+## wsrep_open_connections
+|name|value|
+|----|-----|
+|Name|`wsrep_open_connections`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_open_connections](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_open_connections)|
+
+## wsrep_open_transactions
+|name|value|
+|----|-----|
+|Name|`wsrep_open_transactions`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_open_transactions](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_open_transactions)|
 
 ## wsrep_protocol_version
 |name|value|
@@ -1266,6 +1461,50 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[wsrep_received_bytes](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_received_bytes)|
+
+## wsrep_repl_data_bytes
+|name|value|
+|----|-----|
+|Name|`wsrep_repl_data_bytes`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_repl_data_bytes](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_repl_data_bytes)|
+
+## wsrep_repl_keys
+|name|value|
+|----|-----|
+|Name|`wsrep_repl_keys`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_repl_keys](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_repl_keys)|
+
+## wsrep_repl_keys_bytes
+|name|value|
+|----|-----|
+|Name|`wsrep_repl_keys_bytes`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_repl_keys_bytes](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_repl_keys_bytes)|
+
+## wsrep_repl_other_bytes
+|name|value|
+|----|-----|
+|Name|`wsrep_repl_other_bytes`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_repl_other_bytes](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_repl_other_bytes)|
 
 ## wsrep_replicated
 |name|value|
@@ -2130,7 +2369,7 @@
 |------|----|
 |mariadb.com|[server_id](https://mariadb.com/kb/en/library/documentation/gtid/#server_id)|
 |mariadb.com|[server_id](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#server_id)|
-|dev.mysql.com|[option_mysqld_server-id](https://dev.mysql.com/doc/refman/8.0/en/replication-options.html#option_mysqld_server-id)|
+|dev.mysql.com|[sysvar_server_id](https://dev.mysql.com/doc/refman/8.0/en/replication-options.html#sysvar_server_id)|
 |dev.mysql.com|[sysvar_server_id](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_server_id)|
 
 ## gtid_seq_no
@@ -3006,8 +3245,11 @@
 |name|value|
 |----|-----|
 |Name|`myisam_recover_options`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
+|Default value|`0`|
 |Dynamic|`false`|
+|Valid value(s)|`OFF`, `DEFAULT`, `BACKUP`, `BACKUP_ALL`, `FORCE`, `QUICK`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -5882,6 +6124,21 @@
 |mariadb.com|[binlog_row_image](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_row_image)|
 |dev.mysql.com|[sysvar_binlog_row_image](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_image)|
 |dev.mysql.com|[sysvar_binlog_row_image](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image)|
+
+## binlog_row_metadata
+|name|value|
+|----|-----|
+|Name|`binlog_row_metadata`|
+|Type of variable|`enumeration`|
+|Default value|`minimal`|
+|Dynamic|`true`|
+|Valid value(s)|`NO_LOG`, `MINIMAL`, `FULL`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_row_metadata](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_row_metadata)|
+|dev.mysql.com|[sysvar_binlog_row_metadata](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_metadata)|
 
 ## binlog_stmt_cache_size
 |name|value|
@@ -15006,8 +15263,10 @@
 |name|value|
 |----|-----|
 |Name|`skip_networking`|
-|Command line|`--skip-networking`|
+|Command line|`--skip-networking[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`off`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -23648,7 +23907,6 @@
 |Scope|`global`|
 |Default value|`6`|
 |Dynamic|`true`|
-|Range|from: `0` to: `9`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29026,22 +29284,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_binlog_rotate_encryption_master_key_at_startup](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_rotate_encryption_master_key_at_startup)|
 
-## binlog_row_metadata
-|name|value|
-|----|-----|
-|Name|`binlog_row_metadata`|
-|Command line|`--binlog-row-metadata=metadata_type`|
-|Type of variable|`enumeration`|
-|Scope|`global`|
-|Default value|`minimal`|
-|Dynamic|`true`|
-|Valid value(s)|`FULL`, `MINIMAL`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_binlog_row_metadata](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_metadata)|
-
 ## binlog_row_value_options
 |name|value|
 |----|-----|
@@ -29237,6 +29479,7 @@
 |name|value|
 |----|-----|
 |Name|`gtid_mode`|
+|Command line|`--gtid-mode=MODE`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`off`|
@@ -29253,6 +29496,7 @@
 |name|value|
 |----|-----|
 |Name|`gtid_executed_compression_period`|
+|Command line|`--gtid-executed-compression-period=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`1000`|
@@ -29496,9 +29740,10 @@
 |name|value|
 |----|-----|
 |Name|`slave_parallel_type`|
-|Command line|`--slave-parallel-type=type`|
 |Type of variable|`enumeration`|
+|Scope|`global`|
 |Default value|`database`|
+|Dynamic|`true`|
 |Valid value(s)|`DATABASE`, `LOGICAL_CLOCK`|
 
 ### Documentation(s)
@@ -30546,6 +30791,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_end_markers_in_json](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_end_markers_in_json)|
+
+## generated_random_password_length
+|name|value|
+|----|-----|
+|Name|`generated_random_password_length`|
+|Command line|`--generated-random-password-length=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`20`|
+|Dynamic|`true`|
+|Range|from: `5` to: `255`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_generated_random_password_length](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_generated_random_password_length)|
 
 ## have_statement_timeout
 |name|value|
@@ -31769,7 +32030,7 @@
 |name|value|
 |----|-----|
 |Name|`mysqlx_enable_hello_notice`|
-|Command line|`--mysqlx-document-id-unique-prefix[={OFF|ON}]`|
+|Command line|`--mysqlx-enable-hello-notice[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`on`|

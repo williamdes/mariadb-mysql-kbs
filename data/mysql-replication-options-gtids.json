@@ -82,6 +82,7 @@
       "type": "string"
     },
     {
+      "cli": "--gtid-executed-compression-period=#",
       "default": "1000",
       "dynamic": true,
       "id": "sysvar_gtid_executed_compression_period",
@@ -96,6 +97,7 @@
       "type": "integer"
     },
     {
+      "cli": "--gtid-mode=MODE",
       "default": "off",
       "dynamic": true,
       "id": "sysvar_gtid_mode",

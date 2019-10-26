@@ -83,9 +83,33 @@ const cleanRange = function(range) {
     return range;
 };
 
+/**
+ * Clean a default value
+ * @param {String} defaultValue The default value
+ */
+const cleanDefault = function(defaultValue) {
+    if (defaultValue === 'Autosized (see description)') {
+        defaultValue = '(autosized)';
+    }
+    if (defaultValue.indexOf('Based on the number of processors') !== -1) {
+        defaultValue = '(based on the number of processors)';
+    }
+    if (defaultValue === 'The MariaDB data directory') {
+        defaultValue = '(the MariaDB data directory)';
+    }
+    if (defaultValue.match(/-1 \(signifies (autoscaling); do not assign this literal value\)/g)) {
+        defaultValue = '(-1 signifies autoscaling; do not use -1)';
+    }
+    if (defaultValue.match(/-1 \(signifies (autosizing); do not assign this literal value\)/g)) {
+        defaultValue = '(-1 signifies autosizing; do not use -1)';
+    }
+    return defaultValue;
+};
+
 module.exports = {
     regexCli: regexCli,
     cleanType: cleanType,
     cleanCli: cleanCli,
     cleanRange: cleanRange,
+    cleanDefault: cleanDefault,
 };

@@ -69,10 +69,12 @@ function completeDoc($, rows, doc) {
                 }
                 break;
             case 'default value':
-                doc.default = value
-                    .text()
-                    .toLowerCase()
-                    .trim();
+                doc.default = cleaner.cleanDefault(
+                    value
+                        .text()
+                        .toLowerCase()
+                        .trim()
+                );
                 break;
             case 'valid values':
                 doc.validValues = $(value)

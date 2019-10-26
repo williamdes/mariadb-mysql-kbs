@@ -111,7 +111,7 @@ const createDoc = function($, element) {
                         .trim();
                     doc.default = doc.default
                         .split('\n')
-                        .map(el => el.trim())
+                        .map(el => cleaner.cleanDefault(el.trim()))
                         .join(', ');
                     break;
                 case 'valid values:':

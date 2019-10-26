@@ -49,16 +49,16 @@ const regexCli = /([-]{2})([0-9a-z-_]+)/i;
  * @returns {String} The cleaned cli
  */
 const cleanCli = function(cli, skipRegex = false) {
-    if (cli !== undefined && typeof cli === 'string') {
+    if (typeof cli === 'string') {
         if (cli.match(/<code\>/i) || cli.match(/<\/code\>/i)) {
             cli = cli.replace(/<code\>/gi, '');
             cli = cli.replace(/<\/code\>/gi, '');
             cli = cli.replace(/\>/gi, '');
             cli = cli.replace(/</gi, '');
         }
-    }
-    if (!cli.match(regexCli) && skipRegex === false) {
-        cli = undefined;
+        if (!cli.match(regexCli) && skipRegex === false) {
+            cli = undefined;
+        }
     }
     return cli;
 };

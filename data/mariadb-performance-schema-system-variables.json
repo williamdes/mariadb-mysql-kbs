@@ -343,7 +343,7 @@
     },
     {
       "cli": "--performance-schema-max-statement-classes=#",
-      "default": "Autosized (see description)",
+      "default": "(autosized)",
       "dynamic": false,
       "id": "performance_schema_max_statement_classes",
       "name": "performance_schema_max_statement_classes",

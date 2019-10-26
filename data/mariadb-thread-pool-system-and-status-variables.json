@@ -139,7 +139,7 @@
     },
     {
       "cli": "--thread-pool-size=#",
-      "default": "Based on the number of processors (but see MDEV-7806).",
+      "default": "(based on the number of processors)",
       "dynamic": true,
       "id": "thread_pool_size",
       "name": "thread_pool_size",

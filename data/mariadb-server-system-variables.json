@@ -1091,7 +1091,7 @@
       ]
     },
     {
-      "default": "Autosized (see description)",
+      "default": "(autosized)",
       "dynamic": false,
       "id": "large_page_size",
       "name": "large_page_size",
@@ -1965,7 +1965,7 @@
     },
     {
       "cli": "--open-files-limit=count",
-      "default": "Autosized (see description)",
+      "default": "(autosized)",
       "dynamic": false,
       "id": "open_files_limit",
       "name": "open_files_limit",

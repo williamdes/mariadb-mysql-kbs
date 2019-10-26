@@ -109,7 +109,7 @@
     },
     {
       "cli": "--back-log=#",
-      "default": "-1 (signifies autosizing; do not assign this literal value)",
+      "default": "(-1 signifies autosizing; do not use -1)",
       "dynamic": false,
       "id": "sysvar_back_log",
       "name": "back_log",
@@ -897,7 +897,7 @@
     },
     {
       "cli": "--host-cache-size=#",
-      "default": "-1 (signifies autosizing; do not assign this literal value)",
+      "default": "(-1 signifies autosizing; do not use -1)",
       "dynamic": true,
       "id": "sysvar_host_cache_size",
       "name": "host_cache_size",
@@ -3281,7 +3281,7 @@
     },
     {
       "cli": "--table-definition-cache=#",
-      "default": "-1 (signifies autosizing; do not assign this literal value)",
+      "default": "(-1 signifies autosizing; do not use -1)",
       "dynamic": true,
       "id": "sysvar_table_definition_cache",
       "name": "table_definition_cache",
@@ -3377,7 +3377,7 @@
     },
     {
       "cli": "--thread-cache-size=#",
-      "default": "-1 (signifies autosizing; do not assign this literal value)",
+      "default": "(-1 signifies autosizing; do not use -1)",
       "dynamic": true,
       "id": "sysvar_thread_cache_size",
       "name": "thread_cache_size",

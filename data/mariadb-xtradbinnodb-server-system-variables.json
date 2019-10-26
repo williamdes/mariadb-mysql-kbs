@@ -86,7 +86,7 @@
     },
     {
       "cli": "--innodb-adaptive-hash-index=#",
-      "default": "ON",
+      "default": "OFF (>= MariaDB 10.5), ON (<= MariaDB 10.4)",
       "dynamic": true,
       "id": "innodb_adaptive_hash_index",
       "name": "innodb_adaptive_hash_index",
@@ -754,7 +754,7 @@
     },
     {
       "cli": "--innodb-data-home-dir=path",
-      "default": "The MariaDB data directory",
+      "default": "(the MariaDB data directory)",
       "dynamic": false,
       "id": "innodb_data_home_dir",
       "name": "innodb_data_home_dir",

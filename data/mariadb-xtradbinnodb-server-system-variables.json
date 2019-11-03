@@ -505,6 +505,16 @@
       "type": "integer"
     },
     {
+      "default": "OFF",
+      "dynamic": false,
+      "id": "innodb_change_buffer_dump",
+      "name": "innodb_change_buffer_dump",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-change-buffer-max-size=#",
       "default": "25",
       "dynamic": true,

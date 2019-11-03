@@ -21485,6 +21485,18 @@
                 "41#sysvar_innodb_buffer_pool_size"
             ]
         },
+        "innodb_change_buffer_dump": {
+            "default": "OFF",
+            "dynamic": false,
+            "name": "innodb_change_buffer_dump",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "40#innodb_change_buffer_dump"
+            ]
+        },
         "innodb_change_buffer_max_size": {
             "cli": "--innodb-change-buffer-max-size=#",
             "default": "25",

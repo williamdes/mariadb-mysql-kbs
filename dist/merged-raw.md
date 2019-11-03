@@ -23684,6 +23684,20 @@
 |mariadb.com|[innodb_buffer_pool_size](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_buffer_pool_size)|
 |dev.mysql.com|[sysvar_innodb_buffer_pool_size](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_buffer_pool_size)|
 
+## innodb_change_buffer_dump
+|name|value|
+|----|-----|
+|Name|`innodb_change_buffer_dump`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_change_buffer_dump](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_change_buffer_dump)|
+
 ## innodb_change_buffer_max_size
 |name|value|
 |----|-----|

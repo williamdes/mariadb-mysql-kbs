@@ -27908,6 +27908,21 @@
                 }
             ]
         },
+        "innodb_change_buffer_dump": {
+            "default": "OFF",
+            "dynamic": false,
+            "name": "innodb_change_buffer_dump",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "innodb_change_buffer_dump",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
+                }
+            ]
+        },
         "innodb_change_buffer_max_size": {
             "cli": "--innodb-change-buffer-max-size=#",
             "default": "25",

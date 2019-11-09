@@ -2,3 +2,7 @@ data/* linguist-detectable=false
 dist/* linguist-detectable=false
 docs/* linguist-detectable=false
 test/data/* linguist-detectable=false
+data/* linguist-vendored
+dist/* linguist-vendored
+docs/* linguist-documentation
+test/data/* linguist-vendored

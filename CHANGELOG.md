@@ -5,6 +5,33 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [v1.2.8]
+
+### Added
+
+- [8ca6999](https://github.com/williamdes/mariadb-mysql-kbs/commit/8ca6999e1487a9f43846530a3cc241ef7109b5bf) add: .gitattributes file
+
+### Changed
+
+- [b4afbca](https://github.com/williamdes/mariadb-mysql-kbs/commit/b4afbcabc7b40ebfb5b072de568f60063cf86adb) update: dependencies
+- [856b39c](https://github.com/williamdes/mariadb-mysql-kbs/commit/856b39cbc7027bfee0f22c661960f694bbf08b32) update: [MySQL] updates
+- [9d7b3c3](https://github.com/williamdes/mariadb-mysql-kbs/commit/9d7b3c3b973a3b0fa8fae5adc25f5ef02909203d) update: .gitattributes file
+- [9eab800](https://github.com/williamdes/mariadb-mysql-kbs/commit/9eab8008ee3fc91c8817e744fc3755e7815cee47) update: .gitattributes file
+- [530c6a6](https://github.com/williamdes/mariadb-mysql-kbs/commit/530c6a68d0f12eca9f1b0f4fd0f7d55f825847ae) update: [MariaDB] updates
+- [53bae92](https://github.com/williamdes/mariadb-mysql-kbs/commit/53bae92f735f39271c881858074961fe3bc2e39e) update: [MariaDB] && [MySQL] updates
+- [aeb2ffd](https://github.com/williamdes/mariadb-mysql-kbs/commit/aeb2ffd26fb7810d16a92330978f87f06da280a7) update: [MariaDB] && [MySQL] updates
+- [fd9ac5e](https://github.com/williamdes/mariadb-mysql-kbs/commit/fd9ac5e27e321e4625150e70dac8cb645fcfbfb6) update: [MariaDB] && [MySQL] updates
+- [0860955](https://github.com/williamdes/mariadb-mysql-kbs/commit/0860955d111d44d4e0a6ee3e8392724cbfc32e2a) update: dependencies
+- [215fcf3](https://github.com/williamdes/mariadb-mysql-kbs/commit/215fcf3849a0441c55abd64d7f56119428994218) update: [MySQL] updates
+- [0434d0a](https://github.com/williamdes/mariadb-mysql-kbs/commit/0434d0a918087e1f0f3679ba007ab12d06b6c00d) update: [MySQL] updates
+- [9a65d87](https://github.com/williamdes/mariadb-mysql-kbs/commit/9a65d879cbb67aaf34450d518b6df3d651ee23f5) update: [MariaDB] && [MySQL] updates
+- [6f6f19f](https://github.com/williamdes/mariadb-mysql-kbs/commit/6f6f19fd404bee47239fe6648bca607ceb0b97e0) update: dependencies
+
+### Fixed
+
+- [baee0c0](https://github.com/williamdes/mariadb-mysql-kbs/commit/baee0c02d1428d8d1c8d7e0824bdb5463e68cc7f) fix: some MySQL and MariaDB fixes
+- [185ebb2](https://github.com/williamdes/mariadb-mysql-kbs/commit/185ebb223ba0904e65395f226a13b3bc708014fb) fix: cleanCli undefined
+
 ## [v1.2.7]
 
 ### Changed
@@ -382,7 +409,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [d9cd2a8](https://github.com/williamdes/mariadb-mysql-kbs/commit/d9cd2a8123a67d6adfddf0414988b98fcac9f082) fixed: bug in MariaDB script
 
 
-[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.7...HEAD
+[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.8...HEAD
+[v1.2.8]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.7...v1.2.8
 [v1.2.7]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.6...v1.2.7
 [v1.2.6]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.5...v1.2.6
 [v1.2.5]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.4...v1.2.5

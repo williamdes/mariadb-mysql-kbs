@@ -17044,8 +17044,14 @@
             "scope": [
                 "global"
             ],
+            "type": "string",
+            "validValues": [
+                "YES",
+                "DISABLED"
+            ],
             "ids": [
-                "34#have_ssl"
+                "34#have_ssl",
+                "15#sysvar_have_ssl"
             ]
         },
         "ssl_ca": {
@@ -25588,7 +25594,7 @@
             ]
         },
         "ndb_autoincrement_prefetch_sz": {
-            "default": "1 / 1 - 65536 (Version: 5.5.15-ndb-7.2.1)",
+            "default": "1 / 1 - 256 (Version: NDB 7.5-7.6)",
             "dynamic": true,
             "name": "ndb_autoincrement_prefetch_sz",
             "scope": [
@@ -27628,7 +27634,8 @@
             "name": "log_raw",
             "type": "boolean",
             "ids": [
-                "16#option_mysqld_log-raw"
+                "16#option_mysqld_log-raw",
+                "15#sysvar_log_raw"
             ]
         },
         "log_short_format": {

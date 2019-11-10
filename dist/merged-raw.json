@@ -21994,10 +21994,19 @@
             "scope": [
                 "global"
             ],
+            "type": "string",
+            "validValues": [
+                "YES",
+                "DISABLED"
+            ],
             "ids": [
                 {
                     "anchor": "have_ssl",
                     "url": "https://mariadb.com/kb/en/library/documentation/ssltls-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_have_ssl",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
         },
@@ -33157,7 +33166,7 @@
             ]
         },
         "ndb_autoincrement_prefetch_sz": {
-            "default": "1 / 1 - 65536 (Version: 5.5.15-ndb-7.2.1)",
+            "default": "1 / 1 - 256 (Version: NDB 7.5-7.6)",
             "dynamic": true,
             "name": "ndb_autoincrement_prefetch_sz",
             "scope": [
@@ -35743,6 +35752,10 @@
                 {
                     "anchor": "option_mysqld_log-raw",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                },
+                {
+                    "anchor": "sysvar_log_raw",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
         },

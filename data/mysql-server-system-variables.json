@@ -873,6 +873,19 @@
     },
     {
       "dynamic": false,
+      "id": "sysvar_have_ssl",
+      "name": "have_ssl",
+      "scope": [
+        "global"
+      ],
+      "type": "string",
+      "validValues": [
+        "YES",
+        "DISABLED"
+      ]
+    },
+    {
+      "dynamic": false,
       "id": "sysvar_have_statement_timeout",
       "name": "have_statement_timeout",
       "scope": [
@@ -1274,6 +1287,13 @@
       "scope": [
         "global"
       ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--log-raw[={OFF|ON}]",
+      "default": "OFF",
+      "id": "sysvar_log_raw",
+      "name": "log_raw",
       "type": "boolean"
     },
     {

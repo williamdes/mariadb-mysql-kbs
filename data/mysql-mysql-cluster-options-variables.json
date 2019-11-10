@@ -254,7 +254,7 @@
       "name": "skip-ndbcluster"
     },
     {
-      "default": "1 / 1 - 65536 (Version: 5.5.15-ndb-7.2.1)",
+      "default": "1 / 1 - 256 (Version: NDB 7.5-7.6)",
       "dynamic": true,
       "id": "sysvar_ndb_autoincrement_prefetch_sz",
       "name": "ndb_autoincrement_prefetch_sz",

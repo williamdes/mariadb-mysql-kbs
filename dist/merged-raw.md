@@ -18121,13 +18121,16 @@
 |name|value|
 |----|-----|
 |Name|`have_ssl`|
+|Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Valid value(s)|`YES`, `DISABLED`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[have_ssl](https://mariadb.com/kb/en/library/documentation/ssltls-system-variables/#have_ssl)|
+|dev.mysql.com|[sysvar_have_ssl](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_ssl)|
 
 ## ssl_ca
 |name|value|
@@ -27947,7 +27950,7 @@
 |----|-----|
 |Name|`ndb_autoincrement_prefetch_sz`|
 |Scope|`global`, `session`|
-|Default value|`1 / 1 - 65536 (Version: 5.5.15-ndb-7.2.1)`|
+|Default value|`1 / 1 - 256 (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -30247,6 +30250,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_log-raw](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_log-raw)|
+|dev.mysql.com|[sysvar_log_raw](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_raw)|
 
 ## log_short_format
 |name|value|

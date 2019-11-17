@@ -141,10 +141,10 @@ const createDoc = function($, element) {
                 case 'commandline:':
                     if (
                         typeof value === 'string' &&
-                        (value.toLowerCase() !== 'no' &&
-                            value.toLowerCase() !== 'none' &&
-                            value.toLowerCase() !== 'n/a' &&
-                            value.toLowerCase() !== 'no commandline option')
+                        value.toLowerCase() !== 'no' &&
+                        value.toLowerCase() !== 'none' &&
+                        value.toLowerCase() !== 'n/a' &&
+                        value.toLowerCase() !== 'no commandline option'
                     ) {
                         doc.cli = cleaner.cleanCli(value, true);
                     }

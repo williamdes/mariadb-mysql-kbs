@@ -40,6 +40,14 @@ const cleanType = function(type) {
     return type;
 };
 
+const getCleanTypeFromMixedString = function(mixedString) {
+    return realTypes.find(function(realTypeToTest) {
+        if (mixedString.indexOf(realTypeToTest) !== -1) {
+            return true;
+        }
+    });
+};
+
 const regexCli = /([-]{2})([0-9a-z-_]+)/i;
 
 /**
@@ -120,6 +128,8 @@ const cleanTextDefault = function(defaultTextValue) {
 };
 
 module.exports = {
+    getCleanTypeFromMixedString: getCleanTypeFromMixedString,
+    realTypes: realTypes,
     regexCli: regexCli,
     cleanType: cleanType,
     cleanCli: cleanCli,

@@ -189,5 +189,15 @@ module.exports = function() {
             expect(type).to.deep.equal(undefined);
             done();
         });
+        test('get clean type from a mixed string dataset-1', function(done) {
+            const foundType = cleaner.getCleanTypeFromMixedString('boolean: ON (Version: 5.7)');
+            expect(foundType).to.equal('boolean');
+            done();
+        });
+        test('get clean type from a mixed string dataset-2', function(done) {
+            const foundType = cleaner.getCleanTypeFromMixedString('numeric: 15');
+            expect(foundType).to.equal('numeric');
+            done();
+        });
     });
 };

@@ -125,5 +125,192 @@ module.exports = function() {
                 done();
             });
         });
+        test('test case 4', function(done) {
+            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_4.html'));
+            MySQL.parsePage($, function(resultData) {
+                expect(resultData).to.deep.equal([
+                    { id: 'option_mysqld_ndbcluster', name: 'ndbcluster', cli: '--ndbcluster', dynamic: false },
+                    {
+                        id: 'option_mysqld_ndb-allow-copying-alter-table',
+                        name: 'ndb-allow-copying-alter-table',
+                        cli: '--ndb-allow-copying-alter-table=[ON|OFF]',
+                        scope: ['global', 'session'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-batch-size',
+                        name: 'ndb-batch-size',
+                        cli: '--ndb-batch-size=#',
+                        scope: ['global'],
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-cluster-connection-pool',
+                        name: 'ndb-cluster-connection-pool',
+                        cli: '--ndb-cluster-connection-pool=#',
+                        scope: ['global'],
+                        dynamic: false,
+                        default: '1 / 1 - 63 (Version: NDB 7.5-7.6)',
+                    },
+                    {
+                        id: 'option_mysqld_ndb-cluster-connection-pool-nodeids',
+                        name: 'ndb-cluster-connection-pool-nodeids',
+                        cli: '--ndb-cluster-connection-pool-nodeids=list',
+                        scope: ['global'],
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-blob-read-batch-bytes',
+                        name: 'ndb-blob-read-batch-bytes',
+                        cli: '--ndb-blob-read-batch-bytes=bytes',
+                        scope: ['global', 'session'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-blob-write-batch-bytes',
+                        name: 'ndb-blob-write-batch-bytes',
+                        cli: '--ndb-blob-write-batch-bytes=bytes',
+                        scope: ['global', 'session'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-connectstring',
+                        name: 'ndb-connectstring',
+                        cli: '--ndb-connectstring=connection_string',
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-default-column-format',
+                        name: 'ndb-default-column-format',
+                        cli: '--ndb-default-column-format=[FIXED|DYNAMIC]',
+                        scope: ['global'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-deferred-constraints',
+                        name: 'ndb-deferred-constraints',
+                        cli: '--ndb-deferred-constraints=[0|1]',
+                        scope: ['global', 'session'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-distribution',
+                        name: 'ndb-distribution',
+                        cli: '--ndb-distribution=[KEYHASH|LINHASH]',
+                        scope: ['global'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-log-apply-status',
+                        name: 'ndb-log-apply-status',
+                        cli: '--ndb-log-apply-status',
+                        scope: ['global'],
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-log-empty-epochs',
+                        name: 'ndb-log-empty-epochs',
+                        cli: '--ndb-log-empty-epochs=[ON|OFF]',
+                        scope: ['global'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-log-empty-update',
+                        name: 'ndb-log-empty-update',
+                        cli: '--ndb-log-empty-update=[ON|OFF]',
+                        scope: ['global'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-log-exclusive-reads',
+                        name: 'ndb-log-exclusive-reads',
+                        cli: '--ndb-log-exclusive-reads=[0|1]',
+                        scope: ['global', 'session'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-log-orig',
+                        name: 'ndb-log-orig',
+                        cli: '--ndb-log-orig',
+                        scope: ['global'],
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-log-transaction-id',
+                        name: 'ndb-log-transaction-id',
+                        cli: '--ndb-log-transaction-id',
+                        scope: ['global'],
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-log-update-minimal',
+                        name: 'ndb-log-update-minimal',
+                        cli: '--ndb-log-update-minimal',
+                        scope: ['global'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-mgmd-host',
+                        name: 'ndb-mgmd-host',
+                        cli: '--ndb-mgmd-host=host[:port]',
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-nodeid',
+                        name: 'ndb-nodeid',
+                        cli: '--ndb-nodeid=#',
+                        scope: ['global'],
+                        dynamic: false,
+                        default: '/ 1 - 255 (Version: 5.1.5)',
+                    },
+                    {
+                        id: 'option_mysqld_ndb-optimization-delay',
+                        name: 'ndb-optimization-delay',
+                        cli: '--ndb-optimization-delay=milliseconds',
+                        scope: ['global'],
+                        dynamic: true,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-recv-thread-activation-threshold',
+                        name: 'ndb-recv-thread-activation-threshold',
+                        cli: '--ndb-recv-thread-activation-threshold=threshold',
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-recv-thread-cpu-mask',
+                        name: 'ndb-recv-thread-cpu-mask',
+                        cli: '--ndb-recv-thread-cpu-mask=bitmask',
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-transid-mysql-connection-map',
+                        name: 'ndb-transid-mysql-connection-map',
+                        cli: 'ndb-transid-mysql-connection-map=state',
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-wait-connected',
+                        name: 'ndb-wait-connected',
+                        cli: '--ndb-wait-connected=seconds',
+                        scope: ['global'],
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_ndb-wait-setup',
+                        name: 'ndb-wait-setup',
+                        cli: '--ndb-wait-setup=seconds',
+                        scope: ['global'],
+                        dynamic: false,
+                    },
+                    {
+                        id: 'option_mysqld_skip-ndbcluster',
+                        name: 'skip-ndbcluster',
+                        cli: '--skip-ndbcluster',
+                        dynamic: false,
+                    },
+                ]);
+                done();
+            });
+        });
     });
 };

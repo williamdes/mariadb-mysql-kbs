@@ -1,0 +1,2532 @@
+<html>
+<div class="itemizedlist">
+    <ul class="itemizedlist" style="list-style-type: disc; ">
+        <li class="listitem">
+            <p><a name="option_mysqld_ndbcluster"></a>
+                <a class="indexterm" name="idm139863370405808"></a>
+
+                <a class="indexterm" name="idm139863370404320"></a>
+
+                <a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndbcluster"><code
+                        class="option">--ndbcluster</code></a>
+            </p>
+            <div class="table">
+                <a name="ndbcluster-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.207&nbsp;Type and value information for ndbcluster</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndbcluster">ndbcluster</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: OFF (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Enable NDB Cluster (if this version
+                                        of MySQL supports it)
+                                    </p>
+                                    <p>
+                                        Disabled by
+                                        <a class="link"
+                                            href="mysql-cluster-options-variables.html#option_mysqld_skip-ndbcluster"><code
+                                                class="option">--skip-ndbcluster</code></a>.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                The <a class="link" href="mysql-cluster.html"
+                    title="Chapter&nbsp;21&nbsp;MySQL NDB Cluster 7.5 and NDB Cluster 7.6"><code
+                        class="literal">NDBCLUSTER</code></a> storage engine
+                is necessary for using NDB Cluster. If a
+                <a class="link" href="mysqld.html" title="4.3.1&nbsp;mysqld — The MySQL Server"><span
+                        class="command"><strong>mysqld</strong></span></a> binary includes support for the
+                <a class="link" href="mysql-cluster.html"
+                    title="Chapter&nbsp;21&nbsp;MySQL NDB Cluster 7.5 and NDB Cluster 7.6"><code
+                        class="literal">NDBCLUSTER</code></a> storage engine,
+                the engine is disabled by default. Use the
+                <a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndbcluster"><code
+                        class="option">--ndbcluster</code></a> option to
+                enable it. Use <code class="option">--skip-ndbcluster</code> to
+                explicitly disable the engine.
+            </p>
+            <p>
+                It is not necessary or desirable to use this option
+                together with <a class="link" href="server-options.html#option_mysqld_initialize"><code
+                        class="option">--initialize</code></a>.
+                Beginning with NDB 7.5.4, <code class="option">--ndbcluster</code> is
+                ignored (and the <code class="literal">NDB</code> storage engine is
+                <span class="emphasis"><em>not</em></span> enabled) if
+                <code class="option">--initialize</code> is also used. (Bug #81689,
+                Bug #23518923)
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-allow-copying-alter-table"></a>
+                <a class="indexterm" name="idm139863370363488"></a>
+
+                <a class="indexterm" name="idm139863370361984"></a>
+
+                <code class="option">--ndb-allow-copying-alter-table=[ON|OFF]</code>
+            </p>
+            <div class="table">
+                <a name="ndb-allow-copying-alter-table-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.208&nbsp;Type and value information for
+                        ndb-allow-copying-alter-table</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-allow-copying-alter-table">ndb-allow-copying-alter-table</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Both</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: ON (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Set to OFF to keep ALTER TABLE from
+                                        using copying operations on NDB tables
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Let <a class="link" href="alter-table.html" title="13.1.8&nbsp;ALTER TABLE Statement"><code
+                        class="literal">ALTER TABLE</code></a> and other
+                DDL statements use copying operations on
+                <code class="literal">NDB</code> tables. Set to
+                <code class="literal">OFF</code> to keep this from happening; doing
+                so may improve performance of critical applications.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-batch-size"></a>
+                <a class="indexterm" name="idm139863370328912"></a>
+
+                <a class="indexterm" name="idm139863370327424"></a>
+
+                <code class="option">--ndb-batch-size=<em class="replaceable"><code>#</code></em></code>
+            </p>
+            <div class="table">
+                <a name="ndb-batch-size-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.209&nbsp;Type and value information for ndb-batch-size</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-batch-size">ndb-batch-size</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 32768 / 0 - 31536000 (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Size (in bytes) to use for NDB
+                                        transaction batches
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                This sets the size in bytes that is used for NDB
+                transaction batches.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-cluster-connection-pool"></a>
+                <a class="indexterm" name="idm139863370296896"></a>
+
+                <a class="indexterm" name="idm139863370295440"></a>
+
+                <code class="option">--ndb-cluster-connection-pool=<em class="replaceable"><code>#</code></em></code>
+            </p>
+            <div class="table">
+                <a name="ndb-cluster-connection-pool-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.210
+                        Type and value information for ndb-cluster-connection-pool</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-cluster-connection-pool">ndb-cluster-connection-pool</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Status Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Default, Range</td>
+                                <td>1 / 1 - 63 (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Number of connections to the cluster
+                                        used by MySQL
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-contents">
+                    <table cellpadding="0" cellspacing="0"
+                        style="position: fixed; top: 0px; display: none; left: 431px; width: 511px;">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 179px;">Property</th>
+                                <th scope="col" style="width: 331px;">Value</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                By setting this option to a value greater than 1 (the
+                default), a <a class="link" href="mysqld.html" title="4.3.1&nbsp;mysqld — The MySQL Server"><span
+                        class="command"><strong>mysqld</strong></span></a> process can use
+                multiple connections to the cluster, effectively mimicking
+                several SQL nodes. Each connection requires its own
+                <code class="literal">[api]</code> or <code class="literal">[mysqld]</code>
+                section in the cluster configuration
+                (<code class="filename">config.ini</code>) file, and counts against
+                the maximum number of API connections supported by the
+                cluster.
+            </p>
+            <p>
+                Suppose that you have 2 cluster host computers, each
+                running an SQL node whose <a class="link" href="mysqld.html"
+                    title="4.3.1&nbsp;mysqld — The MySQL Server"><span
+                        class="command"><strong>mysqld</strong></span></a>
+                process was started with
+                <code class="option">--ndb-cluster-connection-pool=4</code>; this
+                means that the cluster must have 8 API slots available for
+                these connections (instead of 2). All of these connections
+                are set up when the SQL node connects to the cluster, and
+                are allocated to threads in a round-robin fashion.
+            </p>
+            <p>
+                This option is useful only when running
+                <a class="link" href="mysqld.html" title="4.3.1&nbsp;mysqld — The MySQL Server"><span
+                        class="command"><strong>mysqld</strong></span></a> on host machines having multiple
+                CPUs, multiple cores, or both. For best results, the value
+                should be smaller than the total number of cores available
+                on the host machine. Setting it to a value greater than
+                this is likely to degrade performance severely.
+            </p>
+            <div class="important" style="margin-left: 0.5in; margin-right: 0.5in;">
+
+                <div class="admon-title">
+                    Important
+                </div>
+                <p>
+                    Because each SQL node using connection pooling occupies
+                    multiple API node slots—each slot having its own
+                    node ID in the cluster—you must
+                    <span class="emphasis"><em>not</em></span> use a node ID as part of the
+                    cluster connection string when starting any
+                    <a class="link" href="mysqld.html" title="4.3.1&nbsp;mysqld — The MySQL Server"><span
+                            class="command"><strong>mysqld</strong></span></a> process that employs
+                    connection pooling.
+                </p>
+                <p>
+                    Setting a node ID in the connection string when using
+                    the <code class="option">--ndb-cluster-connection-pool</code>
+                    option causes node ID allocation errors when the SQL
+                    node attempts to connect to the cluster.
+                </p>
+            </div>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-cluster-connection-pool-nodeids"></a>
+                <a class="indexterm" name="idm139863370247936"></a>
+
+                <a class="indexterm" name="idm139863370246480"></a>
+
+                <code
+                    class="option">--ndb-cluster-connection-pool-nodeids=<em class="replaceable"><code>list</code></em></code>
+            </p>
+            <div class="table">
+                <a name="ndb-cluster-connection-pool-nodeids-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.211&nbsp;Type and value information for
+                        ndb-cluster-connection-pool-nodeids</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-cluster-connection-pool-nodeids">ndb-cluster-connection-pool-nodeids</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>set: / (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Comma-separated list of node IDs for
+                                        connections to the cluster used by MySQL; the
+                                        number of nodes in the list must be the same as
+                                        the value set for --ndb-cluster-connection-pool
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Specifies a comma-separated list of node IDs for
+                connections to the cluster used by an SQL node. The number
+                of nodes in this list must be the same as the value set
+                for the
+                <a class="link"
+                    href="mysql-cluster-options-variables.html#option_mysqld_ndb-cluster-connection-pool"><code
+                        class="option">--ndb-cluster-connection-pool</code></a>
+                option.
+            </p>
+            <p>
+                <code class="option">--ndb-cluster-connection-pool-nodeids</code> was
+                added in NDB 7.5.0.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-blob-read-batch-bytes"></a>
+                <a class="indexterm" name="idm139863370213616"></a>
+
+                <a class="indexterm" name="idm139863370212160"></a>
+
+                <code class="option">--ndb-blob-read-batch-bytes=<em class="replaceable"><code>bytes</code></em></code>
+            </p>
+            <div class="table">
+                <a name="ndb-blob-read-batch-bytes-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.212&nbsp;Type and value information for ndb-blob-read-batch-bytes</b>
+                </p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-blob-read-batch-bytes">ndb-blob-read-batch-bytes</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Both</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 65536 / 0 - 4294967295 (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Specifies size in bytes that large
+                                        BLOB reads should be batched into. 0 = no limit.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                This option can be used to set the size (in bytes) for
+                batching of <a class="link" href="blob.html" title="11.4.3&nbsp;The BLOB and TEXT Types"><code
+                        class="literal">BLOB</code></a> data reads
+                in NDB Cluster applications. When this batch size is
+                exceeded by the amount of
+                <a class="link" href="blob.html" title="11.4.3&nbsp;The BLOB and TEXT Types"><code
+                        class="literal">BLOB</code></a> data to be read within
+                the current transaction, any pending
+                <a class="link" href="blob.html" title="11.4.3&nbsp;The BLOB and TEXT Types"><code
+                        class="literal">BLOB</code></a> read operations are
+                immediately executed.
+            </p>
+            <p>
+                The maximum value for this option is 4294967295; the
+                default is 65536. Setting it to 0 has the effect of
+                disabling <a class="link" href="blob.html" title="11.4.3&nbsp;The BLOB and TEXT Types"><code
+                        class="literal">BLOB</code></a> read
+                batching.
+            </p>
+            <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+
+                <div class="admon-title">
+                    Note
+                </div>
+                <p>
+                    In NDB API applications, you can control
+                    <a class="link" href="blob.html" title="11.4.3&nbsp;The BLOB and TEXT Types"><code
+                            class="literal">BLOB</code></a> write batching with
+                    the
+                    <a class="ulink"
+                        href="https://dev.mysql.com/doc/ndbapi/en/ndb-ndbtransaction-setmaxpendingblobreadbytes.html"
+                        target="_top"><code class="literal">setMaxPendingBlobReadBytes()</code></a>
+                    and
+                    <a class="ulink"
+                        href="https://dev.mysql.com/doc/ndbapi/en/ndb-ndbtransaction-getmaxpendingblobreadbytes.html"
+                        target="_top"><code class="literal">getMaxPendingBlobReadBytes()</code></a>
+                    methods.
+                </p>
+            </div>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-blob-write-batch-bytes"></a>
+                <a class="indexterm" name="idm139863370171168"></a>
+
+                <a class="indexterm" name="idm139863370169664"></a>
+
+                <code class="option">--ndb-blob-write-batch-bytes=<em class="replaceable"><code>bytes</code></em></code>
+            </p>
+            <div class="table">
+                <a name="ndb-blob-write-batch-bytes-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.213&nbsp;Type and value information for ndb-blob-write-batch-bytes</b>
+                </p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-blob-write-batch-bytes">ndb-blob-write-batch-bytes</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Both</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 65536 / 0 - 4294967295 (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Specifies size in bytes that large
+                                        BLOB writes should be batched into. 0 = no limit.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                This option can be used to set the size (in bytes) for
+                batching of <a class="link" href="blob.html" title="11.4.3&nbsp;The BLOB and TEXT Types"><code
+                        class="literal">BLOB</code></a> data
+                writes in NDB Cluster applications. When this batch size
+                is exceeded by the amount of
+                <a class="link" href="blob.html" title="11.4.3&nbsp;The BLOB and TEXT Types"><code
+                        class="literal">BLOB</code></a> data to be written
+                within the current transaction, any pending
+                <a class="link" href="blob.html" title="11.4.3&nbsp;The BLOB and TEXT Types"><code
+                        class="literal">BLOB</code></a> write operations are
+                immediately executed.
+            </p>
+            <p>
+                The maximum value for this option is 4294967295; the
+                default is 65536. Setting it to 0 has the effect of
+                disabling <a class="link" href="blob.html" title="11.4.3&nbsp;The BLOB and TEXT Types"><code
+                        class="literal">BLOB</code></a> write
+                batching.
+            </p>
+            <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+
+                <div class="admon-title">
+                    Note
+                </div>
+                <p>
+                    In NDB API applications, you can control
+                    <a class="link" href="blob.html" title="11.4.3&nbsp;The BLOB and TEXT Types"><code
+                            class="literal">BLOB</code></a> write batching with
+                    the
+                    <a class="ulink"
+                        href="https://dev.mysql.com/doc/ndbapi/en/ndb-ndbtransaction-setmaxpendingblobwritebytes.html"
+                        target="_top"><code class="literal">setMaxPendingBlobWriteBytes()</code></a>
+                    and
+                    <a class="ulink"
+                        href="https://dev.mysql.com/doc/ndbapi/en/ndb-ndbtransaction-getmaxpendingblobwritebytes.html"
+                        target="_top"><code class="literal">getMaxPendingBlobWriteBytes()</code></a>
+                    methods.
+                </p>
+            </div>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-connectstring"></a>
+                <a class="indexterm" name="idm139863370128752"></a>
+
+                <a class="indexterm" name="idm139863370127296"></a>
+
+                <code
+                    class="option">--ndb-connectstring=<em class="replaceable"><code>connection_string</code></em></code>
+            </p>
+            <div class="table">
+                <a name="ndb-connectstring-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.214&nbsp;Type and value information for ndb-connectstring</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-connectstring">ndb-connectstring</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>string: (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Point to the management server that
+                                        distributes the cluster configuration
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                When using the <a class="link" href="mysql-cluster.html"
+                    title="Chapter&nbsp;21&nbsp;MySQL NDB Cluster 7.5 and NDB Cluster 7.6"><code
+                        class="literal">NDBCLUSTER</code></a>
+                storage engine, this option specifies the management
+                server that distributes cluster configuration data. See
+                <a class="xref" href="mysql-cluster-connection-strings.html"
+                    title="21.3.3.3&nbsp;NDB Cluster Connection Strings">Section&nbsp;21.3.3.3, “NDB Cluster Connection
+                    Strings”</a>, for
+                syntax.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-default-column-format"></a>
+                <a class="indexterm" name="idm139863370094832"></a>
+
+                <code class="option">--ndb-default-column-format=[FIXED|DYNAMIC]</code>
+            </p>
+            <div class="table">
+                <a name="ndb-default-column-format-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.215&nbsp;Type and value information for ndb-default-column-format</b>
+                </p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-default-column-format">ndb-default-column-format</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>enumeration: DYNAMIC / FIXED, DYNAMIC (Version: 7.5.1)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>enumeration: FIXED / FIXED, DYNAMIC (Version: 7.5.4)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Use this value (FIXED or DYNAMIC) by
+                                        default for COLUMN_FORMAT and ROW_FORMAT options
+                                        when creating or adding columns to a table.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                In NDB 7.5.1 and later, sets the default
+                <code class="literal">COLUMN_FORMAT</code> and
+                <code class="literal">ROW_FORMAT</code> for new tables (see
+                <a class="xref" href="create-table.html"
+                    title="13.1.18&nbsp;CREATE TABLE Statement">Section&nbsp;13.1.18, “CREATE TABLE Statement”</a>).
+            </p>
+            <p>
+                In NDB 7.5.1, the default for this option was
+                <code class="literal">DYNAMIC</code>; in NDB 7.5.4, the default was
+                changed to <code class="literal">FIXED</code> to maintain backwards
+                compatibility with older release series (Bug #24487363).
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-deferred-constraints"></a>
+                <a class="indexterm" name="idm139863370058288"></a>
+
+                <code class="option">--ndb-deferred-constraints=[0|1]</code>
+            </p>
+            <div class="table">
+                <a name="ndb-deferred-constraints-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.216&nbsp;Type and value information for ndb-deferred-constraints</b>
+                </p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-deferred-constraints">ndb-deferred-constraints</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Both</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 0 / 0 - 1 (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Specifies that constraint checks on
+                                        unique indexes (where these are supported) should
+                                        be deferred until commit time. Not normally needed
+                                        or used; for testing purposes only.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Controls whether or not constraint checks on unique
+                indexes are deferred until commit time, where such checks
+                are supported. <code class="literal">0</code> is the default.
+            </p>
+            <p>
+                This option is not normally needed for operation of NDB
+                Cluster or NDB Cluster Replication, and is intended
+                primarily for use in testing.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-distribution"></a>
+                <a class="indexterm" name="idm139863370026960"></a>
+
+                <code class="option">--ndb-distribution=[KEYHASH|LINHASH]</code>
+            </p>
+            <div class="table">
+                <a name="ndb-distribution-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.217&nbsp;Type and value information for ndb-distribution</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-distribution">ndb-distribution</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>enumeration: KEYHASH / LINHASH, KEYHASH (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Default distribution for new tables
+                                        in NDBCLUSTER (KEYHASH or LINHASH, default is
+                                        KEYHASH)
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Controls the default distribution method for
+                <a class="link" href="mysql-cluster.html"
+                    title="Chapter&nbsp;21&nbsp;MySQL NDB Cluster 7.5 and NDB Cluster 7.6"><code
+                        class="literal">NDB</code></a> tables. Can be set to
+                either of <code class="literal">KEYHASH</code> (key hashing) or
+                <code class="literal">LINHASH</code> (linear hashing).
+                <code class="literal">KEYHASH</code> is the default.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-log-apply-status"></a>
+                <a class="indexterm" name="idm139863369993632"></a>
+
+                <a class="indexterm" name="idm139863369992144"></a>
+
+                <code class="option">--ndb-log-apply-status</code>
+            </p>
+            <div class="table">
+                <a name="ndb-log-apply-status-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.218&nbsp;Type and value information for ndb-log-apply-status</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-log-apply-status">ndb-log-apply-status</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: OFF (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Cause a MySQL server acting as a
+                                        slave to log mysql.ndb_apply_status updates
+                                        received from its immediate master in its own
+                                        binary log, using its own server ID. Effective
+                                        only if the server is started with the
+                                        --ndbcluster option.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Causes a slave <a class="link" href="mysqld.html" title="4.3.1&nbsp;mysqld — The MySQL Server"><span
+                        class="command"><strong>mysqld</strong></span></a> to log any
+                updates received from its immediate master to the
+                <code class="literal">mysql.ndb_apply_status</code> table in its own
+                binary log using its own server ID rather than the server
+                ID of the master. In a circular or chain replication
+                setting, this allows such updates to propagate to the
+                <code class="literal">mysql.ndb_apply_status</code> tables of any
+                MySQL servers configured as slaves of the current
+                <a class="link" href="mysqld.html" title="4.3.1&nbsp;mysqld — The MySQL Server"><span
+                        class="command"><strong>mysqld</strong></span></a>.
+            </p>
+            <p>
+                In a chain replication setup, using this option allows
+                downstream (slave) clusters to be aware of their positions
+                relative to all of their upstream contributors (masters).
+            </p>
+            <p>
+                In a circular replication setup, this option causes
+                changes to <code class="literal">ndb_apply_status</code> tables to
+                complete the entire circuit, eventually propagating back
+                to the originating NDB Cluster. This also allows a cluster
+                acting as a master to see when its changes (epochs) have
+                been applied to the other clusters in the circle.
+            </p>
+            <p>
+                This option has no effect unless the MySQL server is
+                started with the
+                <a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndbcluster"><code
+                        class="option">--ndbcluster</code></a> option.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-log-empty-epochs"></a>
+                <a class="indexterm" name="idm139863369953792"></a>
+
+                <a class="indexterm" name="idm139863369952304"></a>
+
+                <code class="option">--ndb-log-empty-epochs=[ON|OFF]</code>
+            </p>
+            <div class="table">
+                <a name="ndb-log-empty-epochs-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.219&nbsp;Type and value information for ndb-log-empty-epochs</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-log-empty-epochs">ndb-log-empty-epochs</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: OFF (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: When enabled, causes epochs in which
+                                        there were no changes to be written to the
+                                        ndb_apply_status and ndb_binlog_index tables, even
+                                        when --log-slave-updates is enabled.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Causes epochs during which there were no changes to be
+                written to the <code class="literal">ndb_apply_status</code> and
+                <code class="literal">ndb_binlog_index</code> tables, even when
+                <a class="link" href="replication-options-binary-log.html#sysvar_log_slave_updates"><code
+                        class="literal">log_slave_updates</code></a> is
+                enabled.
+            </p>
+            <p>
+                By default this option is disabled. Disabling
+                <code class="option">--ndb-log-empty-epochs</code> causes epoch
+                transactions with no changes not to be written to the
+                binary log, although a row is still written even for an
+                empty epoch in <code class="literal">ndb_binlog_index</code>.
+            </p>
+            <p>
+                Because <code class="option">--ndb-log-empty-epochs=1</code> causes
+                the size of the <code class="literal">ndb_binlog_index</code> table
+                to increase independently of the size of the binary log,
+                users should be prepared to manage the growth of this
+                table, even if they expect the cluster to be idle a large
+                part of the time.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-log-empty-update"></a>
+                <a class="indexterm" name="idm139863369915504"></a>
+
+                <a class="indexterm" name="idm139863369914016"></a>
+
+                <code class="option">--ndb-log-empty-update=[ON|OFF]</code>
+            </p>
+            <div class="table">
+                <a name="ndb-log-empty-update-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.220&nbsp;Type and value information for ndb-log-empty-update</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-log-empty-update">ndb-log-empty-update</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: OFF (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: When enabled, causes updates that
+                                        produced no changes to be written to the
+                                        ndb_apply_status and ndb_binlog_index tables, even
+                                        when --log-slave-updates is enabled.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Causes updates that produced no changes to be written to
+                the <code class="literal">ndb_apply_status</code> and
+                <code class="literal">ndb_binlog_index</code> tables, when when
+                <a class="link" href="replication-options-binary-log.html#sysvar_log_slave_updates"><code
+                        class="literal">log_slave_updates</code></a> is
+                enabled.
+            </p>
+            <p>
+                By default this option is disabled
+                (<code class="literal">OFF</code>). Disabling
+                <code class="option">--ndb-log-empty-update</code> causes updates
+                with no changes not to be written to the binary log.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-log-exclusive-reads"></a>
+                <a class="indexterm" name="idm139863369879248"></a>
+
+                <a class="indexterm" name="idm139863369877760"></a>
+
+                <code class="option">--ndb-log-exclusive-reads=[0|1]</code>
+            </p>
+            <div class="table">
+                <a name="ndb-log-exclusive-reads-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.221&nbsp;Type and value information for ndb-log-exclusive-reads</b>
+                </p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-log-exclusive-reads">ndb-log-exclusive-reads</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Both</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: 0 (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Log primary key reads with exclusive
+                                        locks; allow conflict resolution based on read
+                                        conflicts
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Starting the server with this option causes primary key
+                reads to be logged with exclusive locks, which allows for
+                NDB Cluster Replication conflict detection and resolution
+                based on read conflicts. You can also enable and disable
+                these locks at runtime by setting the value of the
+                <a class="link" href="mysql-cluster-options-variables.html#sysvar_ndb_log_exclusive_reads"><code
+                        class="literal">ndb_log_exclusive_reads</code></a>
+                system variable to 1 or 0, respectively. 0 (disable
+                locking) is the default.
+            </p>
+            <p>
+                For more information, see
+                <a class="xref"
+                    href="mysql-cluster-replication-conflict-resolution.html#mysql-cluster-replication-examples-read-conflicts"
+                    title="Read conflict detection and resolution">Read conflict detection and resolution</a>.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-log-orig"></a>
+                <a class="indexterm" name="idm139863369844400"></a>
+
+                <a class="indexterm" name="idm139863369842912"></a>
+
+                <code class="option">--ndb-log-orig</code>
+            </p>
+            <div class="table">
+                <a name="ndb-log-orig-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.222&nbsp;Type and value information for ndb-log-orig</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-log-orig">ndb-log-orig</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: OFF (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Log originating server id and epoch
+                                        in mysql.ndb_binlog_index table
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Log the originating server ID and epoch in the
+                <code class="literal">ndb_binlog_index</code> table.
+            </p>
+            <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+
+                <div class="admon-title">
+                    Note
+                </div>
+                <p>
+                    This makes it possible for a given epoch to have
+                    multiple rows in <code class="literal">ndb_binlog_index</code>,
+                    one for each originating epoch.
+                </p>
+            </div>
+            <p>
+                For more information, see
+                <a class="xref" href="mysql-cluster-replication-schema.html"
+                    title="21.6.4&nbsp;NDB Cluster Replication Schema and Tables">Section&nbsp;21.6.4, “NDB Cluster
+                    Replication Schema and Tables”</a>.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-log-transaction-id"></a>
+                <a class="indexterm" name="idm139863369809232"></a>
+
+                <a class="indexterm" name="idm139863369807744"></a>
+
+                <code class="option">--ndb-log-transaction-id</code>
+            </p>
+            <div class="table">
+                <a name="ndb-log-transaction-id-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.223&nbsp;Type and value information for ndb-log-transaction-id</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-log-transaction-id">ndb-log-transaction-id</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: OFF (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Write NDB transaction IDs in the
+                                        binary log. Requires --log-bin-v1-events=OFF.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Causes a slave <a class="link" href="mysqld.html" title="4.3.1&nbsp;mysqld — The MySQL Server"><span
+                        class="command"><strong>mysqld</strong></span></a> to write the NDB
+                transaction ID in each row of the binary log. Such logging
+                requires the use of the Version 2 event format for the
+                binary log; thus, the
+                <a class="link" href="replication-options-binary-log.html#sysvar_log_bin_use_v1_row_events"><code
+                        class="literal">log_bin_use_v1_row_events</code></a>
+                system variable must be disabled to use this option.
+            </p>
+            <p>
+                This option is not supported in mainline MySQL Server
+                5.7. It is required to enable NDB Cluster
+                Replication conflict detection and resolution using the
+                <code class="literal">NDB$EPOCH_TRANS()</code> function (see
+                <a class="xref"
+                    href="mysql-cluster-replication-conflict-resolution.html#mysql-cluster-replication-ndb-epoch-trans"
+                    title="NDB$EPOCH_TRANS()">NDB$EPOCH_TRANS()</a>).
+            </p>
+            <p>
+                The default value is <code class="literal">FALSE</code>.
+            </p>
+            <p>
+                For more information, see
+                <a class="xref" href="mysql-cluster-replication-conflict-resolution.html"
+                    title="21.6.11&nbsp;NDB Cluster Replication Conflict Resolution">Section&nbsp;21.6.11, “NDB Cluster
+                    Replication Conflict Resolution”</a>.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-log-update-minimal"></a>
+                <a class="indexterm" name="idm139863369770240"></a>
+
+                <code class="option">--ndb-log-update-minimal</code>
+            </p>
+            <div class="table">
+                <a name="ndb-log-update-minimal-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.224&nbsp;Type and value information for ndb-log-update-minimal</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-log-update-minimal">ndb-log-update-minimal</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: OFF (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: OFF (Version: 7.5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>boolean: OFF (Version: 7.6.3)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Log updates in a minimal format.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-contents">
+                    <table cellpadding="0" cellspacing="0"
+                        style="position: fixed; top: 0px; display: none; left: 431px; width: 482px;">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 169px;">Property</th>
+                                <th scope="col" style="width: 312px;">Value</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Log updates in a minimal fashion, by writing only the
+                primary key values in the before image, and only the
+                changed columns in the after image. This may cause
+                compatibility problems if replicating to storage engines
+                other than <code class="literal">NDB</code>.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-mgmd-host"></a>
+                <a class="indexterm" name="idm139863369734608"></a>
+
+                <code class="option">--ndb-mgmd-host=<em class="replaceable"><code>host</code></em>[:<em
+                    class="replaceable"><code>port</code></em>]</code>
+            </p>
+            <div class="table">
+                <a name="ndb-mgmd-host-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.225&nbsp;Type and value information for ndb-mgmd-host</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-mgmd-host">ndb-mgmd-host</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>string: localhost:1186 (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Set the host (and port, if desired)
+                                        for connecting to management server
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Can be used to set the host and port number of a single
+                management server for the program to connect to. If the
+                program requires node IDs or references to multiple
+                management servers (or both) in its connection
+                information, use the
+                <a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-connectstring"><code
+                        class="option">--ndb-connectstring</code></a> option
+                instead.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-nodeid"></a>
+                <a class="indexterm" name="idm139863369702864"></a>
+
+                <a class="indexterm" name="idm139863369701376"></a>
+
+                <code class="option">--ndb-nodeid=#</code>
+            </p>
+            <div class="table">
+                <a name="ndb-nodeid-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.226
+                        Type and value information for ndb-nodeid</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-nodeid">ndb-nodeid</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Status Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Default, Range</td>
+                                <td>/ 1 - 63 (Version: 5.0.45)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Default, Range</td>
+                                <td>/ 1 - 255 (Version: 5.1.5)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: NDB Cluster node ID for this MySQL
+                                        server
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-contents">
+                    <table cellpadding="0" cellspacing="0"
+                        style="position: fixed; top: 0px; display: none; left: 431px; width: 511px;">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 179px;">Property</th>
+                                <th scope="col" style="width: 331px;">Value</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Set this MySQL server's node ID in an NDB Cluster.
+            </p>
+            <p>
+                The <code class="option">--ndb-nodeid</code> option overrides any
+                node ID set with
+                <a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-connectstring"><code
+                        class="option">--ndb-connectstring</code></a>,
+                regardless of the order in which the two options are used.
+            </p>
+            <p>
+                In addition, if <code class="option">--ndb-nodeid</code> is used,
+                then either a matching node ID must be found in a
+                <code class="literal">[mysqld]</code> or <code class="literal">[api]</code>
+                section of <code class="filename">config.ini</code>, or there must
+                be an <span class="quote">“<span class="quote">open</span>”</span> <code class="literal">[mysqld]</code>
+                or
+                <code class="literal">[api]</code> section in the file (that is, a
+                section without a <code class="literal">NodeId</code> or
+                <code class="literal">Id</code> parameter specified). This is also
+                true if the node ID is specified as part of the connection
+                string.
+            </p>
+            <p>
+                Regardless of how the node ID is determined, its is shown
+                as the value of the global status variable
+                <code class="literal">Ndb_cluster_node_id</code> in the output of
+                <a class="link" href="show-status.html" title="13.7.5.35&nbsp;SHOW STATUS Statement"><code
+                        class="literal">SHOW STATUS</code></a>, and as
+                <code class="literal">cluster_node_id</code> in the
+                <code class="literal">connection</code> row of the output of
+                <a class="link" href="show-engine.html" title="13.7.5.15&nbsp;SHOW ENGINE Statement"><code
+                        class="literal">SHOW ENGINE
+                      NDBCLUSTER STATUS</code></a>.
+            </p>
+            <p>
+                For more information about node IDs for NDB Cluster SQL
+                nodes, see <a class="xref" href="mysql-cluster-api-definition.html"
+                    title="21.3.3.7&nbsp;Defining SQL and Other API Nodes in an NDB Cluster">Section&nbsp;21.3.3.7,
+                    “Defining SQL and Other API Nodes in an NDB Cluster”</a>.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-optimization-delay"></a>
+                <code
+                    class="option">--ndb-optimization-delay=<em class="replaceable"><code>milliseconds</code></em></code>
+            </p>
+            <div class="table">
+                <a name="ndb-optimization-delay-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.227&nbsp;Type and value information for ndb-optimization-delay</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-optimization-delay">ndb-optimization-delay</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 10 / 0 - 100000 (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Sets the number of milliseconds to
+                                        wait between processing sets of rows by OPTIMIZE
+                                        TABLE on NDB tables
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Set the number of milliseconds to wait between sets of
+                rows by <a class="link" href="optimize-table.html" title="13.7.2.4&nbsp;OPTIMIZE TABLE Statement"><code
+                        class="literal">OPTIMIZE TABLE</code></a>
+                statements on <a class="link" href="mysql-cluster.html"
+                    title="Chapter&nbsp;21&nbsp;MySQL NDB Cluster 7.5 and NDB Cluster 7.6"><code
+                        class="literal">NDB</code></a> tables. The
+                default is 10.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-recv-thread-activation-threshold"></a>
+                <a class="link"
+                    href="mysql-cluster-options-variables.html#option_mysqld_ndb-recv-thread-activation-threshold"><code
+                        class="option">--ndb-recv-thread-activation-threshold=<em class="replaceable"><code>threshold</code></em></code></a>
+            </p>
+            <div class="table">
+                <a name="ndb-recv-thread-activation-threshold-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.228&nbsp;Type and value information for
+                        ndb-recv-thread-activation-threshold</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-recv-thread-activation-threshold">ndb-recv-thread-activation-threshold</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 8 / 0 (MIN_ACTIVATION_THRESHOLD) - 16
+                                    (MAX_ACTIVATION_THRESHOLD) (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Activation threshold when receive
+                                        thread takes over the polling of the cluster
+                                        connection (measured in concurrently active
+                                        threads)
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                When this number of concurrently active threads is
+                reached, the receive thread takes over polling of the
+                cluster connection.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-recv-thread-cpu-mask"></a>
+                <a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-recv-thread-cpu-mask"><code
+                        class="option">--ndb-recv-thread-cpu-mask=<em class="replaceable"><code>bitmask</code></em></code></a>
+            </p>
+            <div class="table">
+                <a name="ndb-recv-thread-cpu-mask-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.229&nbsp;Type and value information for ndb-recv-thread-cpu-mask</b>
+                </p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-recv-thread-cpu-mask">ndb-recv-thread-cpu-mask</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>bitmap: [empty] (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: CPU mask for locking receiver threads
+                                        to specific CPUs; specified as hexadecimal. See
+                                        documentation for details.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Set a CPU mask for locking receiver threads to specific
+                CPUs. This is specified as a hexadecimal bitmask; for
+                example, <code class="literal">0x33</code> means that one CPU is
+                used per receiver thread. An empty string (no locking of
+                receiver threads) is the default.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-transid-mysql-connection-map"></a>
+                <code
+                    class="option">ndb-transid-mysql-connection-map=<em class="replaceable"><code>state</code></em></code>
+            </p>
+            <div class="table">
+                <a name="ndb-transid-mysql-connection-map-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.230&nbsp;Type and value information for
+                        ndb-transid-mysql-connection-map</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-transid-mysql-connection-map">ndb-transid-mysql-connection-map</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>enumeration: ON / ON, OFF, FORCE (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Enable or disable the
+                                        ndb_transid_mysql_connection_map plugin; that is,
+                                        enable or disable the INFORMATION_SCHEMA table
+                                        having that name
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Enables or disables the plugin that handles the
+                <a class="link" href="ndb-transid-mysql-connection-map-table.html"
+                    title="24.13&nbsp;The INFORMATION_SCHEMA ndb_transid_mysql_connection_map Table"><code
+                        class="literal">ndb_transid_mysql_connection_map</code></a>
+                table in the <code class="literal">INFORMATION_SCHEMA</code>
+                database. Takes one of the values <code class="literal">ON</code>,
+                <code class="literal">OFF</code>, or <code class="literal">FORCE</code>.
+                <code class="literal">ON</code> (the default) enables the plugin.
+                <code class="literal">OFF</code> disables the plugin, which makes
+                <code class="literal">ndb_transid_mysql_connection_map</code>
+                inaccessible. <code class="literal">FORCE</code> keeps the MySQL
+                Server from starting if the plugin fails to load and
+                start.
+            </p>
+            <p>
+                You can see whether the
+                <a class="link" href="ndb-transid-mysql-connection-map-table.html"
+                    title="24.13&nbsp;The INFORMATION_SCHEMA ndb_transid_mysql_connection_map Table"><code
+                        class="literal">ndb_transid_mysql_connection_map</code></a>
+                table plugin is running by checking the output of
+                <a class="link" href="show-plugins.html" title="13.7.5.25&nbsp;SHOW PLUGINS Statement"><code
+                        class="literal">SHOW PLUGINS</code></a>.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-wait-connected"></a>
+                <code class="option">--ndb-wait-connected=<em class="replaceable"><code>seconds</code></em></code>
+            </p>
+            <div class="table">
+                <a name="ndb-wait-connected-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.231&nbsp;Type and value information for ndb-wait-connected</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-wait-connected">ndb-wait-connected</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 0 / 0 - 31536000 (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 30 / 0 - 31536000 (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 0 / 0 - 31536000 (Version: 5.7)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 30 / 0 - 31536000 (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Time (in seconds) for the MySQL
+                                        server to wait for connection to cluster
+                                        management and data nodes before accepting MySQL
+                                        client connections
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-contents">
+                    <table cellpadding="0" cellspacing="0"
+                        style="position: fixed; top: 0px; display: none; left: 431px; width: 511px;">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 179px;">Property</th>
+                                <th scope="col" style="width: 331px;">Value</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                This option sets the period of time that the MySQL server
+                waits for connections to NDB Cluster management and data
+                nodes to be established before accepting MySQL client
+                connections. The time is specified in seconds. The default
+                value is <code class="literal">30</code>.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_ndb-wait-setup"></a>
+                <code class="option">--ndb-wait-setup=<em class="replaceable"><code>seconds</code></em></code>
+            </p>
+            <div class="table">
+                <a name="ndb-wait-setup-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.232&nbsp;Type and value information for ndb-wait-setup</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-wait-setup">ndb-wait-setup</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td>Global</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 15 / 0 - 31536000 (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 15 / 0 - 31536000 (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 15 / 0 - 31536000 (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 30 / 0 - 31536000 (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 15 / 0 - 31536000 (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Type: Default, Range</td>
+                                <td>integer: 30 / 0 - 31536000 (Version: NDB 7.5-7.6)</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Time (in seconds) for the MySQL
+                                        server to wait for NDB engine setup to complete
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-contents">
+                    <table cellpadding="0" cellspacing="0"
+                        style="position: fixed; top: 0px; display: none; left: 431px; width: 511px;">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 179px;">Property</th>
+                                <th scope="col" style="width: 331px;">Value</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                This variable shows the period of time that the MySQL
+                server waits for the <a class="link" href="mysql-cluster.html"
+                    title="Chapter&nbsp;21&nbsp;MySQL NDB Cluster 7.5 and NDB Cluster 7.6"><code
+                        class="literal">NDB</code></a>
+                storage engine to complete setup before timing out and
+                treating <a class="link" href="mysql-cluster.html"
+                    title="Chapter&nbsp;21&nbsp;MySQL NDB Cluster 7.5 and NDB Cluster 7.6"><code
+                        class="literal">NDB</code></a> as unavailable.
+                The time is specified in seconds. The default value is
+                <code class="literal">30</code>.
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="option_mysqld_skip-ndbcluster"></a>
+                <a class="indexterm" name="idm139863369436064"></a>
+
+                <a class="indexterm" name="idm139863369434576"></a>
+
+                <code class="option">--skip-ndbcluster</code>
+            </p>
+            <div class="table">
+                <a name="skip-ndbcluster-detailtable"></a>
+                <p class="title"><b>Table&nbsp;21.233&nbsp;Type and value information for skip-ndbcluster</b></p>
+                <div class="table-contents">
+                    <table>
+                        <colgroup>
+                            <col width="35%">
+                            <col width="65%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Property</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Name</td>
+                                <td><code
+                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_skip-ndbcluster">skip-ndbcluster</a></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Command Line</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">System Variable</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Option File</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Scope</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Dynamic</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Notes</td>
+                                <td>
+                                    <p>
+                                        DESCRIPTION: Disable the NDB Cluster storage
+                                        engine
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <br class="table-break">
+            <p>
+                Disable the <a class="link" href="mysql-cluster.html"
+                    title="Chapter&nbsp;21&nbsp;MySQL NDB Cluster 7.5 and NDB Cluster 7.6"><code
+                        class="literal">NDBCLUSTER</code></a>
+                storage engine. This is the default for binaries that were
+                built with <a class="link" href="mysql-cluster.html"
+                    title="Chapter&nbsp;21&nbsp;MySQL NDB Cluster 7.5 and NDB Cluster 7.6"><code
+                        class="literal">NDBCLUSTER</code></a> storage
+                engine support; the server allocates memory and other
+                resources for this storage engine only if the
+                <a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndbcluster"><code
+                        class="option">--ndbcluster</code></a> option is
+                given explicitly. See
+                <a class="xref" href="mysql-cluster-quick.html"
+                    title="21.3.1&nbsp;Quick Test Setup of NDB Cluster">Section&nbsp;21.3.1, “Quick Test Setup of NDB
+                    Cluster”</a>, for an example.
+            </p>
+        </li>
+    </ul>
+</div>
+
+</html>

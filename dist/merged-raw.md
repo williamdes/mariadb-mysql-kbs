@@ -27580,7 +27580,6 @@
 |----|-----|
 |Name|`ndbcluster`|
 |Command line|`--ndbcluster`|
-|Default value|`FALSE (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27594,7 +27593,6 @@
 |Name|`ndb-allow-copying-alter-table`|
 |Command line|`--ndb-allow-copying-alter-table=[ON|OFF]`|
 |Scope|`global`, `session`|
-|Default value|`ON (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27608,7 +27606,6 @@
 |Name|`ndb-batch-size`|
 |Command line|`--ndb-batch-size=#`|
 |Scope|`global`|
-|Default value|`32768 / 0 - 31536000 (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27636,7 +27633,6 @@
 |Name|`ndb-cluster-connection-pool-nodeids`|
 |Command line|`--ndb-cluster-connection-pool-nodeids=list`|
 |Scope|`global`|
-|Default value|`/ (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27650,7 +27646,6 @@
 |Name|`ndb-blob-read-batch-bytes`|
 |Command line|`--ndb-blob-read-batch-bytes=bytes`|
 |Scope|`global`, `session`|
-|Default value|`65536 / 0 - 4294967295 (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27664,7 +27659,6 @@
 |Name|`ndb-blob-write-batch-bytes`|
 |Command line|`--ndb-blob-write-batch-bytes=bytes`|
 |Scope|`global`, `session`|
-|Default value|`65536 / 0 - 4294967295 (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27677,7 +27671,6 @@
 |----|-----|
 |Name|`ndb-connectstring`|
 |Command line|`--ndb-connectstring=connection_string`|
-|Default value|`(Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27691,7 +27684,6 @@
 |Name|`ndb-default-column-format`|
 |Command line|`--ndb-default-column-format=[FIXED|DYNAMIC]`|
 |Scope|`global`|
-|Default value|`FIXED / FIXED, DYNAMIC (Version: 5.7.16-ndb-7.5.4)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27705,7 +27697,6 @@
 |Name|`ndb-deferred-constraints`|
 |Command line|`--ndb-deferred-constraints=[0|1]`|
 |Scope|`global`, `session`|
-|Default value|`0 / 0 - 1 (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27719,7 +27710,6 @@
 |Name|`ndb-distribution`|
 |Command line|`--ndb-distribution=[KEYHASH|LINHASH]`|
 |Scope|`global`|
-|Default value|`KEYHASH / LINHASH, KEYHASH (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27733,7 +27723,6 @@
 |Name|`ndb-log-apply-status`|
 |Command line|`--ndb-log-apply-status`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27747,7 +27736,6 @@
 |Name|`ndb-log-empty-epochs`|
 |Command line|`--ndb-log-empty-epochs=[ON|OFF]`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27761,7 +27749,6 @@
 |Name|`ndb-log-empty-update`|
 |Command line|`--ndb-log-empty-update=[ON|OFF]`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27775,7 +27762,6 @@
 |Name|`ndb-log-exclusive-reads`|
 |Command line|`--ndb-log-exclusive-reads=[0|1]`|
 |Scope|`global`, `session`|
-|Default value|`0 (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27789,7 +27775,6 @@
 |Name|`ndb-log-orig`|
 |Command line|`--ndb-log-orig`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27803,7 +27788,6 @@
 |Name|`ndb-log-transaction-id`|
 |Command line|`--ndb-log-transaction-id`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27817,7 +27801,6 @@
 |Name|`ndb-log-update-minimal`|
 |Command line|`--ndb-log-update-minimal`|
 |Scope|`global`|
-|Default value|`OFF (Version: 5.7.18-ndb-7.6.3)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27830,7 +27813,6 @@
 |----|-----|
 |Name|`ndb-mgmd-host`|
 |Command line|`--ndb-mgmd-host=host[:port]`|
-|Default value|`localhost:1186 (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27858,7 +27840,6 @@
 |Name|`ndb-optimization-delay`|
 |Command line|`--ndb-optimization-delay=milliseconds`|
 |Scope|`global`|
-|Default value|`10 / 0 - 100000 (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27871,7 +27852,6 @@
 |----|-----|
 |Name|`ndb-recv-thread-activation-threshold`|
 |Command line|`--ndb-recv-thread-activation-threshold=threshold`|
-|Default value|`8 / 0 (MIN_ACTIVATION_THRESHOLD) - 16 (MAX_ACTIVATION_THRESHOLD), (Version: 5.6.10-ndb-7.3.1)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27884,7 +27864,6 @@
 |----|-----|
 |Name|`ndb-recv-thread-cpu-mask`|
 |Command line|`--ndb-recv-thread-cpu-mask=bitmask`|
-|Default value|`[empty] (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27897,7 +27876,6 @@
 |----|-----|
 |Name|`ndb-transid-mysql-connection-map`|
 |Command line|`ndb-transid-mysql-connection-map=state`|
-|Default value|`ON / ON, OFF, FORCE (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27911,7 +27889,6 @@
 |Name|`ndb-wait-connected`|
 |Command line|`--ndb-wait-connected=seconds`|
 |Scope|`global`|
-|Default value|`30 / 0 - 31536000 (Version: 5.1.56-ndb-7.1.16)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27925,7 +27902,6 @@
 |Name|`ndb-wait-setup`|
 |Command line|`--ndb-wait-setup=seconds`|
 |Scope|`global`|
-|Default value|`30 / 0 - 31536000 (Version: 5.1.56-ndb-7.1.16)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27949,9 +27925,12 @@
 |name|value|
 |----|-----|
 |Name|`ndb_autoincrement_prefetch_sz`|
+|Command line|`--ndb-autoincrement-prefetch-sz=#`|
+|Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`1 / 1 - 256 (Version: NDB 7.5-7.6)`|
+|Default value|`1`|
 |Dynamic|`true`|
+|Range|from: `1` to: `65536`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27962,8 +27941,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_cache_check_time`|
+|Command line|`--ndb-cache-check-time=#`|
+|Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0 / - (Version: NDB 7.5-7.6)`|
+|Default value|`0`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27975,8 +27956,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_clear_apply_status`|
+|Command line|`--ndb-clear-apply-status[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON (Version: NDB 7.5-7.6)`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27988,9 +27971,12 @@
 |name|value|
 |----|-----|
 |Name|`ndb_data_node_neighbour`|
+|Command line|`--ndb-data-node-neighbour=#`|
+|Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0 / 0 - 255 (Version: 5.7.12-ndb-7.5.2)`|
+|Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `255`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28001,9 +27987,11 @@
 |name|value|
 |----|-----|
 |Name|`ndb_default_column_format`|
+|Command line|`--ndb-default-column-format={FIXED|DYNAMIC}`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`FIXED / FIXED, DYNAMIC (Version: 5.7.16-ndb-7.5.4)`|
 |Dynamic|`true`|
+|Valid value(s)|`FIXED`, `DYNAMIC`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28014,9 +28002,12 @@
 |name|value|
 |----|-----|
 |Name|`ndb_deferred_constraints`|
+|Command line|`--ndb-deferred-constraints=#`|
+|Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`0 / 0 - 1 (Version: NDB 7.5-7.6)`|
+|Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28027,9 +28018,12 @@
 |name|value|
 |----|-----|
 |Name|`ndb_distribution`|
+|Command line|`--ndb-distribution={KEYHASH|LINHASH}`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`KEYHASH / LINHASH, KEYHASH (Version: NDB 7.5-7.6)`|
+|Default value|`KEYHASH`|
 |Dynamic|`true`|
+|Valid value(s)|`LINHASH`, `KEYHASH`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28040,9 +28034,12 @@
 |name|value|
 |----|-----|
 |Name|`ndb_eventbuffer_free_percent`|
+|Command line|`--ndb-eventbuffer-free-percent=#`|
+|Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`20 / 1 - 99 (Version: NDB 7.5-7.6)`|
+|Default value|`20`|
 |Dynamic|`true`|
+|Range|from: `1` to: `99`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28053,9 +28050,12 @@
 |name|value|
 |----|-----|
 |Name|`ndb_eventbuffer_max_alloc`|
+|Command line|`--ndb-eventbuffer-max-alloc=#`|
+|Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0 / 0 - 4294967295 (Version: NDB 7.5-7.6)`|
+|Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28066,8 +28066,9 @@
 |name|value|
 |----|-----|
 |Name|`ndb_extra_logging`|
+|Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1 / - (Version: 5.1.19-ndb-6.3.0)`|
+|Default value|`1`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28079,8 +28080,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_force_send`|
+|Command line|`--ndb-force-send[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`TRUE (Version: NDB 7.5-7.6)`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28092,8 +28095,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_fully_replicated`|
+|Command line|`--ndb-fully-replicated[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`OFF (Version: 5.7.12-ndb-7-5-2)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28105,8 +28110,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_index_stat_enable`|
+|Command line|`--ndb-index-stat-enable[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`ON (Version: 5.5.15-ndb-7.2.1)`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28118,8 +28125,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_index_stat_option`|
+|Command line|`--ndb-index-stat-option=value`|
+|Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`loop_checkon=1000ms,loop_idle=1000ms,loop_busy=100ms,, update_batch=1,read_batch=4,idle_batch=32,check_batch=32,, check_delay=1m,delete_batch=8,clean_delay=0,error_batch=4,, error_delay=1m,evict_batch=8,evict_delay=1m,cache_limit=32M,, cache_lowpct=90 (Version: 5.1.56-ndb-7.1.17)`|
+|Default value|`loop_checkon=1000ms,loop_idle=1000ms,loop_busy=100ms,         update_batch=1,read_batch=4,idle_batch=32,check_batch=32,         check_delay=1m,delete_batch=8,clean_delay=0,error_batch=4,         error_delay=1m,evict_batch=8,evict_delay=1m,cache_limit=32M,         cache_lowpct=90`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28131,8 +28140,9 @@
 |name|value|
 |----|-----|
 |Name|`ndb_join_pushdown`|
+|Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`TRUE (Version: 5.1.51-ndb-7.2.0)`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28144,8 +28154,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_log_apply_status`|
+|Command line|`--ndb-log-apply-status[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
+|Default value|`OFF`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -28157,8 +28169,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_log_bin`|
+|Command line|`--ndb-log-bin[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`ON (Version: NDB 7.5-7.6)`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28170,8 +28184,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_log_binlog_index`|
+|Command line|`--ndb-log-binlog-index[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON (Version: NDB 7.5-7.6)`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28183,8 +28199,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_log_empty_epochs`|
+|Command line|`--ndb-log-empty-epochs[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28196,8 +28214,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_log_empty_update`|
+|Command line|`--ndb-log-empty-update[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28209,8 +28229,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_log_exclusive_reads`|
+|Command line|`--ndb-log-exclusive-reads[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`0 (Version: NDB 7.5-7.6)`|
+|Default value|`0`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28222,8 +28244,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_log_orig`|
+|Command line|`--ndb-log-orig[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
+|Default value|`OFF`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -28235,8 +28259,9 @@
 |name|value|
 |----|-----|
 |Name|`ndb_log_transaction_id`|
+|Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
+|Default value|`OFF`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -28248,9 +28273,12 @@
 |name|value|
 |----|-----|
 |Name|`ndb_optimized_node_selection`|
+|Command line|`--ndb-optimized-node-selection=#`|
+|Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`3 / 0 - 3 (Version: 5.1.22-ndb-6.3.4)`|
+|Default value|`3`|
 |Dynamic|`false`|
+|Range|from: `0` to: `3`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28261,8 +28289,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_read_backup`|
+|Command line|`--ndb-read-backup[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF (Version: 5.7.12-ndb-7.5.2)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28274,8 +28304,11 @@
 |name|value|
 |----|-----|
 |Name|`ndb_recv_thread_activation_threshold`|
-|Default value|`8 / 0 (MIN_ACTIVATION_THRESHOLD) - 16 (MAX_ACTIVATION_THRESHOLD), (Version: 5.6.10-ndb-7.3.1)`|
-|Dynamic|`false`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`8`|
+|Dynamic|`true`|
+|Range|from: `0` to: `16`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28287,7 +28320,7 @@
 |----|-----|
 |Name|`ndb_recv_thread_cpu_mask`|
 |Scope|`global`|
-|Default value|`[empty] (Version: NDB 7.5-7.6)`|
+|Default value|`[empty]`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28299,9 +28332,11 @@
 |name|value|
 |----|-----|
 |Name|`ndb_report_thresh_binlog_epoch_slip`|
+|Command line|`--ndb-report-thresh-binlog-epoch-slip=#`|
+|Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`10 / 0 - 256 (Version: 5.7.16-ndb-7.5.4)`|
 |Dynamic|`true`|
+|Range|from: `0` to: `256`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28312,10 +28347,12 @@
 |name|value|
 |----|-----|
 |Name|`ndb_report_thresh_binlog_mem_usage`|
-|Type of variable|`boolean`|
+|Command line|`--ndb-report-thresh-binlog-mem-usage=#`|
+|Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1 / 0 - 1 (Version: NDB 7.6.8)`|
+|Default value|`10`|
 |Dynamic|`true`|
+|Range|from: `0` to: `10`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28327,9 +28364,10 @@
 |----|-----|
 |Name|`ndb_row_checksum`|
 |Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1 / 0 - 1 (Version: NDB 7.6.8)`|
+|Scope|`global`, `session`|
+|Default value|`1`|
 |Dynamic|`true`|
+|Range|from: `0` to: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28340,8 +28378,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_show_foreign_key_mock_tables`|
+|Command line|`--ndb-show-foreign-key-mock-tables[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28353,9 +28393,12 @@
 |name|value|
 |----|-----|
 |Name|`ndb_slave_conflict_role`|
+|Command line|`--ndb-slave-conflict-role=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`NONE / NONE, PRIMARY, SECONDARY, PASS (Version: NDB 7.5-7.6)`|
+|Default value|`NONE`|
 |Dynamic|`true`|
+|Valid value(s)|`NONE`, `PRIMARY`, `SECONDARY`, `PASS`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28366,8 +28409,9 @@
 |name|value|
 |----|-----|
 |Name|`ndb_table_no_logging`|
+|Type of variable|`boolean`|
 |Scope|`session`|
-|Default value|`FALSE (Version: NDB 7.5-7.6)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28379,8 +28423,9 @@
 |name|value|
 |----|-----|
 |Name|`ndb_table_temporary`|
+|Type of variable|`boolean`|
 |Scope|`session`|
-|Default value|`FALSE (Version: NDB 7.5-7.6)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28404,8 +28449,9 @@
 |name|value|
 |----|-----|
 |Name|`ndb_use_exact_count`|
+|Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`OFF (Version: 5.1.47-ndb-7.1.8)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28417,8 +28463,10 @@
 |name|value|
 |----|-----|
 |Name|`ndb_use_transactions`|
+|Command line|`--ndb-use-transactions[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`ON (Version: NDB 7.5-7.6)`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28430,8 +28478,9 @@
 |name|value|
 |----|-----|
 |Name|`ndb_version`|
+|Type of variable|`string`|
 |Scope|`global`|
-|Default value|`(Version: NDB 7.5-7.6)`|
+|Default value|``|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -28443,8 +28492,9 @@
 |name|value|
 |----|-----|
 |Name|`ndb_version_string`|
+|Type of variable|`string`|
 |Scope|`global`|
-|Default value|`(Version: NDB 7.5-7.6)`|
+|Default value|``|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -28457,7 +28507,6 @@
 |----|-----|
 |Name|`server_id_bits`|
 |Scope|`global`|
-|Default value|`32 / 7 - 32 (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -28470,7 +28519,6 @@
 |----|-----|
 |Name|`slave_allow_batching`|
 |Scope|`global`|
-|Default value|`off (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28483,7 +28531,6 @@
 |----|-----|
 |Name|`transaction_allow_batching`|
 |Scope|`session`|
-|Default value|`FALSE (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28496,7 +28543,6 @@
 |----|-----|
 |Name|`ndbinfo_database`|
 |Scope|`global`|
-|Default value|`ndbinfo (Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -28509,7 +28555,6 @@
 |----|-----|
 |Name|`ndbinfo_max_bytes`|
 |Scope|`global`, `session`|
-|Default value|`0 / - (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28522,7 +28567,6 @@
 |----|-----|
 |Name|`ndbinfo_max_rows`|
 |Scope|`global`, `session`|
-|Default value|`10 / - (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28535,7 +28579,6 @@
 |----|-----|
 |Name|`ndbinfo_offline`|
 |Scope|`global`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28548,7 +28591,6 @@
 |----|-----|
 |Name|`ndbinfo_show_hidden`|
 |Scope|`global`, `session`|
-|Default value|`OFF (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28561,7 +28603,6 @@
 |----|-----|
 |Name|`ndbinfo_table_prefix`|
 |Scope|`global`, `session`|
-|Default value|`ndb$ (Version: NDB 7.5-7.6)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28574,7 +28615,6 @@
 |----|-----|
 |Name|`ndbinfo_version`|
 |Scope|`global`|
-|Default value|`(Version: NDB 7.5-7.6)`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -31978,7 +32018,7 @@
 |Command line|`--tls-ciphersuites=ciphersuite_list`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`empty string`|
+|Default value|`NULL`|
 |Dynamic|`true`|
 
 ### Documentation(s)

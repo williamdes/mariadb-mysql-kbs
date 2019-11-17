@@ -3552,7 +3552,7 @@
     },
     {
       "cli": "--tls-ciphersuites=ciphersuite_list",
-      "default": "empty string",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_tls_ciphersuites",
       "name": "tls_ciphersuites",

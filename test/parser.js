@@ -129,13 +129,22 @@ module.exports = function() {
             const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_4.html'));
             MySQL.parsePage($, function(resultData) {
                 expect(resultData).to.deep.equal([
-                    { id: 'option_mysqld_ndbcluster', name: 'ndbcluster', cli: '--ndbcluster', dynamic: false },
+                    {
+                        id: 'option_mysqld_ndbcluster',
+                        name: 'ndbcluster',
+                        cli: '--ndbcluster',
+                        dynamic: false,
+                        type: 'boolean',
+                        default: 'OFF (Version: 5.7)',
+                    },
                     {
                         id: 'option_mysqld_ndb-allow-copying-alter-table',
                         name: 'ndb-allow-copying-alter-table',
                         cli: '--ndb-allow-copying-alter-table=[ON|OFF]',
                         scope: ['global', 'session'],
                         dynamic: true,
+                        type: 'boolean',
+                        default: 'ON (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-batch-size',
@@ -143,6 +152,8 @@ module.exports = function() {
                         cli: '--ndb-batch-size=#',
                         scope: ['global'],
                         dynamic: false,
+                        type: 'integer',
+                        default: '32768 / 0 - 31536000 (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-cluster-connection-pool',
@@ -158,6 +169,8 @@ module.exports = function() {
                         cli: '--ndb-cluster-connection-pool-nodeids=list',
                         scope: ['global'],
                         dynamic: false,
+                        type: 'set',
+                        default: '/ (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-blob-read-batch-bytes',
@@ -165,6 +178,8 @@ module.exports = function() {
                         cli: '--ndb-blob-read-batch-bytes=bytes',
                         scope: ['global', 'session'],
                         dynamic: true,
+                        type: 'integer',
+                        default: '65536 / 0 - 4294967295 (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-blob-write-batch-bytes',
@@ -172,12 +187,16 @@ module.exports = function() {
                         cli: '--ndb-blob-write-batch-bytes=bytes',
                         scope: ['global', 'session'],
                         dynamic: true,
+                        type: 'integer',
+                        default: '65536 / 0 - 4294967295 (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-connectstring',
                         name: 'ndb-connectstring',
                         cli: '--ndb-connectstring=connection_string',
                         dynamic: false,
+                        type: 'string',
+                        default: '(Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-default-column-format',
@@ -185,6 +204,8 @@ module.exports = function() {
                         cli: '--ndb-default-column-format=[FIXED|DYNAMIC]',
                         scope: ['global'],
                         dynamic: true,
+                        type: 'enumeration',
+                        default: 'FIXED / FIXED, DYNAMIC (Version: 7.5.4)',
                     },
                     {
                         id: 'option_mysqld_ndb-deferred-constraints',
@@ -192,6 +213,8 @@ module.exports = function() {
                         cli: '--ndb-deferred-constraints=[0|1]',
                         scope: ['global', 'session'],
                         dynamic: true,
+                        type: 'integer',
+                        default: '0 / 0 - 1 (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-distribution',
@@ -199,6 +222,8 @@ module.exports = function() {
                         cli: '--ndb-distribution=[KEYHASH|LINHASH]',
                         scope: ['global'],
                         dynamic: true,
+                        type: 'enumeration',
+                        default: 'KEYHASH / LINHASH, KEYHASH (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-log-apply-status',
@@ -206,6 +231,8 @@ module.exports = function() {
                         cli: '--ndb-log-apply-status',
                         scope: ['global'],
                         dynamic: false,
+                        type: 'boolean',
+                        default: 'OFF (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-log-empty-epochs',
@@ -213,6 +240,8 @@ module.exports = function() {
                         cli: '--ndb-log-empty-epochs=[ON|OFF]',
                         scope: ['global'],
                         dynamic: true,
+                        type: 'boolean',
+                        default: 'OFF (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-log-empty-update',
@@ -220,6 +249,8 @@ module.exports = function() {
                         cli: '--ndb-log-empty-update=[ON|OFF]',
                         scope: ['global'],
                         dynamic: true,
+                        type: 'boolean',
+                        default: 'OFF (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-log-exclusive-reads',
@@ -227,6 +258,8 @@ module.exports = function() {
                         cli: '--ndb-log-exclusive-reads=[0|1]',
                         scope: ['global', 'session'],
                         dynamic: true,
+                        type: 'boolean',
+                        default: '0 (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-log-orig',
@@ -234,6 +267,8 @@ module.exports = function() {
                         cli: '--ndb-log-orig',
                         scope: ['global'],
                         dynamic: false,
+                        type: 'boolean',
+                        default: 'OFF (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-log-transaction-id',
@@ -241,6 +276,8 @@ module.exports = function() {
                         cli: '--ndb-log-transaction-id',
                         scope: ['global'],
                         dynamic: false,
+                        type: 'boolean',
+                        default: 'OFF (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-log-update-minimal',
@@ -248,12 +285,16 @@ module.exports = function() {
                         cli: '--ndb-log-update-minimal',
                         scope: ['global'],
                         dynamic: true,
+                        type: 'boolean',
+                        default: 'OFF (Version: 7.6.3)',
                     },
                     {
                         id: 'option_mysqld_ndb-mgmd-host',
                         name: 'ndb-mgmd-host',
                         cli: '--ndb-mgmd-host=host[:port]',
                         dynamic: false,
+                        type: 'string',
+                        default: 'localhost:1186 (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-nodeid',
@@ -269,24 +310,32 @@ module.exports = function() {
                         cli: '--ndb-optimization-delay=milliseconds',
                         scope: ['global'],
                         dynamic: true,
+                        type: 'integer',
+                        default: '10 / 0 - 100000 (Version: NDB 7.5-7.6)',
                     },
                     {
                         id: 'option_mysqld_ndb-recv-thread-activation-threshold',
                         name: 'ndb-recv-thread-activation-threshold',
                         cli: '--ndb-recv-thread-activation-threshold=threshold',
                         dynamic: false,
+                        type: 'integer',
+                        default:
+                            '8 / 0 (MIN_ACTIVATION_THRESHOLD) - 16, (MAX_ACTIVATION_THRESHOLD) (Version: NDB 7.5-7.6)',
                     },
                     {
                         id: 'option_mysqld_ndb-recv-thread-cpu-mask',
                         name: 'ndb-recv-thread-cpu-mask',
                         cli: '--ndb-recv-thread-cpu-mask=bitmask',
                         dynamic: false,
+                        default: '[empty] (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-transid-mysql-connection-map',
                         name: 'ndb-transid-mysql-connection-map',
                         cli: 'ndb-transid-mysql-connection-map=state',
                         dynamic: false,
+                        type: 'enumeration',
+                        default: 'ON / ON, OFF, FORCE (Version: 5.7)',
                     },
                     {
                         id: 'option_mysqld_ndb-wait-connected',
@@ -294,6 +343,8 @@ module.exports = function() {
                         cli: '--ndb-wait-connected=seconds',
                         scope: ['global'],
                         dynamic: false,
+                        type: 'integer',
+                        default: '30 / 0 - 31536000 (Version: NDB 7.5-7.6)',
                     },
                     {
                         id: 'option_mysqld_ndb-wait-setup',
@@ -301,6 +352,8 @@ module.exports = function() {
                         cli: '--ndb-wait-setup=seconds',
                         scope: ['global'],
                         dynamic: false,
+                        type: 'integer',
+                        default: '30 / 0 - 31536000 (Version: NDB 7.5-7.6)',
                     },
                     {
                         id: 'option_mysqld_skip-ndbcluster',

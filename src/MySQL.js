@@ -72,6 +72,23 @@ function completeDoc($, rows, doc) {
             case 'default, range':
                 doc.default = cleaner.cleanDefault(value.text().trim());
                 break;
+            case 'type: default, range':
+                let textValueDefaultRange = value.text().trim();
+                let key = textValueDefaultRange.substring(0, textValueDefaultRange.indexOf(':') + 1);
+                let val = textValueDefaultRange.substring(textValueDefaultRange.indexOf(':') + 1);
+                if (typeof key === 'string') {
+                    doc.type = cleaner.getCleanTypeFromMixedString(key);
+                    if (typeof doc.type !== 'string') {
+                        delete doc.type;
+                    }
+                }
+                if (typeof val === 'string') {
+                    doc.default = cleaner.cleanDefault(val);
+                    if (typeof doc.default !== 'string') {
+                        delete doc.default;
+                    }
+                }
+                break;
             case 'valid values':
                 doc.validValues = $(value)
                     .find('code')

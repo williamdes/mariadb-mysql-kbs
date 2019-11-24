@@ -3032,7 +3032,7 @@
     },
     {
       "cli": "--thread-cache-size=#",
-      "default": "0 (<= MariaDB 10.1), Auto (from MariaDB 10.2.0)",
+      "default": "0 (<= MariaDB 10.1), 256 (from MariaDB 10.2.0)",
       "dynamic": true,
       "id": "thread_cache_size",
       "name": "thread_cache_size",

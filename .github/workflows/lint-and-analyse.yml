@@ -1,0 +1,62 @@
+name: Lint and analyse files
+
+on: [push]
+
+jobs:
+    lint-node:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 12
+            - name: Cache module
+              uses: actions/cache@v1.0.3
+              with:
+                  path: ~/.npm/
+                  key: npm-cache
+            - name: Install modules
+              run: npm ci
+            - name: Lint files
+              run: |
+                  npm run jshint -- --verbose
+                  JSHINT=$?
+                  echo "Running prettier"
+                  npm run prettier -- --list-different
+                  PRETTIER=$?
+                  if [[ $JSHINT != 0 ]] || [[ $PRETTIER != 0 ]]; then
+                      echo "You have some errors to fix !";
+                      exit 1;
+                  fi
+
+    lint-php:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - name: Validate composer.json and composer.lock
+              run: composer validate
+            - name: Cache module
+              uses: actions/cache@v1.0.3
+              with:
+                  path: ~/.composer/cache/
+                  key: composer-cache
+            - name: Install dependencies
+              run: composer install --prefer-dist --no-progress --no-suggest
+            - name: Lint files
+              run: composer run phpcs
+
+    anayse-php:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - name: Validate composer.json and composer.lock
+              run: composer validate
+            - name: Cache module
+              uses: actions/cache@v1.0.3
+              with:
+                  path: ~/.composer/cache/
+                  key: composer-cache
+            - name: Install dependencies
+              run: composer install --prefer-dist --no-progress --no-suggest
+            - name: Lint files
+              run: composer run phpstan

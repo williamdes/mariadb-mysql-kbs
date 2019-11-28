@@ -1,0 +1,69 @@
+name: Run tests
+
+on: [push]
+
+jobs:
+    test-node:
+        name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                node_version: ["10", "12"]
+                os: [ubuntu-latest, macOS-latest]
+
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js ${{ matrix.node_version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node_version }}
+            - name: Cache module
+              uses: actions/cache@v1.0.3
+              with:
+                  path: ~/.npm/
+                  key: npm-cache
+            - name: Install modules
+              run: npm ci
+            - name: Create setup files
+              run: |
+                  openssl aes-256-cbc -K ${{ secrets.ENCRYPTED_KEY }} -iv ${{ secrets.ENCRYPTED_IV }} -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d
+                  tar -C scripts/sudo-bot/ -xvf scripts/sudo-bot/keys.tar
+            - name: Run node tests
+              run: |
+                  npm run test
+                  npm run report-coverage
+            - name: Send coverage
+              uses: codecov/codecov-action@v1
+              with:
+                  token: ${{ secrets.CODACY_TOKEN }}
+
+    test-php:
+        name: Test on php ${{ matrix.php-version }} and ${{ matrix.os }}
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                php-version: ["7.1", "7.2", "7.3"]
+                os: [ubuntu-latest, macOS-latest]
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use php ${{ matrix.php-version }}
+              uses: shivammathur/setup-php@v1
+              with:
+                  php-version: ${{ matrix.php-version }}
+                  extension-csv: posix, mbstring
+                  coverage: xdebug
+                  pecl: true
+            - name: Cache module
+              uses: actions/cache@v1.0.3
+              with:
+                  path: ~/.composer/cache/
+                  key: composer-cache
+            - name: Install dependencies
+              run: composer install --prefer-dist --no-progress --no-suggest
+            - name: Run php tests
+              run: composer run test
+            - name: Send coverage
+              uses: codecov/codecov-action@v1
+              with:
+                  file: "./build/logs/clover.xml"
+                  token: ${{ secrets.CODACY_TOKEN }}

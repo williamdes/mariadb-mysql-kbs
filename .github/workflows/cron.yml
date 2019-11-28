@@ -1,0 +1,47 @@
+name: Run sudo-bot to update files
+
+on:
+    schedule:
+        - cron: "30 13 * * 6"
+
+jobs:
+    run-sudo-bot-cron:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 12
+            - name: npm cache module
+              uses: actions/cache@v1.0.3
+              with:
+                  path: ~/.npm/
+                  key: npm-cache
+            - name: composer cache module
+              uses: actions/cache@v1.0.3
+              with:
+                  path: ~/.composer/cache/
+                  key: composer-cache
+            - name: Install
+              run: |
+                  npm ci
+                  composer install --prefer-dist --no-progress --no-suggest
+            - name: Build
+              run: |
+                  npm run build
+                  composer run build
+            - name: Run sudo-bot
+              run: |
+                  openssl aes-256-cbc -K ${{ secrets.ENCRYPTED_KEY }} -iv ${{ secrets.ENCRYPTED_IV }} -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d
+                  tar -C scripts/sudo-bot/ -xvf scripts/sudo-bot/keys.tar
+                  CWD=$(pwd)
+                  cp scripts/sudo-bot/.env.ci scripts/sudo-bot/.env
+                  sed -i "s,{{HOME}},${CWD},g" scripts/sudo-bot/.env
+                  sed -i "s,{{GPG_PRIV_PASSWORD}},${GPG_PRIV_PASSWORD},g" scripts/sudo-bot/.env
+                  sed -i "s,{{INSTALLATION_ID}},${INSTALLATION_ID},g" scripts/sudo-bot/.env
+                  npm run sudo-bot-pr
+                  rm -f scripts/sudo-bot/.env
+            - name: Run test
+              run: |
+                  npm run test
+                  composer run test

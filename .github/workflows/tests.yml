@@ -35,7 +35,7 @@ jobs:
             - name: Send coverage
               uses: codecov/codecov-action@v1
               with:
-                  token: ${{ secrets.CODACY_TOKEN }}
+                  token: ${{ secrets.CODECOV_TOKEN }}
 
     test-php:
         name: Test on php ${{ matrix.php-version }} and ${{ matrix.os }}
@@ -66,4 +66,4 @@ jobs:
               uses: codecov/codecov-action@v1
               with:
                   file: "./build/logs/clover.xml"
-                  token: ${{ secrets.CODACY_TOKEN }}
+                  token: ${{ secrets.CODECOV_TOKEN }}

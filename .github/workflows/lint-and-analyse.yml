@@ -19,6 +19,7 @@ jobs:
               run: npm ci
             - name: Lint files
               run: |
+                  set -e
                   npm run jshint -- --verbose
                   JSHINT=$?
                   echo "Running prettier"

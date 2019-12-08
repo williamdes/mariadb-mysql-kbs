@@ -27,6 +27,7 @@ jobs:
                   npm ci
             - name: Build docs
               run: |
+                  ls -lah
                   ./scripts/apidoc-generate.sh
             - name: Run sudo-bot
               run: |

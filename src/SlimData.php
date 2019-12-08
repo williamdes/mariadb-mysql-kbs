@@ -32,14 +32,14 @@ class SlimData extends stdClass implements JsonSerializable
     /**
      * Types of documentation
      *
-     * @var array<string, string|int>
+     * @var array<string,int>
      */
     private $types = array("MYSQL" => 1, "MARIADB" => 2);
 
     /**
      * Types of variables
      *
-     * @var array<string, string|int>
+     * @var array<string,int>
      */
     private $varTypes = array(
         "string" => 1,
@@ -56,9 +56,9 @@ class SlimData extends stdClass implements JsonSerializable
     /**
      * Create a slimData object
      *
-     * @param float|null                $version  The version
-     * @param array<string,string>|null $types    The types of documentations
-     * @param array<string,string>|null $varTypes The types of variables
+     * @param float|null             $version  The version
+     * @param array<string,int>|null $types    The types of documentations
+     * @param array<string,int>|null $varTypes The types of variables
      */
     public function __construct(
         ?float $version = null,
@@ -97,7 +97,7 @@ class SlimData extends stdClass implements JsonSerializable
      * Used for json_encode function
      * This can seem useless, do not remove it.
      *
-     * @return array
+     * @return array<string,array|float|stdClass>
      */
     public function jsonSerialize(): array
     {
@@ -113,7 +113,7 @@ class SlimData extends stdClass implements JsonSerializable
 
                 if ($var->getType() !== null) {
                     if (isset($this->varTypes[$var->getType()]) === false) {
-                        $this->varTypes[$var->getType()] = "".(count($this->varTypes) + 1);
+                        $this->varTypes[$var->getType()] = count($this->varTypes) + 1;
                     }
 
                     $variable->t = $this->varTypes[$var->getType()];

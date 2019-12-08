@@ -21,11 +21,17 @@ class Search
      */
     public static $loaded = false;
 
-    public const ANY        = -1;
-    public const MYSQL      = 1;
-    public const MARIADB    = 2;
-    public const DS         = DIRECTORY_SEPARATOR;
-    public static $DATA_DIR = __DIR__.self::DS."..".self::DS."dist".self::DS;
+    public const ANY     = -1;
+    public const MYSQL   = 1;
+    public const MARIADB = 2;
+    public const DS      = DIRECTORY_SEPARATOR;
+
+    /**
+     * The directory where the data is located
+     *
+     * @var string
+     */
+    public static $DATA_DIR = __DIR__ . self::DS . ".." . self::DS . "dist" . self::DS;
 
     /**
      * Load data from disk
@@ -127,7 +133,7 @@ class Search
     /**
      * Return the list of static variables
      *
-     * @return array
+     * @return array<int,string>
      */
     public static function getStaticVariables(): array
     {
@@ -137,7 +143,7 @@ class Search
     /**
      * Return the list of dynamic variables
      *
-     * @return array
+     * @return array<int,string>
      */
     public static function getDynamicVariables(): array
     {
@@ -148,7 +154,7 @@ class Search
      * Return the list of variables having dynamic = $dynamic
      *
      * @param bool $dynamic dynamic=true/dynamic=false
-     * @return array
+     * @return array<int,string>
      */
     public static function getVariablesWithDynamic(bool $dynamic): array
     {

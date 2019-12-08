@@ -60,7 +60,7 @@ class KBDocumentation extends stdClass implements JsonSerializable
      * Used for json_encode function
      * This can seem useless, do not remove it.
      *
-     * @return array
+     * @return array<string,string>
      */
     public function jsonSerialize(): array
     {

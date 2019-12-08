@@ -23077,7 +23077,6 @@
         },
         "innodb_log_files_in_group": {
             "cli": "--innodb-log-files-in-group=#",
-            "default": "2",
             "dynamic": false,
             "name": "innodb_log_files_in_group",
             "scope": [

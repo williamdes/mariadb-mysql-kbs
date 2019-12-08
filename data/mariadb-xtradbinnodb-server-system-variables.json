@@ -1882,7 +1882,7 @@
     },
     {
       "cli": "--innodb-log-files-in-group=#",
-      "default": "2",
+      "default": "1 (>= MariaDB 10.5), 2 (<= MariaDB 10.4)",
       "dynamic": false,
       "id": "innodb_log_files_in_group",
       "name": "innodb_log_files_in_group",

@@ -1,13 +1,11 @@
-name: Run sudo-bot to update files
+name: Run sudo-bot to docs
 
 on:
     repository_dispatch:
-        types: run-cron
-    schedule:
-        - cron: "30 13 * * 6"
+        types: run-build-docs
 
 jobs:
-    run-sudo-bot-cron:
+    run-sudo-bot-build-docs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v1
@@ -28,23 +26,20 @@ jobs:
               run: |
                   npm ci
                   composer install --prefer-dist --no-progress --no-suggest
-            - name: Build
+            - name: Build docs
               run: |
-                  npm run build
-                  composer run build
+                  ./scripts/apidoc-generate.sh
             - name: Run sudo-bot
               run: |
                   openssl aes-256-cbc -K ${{ secrets.ENCRYPTED_KEY }} -iv ${{ secrets.ENCRYPTED_IV }} -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d
                   tar -C scripts/sudo-bot/ -xvf scripts/sudo-bot/keys.tar
                   rm scripts/sudo-bot/keys.tar
                   CWD=$(pwd)
-                  cp scripts/sudo-bot/.env.ci scripts/sudo-bot/.env
-                  sed -i "s,{{HOME}},${CWD},g" scripts/sudo-bot/.env
-                  sed -i "s,{{GPG_PRIV_PASSWORD}},${{ secrets.GPG_PRIV_PASSWORD }},g" scripts/sudo-bot/.env
-                  sed -i "s,{{INSTALLATION_ID}},${{ secrets.INSTALLATION_ID }},g" scripts/sudo-bot/.env
-                  npm run sudo-bot-pr
-                  rm -f scripts/sudo-bot/.env
-            - name: Run test
-              run: |
-                  npm run test
-                  composer run test
+                  cp ${CWD}/scripts/sudo-bot/.env.ci-docs ${CWD}/scripts/sudo-bot/.env
+                  sed -i "s,{{HOME}},${CWD},g" ${CWD}/scripts/sudo-bot/.env
+                  sed -i "s,{{GPG_PRIV_PASSWORD}},${{ secrets.GPG_PRIV_PASSWORD }},g" ${CWD}/scripts/sudo-bot/.env
+                  sed -i "s,{{INSTALLATION_ID}},${{ secrets.INSTALLATION_ID }},g" ${CWD}/scripts/sudo-bot/.env
+                  cd ${CWD}/docs/
+                  ${CWD}/docs/sudo-bot --target-branch gh-pages --env scripts/sudo-bot/.env --verbose
+                  cd ${CWD}
+                  rm -f ${CWD}/scripts/sudo-bot/.env

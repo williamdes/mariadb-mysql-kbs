@@ -42,6 +42,6 @@ jobs:
                   sed -i "s,{{GPG_PRIV_PASSWORD}},${{ secrets.GPG_PRIV_PASSWORD }},g" ${CWD}/scripts/sudo-bot/.env
                   sed -i "s,{{INSTALLATION_ID}},${{ secrets.INSTALLATION_ID }},g" ${CWD}/scripts/sudo-bot/.env
                   cd ${CWD}/docs/
-                  ${CWD}/node_modules/.bin/sudo-bot --target-branch gh-pages --env scripts/sudo-bot/.env --verbose
+                  ${CWD}/node_modules/.bin/sudo-bot --target-branch gh-pages --env ${CWD}/scripts/sudo-bot/.env --verbose
                   cd ${CWD}
                   rm -f ${CWD}/scripts/sudo-bot/.env

@@ -56,9 +56,9 @@ class SlimData extends stdClass implements JsonSerializable
     /**
      * Create a slimData object
      *
-     * @param float|null                 $version  The version
-     * @param array<string, string>|null $types    The types of documentations
-     * @param array<string, string>|null $varTypes The types of variables
+     * @param float|null                $version  The version
+     * @param array<string,string>|null $types    The types of documentations
+     * @param array<string,string>|null $varTypes The types of variables
      */
     public function __construct(
         ?float $version = null,

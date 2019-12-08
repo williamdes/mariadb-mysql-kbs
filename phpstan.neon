@@ -1,9 +1,9 @@
 parameters:
         excludes_analyse:
-        - %rootDir%/../../../src/merge.php
-        - %rootDir%/../../../dist/*
-        - %rootDir%/../../../tmp/*
-        - %rootDir%/../../../docs/*
-        - %rootDir%/../../../build/*
-        - %rootDir%/../../../nodes_modules/*
-        - %rootDir%/../../../vendor/*
+        - src/merge.php
+        - dist/*
+        - tmp/*
+        - docs/*
+        - build/*
+        - nodes_modules/*
+        - vendor/*

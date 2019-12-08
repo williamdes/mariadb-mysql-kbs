@@ -59,7 +59,7 @@ jobs:
                   path: ~/.composer/cache/
                   key: composer-cache
             - name: Install dependencies
-              run: composer install --prefer-dist --no-progress --no-suggest
+              run: composer install --no-interaction --prefer-dist --no-progress --no-suggest
             - name: Run php tests
               run: composer run test
             - name: Send coverage

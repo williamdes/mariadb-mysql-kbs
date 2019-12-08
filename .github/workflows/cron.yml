@@ -27,7 +27,7 @@ jobs:
             - name: Install
               run: |
                   npm ci
-                  composer install --prefer-dist --no-progress --no-suggest
+                  composer install --no-interaction --prefer-dist --no-progress --no-suggest
             - name: Build
               run: |
                   npm run build

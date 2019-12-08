@@ -48,3 +48,4 @@ npm install --save mariadb-mysql-kbs
 ### Packaging status
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/php:williamdes-mariadb-mysql-kbs.svg)](https://repology.org/project/php:williamdes-mariadb-mysql-kbs/versions)
+

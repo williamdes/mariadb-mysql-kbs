@@ -25274,7 +25274,6 @@
 |Command line|`--innodb-log-files-in-group=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`2`|
 |Dynamic|`false`|
 
 ### Documentation(s)

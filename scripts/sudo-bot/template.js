@@ -67,6 +67,9 @@ const prContent = function(modifiedFiles) {
             if (file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g)) {
                 emoji = '📦';
             }
+            if (file.match(/.(html|css|js|eot|ttf|woff|svg)$/g) || file === 'renderer.index') {
+                emoji = '👁️';
+            }
             return '- `' + file + '` ' + emoji + '\n';
         })
         .join('');

@@ -209,6 +209,20 @@ module.exports = function() {
             );
             done();
         });
+        test('prContent one special file', function(done) {
+            const prContent = templates.prContent(['renderer.index']);
+            expect(prContent).to.equal(
+                'Dear human 🌻, after running my task the following file was updated:\n- `renderer.index` 👁️\n'
+            );
+            done();
+        });
+        test('prContent one html file', function(done) {
+            const prContent = templates.prContent(['index.html']);
+            expect(prContent).to.equal(
+                'Dear human 🌻, after running my task the following file was updated:\n- `index.html` 👁️\n'
+            );
+            done();
+        });
         test('prBranch', function(done) {
             const prBranch = templates.prBranch([]);
             expect(prBranch).to.match(/^refs\/heads\/update\/[0-9]{13}$/);

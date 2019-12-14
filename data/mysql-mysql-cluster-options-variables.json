@@ -226,21 +226,6 @@
       "type": "integer"
     },
     {
-      "cli": "--ndb-recv-thread-activation-threshold=threshold",
-      "default": "8 / 0 (MIN_ACTIVATION_THRESHOLD) - 16, (MAX_ACTIVATION_THRESHOLD) (Version: NDB 7.5-7.6)",
-      "dynamic": false,
-      "id": "option_mysqld_ndb-recv-thread-activation-threshold",
-      "name": "ndb-recv-thread-activation-threshold",
-      "type": "integer"
-    },
-    {
-      "cli": "--ndb-recv-thread-cpu-mask=bitmask",
-      "default": "[empty] (Version: 5.7)",
-      "dynamic": false,
-      "id": "option_mysqld_ndb-recv-thread-cpu-mask",
-      "name": "ndb-recv-thread-cpu-mask"
-    },
-    {
       "cli": "ndb-transid-mysql-connection-map=state",
       "default": "ON / ON, OFF, FORCE (Version: 5.7)",
       "dynamic": false,
@@ -589,6 +574,7 @@
       "type": "boolean"
     },
     {
+      "cli": "--ndb-recv-thread-activation-threshold=#",
       "default": "8",
       "dynamic": true,
       "id": "sysvar_ndb_recv_thread_activation_threshold",
@@ -603,6 +589,7 @@
       "type": "integer"
     },
     {
+      "cli": "--ndb-recv-thread-cpu-mask=mask",
       "default": "[empty]",
       "dynamic": true,
       "id": "sysvar_ndb_recv_thread_cpu_mask",

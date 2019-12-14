@@ -14718,6 +14718,7 @@
             ]
         },
         "time_zone": {
+            "default": "SYSTEM",
             "dynamic": true,
             "name": "time_zone",
             "scope": [
@@ -14744,8 +14745,13 @@
             ]
         },
         "timestamp": {
+            "default": "UNIX_TIMESTAMP()",
             "dynamic": true,
             "name": "timestamp",
+            "range": {
+                "from": 1,
+                "to": 2147483647
+            },
             "scope": [
                 "session"
             ],
@@ -25552,25 +25558,6 @@
                 "43#option_mysqld_ndb-optimization-delay"
             ]
         },
-        "ndb-recv-thread-activation-threshold": {
-            "cli": "--ndb-recv-thread-activation-threshold=threshold",
-            "default": "8 / 0 (MIN_ACTIVATION_THRESHOLD) - 16, (MAX_ACTIVATION_THRESHOLD) (Version: NDB 7.5-7.6)",
-            "dynamic": false,
-            "name": "ndb-recv-thread-activation-threshold",
-            "type": "integer",
-            "ids": [
-                "43#option_mysqld_ndb-recv-thread-activation-threshold"
-            ]
-        },
-        "ndb-recv-thread-cpu-mask": {
-            "cli": "--ndb-recv-thread-cpu-mask=bitmask",
-            "default": "[empty] (Version: 5.7)",
-            "dynamic": false,
-            "name": "ndb-recv-thread-cpu-mask",
-            "ids": [
-                "43#option_mysqld_ndb-recv-thread-cpu-mask"
-            ]
-        },
         "ndb-transid-mysql-connection-map": {
             "cli": "ndb-transid-mysql-connection-map=state",
             "default": "ON / ON, OFF, FORCE (Version: 5.7)",
@@ -25978,6 +25965,7 @@
             ]
         },
         "ndb_recv_thread_activation_threshold": {
+            "cli": "--ndb-recv-thread-activation-threshold=#",
             "default": "8",
             "dynamic": true,
             "name": "ndb_recv_thread_activation_threshold",
@@ -25994,6 +25982,7 @@
             ]
         },
         "ndb_recv_thread_cpu_mask": {
+            "cli": "--ndb-recv-thread-cpu-mask=mask",
             "default": "[empty]",
             "dynamic": true,
             "name": "ndb_recv_thread_cpu_mask",

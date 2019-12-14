@@ -3532,6 +3532,7 @@
       "type": "integer"
     },
     {
+      "default": "SYSTEM",
       "dynamic": true,
       "id": "sysvar_time_zone",
       "name": "time_zone",
@@ -3542,9 +3543,14 @@
       "type": "string"
     },
     {
+      "default": "UNIX_TIMESTAMP()",
       "dynamic": true,
       "id": "sysvar_timestamp",
       "name": "timestamp",
+      "range": {
+        "from": 1,
+        "to": 2147483647
+      },
       "scope": [
         "session"
       ],

@@ -15825,6 +15825,7 @@
 |Name|`time_zone`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
+|Default value|`SYSTEM`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -15854,7 +15855,9 @@
 |Name|`timestamp`|
 |Type of variable|`numeric`|
 |Scope|`session`|
+|Default value|`UNIX_TIMESTAMP()`|
 |Dynamic|`true`|
+|Range|from: `1` to: `2147483647`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27884,33 +27887,6 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-optimization-delay](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-optimization-delay)|
 
-## ndb-recv-thread-activation-threshold
-|name|value|
-|----|-----|
-|Name|`ndb-recv-thread-activation-threshold`|
-|Command line|`--ndb-recv-thread-activation-threshold=threshold`|
-|Type of variable|`integer`|
-|Default value|`8 / 0 (MIN_ACTIVATION_THRESHOLD) - 16, (MAX_ACTIVATION_THRESHOLD) (Version: NDB 7.5-7.6)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_ndb-recv-thread-activation-threshold](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-recv-thread-activation-threshold)|
-
-## ndb-recv-thread-cpu-mask
-|name|value|
-|----|-----|
-|Name|`ndb-recv-thread-cpu-mask`|
-|Command line|`--ndb-recv-thread-cpu-mask=bitmask`|
-|Default value|`[empty] (Version: 5.7)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_ndb-recv-thread-cpu-mask](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-recv-thread-cpu-mask)|
-
 ## ndb-transid-mysql-connection-map
 |name|value|
 |----|-----|
@@ -28350,6 +28326,7 @@
 |name|value|
 |----|-----|
 |Name|`ndb_recv_thread_activation_threshold`|
+|Command line|`--ndb-recv-thread-activation-threshold=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`8`|
@@ -28365,6 +28342,7 @@
 |name|value|
 |----|-----|
 |Name|`ndb_recv_thread_cpu_mask`|
+|Command line|`--ndb-recv-thread-cpu-mask=mask`|
 |Scope|`global`|
 |Default value|`[empty]`|
 |Dynamic|`true`|

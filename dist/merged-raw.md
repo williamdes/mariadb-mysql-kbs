@@ -31625,6 +31625,20 @@
 |------|----|
 |dev.mysql.com|[sysvar_regexp_time_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_regexp_time_limit)|
 
+## require_row_format
+|name|value|
+|----|-----|
+|Name|`require_row_format`|
+|Type of variable|`boolean`|
+|Scope|`session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_require_row_format](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_require_row_format)|
+
 ## require_secure_transport
 |name|value|
 |----|-----|

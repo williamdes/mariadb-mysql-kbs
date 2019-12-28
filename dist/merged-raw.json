@@ -37329,6 +37329,21 @@
                 }
             ]
         },
+        "require_row_format": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "require_row_format",
+            "scope": [
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_require_row_format",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "require_secure_transport": {
             "cli": "--require-secure-transport[={OFF|ON}]",
             "default": "OFF",

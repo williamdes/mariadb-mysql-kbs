@@ -28941,6 +28941,18 @@
                 "15#sysvar_regexp_time_limit"
             ]
         },
+        "require_row_format": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "require_row_format",
+            "scope": [
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "15#sysvar_require_row_format"
+            ]
+        },
         "require_secure_transport": {
             "cli": "--require-secure-transport[={OFF|ON}]",
             "default": "OFF",

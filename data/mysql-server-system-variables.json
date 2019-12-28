@@ -2634,6 +2634,16 @@
       "type": "integer"
     },
     {
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_require_row_format",
+      "name": "require_row_format",
+      "scope": [
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--require-secure-transport[={OFF|ON}]",
       "default": "OFF",
       "dynamic": true,

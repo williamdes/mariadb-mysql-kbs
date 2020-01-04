@@ -32201,6 +32201,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_mysqlx_bind_address](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_bind_address)|
 
+## mysqlx_compression_algorithms
+|name|value|
+|----|-----|
+|Name|`mysqlx_compression_algorithms`|
+|Command line|`--mysqlx-compression-algorithms=value`|
+|Type of variable|`set`|
+|Scope|`global`|
+|Default value|`deflate_stream,lz4_message,zstd_stream`|
+|Dynamic|`true`|
+|Valid value(s)|`deflate_stream`, `lz4_message`, `zstd_stream`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_compression_algorithms](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_compression_algorithms)|
+
 ## mysqlx_connect_timeout
 |name|value|
 |----|-----|

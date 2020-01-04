@@ -29493,6 +29493,24 @@
                 "47#sysvar_mysqlx_bind_address"
             ]
         },
+        "mysqlx_compression_algorithms": {
+            "cli": "--mysqlx-compression-algorithms=value",
+            "default": "deflate_stream,lz4_message,zstd_stream",
+            "dynamic": true,
+            "name": "mysqlx_compression_algorithms",
+            "scope": [
+                "global"
+            ],
+            "type": "set",
+            "validValues": [
+                "deflate_stream",
+                "lz4_message",
+                "zstd_stream"
+            ],
+            "ids": [
+                "47#sysvar_mysqlx_compression_algorithms"
+            ]
+        },
         "mysqlx_connect_timeout": {
             "cli": "--mysqlx-connect-timeout=#",
             "default": "30",

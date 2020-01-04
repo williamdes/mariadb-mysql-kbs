@@ -37995,6 +37995,27 @@
                 }
             ]
         },
+        "mysqlx_compression_algorithms": {
+            "cli": "--mysqlx-compression-algorithms=value",
+            "default": "deflate_stream,lz4_message,zstd_stream",
+            "dynamic": true,
+            "name": "mysqlx_compression_algorithms",
+            "scope": [
+                "global"
+            ],
+            "type": "set",
+            "validValues": [
+                "deflate_stream",
+                "lz4_message",
+                "zstd_stream"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_mysqlx_compression_algorithms",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
+                }
+            ]
+        },
         "mysqlx_connect_timeout": {
             "cli": "--mysqlx-connect-timeout=#",
             "default": "30",

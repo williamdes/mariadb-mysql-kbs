@@ -25,6 +25,22 @@
       "type": "string"
     },
     {
+      "cli": "--mysqlx-compression-algorithms=value",
+      "default": "deflate_stream,lz4_message,zstd_stream",
+      "dynamic": true,
+      "id": "sysvar_mysqlx_compression_algorithms",
+      "name": "mysqlx_compression_algorithms",
+      "scope": [
+        "global"
+      ],
+      "type": "set",
+      "validValues": [
+        "deflate_stream",
+        "lz4_message",
+        "zstd_stream"
+      ]
+    },
+    {
       "cli": "--mysqlx-connect-timeout=#",
       "default": "30",
       "dynamic": true,

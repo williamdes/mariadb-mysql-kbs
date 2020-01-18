@@ -124,6 +124,7 @@
     },
     {
       "cli": "--basedir=dir_name",
+      "default": "parent of mysqld installation directory",
       "dynamic": false,
       "id": "sysvar_basedir",
       "name": "basedir",
@@ -216,6 +217,7 @@
       "type": "file name"
     },
     {
+      "default": "utf8mb4",
       "dynamic": true,
       "id": "sysvar_character_set_client",
       "name": "character_set_client",
@@ -226,6 +228,7 @@
       "type": "string"
     },
     {
+      "default": "utf8mb4",
       "dynamic": true,
       "id": "sysvar_character_set_connection",
       "name": "character_set_connection",
@@ -236,6 +239,7 @@
       "type": "string"
     },
     {
+      "default": "utf8mb4",
       "dynamic": true,
       "id": "sysvar_character_set_database",
       "name": "character_set_database",
@@ -258,6 +262,7 @@
       "type": "string"
     },
     {
+      "default": "utf8mb4",
       "dynamic": true,
       "id": "sysvar_character_set_results",
       "name": "character_set_results",
@@ -269,6 +274,7 @@
     },
     {
       "cli": "--character-set-server=name",
+      "default": "utf8mb4",
       "dynamic": true,
       "id": "sysvar_character_set_server",
       "name": "character_set_server",
@@ -320,6 +326,7 @@
       "type": "string"
     },
     {
+      "default": "utf8mb4_0900_ai_ci",
       "dynamic": true,
       "id": "sysvar_collation_database",
       "name": "collation_database",
@@ -331,6 +338,7 @@
     },
     {
       "cli": "--collation-server=name",
+      "default": "utf8mb4_0900_ai_ci",
       "dynamic": true,
       "id": "sysvar_collation_server",
       "name": "collation_server",
@@ -463,13 +471,19 @@
     },
     {
       "cli": "--default-authentication-plugin=plugin_name",
+      "default": "caching_sha2_password",
       "dynamic": false,
       "id": "sysvar_default_authentication_plugin",
       "name": "default_authentication_plugin",
       "scope": [
         "global"
       ],
-      "type": "enumeration"
+      "type": "enumeration",
+      "validValues": [
+        "mysql_native_password",
+        "sha256_password",
+        "caching_sha2_password"
+      ]
     },
     {
       "dynamic": true,
@@ -686,6 +700,7 @@
     },
     {
       "cli": "--event-scheduler[=value]",
+      "default": "ON",
       "dynamic": true,
       "id": "sysvar_event_scheduler",
       "name": "event_scheduler",
@@ -701,6 +716,7 @@
     },
     {
       "cli": "--explicit-defaults-for-timestamp[={OFF|ON}]",
+      "default": "ON",
       "dynamic": true,
       "id": "sysvar_explicit_defaults_for_timestamp",
       "name": "explicit_defaults_for_timestamp",
@@ -1173,6 +1189,7 @@
     },
     {
       "cli": "--local-infile[={OFF|ON}]",
+      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_local_infile",
       "name": "local_infile",
@@ -1216,17 +1233,6 @@
       "type": "file name"
     },
     {
-      "cli": "--log-error-filter-rules=value",
-      "default": "set by server",
-      "dynamic": true,
-      "id": "sysvar_log_error_filter_rules",
-      "name": "log_error_filter_rules",
-      "scope": [
-        "global"
-      ],
-      "type": "string"
-    },
-    {
       "cli": "--log-error-services=value",
       "default": "log_filter_internal; log_sink_internal",
       "dynamic": true,
@@ -1250,6 +1256,7 @@
     },
     {
       "cli": "--log-error-verbosity=#",
+      "default": "2",
       "dynamic": true,
       "id": "sysvar_log_error_verbosity",
       "name": "log_error_verbosity",
@@ -1320,6 +1327,7 @@
     },
     {
       "cli": "--log-syslog[={OFF|ON}]",
+      "default": "ON (when error logging to system log is enabled)",
       "dynamic": true,
       "id": "sysvar_log_syslog",
       "name": "log_syslog",
@@ -1382,20 +1390,6 @@
       "dynamic": true,
       "id": "sysvar_log_throttle_queries_not_using_indexes",
       "name": "log_throttle_queries_not_using_indexes",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--log-warnings[=#]",
-      "default": "2",
-      "dynamic": true,
-      "id": "sysvar_log_warnings",
-      "name": "log_warnings",
-      "range": {
-        "from": 0
-      },
       "scope": [
         "global"
       ],
@@ -1465,6 +1459,7 @@
     },
     {
       "cli": "--max-allowed-packet=#",
+      "default": "67108864",
       "dynamic": true,
       "id": "sysvar_max_allowed_packet",
       "name": "max_allowed_packet",
@@ -1540,6 +1535,7 @@
     },
     {
       "cli": "--max-error-count=#",
+      "default": "1024",
       "dynamic": true,
       "id": "sysvar_max_error_count",
       "name": "max_error_count",
@@ -1608,6 +1604,7 @@
     },
     {
       "cli": "--max-length-for-sort-data=#",
+      "default": "4096",
       "dynamic": true,
       "id": "sysvar_max_length_for_sort_data",
       "name": "max_length_for_sort_data",
@@ -1773,22 +1770,6 @@
       "name": "min_examined_row_limit",
       "range": {
         "from": 0
-      },
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--multi-range-count=#",
-      "default": "256",
-      "dynamic": true,
-      "id": "sysvar_multi_range_count",
-      "name": "multi_range_count",
-      "range": {
-        "from": 1,
-        "to": 4294967295
       },
       "scope": [
         "global",
@@ -2070,22 +2051,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--old-passwords=value",
-      "default": "0",
-      "dynamic": true,
-      "id": "sysvar_old_passwords",
-      "name": "old_passwords",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "0",
-        "2"
-      ]
-    },
-    {
       "cli": "--open-files-limit=#",
       "default": "5000, with possible adjustment",
       "dynamic": false,
@@ -2178,6 +2143,7 @@
     },
     {
       "cli": "--optimizer-trace-max-mem-size=#",
+      "default": "1048576",
       "dynamic": true,
       "id": "sysvar_optimizer_trace_max_mem_size",
       "name": "optimizer_trace_max_mem_size",
@@ -2420,76 +2386,6 @@
       "type": "integer"
     },
     {
-      "cli": "--query-cache-limit=#",
-      "default": "1048576",
-      "dynamic": true,
-      "id": "sysvar_query_cache_limit",
-      "name": "query_cache_limit",
-      "range": {
-        "from": 0
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--query-cache-min-res-unit=#",
-      "default": "4096",
-      "dynamic": true,
-      "id": "sysvar_query_cache_min_res_unit",
-      "name": "query_cache_min_res_unit",
-      "range": {
-        "from": 512
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--query-cache-size=#",
-      "dynamic": true,
-      "id": "sysvar_query_cache_size",
-      "name": "query_cache_size",
-      "range": {
-        "from": 0
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--query-cache-type=#",
-      "default": "0",
-      "dynamic": true,
-      "id": "sysvar_query_cache_type",
-      "name": "query_cache_type",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "0",
-        "1",
-        "2"
-      ]
-    },
-    {
-      "cli": "--query-cache-wlock-invalidate[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "sysvar_query_cache_wlock_invalidate",
-      "name": "query_cache_wlock_invalidate",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--query-prealloc-size=#",
       "default": "8192",
       "dynamic": true,
@@ -2697,20 +2593,6 @@
       "type": "integer"
     },
     {
-      "cli": "--secure-auth[={OFF|ON}]",
-      "default": "ON",
-      "dynamic": true,
-      "id": "sysvar_secure_auth",
-      "name": "secure_auth",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean",
-      "validValues": [
-        "ON"
-      ]
-    },
-    {
       "cli": "--secure-file-priv=dir_name",
       "default": "platform specific",
       "dynamic": false,
@@ -2861,17 +2743,6 @@
         "global"
       ],
       "type": "string"
-    },
-    {
-      "cli": "--show-compatibility-56[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "sysvar_show_compatibility_56",
-      "name": "show_compatibility_56",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
     },
     {
       "cli": "--show-create-table-skip-secondary-engine[={OFF|ON}]",
@@ -3058,6 +2929,7 @@
     },
     {
       "cli": "--sql-mode=name",
+      "default": "ONLY_FULL_GROUP_BY STRICT_TRANS_TABLES NO_ZERO_IN_DATE NO_ZERO_DATE ERROR_FOR_DIVISION_BY_ZERO NO_ENGINE_SUBSTITUTION",
       "dynamic": true,
       "id": "sysvar_sql_mode",
       "name": "sql_mode",
@@ -3065,7 +2937,28 @@
         "global",
         "session"
       ],
-      "type": "set"
+      "type": "set",
+      "validValues": [
+        "ALLOW_INVALID_DATES",
+        "ANSI_QUOTES",
+        "ERROR_FOR_DIVISION_BY_ZERO",
+        "HIGH_NOT_PRECEDENCE",
+        "IGNORE_SPACE",
+        "NO_AUTO_VALUE_ON_ZERO",
+        "NO_BACKSLASH_ESCAPES",
+        "NO_DIR_IN_CREATE",
+        "NO_ENGINE_SUBSTITUTION",
+        "NO_UNSIGNED_SUBTRACTION",
+        "NO_ZERO_DATE",
+        "NO_ZERO_IN_DATE",
+        "ONLY_FULL_GROUP_BY",
+        "PAD_CHAR_TO_FULL_LENGTH",
+        "PIPES_AS_CONCAT",
+        "REAL_AS_FLOAT",
+        "STRICT_ALL_TABLES",
+        "STRICT_TRANS_TABLES",
+        "TIME_TRUNCATE_FRACTIONAL"
+      ]
     },
     {
       "default": "ON",
@@ -3323,6 +3216,7 @@
     },
     {
       "cli": "--table-open-cache=#",
+      "default": "4000",
       "dynamic": true,
       "id": "sysvar_table_open_cache",
       "name": "table_open_cache",
@@ -3668,34 +3562,6 @@
       "dynamic": true,
       "id": "sysvar_transaction_read_only",
       "name": "transaction_read_only",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
-      "default": "REPEATABLE-READ",
-      "dynamic": true,
-      "id": "sysvar_tx_isolation",
-      "name": "tx_isolation",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "READ-UNCOMMITTED",
-        "READ-COMMITTED",
-        "REPEATABLE-READ",
-        "SERIALIZABLE"
-      ]
-    },
-    {
-      "default": "OFF",
-      "dynamic": true,
-      "id": "sysvar_tx_read_only",
-      "name": "tx_read_only",
       "scope": [
         "global",
         "session"

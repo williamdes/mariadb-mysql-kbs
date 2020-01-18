@@ -263,6 +263,7 @@
     },
     {
       "cli": "--performance-schema-max-memory-classes=#",
+      "default": "450",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_memory_classes",
       "name": "performance_schema_max_memory_classes",
@@ -464,6 +465,7 @@
     },
     {
       "cli": "--performance-schema-max-thread-classes=#",
+      "default": "100",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_thread_classes",
       "name": "performance_schema_max_thread_classes",

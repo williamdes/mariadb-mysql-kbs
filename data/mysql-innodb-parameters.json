@@ -86,16 +86,6 @@
       "type": "integer"
     },
     {
-      "cli": "--ignore-builtin-innodb[={OFF|ON}]",
-      "dynamic": false,
-      "id": "sysvar_ignore_builtin_innodb",
-      "name": "ignore_builtin_innodb",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--innodb-adaptive-flushing[={OFF|ON}]",
       "default": "ON",
       "dynamic": true,
@@ -238,6 +228,7 @@
     },
     {
       "cli": "--innodb-autoinc-lock-mode=#",
+      "default": "2",
       "dynamic": false,
       "id": "sysvar_innodb_autoinc_lock_mode",
       "name": "innodb_autoinc_lock_mode",
@@ -789,6 +780,7 @@
     },
     {
       "cli": "--innodb-flush-neighbors=#",
+      "default": "0",
       "dynamic": true,
       "id": "sysvar_innodb_flush_neighbors",
       "name": "innodb_flush_neighbors",
@@ -1102,12 +1094,16 @@
     {
       "cli": "--innodb-log-buffer-size=#",
       "default": "16777216",
+      "dynamic": true,
       "id": "sysvar_innodb_log_buffer_size",
       "name": "innodb_log_buffer_size",
       "range": {
         "from": 1048576,
         "to": 4294967295
       },
+      "scope": [
+        "global"
+      ],
       "type": "integer"
     },
     {
@@ -1268,6 +1264,7 @@
     },
     {
       "cli": "--innodb-max-dirty-pages-pct=#",
+      "default": "90",
       "dynamic": true,
       "id": "sysvar_innodb_max_dirty_pages_pct",
       "name": "innodb_max_dirty_pages_pct",
@@ -1282,6 +1279,7 @@
     },
     {
       "cli": "--innodb-max-dirty-pages-pct-lwm=#",
+      "default": "10",
       "dynamic": true,
       "id": "sysvar_innodb_max_dirty_pages_pct_lwm",
       "name": "innodb_max_dirty_pages_pct_lwm",
@@ -1720,17 +1718,6 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-scan-directories=dir_name",
-      "default": "NULL",
-      "dynamic": false,
-      "id": "sysvar_innodb_scan_directories",
-      "name": "innodb_scan_directories",
-      "scope": [
-        "global"
-      ],
-      "type": "directory name"
-    },
-    {
       "cli": "--innodb-saved-page-number-debug=#",
       "default": "0",
       "dynamic": true,
@@ -2069,6 +2056,7 @@
     },
     {
       "cli": "--innodb-undo-log-truncate[={OFF|ON}]",
+      "default": "ON",
       "dynamic": true,
       "id": "sysvar_innodb_undo_log_truncate",
       "name": "innodb_undo_log_truncate",
@@ -2078,24 +2066,15 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-undo-logs=#",
-      "default": "128",
-      "dynamic": true,
-      "id": "sysvar_innodb_undo_logs",
-      "name": "innodb_undo_logs",
-      "range": {
-        "from": 1,
-        "to": 128
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--innodb-undo-tablespaces=#",
+      "default": "2",
+      "dynamic": true,
       "id": "sysvar_innodb_undo_tablespaces",
       "name": "innodb_undo_tablespaces",
+      "range": {
+        "from": 2,
+        "to": 127
+      },
       "scope": [
         "global"
       ],

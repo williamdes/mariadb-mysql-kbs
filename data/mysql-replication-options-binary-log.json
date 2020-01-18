@@ -132,6 +132,7 @@
     },
     {
       "cli": "--binlog-expire-logs-seconds=#",
+      "default": "2592000",
       "dynamic": true,
       "id": "sysvar_binlog_expire_logs_seconds",
       "name": "binlog_expire_logs_seconds",
@@ -344,6 +345,7 @@
     },
     {
       "cli": "--expire-logs-days=#",
+      "default": "0",
       "dynamic": true,
       "id": "sysvar_expire_logs_days",
       "name": "expire_logs_days",
@@ -407,18 +409,8 @@
       "type": "boolean"
     },
     {
-      "cli": "--log-builtin-as-identified-by-password[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "sysvar_log_builtin_as_identified_by_password",
-      "name": "log_builtin_as_identified_by_password",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--log-slave-updates[={OFF|ON}]",
+      "default": "ON",
       "dynamic": false,
       "id": "sysvar_log_slave_updates",
       "name": "log_slave_updates",

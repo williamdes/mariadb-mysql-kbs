@@ -177,6 +177,7 @@
     },
     {
       "cli": "--master-info-repository={FILE|TABLE}",
+      "default": "TABLE",
       "dynamic": true,
       "id": "sysvar_master_info_repository",
       "name": "master_info_repository",
@@ -248,6 +249,7 @@
     },
     {
       "cli": "--relay-log-info-repository=value",
+      "default": "TABLE",
       "dynamic": true,
       "id": "sysvar_relay_log_info_repository",
       "name": "relay_log_info_repository",
@@ -546,6 +548,7 @@
     },
     {
       "cli": "--slave-rows-search-algorithms=value",
+      "default": "INDEX_SCAN,HASH_SCAN",
       "dynamic": true,
       "id": "sysvar_slave_rows_search_algorithms",
       "name": "slave_rows_search_algorithms",

@@ -19,6 +19,7 @@
     },
     {
       "cli": "--basedir=dir_name",
+      "default": "parent of mysqld installation directory",
       "dynamic": false,
       "id": "sysvar_basedir",
       "name": "basedir",
@@ -91,11 +92,6 @@
       "id": "option_mysqld_default-time-zone",
       "name": "default_time_zone",
       "type": "string"
-    },
-    {
-      "cli": "--des-key-file=file_name",
-      "id": "option_mysqld_des-key-file",
-      "name": "des_key_file"
     },
     {
       "cli": "--early-plugin-load=plugin_list",
@@ -256,20 +252,6 @@
       "type": "integer"
     },
     {
-      "cli": "--log-warnings[=#]",
-      "default": "2",
-      "dynamic": true,
-      "id": "option_mysqld_log-warnings",
-      "name": "log_warnings",
-      "range": {
-        "from": 0
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--memlock[={OFF|ON}]",
       "default": "OFF",
       "id": "option_mysqld_memlock",
@@ -412,6 +394,7 @@
     },
     {
       "cli": "--sql-mode=name",
+      "default": "ONLY_FULL_GROUP_BY STRICT_TRANS_TABLES NO_ZERO_IN_DATE NO_ZERO_DATE ERROR_FOR_DIVISION_BY_ZERO NO_ENGINE_SUBSTITUTION",
       "dynamic": true,
       "id": "option_mysqld_sql-mode",
       "name": "sql_mode",
@@ -419,7 +402,28 @@
         "global",
         "session"
       ],
-      "type": "set"
+      "type": "set",
+      "validValues": [
+        "ALLOW_INVALID_DATES",
+        "ANSI_QUOTES",
+        "ERROR_FOR_DIVISION_BY_ZERO",
+        "HIGH_NOT_PRECEDENCE",
+        "IGNORE_SPACE",
+        "NO_AUTO_VALUE_ON_ZERO",
+        "NO_BACKSLASH_ESCAPES",
+        "NO_DIR_IN_CREATE",
+        "NO_ENGINE_SUBSTITUTION",
+        "NO_UNSIGNED_SUBTRACTION",
+        "NO_ZERO_DATE",
+        "NO_ZERO_IN_DATE",
+        "ONLY_FULL_GROUP_BY",
+        "PAD_CHAR_TO_FULL_LENGTH",
+        "PIPES_AS_CONCAT",
+        "REAL_AS_FLOAT",
+        "STRICT_ALL_TABLES",
+        "STRICT_TRANS_TABLES",
+        "TIME_TRUNCATE_FRACTIONAL"
+      ]
     },
     {
       "cli": "--standalone",
@@ -435,6 +439,7 @@
     },
     {
       "cli": "--symbolic-links[={OFF|ON}]",
+      "default": "OFF",
       "id": "option_mysqld_symbolic-links",
       "name": "symbolic_links",
       "type": "boolean"
@@ -456,12 +461,6 @@
         "COMMIT",
         "ROLLBACK"
       ]
-    },
-    {
-      "cli": "--temp-pool[={OFF|ON}]",
-      "id": "option_mysqld_temp-pool",
-      "name": "temp_pool",
-      "type": "boolean"
     },
     {
       "cli": "--transaction-isolation=name",

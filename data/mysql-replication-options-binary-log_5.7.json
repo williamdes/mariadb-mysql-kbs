@@ -106,6 +106,7 @@
     },
     {
       "cli": "--binlog-error-action[=value]",
+      "default": "ABORT_SERVER",
       "dynamic": true,
       "id": "sysvar_binlog_error_action",
       "name": "binlog_error_action",
@@ -120,6 +121,7 @@
     },
     {
       "cli": "--binlog-format=format",
+      "default": "ROW",
       "dynamic": true,
       "id": "sysvar_binlog_format",
       "name": "binlog_format",
@@ -163,22 +165,6 @@
         "global"
       ],
       "type": "integer"
-    },
-    {
-      "cli": "--binlogging-impossible-mode[=value]",
-      "default": "IGNORE_ERROR",
-      "dynamic": true,
-      "id": "sysvar_binlogging_impossible_mode",
-      "name": "binlogging_impossible_mode",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "IGNORE_ERROR",
-        "ABORT_SERVER"
-      ]
     },
     {
       "cli": "--binlog-max-flush-queue-time=#",
@@ -294,17 +280,6 @@
         "global"
       ],
       "type": "integer"
-    },
-    {
-      "cli": "--log-backward-compatible-user-definitions[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "sysvar_log_backward_compatible_user_definitions",
-      "name": "log_backward_compatible_user_definitions",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
     },
     {
       "dynamic": false,
@@ -457,6 +432,7 @@
     },
     {
       "cli": "--sync-binlog=#",
+      "default": "1",
       "dynamic": true,
       "id": "sysvar_sync_binlog",
       "name": "sync_binlog",

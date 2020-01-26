@@ -88,5 +88,7 @@
             "Williamdes\\MariaDBMySQLKBS\\Test\\": "test/"
         }
     },
-    "non-feature-branches": ["update/*"]
+    "non-feature-branches": [
+        "update/*"
+    ]
 }

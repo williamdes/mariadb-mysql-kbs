@@ -51,7 +51,7 @@ EOF
 tmp=$(mktemp)
 
 echo "Update changelog file"
-npm run changelog-file
+NEXT_VERSION="$version" npm run changelog-file-next
 git diff
 
 read -r -p "Are you sure to commit the diff? [Y/n]" response

@@ -8,3 +8,4 @@ node_modules
 /coverage.lcov
 /williamdes-mariadb-mysql-kbs-*.tar
 .phpunit.result.cache
+/target

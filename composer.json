@@ -62,6 +62,7 @@
             "/CODEOWNERS",
             "/williamdes-mariadb-mysql-kbs-*.tar",
             "/docs",
+            "/target",
             "/package.json",
             "/package-lock.json",
             "/.prettierignore",

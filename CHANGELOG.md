@@ -5,6 +5,66 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+### Added
+
+- [d9742f4](https://github.com/williamdes/mariadb-mysql-kbs/commit/d9742f4bb8e6962c5149c725a7baadf5a79da359) add: Travis CI cron
+- [403f751](https://github.com/williamdes/mariadb-mysql-kbs/commit/403f751af50c2a7c5d8c57cffbee552e6c8b7cf1) add: Workflows
+- [fad58a0](https://github.com/williamdes/mariadb-mysql-kbs/commit/fad58a0793ac5279de779371cf9429f85a5f12ca) add: get clean type from mixed string
+- [58f6ce1](https://github.com/williamdes/mariadb-mysql-kbs/commit/58f6ce174bf326e91345509ee49703b234af503d) add: test case 4 before type detection enhancement
+
+### Changed
+
+- [4d67c9c](https://github.com/williamdes/mariadb-mysql-kbs/commit/4d67c9c891aaa9576faf635a8c2acde506a29826) update: [MySQL] updates and other changes
+- [3231ac4](https://github.com/williamdes/mariadb-mysql-kbs/commit/3231ac4cc4a4497c45580686bf2d587141a860e8) update: [MySQL] updates
+- [a50744f](https://github.com/williamdes/mariadb-mysql-kbs/commit/a50744f4555c79200e80ae8a104f47e99980fb80) update: [MySQL] updates
+- [034b517](https://github.com/williamdes/mariadb-mysql-kbs/commit/034b517927997297f2bc07eb700dc71003fa51f2) update: [MySQL] updates
+- [a551a29](https://github.com/williamdes/mariadb-mysql-kbs/commit/a551a299b11b50ab0e282741976bd49adf8eca67) update: [MariaDB] updates
+- [af7a10c](https://github.com/williamdes/mariadb-mysql-kbs/commit/af7a10cb89c1df513dff2e697f850fae6af6e113) update: [MariaDB] updates
+- [7a979e2](https://github.com/williamdes/mariadb-mysql-kbs/commit/7a979e26722661e4faa78c0ee04b65b37f6ebeeb) update: [MySQL] updates
+
+### Removed
+
+- [fd20335](https://github.com/williamdes/mariadb-mysql-kbs/commit/fd203354b733a73d42d70c360724b0e5d08523fb) remove: release script
+
+### Fixed
+
+- [4c7126f](https://github.com/williamdes/mariadb-mysql-kbs/commit/4c7126ff4ff9c035351549ae7c0808cef3848a45) fix: use new build command and convention for changelog-generator-twig
+- [ed7158c](https://github.com/williamdes/mariadb-mysql-kbs/commit/ed7158c890e0b5b7d6b4306520503189e5305348) fix: Improve docs generation script
+- [4176e94](https://github.com/williamdes/mariadb-mysql-kbs/commit/4176e9440dd3d556d32d9479142b19565b51062e) fix: phpdoc errors reported by phpstan
+- [8369147](https://github.com/williamdes/mariadb-mysql-kbs/commit/8369147444eb5b488b748b598df611c58c56bb21) fix: phpdoc block
+- [3faaae7](https://github.com/williamdes/mariadb-mysql-kbs/commit/3faaae71a507438aba3d8c8f2fbdab64bc104c6b) fix: Use version 1.0.5 of sudo-bot/action-pull-request-lock
+- [4b06ebe](https://github.com/williamdes/mariadb-mysql-kbs/commit/4b06ebe880fd33e4749cf96b261677f313def6da) fix: test case 4 after adding support for 'type: default, range' in MySQL pages
+
+### Features
+
+- [6e928c7](https://github.com/williamdes/mariadb-mysql-kbs/commit/6e928c70e38780007b145800e240f8f747b1578d) feat: Add a release script
+- [03809c5](https://github.com/williamdes/mariadb-mysql-kbs/commit/03809c5af460f1c806826dd2a6308d99719bcb4b) feat: make Swaggest\JsonSchema\Schema optional for Debian packaging vendors
+- [22744bb](https://github.com/williamdes/mariadb-mysql-kbs/commit/22744bb96b45aef525119dfc9cef2fcdd9650d98) feat: get rid of the url:: resolver to make the vendor optional
+- [ab4a210](https://github.com/williamdes/mariadb-mysql-kbs/commit/ab4a2109604528b40581ac4a036d219f8feef7ce) feat: added sign-release script
+- [7e58e57](https://github.com/williamdes/mariadb-mysql-kbs/commit/7e58e571772d4bfff49c628876eaaae7e32f1f99) feat: Improve sudo-bot template file
+- [668f1a0](https://github.com/williamdes/mariadb-mysql-kbs/commit/668f1a014870202ea994404baedbb6d60bae1676) feat: Add docs build and PR
+- [530f0c1](https://github.com/williamdes/mariadb-mysql-kbs/commit/530f0c148d180430329d01a8788389b51c2334de) feat: Add packaging status badge from repology
+- [0e37662](https://github.com/williamdes/mariadb-mysql-kbs/commit/0e37662ab711fd99c2948057d219cf878b2c7980) feat: Add workflow to lock a closed pull-request
+- [8c65961](https://github.com/williamdes/mariadb-mysql-kbs/commit/8c659616e3a7fe7c264e234bcc983b06de9a5585) feat: Add script to trigger a workflow
+- [74fbc90](https://github.com/williamdes/mariadb-mysql-kbs/commit/74fbc90329639523581617c693a04f4b6a4a797a) feat: support 'type: default, range' in MySQL pages
+
+### Others
+
+- [89c3397](https://github.com/williamdes/mariadb-mysql-kbs/commit/89c339730a3728dd35dbbc8018464fba5688c652) chore: remove /schemas folder for dist archives (composer)
+- [976d936](https://github.com/williamdes/mariadb-mysql-kbs/commit/976d936f6dd8a8cc8002e2d254df91315401025a) chore: remove /target folder for dist archives (rust support)
+- [7634363](https://github.com/williamdes/mariadb-mysql-kbs/commit/7634363f0ab12eddf80aba61f04483da53c0412c) chore: Add .gitattributes to ignored dir for dist archives
+- [73dfae0](https://github.com/williamdes/mariadb-mysql-kbs/commit/73dfae02cf268b03972fc0e5b4c869375e372717) chore: move tests to a more standard place
+- [dc37421](https://github.com/williamdes/mariadb-mysql-kbs/commit/dc374211df97b2187317028a40171d5adc39bfa3) chore: simplify phpunit version regex
+- [9fc286a](https://github.com/williamdes/mariadb-mysql-kbs/commit/9fc286ab32ca693c5978474495a66b3f737edb6e) ci: Add merge pull-request workflow
+- [44d115e](https://github.com/williamdes/mariadb-mysql-kbs/commit/44d115ed3d27355b75f3d6e081411c18003f0049) ci: add --no-interaction and fix docs build
+- [a1596a5](https://github.com/williamdes/mariadb-mysql-kbs/commit/a1596a526084da7df3212cf26876950d7560436b) chore: update phpstan/phpstan to 0.12
+- [f96a3d1](https://github.com/williamdes/mariadb-mysql-kbs/commit/f96a3d19220bc4444629520a40e2d27785e8f46e) chore: update slevomat/coding-standard to 6.0
+- [6248da5](https://github.com/williamdes/mariadb-mysql-kbs/commit/6248da5b030f35b6e6adde216e173d2534024129) chore: Update docs submodule
+- [f3ac5ee](https://github.com/williamdes/mariadb-mysql-kbs/commit/f3ac5ee6b54ca2557a1822947776787d00c90a4d) chore: replace badge in README.md
+- [42cf92f](https://github.com/williamdes/mariadb-mysql-kbs/commit/42cf92ffc22dc973420586dadf643693312efa23) ci: finish migration to GitHub actions
+- [f0cb417](https://github.com/williamdes/mariadb-mysql-kbs/commit/f0cb417661ecdd039dbeccb10873fe2fe722da59) ci: remove all TravisCI files
+
 ## [v1.2.8]
 
 ### Added
@@ -31,6 +91,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - [baee0c0](https://github.com/williamdes/mariadb-mysql-kbs/commit/baee0c02d1428d8d1c8d7e0824bdb5463e68cc7f) fix: some MySQL and MariaDB fixes
 - [185ebb2](https://github.com/williamdes/mariadb-mysql-kbs/commit/185ebb223ba0904e65395f226a13b3bc708014fb) fix: cleanCli undefined
+
+### Features
+
+- [14d2a95](https://github.com/williamdes/mariadb-mysql-kbs/commit/14d2a95d61e0c1831e82d0a8d2c67132c18de4d8) feat: add tests for MySQL parser
+- [228ee4a](https://github.com/williamdes/mariadb-mysql-kbs/commit/228ee4aba365dea063806c059a96c2d7c3c7902a) feat: Add cleaner for default values
 
 ## [v1.2.7]
 

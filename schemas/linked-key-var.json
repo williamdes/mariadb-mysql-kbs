@@ -1,6 +1,6 @@
 {
     "definitions": {},
-    "$id": "urn:williamdes:mariadb-mysql-kbs:linked-key-var",
+    "$id": "linked-key-var.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "additionalProperties": false,

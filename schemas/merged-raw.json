@@ -1,5 +1,5 @@
 {
-    "$id": "urn:williamdes:mariadb-mysql-kbs:rawdata",
+    "$id": "merged-raw.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "definitions": {},
@@ -92,20 +92,20 @@
             "additionalProperties": false
         },
         "version": {
-            "$ref": "urn:williamdes:mariadb-mysql-kbs:doc-version"
+            "$ref": "doc-version.json"
         },
         "urls": {
             "type": "array",
             "additionalItems": false,
             "items": {
-                "$ref": "urn:williamdes:mariadb-mysql-kbs:doc-url"
+                "$ref": "doc-url.json"
             }
         },
         "types": {
-            "$ref": "urn:williamdes:mariadb-mysql-kbs:linked-key-var"
+            "$ref": "linked-key-var.json"
         },
         "varTypes": {
-            "$ref": "urn:williamdes:mariadb-mysql-kbs:linked-key-var"
+            "$ref": "linked-key-var.json"
         }
     },
     "additionalProperties": false

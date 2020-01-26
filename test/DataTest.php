@@ -25,7 +25,25 @@ class DataTest extends TestCase
     }
 
     /**
+     * test that the vendor class can be found
+     * if not found the test is marked as skipped
+     * That will allow packagers to run tests without the vendor (Debian :wink:)
+     *
+     * @return void
+     */
+    public function testVendorFound(): void
+    {
+        if (class_exists(Schema::class)) {
+            // tests that depend on the vendor can be run
+            $this->assertTrue(true);
+        } else {
+            $this->markTestSkipped('vnf');
+        }
+    }
+
+    /**
      * test files
+     * @depends testVendorFound
      *
      * @return void
      */
@@ -37,6 +55,7 @@ class DataTest extends TestCase
 
     /**
      * test slim data
+     * @depends testVendorFound
      *
      * @return void
      */
@@ -48,6 +67,7 @@ class DataTest extends TestCase
 
     /**
      * test ultra slim data
+     * @depends testVendorFound
      *
      * @return void
      */
@@ -59,6 +79,7 @@ class DataTest extends TestCase
 
     /**
      * test ultra slim data
+     * @depends testVendorFound
      *
      * @return void
      */

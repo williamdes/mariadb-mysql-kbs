@@ -8,6 +8,11 @@ if [ -z "$version" ]; then
     exit 1;
 fi
 
+if [[ "$version" =~ [a-z]+ ]]; then
+    echo 'Version must not contain any letter, "v" prefix is added in the script.';
+    exit 1;
+fi
+
 branch=$(git rev-parse --abbrev-ref HEAD)
 token=$(git config github.token)
 

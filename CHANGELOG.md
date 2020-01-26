@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.2.9]
 
 ### Added
 
@@ -474,7 +474,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [d9cd2a8](https://github.com/williamdes/mariadb-mysql-kbs/commit/d9cd2a8123a67d6adfddf0414988b98fcac9f082) fixed: bug in MariaDB script
 
 
-[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.8...HEAD
+[1.2.9]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.8...1.2.9
 [v1.2.8]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.7...v1.2.8
 [v1.2.7]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.6...v1.2.7
 [v1.2.6]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.5...v1.2.6

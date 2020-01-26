@@ -7,6 +7,7 @@
 /composer.lock
 /.prettierignore
 /.gitignore
+/.gitattributes
 /phpcs.xml
 /phpunit.xml
 /phpstan.neon

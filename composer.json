@@ -68,6 +68,7 @@
             "/.gitignore",
             "/phpcs.xml",
             "/phpunit.xml",
+            "/.gitattributes",
             "/phpstan.neon",
             "/.github",
             "/dist/merged-raw.md",

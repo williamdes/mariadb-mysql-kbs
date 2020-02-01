@@ -32723,9 +32723,8 @@
             ]
         },
         "ndbcluster": {
-            "cli": "--ndbcluster",
-            "default": "OFF (Version: 5.7)",
-            "dynamic": false,
+            "cli": "--ndbcluster[=value]",
+            "default": "OFF",
             "name": "ndbcluster",
             "type": "boolean",
             "ids": [
@@ -32735,11 +32734,11 @@
                 }
             ]
         },
-        "ndb-allow-copying-alter-table": {
-            "cli": "--ndb-allow-copying-alter-table=[ON|OFF]",
-            "default": "ON (Version: 5.7)",
+        "ndb_allow_copying_alter_table": {
+            "cli": "--ndb-allow-copying-alter-table[={OFF|ON}]",
+            "default": "ON",
             "dynamic": true,
-            "name": "ndb-allow-copying-alter-table",
+            "name": "ndb_allow_copying_alter_table",
             "scope": [
                 "global",
                 "session"
@@ -32752,11 +32751,15 @@
                 }
             ]
         },
-        "ndb-batch-size": {
-            "cli": "--ndb-batch-size=#",
-            "default": "32768 / 0 - 31536000 (Version: 5.7)",
+        "ndb_batch_size": {
+            "cli": "--ndb-batch-size",
+            "default": "32768",
             "dynamic": false,
-            "name": "ndb-batch-size",
+            "name": "ndb_batch_size",
+            "range": {
+                "from": 0,
+                "to": 31536000
+            },
             "scope": [
                 "global"
             ],
@@ -32768,14 +32771,19 @@
                 }
             ]
         },
-        "ndb-cluster-connection-pool": {
-            "cli": "--ndb-cluster-connection-pool=#",
-            "default": "1 / 1 - 63 (Version: NDB 7.5-7.6)",
+        "ndb_cluster_connection_pool": {
+            "cli": "--ndb-cluster-connection-pool",
+            "default": "1",
             "dynamic": false,
-            "name": "ndb-cluster-connection-pool",
+            "name": "ndb_cluster_connection_pool",
+            "range": {
+                "from": 1,
+                "to": 63
+            },
             "scope": [
                 "global"
             ],
+            "type": "integer",
             "ids": [
                 {
                     "anchor": "option_mysqld_ndb-cluster-connection-pool",
@@ -32783,14 +32791,10 @@
                 }
             ]
         },
-        "ndb-cluster-connection-pool-nodeids": {
-            "cli": "--ndb-cluster-connection-pool-nodeids=list",
-            "default": "/ (Version: 5.7)",
-            "dynamic": false,
-            "name": "ndb-cluster-connection-pool-nodeids",
-            "scope": [
-                "global"
-            ],
+        "ndb_cluster_connection_pool_nodeids": {
+            "cli": "--ndb-cluster-connection-pool-nodeids",
+            "default": "",
+            "name": "ndb_cluster_connection_pool_nodeids",
             "type": "set",
             "ids": [
                 {
@@ -32799,11 +32803,15 @@
                 }
             ]
         },
-        "ndb-blob-read-batch-bytes": {
-            "cli": "--ndb-blob-read-batch-bytes=bytes",
-            "default": "65536 / 0 - 4294967295 (Version: 5.7)",
+        "ndb_blob_read_batch_bytes": {
+            "cli": "--ndb-blob-read-batch-bytes",
+            "default": "65536",
             "dynamic": true,
-            "name": "ndb-blob-read-batch-bytes",
+            "name": "ndb_blob_read_batch_bytes",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
             "scope": [
                 "global",
                 "session"
@@ -32816,11 +32824,15 @@
                 }
             ]
         },
-        "ndb-blob-write-batch-bytes": {
-            "cli": "--ndb-blob-write-batch-bytes=bytes",
-            "default": "65536 / 0 - 4294967295 (Version: 5.7)",
+        "ndb_blob_write_batch_bytes": {
+            "cli": "--ndb-blob-write-batch-bytes",
+            "default": "65536",
             "dynamic": true,
-            "name": "ndb-blob-write-batch-bytes",
+            "name": "ndb_blob_write_batch_bytes",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
             "scope": [
                 "global",
                 "session"
@@ -32833,11 +32845,9 @@
                 }
             ]
         },
-        "ndb-connectstring": {
-            "cli": "--ndb-connectstring=connection_string",
-            "default": "(Version: 5.7)",
-            "dynamic": false,
-            "name": "ndb-connectstring",
+        "ndb_connectstring": {
+            "cli": "--ndb-connectstring",
+            "name": "ndb_connectstring",
             "type": "string",
             "ids": [
                 {
@@ -32846,27 +32856,38 @@
                 }
             ]
         },
-        "ndb-default-column-format": {
-            "cli": "--ndb-default-column-format=[FIXED|DYNAMIC]",
-            "default": "FIXED / FIXED, DYNAMIC (Version: 7.5.4)",
+        "ndb_default_column_format": {
+            "cli": "--ndb-default-column-format={FIXED|DYNAMIC}",
             "dynamic": true,
-            "name": "ndb-default-column-format",
+            "name": "ndb_default_column_format",
             "scope": [
                 "global"
             ],
             "type": "enumeration",
+            "validValues": [
+                "FIXED",
+                "DYNAMIC"
+            ],
             "ids": [
                 {
                     "anchor": "option_mysqld_ndb-default-column-format",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_default_column_format",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
         },
-        "ndb-deferred-constraints": {
-            "cli": "--ndb-deferred-constraints=[0|1]",
-            "default": "0 / 0 - 1 (Version: 5.7)",
+        "ndb_deferred_constraints": {
+            "cli": "--ndb-deferred-constraints=#",
+            "default": "0",
             "dynamic": true,
-            "name": "ndb-deferred-constraints",
+            "name": "ndb_deferred_constraints",
+            "range": {
+                "from": 0,
+                "to": 1
+            },
             "scope": [
                 "global",
                 "session"
@@ -32876,30 +32897,42 @@
                 {
                     "anchor": "option_mysqld_ndb-deferred-constraints",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
-        "ndb-distribution": {
-            "cli": "--ndb-distribution=[KEYHASH|LINHASH]",
-            "default": "KEYHASH / LINHASH, KEYHASH (Version: 5.7)",
-            "dynamic": true,
-            "name": "ndb-distribution",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "ids": [
+                },
                 {
-                    "anchor": "option_mysqld_ndb-distribution",
+                    "anchor": "sysvar_ndb_deferred_constraints",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
         },
-        "ndb-log-apply-status": {
-            "cli": "--ndb-log-apply-status",
-            "default": "OFF (Version: 5.7)",
+        "ndb_distribution": {
+            "cli": "--ndb-distribution={KEYHASH|LINHASH}",
+            "default": "KEYHASH",
+            "dynamic": true,
+            "name": "ndb_distribution",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "LINHASH",
+                "KEYHASH"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-distribution",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_distribution",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_apply_status": {
+            "cli": "--ndb-log-apply-status[={OFF|ON}]",
+            "default": "OFF",
             "dynamic": false,
-            "name": "ndb-log-apply-status",
+            "name": "ndb_log_apply_status",
             "scope": [
                 "global"
             ],
@@ -32908,14 +32941,18 @@
                 {
                     "anchor": "option_mysqld_ndb-log-apply-status",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_apply_status",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
         },
-        "ndb-log-empty-epochs": {
-            "cli": "--ndb-log-empty-epochs=[ON|OFF]",
-            "default": "OFF (Version: 5.7)",
+        "ndb_log_empty_epochs": {
+            "cli": "--ndb-log-empty-epochs[={OFF|ON}]",
+            "default": "OFF",
             "dynamic": true,
-            "name": "ndb-log-empty-epochs",
+            "name": "ndb_log_empty_epochs",
             "scope": [
                 "global"
             ],
@@ -32924,14 +32961,18 @@
                 {
                     "anchor": "option_mysqld_ndb-log-empty-epochs",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_empty_epochs",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
         },
-        "ndb-log-empty-update": {
-            "cli": "--ndb-log-empty-update=[ON|OFF]",
-            "default": "OFF (Version: 5.7)",
+        "ndb_log_empty_update": {
+            "cli": "--ndb-log-empty-update[={OFF|ON}]",
+            "default": "OFF",
             "dynamic": true,
-            "name": "ndb-log-empty-update",
+            "name": "ndb_log_empty_update",
             "scope": [
                 "global"
             ],
@@ -32940,14 +32981,18 @@
                 {
                     "anchor": "option_mysqld_ndb-log-empty-update",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_empty_update",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
         },
-        "ndb-log-exclusive-reads": {
-            "cli": "--ndb-log-exclusive-reads=[0|1]",
-            "default": "0 (Version: 5.7)",
+        "ndb_log_exclusive_reads": {
+            "cli": "--ndb-log-exclusive-reads[={OFF|ON}]",
+            "default": "0",
             "dynamic": true,
-            "name": "ndb-log-exclusive-reads",
+            "name": "ndb_log_exclusive_reads",
             "scope": [
                 "global",
                 "session"
@@ -32957,14 +33002,18 @@
                 {
                     "anchor": "option_mysqld_ndb-log-exclusive-reads",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_exclusive_reads",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
         },
-        "ndb-log-orig": {
-            "cli": "--ndb-log-orig",
-            "default": "OFF (Version: 5.7)",
+        "ndb_log_orig": {
+            "cli": "--ndb-log-orig[={OFF|ON}]",
+            "default": "OFF",
             "dynamic": false,
-            "name": "ndb-log-orig",
+            "name": "ndb_log_orig",
             "scope": [
                 "global"
             ],
@@ -32973,14 +33022,17 @@
                 {
                     "anchor": "option_mysqld_ndb-log-orig",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_orig",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
         },
-        "ndb-log-transaction-id": {
-            "cli": "--ndb-log-transaction-id",
-            "default": "OFF (Version: 5.7)",
+        "ndb_log_transaction_id": {
+            "default": "OFF",
             "dynamic": false,
-            "name": "ndb-log-transaction-id",
+            "name": "ndb_log_transaction_id",
             "scope": [
                 "global"
             ],
@@ -32989,14 +33041,18 @@
                 {
                     "anchor": "option_mysqld_ndb-log-transaction-id",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_log_transaction_id",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
         },
-        "ndb-log-update-minimal": {
-            "cli": "--ndb-log-update-minimal",
-            "default": "OFF (Version: 7.6.3)",
+        "ndb_log_update_minimal": {
+            "cli": "--ndb-log-update-minimal[={OFF|ON}]",
+            "default": "OFF",
             "dynamic": true,
-            "name": "ndb-log-update-minimal",
+            "name": "ndb_log_update_minimal",
             "scope": [
                 "global"
             ],
@@ -33008,11 +33064,10 @@
                 }
             ]
         },
-        "ndb-mgmd-host": {
-            "cli": "--ndb-mgmd-host=host[:port]",
-            "default": "localhost:1186 (Version: 5.7)",
-            "dynamic": false,
-            "name": "ndb-mgmd-host",
+        "ndb_mgmd_host": {
+            "cli": "--ndb-mgmd-host=host_name[:port_num]",
+            "default": "localhost:1186",
+            "name": "ndb_mgmd_host",
             "type": "string",
             "ids": [
                 {
@@ -33021,14 +33076,18 @@
                 }
             ]
         },
-        "ndb-nodeid": {
+        "ndb_nodeid": {
             "cli": "--ndb-nodeid=#",
-            "default": "/ 1 - 255 (Version: 5.1.5)",
             "dynamic": false,
-            "name": "ndb-nodeid",
+            "name": "ndb_nodeid",
+            "range": {
+                "from": 1,
+                "to": 63
+            },
             "scope": [
                 "global"
             ],
+            "type": "integer",
             "ids": [
                 {
                     "anchor": "option_mysqld_ndb-nodeid",
@@ -33036,11 +33095,15 @@
                 }
             ]
         },
-        "ndb-optimization-delay": {
-            "cli": "--ndb-optimization-delay=milliseconds",
-            "default": "10 / 0 - 100000 (Version: NDB 7.5-7.6)",
+        "ndb_optimization_delay": {
+            "cli": "--ndb-optimization-delay=#",
+            "default": "10",
             "dynamic": true,
-            "name": "ndb-optimization-delay",
+            "name": "ndb_optimization_delay",
+            "range": {
+                "from": 0,
+                "to": 100000
+            },
             "scope": [
                 "global"
             ],
@@ -33052,12 +33115,16 @@
                 }
             ]
         },
-        "ndb-transid-mysql-connection-map": {
-            "cli": "ndb-transid-mysql-connection-map=state",
-            "default": "ON / ON, OFF, FORCE (Version: 5.7)",
-            "dynamic": false,
-            "name": "ndb-transid-mysql-connection-map",
+        "ndb_transid_mysql_connection_map": {
+            "cli": "--ndb-transid-mysql-connection-map[=state]",
+            "default": "ON",
+            "name": "ndb_transid_mysql_connection_map",
             "type": "enumeration",
+            "validValues": [
+                "ON",
+                "OFF",
+                "FORCE"
+            ],
             "ids": [
                 {
                     "anchor": "option_mysqld_ndb-transid-mysql-connection-map",
@@ -33065,11 +33132,15 @@
                 }
             ]
         },
-        "ndb-wait-connected": {
-            "cli": "--ndb-wait-connected=seconds",
-            "default": "30 / 0 - 31536000 (Version: NDB 7.5-7.6)",
+        "ndb_wait_connected": {
+            "cli": "--ndb-wait-connected=#",
+            "default": "30",
             "dynamic": false,
-            "name": "ndb-wait-connected",
+            "name": "ndb_wait_connected",
+            "range": {
+                "from": 0,
+                "to": 31536000
+            },
             "scope": [
                 "global"
             ],
@@ -33081,11 +33152,15 @@
                 }
             ]
         },
-        "ndb-wait-setup": {
-            "cli": "--ndb-wait-setup=seconds",
-            "default": "30 / 0 - 31536000 (Version: NDB 7.5-7.6)",
+        "ndb_wait_setup": {
+            "cli": "--ndb-wait-setup=#",
+            "default": "15",
             "dynamic": false,
-            "name": "ndb-wait-setup",
+            "name": "ndb_wait_setup",
+            "range": {
+                "from": 0,
+                "to": 31536000
+            },
             "scope": [
                 "global"
             ],
@@ -33097,10 +33172,9 @@
                 }
             ]
         },
-        "skip-ndbcluster": {
+        "skip_ndbcluster": {
             "cli": "--skip-ndbcluster",
-            "dynamic": false,
-            "name": "skip-ndbcluster",
+            "name": "skip_ndbcluster",
             "ids": [
                 {
                     "anchor": "option_mysqld_skip-ndbcluster",
@@ -33177,66 +33251,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_ndb_data_node_neighbour",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
-        "ndb_default_column_format": {
-            "cli": "--ndb-default-column-format={FIXED|DYNAMIC}",
-            "dynamic": true,
-            "name": "ndb_default_column_format",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "FIXED",
-                "DYNAMIC"
-            ],
-            "ids": [
-                {
-                    "anchor": "sysvar_ndb_default_column_format",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
-        "ndb_deferred_constraints": {
-            "cli": "--ndb-deferred-constraints=#",
-            "default": "0",
-            "dynamic": true,
-            "name": "ndb_deferred_constraints",
-            "range": {
-                "from": 0,
-                "to": 1
-            },
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_ndb_deferred_constraints",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
-        "ndb_distribution": {
-            "cli": "--ndb-distribution={KEYHASH|LINHASH}",
-            "default": "KEYHASH",
-            "dynamic": true,
-            "name": "ndb_distribution",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "LINHASH",
-                "KEYHASH"
-            ],
-            "ids": [
-                {
-                    "anchor": "sysvar_ndb_distribution",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
@@ -33380,22 +33394,6 @@
                 }
             ]
         },
-        "ndb_log_apply_status": {
-            "cli": "--ndb-log-apply-status[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": false,
-            "name": "ndb_log_apply_status",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_ndb_log_apply_status",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
         "ndb_log_bin": {
             "cli": "--ndb-log-bin[={OFF|ON}]",
             "default": "ON",
@@ -33425,86 +33423,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_ndb_log_binlog_index",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
-        "ndb_log_empty_epochs": {
-            "cli": "--ndb-log-empty-epochs[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "ndb_log_empty_epochs",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_ndb_log_empty_epochs",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
-        "ndb_log_empty_update": {
-            "cli": "--ndb-log-empty-update[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "ndb_log_empty_update",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_ndb_log_empty_update",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
-        "ndb_log_exclusive_reads": {
-            "cli": "--ndb-log-exclusive-reads[={OFF|ON}]",
-            "default": "0",
-            "dynamic": true,
-            "name": "ndb_log_exclusive_reads",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_ndb_log_exclusive_reads",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
-        "ndb_log_orig": {
-            "cli": "--ndb-log-orig[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": false,
-            "name": "ndb_log_orig",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_ndb_log_orig",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
-        "ndb_log_transaction_id": {
-            "default": "OFF",
-            "dynamic": false,
-            "name": "ndb_log_transaction_id",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_ndb_log_transaction_id",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
@@ -33785,9 +33703,14 @@
             ]
         },
         "server_id_bits": {
-            "default": "32 / 7 - 32 (Version: 5.7)",
+            "cli": "--server-id-bits=#",
+            "default": "32",
             "dynamic": false,
             "name": "server_id_bits",
+            "range": {
+                "from": 7,
+                "to": 32
+            },
             "scope": [
                 "global"
             ],
@@ -33800,7 +33723,8 @@
             ]
         },
         "slave_allow_batching": {
-            "default": "OFF (Version: 5.7)",
+            "cli": "--slave-allow-batching[={OFF|ON}]",
+            "default": "OFF",
             "dynamic": true,
             "name": "slave_allow_batching",
             "scope": [
@@ -33815,7 +33739,7 @@
             ]
         },
         "transaction_allow_batching": {
-            "default": "OFF (Version: 5.7)",
+            "default": "OFF",
             "dynamic": true,
             "name": "transaction_allow_batching",
             "scope": [
@@ -33830,7 +33754,7 @@
             ]
         },
         "ndbinfo_database": {
-            "default": "ndbinfo (Version: 5.7)",
+            "default": "ndbinfo",
             "dynamic": false,
             "name": "ndbinfo_database",
             "scope": [
@@ -33845,7 +33769,8 @@
             ]
         },
         "ndbinfo_max_bytes": {
-            "default": "0 / - (Version: 5.7)",
+            "cli": "--ndbinfo-max-bytes=#",
+            "default": "0",
             "dynamic": true,
             "name": "ndbinfo_max_bytes",
             "scope": [
@@ -33861,7 +33786,8 @@
             ]
         },
         "ndbinfo_max_rows": {
-            "default": "10 / - (Version: 5.7)",
+            "cli": "--ndbinfo-max-rows=#",
+            "default": "10",
             "dynamic": true,
             "name": "ndbinfo_max_rows",
             "scope": [
@@ -33877,7 +33803,7 @@
             ]
         },
         "ndbinfo_offline": {
-            "default": "OFF (Version: 5.7)",
+            "default": "OFF",
             "dynamic": true,
             "name": "ndbinfo_offline",
             "scope": [
@@ -33892,7 +33818,8 @@
             ]
         },
         "ndbinfo_show_hidden": {
-            "default": "OFF (Version: 5.7)",
+            "cli": "--ndbinfo-show-hidden[={OFF|ON}]",
+            "default": "OFF",
             "dynamic": true,
             "name": "ndbinfo_show_hidden",
             "scope": [
@@ -33908,7 +33835,8 @@
             ]
         },
         "ndbinfo_table_prefix": {
-            "default": "ndb$ (Version: 5.7)",
+            "cli": "--ndbinfo-table-prefix=name",
+            "default": "ndb$",
             "dynamic": true,
             "name": "ndbinfo_table_prefix",
             "scope": [
@@ -33924,7 +33852,7 @@
             ]
         },
         "ndbinfo_version": {
-            "default": "(Version: 5.7)",
+            "default": "",
             "dynamic": false,
             "name": "ndbinfo_version",
             "scope": [

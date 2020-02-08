@@ -15192,6 +15192,21 @@
 |mariadb.com|[shared_memory_base_name](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#shared_memory_base_name)|
 |dev.mysql.com|[sysvar_shared_memory_base_name](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_shared_memory_base_name)|
 
+## show_old_temporals
+|name|value|
+|----|-----|
+|Name|`show_old_temporals`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[show_old_temporals](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#show_old_temporals)|
+|dev.mysql.com|[sysvar_show_old_temporals](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_old_temporals)|
+
 ## skip_external_locking
 |name|value|
 |----|-----|
@@ -31613,21 +31628,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_show_create_table_verbosity](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_create_table_verbosity)|
-
-## show_old_temporals
-|name|value|
-|----|-----|
-|Name|`show_old_temporals`|
-|Command line|`--show-old-temporals[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_show_old_temporals](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_old_temporals)|
 
 ## sql_require_primary_key
 |name|value|

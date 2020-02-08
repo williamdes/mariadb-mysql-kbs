@@ -14132,6 +14132,20 @@
                 "15#sysvar_shared_memory_base_name"
             ]
         },
+        "show_old_temporals": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "show_old_temporals",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "29#show_old_temporals",
+                "15#sysvar_show_old_temporals"
+            ]
+        },
         "skip_external_locking": {
             "cli": "--skip-external-locking[={OFF|ON}]",
             "default": "1",
@@ -28978,20 +28992,6 @@
             "type": "boolean",
             "ids": [
                 "15#sysvar_show_create_table_verbosity"
-            ]
-        },
-        "show_old_temporals": {
-            "cli": "--show-old-temporals[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "show_old_temporals",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "boolean",
-            "ids": [
-                "15#sysvar_show_old_temporals"
             ]
         },
         "sql_require_primary_key": {

@@ -18284,6 +18284,26 @@
                 }
             ]
         },
+        "show_old_temporals": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "show_old_temporals",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "show_old_temporals",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_show_old_temporals",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "skip_external_locking": {
             "cli": "--skip-external-locking[={OFF|ON}]",
             "default": "1",
@@ -37337,23 +37357,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_show_create_table_verbosity",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
-        "show_old_temporals": {
-            "cli": "--show-old-temporals[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "show_old_temporals",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_show_old_temporals",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

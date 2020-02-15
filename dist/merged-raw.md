@@ -6888,7 +6888,7 @@
 |----|-----|
 |Name|`slave_parallel_mode`|
 |Scope|`global`|
-|Default value|`conservative`|
+|Default value|`optimistic (>= MariaDB 10.5.1), conservative (<= MariaDB 10.5.0)`|
 |Dynamic|`false`|
 |Valid value(s)|`conservative`, `optimistic`, `none`, `aggressive`, `minimal`|
 
@@ -14309,6 +14309,7 @@
 |name|value|
 |----|-----|
 |Name|`multi_range_count`|
+|Command line|`--multi-range-count=#`|
 |Default value|`256`|
 
 ### Documentation(s)
@@ -23792,7 +23793,7 @@
 |Scope|`global`|
 |Default value|`crc32`|
 |Dynamic|`true`|
-|Valid value(s)|`innodb`, `crc32`, `full_crc32`, `none`, `strict_innodb`, `strict_crc32`, `strict_none`, `strict_full_crc32`|
+|Valid value(s)|`innodb`, `crc32`, `full_crc32`, `none`, `strict_innodb`, `strict_crc32`, `strict_none`, `strict_full_crc32`, `innodb`, `crc32`, `none`, `strict_innodb`, `strict_crc32`, `strict_none`|
 
 ### Documentation(s)
 |source|anchor name|

@@ -8222,7 +8222,7 @@
             ]
         },
         "slave_parallel_mode": {
-            "default": "conservative",
+            "default": "optimistic (>= MariaDB 10.5.1), conservative (<= MariaDB 10.5.0)",
             "dynamic": false,
             "name": "slave_parallel_mode",
             "scope": [
@@ -17128,6 +17128,7 @@
             ]
         },
         "multi_range_count": {
+            "cli": "--multi-range-count=#",
             "default": "256",
             "name": "multi_range_count",
             "ids": [
@@ -28020,7 +28021,13 @@
                 "strict_innodb",
                 "strict_crc32",
                 "strict_none",
-                "strict_full_crc32"
+                "strict_full_crc32",
+                "innodb",
+                "crc32",
+                "none",
+                "strict_innodb",
+                "strict_crc32",
+                "strict_none"
             ],
             "ids": [
                 {

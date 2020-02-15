@@ -1825,6 +1825,7 @@
       "type": "integer"
     },
     {
+      "cli": "--multi-range-count=#",
       "default": "256",
       "id": "multi_range_count",
       "name": "multi_range_count"

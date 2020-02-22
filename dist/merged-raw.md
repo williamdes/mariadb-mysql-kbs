@@ -1779,6 +1779,20 @@
 |------|----|
 |mariadb.com|[wsrep_gtid_mode](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_gtid_mode)|
 
+## wsrep_gtid_seq_no
+|name|value|
+|----|-----|
+|Name|`wsrep_gtid_seq_no`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_gtid_seq_no](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_gtid_seq_no)|
+
 ## wsrep_ignore_apply_errors
 |name|value|
 |----|-----|
@@ -2236,6 +2250,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[wsrep_start_position](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_start_position)|
+
+## wsrep_strict_ddl
+|name|value|
+|----|-----|
+|Name|`wsrep_strict_ddl`|
+|Command line|`--wsrep-strict-ddl[={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_strict_ddl](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_strict_ddl)|
 
 ## wsrep_sync_wait
 |name|value|
@@ -5565,7 +5594,6 @@
 |Command line|`--performance-schema-max-cond-classes=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`80`|
 |Dynamic|`false`|
 |Range|from: `0` to: `256`|
 
@@ -6061,7 +6089,6 @@
 |Command line|`--binlog-format=format`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`ROW`|
 |Dynamic|`true`|
 |Valid value(s)|`ROW`, `STATEMENT`, `MIXED`|
 
@@ -7081,7 +7108,6 @@
 |Command line|`--sync-binlog=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -25322,7 +25348,7 @@
 |Command line|`--innodb-log-optimize-ddl={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON`|
+|Default value|`ON (<= MariaDB 10.5.0), OFF (>= MariaDB 10.5.1)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -29250,7 +29276,6 @@
 |Command line|`--binlog-error-action[=value]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`ABORT_SERVER`|
 |Dynamic|`true`|
 |Valid value(s)|`IGNORE_ERROR`, `ABORT_SERVER`|
 

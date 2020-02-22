@@ -148,7 +148,7 @@
     },
     {
       "cli": "--performance-schema-max-cond-classes=#",
-      "default": "80",
+      "default": "90 (>= MariaDB 10.5.1), 80 (<= MariaDB 10.5.0)",
       "dynamic": false,
       "id": "performance_schema_max_cond_classes",
       "name": "performance_schema_max_cond_classes",

@@ -193,6 +193,19 @@
       "type": "boolean"
     },
     {
+      "dynamic": true,
+      "id": "wsrep_gtid_seq_no",
+      "name": "wsrep_gtid_seq_no",
+      "range": {
+        "from": 0,
+        "to": 18446744073709552000
+      },
+      "scope": [
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--wsrep-ignore-apply-errors",
       "default": "0",
       "dynamic": true,
@@ -571,6 +584,17 @@
         "global"
       ],
       "type": "string"
+    },
+    {
+      "cli": "--wsrep-strict-ddl[={0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "wsrep_strict_ddl",
+      "name": "wsrep_strict_ddl",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--wsrep-sync-wait=#",

@@ -106,7 +106,6 @@
     },
     {
       "cli": "--binlog-error-action[=value]",
-      "default": "ABORT_SERVER",
       "dynamic": true,
       "id": "sysvar_binlog_error_action",
       "name": "binlog_error_action",
@@ -121,7 +120,6 @@
     },
     {
       "cli": "--binlog-format=format",
-      "default": "ROW",
       "dynamic": true,
       "id": "sysvar_binlog_format",
       "name": "binlog_format",
@@ -432,7 +430,6 @@
     },
     {
       "cli": "--sync-binlog=#",
-      "default": "1",
       "dynamic": true,
       "id": "sysvar_sync_binlog",
       "name": "sync_binlog",

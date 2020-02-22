@@ -1913,7 +1913,7 @@
     },
     {
       "cli": "--innodb-log-optimize-ddl={0|1}",
-      "default": "ON",
+      "default": "ON (<= MariaDB 10.5.0), OFF (>= MariaDB 10.5.1)",
       "dynamic": true,
       "id": "innodb_log_optimize_ddl",
       "name": "innodb_log_optimize_ddl",

@@ -1523,6 +1523,21 @@
                 "6#wsrep_gtid_mode"
             ]
         },
+        "wsrep_gtid_seq_no": {
+            "dynamic": true,
+            "name": "wsrep_gtid_seq_no",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "6#wsrep_gtid_seq_no"
+            ]
+        },
         "wsrep_ignore_apply_errors": {
             "cli": "--wsrep-ignore-apply-errors",
             "default": "0",
@@ -1961,6 +1976,19 @@
             "type": "string",
             "ids": [
                 "6#wsrep_start_position"
+            ]
+        },
+        "wsrep_strict_ddl": {
+            "cli": "--wsrep-strict-ddl[={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "wsrep_strict_ddl",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "6#wsrep_strict_ddl"
             ]
         },
         "wsrep_sync_wait": {
@@ -5191,7 +5219,6 @@
         },
         "performance_schema_max_cond_classes": {
             "cli": "--performance-schema-max-cond-classes=#",
-            "default": "80",
             "dynamic": false,
             "name": "performance_schema_max_cond_classes",
             "range": {
@@ -5682,7 +5709,6 @@
         },
         "binlog_format": {
             "cli": "--binlog-format=format",
-            "default": "ROW",
             "dynamic": true,
             "name": "binlog_format",
             "scope": [
@@ -6647,7 +6673,6 @@
         },
         "sync_binlog": {
             "cli": "--sync-binlog=#",
-            "default": "1",
             "dynamic": true,
             "name": "sync_binlog",
             "range": {
@@ -23125,7 +23150,7 @@
         },
         "innodb_log_optimize_ddl": {
             "cli": "--innodb-log-optimize-ddl={0|1}",
-            "default": "ON",
+            "default": "ON (<= MariaDB 10.5.0), OFF (>= MariaDB 10.5.1)",
             "dynamic": true,
             "name": "innodb_log_optimize_ddl",
             "scope": [
@@ -26846,7 +26871,6 @@
         },
         "binlog_error_action": {
             "cli": "--binlog-error-action[=value]",
-            "default": "ABORT_SERVER",
             "dynamic": true,
             "name": "binlog_error_action",
             "scope": [

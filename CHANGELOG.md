@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [v1.2.10]
 
 ### Changed
 
@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Features
 
+- [969103e](https://github.com/williamdes/mariadb-mysql-kbs/commit/969103e09c5550bead53592755b5bed058a945cb) feat: exclude some files from git archive version of the repo "export-ignore"
 - [f564f47](https://github.com/williamdes/mariadb-mysql-kbs/commit/f564f47d03459a2eab97c79aa1290b9d39fa93ac) feat: move all commands to yarn
 - [4ac523a](https://github.com/williamdes/mariadb-mysql-kbs/commit/4ac523abc11da0de15cb2defd1639562cea98449) feat: move to yarn
 
@@ -492,7 +493,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [d9cd2a8](https://github.com/williamdes/mariadb-mysql-kbs/commit/d9cd2a8123a67d6adfddf0414988b98fcac9f082) fixed: bug in MariaDB script
 
 
-[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.9...HEAD
+[v1.2.10]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.9...v1.2.10
 [v1.2.9]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.8...v1.2.9
 [v1.2.8]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.7...v1.2.8
 [v1.2.7]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.6...v1.2.7

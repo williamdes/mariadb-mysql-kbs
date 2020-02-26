@@ -30,3 +30,4 @@ CODEOWNERS
 /williamdes-mariadb-mysql-kbs-*.tar
 /.jshintignore
 /.phpunit.result.cache
+/target

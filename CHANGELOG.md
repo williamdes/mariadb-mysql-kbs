@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [3300c03](https://github.com/williamdes/mariadb-mysql-kbs/commit/3300c03b0a24f742be901960bd87d6e4c984a8e3) update: [MariaDB] updates
 - [dd877a2](https://github.com/williamdes/mariadb-mysql-kbs/commit/dd877a282f24f44bd58ccc69424f2181cd1add20) update: [MySQL] updates
 
+### Features
+
+- [f564f47](https://github.com/williamdes/mariadb-mysql-kbs/commit/f564f47d03459a2eab97c79aa1290b9d39fa93ac) feat: move all commands to yarn
+- [4ac523a](https://github.com/williamdes/mariadb-mysql-kbs/commit/4ac523abc11da0de15cb2defd1639562cea98449) feat: move to yarn
+
 ### Others
 
 - [937d0d1](https://github.com/williamdes/mariadb-mysql-kbs/commit/937d0d1904a43e5f1c6bb0412979bf7d53e0fa71) chore: remove codecov npm dependency

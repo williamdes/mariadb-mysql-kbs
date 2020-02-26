@@ -1,3 +1,4 @@
+# Any change here will affect the distributed archive for Debian and other providers..
 data/* linguist-detectable=false
 dist/* linguist-detectable=false
 docs/* linguist-detectable=false
@@ -22,3 +23,9 @@ test/data/* linguist-vendored
 /.jshintrc export-ignore
 /.jshintignore export-ignore
 /.editorconfig export-ignore
+/SECURITY.md export-ignore
+/src/*.js export-ignore
+/src/merge.php export-ignore
+/data export-ignore
+/yarn.lock export-ignore
+/package.json export-ignore

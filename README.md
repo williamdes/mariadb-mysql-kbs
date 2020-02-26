@@ -28,7 +28,7 @@ Merged data : `/dist/`
 ### Update the data
 
 ```bash
-npm run build
+yarn run build
 ```
 
 ```bash
@@ -43,6 +43,10 @@ composer require williamdes/mariadb-mysql-kbs
 
 ```bash
 npm install --save mariadb-mysql-kbs
+```
+
+```bash
+yarn add mariadb-mysql-kbs
 ```
 
 ### Packaging status

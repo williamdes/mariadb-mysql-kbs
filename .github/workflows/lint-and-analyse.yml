@@ -16,14 +16,14 @@ jobs:
                   path: ~/.npm/
                   key: npm-cache
             - name: Install modules
-              run: npm ci
+              run: yarn install
             - name: Lint files
               run: |
                   set +e
-                  npm run jshint -- --verbose
+                  yarn run jshint -- --verbose
                   JSHINT=$?
                   echo "Running prettier"
-                  npm run prettier -- --list-different
+                  yarn run prettier -- --list-different
                   PRETTIER=$?
                   if [[ $JSHINT != 0 ]] || [[ $PRETTIER != 0 ]]; then
                       echo "You have some errors to fix !";

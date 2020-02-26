@@ -14,11 +14,16 @@ jobs:
             - uses: actions/setup-node@v1
               with:
                   node-version: 12
-            - name: npm cache module
-              uses: actions/cache@v1.0.3
+            - name: Get yarn cache directory path
+              id: yarn-cache-dir-path
+              run: echo "::set-output name=dir::$(yarn cache dir)"
+            - name: yarn cache
+              uses: actions/cache@v1
               with:
-                  path: ~/.npm/
-                  key: npm-cache
+                  path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
             - name: composer cache module
               uses: actions/cache@v1.0.3
               with:
@@ -26,11 +31,11 @@ jobs:
                   key: composer-cache
             - name: Install
               run: |
-                  npm ci
+                  yarn install
                   composer install --no-interaction --prefer-dist --no-progress --no-suggest
             - name: Build
               run: |
-                  npm run build
+                  yarn run build
                   composer run build
             - name: Run sudo-bot
               run: |
@@ -42,9 +47,9 @@ jobs:
                   sed -i "s,{{HOME}},${CWD},g" scripts/sudo-bot/.env
                   sed -i "s,{{GPG_PRIV_PASSWORD}},${{ secrets.GPG_PRIV_PASSWORD }},g" scripts/sudo-bot/.env
                   sed -i "s,{{INSTALLATION_ID}},${{ secrets.INSTALLATION_ID }},g" scripts/sudo-bot/.env
-                  npm run sudo-bot-pr
+                  yarn run sudo-bot-pr
                   rm -f scripts/sudo-bot/.env
             - name: Run test
               run: |
-                  npm run test
+                  yarn run test
                   composer run test

@@ -17,21 +17,26 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node_version }}
-            - name: Cache module
-              uses: actions/cache@v1.0.3
+            - name: Get yarn cache directory path
+              id: yarn-cache-dir-path
+              run: echo "::set-output name=dir::$(yarn cache dir)"
+            - name: yarn cache
+              uses: actions/cache@v1
               with:
-                  path: ~/.npm/
-                  key: npm-cache
+                  path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
             - name: Install modules
-              run: npm ci
+              run: yarn install
             - name: Create setup files
               run: |
                   openssl aes-256-cbc -K ${{ secrets.ENCRYPTED_KEY }} -iv ${{ secrets.ENCRYPTED_IV }} -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d
                   tar -C scripts/sudo-bot/ -xvf scripts/sudo-bot/keys.tar
             - name: Run node tests
               run: |
-                  npm run test
-                  npm run report-coverage
+                  yarn run test
+                  yarn run report-coverage
             - name: Send coverage
               uses: codecov/codecov-action@v1
               with:

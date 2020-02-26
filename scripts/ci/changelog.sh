@@ -1,4 +1,4 @@
 #!/bin/bash
-npm install --only=dev
-npm run changelog-file
+yarn install
+yarn run changelog-file
 git diff --no-prefix CHANGELOG.md

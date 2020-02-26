@@ -5,6 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+### Changed
+
+- [8b61506](https://github.com/williamdes/mariadb-mysql-kbs/commit/8b61506fe329efcfaaa6b66e969ba23248c52dd6) update: [MariaDB] updates and other changes
+- [3826dad](https://github.com/williamdes/mariadb-mysql-kbs/commit/3826dad219b15ff3f6cc0aabd85a4b8f30bf9b17) update: [MariaDB] updates
+- [3300c03](https://github.com/williamdes/mariadb-mysql-kbs/commit/3300c03b0a24f742be901960bd87d6e4c984a8e3) update: [MariaDB] updates
+- [dd877a2](https://github.com/williamdes/mariadb-mysql-kbs/commit/dd877a282f24f44bd58ccc69424f2181cd1add20) update: [MySQL] updates
+
+### Others
+
+- [937d0d1](https://github.com/williamdes/mariadb-mysql-kbs/commit/937d0d1904a43e5f1c6bb0412979bf7d53e0fa71) chore: remove codecov npm dependency
+
 ## [v1.2.9]
 
 ### Added

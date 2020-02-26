@@ -223,6 +223,13 @@ module.exports = function() {
             );
             done();
         });
+        test('prContent one complex file name', function(done) {
+            const prContent = templates.prContent(['mysql-replication-options-binary-log_5.7.json']);
+            expect(prContent).to.equal(
+                'Dear human 🌻, after running my task the following file was updated:\n- `mysql-replication-options-binary-log_5.7.json` 🐬\n'
+            );
+            done();
+        });
         test('prBranch', function(done) {
             const prBranch = templates.prBranch([]);
             expect(prBranch).to.match(/^refs\/heads\/update\/[0-9]{13}$/);

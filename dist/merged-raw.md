@@ -6965,7 +6965,7 @@
 |Command line|`--slave-run-triggers-for-rbr=value`|
 |Scope|`global`|
 |Default value|`NO`|
-|Valid value(s)|`NO`, `YES`, `LOGGING`|
+|Valid value(s)|`NO`, `YES`, `LOGGING`, `ENFORCE`|
 
 ### Documentation(s)
 |source|anchor name|

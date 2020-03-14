@@ -6538,7 +6538,8 @@
             "validValues": [
                 "NO",
                 "YES",
-                "LOGGING"
+                "LOGGING",
+                "ENFORCE"
             ],
             "ids": [
                 "8#slave_run_triggers_for_rbr"

@@ -8329,7 +8329,8 @@
             "validValues": [
                 "NO",
                 "YES",
-                "LOGGING"
+                "LOGGING",
+                "ENFORCE"
             ],
             "ids": [
                 {

@@ -56,6 +56,36 @@
       "type": "integer"
     },
     {
+      "cli": "--mysqlx_deflate_default_compression_level=#",
+      "default": "3",
+      "dynamic": true,
+      "id": "sysvar_mysqlx_deflate_default_compression_level",
+      "name": "mysqlx_deflate_default_compression_level",
+      "range": {
+        "from": 1,
+        "to": 9
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--mysqlx_deflate_max_client_compression_level=#",
+      "default": "5",
+      "dynamic": true,
+      "id": "sysvar_mysqlx_deflate_max_client_compression_level",
+      "name": "mysqlx_deflate_max_client_compression_level",
+      "range": {
+        "from": 1,
+        "to": 9
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--mysqlx-document-id-unique-prefix=#",
       "default": "0",
       "dynamic": true,
@@ -105,6 +135,36 @@
       "range": {
         "from": 1,
         "to": 2147483
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--mysqlx_lz4_default_compression_level=#",
+      "default": "2",
+      "dynamic": true,
+      "id": "sysvar_mysqlx_lz4_default_compression_level",
+      "name": "mysqlx_lz4_default_compression_level",
+      "range": {
+        "from": 0,
+        "to": 16
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--mysqlx_lz4_max_client_compression_level=#",
+      "default": "8",
+      "dynamic": true,
+      "id": "sysvar_mysqlx_lz4_max_client_compression_level",
+      "name": "mysqlx_lz4_max_client_compression_level",
+      "range": {
+        "from": 0,
+        "to": 16
       },
       "scope": [
         "global"
@@ -309,6 +369,36 @@
       },
       "scope": [
         "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--mysqlx_zstd_default_compression_level=#",
+      "default": "3",
+      "dynamic": true,
+      "id": "sysvar_mysqlx_zstd_default_compression_level",
+      "name": "mysqlx_zstd_default_compression_level",
+      "range": {
+        "from": -131072,
+        "to": 22
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--mysqlx_zstd_max_client_compression_level=#",
+      "default": "11",
+      "dynamic": true,
+      "id": "sysvar_mysqlx_zstd_max_client_compression_level",
+      "name": "mysqlx_zstd_max_client_compression_level",
+      "range": {
+        "from": -131072,
+        "to": 22
+      },
+      "scope": [
+        "global"
       ],
       "type": "integer"
     }

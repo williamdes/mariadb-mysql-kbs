@@ -185,6 +185,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--ndb-log-fail-terminate",
+      "default": "FALSE",
+      "dynamic": false,
+      "id": "option_mysqld_ndb-log-fail-terminate",
+      "name": "ndb_log_fail_terminate",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--ndb-log-orig[={OFF|ON}]",
       "default": "OFF",
       "dynamic": false,

@@ -32423,6 +32423,80 @@
                 }
             ]
         },
+        "innodb_doublewrite_batch_size": {
+            "cli": "--innodb-doublewrite-batch-size=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "innodb_doublewrite_batch_size",
+            "range": {
+                "from": 0,
+                "to": 256
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_doublewrite_batch_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
+        "innodb_doublewrite_dir": {
+            "cli": "--innodb-doublewrite-dir=dir_name",
+            "dynamic": false,
+            "name": "innodb_doublewrite_dir",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_doublewrite_dir",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
+        "innodb_doublewrite_files": {
+            "cli": "--innodb-doublewrite-files=#",
+            "default": "innodb_buffer_pool_instances * 2",
+            "dynamic": false,
+            "name": "innodb_doublewrite_files",
+            "range": {
+                "from": 2,
+                "to": 256
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_doublewrite_files",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
+        "innodb_doublewrite_pages": {
+            "cli": "--innodb-doublewrite-pages=#",
+            "default": "innodb_write_io_threads value",
+            "dynamic": false,
+            "name": "innodb_doublewrite_pages",
+            "range": {
+                "to": 512
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_doublewrite_pages",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
         "innodb_fil_make_page_dirty_debug": {
             "cli": "--innodb-fil-make-page-dirty-debug=#",
             "default": "0",
@@ -33066,6 +33140,22 @@
                 },
                 {
                     "anchor": "sysvar_ndb_log_exclusive_reads",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_fail_terminate": {
+            "cli": "--ndb-log-fail-terminate",
+            "default": "FALSE",
+            "dynamic": false,
+            "name": "ndb_log_fail_terminate",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-log-fail-terminate",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
@@ -34302,6 +34392,22 @@
                 }
             ]
         },
+        "authentication_ldap_sasl_referral": {
+            "cli": "--authentication-ldap-sasl-referral[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "authentication_ldap_sasl_referral",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_authentication_ldap_sasl_referral",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html"
+                }
+            ]
+        },
         "authentication_ldap_sasl_server_host": {
             "cli": "--authentication-ldap-sasl-server-host=host_name",
             "dynamic": true,
@@ -34378,6 +34484,10 @@
                 "global"
             ],
             "type": "string",
+            "validValues": [
+                "SIMPLE",
+                "AD-FOREST"
+            ],
             "ids": [
                 {
                     "anchor": "sysvar_authentication_ldap_simple_auth_method_name",
@@ -34536,6 +34646,22 @@
             "ids": [
                 {
                     "anchor": "sysvar_authentication_ldap_simple_max_pool_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html"
+                }
+            ]
+        },
+        "authentication_ldap_simple_referral": {
+            "cli": "--authentication-ldap-simple-referral[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "authentication_ldap_simple_referral",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_authentication_ldap_simple_referral",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html"
                 }
             ]
@@ -37869,6 +37995,46 @@
                 }
             ]
         },
+        "mysqlx_deflate_default_compression_level": {
+            "cli": "--mysqlx_deflate_default_compression_level=#",
+            "default": "3",
+            "dynamic": true,
+            "name": "mysqlx_deflate_default_compression_level",
+            "range": {
+                "from": 1,
+                "to": 9
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_mysqlx_deflate_default_compression_level",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
+                }
+            ]
+        },
+        "mysqlx_deflate_max_client_compression_level": {
+            "cli": "--mysqlx_deflate_max_client_compression_level=#",
+            "default": "5",
+            "dynamic": true,
+            "name": "mysqlx_deflate_max_client_compression_level",
+            "range": {
+                "from": 1,
+                "to": 9
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_mysqlx_deflate_max_client_compression_level",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
+                }
+            ]
+        },
         "mysqlx_document_id_unique_prefix": {
             "cli": "--mysqlx-document-id-unique-prefix=#",
             "default": "0",
@@ -37941,6 +38107,46 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_interactive_timeout",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
+                }
+            ]
+        },
+        "mysqlx_lz4_default_compression_level": {
+            "cli": "--mysqlx_lz4_default_compression_level=#",
+            "default": "2",
+            "dynamic": true,
+            "name": "mysqlx_lz4_default_compression_level",
+            "range": {
+                "from": 0,
+                "to": 16
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_mysqlx_lz4_default_compression_level",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
+                }
+            ]
+        },
+        "mysqlx_lz4_max_client_compression_level": {
+            "cli": "--mysqlx_lz4_max_client_compression_level=#",
+            "default": "8",
+            "dynamic": true,
+            "name": "mysqlx_lz4_max_client_compression_level",
+            "range": {
+                "from": 0,
+                "to": 16
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_mysqlx_lz4_max_client_compression_level",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]
@@ -38222,6 +38428,46 @@
             "ids": [
                 {
                     "anchor": "sysvar_mysqlx_write_timeout",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
+                }
+            ]
+        },
+        "mysqlx_zstd_default_compression_level": {
+            "cli": "--mysqlx_zstd_default_compression_level=#",
+            "default": "3",
+            "dynamic": true,
+            "name": "mysqlx_zstd_default_compression_level",
+            "range": {
+                "from": -131072,
+                "to": 22
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_mysqlx_zstd_default_compression_level",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
+                }
+            ]
+        },
+        "mysqlx_zstd_max_client_compression_level": {
+            "cli": "--mysqlx_zstd_max_client_compression_level=#",
+            "default": "11",
+            "dynamic": true,
+            "name": "mysqlx_zstd_max_client_compression_level",
+            "range": {
+                "from": -131072,
+                "to": 22
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_mysqlx_zstd_max_client_compression_level",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html"
                 }
             ]

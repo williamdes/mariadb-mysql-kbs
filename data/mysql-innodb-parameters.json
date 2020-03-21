@@ -682,6 +682,60 @@
       "type": "boolean"
     },
     {
+      "cli": "--innodb-doublewrite-batch-size=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_innodb_doublewrite_batch_size",
+      "name": "innodb_doublewrite_batch_size",
+      "range": {
+        "from": 0,
+        "to": 256
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--innodb-doublewrite-dir=dir_name",
+      "dynamic": false,
+      "id": "sysvar_innodb_doublewrite_dir",
+      "name": "innodb_doublewrite_dir",
+      "scope": [
+        "global"
+      ],
+      "type": "directory name"
+    },
+    {
+      "cli": "--innodb-doublewrite-files=#",
+      "default": "innodb_buffer_pool_instances * 2",
+      "dynamic": false,
+      "id": "sysvar_innodb_doublewrite_files",
+      "name": "innodb_doublewrite_files",
+      "range": {
+        "from": 2,
+        "to": 256
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--innodb-doublewrite-pages=#",
+      "default": "innodb_write_io_threads value",
+      "dynamic": false,
+      "id": "sysvar_innodb_doublewrite_pages",
+      "name": "innodb_doublewrite_pages",
+      "range": {
+        "to": 512
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--innodb-fast-shutdown=#",
       "default": "1",
       "dynamic": true,

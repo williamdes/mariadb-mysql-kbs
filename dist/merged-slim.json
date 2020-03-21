@@ -25025,6 +25025,68 @@
                 "41#sysvar_innodb_directories"
             ]
         },
+        "innodb_doublewrite_batch_size": {
+            "cli": "--innodb-doublewrite-batch-size=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "innodb_doublewrite_batch_size",
+            "range": {
+                "from": 0,
+                "to": 256
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "41#sysvar_innodb_doublewrite_batch_size"
+            ]
+        },
+        "innodb_doublewrite_dir": {
+            "cli": "--innodb-doublewrite-dir=dir_name",
+            "dynamic": false,
+            "name": "innodb_doublewrite_dir",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                "41#sysvar_innodb_doublewrite_dir"
+            ]
+        },
+        "innodb_doublewrite_files": {
+            "cli": "--innodb-doublewrite-files=#",
+            "default": "innodb_buffer_pool_instances * 2",
+            "dynamic": false,
+            "name": "innodb_doublewrite_files",
+            "range": {
+                "from": 2,
+                "to": 256
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "41#sysvar_innodb_doublewrite_files"
+            ]
+        },
+        "innodb_doublewrite_pages": {
+            "cli": "--innodb-doublewrite-pages=#",
+            "default": "innodb_write_io_threads value",
+            "dynamic": false,
+            "name": "innodb_doublewrite_pages",
+            "range": {
+                "to": 512
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "41#sysvar_innodb_doublewrite_pages"
+            ]
+        },
         "innodb_fil_make_page_dirty_debug": {
             "cli": "--innodb-fil-make-page-dirty-debug=#",
             "default": "0",
@@ -25544,6 +25606,19 @@
             "ids": [
                 "43#option_mysqld_ndb-log-exclusive-reads",
                 "43#sysvar_ndb_log_exclusive_reads"
+            ]
+        },
+        "ndb_log_fail_terminate": {
+            "cli": "--ndb-log-fail-terminate",
+            "default": "FALSE",
+            "dynamic": false,
+            "name": "ndb_log_fail_terminate",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "43#option_mysqld_ndb-log-fail-terminate"
             ]
         },
         "ndb_log_orig": {
@@ -26556,6 +26631,19 @@
                 "44#sysvar_authentication_ldap_sasl_max_pool_size"
             ]
         },
+        "authentication_ldap_sasl_referral": {
+            "cli": "--authentication-ldap-sasl-referral[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "authentication_ldap_sasl_referral",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "44#sysvar_authentication_ldap_sasl_referral"
+            ]
+        },
         "authentication_ldap_sasl_server_host": {
             "cli": "--authentication-ldap-sasl-server-host=host_name",
             "dynamic": true,
@@ -26620,6 +26708,10 @@
                 "global"
             ],
             "type": "string",
+            "validValues": [
+                "SIMPLE",
+                "AD-FOREST"
+            ],
             "ids": [
                 "44#sysvar_authentication_ldap_simple_auth_method_name"
             ]
@@ -26750,6 +26842,19 @@
             "type": "integer",
             "ids": [
                 "44#sysvar_authentication_ldap_simple_max_pool_size"
+            ]
+        },
+        "authentication_ldap_simple_referral": {
+            "cli": "--authentication-ldap-simple-referral[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "authentication_ldap_simple_referral",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "44#sysvar_authentication_ldap_simple_referral"
             ]
         },
         "authentication_ldap_simple_server_host": {
@@ -29418,6 +29523,40 @@
                 "47#sysvar_mysqlx_connect_timeout"
             ]
         },
+        "mysqlx_deflate_default_compression_level": {
+            "cli": "--mysqlx_deflate_default_compression_level=#",
+            "default": "3",
+            "dynamic": true,
+            "name": "mysqlx_deflate_default_compression_level",
+            "range": {
+                "from": 1,
+                "to": 9
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "47#sysvar_mysqlx_deflate_default_compression_level"
+            ]
+        },
+        "mysqlx_deflate_max_client_compression_level": {
+            "cli": "--mysqlx_deflate_max_client_compression_level=#",
+            "default": "5",
+            "dynamic": true,
+            "name": "mysqlx_deflate_max_client_compression_level",
+            "range": {
+                "from": 1,
+                "to": 9
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "47#sysvar_mysqlx_deflate_max_client_compression_level"
+            ]
+        },
         "mysqlx_document_id_unique_prefix": {
             "cli": "--mysqlx-document-id-unique-prefix=#",
             "default": "0",
@@ -29480,6 +29619,40 @@
             "type": "integer",
             "ids": [
                 "47#sysvar_mysqlx_interactive_timeout"
+            ]
+        },
+        "mysqlx_lz4_default_compression_level": {
+            "cli": "--mysqlx_lz4_default_compression_level=#",
+            "default": "2",
+            "dynamic": true,
+            "name": "mysqlx_lz4_default_compression_level",
+            "range": {
+                "from": 0,
+                "to": 16
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "47#sysvar_mysqlx_lz4_default_compression_level"
+            ]
+        },
+        "mysqlx_lz4_max_client_compression_level": {
+            "cli": "--mysqlx_lz4_max_client_compression_level=#",
+            "default": "8",
+            "dynamic": true,
+            "name": "mysqlx_lz4_max_client_compression_level",
+            "range": {
+                "from": 0,
+                "to": 16
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "47#sysvar_mysqlx_lz4_max_client_compression_level"
             ]
         },
         "mysqlx_max_allowed_packet": {
@@ -29713,6 +29886,40 @@
             "type": "integer",
             "ids": [
                 "47#sysvar_mysqlx_write_timeout"
+            ]
+        },
+        "mysqlx_zstd_default_compression_level": {
+            "cli": "--mysqlx_zstd_default_compression_level=#",
+            "default": "3",
+            "dynamic": true,
+            "name": "mysqlx_zstd_default_compression_level",
+            "range": {
+                "from": -131072,
+                "to": 22
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "47#sysvar_mysqlx_zstd_default_compression_level"
+            ]
+        },
+        "mysqlx_zstd_max_client_compression_level": {
+            "cli": "--mysqlx_zstd_max_client_compression_level=#",
+            "default": "11",
+            "dynamic": true,
+            "name": "mysqlx_zstd_max_client_compression_level",
+            "range": {
+                "from": -131072,
+                "to": 22
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "47#sysvar_mysqlx_zstd_max_client_compression_level"
             ]
         }
     },

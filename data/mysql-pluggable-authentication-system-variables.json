@@ -122,6 +122,17 @@
       "type": "integer"
     },
     {
+      "cli": "--authentication-ldap-sasl-referral[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_authentication_ldap_sasl_referral",
+      "name": "authentication_ldap_sasl_referral",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--authentication-ldap-sasl-server-host=host_name",
       "dynamic": true,
       "id": "sysvar_authentication_ldap_sasl_server_host",
@@ -177,7 +188,11 @@
       "scope": [
         "global"
       ],
-      "type": "string"
+      "type": "string",
+      "validValues": [
+        "SIMPLE",
+        "AD-FOREST"
+      ]
     },
     {
       "cli": "--authentication-ldap-simple-bind-base-dn=value",
@@ -288,6 +303,17 @@
         "global"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--authentication-ldap-simple-referral[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_authentication_ldap_simple_referral",
+      "name": "authentication_ldap_simple_referral",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--authentication-ldap-simple-server-host=host_name",

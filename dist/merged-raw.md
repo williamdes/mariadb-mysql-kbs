@@ -27294,6 +27294,68 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_directories](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_directories)|
 
+## innodb_doublewrite_batch_size
+|name|value|
+|----|-----|
+|Name|`innodb_doublewrite_batch_size`|
+|Command line|`--innodb-doublewrite-batch-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `256`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_doublewrite_batch_size](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_doublewrite_batch_size)|
+
+## innodb_doublewrite_dir
+|name|value|
+|----|-----|
+|Name|`innodb_doublewrite_dir`|
+|Command line|`--innodb-doublewrite-dir=dir_name`|
+|Type of variable|`directory name`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_doublewrite_dir](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_doublewrite_dir)|
+
+## innodb_doublewrite_files
+|name|value|
+|----|-----|
+|Name|`innodb_doublewrite_files`|
+|Command line|`--innodb-doublewrite-files=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`innodb_buffer_pool_instances * 2`|
+|Dynamic|`false`|
+|Range|from: `2` to: `256`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_doublewrite_files](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_doublewrite_files)|
+
+## innodb_doublewrite_pages
+|name|value|
+|----|-----|
+|Name|`innodb_doublewrite_pages`|
+|Command line|`--innodb-doublewrite-pages=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`innodb_write_io_threads value`|
+|Dynamic|`false`|
+|Range|to: `512`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_doublewrite_pages](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_doublewrite_pages)|
+
 ## innodb_fil_make_page_dirty_debug
 |name|value|
 |----|-----|
@@ -27835,6 +27897,21 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-log-exclusive-reads](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-exclusive-reads)|
 |dev.mysql.com|[sysvar_ndb_log_exclusive_reads](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_exclusive_reads)|
+
+## ndb_log_fail_terminate
+|name|value|
+|----|-----|
+|Name|`ndb_log_fail_terminate`|
+|Command line|`--ndb-log-fail-terminate`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`FALSE`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_ndb-log-fail-terminate](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-fail-terminate)|
 
 ## ndb_log_orig
 |name|value|
@@ -28913,6 +28990,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_authentication_ldap_sasl_max_pool_size](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html#sysvar_authentication_ldap_sasl_max_pool_size)|
 
+## authentication_ldap_sasl_referral
+|name|value|
+|----|-----|
+|Name|`authentication_ldap_sasl_referral`|
+|Command line|`--authentication-ldap-sasl-referral[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_authentication_ldap_sasl_referral](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html#sysvar_authentication_ldap_sasl_referral)|
+
 ## authentication_ldap_sasl_server_host
 |name|value|
 |----|-----|
@@ -28982,6 +29074,7 @@
 |Scope|`global`|
 |Default value|`SIMPLE`|
 |Dynamic|`true`|
+|Valid value(s)|`SIMPLE`, `AD-FOREST`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29125,6 +29218,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_authentication_ldap_simple_max_pool_size](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html#sysvar_authentication_ldap_simple_max_pool_size)|
+
+## authentication_ldap_simple_referral
+|name|value|
+|----|-----|
+|Name|`authentication_ldap_simple_referral`|
+|Command line|`--authentication-ldap-simple-referral[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_authentication_ldap_simple_referral](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html#sysvar_authentication_ldap_simple_referral)|
 
 ## authentication_ldap_simple_server_host
 |name|value|
@@ -32055,6 +32163,38 @@
 |------|----|
 |dev.mysql.com|[sysvar_mysqlx_connect_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_connect_timeout)|
 
+## mysqlx_deflate_default_compression_level
+|name|value|
+|----|-----|
+|Name|`mysqlx_deflate_default_compression_level`|
+|Command line|`--mysqlx_deflate_default_compression_level=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`3`|
+|Dynamic|`true`|
+|Range|from: `1` to: `9`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_deflate_default_compression_level](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_deflate_default_compression_level)|
+
+## mysqlx_deflate_max_client_compression_level
+|name|value|
+|----|-----|
+|Name|`mysqlx_deflate_max_client_compression_level`|
+|Command line|`--mysqlx_deflate_max_client_compression_level=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`5`|
+|Dynamic|`true`|
+|Range|from: `1` to: `9`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_deflate_max_client_compression_level](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_deflate_max_client_compression_level)|
+
 ## mysqlx_document_id_unique_prefix
 |name|value|
 |----|-----|
@@ -32117,6 +32257,38 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_mysqlx_interactive_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_interactive_timeout)|
+
+## mysqlx_lz4_default_compression_level
+|name|value|
+|----|-----|
+|Name|`mysqlx_lz4_default_compression_level`|
+|Command line|`--mysqlx_lz4_default_compression_level=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`2`|
+|Dynamic|`true`|
+|Range|from: `0` to: `16`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_lz4_default_compression_level](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_lz4_default_compression_level)|
+
+## mysqlx_lz4_max_client_compression_level
+|name|value|
+|----|-----|
+|Name|`mysqlx_lz4_max_client_compression_level`|
+|Command line|`--mysqlx_lz4_max_client_compression_level=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`8`|
+|Dynamic|`true`|
+|Range|from: `0` to: `16`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_lz4_max_client_compression_level](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_lz4_max_client_compression_level)|
 
 ## mysqlx_max_allowed_packet
 |name|value|
@@ -32358,5 +32530,37 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_mysqlx_write_timeout](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_write_timeout)|
+
+## mysqlx_zstd_default_compression_level
+|name|value|
+|----|-----|
+|Name|`mysqlx_zstd_default_compression_level`|
+|Command line|`--mysqlx_zstd_default_compression_level=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`3`|
+|Dynamic|`true`|
+|Range|from: `-131072` to: `22`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_zstd_default_compression_level](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_zstd_default_compression_level)|
+
+## mysqlx_zstd_max_client_compression_level
+|name|value|
+|----|-----|
+|Name|`mysqlx_zstd_max_client_compression_level`|
+|Command line|`--mysqlx_zstd_max_client_compression_level=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`11`|
+|Dynamic|`true`|
+|Range|from: `-131072` to: `22`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_mysqlx_zstd_max_client_compression_level](https://dev.mysql.com/doc/refman/8.0/en/x-plugin-options-system-variables.html#sysvar_mysqlx_zstd_max_client_compression_level)|
 
 

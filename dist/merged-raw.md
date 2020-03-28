@@ -25481,7 +25481,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `10000000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29525,6 +29525,37 @@
 |------|----|
 |dev.mysql.com|[sysvar_binlog_rows_query_log_events](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events)|
 |dev.mysql.com|[sysvar_binlog_rows_query_log_events](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events)|
+
+## binlog_transaction_compression
+|name|value|
+|----|-----|
+|Name|`binlog_transaction_compression`|
+|Command line|`--binlog-transaction-compression[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_binlog_transaction_compression](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_compression)|
+
+## binlog_transaction_compression_level_zstd
+|name|value|
+|----|-----|
+|Name|`binlog_transaction_compression_level_zstd`|
+|Command line|`--binlog-transaction-compression-level-zstd=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`3`|
+|Dynamic|`true`|
+|Range|from: `1` to: `22`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_binlog_transaction_compression_level_zstd](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_transaction_compression_level_zstd)|
 
 ## binlog_transaction_dependency_tracking
 |name|value|

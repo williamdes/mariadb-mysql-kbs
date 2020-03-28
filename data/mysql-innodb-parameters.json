@@ -1368,7 +1368,8 @@
       "id": "sysvar_innodb_max_purge_lag_delay",
       "name": "innodb_max_purge_lag_delay",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 10000000
       },
       "scope": [
         "global"

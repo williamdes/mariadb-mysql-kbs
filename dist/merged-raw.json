@@ -30181,7 +30181,8 @@
             "dynamic": true,
             "name": "innodb_max_purge_lag_delay",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 10000000
             },
             "scope": [
                 "global"
@@ -35024,6 +35025,42 @@
                 {
                     "anchor": "sysvar_binlog_rows_query_log_events",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "binlog_transaction_compression": {
+            "cli": "--binlog-transaction-compression[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "binlog_transaction_compression",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_binlog_transaction_compression",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "binlog_transaction_compression_level_zstd": {
+            "cli": "--binlog-transaction-compression-level-zstd=#",
+            "default": "3",
+            "dynamic": true,
+            "name": "binlog_transaction_compression_level_zstd",
+            "range": {
+                "from": 1,
+                "to": 22
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_binlog_transaction_compression_level_zstd",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
                 }
             ]
         },

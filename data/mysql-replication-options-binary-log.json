@@ -313,6 +313,32 @@
       "type": "integer"
     },
     {
+      "cli": "--binlog-transaction-compression[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_binlog_transaction_compression",
+      "name": "binlog_transaction_compression",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--binlog-transaction-compression-level-zstd=#",
+      "default": "3",
+      "dynamic": true,
+      "id": "sysvar_binlog_transaction_compression_level_zstd",
+      "name": "binlog_transaction_compression_level_zstd",
+      "range": {
+        "from": 1,
+        "to": 22
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--binlog-transaction-dependency-tracking=value",
       "default": "COMMIT_ORDER",
       "dynamic": true,

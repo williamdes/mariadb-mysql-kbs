@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- [24a7590](https://github.com/williamdes/mariadb-mysql-kbs/commit/24a75905df8b1baad20ff5a6a74a2a200b75d7cb) update: [MySQL] updates
+- [86688c6](https://github.com/williamdes/mariadb-mysql-kbs/commit/86688c678cba028750b6678faef3d398bdecf11d) update: [MySQL] updates
+- [62e472b](https://github.com/williamdes/mariadb-mysql-kbs/commit/62e472b485c5008fe5c2db1b3569efa8f83735cd) update: [MariaDB] updates
+- [8715b00](https://github.com/williamdes/mariadb-mysql-kbs/commit/8715b00fe605af5cf27dec34b2402ecb6ee21271) update: [MySQL] updates
+
+### Fixed
+
+- [8d5ff2e](https://github.com/williamdes/mariadb-mysql-kbs/commit/8d5ff2eb867ea8e17b6cb2957e66846e0f3e7bb4) fix: update XSD url for phpunit
+- [f127419](https://github.com/williamdes/mariadb-mysql-kbs/commit/f1274199744eb6d6ffdbe80a5aafd98a85ea7376) fix: remove incompatible expectExceptionMessage with phpunit 7
+- [239fa7f](https://github.com/williamdes/mariadb-mysql-kbs/commit/239fa7f50ea27d7e1b0c90bbe613c2407ea90e61) fix: phpunit test must use expectExceptionMessageMatches intead of expectExceptionMessageRegExp
+- [45f5288](https://github.com/williamdes/mariadb-mysql-kbs/commit/45f5288456765d6f91f06251e0cba550304191a8) fix: add target folder to .npmignore
+
+### Features
+
+- [d3e5cab](https://github.com/williamdes/mariadb-mysql-kbs/commit/d3e5cab043426498926d8abde07469f3ffeb5c74) feat: Allow phpunit 9
+
 ## [v1.2.10]
 
 ### Changed
@@ -493,6 +513,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [d9cd2a8](https://github.com/williamdes/mariadb-mysql-kbs/commit/d9cd2a8123a67d6adfddf0414988b98fcac9f082) fixed: bug in MariaDB script
 
 
+[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.10...HEAD
 [v1.2.10]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.9...v1.2.10
 [v1.2.9]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.8...v1.2.9
 [v1.2.8]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.7...v1.2.8

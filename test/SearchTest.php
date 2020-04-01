@@ -70,7 +70,7 @@ class SearchTest extends TestCase
     {
         $this->expectException(KBException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessageRegExp('/(.+) does not exist for this type of documentation !/');
+        $this->expectExceptionMessageMatches('/(.+) does not exist for this type of documentation !/');
         Search::getByName("variable-3", Search::MARIADB);
     }
 
@@ -84,7 +84,7 @@ class SearchTest extends TestCase
     {
         $this->expectException(KBException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessageRegExp('/(.+) does not exist !/');
+        $this->expectExceptionMessageMatches('/(.+) does not exist !/');
         Search::getVariableType("acbdefghi0202");
     }
 
@@ -98,7 +98,7 @@ class SearchTest extends TestCase
     {
         $this->expectException(KBException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessageRegExp('/(.+) does not exist !/');
+        $this->expectExceptionMessageMatches('/(.+) does not exist !/');
         Search::getByName("acbdefghi0202", Search::MARIADB);
     }
 
@@ -112,7 +112,7 @@ class SearchTest extends TestCase
     {
         $this->expectException(KBException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessageRegExp('/(.+) does not exist !/');
+        $this->expectExceptionMessageMatches('/(.+) does not exist !/');
         Search::getVariable("acbdefghi0202");
     }
 
@@ -127,7 +127,7 @@ class SearchTest extends TestCase
     {
         $this->expectException(KBException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessageRegExp('/(.+) does not exist !/');
+        $this->expectExceptionMessageMatches('/(.+) does not exist !/');
         Search::$DATA_DIR = ".";
         Search::$loaded   = false;
         Search::loadData();
@@ -160,7 +160,7 @@ class SearchTest extends TestCase
     {
         $this->expectException(KBException::class);
         $this->expectExceptionCode(0);
-        $this->expectExceptionMessageRegExp('/(.+) does have a known type !/');
+        $this->expectExceptionMessageMatches('/(.+) does have a known type !/');
         Search::getVariableType("variable-2");
     }
 

@@ -46,7 +46,7 @@ jobs:
             - name: Lint files
               run: composer run phpcs
 
-    anayse-php:
+    analyse-php:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v1

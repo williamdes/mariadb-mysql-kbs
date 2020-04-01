@@ -4,10 +4,10 @@
  * @param {Array} modifiedFiles The modified files
  * @returns {string} The commit message
  */
-const commitMessage = function(modifiedFiles) {
-    const nbrMySQLFiles = modifiedFiles.filter(file => file.match(/mysql-[a-z\-\._0-9]+.json$/g)).length;
-    const nbrMariaDBFiles = modifiedFiles.filter(file => file.match(/mariadb-[a-z\-\._0-9]+.json$/g)).length;
-    const nbrMergedData = modifiedFiles.filter(file => file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g))
+const commitMessage = function (modifiedFiles) {
+    const nbrMySQLFiles = modifiedFiles.filter((file) => file.match(/mysql-[a-z\-\._0-9]+.json$/g)).length;
+    const nbrMariaDBFiles = modifiedFiles.filter((file) => file.match(/mariadb-[a-z\-\._0-9]+.json$/g)).length;
+    const nbrMergedData = modifiedFiles.filter((file) => file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g))
         .length;
 
     const hasMySQLFiles = nbrMySQLFiles > 0;
@@ -27,10 +27,10 @@ const commitMessage = function(modifiedFiles) {
  * @param {Array} modifiedFiles The modified files
  * @returns {string} The pr message
  */
-const prMessage = function(modifiedFiles) {
-    const nbrMySQLFiles = modifiedFiles.filter(file => file.match(/mysql-[a-z\-\._0-9]+.json$/g)).length;
-    const nbrMariaDBFiles = modifiedFiles.filter(file => file.match(/mariadb-[a-z\-\._0-9]+.json$/g)).length;
-    const nbrMergedData = modifiedFiles.filter(file => file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g))
+const prMessage = function (modifiedFiles) {
+    const nbrMySQLFiles = modifiedFiles.filter((file) => file.match(/mysql-[a-z\-\._0-9]+.json$/g)).length;
+    const nbrMariaDBFiles = modifiedFiles.filter((file) => file.match(/mariadb-[a-z\-\._0-9]+.json$/g)).length;
+    const nbrMergedData = modifiedFiles.filter((file) => file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g))
         .length;
 
     const hasMySQLFiles = nbrMySQLFiles > 0;
@@ -50,13 +50,13 @@ const prMessage = function(modifiedFiles) {
  * @param {Array} modifiedFiles The modified files
  * @returns {string} The pr content
  */
-const prContent = function(modifiedFiles) {
+const prContent = function (modifiedFiles) {
     let message =
         'Dear human 🌻, after running my task the following file' +
         (modifiedFiles.length > 1 ? 's where updated:' : ' was updated:') +
         '\n';
     message += modifiedFiles
-        .map(file => {
+        .map((file) => {
             let emoji = '👽';
             if (file.match(/mysql-[a-z\-\._0-9]+.json$/g)) {
                 emoji = '🐬';
@@ -80,7 +80,7 @@ const prContent = function(modifiedFiles) {
  * @param {Array} modifiedFiles The modified files
  * @returns {string} The pr branch
  */
-const prBranch = function(modifiedFiles) {
+const prBranch = function (modifiedFiles) {
     return 'refs/heads/update/' + new Date().getTime();
 };
 

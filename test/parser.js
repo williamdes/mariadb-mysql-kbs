@@ -5,11 +5,11 @@ const MySQL = require(__dirname + '/../src/MySQL');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
-module.exports = function() {
-    suite('parser', function() {
-        test('test case 1', function(done) {
+module.exports = function () {
+    suite('parser', function () {
+        test('test case 1', function (done) {
             const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_1.html'));
-            MySQL.parsePage($, function(resultData) {
+            MySQL.parsePage($, function (resultData) {
                 expect(resultData).to.deep.equal([
                     {
                         cli: '--ndbcluster',
@@ -30,9 +30,9 @@ module.exports = function() {
                 done();
             });
         });
-        test('test case 2', function(done) {
+        test('test case 2', function (done) {
             const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_2.html'));
-            MySQL.parsePage($, function(resultData) {
+            MySQL.parsePage($, function (resultData) {
                 expect(resultData).to.deep.equal([
                     {
                         cli: '--binlog-gtid-simple-recovery[={OFF|ON}]',
@@ -110,9 +110,9 @@ module.exports = function() {
                 done();
             });
         });
-        test('test case 3', function(done) {
+        test('test case 3', function (done) {
             const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_3.html'));
-            MySQL.parsePage($, function(resultData) {
+            MySQL.parsePage($, function (resultData) {
                 expect(resultData).to.deep.equal([
                     {
                         default: 'TRUE (Version: 5.1.51-ndb-7.2.0)',
@@ -125,9 +125,9 @@ module.exports = function() {
                 done();
             });
         });
-        test('test case 4', function(done) {
+        test('test case 4', function (done) {
             const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_4.html'));
-            MySQL.parsePage($, function(resultData) {
+            MySQL.parsePage($, function (resultData) {
                 expect(resultData).to.deep.equal([
                     {
                         id: 'option_mysqld_ndbcluster',

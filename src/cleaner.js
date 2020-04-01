@@ -17,7 +17,7 @@ const realTypes = [
  * @param {String} type The type
  * @return {String|undefined} The cleaned type
  */
-const cleanType = function(type) {
+const cleanType = function (type) {
     if (realTypes.includes(type) === false && typeof type === 'string') {
         if (type.match(/in bytes/i) || type.match(/number of bytes/i) || type.match(/size in mb/i)) {
             type = 'byte';
@@ -40,8 +40,8 @@ const cleanType = function(type) {
     return type;
 };
 
-const getCleanTypeFromMixedString = function(mixedString) {
-    return realTypes.find(function(realTypeToTest) {
+const getCleanTypeFromMixedString = function (mixedString) {
+    return realTypes.find(function (realTypeToTest) {
         if (mixedString.indexOf(realTypeToTest) !== -1) {
             return true;
         }
@@ -56,7 +56,7 @@ const regexCli = /([-]{2})([0-9a-z-_]+)/i;
  * @param {boolean} skipRegex Skip regex check
  * @returns {String} The cleaned cli
  */
-const cleanCli = function(cli, skipRegex = false) {
+const cleanCli = function (cli, skipRegex = false) {
     if (typeof cli === 'string') {
         if (cli.match(/<code\>/i) || cli.match(/<\/code\>/i)) {
             cli = cli.replace(/<code\>/gi, '');
@@ -76,7 +76,7 @@ const cleanCli = function(cli, skipRegex = false) {
  * @param {Object} range The range object
  * @returns {Object} The cleaned range object
  */
-const cleanRange = function(range) {
+const cleanRange = function (range) {
     if (range !== undefined) {
         // clean range
         if (typeof range.from !== 'number' || isNaN(range.from)) {
@@ -96,10 +96,10 @@ const cleanRange = function(range) {
  * @param {String} defaultValue The default value
  * @returns {String} The same or an alternative formated text
  */
-const cleanDefault = function(defaultValue) {
+const cleanDefault = function (defaultValue) {
     return defaultValue
         .split('\n')
-        .map(el => cleanTextDefault(el.trim()))
+        .map((el) => cleanTextDefault(el.trim()))
         .join(', ');
 };
 
@@ -108,7 +108,7 @@ const cleanDefault = function(defaultValue) {
  * @param {String} defaultTextValue The default text value
  * @returns {String} The same or an alternative text
  */
-const cleanTextDefault = function(defaultTextValue) {
+const cleanTextDefault = function (defaultTextValue) {
     if (defaultTextValue === 'Autosized (see description)') {
         defaultTextValue = '(autosized)';
     }

@@ -10,7 +10,7 @@ const path = require('path');
  * @param {Object} obj The object
  * @param {Function} arraySorter The sorter callback
  */
-const sortObject = function(obj, arraySorter) {
+const sortObject = function (obj, arraySorter) {
     if (typeof obj !== 'object') {
         return obj;
     }
@@ -35,8 +35,8 @@ const sortObject = function(obj, arraySorter) {
     return temp;
 };
 
-const writeJSON = function(filename, data, cbSuccess = null) {
-    fs.writeFile(filename, JSON.stringify(sortObject(data), null, 2) + '\n', function(err) {
+const writeJSON = function (filename, data, cbSuccess = null) {
+    fs.writeFile(filename, JSON.stringify(sortObject(data), null, 2) + '\n', function (err) {
         if (err) {
             return console.log(err);
         } else {
@@ -47,8 +47,8 @@ const writeJSON = function(filename, data, cbSuccess = null) {
     });
 };
 
-const readJSON = function(filename, callbackSuccess) {
-    fs.readFile(filename, 'utf8', function(err, data) {
+const readJSON = function (filename, callbackSuccess) {
+    fs.readFile(filename, 'utf8', function (err, data) {
         if (err) {
             return console.log(err);
         }
@@ -56,7 +56,7 @@ const readJSON = function(filename, callbackSuccess) {
     });
 };
 
-const listDirectory = function(dirname, callbackSuccess) {
+const listDirectory = function (dirname, callbackSuccess) {
     fs.readdir(dirname, (err, files) => {
         if (err) {
             return console.log(err);
@@ -65,7 +65,7 @@ const listDirectory = function(dirname, callbackSuccess) {
     });
 };
 
-const writePage = function(filePrefix, name, url, data, onWriteSuccess) {
+const writePage = function (filePrefix, name, url, data, onWriteSuccess) {
     let pageKB = {
         url: url,
         name: name,
@@ -74,18 +74,18 @@ const writePage = function(filePrefix, name, url, data, onWriteSuccess) {
     writeJSON(path.join(__dirname, '../', 'data', filePrefix + pageKB.name + '.json'), pageKB, onWriteSuccess);
 };
 
-const processDataExtraction = function(pages, filePrefix, parsePage) {
-    return new Promise(resolve => {
+const processDataExtraction = function (pages, filePrefix, parsePage) {
+    return new Promise((resolve) => {
         var nbrPagesProcessed = 0;
         var crawler = new Crawler({
             maxConnections: 1,
             // This will be called for each crawled page
-            callback: function(error, res, done) {
+            callback: function (error, res, done) {
                 if (error) {
                     console.log(error);
                 } else {
                     console.log('URL : ' + res.options.url);
-                    parsePage(res.$, anchors => {
+                    parsePage(res.$, (anchors) => {
                         writePage(filePrefix, res.options.name, res.options.url, anchors, () => {
                             nbrPagesProcessed++;
                             if (nbrPagesProcessed === pages.length) {
@@ -98,7 +98,7 @@ const processDataExtraction = function(pages, filePrefix, parsePage) {
             },
         });
         crawler.queue(
-            pages.map(page => {
+            pages.map((page) => {
                 return { uri: page.url, name: page.name, url: page.url };
             })
         );

@@ -5,7 +5,7 @@ const templates = require(__dirname + '/templates');
 const cleaner = require(__dirname + '/cleaner');
 const parser = require(__dirname + '/parser');
 
-suite('MariaDB MySQL KBS', function() {
+suite('MariaDB MySQL KBS', function () {
     templates();
     cleaner();
     parser();

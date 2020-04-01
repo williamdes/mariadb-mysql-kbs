@@ -8,34 +8,22 @@ const cleaner = require(__dirname + '/cleaner');
  * @param {Element} element The root element
  * @returns object The doc object
  */
-const createDoc = function($, element) {
+const createDoc = function ($, element) {
     let doc = {
         id: $(element).attr('id'),
-        name: $(element)
-            .text()
-            .trim(),
+        name: $(element).text().trim(),
     };
     try {
         /* jshint -W083 */
         // Parse ul > li
-        const ulElementList = $(element)
-            .nextAll()
-            .not('p')
-            .first();
+        const ulElementList = $(element).nextAll().not('p').first();
         if (ulElementList.find('li > strong').length === 0) {
             return { id: null };
         }
         ulElementList.find('li').each((i, elementDescr) => {
             const valueKey = $(elementDescr);
-            const key = valueKey
-                .find('strong')
-                .text()
-                .toLowerCase()
-                .trim();
-            const value = $(elementDescr)
-                .text()
-                .replace(valueKey.find('strong').text(), '')
-                .trim();
+            const key = valueKey.find('strong').text().toLowerCase().trim();
+            const value = $(elementDescr).text().replace(valueKey.find('strong').text(), '').trim();
             switch (key) {
                 case 'dynamic:':
                     doc.dynamic = value.toLowerCase() === 'yes';
@@ -44,7 +32,7 @@ const createDoc = function($, element) {
                     doc.scope = value
                         .toLowerCase()
                         .split(',')
-                        .map(item => {
+                        .map((item) => {
                             if (item.match(/session/)) {
                                 return 'session';
                             } else if (item.match(/global/)) {
@@ -53,7 +41,7 @@ const createDoc = function($, element) {
                                 return item.trim();
                             }
                         });
-                    doc.scope = doc.scope.filter(function(e) {
+                    doc.scope = doc.scope.filter(function (e) {
                         return e === 0 || e;
                     });
                     break;
@@ -67,13 +55,7 @@ const createDoc = function($, element) {
                      */
                     let dataType = valueKey.find('code');
                     if (dataType.length > 0) {
-                        doc.type = cleaner.cleanType(
-                            dataType
-                                .first()
-                                .text()
-                                .toLowerCase()
-                                .trim()
-                        );
+                        doc.type = cleaner.cleanType(dataType.first().text().toLowerCase().trim());
                     } else {
                         /*
                          * Fallback method, <li> has text
@@ -96,30 +78,27 @@ const createDoc = function($, element) {
                 case 'default value:':
                 case 'default:':
                     doc.default = cleaner.cleanDefault(
-                        valueKey
-                            .text()
-                            .replace(valueKey.find('strong').text(), '')
-                            .trim()
+                        valueKey.text().replace(valueKey.find('strong').text(), '').trim()
                     );
                     break;
                 case 'valid values:':
                     doc.validValues = valueKey
                         .find('code')
                         .get()
-                        .map(el => $(el).text());
+                        .map((el) => $(el).text());
                     break;
                 case 'range:':
                     doc.range = valueKey
                         .find('code')
                         .get()
-                        .map(el => $(el).text());
+                        .map((el) => $(el).text());
                     if (doc.range.length === 1) {
                         // try x-y
-                        doc.range = doc.range[0].split('-').map(item => item.trim());
+                        doc.range = doc.range[0].split('-').map((item) => item.trim());
                     }
                     if (doc.range.length === 1) {
                         // try x to y
-                        doc.range = doc.range[0].split('to').map(item => item.trim());
+                        doc.range = doc.range[0].split('to').map((item) => item.trim());
                     }
                     if (doc.range[1] !== undefined) {
                         doc.range[1] = parseFloat(doc.range[1]);
@@ -168,7 +147,7 @@ const createDoc = function($, element) {
 
 function parsePage($, cbSuccess) {
     var anchors = [];
-    $('.anchored_heading').each(function(i, el) {
+    $('.anchored_heading').each(function (i, el) {
         let doc = createDoc($, el);
         if (doc.id && typeof doc.id === 'string') {
             anchors.push(doc);
@@ -230,28 +209,28 @@ const status = [
 
 const pages = [];
 
-storageEngines.forEach(se => {
+storageEngines.forEach((se) => {
     pages.push({
         url: KB_URL + 'columns-storage-engines-and-plugins/storage-engines/' + se + '/' + se + '-system-variables/',
         name: se + '-system-variables',
     });
 });
 
-custom.forEach(cu => {
+custom.forEach((cu) => {
     pages.push({
         url: KB_URL + cu.url,
         name: cu.name,
     });
 });
 
-status.forEach(statusName => {
+status.forEach((statusName) => {
     pages.push({
         url: KB_URL + statusName + '-status-variables/',
         name: statusName + '-status-variables',
     });
 });
 
-systemVariables.forEach(systemVariableName => {
+systemVariables.forEach((systemVariableName) => {
     pages.push({
         url: KB_URL + systemVariableName + '-system-variables/',
         name: systemVariableName + '-system-variables',

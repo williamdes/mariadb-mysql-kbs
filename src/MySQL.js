@@ -11,19 +11,11 @@ const cleaner = require(__dirname + '/cleaner');
 function completeDoc($, rows, doc) {
     $(rows).each((i, elem) => {
         let tds = $(elem).find('td'); // first is key and last is value
-        var name = tds
-            .first()
-            .text()
-            .toLowerCase()
-            .trim();
+        var name = tds.first().text().toLowerCase().trim();
         var value = tds.last();
         switch (name) {
             case 'dynamic':
-                doc.dynamic =
-                    value
-                        .text()
-                        .toLowerCase()
-                        .trim() === 'yes';
+                doc.dynamic = value.text().toLowerCase().trim() === 'yes';
                 break;
             case 'name':
                 doc.name = value.text().trim();
@@ -31,10 +23,7 @@ function completeDoc($, rows, doc) {
             case 'system variable':
                 // Do not overwrite the name
                 if (typeof doc.name === 'undefined') {
-                    doc.name = value
-                        .text()
-                        .toLowerCase()
-                        .trim();
+                    doc.name = value.text().toLowerCase().trim();
                 }
                 break;
             case 'scope':
@@ -43,7 +32,7 @@ function completeDoc($, rows, doc) {
                     // found on mysql-cluster-options-variables.html
                     doc.scope = ['global', 'session'];
                 } else if (scope != '') {
-                    doc.scope = scope.split(',').map(item => {
+                    doc.scope = scope.split(',').map((item) => {
                         if (item.match(/session/)) {
                             return 'session';
                         } else if (item.match(/global/)) {
@@ -54,16 +43,13 @@ function completeDoc($, rows, doc) {
                     });
                 }
                 if (doc.scope !== undefined) {
-                    doc.scope = doc.scope.filter(function(e) {
+                    doc.scope = doc.scope.filter(function (e) {
                         return e === 0 || e;
                     });
                 }
                 break;
             case 'type':
-                let type = value
-                    .text()
-                    .toLowerCase()
-                    .trim();
+                let type = value.text().toLowerCase().trim();
                 if (type != '') {
                     doc.type = cleaner.cleanType(type);
                 }
@@ -93,7 +79,7 @@ function completeDoc($, rows, doc) {
                 doc.validValues = $(value)
                     .find('code')
                     .get()
-                    .map(el => $(el).text());
+                    .map((el) => $(el).text());
                 break;
             case 'minimum value':
                 if (doc.range == undefined) {
@@ -112,11 +98,7 @@ function completeDoc($, rows, doc) {
                 break;
             case 'command line':
                 if (typeof doc.cli !== 'string') {
-                    doc.cli =
-                        value
-                            .text()
-                            .toLowerCase()
-                            .trim() === 'yes';
+                    doc.cli = value.text().toLowerCase().trim() === 'yes';
                 }
                 break;
         }
@@ -144,40 +126,26 @@ function createDoc($, element, doc) {
 function parsePage($, cbSuccess) {
     var anchors = [];
     $('.informaltable, .table')
-        .filter(function(i, elem) {
-            return (
-                $(elem)
-                    .find('th')
-                    .first()
-                    .text() === 'Property'
-            );
+        .filter(function (i, elem) {
+            return $(elem).find('th').first().text() === 'Property';
         })
-        .each(function(i, elem) {
+        .each(function (i, elem) {
             let doc = {
                 id: $(elem)
                     .prevAll()
                     .find('a')
-                    .filter(function(i, el) {
+                    .filter(function (i, el) {
                         return typeof $(el).attr('name') === 'string' && typeof $(el).attr('class') === 'undefined';
                     })
                     .first()
                     .attr('name'),
             };
             if (typeof doc.id !== 'string') {
-                doc.id = $(elem)
-                    .prevAll()
-                    .find('.link')
-                    .first()
-                    .attr('href')
-                    .split('#')[1];
+                doc.id = $(elem).prevAll().find('.link').first().attr('href').split('#')[1];
             }
             createDoc($, elem, doc);
             if (typeof doc.cli === 'boolean') {
-                doc.cli = $(elem)
-                    .prevAll()
-                    .find('.option')
-                    .first()
-                    .text();
+                doc.cli = $(elem).prevAll().find('.option').first().text();
                 if (doc.cli === '') {
                     delete doc.cli;
                 }

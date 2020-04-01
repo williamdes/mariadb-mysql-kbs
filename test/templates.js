@@ -3,19 +3,19 @@
 const expect = require('chai').expect;
 const templates = require(__dirname + '/../scripts/sudo-bot/template.js');
 
-module.exports = function() {
-    suite('pr message', function() {
-        test('prMessage for lambda files', function(done) {
+module.exports = function () {
+    suite('pr message', function () {
+        test('prMessage for lambda files', function (done) {
             const commmitMsg = templates.prMessage(['a.json', 'ab/cd/ef.json', 'README.md']);
             expect(commmitMsg).to.equal('🤖 Some updates to review 🤖');
             done();
         });
-        test('prMessage for MariaDB files', function(done) {
+        test('prMessage for MariaDB files', function (done) {
             const commmitMsg = templates.prMessage(['data/mariadb-aria-server-status-variables.json']);
             expect(commmitMsg).to.equal('🤖 [MariaDB] updates');
             done();
         });
-        test('prMessage for MariaDB files and merged', function(done) {
+        test('prMessage for MariaDB files and merged', function (done) {
             const commmitMsg = templates.prMessage([
                 'dist/merged-raw.json',
                 'dist/merged-raw.md',
@@ -27,7 +27,7 @@ module.exports = function() {
             expect(commmitMsg).to.equal('🤖 [MariaDB] updates');
             done();
         });
-        test('prMessage for MariaDB files and others', function(done) {
+        test('prMessage for MariaDB files and others', function (done) {
             const commmitMsg = templates.prMessage([
                 'a.json',
                 'ab/cd/ef.json',
@@ -37,7 +37,7 @@ module.exports = function() {
             expect(commmitMsg).to.equal('🤖 [MariaDB] updates 🚨🚨');
             done();
         });
-        test('prMessage for MariaDB files and others and merged', function(done) {
+        test('prMessage for MariaDB files and others and merged', function (done) {
             const commmitMsg = templates.prMessage([
                 'dist/merged-raw.json',
                 'dist/merged-raw.md',
@@ -52,12 +52,12 @@ module.exports = function() {
             expect(commmitMsg).to.equal('🤖 [MariaDB] updates 🚨🚨');
             done();
         });
-        test('prMessage for MySQL files', function(done) {
+        test('prMessage for MySQL files', function (done) {
             const commmitMsg = templates.prMessage(['data/mysql-server-options.json']);
             expect(commmitMsg).to.equal('🤖 [MySQL] updates');
             done();
         });
-        test('prMessage for MySQL files and merged', function(done) {
+        test('prMessage for MySQL files and merged', function (done) {
             const commmitMsg = templates.prMessage([
                 'dist/merged-raw.json',
                 'dist/merged-raw.md',
@@ -69,7 +69,7 @@ module.exports = function() {
             expect(commmitMsg).to.equal('🤖 [MySQL] updates');
             done();
         });
-        test('prMessage for MySQL files and others', function(done) {
+        test('prMessage for MySQL files and others', function (done) {
             const commmitMsg = templates.prMessage([
                 'a.json',
                 'ab/cd/ef.json',
@@ -79,7 +79,7 @@ module.exports = function() {
             expect(commmitMsg).to.equal('🤖 [MySQL] updates 🚨🚨');
             done();
         });
-        test('prMessage for MySQL files and others and merged', function(done) {
+        test('prMessage for MySQL files and others and merged', function (done) {
             const commmitMsg = templates.prMessage([
                 'dist/merged-raw.json',
                 'dist/merged-raw.md',
@@ -94,7 +94,7 @@ module.exports = function() {
             expect(commmitMsg).to.equal('🤖 [MySQL] updates 🚨🚨');
             done();
         });
-        test('prMessage for MySQL and MariaDB files', function(done) {
+        test('prMessage for MySQL and MariaDB files', function (done) {
             const commmitMsg = templates.prMessage([
                 'data/mariadb-aria-server-status-variables.json',
                 'data/mysql-server-options.json',
@@ -102,7 +102,7 @@ module.exports = function() {
             expect(commmitMsg).to.equal('🤖 [MariaDB] && [MySQL] updates');
             done();
         });
-        test('prMessage for MySQL and MariaDB files and merged', function(done) {
+        test('prMessage for MySQL and MariaDB files and merged', function (done) {
             const commmitMsg = templates.prMessage([
                 'dist/merged-raw.json',
                 'dist/merged-raw.md',
@@ -115,7 +115,7 @@ module.exports = function() {
             expect(commmitMsg).to.equal('🤖 [MariaDB] && [MySQL] updates');
             done();
         });
-        test('prMessage for MySQL and MariaDB files and others', function(done) {
+        test('prMessage for MySQL and MariaDB files and others', function (done) {
             const commmitMsg = templates.prMessage([
                 'a.json',
                 'ab/cd/ef.json',
@@ -127,18 +127,18 @@ module.exports = function() {
             done();
         });
     });
-    suite('commit message', function() {
-        test('commitMessage for lambda files', function(done) {
+    suite('commit message', function () {
+        test('commitMessage for lambda files', function (done) {
             const commmitMsg = templates.commitMessage(['a.json', 'ab/cd/ef.json', 'README.md']);
             expect(commmitMsg).to.equal('update: 🤖 Some updates 🤖');
             done();
         });
-        test('commitMessage for MariaDB files', function(done) {
+        test('commitMessage for MariaDB files', function (done) {
             const commmitMsg = templates.commitMessage(['data/mariadb-aria-server-status-variables.json']);
             expect(commmitMsg).to.equal('update: [MariaDB] updates');
             done();
         });
-        test('commitMessage for MariaDB files and others', function(done) {
+        test('commitMessage for MariaDB files and others', function (done) {
             const commmitMsg = templates.commitMessage([
                 'a.json',
                 'ab/cd/ef.json',
@@ -148,12 +148,12 @@ module.exports = function() {
             expect(commmitMsg).to.equal('update: [MariaDB] updates and other changes');
             done();
         });
-        test('commitMessage for MySQL files', function(done) {
+        test('commitMessage for MySQL files', function (done) {
             const commmitMsg = templates.commitMessage(['data/mysql-server-options.json']);
             expect(commmitMsg).to.equal('update: [MySQL] updates');
             done();
         });
-        test('commitMessage for MySQL files and others', function(done) {
+        test('commitMessage for MySQL files and others', function (done) {
             const commmitMsg = templates.commitMessage([
                 'a.json',
                 'ab/cd/ef.json',
@@ -163,7 +163,7 @@ module.exports = function() {
             expect(commmitMsg).to.equal('update: [MySQL] updates and other changes');
             done();
         });
-        test('commitMessage for MySQL and MariaDB files', function(done) {
+        test('commitMessage for MySQL and MariaDB files', function (done) {
             const commmitMsg = templates.commitMessage([
                 'data/mariadb-aria-server-status-variables.json',
                 'data/mysql-server-options.json',
@@ -171,7 +171,7 @@ module.exports = function() {
             expect(commmitMsg).to.equal('update: [MariaDB] && [MySQL] updates');
             done();
         });
-        test('commitMessage for MySQL and MariaDB files and others', function(done) {
+        test('commitMessage for MySQL and MariaDB files and others', function (done) {
             const commmitMsg = templates.commitMessage([
                 'a.json',
                 'ab/cd/ef.json',
@@ -183,8 +183,8 @@ module.exports = function() {
             done();
         });
     });
-    suite('pr', function() {
-        test('prContent', function(done) {
+    suite('pr', function () {
+        test('prContent', function (done) {
             const prContent = templates.prContent([
                 'a.json',
                 'ab/cd/ef.json',
@@ -202,35 +202,35 @@ module.exports = function() {
             );
             done();
         });
-        test('prContent one file', function(done) {
+        test('prContent one file', function (done) {
             const prContent = templates.prContent(['README.md']);
             expect(prContent).to.equal(
                 'Dear human 🌻, after running my task the following file was updated:\n- `README.md` 👽\n'
             );
             done();
         });
-        test('prContent one special file', function(done) {
+        test('prContent one special file', function (done) {
             const prContent = templates.prContent(['renderer.index']);
             expect(prContent).to.equal(
                 'Dear human 🌻, after running my task the following file was updated:\n- `renderer.index` 👁️\n'
             );
             done();
         });
-        test('prContent one html file', function(done) {
+        test('prContent one html file', function (done) {
             const prContent = templates.prContent(['index.html']);
             expect(prContent).to.equal(
                 'Dear human 🌻, after running my task the following file was updated:\n- `index.html` 👁️\n'
             );
             done();
         });
-        test('prContent one complex file name', function(done) {
+        test('prContent one complex file name', function (done) {
             const prContent = templates.prContent(['mysql-replication-options-binary-log_5.7.json']);
             expect(prContent).to.equal(
                 'Dear human 🌻, after running my task the following file was updated:\n- `mysql-replication-options-binary-log_5.7.json` 🐬\n'
             );
             done();
         });
-        test('prBranch', function(done) {
+        test('prBranch', function (done) {
             const prBranch = templates.prBranch([]);
             expect(prBranch).to.match(/^refs\/heads\/update\/[0-9]{13}$/);
             done();

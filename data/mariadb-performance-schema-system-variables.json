@@ -102,6 +102,36 @@
       "type": "integer"
     },
     {
+      "cli": "--performance-schema-events-transactions-history-long-size=#",
+      "default": "-1",
+      "dynamic": false,
+      "id": "performance_schema_events_transactions_history_long_size",
+      "name": "performance_schema_events_transactions_history_long_size",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--performance-schema-events-transactions-history-size=#",
+      "default": "-1",
+      "dynamic": false,
+      "id": "performance_schema_events_transactions_history_size",
+      "name": "performance_schema_events_transactions_history_size",
+      "range": {
+        "from": -1,
+        "to": 1024
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--performance-schema-events-waits-history-long-size=#",
       "default": "-1 (>= MariaDB 10.0.12), 100 (<= MariaDB 10.0.11)",
       "dynamic": false,
@@ -193,7 +223,7 @@
     },
     {
       "cli": "--performance-schema-max-file-classes=#",
-      "default": "50",
+      "default": "80 (>= MariaDB 10.5.2), 50 (<= MariaDB 10.5.1)",
       "dynamic": false,
       "id": "performance_schema_max_file_classes",
       "name": "performance_schema_max_file_classes",
@@ -237,8 +267,53 @@
       "type": "integer"
     },
     {
+      "cli": "--performance-schema-max-index-stat=#",
+      "default": "-1",
+      "dynamic": false,
+      "id": "performance_schema_max_index_stat",
+      "name": "performance_schema_max_index_stat",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--performance-schema-max-memory-classes=#",
+      "default": "320",
+      "dynamic": false,
+      "id": "performance_schema_max_memory_classes",
+      "name": "performance_schema_max_memory_classes",
+      "range": {
+        "from": 0,
+        "to": 1024
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--performance-schema-max-metadata-locks=#",
+      "default": "-1",
+      "dynamic": false,
+      "id": "performance_schema_max_metadata_locks",
+      "name": "performance_schema_max_metadata_locks",
+      "range": {
+        "from": -1,
+        "to": 104857600
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--performance-schema-max-mutex-classes=#",
-      "default": "200",
+      "default": "210 (>= MariaDB 10.5.2), 200 (<= MariaDB 10.5.1)",
       "dynamic": false,
       "id": "performance_schema_max_mutex_classes",
       "name": "performance_schema_max_mutex_classes",
@@ -267,8 +342,38 @@
       "type": "integer"
     },
     {
+      "cli": "--performance-schema-max-prepared-statement-instances=#",
+      "default": "-1",
+      "dynamic": false,
+      "id": "performance_schema_max_prepared_statement_instances",
+      "name": "performance_schema_max_prepared_statement_instances",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--performance-schema-max-program-instances=#",
+      "default": "-1",
+      "dynamic": false,
+      "id": "performance_schema_max_program_instances",
+      "name": "performance_schema_max_program_instances",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--performance-schema-max-rwlock-classes=#",
-      "default": "40",
+      "default": "50 (>= MariaDB 10.5.2), 40 (<= MariaDB 10.5.1)",
       "dynamic": false,
       "id": "performance_schema_max_rwlock_classes",
       "name": "performance_schema_max_rwlock_classes",
@@ -327,6 +432,21 @@
       "type": "integer"
     },
     {
+      "cli": "--performance-schema-max-sql-text-length=#",
+      "default": "1024",
+      "dynamic": false,
+      "id": "performance_schema_max_sql_text_length",
+      "name": "performance_schema_max_sql_text_length",
+      "range": {
+        "from": 0,
+        "to": 1048576
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--performance-schema-max-stage-classes=#",
       "default": "160 (>= MariaDB 10.3.3), 150 (<= MariaDB 10.3.2)",
       "dynamic": false,
@@ -357,6 +477,21 @@
       "type": "integer"
     },
     {
+      "cli": "--performance-schema-max-statement-stack=#",
+      "default": "10",
+      "dynamic": false,
+      "id": "performance_schema_max_statement_stack",
+      "name": "performance_schema_max_statement_stack",
+      "range": {
+        "from": 1,
+        "to": 256
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--performance-schema-max-table-handles=#",
       "default": "-1 (>= MariaDB 10.0.12), 10000 (<= MariaDB 10.0.11)",
       "dynamic": false,
@@ -377,6 +512,21 @@
       "dynamic": false,
       "id": "performance_schema_max_table_instances",
       "name": "performance_schema_max_table_instances",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--performance-schema-max-table-lock-stat=#",
+      "default": "-1",
+      "dynamic": false,
+      "id": "performance_schema_max_table_lock_stat",
+      "name": "performance_schema_max_table_lock_stat",
       "range": {
         "from": -1,
         "to": 1048576
@@ -433,12 +583,12 @@
     },
     {
       "cli": "--performance-schema-setup-actors-size=#",
-      "default": "100",
+      "default": "-1 (>= MariaDB 10.5.2), 100 (<= MariaDB 10.5.1)",
       "dynamic": false,
       "id": "performance_schema_setup_actors_size",
       "name": "performance_schema_setup_actors_size",
       "range": {
-        "from": 0,
+        "from": -1,
         "to": 1024
       },
       "scope": [
@@ -448,12 +598,12 @@
     },
     {
       "cli": "--performance-schema-setup-objects-size=#",
-      "default": "100",
+      "default": "-1 (>= MariaDB 10.5.2), 100 (<= MariaDB 10.5.1)",
       "dynamic": false,
       "id": "performance_schema_setup_objects_size",
       "name": "performance_schema_setup_objects_size",
       "range": {
-        "from": 0,
+        "from": -1,
         "to": 1048576
       },
       "scope": [

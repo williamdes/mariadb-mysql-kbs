@@ -3819,7 +3819,7 @@
 |Command line|`--rocksdb-datadir[=value]`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`./.rocksdb`|
+|Default value|`./#rocksdb`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -5541,6 +5541,36 @@
 |mariadb.com|[performance_schema_events_statements_history_size](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_events_statements_history_size)|
 |dev.mysql.com|[sysvar_performance_schema_events_statements_history_size](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_events_statements_history_size)|
 
+## performance_schema_events_transactions_history_long_size
+|name|value|
+|----|-----|
+|Name|`performance_schema_events_transactions_history_long_size`|
+|Command line|`--performance-schema-events-transactions-history-long-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_events_transactions_history_long_size](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_events_transactions_history_long_size)|
+|dev.mysql.com|[sysvar_performance_schema_events_transactions_history_long_size](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_events_transactions_history_long_size)|
+
+## performance_schema_events_transactions_history_size
+|name|value|
+|----|-----|
+|Name|`performance_schema_events_transactions_history_size`|
+|Command line|`--performance-schema-events-transactions-history-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_events_transactions_history_size](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_events_transactions_history_size)|
+|dev.mysql.com|[sysvar_performance_schema_events_transactions_history_size](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_events_transactions_history_size)|
+
 ## performance_schema_events_waits_history_long_size
 |name|value|
 |----|-----|
@@ -5642,6 +5672,7 @@
 |Command line|`--performance-schema-max-file-classes=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`80`|
 |Dynamic|`false`|
 |Range|from: `0` to: `256`|
 
@@ -5682,6 +5713,51 @@
 |mariadb.com|[performance_schema_max_file_instances](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_file_instances)|
 |dev.mysql.com|[sysvar_performance_schema_max_file_instances](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_file_instances)|
 
+## performance_schema_max_index_stat
+|name|value|
+|----|-----|
+|Name|`performance_schema_max_index_stat`|
+|Command line|`--performance-schema-max-index-stat=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_max_index_stat](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_index_stat)|
+|dev.mysql.com|[sysvar_performance_schema_max_index_stat](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_index_stat)|
+
+## performance_schema_max_memory_classes
+|name|value|
+|----|-----|
+|Name|`performance_schema_max_memory_classes`|
+|Command line|`--performance-schema-max-memory-classes=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_max_memory_classes](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_memory_classes)|
+|dev.mysql.com|[sysvar_performance_schema_max_memory_classes](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_memory_classes)|
+
+## performance_schema_max_metadata_locks
+|name|value|
+|----|-----|
+|Name|`performance_schema_max_metadata_locks`|
+|Command line|`--performance-schema-max-metadata-locks=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_max_metadata_locks](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_metadata_locks)|
+|dev.mysql.com|[sysvar_performance_schema_max_metadata_locks](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_metadata_locks)|
+
 ## performance_schema_max_mutex_classes
 |name|value|
 |----|-----|
@@ -5713,6 +5789,37 @@
 |mariadb.com|[performance_schema_max_mutex_instances](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_mutex_instances)|
 |dev.mysql.com|[sysvar_performance_schema_max_mutex_instances](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_mutex_instances)|
 
+## performance_schema_max_prepared_statement_instances
+|name|value|
+|----|-----|
+|Name|`performance_schema_max_prepared_statement_instances`|
+|Command line|`--performance-schema-max-prepared-statement-instances=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`-1`|
+|Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_max_prepared_statement_instances](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_prepared_statement_instances)|
+
+## performance_schema_max_program_instances
+|name|value|
+|----|-----|
+|Name|`performance_schema_max_program_instances`|
+|Command line|`--performance-schema-max-program-instances=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_max_program_instances](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_program_instances)|
+|dev.mysql.com|[sysvar_performance_schema_max_program_instances](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_program_instances)|
+
 ## performance_schema_max_rwlock_classes
 |name|value|
 |----|-----|
@@ -5720,7 +5827,6 @@
 |Command line|`--performance-schema-max-rwlock-classes=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`40`|
 |Dynamic|`false`|
 |Range|from: `0` to: `256`|
 
@@ -5777,6 +5883,23 @@
 |mariadb.com|[performance_schema_max_socket_instances](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_socket_instances)|
 |dev.mysql.com|[sysvar_performance_schema_max_socket_instances](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_socket_instances)|
 
+## performance_schema_max_sql_text_length
+|name|value|
+|----|-----|
+|Name|`performance_schema_max_sql_text_length`|
+|Command line|`--performance-schema-max-sql-text-length=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1024`|
+|Dynamic|`false`|
+|Range|from: `0` to: `1048576`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_max_sql_text_length](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_sql_text_length)|
+|dev.mysql.com|[sysvar_performance_schema_max_sql_text_length](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_sql_text_length)|
+
 ## performance_schema_max_stage_classes
 |name|value|
 |----|-----|
@@ -5809,6 +5932,22 @@
 |mariadb.com|[performance_schema_max_statement_classes](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_statement_classes)|
 |dev.mysql.com|[sysvar_performance_schema_max_statement_classes](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_statement_classes)|
 
+## performance_schema_max_statement_stack
+|name|value|
+|----|-----|
+|Name|`performance_schema_max_statement_stack`|
+|Command line|`--performance-schema-max-statement-stack=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`10`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_max_statement_stack](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_statement_stack)|
+|dev.mysql.com|[sysvar_performance_schema_max_statement_stack](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_statement_stack)|
+
 ## performance_schema_max_table_handles
 |name|value|
 |----|-----|
@@ -5838,6 +5977,21 @@
 |------|----|
 |mariadb.com|[performance_schema_max_table_instances](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_table_instances)|
 |dev.mysql.com|[sysvar_performance_schema_max_table_instances](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_table_instances)|
+
+## performance_schema_max_table_lock_stat
+|name|value|
+|----|-----|
+|Name|`performance_schema_max_table_lock_stat`|
+|Command line|`--performance-schema-max-table-lock-stat=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_max_table_lock_stat](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_max_table_lock_stat)|
+|dev.mysql.com|[sysvar_performance_schema_max_table_lock_stat](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_table_lock_stat)|
 
 ## performance_schema_max_thread_classes
 |name|value|
@@ -28670,36 +28824,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_performance_schema_error_size](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_error_size)|
 
-## performance_schema_events_transactions_history_long_size
-|name|value|
-|----|-----|
-|Name|`performance_schema_events_transactions_history_long_size`|
-|Command line|`--performance-schema-events-transactions-history-long-size=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`(-1 signifies autosizing; do not use -1)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_performance_schema_events_transactions_history_long_size](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_events_transactions_history_long_size)|
-
-## performance_schema_events_transactions_history_size
-|name|value|
-|----|-----|
-|Name|`performance_schema_events_transactions_history_size`|
-|Command line|`--performance-schema-events-transactions-history-size=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`(-1 signifies autosizing; do not use -1)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_performance_schema_events_transactions_history_size](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_events_transactions_history_size)|
-
 ## performance_schema_max_digest_sample_age
 |name|value|
 |----|-----|
@@ -28716,51 +28840,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_performance_schema_max_digest_sample_age](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_digest_sample_age)|
 
-## performance_schema_max_index_stat
-|name|value|
-|----|-----|
-|Name|`performance_schema_max_index_stat`|
-|Command line|`--performance-schema-max-index-stat=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`(-1 signifies autosizing; do not use -1)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_performance_schema_max_index_stat](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_index_stat)|
-
-## performance_schema_max_memory_classes
-|name|value|
-|----|-----|
-|Name|`performance_schema_max_memory_classes`|
-|Command line|`--performance-schema-max-memory-classes=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`450`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_performance_schema_max_memory_classes](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_memory_classes)|
-
-## performance_schema_max_metadata_locks
-|name|value|
-|----|-----|
-|Name|`performance_schema_max_metadata_locks`|
-|Command line|`--performance-schema-max-metadata-locks=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`(-1 signifies autoscaling; do not use -1)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_performance_schema_max_metadata_locks](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_metadata_locks)|
-
 ## performance_schema_max_prepared_statements_instances
 |name|value|
 |----|-----|
@@ -28775,67 +28854,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_performance_schema_max_prepared_statements_instances](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_prepared_statements_instances)|
-
-## performance_schema_max_program_instances
-|name|value|
-|----|-----|
-|Name|`performance_schema_max_program_instances`|
-|Command line|`--performance-schema-max-program-instances=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`(-1 signifies autoscaling; do not use -1)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_performance_schema_max_program_instances](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_program_instances)|
-
-## performance_schema_max_sql_text_length
-|name|value|
-|----|-----|
-|Name|`performance_schema_max_sql_text_length`|
-|Command line|`--performance-schema-max-sql-text-length=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1024`|
-|Dynamic|`false`|
-|Range|from: `0` to: `1048576`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_performance_schema_max_sql_text_length](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_sql_text_length)|
-
-## performance_schema_max_statement_stack
-|name|value|
-|----|-----|
-|Name|`performance_schema_max_statement_stack`|
-|Command line|`--performance-schema-max-statement-stack=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`10`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_performance_schema_max_statement_stack](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_statement_stack)|
-
-## performance_schema_max_table_lock_stat
-|name|value|
-|----|-----|
-|Name|`performance_schema_max_table_lock_stat`|
-|Command line|`--performance-schema-max-table-lock-stat=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`(-1 signifies autosizing; do not use -1)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_performance_schema_max_table_lock_stat](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_table_lock_stat)|
 
 ## authentication_ldap_sasl_auth_method_name
 |name|value|
@@ -30550,6 +30568,19 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_slow-start-timeout](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_slow-start-timeout)|
+
+## ssl
+|name|value|
+|----|-----|
+|Name|`ssl`|
+|Command line|`--ssl[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_ssl](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_ssl)|
 
 ## standalone
 |name|value|

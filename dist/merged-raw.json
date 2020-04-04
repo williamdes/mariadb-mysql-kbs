@@ -4363,7 +4363,7 @@
         },
         "rocksdb_datadir": {
             "cli": "--rocksdb-datadir[=value]",
-            "default": "./.rocksdb",
+            "default": "./#rocksdb",
             "dynamic": false,
             "name": "rocksdb_datadir",
             "scope": [
@@ -6407,6 +6407,44 @@
                 }
             ]
         },
+        "performance_schema_events_transactions_history_long_size": {
+            "cli": "--performance-schema-events-transactions-history-long-size=#",
+            "dynamic": false,
+            "name": "performance_schema_events_transactions_history_long_size",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_events_transactions_history_long_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_performance_schema_events_transactions_history_long_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
+        "performance_schema_events_transactions_history_size": {
+            "cli": "--performance-schema-events-transactions-history-size=#",
+            "dynamic": false,
+            "name": "performance_schema_events_transactions_history_size",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_events_transactions_history_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_performance_schema_events_transactions_history_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
         "performance_schema_events_waits_history_long_size": {
             "cli": "--performance-schema-events-waits-history-long-size=#",
             "dynamic": false,
@@ -6536,6 +6574,7 @@
         },
         "performance_schema_max_file_classes": {
             "cli": "--performance-schema-max-file-classes=#",
+            "default": "80",
             "dynamic": false,
             "name": "performance_schema_max_file_classes",
             "range": {
@@ -6596,6 +6635,63 @@
                 }
             ]
         },
+        "performance_schema_max_index_stat": {
+            "cli": "--performance-schema-max-index-stat=#",
+            "dynamic": false,
+            "name": "performance_schema_max_index_stat",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_max_index_stat",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_performance_schema_max_index_stat",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
+        "performance_schema_max_memory_classes": {
+            "cli": "--performance-schema-max-memory-classes=#",
+            "dynamic": false,
+            "name": "performance_schema_max_memory_classes",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_max_memory_classes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_performance_schema_max_memory_classes",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
+        "performance_schema_max_metadata_locks": {
+            "cli": "--performance-schema-max-metadata-locks=#",
+            "dynamic": false,
+            "name": "performance_schema_max_metadata_locks",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_max_metadata_locks",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_performance_schema_max_metadata_locks",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
         "performance_schema_max_mutex_classes": {
             "cli": "--performance-schema-max-mutex-classes=#",
             "dynamic": false,
@@ -6638,9 +6734,47 @@
                 }
             ]
         },
+        "performance_schema_max_prepared_statement_instances": {
+            "cli": "--performance-schema-max-prepared-statement-instances=#",
+            "default": "-1",
+            "dynamic": false,
+            "name": "performance_schema_max_prepared_statement_instances",
+            "range": {
+                "from": -1,
+                "to": 1048576
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_max_prepared_statement_instances",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/"
+                }
+            ]
+        },
+        "performance_schema_max_program_instances": {
+            "cli": "--performance-schema-max-program-instances=#",
+            "dynamic": false,
+            "name": "performance_schema_max_program_instances",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_max_program_instances",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_performance_schema_max_program_instances",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
         "performance_schema_max_rwlock_classes": {
             "cli": "--performance-schema-max-rwlock-classes=#",
-            "default": "40",
             "dynamic": false,
             "name": "performance_schema_max_rwlock_classes",
             "range": {
@@ -6724,6 +6858,30 @@
                 }
             ]
         },
+        "performance_schema_max_sql_text_length": {
+            "cli": "--performance-schema-max-sql-text-length=#",
+            "default": "1024",
+            "dynamic": false,
+            "name": "performance_schema_max_sql_text_length",
+            "range": {
+                "from": 0,
+                "to": 1048576
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_max_sql_text_length",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_performance_schema_max_sql_text_length",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
         "performance_schema_max_stage_classes": {
             "cli": "--performance-schema-max-stage-classes=#",
             "dynamic": false,
@@ -6767,6 +6925,26 @@
                 }
             ]
         },
+        "performance_schema_max_statement_stack": {
+            "cli": "--performance-schema-max-statement-stack=#",
+            "default": "10",
+            "dynamic": false,
+            "name": "performance_schema_max_statement_stack",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_max_statement_stack",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_performance_schema_max_statement_stack",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
         "performance_schema_max_table_handles": {
             "cli": "--performance-schema-max-table-handles=#",
             "dynamic": false,
@@ -6801,6 +6979,25 @@
                 },
                 {
                     "anchor": "sysvar_performance_schema_max_table_instances",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
+        "performance_schema_max_table_lock_stat": {
+            "cli": "--performance-schema-max-table-lock-stat=#",
+            "dynamic": false,
+            "name": "performance_schema_max_table_lock_stat",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_max_table_lock_stat",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_performance_schema_max_table_lock_stat",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
                 }
             ]
@@ -34038,38 +34235,6 @@
                 }
             ]
         },
-        "performance_schema_events_transactions_history_long_size": {
-            "cli": "--performance-schema-events-transactions-history-long-size=#",
-            "default": "(-1 signifies autosizing; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_events_transactions_history_long_size",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_performance_schema_events_transactions_history_long_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
-                }
-            ]
-        },
-        "performance_schema_events_transactions_history_size": {
-            "cli": "--performance-schema-events-transactions-history-size=#",
-            "default": "(-1 signifies autosizing; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_events_transactions_history_size",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_performance_schema_events_transactions_history_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
-                }
-            ]
-        },
         "performance_schema_max_digest_sample_age": {
             "cli": "--performance-schema-max-digest-sample-age=#",
             "default": "60",
@@ -34090,54 +34255,6 @@
                 }
             ]
         },
-        "performance_schema_max_index_stat": {
-            "cli": "--performance-schema-max-index-stat=#",
-            "default": "(-1 signifies autosizing; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_max_index_stat",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_performance_schema_max_index_stat",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
-                }
-            ]
-        },
-        "performance_schema_max_memory_classes": {
-            "cli": "--performance-schema-max-memory-classes=#",
-            "default": "450",
-            "dynamic": false,
-            "name": "performance_schema_max_memory_classes",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_performance_schema_max_memory_classes",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
-                }
-            ]
-        },
-        "performance_schema_max_metadata_locks": {
-            "cli": "--performance-schema-max-metadata-locks=#",
-            "default": "(-1 signifies autoscaling; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_max_metadata_locks",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_performance_schema_max_metadata_locks",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
-                }
-            ]
-        },
         "performance_schema_max_prepared_statements_instances": {
             "cli": "--performance-schema-max-prepared-statements-instances=#",
             "default": "(-1 signifies autoscaling; do not use -1)",
@@ -34150,74 +34267,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_performance_schema_max_prepared_statements_instances",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
-                }
-            ]
-        },
-        "performance_schema_max_program_instances": {
-            "cli": "--performance-schema-max-program-instances=#",
-            "default": "(-1 signifies autoscaling; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_max_program_instances",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_performance_schema_max_program_instances",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
-                }
-            ]
-        },
-        "performance_schema_max_sql_text_length": {
-            "cli": "--performance-schema-max-sql-text-length=#",
-            "default": "1024",
-            "dynamic": false,
-            "name": "performance_schema_max_sql_text_length",
-            "range": {
-                "from": 0,
-                "to": 1048576
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_performance_schema_max_sql_text_length",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
-                }
-            ]
-        },
-        "performance_schema_max_statement_stack": {
-            "cli": "--performance-schema-max-statement-stack=#",
-            "default": "10",
-            "dynamic": false,
-            "name": "performance_schema_max_statement_stack",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_performance_schema_max_statement_stack",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
-                }
-            ]
-        },
-        "performance_schema_max_table_lock_stat": {
-            "cli": "--performance-schema-max-table-lock-stat=#",
-            "default": "(-1 signifies autosizing; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_max_table_lock_stat",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_performance_schema_max_table_lock_stat",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
                 }
             ]
@@ -36125,6 +36174,18 @@
             "ids": [
                 {
                     "anchor": "option_mysqld_slow-start-timeout",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
+        "ssl": {
+            "cli": "--ssl[={OFF|ON}]",
+            "default": "ON",
+            "name": "ssl",
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ssl",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 }
             ]

@@ -3490,7 +3490,7 @@
         },
         "rocksdb_datadir": {
             "cli": "--rocksdb-datadir[=value]",
-            "default": "./.rocksdb",
+            "default": "./#rocksdb",
             "dynamic": false,
             "name": "rocksdb_datadir",
             "scope": [
@@ -5174,6 +5174,32 @@
                 "20#sysvar_performance_schema_events_statements_history_size"
             ]
         },
+        "performance_schema_events_transactions_history_long_size": {
+            "cli": "--performance-schema-events-transactions-history-long-size=#",
+            "dynamic": false,
+            "name": "performance_schema_events_transactions_history_long_size",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "19#performance_schema_events_transactions_history_long_size",
+                "20#sysvar_performance_schema_events_transactions_history_long_size"
+            ]
+        },
+        "performance_schema_events_transactions_history_size": {
+            "cli": "--performance-schema-events-transactions-history-size=#",
+            "dynamic": false,
+            "name": "performance_schema_events_transactions_history_size",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "19#performance_schema_events_transactions_history_size",
+                "20#sysvar_performance_schema_events_transactions_history_size"
+            ]
+        },
         "performance_schema_events_waits_history_long_size": {
             "cli": "--performance-schema-events-waits-history-long-size=#",
             "dynamic": false,
@@ -5267,6 +5293,7 @@
         },
         "performance_schema_max_file_classes": {
             "cli": "--performance-schema-max-file-classes=#",
+            "default": "80",
             "dynamic": false,
             "name": "performance_schema_max_file_classes",
             "range": {
@@ -5309,6 +5336,45 @@
                 "20#sysvar_performance_schema_max_file_instances"
             ]
         },
+        "performance_schema_max_index_stat": {
+            "cli": "--performance-schema-max-index-stat=#",
+            "dynamic": false,
+            "name": "performance_schema_max_index_stat",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "19#performance_schema_max_index_stat",
+                "20#sysvar_performance_schema_max_index_stat"
+            ]
+        },
+        "performance_schema_max_memory_classes": {
+            "cli": "--performance-schema-max-memory-classes=#",
+            "dynamic": false,
+            "name": "performance_schema_max_memory_classes",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "19#performance_schema_max_memory_classes",
+                "20#sysvar_performance_schema_max_memory_classes"
+            ]
+        },
+        "performance_schema_max_metadata_locks": {
+            "cli": "--performance-schema-max-metadata-locks=#",
+            "dynamic": false,
+            "name": "performance_schema_max_metadata_locks",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "19#performance_schema_max_metadata_locks",
+                "20#sysvar_performance_schema_max_metadata_locks"
+            ]
+        },
         "performance_schema_max_mutex_classes": {
             "cli": "--performance-schema-max-mutex-classes=#",
             "dynamic": false,
@@ -5339,9 +5405,38 @@
                 "20#sysvar_performance_schema_max_mutex_instances"
             ]
         },
+        "performance_schema_max_prepared_statement_instances": {
+            "cli": "--performance-schema-max-prepared-statement-instances=#",
+            "default": "-1",
+            "dynamic": false,
+            "name": "performance_schema_max_prepared_statement_instances",
+            "range": {
+                "from": -1,
+                "to": 1048576
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "19#performance_schema_max_prepared_statement_instances"
+            ]
+        },
+        "performance_schema_max_program_instances": {
+            "cli": "--performance-schema-max-program-instances=#",
+            "dynamic": false,
+            "name": "performance_schema_max_program_instances",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "19#performance_schema_max_program_instances",
+                "20#sysvar_performance_schema_max_program_instances"
+            ]
+        },
         "performance_schema_max_rwlock_classes": {
             "cli": "--performance-schema-max-rwlock-classes=#",
-            "default": "40",
             "dynamic": false,
             "name": "performance_schema_max_rwlock_classes",
             "range": {
@@ -5401,6 +5496,24 @@
                 "20#sysvar_performance_schema_max_socket_instances"
             ]
         },
+        "performance_schema_max_sql_text_length": {
+            "cli": "--performance-schema-max-sql-text-length=#",
+            "default": "1024",
+            "dynamic": false,
+            "name": "performance_schema_max_sql_text_length",
+            "range": {
+                "from": 0,
+                "to": 1048576
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "19#performance_schema_max_sql_text_length",
+                "20#sysvar_performance_schema_max_sql_text_length"
+            ]
+        },
         "performance_schema_max_stage_classes": {
             "cli": "--performance-schema-max-stage-classes=#",
             "dynamic": false,
@@ -5432,6 +5545,20 @@
                 "20#sysvar_performance_schema_max_statement_classes"
             ]
         },
+        "performance_schema_max_statement_stack": {
+            "cli": "--performance-schema-max-statement-stack=#",
+            "default": "10",
+            "dynamic": false,
+            "name": "performance_schema_max_statement_stack",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "19#performance_schema_max_statement_stack",
+                "20#sysvar_performance_schema_max_statement_stack"
+            ]
+        },
         "performance_schema_max_table_handles": {
             "cli": "--performance-schema-max-table-handles=#",
             "dynamic": false,
@@ -5456,6 +5583,19 @@
             "ids": [
                 "19#performance_schema_max_table_instances",
                 "20#sysvar_performance_schema_max_table_instances"
+            ]
+        },
+        "performance_schema_max_table_lock_stat": {
+            "cli": "--performance-schema-max-table-lock-stat=#",
+            "dynamic": false,
+            "name": "performance_schema_max_table_lock_stat",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "19#performance_schema_max_table_lock_stat",
+                "20#sysvar_performance_schema_max_table_lock_stat"
             ]
         },
         "performance_schema_max_thread_classes": {
@@ -26340,32 +26480,6 @@
                 "20#sysvar_performance_schema_error_size"
             ]
         },
-        "performance_schema_events_transactions_history_long_size": {
-            "cli": "--performance-schema-events-transactions-history-long-size=#",
-            "default": "(-1 signifies autosizing; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_events_transactions_history_long_size",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "20#sysvar_performance_schema_events_transactions_history_long_size"
-            ]
-        },
-        "performance_schema_events_transactions_history_size": {
-            "cli": "--performance-schema-events-transactions-history-size=#",
-            "default": "(-1 signifies autosizing; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_events_transactions_history_size",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "20#sysvar_performance_schema_events_transactions_history_size"
-            ]
-        },
         "performance_schema_max_digest_sample_age": {
             "cli": "--performance-schema-max-digest-sample-age=#",
             "default": "60",
@@ -26383,45 +26497,6 @@
                 "20#sysvar_performance_schema_max_digest_sample_age"
             ]
         },
-        "performance_schema_max_index_stat": {
-            "cli": "--performance-schema-max-index-stat=#",
-            "default": "(-1 signifies autosizing; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_max_index_stat",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "20#sysvar_performance_schema_max_index_stat"
-            ]
-        },
-        "performance_schema_max_memory_classes": {
-            "cli": "--performance-schema-max-memory-classes=#",
-            "default": "450",
-            "dynamic": false,
-            "name": "performance_schema_max_memory_classes",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "20#sysvar_performance_schema_max_memory_classes"
-            ]
-        },
-        "performance_schema_max_metadata_locks": {
-            "cli": "--performance-schema-max-metadata-locks=#",
-            "default": "(-1 signifies autoscaling; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_max_metadata_locks",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "20#sysvar_performance_schema_max_metadata_locks"
-            ]
-        },
         "performance_schema_max_prepared_statements_instances": {
             "cli": "--performance-schema-max-prepared-statements-instances=#",
             "default": "(-1 signifies autoscaling; do not use -1)",
@@ -26433,62 +26508,6 @@
             "type": "integer",
             "ids": [
                 "20#sysvar_performance_schema_max_prepared_statements_instances"
-            ]
-        },
-        "performance_schema_max_program_instances": {
-            "cli": "--performance-schema-max-program-instances=#",
-            "default": "(-1 signifies autoscaling; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_max_program_instances",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "20#sysvar_performance_schema_max_program_instances"
-            ]
-        },
-        "performance_schema_max_sql_text_length": {
-            "cli": "--performance-schema-max-sql-text-length=#",
-            "default": "1024",
-            "dynamic": false,
-            "name": "performance_schema_max_sql_text_length",
-            "range": {
-                "from": 0,
-                "to": 1048576
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "20#sysvar_performance_schema_max_sql_text_length"
-            ]
-        },
-        "performance_schema_max_statement_stack": {
-            "cli": "--performance-schema-max-statement-stack=#",
-            "default": "10",
-            "dynamic": false,
-            "name": "performance_schema_max_statement_stack",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "20#sysvar_performance_schema_max_statement_stack"
-            ]
-        },
-        "performance_schema_max_table_lock_stat": {
-            "cli": "--performance-schema-max-table-lock-stat=#",
-            "default": "(-1 signifies autosizing; do not use -1)",
-            "dynamic": false,
-            "name": "performance_schema_max_table_lock_stat",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "20#sysvar_performance_schema_max_table_lock_stat"
             ]
         },
         "authentication_ldap_sasl_auth_method_name": {
@@ -27982,6 +28001,15 @@
             "type": "integer",
             "ids": [
                 "16#option_mysqld_slow-start-timeout"
+            ]
+        },
+        "ssl": {
+            "cli": "--ssl[={OFF|ON}]",
+            "default": "ON",
+            "name": "ssl",
+            "type": "boolean",
+            "ids": [
+                "16#option_mysqld_ssl"
             ]
         },
         "standalone": {

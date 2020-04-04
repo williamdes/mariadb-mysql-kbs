@@ -388,7 +388,7 @@
     },
     {
       "cli": "--rocksdb-datadir[=value]",
-      "default": "./.rocksdb",
+      "default": "./#rocksdb",
       "dynamic": false,
       "id": "rocksdb_datadir",
       "name": "rocksdb_datadir",

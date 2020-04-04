@@ -426,6 +426,13 @@
       ]
     },
     {
+      "cli": "--ssl[={OFF|ON}]",
+      "default": "ON",
+      "id": "option_mysqld_ssl",
+      "name": "ssl",
+      "type": "boolean"
+    },
+    {
       "cli": "--standalone",
       "id": "option_mysqld_standalone",
       "name": "standalone"

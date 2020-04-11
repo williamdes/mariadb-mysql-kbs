@@ -7481,6 +7481,18 @@
 |------|----|
 |mariadb.com|[com_change_master](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-status-variables/#com_change_master)|
 
+## Com_show_binlog_status
+|name|value|
+|----|-----|
+|Name|`Com_show_binlog_status`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[com_show_binlog_status](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-status-variables/#com_show_binlog_status)|
+
 ## Com_show_master_status
 |name|value|
 |----|-----|
@@ -10688,6 +10700,18 @@
 |------|----|
 |mariadb.com|[feature_gis](https://mariadb.com/kb/en/library/documentation/server-status-variables/#feature_gis)|
 
+## Feature_insert_returning
+|name|value|
+|----|-----|
+|Name|`Feature_insert_returning`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[feature_insert_returning](https://mariadb.com/kb/en/library/documentation/server-status-variables/#feature_insert_returning)|
+
 ## Feature_invisible_columns
 |name|value|
 |----|-----|
@@ -11416,282 +11440,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[opened_views](https://mariadb.com/kb/en/library/documentation/server-status-variables/#opened_views)|
-
-## Performance_schema_accounts_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_accounts_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_accounts_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_accounts_lost)|
-
-## Performance_schema_cond_classes_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_cond_classes_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_cond_classes_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_cond_classes_lost)|
-
-## Performance_schema_cond_instances_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_cond_instances_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_cond_instances_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_cond_instances_lost)|
-
-## Performance_schema_digest_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_digest_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_digest_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_digest_lost)|
-
-## Performance_schema_file_classes_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_file_classes_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_file_classes_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_file_classes_lost)|
-
-## Performance_schema_file_handles_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_file_handles_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_file_handles_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_file_handles_lost)|
-
-## Performance_schema_file_instances_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_file_instances_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_file_instances_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_file_instances_lost)|
-
-## Performance_schema_hosts_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_hosts_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_hosts_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_hosts_lost)|
-
-## Performance_schema_locker_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_locker_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_locker_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_locker_lost)|
-
-## Performance_schema_mutex_classes_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_mutex_classes_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_mutex_classes_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_mutex_classes_lost)|
-
-## Performance_schema_mutex_instances_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_mutex_instances_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_mutex_instances_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_mutex_instances_lost)|
-
-## Performance_schema_rwlock_classes_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_rwlock_classes_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_rwlock_classes_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_rwlock_classes_lost)|
-
-## Performance_schema_rwlock_instances_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_rwlock_instances_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_rwlock_instances_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_rwlock_instances_lost)|
-
-## Performance_schema_session_connect_attrs_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_session_connect_attrs_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_session_connect_attrs_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_session_connect_attrs_lost)|
-
-## Performance_schema_socket_classes_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_socket_classes_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_socket_classes_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_socket_classes_lost)|
-
-## Performance_schema_socket_instances_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_socket_instances_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_socket_instances_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_socket_instances_lost)|
-
-## Performance_schema_stage_classes_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_stage_classes_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_stage_classes_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_stage_classes_lost)|
-
-## Performance_schema_statement_classes_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_statement_classes_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_statement_classes_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_statement_classes_lost)|
-
-## Performance_schema_table_handles_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_table_handles_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_table_handles_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_table_handles_lost)|
-
-## Performance_schema_table_instances_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_table_instances_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_table_instances_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_table_instances_lost)|
-
-## Performance_schema_thread_classes_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_thread_classes_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_thread_classes_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_thread_classes_lost)|
-
-## Performance_schema_thread_instances_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_thread_instances_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_thread_instances_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_thread_instances_lost)|
-
-## Performance_schema_users_lost
-|name|value|
-|----|-----|
-|Name|`Performance_schema_users_lost`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[performance_schema_users_lost](https://mariadb.com/kb/en/library/documentation/server-status-variables/#performance_schema_users_lost)|
 
 ## Prepared_stmt_count
 |name|value|
@@ -15194,6 +14942,21 @@
 |mariadb.com|[read_rnd_buffer_size](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#read_rnd_buffer_size)|
 |dev.mysql.com|[sysvar_read_rnd_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_read_rnd_buffer_size)|
 
+## require_secure_transport
+|name|value|
+|----|-----|
+|Name|`require_secure_transport`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[require_secure_transport](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#require_secure_transport)|
+|dev.mysql.com|[sysvar_require_secure_transport](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_require_secure_transport)|
+
 ## rowid_merge_buff_size
 |name|value|
 |----|-----|
@@ -15591,6 +15354,21 @@
 |------|----|
 |mariadb.com|[sql_buffer_result](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#sql_buffer_result)|
 |dev.mysql.com|[sysvar_sql_buffer_result](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_buffer_result)|
+
+## sql_if_exists
+|name|value|
+|----|-----|
+|Name|`sql_if_exists`|
+|Command line|`--sql-if-exists[={0|1}]`|
+|Type of variable|`boolean`|
+|Scope|`session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[sql_if_exists](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#sql_if_exists)|
 
 ## sql_log_off
 |name|value|
@@ -21662,6 +21440,18 @@
 |------|----|
 |mariadb.com|[innodb_buffer_pool_write_requests](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_buffer_pool_write_requests)|
 
+## Innodb_buffered_aio_submitted
+|name|value|
+|----|-----|
+|Name|`Innodb_buffered_aio_submitted`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_buffered_aio_submitted](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_buffered_aio_submitted)|
+
 ## Innodb_checkpoint_age
 |name|value|
 |----|-----|
@@ -21937,6 +21727,30 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[innodb_encryption_n_rowlog_blocks_encrypted](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_encryption_n_rowlog_blocks_encrypted)|
+
+## Innodb_encryption_n_temp_blocks_decrypted
+|name|value|
+|----|-----|
+|Name|`Innodb_encryption_n_temp_blocks_decrypted`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_encryption_n_temp_blocks_decrypted](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_encryption_n_temp_blocks_decrypted)|
+
+## Innodb_encryption_n_temp_blocks_encrypted
+|name|value|
+|----|-----|
+|Name|`Innodb_encryption_n_temp_blocks_encrypted`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_encryption_n_temp_blocks_encrypted](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_encryption_n_temp_blocks_encrypted)|
 
 ## Innodb_encryption_num_key_requests
 |name|value|
@@ -30119,6 +29933,19 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_help](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_help)|
 
+## admin_ssl
+|name|value|
+|----|-----|
+|Name|`admin_ssl`|
+|Command line|`--admin-ssl[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_admin-ssl](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_admin-ssl)|
+
 ## allow_suspicious_udfs
 |name|value|
 |----|-----|
@@ -30762,6 +30589,134 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_admin_port](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_port)|
+
+## admin_ssl_ca
+|name|value|
+|----|-----|
+|Name|`admin_ssl_ca`|
+|Command line|`--admin-ssl-ca=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_ssl_ca](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_ssl_ca)|
+
+## admin_ssl_capath
+|name|value|
+|----|-----|
+|Name|`admin_ssl_capath`|
+|Command line|`--admin-ssl-capath=dir_name`|
+|Type of variable|`directory name`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_ssl_capath](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_ssl_capath)|
+
+## admin_ssl_cert
+|name|value|
+|----|-----|
+|Name|`admin_ssl_cert`|
+|Command line|`--admin-ssl-cert=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_ssl_cert](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_ssl_cert)|
+
+## admin_ssl_cipher
+|name|value|
+|----|-----|
+|Name|`admin_ssl_cipher`|
+|Command line|`--admin-ssl-cipher=name`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_ssl_cipher](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_ssl_cipher)|
+
+## admin_ssl_crl
+|name|value|
+|----|-----|
+|Name|`admin_ssl_crl`|
+|Command line|`--admin-ssl-crl=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_ssl_crl](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_ssl_crl)|
+
+## admin_ssl_crlpath
+|name|value|
+|----|-----|
+|Name|`admin_ssl_crlpath`|
+|Command line|`--admin-ssl-crlpath=dir_name`|
+|Type of variable|`directory name`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_ssl_crlpath](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_ssl_crlpath)|
+
+## admin_ssl_key
+|name|value|
+|----|-----|
+|Name|`admin_ssl_key`|
+|Command line|`--admin-ssl-key=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_ssl_key](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_ssl_key)|
+
+## admin_tls_ciphersuites
+|name|value|
+|----|-----|
+|Name|`admin_tls_ciphersuites`|
+|Command line|`--admin-tls-ciphersuites=ciphersuite_list`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`NULL`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_tls_ciphersuites](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_tls_ciphersuites)|
+
+## admin_tls_version
+|name|value|
+|----|-----|
+|Name|`admin_tls_version`|
+|Command line|`--admin-tls-version=protocol_list`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`TLSv1,TLSv1.1,TLSv1.2,TLSv1.3 (OpenSSL 1.1.1 and higher)TLSv1,TLSv1.1,TLSv1.2 (otherwise)`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_admin_tls_version](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_tls_version)|
 
 ## authentication_windows_log_level
 |name|value|
@@ -31660,21 +31615,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_require_row_format](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_require_row_format)|
-
-## require_secure_transport
-|name|value|
-|----|-----|
-|Name|`require_secure_transport`|
-|Command line|`--require-secure-transport[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_require_secure_transport](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_require_secure_transport)|
 
 ## resultset_metadata
 |name|value|

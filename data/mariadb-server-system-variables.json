@@ -2475,6 +2475,17 @@
       "type": "integer"
     },
     {
+      "cli": "--require-secure-transport[={0|1}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "require_secure_transport",
+      "name": "require_secure_transport",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--rowid-merge-buff-size=#",
       "default": "8388608",
       "dynamic": true,
@@ -2758,6 +2769,17 @@
       "name": "sql_buffer_result",
       "scope": [
         "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--sql-if-exists[={0|1}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sql_if_exists",
+      "name": "sql_if_exists",
+      "scope": [
         "session"
       ],
       "type": "boolean"

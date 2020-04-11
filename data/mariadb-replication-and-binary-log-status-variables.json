@@ -106,6 +106,15 @@
       "type": "integer"
     },
     {
+      "id": "com_show_binlog_status",
+      "name": "Com_show_binlog_status",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "com_show_master_status",
       "name": "Com_show_master_status",
       "scope": [

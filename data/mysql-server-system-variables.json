@@ -37,6 +37,98 @@
       "type": "integer"
     },
     {
+      "cli": "--admin-ssl-ca=file_name",
+      "dynamic": true,
+      "id": "sysvar_admin_ssl_ca",
+      "name": "admin_ssl_ca",
+      "scope": [
+        "global"
+      ],
+      "type": "file name"
+    },
+    {
+      "cli": "--admin-ssl-capath=dir_name",
+      "dynamic": true,
+      "id": "sysvar_admin_ssl_capath",
+      "name": "admin_ssl_capath",
+      "scope": [
+        "global"
+      ],
+      "type": "directory name"
+    },
+    {
+      "cli": "--admin-ssl-cert=file_name",
+      "dynamic": true,
+      "id": "sysvar_admin_ssl_cert",
+      "name": "admin_ssl_cert",
+      "scope": [
+        "global"
+      ],
+      "type": "file name"
+    },
+    {
+      "cli": "--admin-ssl-cipher=name",
+      "dynamic": true,
+      "id": "sysvar_admin_ssl_cipher",
+      "name": "admin_ssl_cipher",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--admin-ssl-crl=file_name",
+      "dynamic": true,
+      "id": "sysvar_admin_ssl_crl",
+      "name": "admin_ssl_crl",
+      "scope": [
+        "global"
+      ],
+      "type": "file name"
+    },
+    {
+      "cli": "--admin-ssl-crlpath=dir_name",
+      "dynamic": true,
+      "id": "sysvar_admin_ssl_crlpath",
+      "name": "admin_ssl_crlpath",
+      "scope": [
+        "global"
+      ],
+      "type": "directory name"
+    },
+    {
+      "cli": "--admin-ssl-key=file_name",
+      "dynamic": true,
+      "id": "sysvar_admin_ssl_key",
+      "name": "admin_ssl_key",
+      "scope": [
+        "global"
+      ],
+      "type": "file name"
+    },
+    {
+      "cli": "--admin-tls-ciphersuites=ciphersuite_list",
+      "default": "NULL",
+      "dynamic": true,
+      "id": "sysvar_admin_tls_ciphersuites",
+      "name": "admin_tls_ciphersuites",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--admin-tls-version=protocol_list",
+      "default": "TLSv1,TLSv1.1,TLSv1.2,TLSv1.3 (OpenSSL 1.1.1 and higher)TLSv1,TLSv1.1,TLSv1.2 (otherwise)",
+      "dynamic": true,
+      "id": "sysvar_admin_tls_version",
+      "name": "admin_tls_version",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--authentication-windows-log-level=#",
       "default": "2",
       "dynamic": false,

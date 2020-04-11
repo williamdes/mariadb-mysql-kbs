@@ -8983,6 +8983,20 @@
                 }
             ]
         },
+        "Com_show_binlog_status": {
+            "name": "Com_show_binlog_status",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "com_show_binlog_status",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-status-variables/"
+                }
+            ]
+        },
         "Com_show_master_status": {
             "name": "Com_show_master_status",
             "scope": [
@@ -12653,6 +12667,20 @@
                 }
             ]
         },
+        "Feature_insert_returning": {
+            "name": "Feature_insert_returning",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "feature_insert_returning",
+                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
+                }
+            ]
+        },
         "Feature_invisible_columns": {
             "name": "Feature_invisible_columns",
             "scope": [
@@ -13475,328 +13503,6 @@
             "ids": [
                 {
                     "anchor": "opened_views",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_accounts_lost": {
-            "name": "Performance_schema_accounts_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_accounts_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_cond_classes_lost": {
-            "name": "Performance_schema_cond_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_cond_classes_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_cond_instances_lost": {
-            "name": "Performance_schema_cond_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_cond_instances_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_digest_lost": {
-            "name": "Performance_schema_digest_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_digest_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_file_classes_lost": {
-            "name": "Performance_schema_file_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_file_classes_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_file_handles_lost": {
-            "name": "Performance_schema_file_handles_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_file_handles_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_file_instances_lost": {
-            "name": "Performance_schema_file_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_file_instances_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_hosts_lost": {
-            "name": "Performance_schema_hosts_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_hosts_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_locker_lost": {
-            "name": "Performance_schema_locker_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_locker_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_mutex_classes_lost": {
-            "name": "Performance_schema_mutex_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_mutex_classes_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_mutex_instances_lost": {
-            "name": "Performance_schema_mutex_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_mutex_instances_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_rwlock_classes_lost": {
-            "name": "Performance_schema_rwlock_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_rwlock_classes_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_rwlock_instances_lost": {
-            "name": "Performance_schema_rwlock_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_rwlock_instances_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_session_connect_attrs_lost": {
-            "name": "Performance_schema_session_connect_attrs_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_session_connect_attrs_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_socket_classes_lost": {
-            "name": "Performance_schema_socket_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_socket_classes_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_socket_instances_lost": {
-            "name": "Performance_schema_socket_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_socket_instances_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_stage_classes_lost": {
-            "name": "Performance_schema_stage_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_stage_classes_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_statement_classes_lost": {
-            "name": "Performance_schema_statement_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_statement_classes_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_table_handles_lost": {
-            "name": "Performance_schema_table_handles_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_table_handles_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_table_instances_lost": {
-            "name": "Performance_schema_table_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_table_instances_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_thread_classes_lost": {
-            "name": "Performance_schema_thread_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_thread_classes_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_thread_instances_lost": {
-            "name": "Performance_schema_thread_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_thread_instances_lost",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
-        "Performance_schema_users_lost": {
-            "name": "Performance_schema_users_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "performance_schema_users_lost",
                     "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
                 }
             ]
@@ -18288,6 +17994,25 @@
                 }
             ]
         },
+        "require_secure_transport": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "require_secure_transport",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "require_secure_transport",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_require_secure_transport",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "rowid_merge_buff_size": {
             "cli": "--rowid-merge-buff-size=#",
             "default": "8388608",
@@ -18795,6 +18520,22 @@
                 {
                     "anchor": "sysvar_sql_buffer_result",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "sql_if_exists": {
+            "cli": "--sql-if-exists[={0|1}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "sql_if_exists",
+            "scope": [
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sql_if_exists",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 }
             ]
         },
@@ -25632,6 +25373,19 @@
                 }
             ]
         },
+        "Innodb_buffered_aio_submitted": {
+            "name": "Innodb_buffered_aio_submitted",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_buffered_aio_submitted",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/"
+                }
+            ]
+        },
         "Innodb_checkpoint_age": {
             "name": "Innodb_checkpoint_age",
             "scope": [
@@ -25927,6 +25681,32 @@
             "ids": [
                 {
                     "anchor": "innodb_encryption_n_rowlog_blocks_encrypted",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/"
+                }
+            ]
+        },
+        "Innodb_encryption_n_temp_blocks_decrypted": {
+            "name": "Innodb_encryption_n_temp_blocks_decrypted",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_encryption_n_temp_blocks_decrypted",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/"
+                }
+            ]
+        },
+        "Innodb_encryption_n_temp_blocks_encrypted": {
+            "name": "Innodb_encryption_n_temp_blocks_encrypted",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_encryption_n_temp_blocks_encrypted",
                     "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/"
                 }
             ]
@@ -35755,6 +35535,18 @@
                 }
             ]
         },
+        "admin_ssl": {
+            "cli": "--admin-ssl[={OFF|ON}]",
+            "default": "ON",
+            "name": "admin_ssl",
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_admin-ssl",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
         "allow_suspicious_udfs": {
             "cli": "--allow-suspicious-udfs[={OFF|ON}]",
             "default": "OFF",
@@ -36388,6 +36180,143 @@
             "ids": [
                 {
                     "anchor": "sysvar_admin_port",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "admin_ssl_ca": {
+            "cli": "--admin-ssl-ca=file_name",
+            "dynamic": true,
+            "name": "admin_ssl_ca",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_ssl_ca",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "admin_ssl_capath": {
+            "cli": "--admin-ssl-capath=dir_name",
+            "dynamic": true,
+            "name": "admin_ssl_capath",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_ssl_capath",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "admin_ssl_cert": {
+            "cli": "--admin-ssl-cert=file_name",
+            "dynamic": true,
+            "name": "admin_ssl_cert",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_ssl_cert",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "admin_ssl_cipher": {
+            "cli": "--admin-ssl-cipher=name",
+            "dynamic": true,
+            "name": "admin_ssl_cipher",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_ssl_cipher",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "admin_ssl_crl": {
+            "cli": "--admin-ssl-crl=file_name",
+            "dynamic": true,
+            "name": "admin_ssl_crl",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_ssl_crl",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "admin_ssl_crlpath": {
+            "cli": "--admin-ssl-crlpath=dir_name",
+            "dynamic": true,
+            "name": "admin_ssl_crlpath",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_ssl_crlpath",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "admin_ssl_key": {
+            "cli": "--admin-ssl-key=file_name",
+            "dynamic": true,
+            "name": "admin_ssl_key",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_ssl_key",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "admin_tls_ciphersuites": {
+            "cli": "--admin-tls-ciphersuites=ciphersuite_list",
+            "default": "NULL",
+            "dynamic": true,
+            "name": "admin_tls_ciphersuites",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_tls_ciphersuites",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "admin_tls_version": {
+            "cli": "--admin-tls-version=protocol_list",
+            "default": "TLSv1,TLSv1.1,TLSv1.2,TLSv1.3 (OpenSSL 1.1.1 and higher)TLSv1,TLSv1.1,TLSv1.2 (otherwise)",
+            "dynamic": true,
+            "name": "admin_tls_version",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sysvar_admin_tls_version",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
@@ -37430,22 +37359,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_require_row_format",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
-        "require_secure_transport": {
-            "cli": "--require-secure-transport[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "require_secure_transport",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_require_secure_transport",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

@@ -1896,6 +1896,15 @@
       "type": "integer"
     },
     {
+      "id": "feature_insert_returning",
+      "name": "Feature_insert_returning",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "feature_invisible_columns",
       "name": "Feature_invisible_columns",
       "scope": [
@@ -2410,213 +2419,6 @@
     {
       "id": "opened_views",
       "name": "Opened_views",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_accounts_lost",
-      "name": "Performance_schema_accounts_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_cond_classes_lost",
-      "name": "Performance_schema_cond_classes_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_cond_instances_lost",
-      "name": "Performance_schema_cond_instances_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_digest_lost",
-      "name": "Performance_schema_digest_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_file_classes_lost",
-      "name": "Performance_schema_file_classes_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_file_handles_lost",
-      "name": "Performance_schema_file_handles_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_file_instances_lost",
-      "name": "Performance_schema_file_instances_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_hosts_lost",
-      "name": "Performance_schema_hosts_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_locker_lost",
-      "name": "Performance_schema_locker_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_mutex_classes_lost",
-      "name": "Performance_schema_mutex_classes_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_mutex_instances_lost",
-      "name": "Performance_schema_mutex_instances_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_rwlock_classes_lost",
-      "name": "Performance_schema_rwlock_classes_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_rwlock_instances_lost",
-      "name": "Performance_schema_rwlock_instances_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_session_connect_attrs_lost",
-      "name": "Performance_schema_session_connect_attrs_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_socket_classes_lost",
-      "name": "Performance_schema_socket_classes_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_socket_instances_lost",
-      "name": "Performance_schema_socket_instances_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_stage_classes_lost",
-      "name": "Performance_schema_stage_classes_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_statement_classes_lost",
-      "name": "Performance_schema_statement_classes_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_table_handles_lost",
-      "name": "Performance_schema_table_handles_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_table_instances_lost",
-      "name": "Performance_schema_table_instances_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_thread_classes_lost",
-      "name": "Performance_schema_thread_classes_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_thread_instances_lost",
-      "name": "Performance_schema_thread_instances_lost",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "performance_schema_users_lost",
-      "name": "Performance_schema_users_lost",
       "scope": [
         "global",
         "session"

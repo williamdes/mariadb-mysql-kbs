@@ -7015,6 +7015,17 @@
                 "25#com_change_master"
             ]
         },
+        "Com_show_binlog_status": {
+            "name": "Com_show_binlog_status",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "25#com_show_binlog_status"
+            ]
+        },
         "Com_show_master_status": {
             "name": "Com_show_master_status",
             "scope": [
@@ -9866,6 +9877,17 @@
                 "28#feature_gis"
             ]
         },
+        "Feature_insert_returning": {
+            "name": "Feature_insert_returning",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "28#feature_insert_returning"
+            ]
+        },
         "Feature_invisible_columns": {
             "name": "Feature_invisible_columns",
             "scope": [
@@ -10507,259 +10529,6 @@
             "type": "integer",
             "ids": [
                 "28#opened_views"
-            ]
-        },
-        "Performance_schema_accounts_lost": {
-            "name": "Performance_schema_accounts_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_accounts_lost"
-            ]
-        },
-        "Performance_schema_cond_classes_lost": {
-            "name": "Performance_schema_cond_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_cond_classes_lost"
-            ]
-        },
-        "Performance_schema_cond_instances_lost": {
-            "name": "Performance_schema_cond_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_cond_instances_lost"
-            ]
-        },
-        "Performance_schema_digest_lost": {
-            "name": "Performance_schema_digest_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_digest_lost"
-            ]
-        },
-        "Performance_schema_file_classes_lost": {
-            "name": "Performance_schema_file_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_file_classes_lost"
-            ]
-        },
-        "Performance_schema_file_handles_lost": {
-            "name": "Performance_schema_file_handles_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_file_handles_lost"
-            ]
-        },
-        "Performance_schema_file_instances_lost": {
-            "name": "Performance_schema_file_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_file_instances_lost"
-            ]
-        },
-        "Performance_schema_hosts_lost": {
-            "name": "Performance_schema_hosts_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_hosts_lost"
-            ]
-        },
-        "Performance_schema_locker_lost": {
-            "name": "Performance_schema_locker_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_locker_lost"
-            ]
-        },
-        "Performance_schema_mutex_classes_lost": {
-            "name": "Performance_schema_mutex_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_mutex_classes_lost"
-            ]
-        },
-        "Performance_schema_mutex_instances_lost": {
-            "name": "Performance_schema_mutex_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_mutex_instances_lost"
-            ]
-        },
-        "Performance_schema_rwlock_classes_lost": {
-            "name": "Performance_schema_rwlock_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_rwlock_classes_lost"
-            ]
-        },
-        "Performance_schema_rwlock_instances_lost": {
-            "name": "Performance_schema_rwlock_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_rwlock_instances_lost"
-            ]
-        },
-        "Performance_schema_session_connect_attrs_lost": {
-            "name": "Performance_schema_session_connect_attrs_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_session_connect_attrs_lost"
-            ]
-        },
-        "Performance_schema_socket_classes_lost": {
-            "name": "Performance_schema_socket_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_socket_classes_lost"
-            ]
-        },
-        "Performance_schema_socket_instances_lost": {
-            "name": "Performance_schema_socket_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_socket_instances_lost"
-            ]
-        },
-        "Performance_schema_stage_classes_lost": {
-            "name": "Performance_schema_stage_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_stage_classes_lost"
-            ]
-        },
-        "Performance_schema_statement_classes_lost": {
-            "name": "Performance_schema_statement_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_statement_classes_lost"
-            ]
-        },
-        "Performance_schema_table_handles_lost": {
-            "name": "Performance_schema_table_handles_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_table_handles_lost"
-            ]
-        },
-        "Performance_schema_table_instances_lost": {
-            "name": "Performance_schema_table_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_table_instances_lost"
-            ]
-        },
-        "Performance_schema_thread_classes_lost": {
-            "name": "Performance_schema_thread_classes_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_thread_classes_lost"
-            ]
-        },
-        "Performance_schema_thread_instances_lost": {
-            "name": "Performance_schema_thread_instances_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_thread_instances_lost"
-            ]
-        },
-        "Performance_schema_users_lost": {
-            "name": "Performance_schema_users_lost",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "28#performance_schema_users_lost"
             ]
         },
         "Prepared_stmt_count": {
@@ -14130,6 +13899,19 @@
                 "15#sysvar_read_rnd_buffer_size"
             ]
         },
+        "require_secure_transport": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "require_secure_transport",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "29#require_secure_transport",
+                "15#sysvar_require_secure_transport"
+            ]
+        },
         "rowid_merge_buff_size": {
             "cli": "--rowid-merge-buff-size=#",
             "default": "8388608",
@@ -14494,6 +14276,19 @@
             "ids": [
                 "29#sql_buffer_result",
                 "15#sysvar_sql_buffer_result"
+            ]
+        },
+        "sql_if_exists": {
+            "cli": "--sql-if-exists[={0|1}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "sql_if_exists",
+            "scope": [
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "29#sql_if_exists"
             ]
         },
         "sql_log_off": {
@@ -19764,6 +19559,16 @@
                 "39#innodb_buffer_pool_write_requests"
             ]
         },
+        "Innodb_buffered_aio_submitted": {
+            "name": "Innodb_buffered_aio_submitted",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "39#innodb_buffered_aio_submitted"
+            ]
+        },
         "Innodb_checkpoint_age": {
             "name": "Innodb_checkpoint_age",
             "scope": [
@@ -19992,6 +19797,26 @@
             "type": "integer",
             "ids": [
                 "39#innodb_encryption_n_rowlog_blocks_encrypted"
+            ]
+        },
+        "Innodb_encryption_n_temp_blocks_decrypted": {
+            "name": "Innodb_encryption_n_temp_blocks_decrypted",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "39#innodb_encryption_n_temp_blocks_decrypted"
+            ]
+        },
+        "Innodb_encryption_n_temp_blocks_encrypted": {
+            "name": "Innodb_encryption_n_temp_blocks_encrypted",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "39#innodb_encryption_n_temp_blocks_encrypted"
             ]
         },
         "Innodb_encryption_num_key_requests": {
@@ -27691,6 +27516,15 @@
                 "16#option_mysqld_help"
             ]
         },
+        "admin_ssl": {
+            "cli": "--admin-ssl[={OFF|ON}]",
+            "default": "ON",
+            "name": "admin_ssl",
+            "type": "boolean",
+            "ids": [
+                "16#option_mysqld_admin-ssl"
+            ]
+        },
         "allow_suspicious_udfs": {
             "cli": "--allow-suspicious-udfs[={OFF|ON}]",
             "default": "OFF",
@@ -28167,6 +28001,116 @@
             "type": "integer",
             "ids": [
                 "15#sysvar_admin_port"
+            ]
+        },
+        "admin_ssl_ca": {
+            "cli": "--admin-ssl-ca=file_name",
+            "dynamic": true,
+            "name": "admin_ssl_ca",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                "15#sysvar_admin_ssl_ca"
+            ]
+        },
+        "admin_ssl_capath": {
+            "cli": "--admin-ssl-capath=dir_name",
+            "dynamic": true,
+            "name": "admin_ssl_capath",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                "15#sysvar_admin_ssl_capath"
+            ]
+        },
+        "admin_ssl_cert": {
+            "cli": "--admin-ssl-cert=file_name",
+            "dynamic": true,
+            "name": "admin_ssl_cert",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                "15#sysvar_admin_ssl_cert"
+            ]
+        },
+        "admin_ssl_cipher": {
+            "cli": "--admin-ssl-cipher=name",
+            "dynamic": true,
+            "name": "admin_ssl_cipher",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "15#sysvar_admin_ssl_cipher"
+            ]
+        },
+        "admin_ssl_crl": {
+            "cli": "--admin-ssl-crl=file_name",
+            "dynamic": true,
+            "name": "admin_ssl_crl",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                "15#sysvar_admin_ssl_crl"
+            ]
+        },
+        "admin_ssl_crlpath": {
+            "cli": "--admin-ssl-crlpath=dir_name",
+            "dynamic": true,
+            "name": "admin_ssl_crlpath",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                "15#sysvar_admin_ssl_crlpath"
+            ]
+        },
+        "admin_ssl_key": {
+            "cli": "--admin-ssl-key=file_name",
+            "dynamic": true,
+            "name": "admin_ssl_key",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                "15#sysvar_admin_ssl_key"
+            ]
+        },
+        "admin_tls_ciphersuites": {
+            "cli": "--admin-tls-ciphersuites=ciphersuite_list",
+            "default": "NULL",
+            "dynamic": true,
+            "name": "admin_tls_ciphersuites",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "15#sysvar_admin_tls_ciphersuites"
+            ]
+        },
+        "admin_tls_version": {
+            "cli": "--admin-tls-version=protocol_list",
+            "default": "TLSv1,TLSv1.1,TLSv1.2,TLSv1.3 (OpenSSL 1.1.1 and higher)TLSv1,TLSv1.1,TLSv1.2 (otherwise)",
+            "dynamic": true,
+            "name": "admin_tls_version",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "15#sysvar_admin_tls_version"
             ]
         },
         "authentication_windows_log_level": {
@@ -29032,19 +28976,6 @@
             "type": "boolean",
             "ids": [
                 "15#sysvar_require_row_format"
-            ]
-        },
-        "require_secure_transport": {
-            "cli": "--require-secure-transport[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "require_secure_transport",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "15#sysvar_require_secure_transport"
             ]
         },
         "resultset_metadata": {

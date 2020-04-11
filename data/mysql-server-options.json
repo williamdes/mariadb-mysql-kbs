@@ -6,6 +6,13 @@
       "name": "help"
     },
     {
+      "cli": "--admin-ssl[={OFF|ON}]",
+      "default": "ON",
+      "id": "option_mysqld_admin-ssl",
+      "name": "admin_ssl",
+      "type": "boolean"
+    },
+    {
       "cli": "--allow-suspicious-udfs[={OFF|ON}]",
       "default": "OFF",
       "id": "option_mysqld_allow-suspicious-udfs",

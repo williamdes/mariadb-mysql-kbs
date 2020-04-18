@@ -2555,7 +2555,7 @@
       "id": "sysvar_read_buffer_size",
       "name": "read_buffer_size",
       "range": {
-        "from": 8200,
+        "from": 8192,
         "to": 2147479552
       },
       "scope": [

@@ -1096,6 +1096,16 @@
                 }
             ]
         },
+        "wsrep_applier_thread_count": {
+            "name": "wsrep_applier_thread_count",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_applier_thread_count",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
         "wsrep_apply_oooe": {
             "name": "wsrep_apply_oooe",
             "ids": [
@@ -1274,6 +1284,7 @@
         },
         "wsrep_evs_repl_latency": {
             "name": "wsrep_evs_repl_latency",
+            "type": "integer",
             "ids": [
                 {
                     "anchor": "wsrep_evs_repl_latency",
@@ -1657,6 +1668,16 @@
             "ids": [
                 {
                     "anchor": "wsrep_replicated_bytes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+                }
+            ]
+        },
+        "wsrep_rollbacker_thread_count": {
+            "name": "wsrep_rollbacker_thread_count",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "wsrep_rollbacker_thread_count",
                     "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
                 }
             ]
@@ -17933,10 +17954,6 @@
             "default": "131072",
             "dynamic": true,
             "name": "read_buffer_size",
-            "range": {
-                "from": 8200,
-                "to": 2147479552
-            },
             "scope": [
                 "global",
                 "session"
@@ -38329,7 +38346,7 @@
             ]
         },
         "mysqlx_ssl_cert": {
-            "cli": "--mysqlx-ssl-cert=name",
+            "cli": "--mysqlx-ssl-cert=file_name",
             "dynamic": false,
             "name": "mysqlx_ssl_cert",
             "scope": [

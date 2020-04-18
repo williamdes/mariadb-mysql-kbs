@@ -903,6 +903,17 @@
 |------|----|
 |mariadb.com|[connect_xtrace](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_xtrace)|
 
+## wsrep_applier_thread_count
+|name|value|
+|----|-----|
+|Name|`wsrep_applier_thread_count`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_applier_thread_count](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_applier_thread_count)|
+
 ## wsrep_apply_oooe
 |name|value|
 |----|-----|
@@ -1102,6 +1113,7 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_evs_repl_latency`|
+|Type of variable|`integer`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -1527,6 +1539,17 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[wsrep_replicated_bytes](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_replicated_bytes)|
+
+## wsrep_rollbacker_thread_count
+|name|value|
+|----|-----|
+|Name|`wsrep_rollbacker_thread_count`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_rollbacker_thread_count](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_rollbacker_thread_count)|
 
 ## wsrep_thread_count
 |name|value|
@@ -14902,7 +14925,6 @@
 |Scope|`global`, `session`|
 |Default value|`131072`|
 |Dynamic|`true`|
-|Range|from: `8200` to: `2147479552`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -32435,7 +32457,7 @@
 |name|value|
 |----|-----|
 |Name|`mysqlx_ssl_cert`|
-|Command line|`--mysqlx-ssl-cert=name`|
+|Command line|`--mysqlx-ssl-cert=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
 |Dynamic|`false`|

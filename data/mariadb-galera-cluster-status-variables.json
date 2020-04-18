@@ -1,6 +1,11 @@
 {
   "data": [
     {
+      "id": "wsrep_applier_thread_count",
+      "name": "wsrep_applier_thread_count",
+      "type": "integer"
+    },
+    {
       "id": "wsrep_apply_oooe",
       "name": "wsrep_apply_oooe"
     },
@@ -83,7 +88,8 @@
     },
     {
       "id": "wsrep_evs_repl_latency",
-      "name": "wsrep_evs_repl_latency"
+      "name": "wsrep_evs_repl_latency",
+      "type": "integer"
     },
     {
       "id": "wsrep_evs_state",
@@ -264,6 +270,11 @@
       "id": "wsrep_replicated_bytes",
       "name": "wsrep_replicated_bytes",
       "type": "byte"
+    },
+    {
+      "id": "wsrep_rollbacker_thread_count",
+      "name": "wsrep_rollbacker_thread_count",
+      "type": "integer"
     },
     {
       "id": "wsrep_thread_count",

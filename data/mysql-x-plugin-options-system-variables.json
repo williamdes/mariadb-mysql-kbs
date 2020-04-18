@@ -293,7 +293,7 @@
       "type": "directory name"
     },
     {
-      "cli": "--mysqlx-ssl-cert=name",
+      "cli": "--mysqlx-ssl-cert=file_name",
       "dynamic": false,
       "id": "sysvar_mysqlx_ssl_cert",
       "name": "mysqlx_ssl_cert",

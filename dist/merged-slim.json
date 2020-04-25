@@ -14295,6 +14295,7 @@
             "dynamic": true,
             "name": "sql_if_exists",
             "scope": [
+                "global",
                 "session"
             ],
             "type": "boolean",

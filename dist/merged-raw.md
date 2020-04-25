@@ -15383,7 +15383,7 @@
 |Name|`sql_if_exists`|
 |Command line|`--sql-if-exists[={0|1}]`|
 |Type of variable|`boolean`|
-|Scope|`session`|
+|Scope|`global`, `session`|
 |Default value|`OFF`|
 |Dynamic|`true`|
 

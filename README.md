@@ -51,4 +51,4 @@ yarn add mariadb-mysql-kbs
 
 ### Packaging status
 
-[![Packaging status](https://repology.org/badge/vertical-allrepos/php:williamdes-mariadb-mysql-kbs.svg)](https://repology.org/project/php:williamdes-mariadb-mysql-kbs/versions)
+[![Packaging status](https://repology.org/badge/vertical-allrepos/mariadb-mysql-kbs.svg)](https://repology.org/project/mariadb-mysql-kbs/versions)

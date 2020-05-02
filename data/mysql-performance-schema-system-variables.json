@@ -161,7 +161,6 @@
     },
     {
       "cli": "--performance-schema-max-cond-classes=#",
-      "default": "80",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_cond_classes",
       "name": "performance_schema_max_cond_classes",
@@ -320,7 +319,7 @@
     },
     {
       "cli": "--performance-schema-max-rwlock-classes=#",
-      "default": "40",
+      "default": "60",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_rwlock_classes",
       "name": "performance_schema_max_rwlock_classes",
@@ -396,7 +395,6 @@
     },
     {
       "cli": "--performance-schema-max-stage-classes=#",
-      "default": "150",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_stage_classes",
       "name": "performance_schema_max_stage_classes",

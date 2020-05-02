@@ -1303,6 +1303,17 @@
       "type": "integer"
     },
     {
+      "cli": "--innodb-log-writer-threads[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": true,
+      "id": "sysvar_innodb_log_writer_threads",
+      "name": "innodb_log_writer_threads",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-lru-scan-depth=#",
       "default": "1024",
       "dynamic": true,

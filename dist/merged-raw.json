@@ -21985,6 +21985,7 @@
         },
         "ssl_ca": {
             "cli": "--ssl-ca=file_name",
+            "default": "NULL",
             "name": "ssl_ca",
             "scope": [
                 "global"
@@ -22002,6 +22003,7 @@
             ]
         },
         "ssl_capath": {
+            "default": "NULL",
             "name": "ssl_capath",
             "scope": [
                 "global"
@@ -22019,6 +22021,7 @@
             ]
         },
         "ssl_cert": {
+            "default": "NULL",
             "name": "ssl_cert",
             "scope": [
                 "global"
@@ -22037,6 +22040,7 @@
         },
         "ssl_cipher": {
             "cli": "--ssl-cipher=name",
+            "default": "NULL",
             "name": "ssl_cipher",
             "scope": [
                 "global"
@@ -22054,6 +22058,7 @@
             ]
         },
         "ssl_crl": {
+            "default": "NULL",
             "name": "ssl_crl",
             "scope": [
                 "global"
@@ -22071,6 +22076,7 @@
             ]
         },
         "ssl_crlpath": {
+            "default": "NULL",
             "name": "ssl_crlpath",
             "scope": [
                 "global"
@@ -22088,6 +22094,7 @@
             ]
         },
         "ssl_key": {
+            "default": "NULL",
             "name": "ssl_key",
             "scope": [
                 "global"
@@ -32643,6 +32650,22 @@
                 }
             ]
         },
+        "innodb_log_writer_threads": {
+            "cli": "--innodb-log-writer-threads[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "innodb_log_writer_threads",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_log_writer_threads",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
         "innodb_merge_threshold_set_all_debug": {
             "cli": "--innodb-merge-threshold-set-all-debug=#",
             "default": "50",
@@ -36204,6 +36227,7 @@
         },
         "admin_ssl_ca": {
             "cli": "--admin-ssl-ca=file_name",
+            "default": "NULL",
             "dynamic": true,
             "name": "admin_ssl_ca",
             "scope": [
@@ -36219,6 +36243,7 @@
         },
         "admin_ssl_capath": {
             "cli": "--admin-ssl-capath=dir_name",
+            "default": "NULL",
             "dynamic": true,
             "name": "admin_ssl_capath",
             "scope": [
@@ -36234,6 +36259,7 @@
         },
         "admin_ssl_cert": {
             "cli": "--admin-ssl-cert=file_name",
+            "default": "NULL",
             "dynamic": true,
             "name": "admin_ssl_cert",
             "scope": [
@@ -36249,6 +36275,7 @@
         },
         "admin_ssl_cipher": {
             "cli": "--admin-ssl-cipher=name",
+            "default": "NULL",
             "dynamic": true,
             "name": "admin_ssl_cipher",
             "scope": [
@@ -36264,6 +36291,7 @@
         },
         "admin_ssl_crl": {
             "cli": "--admin-ssl-crl=file_name",
+            "default": "NULL",
             "dynamic": true,
             "name": "admin_ssl_crl",
             "scope": [
@@ -36279,6 +36307,7 @@
         },
         "admin_ssl_crlpath": {
             "cli": "--admin-ssl-crlpath=dir_name",
+            "default": "NULL",
             "dynamic": true,
             "name": "admin_ssl_crlpath",
             "scope": [
@@ -36294,6 +36323,7 @@
         },
         "admin_ssl_key": {
             "cli": "--admin-ssl-key=file_name",
+            "default": "NULL",
             "dynamic": true,
             "name": "admin_ssl_key",
             "scope": [
@@ -38318,6 +38348,7 @@
         },
         "mysqlx_ssl_ca": {
             "cli": "--mysqlx-ssl-ca=file_name",
+            "default": "NULL",
             "dynamic": false,
             "name": "mysqlx_ssl_ca",
             "scope": [
@@ -38333,6 +38364,7 @@
         },
         "mysqlx_ssl_capath": {
             "cli": "--mysqlx-ssl-capath=dir_name",
+            "default": "NULL",
             "dynamic": false,
             "name": "mysqlx_ssl_capath",
             "scope": [
@@ -38348,6 +38380,7 @@
         },
         "mysqlx_ssl_cert": {
             "cli": "--mysqlx-ssl-cert=file_name",
+            "default": "NULL",
             "dynamic": false,
             "name": "mysqlx_ssl_cert",
             "scope": [
@@ -38363,6 +38396,7 @@
         },
         "mysqlx_ssl_cipher": {
             "cli": "--mysqlx-ssl-cipher=name",
+            "default": "NULL",
             "dynamic": false,
             "name": "mysqlx_ssl_cipher",
             "scope": [
@@ -38378,6 +38412,7 @@
         },
         "mysqlx_ssl_crl": {
             "cli": "--mysqlx-ssl-crl=file_name",
+            "default": "NULL",
             "dynamic": false,
             "name": "mysqlx_ssl_crl",
             "scope": [
@@ -38393,6 +38428,7 @@
         },
         "mysqlx_ssl_crlpath": {
             "cli": "--mysqlx-ssl-crlpath=dir_name",
+            "default": "NULL",
             "dynamic": false,
             "name": "mysqlx_ssl_crlpath",
             "scope": [
@@ -38408,6 +38444,7 @@
         },
         "mysqlx_ssl_key": {
             "cli": "--mysqlx-ssl-key=file_name",
+            "default": "NULL",
             "dynamic": false,
             "name": "mysqlx_ssl_key",
             "scope": [

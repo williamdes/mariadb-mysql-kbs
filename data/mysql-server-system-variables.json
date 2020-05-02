@@ -38,6 +38,7 @@
     },
     {
       "cli": "--admin-ssl-ca=file_name",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_admin_ssl_ca",
       "name": "admin_ssl_ca",
@@ -48,6 +49,7 @@
     },
     {
       "cli": "--admin-ssl-capath=dir_name",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_admin_ssl_capath",
       "name": "admin_ssl_capath",
@@ -58,6 +60,7 @@
     },
     {
       "cli": "--admin-ssl-cert=file_name",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_admin_ssl_cert",
       "name": "admin_ssl_cert",
@@ -68,6 +71,7 @@
     },
     {
       "cli": "--admin-ssl-cipher=name",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_admin_ssl_cipher",
       "name": "admin_ssl_cipher",
@@ -78,6 +82,7 @@
     },
     {
       "cli": "--admin-ssl-crl=file_name",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_admin_ssl_crl",
       "name": "admin_ssl_crl",
@@ -88,6 +93,7 @@
     },
     {
       "cli": "--admin-ssl-crlpath=dir_name",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_admin_ssl_crlpath",
       "name": "admin_ssl_crlpath",
@@ -98,6 +104,7 @@
     },
     {
       "cli": "--admin-ssl-key=file_name",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_admin_ssl_key",
       "name": "admin_ssl_key",
@@ -3120,6 +3127,7 @@
     },
     {
       "cli": "--ssl-ca=file_name",
+      "default": "NULL",
       "id": "sysvar_ssl_ca",
       "name": "ssl_ca",
       "scope": [
@@ -3129,6 +3137,7 @@
     },
     {
       "cli": "--ssl-capath=dir_name",
+      "default": "NULL",
       "id": "sysvar_ssl_capath",
       "name": "ssl_capath",
       "scope": [
@@ -3138,6 +3147,7 @@
     },
     {
       "cli": "--ssl-cert=file_name",
+      "default": "NULL",
       "id": "sysvar_ssl_cert",
       "name": "ssl_cert",
       "scope": [
@@ -3147,6 +3157,7 @@
     },
     {
       "cli": "--ssl-cipher=name",
+      "default": "NULL",
       "id": "sysvar_ssl_cipher",
       "name": "ssl_cipher",
       "scope": [
@@ -3156,6 +3167,7 @@
     },
     {
       "cli": "--ssl-crl=file_name",
+      "default": "NULL",
       "id": "sysvar_ssl_crl",
       "name": "ssl_crl",
       "scope": [
@@ -3165,6 +3177,7 @@
     },
     {
       "cli": "--ssl-crlpath=dir_name",
+      "default": "NULL",
       "id": "sysvar_ssl_crlpath",
       "name": "ssl_crlpath",
       "scope": [
@@ -3190,6 +3203,7 @@
     },
     {
       "cli": "--ssl-key=file_name",
+      "default": "NULL",
       "id": "sysvar_ssl_key",
       "name": "ssl_key",
       "scope": [

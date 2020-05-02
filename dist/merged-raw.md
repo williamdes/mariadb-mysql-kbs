@@ -18138,6 +18138,7 @@
 |Command line|`--ssl-ca=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18151,6 +18152,7 @@
 |Name|`ssl_capath`|
 |Type of variable|`directory name`|
 |Scope|`global`|
+|Default value|`NULL`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18164,6 +18166,7 @@
 |Name|`ssl_cert`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18178,6 +18181,7 @@
 |Command line|`--ssl-cipher=name`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`NULL`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18191,6 +18195,7 @@
 |Name|`ssl_crl`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18204,6 +18209,7 @@
 |Name|`ssl_crlpath`|
 |Type of variable|`directory name`|
 |Scope|`global`|
+|Default value|`NULL`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18216,6 +18222,7 @@
 |----|-----|
 |Name|`ssl_key`|
 |Scope|`global`|
+|Default value|`NULL`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27472,6 +27479,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_log_wait_for_flush_spin_hwm](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_wait_for_flush_spin_hwm)|
 
+## innodb_log_writer_threads
+|name|value|
+|----|-----|
+|Name|`innodb_log_writer_threads`|
+|Command line|`--innodb-log-writer-threads[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_log_writer_threads](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_writer_threads)|
+
 ## innodb_merge_threshold_set_all_debug
 |name|value|
 |----|-----|
@@ -30619,6 +30641,7 @@
 |Command line|`--admin-ssl-ca=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -30633,6 +30656,7 @@
 |Command line|`--admin-ssl-capath=dir_name`|
 |Type of variable|`directory name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -30647,6 +30671,7 @@
 |Command line|`--admin-ssl-cert=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -30661,6 +30686,7 @@
 |Command line|`--admin-ssl-cipher=name`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -30675,6 +30701,7 @@
 |Command line|`--admin-ssl-crl=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -30689,6 +30716,7 @@
 |Command line|`--admin-ssl-crlpath=dir_name`|
 |Type of variable|`directory name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -30703,6 +30731,7 @@
 |Command line|`--admin-ssl-key=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -32432,6 +32461,7 @@
 |Command line|`--mysqlx-ssl-ca=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -32446,6 +32476,7 @@
 |Command line|`--mysqlx-ssl-capath=dir_name`|
 |Type of variable|`directory name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -32460,6 +32491,7 @@
 |Command line|`--mysqlx-ssl-cert=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -32474,6 +32506,7 @@
 |Command line|`--mysqlx-ssl-cipher=name`|
 |Type of variable|`string`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -32488,6 +32521,7 @@
 |Command line|`--mysqlx-ssl-crl=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -32502,6 +32536,7 @@
 |Command line|`--mysqlx-ssl-crlpath=dir_name`|
 |Type of variable|`directory name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -32516,6 +32551,7 @@
 |Command line|`--mysqlx-ssl-key=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`false`|
 
 ### Documentation(s)

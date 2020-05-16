@@ -1641,6 +1641,23 @@
       "type": "integer"
     },
     {
+      "cli": "--innodb-instant-alter-column-allowed=value",
+      "default": "<= MariaDB 10.3: add_last, >= MariaDB 10.4: add_drop_reorder",
+      "dynamic": true,
+      "id": "innodb_instant_alter_column_allowed",
+      "name": "innodb_instant_alter_column_allowed",
+      "scope": [
+        "global"
+      ],
+      "validValues": [
+        "never",
+        "add_last",
+        "never",
+        "add_last",
+        "add_drop_reorder"
+      ]
+    },
+    {
       "cli": "--innodb-instrument-semaphores={0|1}",
       "default": "OFF",
       "dynamic": true,

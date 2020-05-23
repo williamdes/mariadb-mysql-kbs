@@ -16806,7 +16806,7 @@
         },
         "progress_report_time": {
             "cli": "--progress-report-time=#",
-            "default": "56 before MariaDB 5.5.39 and MariaDB 10.0.10, 5 as of MariaDB 5.5.40 and MariaDB 10.0.11",
+            "default": "5",
             "dynamic": true,
             "name": "progress_report_time",
             "range": {
@@ -17536,7 +17536,7 @@
             ]
         },
         "sql_auto_is_null": {
-            "default": "0 (>= MariaDB/MySQL 5.5.3), 1 (MariaDB/MySQL <= 5.5.2)",
+            "default": "0",
             "dynamic": true,
             "name": "sql_auto_is_null",
             "scope": [
@@ -26820,12 +26820,21 @@
         },
         "innodb_change_buffering": {
             "cli": "--innodb-change-buffering=#",
+            "default": "all",
             "dynamic": true,
             "name": "innodb_change_buffering",
             "scope": [
                 "global"
             ],
             "type": "enumeration",
+            "validValues": [
+                "inserts",
+                "none",
+                "deletes",
+                "purges",
+                "changes",
+                "all"
+            ],
             "ids": [
                 {
                     "anchor": "innodb_change_buffering",
@@ -27713,7 +27722,7 @@
         },
         "innodb_file_format_check": {
             "cli": "--innodb-file-format-check=#",
-            "default": "ON (>= MariaDB 5.5)",
+            "default": "ON",
             "dynamic": false,
             "name": "innodb_file_format_check",
             "scope": [
@@ -27749,7 +27758,7 @@
         },
         "innodb_file_per_table": {
             "cli": "--innodb-file-per-table",
-            "default": "ON (>= MariaDB 5.5), OFF (<= MariaDB 5.3)",
+            "default": "ON",
             "dynamic": true,
             "name": "innodb_file_per_table",
             "scope": [

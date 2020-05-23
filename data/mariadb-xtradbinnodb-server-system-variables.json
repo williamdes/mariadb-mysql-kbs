@@ -531,13 +531,22 @@
     },
     {
       "cli": "--innodb-change-buffering=#",
+      "default": "all",
       "dynamic": true,
       "id": "innodb_change_buffering",
       "name": "innodb_change_buffering",
       "scope": [
         "global"
       ],
-      "type": "enumeration"
+      "type": "enumeration",
+      "validValues": [
+        "inserts",
+        "none",
+        "deletes",
+        "purges",
+        "changes",
+        "all"
+      ]
     },
     {
       "cli": "--innodb-change-buffering-debug=#",
@@ -1189,7 +1198,7 @@
     },
     {
       "cli": "--innodb-file-format-check=#",
-      "default": "ON (>= MariaDB 5.5)",
+      "default": "ON",
       "dynamic": false,
       "id": "innodb_file_format_check",
       "name": "innodb_file_format_check",
@@ -1215,7 +1224,7 @@
     },
     {
       "cli": "--innodb-file-per-table",
-      "default": "ON (>= MariaDB 5.5), OFF (<= MariaDB 5.3)",
+      "default": "ON",
       "dynamic": true,
       "id": "innodb_file_per_table",
       "name": "innodb_file_per_table",

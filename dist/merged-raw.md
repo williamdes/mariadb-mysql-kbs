@@ -14526,7 +14526,7 @@
 |Command line|`--progress-report-time=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`56 before MariaDB 5.5.39 and MariaDB 10.0.10, 5 as of MariaDB 5.5.40 and MariaDB 10.0.11`|
+|Default value|`5`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -15157,7 +15157,7 @@
 |Name|`sql_auto_is_null`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`0 (>= MariaDB/MySQL 5.5.3), 1 (MariaDB/MySQL <= 5.5.2)`|
+|Default value|`0`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -23569,7 +23569,9 @@
 |Command line|`--innodb-change-buffering=#`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
+|Default value|`all`|
 |Dynamic|`true`|
+|Valid value(s)|`inserts`, `none`, `deletes`, `purges`, `changes`, `all`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -24295,7 +24297,7 @@
 |Command line|`--innodb-file-format-check=#`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON (>= MariaDB 5.5)`|
+|Default value|`ON`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -24326,7 +24328,7 @@
 |Command line|`--innodb-file-per-table`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON (>= MariaDB 5.5), OFF (<= MariaDB 5.3)`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)

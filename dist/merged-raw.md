@@ -3294,7 +3294,7 @@
 |Command line|`--myisam-recover-options[=name]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`BACKUP,QUICK (>= MariaDB 10.2.4), DEFAULT (<= MariaDB 10.2.3, >= MariaDB 5.1.44), OFF (<= MariaDB 5.1.42)`|
+|Default value|`BACKUP,QUICK (>= MariaDB 10.2.4), DEFAULT (<= MariaDB 10.2.3), OFF`|
 |Dynamic|`false`|
 |Valid value(s)|`OFF`, `DEFAULT`, `BACKUP`, `BACKUP_ALL`, `FORCE`, `QUICK`|
 

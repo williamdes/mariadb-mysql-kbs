@@ -3703,7 +3703,7 @@
         },
         "myisam_recover_options": {
             "cli": "--myisam-recover-options[=name]",
-            "default": "BACKUP,QUICK (>= MariaDB 10.2.4), DEFAULT (<= MariaDB 10.2.3, >= MariaDB 5.1.44), OFF (<= MariaDB 5.1.42)",
+            "default": "BACKUP,QUICK (>= MariaDB 10.2.4), DEFAULT (<= MariaDB 10.2.3), OFF",
             "dynamic": false,
             "name": "myisam_recover_options",
             "scope": [

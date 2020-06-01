@@ -39,8 +39,6 @@ jobs:
                   yarn run report-coverage
             - name: Send coverage
               uses: codecov/codecov-action@v1
-              with:
-                  token: ${{ secrets.CODECOV_TOKEN }}
 
     test-php:
         name: Test on php ${{ matrix.php-version }} and ${{ matrix.os }}
@@ -52,12 +50,11 @@ jobs:
         steps:
             - uses: actions/checkout@v1
             - name: Use php ${{ matrix.php-version }}
-              uses: shivammathur/setup-php@v1
+              uses: shivammathur/setup-php@v2
               with:
                   php-version: ${{ matrix.php-version }}
-                  extension-csv: posix, mbstring
+                  extensions: posix, mbstring
                   coverage: xdebug
-                  pecl: true
             - name: Cache module
               uses: actions/cache@v1.0.3
               with:
@@ -69,6 +66,3 @@ jobs:
               run: composer run test
             - name: Send coverage
               uses: codecov/codecov-action@v1
-              with:
-                  file: "./build/logs/clover.xml"
-                  token: ${{ secrets.CODECOV_TOKEN }}

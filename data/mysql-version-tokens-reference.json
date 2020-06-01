@@ -1,10 +1,28 @@
 {
   "data": [
     {
-      "id": "sysvar_version_tokens_session"
+      "cli": "--version-tokens-session=value",
+      "default": "NULL",
+      "dynamic": true,
+      "id": "sysvar_version_tokens_session",
+      "name": "version_tokens_session",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "string"
     },
     {
-      "id": "sysvar_version_tokens_session_number"
+      "cli": "--version-tokens-session-number=#",
+      "default": "0",
+      "dynamic": false,
+      "id": "sysvar_version_tokens_session_number",
+      "name": "version_tokens_session_number",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
     }
   ],
   "name": "version-tokens-reference",

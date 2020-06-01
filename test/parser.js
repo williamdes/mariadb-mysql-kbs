@@ -365,5 +365,21 @@ module.exports = function () {
                 done();
             });
         });
+        test('test case 5', function (done) {
+            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_5.html'));
+            MySQL.parsePage($, function (resultData) {
+                expect(resultData).to.deep.equal([
+                    {
+                        id: 'option_mysqld_mysqlx',
+                        cli: '--mysqlx[=value]',
+                        type: 'enumeration',
+                        default: 'ON',
+                        validValues: ['ON', 'OFF', 'FORCE', 'FORCE_PLUS_PERMANENT'],
+                        name: 'mysqlx',
+                    },
+                ]);
+                done();
+            });
+        });
     });
 };

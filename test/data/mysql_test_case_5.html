@@ -1,0 +1,68 @@
+<html>
+
+<div class="itemizedlist">
+    <ul class="itemizedlist" style="list-style-type: disc; ">
+        <li class="listitem">
+            <p><a name="option_mysqld_mysqlx"></a>
+                <a class="link" href="x-plugin-options-system-variables.html#option_mysqld_mysqlx"><code
+                        class="option">--mysqlx[=value]</code></a>
+            </p><a class="indexterm" name="idm45831471779024"></a><a class="indexterm" name="idm45831471777952"></a>
+            <div class="informaltable">
+                <table frame="box" rules="all" summary="Properties for mysqlx">
+                    <colgroup>
+                        <col width="30%">
+                        <col width="70%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">Property</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th align="left" scope="row">Command-Line Format</th>
+                            <td><code class="literal">--mysqlx[=value]</code></td>
+                        </tr>
+                        <tr>
+                            <th align="left" scope="row">Type</th>
+                            <td>Enumeration</td>
+                        </tr>
+                        <tr>
+                            <th align="left" scope="row">Default Value</th>
+                            <td><code class="literal">ON</code></td>
+                        </tr>
+                        <tr>
+                            <th align="left" scope="row">Valid Values</th>
+                            <td>
+                                <p class="valid-value"><code class="literal">ON</code></p>
+                                <p class="valid-value"><code class="literal">OFF</code></p>
+                                <p class="valid-value"><code class="literal">FORCE</code></p>
+                                <p class="valid-value"><code class="literal">FORCE_PLUS_PERMANENT</code></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                This option controls how the server loads X Plugin at
+                startup. In MySQL 8.0, X Plugin is enabled by
+                default, but this option may be used to control its
+                activation state.
+            </p>
+            <p>
+                The option value should be one of those available for
+                plugin-loading options, as described in
+                <a class="xref" href="plugin-loading.html"
+                    title="5.6.1&nbsp;Installing and Uninstalling Plugins">Section&nbsp;5.6.1, “Installing and
+                    Uninstalling Plugins”</a>.
+            </p>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+</html>

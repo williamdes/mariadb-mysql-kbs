@@ -13,6 +13,10 @@ function completeDoc($, rows, doc) {
         let tds = $(elem).find('td'); // first is key and last is value
         var name = tds.first().text().toLowerCase().trim();
         var value = tds.last();
+        let ths = $(elem).find('th'); // Fallback if the key is in a th
+        if (ths.length > 0) {
+            name = ths.first().text().toLowerCase().trim();
+        }
         switch (name) {
             case 'dynamic':
                 doc.dynamic = value.text().toLowerCase().trim() === 'yes';

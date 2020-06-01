@@ -45,7 +45,7 @@ jobs:
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
-                php-version: ["7.1", "7.2", "7.3"]
+                php-version: ["7.1", "7.2", "7.3", "7.4", "8.0"]
                 os: [ubuntu-latest]
         steps:
             - uses: actions/checkout@v1

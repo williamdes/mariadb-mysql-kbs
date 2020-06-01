@@ -1,4 +1,5 @@
 parameters:
+        level: max
         excludes_analyse:
         - src/merge.php
         - dist/*

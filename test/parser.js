@@ -420,5 +420,19 @@ module.exports = function () {
                 done();
             });
         });
+        test('test case 3', function (done) {
+            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mariadb_test_case_3.html'));
+            MariaDB.parsePage($, function (resultData) {
+                expect(resultData).to.deep.equal([
+                    {
+                        id: 'ssl_accept_renegotiates',
+                        name: 'Ssl_accept_renegotiates',
+                        scope: ['global'],
+                        type: 'integer',
+                    },
+                ]);
+                done();
+            });
+        });
     });
 };

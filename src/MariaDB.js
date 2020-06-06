@@ -13,6 +13,10 @@ const createDoc = function ($, element) {
         id: $(element).attr('id'),
         name: $(element).text().trim(),
     };
+    if (doc.id === 'select' && doc.name === 'SELECT') {
+        // Handle an edge case for https://mariadb.com/kb/en/temporal-data-tables/
+        delete doc.id;
+    }
     try {
         /* jshint -W083 */
         // Parse ul > li

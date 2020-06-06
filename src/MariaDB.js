@@ -238,6 +238,8 @@ systemVariables.forEach((systemVariableName) => {
 });
 
 module.exports = {
+    parsePage: parsePage,
+    createDoc: createDoc,
     run: () => {
         /*var pages = [
             {

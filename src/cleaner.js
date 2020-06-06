@@ -33,6 +33,11 @@ const cleanType = function (type) {
             type.match(/numeric (32-bit unsigned integer)/i)
         ) {
             type = 'numeric';
+        } else if (
+            //enumerated
+            type.match(/enum/i)
+        ) {
+            type = 'enumeration';
         } else {
             type = undefined;
         }

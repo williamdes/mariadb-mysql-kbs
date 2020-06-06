@@ -189,6 +189,11 @@ module.exports = function () {
             expect(type).to.deep.equal(undefined);
             done();
         });
+        test('clean enumerated type', function (done) {
+            const type = cleaner.cleanType('enumerated');
+            expect(type).to.deep.equal('enumeration');
+            done();
+        });
         test('get clean type from a mixed string dataset-1', function (done) {
             const foundType = cleaner.getCleanTypeFromMixedString('boolean: ON (Version: 5.7)');
             expect(foundType).to.equal('boolean');

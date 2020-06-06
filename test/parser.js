@@ -531,7 +531,7 @@ module.exports = function () {
                         default: 'ON',
                         id: 'rpl_semi_sync_master',
                         name: 'rpl_semi_sync_master',
-                        type: undefined,
+                        type: 'enumeration',
                         validValues: ['OFF', 'ON', 'FORCE', 'FORCE_PLUS_PERMANENT'],
                     },
                 ]);

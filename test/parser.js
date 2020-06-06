@@ -434,5 +434,54 @@ module.exports = function () {
                 done();
             });
         });
+        test('test case 4', function (done) {
+            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mariadb_test_case_4.html'));
+            MariaDB.parsePage($, function (resultData) {
+                expect(resultData).to.deep.equal([
+                    {
+                        cli: '--server-audit-events=value',
+                        default: 'Empty string',
+                        dynamic: true,
+                        id: 'server_audit_events',
+                        name: 'server_audit_events',
+                        scope: ['global'],
+                        type: 'string',
+                        validValues: [
+                            'CONNECT',
+                            'QUERY',
+                            'TABLE',
+                            'CONNECT',
+                            'QUERY',
+                            'TABLE',
+                            'QUERY_DDL',
+                            'QUERY_DML',
+                            'CONNECT',
+                            'QUERY',
+                            'TABLE',
+                            'QUERY_DDL',
+                            'QUERY_DML',
+                            'QUERY_DCL',
+                            'CONNECT',
+                            'QUERY',
+                            'TABLE',
+                            'QUERY_DDL',
+                            'QUERY_DML',
+                            'QUERY_DCL',
+                            'QUERY_DML_NO_SELECT',
+                        ],
+                    },
+                    {
+                        cli: '--server-audit-excl-users=value',
+                        default: 'Empty string',
+                        dynamic: true,
+                        id: 'server_audit_excl_users',
+                        name: 'server_audit_excl_users',
+                        scope: ['global'],
+                        type: 'string',
+                    },
+                ]);
+                done();
+            });
+        });
     });
 };

@@ -1,0 +1,78 @@
+<html>
+
+<body>
+    <div>
+        <pre class="fixed">[mariadb]
+            ...
+            server_audit_excl_users='bob,ted'
+            ...
+            </pre>
+        <h3 class="anchored_heading" id="system-variables">System Variables</h3>
+        <p>Below is a list of all system variables related to the Audit Plugin. See <a
+                href="/kb/en/server-system-variables/">Server System Variables</a> for a complete list of system
+            variables and instructions on setting them. See also the <a
+                href="/kb/en/full-list-of-mariadb-options-system-and-status-variables/">full list of MariaDB options,
+                system and status variables</a>. </p>
+        <h4 class="anchored_heading" id="server_audit_events"><code>server_audit_events</code></h4>
+        <ul start="1">
+            <li><strong>Description:</strong> If set, then this restricts audit logging to certain event types. If not
+                set, then every event type is logged to the audit log. For example: <em>SET GLOBAL
+                    server_audit_events='connect, query'</em>
+            </li>
+            <li><strong>Commandline:</strong> <code class="fixed"
+                    style="white-space:pre-wrap">--server-audit-events=value</code>
+            </li>
+            <li><strong>Scope:</strong> Global
+            </li>
+            <li><strong>Dynamic:</strong> Yes
+            </li>
+            <li><strong>Data Type:</strong> <code>string</code>
+            </li>
+            <li><strong>Default Value:</strong> Empty string
+            </li>
+            <li><strong>Valid Values:</strong>
+                <ul start="1">
+                    <li><code>CONNECT</code>, <code>QUERY</code>, <code>TABLE</code> (MariaDB Audit Plugin &lt; 1.2.0)
+                    </li>
+                    <li><code>CONNECT</code>, <code>QUERY</code>, <code>TABLE</code>, <code>QUERY_DDL</code>,
+                        <code>QUERY_DML</code> (MariaDB Audit Plugin &gt;= 1.2.0)
+                    </li>
+                    <li><code>CONNECT</code>, <code>QUERY</code>, <code>TABLE</code>, <code>QUERY_DDL</code>,
+                        <code>QUERY_DML</code>, <code>QUERY_DCL</code> (MariaDB Audit Plugin &gt;=1.3.0)
+                    </li>
+                    <li><code>CONNECT</code>, <code>QUERY</code>, <code>TABLE</code>, <code>QUERY_DDL</code>,
+                        <code>QUERY_DML</code>, <code>QUERY_DCL</code>, <code>QUERY_DML_NO_SELECT</code> (MariaDB Audit
+                        Plugin &gt;= 1.4.4)
+                    </li>
+                    <li>See <a href="/kb/en/mariadb-audit-plugin-versions/">MariaDB Audit Plugin - Versions</a> to
+                        determine which MariaDB releases contain each MariaDB Audit Plugin versions.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <h4 class="anchored_heading" id="server_audit_excl_users"><code>server_audit_excl_users</code></h4>
+        <ul start="1">
+            <li><strong>Description:</strong> If not empty, it contains the list of users whose activity will NOT be
+                logged. For example: <code>SET GLOBAL server_audit_excl_users='user_foo, user_bar'</code>. CONNECT
+                records aren't affected by this variable - they are always logged. The user is still logged if it's
+                specified in <a href="#server_audit_incl_users">server_audit_incl_users</a>.
+            </li>
+            <li><strong>Commandline:</strong> <code class="fixed"
+                    style="white-space:pre-wrap">--server-audit-excl-users=value</code>
+            </li>
+            <li><strong>Scope:</strong> Global
+            </li>
+            <li><strong>Dynamic:</strong> Yes
+            </li>
+            <li><strong>Data Type:</strong> <code>string</code>
+            </li>
+            <li><strong>Default Value:</strong> Empty string
+            </li>
+            <li><strong>Size limit:</strong> 1024 characters
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -147,7 +147,7 @@ const createDoc = function ($, element) {
 
 function parsePage($, cbSuccess) {
     var anchors = [];
-    $('h4.anchored_heading').each(function (i, el) {
+    $('h4.anchored_heading,h3.anchored_heading').each(function (i, el) {
         let doc = createDoc($, el);
         if (doc.id && typeof doc.id === 'string') {
             anchors.push(doc);

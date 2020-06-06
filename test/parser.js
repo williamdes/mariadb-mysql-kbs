@@ -2,11 +2,12 @@
 
 const expect = require('chai').expect;
 const MySQL = require(__dirname + '/../src/MySQL');
+const MariaDB = require(__dirname + '/../src/MariaDB');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
 module.exports = function () {
-    suite('parser', function () {
+    suite('MySQL parser', function () {
         test('test case 1', function (done) {
             const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_1.html'));
             MySQL.parsePage($, function (resultData) {
@@ -376,6 +377,38 @@ module.exports = function () {
                         default: 'ON',
                         validValues: ['ON', 'OFF', 'FORCE', 'FORCE_PLUS_PERMANENT'],
                         name: 'mysqlx',
+                    },
+                ]);
+                done();
+            });
+        });
+    });
+    suite('MariaDB parser', function () {
+        test('test case 1', function (done) {
+            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mariadb_test_case_1.html'));
+            MariaDB.parsePage($, function (resultData) {
+                expect(resultData).to.deep.equal([
+                    {
+                        id: 'query_cache_size',
+                        name: 'query_cache_size',
+                        type: 'byte',
+                    },
+                ]);
+                done();
+            });
+        });
+        test('test case 2', function (done) {
+            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mariadb_test_case_2.html'));
+            MariaDB.parsePage($, function (resultData) {
+                expect(resultData).to.deep.equal([
+                    {
+                        cli: 'query-cache-strip-comments',
+                        default: 'OFF',
+                        dynamic: true,
+                        id: 'query_cache_strip_comments',
+                        name: 'query_cache_strip_comments',
+                        scope: ['session', 'global'],
+                        type: 'boolean',
                     },
                 ]);
                 done();

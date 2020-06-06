@@ -526,6 +526,14 @@ module.exports = function () {
                         scope: ['global'],
                         type: 'integer',
                     },
+                    {
+                        cli: '--rpl-semi-sync-master=value',
+                        default: 'ON',
+                        id: 'rpl_semi_sync_master',
+                        name: 'rpl_semi_sync_master',
+                        type: undefined,
+                        validValues: ['OFF', 'ON', 'FORCE', 'FORCE_PLUS_PERMANENT'],
+                    },
                 ]);
                 done();
             });

@@ -483,5 +483,31 @@ module.exports = function () {
                 done();
             });
         });
+        test('test case 5', function (done) {
+            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mariadb_test_case_5.html'));
+            MariaDB.parsePage($, function (resultData) {
+                expect(resultData).to.deep.equal([
+                    {
+                        dynamic: false,
+                        id: 'tokudb_version',
+                        name: 'tokudb_version',
+                        type: 'string',
+                    },
+                    {
+                        default: '1000',
+                        dynamic: true,
+                        id: 'tokudb_write_status_frequency',
+                        name: 'tokudb_write_status_frequency',
+                        range: {
+                            from: 0,
+                            to: 4294967295,
+                        },
+                        scope: ['global'],
+                        type: 'integer',
+                    },
+                ]);
+                done();
+            });
+        });
     });
 };

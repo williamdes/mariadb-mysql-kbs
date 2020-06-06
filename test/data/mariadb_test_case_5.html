@@ -1,0 +1,34 @@
+<html>
+
+<body>
+    <div>
+        <h4 class="anchored_heading" id="tokudb_version"><code>tokudb_version</code></h4>
+        <ul start="1">
+            <li><strong>Description:</strong> The TokuDB version of the plugin included on MariaDB.
+            </li>
+            <li><strong>Dynamic:</strong> No
+            </li>
+            <li><strong>Data Type:</strong> <code>string</code>
+            </li>
+        </ul>
+        <h4 class="anchored_heading" id="tokudb_write_status_frequency"><code>tokudb_write_status_frequency</code></h4>
+        <ul start="1">
+            <li><strong>Description:</strong> Progress is measured every this many writes for display by <a
+                    href="/kb/en/show-processlist/">SHOW PROCESSLIST</a>. Useful to set to <code>1</code> to examine
+                slow queries.
+            </li>
+            <li><strong>Scope:</strong> Global,
+            </li>
+            <li><strong>Dynamic:</strong> Yes
+            </li>
+            <li><strong>Data Type:</strong> <code>numeric</code>
+            </li>
+            <li><strong>Default Value:</strong> <code>1000</code>
+            </li>
+            <li><strong>Range:</strong> <code>0</code> to <code>4294967295</code>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

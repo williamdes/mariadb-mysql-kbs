@@ -509,5 +509,26 @@ module.exports = function () {
                 done();
             });
         });
+        test('test case 6', function (done) {
+            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mariadb_test_case_6.html'));
+            MariaDB.parsePage($, function (resultData) {
+                expect(resultData).to.deep.equal([
+                    {
+                        cli: '--rpl-semi-sync-slave-trace_level[=#]',
+                        default: '32',
+                        dynamic: true,
+                        id: 'rpl_semi_sync_slave_trace_level',
+                        name: 'rpl_semi_sync_slave_trace_level',
+                        range: {
+                            from: 0,
+                            to: 18446744073709552000,
+                        },
+                        scope: ['global'],
+                        type: 'integer',
+                    },
+                ]);
+                done();
+            });
+        });
     });
 };

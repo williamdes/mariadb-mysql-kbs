@@ -1,0 +1,72 @@
+<html>
+
+<body>
+    <div>
+        <h4 class="anchored_heading" id="rpl_semi_sync_slave_trace_level"><code>rpl_semi_sync_slave_trace_level</code>
+        </h4>
+        <ul start="1">
+            <li><strong>Description:</strong> The tracing level for semi-sync replication. The levels are the same as
+                for <a href="#rpl_semi_sync_master_trace_level">rpl_semi_sync_master_trace_level</a>.
+            </li>
+            <li><strong>Commandline:</strong> <code class="fixed"
+                    style="white-space:pre-wrap">--rpl-semi-sync-slave-trace_level[=#]</code>
+            </li>
+            <li><strong>Scope:</strong> Global
+            </li>
+            <li><strong>Dynamic:</strong> Yes
+            </li>
+            <li><strong>Data Type:</strong> <code>numeric</code>
+            </li>
+            <li><strong>Default Value:</strong> <code>32</code>
+            </li>
+            <li><strong>Range:</strong> <code>0</code> to <code>18446744073709551615</code>
+            </li>
+        </ul>
+        <hr>
+        <h2 class="anchored_heading" id="options">Options</h2>
+        <h3 class="anchored_heading" id="rpl_semi_sync_master"><code>rpl_semi_sync_master</code></h3>
+        <ul start="1">
+            <li><strong>Description:</strong> Controls how the server should treat the plugin when the server starts up.
+                <ul start="1">
+                    <li>Valid values are:
+                        <ul start="1">
+                            <li><code>OFF</code> - Disables the plugin without removing it from the
+                                <code><a href="/kb/en/mysqlplugin-table/">mysql.plugins</a></code> table.
+                            </li>
+                            <li><code>ON</code> - Enables the plugin. If the plugin cannot be initialized, then the
+                                server will still continue starting up, but the plugin will be disabled.
+                            </li>
+                            <li><code>FORCE</code> - Enables the plugin. If the plugin cannot be initialized, then the
+                                server will fail to start with an error.
+                            </li>
+                            <li><code>FORCE_PLUS_PERMANENT</code> - Enables the plugin. If the plugin cannot be
+                                initialized, then the server will fail to start with an error. In addition, the plugin
+                                cannot be uninstalled with
+                                <code><a href="/kb/en/uninstall-soname/">UNINSTALL SONAME</a></code> or
+                                <code><a href="/kb/en/uninstall-plugin/">UNINSTALL PLUGIN</a></code> while the server is
+                                running.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>See <a href="/kb/en/plugin-overview/#configuring-plugin-activation-at-server-startup">Plugin
+                            Overview: Configuring Plugin Activation at Server Startup</a> for more information.
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Commandline:</strong> <code class="fixed"
+                    style="white-space:pre-wrap">--rpl-semi-sync-master=value</code>
+            </li>
+            <li><strong>Data Type:</strong> <code>enumerated</code>
+            </li>
+            <li><strong>Default Value:</strong> <code>ON</code>
+            </li>
+            <li><strong>Valid Values:</strong> <code>OFF</code>, <code>ON</code>, <code>FORCE</code>,
+                <code>FORCE_PLUS_PERMANENT</code>
+            </li>
+            <li><strong>Removed:</strong> <a href="/kb/en/mariadb-1033-release-notes/">MariaDB 10.3.3</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

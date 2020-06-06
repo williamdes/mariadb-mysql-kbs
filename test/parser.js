@@ -389,9 +389,15 @@ module.exports = function () {
             MariaDB.parsePage($, function (resultData) {
                 expect(resultData).to.deep.equal([
                     {
+                        cli: '--query-cache-size=#',
+                        default:
+                            '1M (>= MariaDB, 10.1.7), 0 (<= MariaDB 10.1.6), (although frequently given a default value in some setups)',
+                        dynamic: true,
                         id: 'query_cache_size',
                         name: 'query_cache_size',
-                        type: 'byte',
+                        scope: ['global'],
+                        type: 'integer',
+                        validValues: ['0'],
                     },
                 ]);
                 done();

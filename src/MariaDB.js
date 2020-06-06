@@ -16,7 +16,7 @@ const createDoc = function ($, element) {
     try {
         /* jshint -W083 */
         // Parse ul > li
-        const ulElementList = $(element).nextUntil('hr');
+        const ulElementList = $(element).nextUntil('.anchored_heading');
         if (ulElementList.find('li > strong').length === 0) {
             return { id: null };
         }

@@ -134,6 +134,7 @@
         "session",
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "NO",
         "YES",
@@ -148,7 +149,8 @@
       "name": "connect_use_tempfile",
       "scope": [
         "session"
-      ]
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "--connect-work-size=#",

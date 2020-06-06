@@ -1027,6 +1027,7 @@
                 "session",
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "NO",
                 "YES",
@@ -1047,6 +1048,7 @@
             "scope": [
                 "session"
             ],
+            "type": "enumeration",
             "ids": [
                 {
                     "anchor": "connect_use_tempfile",
@@ -1847,6 +1849,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "ids": [
                 {
                     "anchor": "wsrep_debug",
@@ -1915,6 +1918,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "STATEMENT",
                 "ROW",
@@ -2188,6 +2192,7 @@
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "validValues": [
                 "TOI",
                 "RSU"
@@ -2270,6 +2275,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "NONE",
                 "ALL",
@@ -2398,6 +2404,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "table",
                 "none"
@@ -2579,6 +2586,7 @@
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "validValues": [
                 "bytes",
                 "rows",
@@ -2588,6 +2596,21 @@
                 {
                     "anchor": "wsrep_trx_fragment_unit",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
+                }
+            ]
+        },
+        "gtid_slave_pos": {
+            "default": "Null",
+            "dynamic": true,
+            "name": "gtid_slave_pos",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "gtid_slave_pos",
+                    "url": "https://mariadb.com/kb/en/library/documentation/gtid/"
                 }
             ]
         },
@@ -2632,6 +2655,22 @@
             "ids": [
                 {
                     "anchor": "gtid_current_pos",
+                    "url": "https://mariadb.com/kb/en/library/documentation/gtid/"
+                }
+            ]
+        },
+        "gtid_strict_mode": {
+            "cli": "--gtid-strict-mode[={0|1}]",
+            "default": "Off",
+            "dynamic": true,
+            "name": "gtid_strict_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "gtid_strict_mode",
                     "url": "https://mariadb.com/kb/en/library/documentation/gtid/"
                 }
             ]
@@ -2985,6 +3024,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "SYSLOG",
                 "FILE"
@@ -3024,6 +3064,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "LOG_USER",
                 "LOG_MAIL",
@@ -3086,6 +3127,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "LOG_EMERG",
                 "LOG_ALERT",
@@ -3107,6 +3149,7 @@
             "cli": "--server-audit=val",
             "default": "ON",
             "name": "server_audit",
+            "type": "enumeration",
             "validValues": [
                 "OFF",
                 "ON",
@@ -3149,6 +3192,7 @@
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "ids": [
                 {
                     "anchor": "mroonga_action_on_fulltext_query_error",
@@ -3165,6 +3209,7 @@
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "ids": [
                 {
                     "anchor": "mroonga_boolean_mode_syntax_flags",
@@ -3405,6 +3450,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "ids": [
                 {
                     "anchor": "mroonga_log_level",
@@ -4890,6 +4936,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "kBinarySearch",
                 "kHashSearch"
@@ -4909,6 +4956,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "error_level",
                 "debug_level",
@@ -8479,6 +8527,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "conservative",
                 "optimistic",
@@ -8544,6 +8593,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "NO",
                 "YES",
@@ -9693,6 +9743,7 @@
             "cli": "--rpl-semi-sync-master=value",
             "default": "ON",
             "name": "rpl_semi_sync_master",
+            "type": "enumeration",
             "validValues": [
                 "OFF",
                 "ON",
@@ -9710,6 +9761,7 @@
             "cli": "--rpl-semi-sync-slave=value",
             "default": "ON",
             "name": "rpl_semi_sync_slave",
+            "type": "enumeration",
             "validValues": [
                 "OFF",
                 "ON",
@@ -14134,6 +14186,7 @@
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "validValues": [
                 "DEFAULT",
                 "COPY",
@@ -14784,7 +14837,23 @@
             ]
         },
         "default_regex_flags": {
+            "cli": "--default-regex-flags=value",
+            "default": "empty",
+            "dynamic": true,
             "name": "default_regex_flags",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "DOTALL",
+                "DUPNAMES",
+                "EXTENDED",
+                "EXTRA",
+                "MULTILINE",
+                "UNGREEDY"
+            ],
             "ids": [
                 {
                     "anchor": "default_regex_flags",
@@ -15048,6 +15117,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "none",
                 "aes_ecb",
@@ -17257,7 +17327,6 @@
                 "global",
                 "session"
             ],
-            "type": "boolean",
             "ids": [
                 {
                     "anchor": "old_alter_table",
@@ -17441,7 +17510,6 @@
                 "global",
                 "session"
             ],
-            "type": "string",
             "ids": [
                 {
                     "anchor": "optimizer_trace",
@@ -17521,6 +17589,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "unknown",
                 "experimental",
@@ -18124,6 +18193,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "ids": [
                 {
                     "anchor": "secure_timestamp",
@@ -19359,6 +19429,7 @@
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "ids": [
                 {
                     "anchor": "use_stat_tables",
@@ -21518,7 +21589,16 @@
             ]
         },
         "spider_use_handler": {
+            "dynamic": true,
             "name": "spider_use_handler",
+            "range": {
+                "from": -1
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
             "ids": [
                 {
                     "anchor": "spider_use_handler",
@@ -22115,7 +22195,6 @@
             "scope": [
                 "global"
             ],
-            "type": "string",
             "ids": [
                 {
                     "anchor": "tls_version",
@@ -22325,6 +22404,7 @@
                 "global",
                 "connection"
             ],
+            "type": "enumeration",
             "validValues": [
                 "high",
                 "low",
@@ -24458,6 +24538,7 @@
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "validValues": [
                 "lr",
                 "rl",
@@ -24720,6 +24801,7 @@
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "validValues": [
                 "0",
                 "1",
@@ -24815,6 +24897,7 @@
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "validValues": [
                 "tokudb_default",
                 "tokudb_fast",
@@ -24978,6 +25061,7 @@
                 "global",
                 "session"
             ],
+            "type": "enumeration",
             "validValues": [
                 "ERROR",
                 "KEEP"
@@ -28100,6 +28184,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "high_checkpoint",
                 "legacy",
@@ -28165,6 +28250,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "none",
                 "zlib",
@@ -28645,6 +28731,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "deprecated",
                 "backoff",
@@ -29229,6 +29316,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "deprecated",
                 "exponential_backoff",
@@ -29622,6 +29710,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "never",
                 "add_last",
@@ -29757,6 +29846,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "FCFS",
                 "VATS"
@@ -29912,6 +30002,7 @@
             "scope": [
                 "global"
             ],
+            "type": "enumeration",
             "validValues": [
                 "deprecated",
                 "innodb",

@@ -755,6 +755,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "kBinarySearch",
         "kHashSearch"
@@ -769,6 +770,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "error_level",
         "debug_level",

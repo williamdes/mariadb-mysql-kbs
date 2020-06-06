@@ -847,6 +847,7 @@
 |----|-----|
 |Name|`connect_type_conv`|
 |Command line|`--connect-type-conv=#`|
+|Type of variable|`enumeration`|
 |Scope|`session`, `global`|
 |Default value|`YES (>= Connect 1.06.006), NO (<= Connect 1.06.005)`|
 |Dynamic|`true`|
@@ -862,6 +863,7 @@
 |----|-----|
 |Name|`connect_use_tempfile`|
 |Command line|`--connect-use-tempfile=#`|
+|Type of variable|`enumeration`|
 |Scope|`session`|
 |Default value|`AUTO`|
 |Dynamic|`true`|
@@ -1701,6 +1703,7 @@
 |----|-----|
 |Name|`wsrep_debug`|
 |Command line|`--wsrep-debug[={0|1}]`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)`|
 |Dynamic|`true`|
@@ -1761,6 +1764,7 @@
 |----|-----|
 |Name|`wsrep_forced_binlog_format`|
 |Command line|`--wsrep-forced-binlog-format=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`NONE`|
 |Dynamic|`true`|
@@ -1991,6 +1995,7 @@
 |----|-----|
 |Name|`wsrep_OSU_method`|
 |Command line|`--wsrep-OSU-method[=value]`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`TOI`|
 |Dynamic|`true`|
@@ -2065,6 +2070,7 @@
 |----|-----|
 |Name|`wsrep_reject_queries`|
 |Command line|`--wsrep-reject-queries[=value]`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`NONE`|
 |Dynamic|`true`|
@@ -2173,6 +2179,7 @@
 |----|-----|
 |Name|`wsrep_sr_store`|
 |Command line|`--wsrep-sr-store=val`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`table`|
 |Dynamic|`false`|
@@ -2326,6 +2333,7 @@
 |----|-----|
 |Name|`wsrep_trx_fragment_unit`|
 |Command line|`--wsrep-trx-fragment-unit=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`bytes`|
 |Dynamic|`true`|
@@ -2335,6 +2343,20 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[wsrep_trx_fragment_unit](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_trx_fragment_unit)|
+
+## gtid_slave_pos
+|name|value|
+|----|-----|
+|Name|`gtid_slave_pos`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Null`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[gtid_slave_pos](https://mariadb.com/kb/en/library/documentation/gtid/#gtid_slave_pos)|
 
 ## gtid_binlog_pos
 |name|value|
@@ -2377,6 +2399,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[gtid_current_pos](https://mariadb.com/kb/en/library/documentation/gtid/#gtid_current_pos)|
+
+## gtid_strict_mode
+|name|value|
+|----|-----|
+|Name|`gtid_strict_mode`|
+|Command line|`--gtid-strict-mode[={0|1}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`Off`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[gtid_strict_mode](https://mariadb.com/kb/en/library/documentation/gtid/#gtid_strict_mode)|
 
 ## gtid_domain_id
 |name|value|
@@ -2677,6 +2714,7 @@
 |----|-----|
 |Name|`server_audit_output_type`|
 |Command line|`--server-audit-output-type=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`file`|
 |Dynamic|`true`|
@@ -2708,6 +2746,7 @@
 |----|-----|
 |Name|`server_audit_syslog_facility`|
 |Command line|`--server-audit-syslog-facility=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`LOG_USER`|
 |Dynamic|`true`|
@@ -2753,6 +2792,7 @@
 |----|-----|
 |Name|`server_audit_syslog_priority`|
 |Command line|`--server-audit-syslog-priority=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`LOG_INFO`|
 |Dynamic|`true`|
@@ -2768,6 +2808,7 @@
 |----|-----|
 |Name|`server_audit`|
 |Command line|`--server-audit=val`|
+|Type of variable|`enumeration`|
 |Default value|`ON`|
 |Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
 
@@ -2803,6 +2844,7 @@
 |----|-----|
 |Name|`mroonga_action_on_fulltext_query_error`|
 |Command line|`--mroonga-action-on-fulltext-query-error=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`ERROR_AND_LOG`|
 |Dynamic|`true`|
@@ -2817,6 +2859,7 @@
 |----|-----|
 |Name|`mroonga_boolean_mode_syntax_flags`|
 |Command line|`--mroonga-boolean-mode-syntax-flags=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`DEFAULT`|
 |Dynamic|`true`|
@@ -3036,6 +3079,7 @@
 |----|-----|
 |Name|`mroonga_log_level`|
 |Command line|`--mroonga-log-level=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`NOTICE`|
 |Dynamic|`true`|
@@ -4270,6 +4314,7 @@
 |----|-----|
 |Name|`rocksdb_index_type`|
 |Command line|`--rocksdb-index-type=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`kBinarySearch`|
 |Dynamic|`false`|
@@ -4285,6 +4330,7 @@
 |----|-----|
 |Name|`rocksdb_info_log_level`|
 |Command line|`--rocksdb-info-log-level=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`error_level`|
 |Dynamic|`true`|
@@ -7092,6 +7138,7 @@
 |name|value|
 |----|-----|
 |Name|`slave_parallel_mode`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`optimistic (>= MariaDB 10.5.1), conservative (<= MariaDB 10.5.0)`|
 |Dynamic|`false`|
@@ -7140,6 +7187,7 @@
 |----|-----|
 |Name|`slave_run_triggers_for_rbr`|
 |Command line|`--slave-run-triggers-for-rbr=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`NO`|
 |Valid value(s)|`NO`, `YES`, `LOGGING`, `ENFORCE`|
@@ -8134,6 +8182,7 @@
 |----|-----|
 |Name|`rpl_semi_sync_master`|
 |Command line|`--rpl-semi-sync-master=value`|
+|Type of variable|`enumeration`|
 |Default value|`ON`|
 |Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
 
@@ -8147,6 +8196,7 @@
 |----|-----|
 |Name|`rpl_semi_sync_slave`|
 |Command line|`--rpl-semi-sync-slave=value`|
+|Type of variable|`enumeration`|
 |Default value|`ON`|
 |Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
 
@@ -12009,6 +12059,7 @@
 |----|-----|
 |Name|`alter_algorithm`|
 |Command line|`--alter-algorithm=default`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`DEFAULT`|
 |Dynamic|`true`|
@@ -12498,6 +12549,12 @@
 |name|value|
 |----|-----|
 |Name|`default_regex_flags`|
+|Command line|`--default-regex-flags=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`, `session`|
+|Default value|`empty`|
+|Dynamic|`true`|
+|Valid value(s)|`DOTALL`, `DUPNAMES`, `EXTENDED`, `EXTRA`, `MULTILINE`, `UNGREEDY`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -12697,6 +12754,7 @@
 |----|-----|
 |Name|`encryption_algorithm`|
 |Command line|`--encryption-algorithm=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`none`|
 |Dynamic|`false`|
@@ -14388,7 +14446,6 @@
 |----|-----|
 |Name|`old_alter_table`|
 |Command line|`--old-alter-table[={OFF|ON}]`|
-|Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
@@ -14526,7 +14583,6 @@
 |----|-----|
 |Name|`optimizer_trace`|
 |Command line|`--optimizer-trace=value`|
-|Type of variable|`string`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
 
@@ -14588,6 +14644,7 @@
 |----|-----|
 |Name|`plugin_maturity`|
 |Command line|`--plugin-maturity=level`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`One less than the server maturity (>= MariaDB 10.3.3), unknown (<= MariaDB 10.3.2)`|
 |Dynamic|`false`|
@@ -15056,6 +15113,7 @@
 |----|-----|
 |Name|`secure_timestamp`|
 |Command line|`--secure-timestamp=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`NO`|
 |Dynamic|`false`|
@@ -16021,6 +16079,7 @@
 |----|-----|
 |Name|`use_stat_tables`|
 |Command line|`--use-stat-tables=mode`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`preferably_for_queries (>= MariaDB 10.4.1), never (<= MariaDB 10.4.0)`|
 |Dynamic|`true`|
@@ -17728,6 +17787,10 @@
 |name|value|
 |----|-----|
 |Name|`spider_use_handler`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Dynamic|`true`|
+|Range|from: `-1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18234,7 +18297,6 @@
 |name|value|
 |----|-----|
 |Name|`tls_version`|
-|Type of variable|`string`|
 |Scope|`global`|
 
 ### Documentation(s)
@@ -18414,6 +18476,7 @@
 |----|-----|
 |Name|`thread_pool_priority`|
 |Command line|`--thread-pool-priority=#`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `connection`|
 |Default value|`auto`|
 |Valid value(s)|`high`, `low`, `auto`|
@@ -20657,6 +20720,7 @@
 |name|value|
 |----|-----|
 |Name|`tokudb_empty_scan`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`rl`|
 |Dynamic|`true`|
@@ -20871,6 +20935,7 @@
 |name|value|
 |----|-----|
 |Name|`tokudb_pk_insert_mode`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`1`|
 |Dynamic|`true`|
@@ -20944,6 +21009,7 @@
 |name|value|
 |----|-----|
 |Name|`tokudb_row_format`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`tokudb_zlib`|
 |Dynamic|`true`|
@@ -21083,6 +21149,7 @@
 |----|-----|
 |Name|`system_versioning_alter_history`|
 |Command line|`--system-versioning-alter-history=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`ERROR`|
 |Dynamic|`true`|
@@ -23846,6 +23913,7 @@
 |----|-----|
 |Name|`innodb_cleaner_lsn_age_factor`|
 |Command line|`--innodb-cleaner-lsn-age-factor=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`deprecated (>= MariaDB 10.2.6), high_checkpoint (<= MariaDB 10.1)`|
 |Dynamic|`true`|
@@ -23893,6 +23961,7 @@
 |----|-----|
 |Name|`innodb_compression_algorithm`|
 |Command line|`--innodb-compression-algorithm=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`zlib (>= MariaDB 10.2.4, MariaDB 10.1.22), none (<= MariaDB 10.2.3, MariaDB 10.1.21)`|
 |Dynamic|`true`|
@@ -24267,6 +24336,7 @@
 |----|-----|
 |Name|`innodb_empty_free_list_algorithm`|
 |Command line|`innodb-empty-free-list-algorithm=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`deprecated (>= MariaDB 10.2.6), legacy (>= MariaDB 10.1.24), backoff (<= MariaDB 10.1.23)`|
 |Dynamic|`true`|
@@ -24722,6 +24792,7 @@
 |----|-----|
 |Name|`innodb_foreground_preflush`|
 |Command line|`innodb-foreground-preflush=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`deprecated (>= MariaDB 10.2.6), exponential_backoff (<= MariaDB 10.1)`|
 |Dynamic|`true`|
@@ -25025,6 +25096,7 @@
 |----|-----|
 |Name|`innodb_instant_alter_column_allowed`|
 |Command line|`--innodb-instant-alter-column-allowed=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`<= MariaDB 10.3: add_last, >= MariaDB 10.4: add_drop_reorder`|
 |Dynamic|`true`|
@@ -25133,6 +25205,7 @@
 |----|-----|
 |Name|`innodb_lock_schedule_algorithm`|
 |Command line|`--innodb-lock-schedule-algorithm=#`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`VATS (10.2), FCFS (10.1)`|
 |Dynamic|`false`|
@@ -25269,6 +25342,7 @@
 |----|-----|
 |Name|`innodb_log_checksum_algorithm`|
 |Command line|`innodb-log-checksum-algorithm=value`|
+|Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`deprecated (>= MariaDB 10.2.6), innodb (<= MariaDB 10.1)`|
 |Dynamic|`true`|

@@ -110,7 +110,8 @@
       "name": "wsrep_debug",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "--wsrep-desync[={0|1}]",
@@ -159,6 +160,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "STATEMENT",
         "ROW",
@@ -357,6 +359,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "TOI",
         "RSU"
@@ -414,6 +417,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "NONE",
         "ALL",
@@ -507,6 +511,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "table",
         "none"
@@ -638,6 +643,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "bytes",
         "rows",

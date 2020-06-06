@@ -625,6 +625,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "high_checkpoint",
         "legacy",
@@ -668,6 +669,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "none",
         "zlib",
@@ -839,6 +841,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "redundant",
         "compact",
@@ -992,6 +995,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "deprecated",
         "backoff",
@@ -1405,6 +1409,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "deprecated",
         "exponential_backoff",
@@ -1658,6 +1663,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "never",
         "add_last",
@@ -1748,6 +1754,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "FCFS",
         "VATS"
@@ -1859,6 +1866,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "deprecated",
         "innodb",

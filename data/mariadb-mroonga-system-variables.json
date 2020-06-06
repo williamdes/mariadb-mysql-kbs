@@ -9,7 +9,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "--mroonga-boolean-mode-syntax-flags=value",
@@ -20,7 +21,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "--mroonga-database-path-prefix=value",
@@ -185,7 +187,8 @@
       "name": "mroonga_log_level",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "--mroonga-match-escalation-threshold=#",

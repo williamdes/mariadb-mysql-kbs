@@ -228,6 +228,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "lr",
         "rl",
@@ -415,6 +416,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "0",
         "1",
@@ -485,6 +487,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "tokudb_default",
         "tokudb_fast",

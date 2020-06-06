@@ -10,6 +10,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "DEFAULT",
         "COPY",
@@ -254,6 +255,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "0",
         "1",
@@ -272,6 +274,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "0",
         "1",
@@ -370,8 +373,24 @@
       "type": "integer"
     },
     {
+      "cli": "--default-regex-flags=value",
+      "default": "empty",
+      "dynamic": true,
       "id": "default_regex_flags",
-      "name": "default_regex_flags"
+      "name": "default_regex_flags",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "DOTALL",
+        "DUPNAMES",
+        "EXTENDED",
+        "EXTRA",
+        "MULTILINE",
+        "UNGREEDY"
+      ]
     },
     {
       "cli": "--default-storage-engine=name",
@@ -538,6 +557,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "none",
         "aes_ecb",
@@ -1938,6 +1958,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": []
     },
     {
@@ -2095,6 +2116,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "enabled={on|off|default}"
       ]
@@ -2145,6 +2167,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "unknown",
         "experimental",
@@ -2544,7 +2567,8 @@
       "name": "secure_timestamp",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "--session-track-schema={0|1}",
@@ -2592,6 +2616,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "OFF",
         "STATE",
@@ -3290,7 +3315,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "-V, --version[=name] (>= MariaDB 10.2.1), --version (<= MariaDB 10.2.0)",

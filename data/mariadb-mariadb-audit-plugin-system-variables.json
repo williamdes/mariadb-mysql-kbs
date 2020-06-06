@@ -139,6 +139,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "SYSLOG",
         "FILE"
@@ -168,6 +169,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "LOG_USER",
         "LOG_MAIL",
@@ -215,6 +217,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "LOG_EMERG",
         "LOG_ALERT",
@@ -231,6 +234,7 @@
       "default": "ON",
       "id": "server_audit",
       "name": "server_audit",
+      "type": "enumeration",
       "validValues": [
         "OFF",
         "ON",

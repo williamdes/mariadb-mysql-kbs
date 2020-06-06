@@ -61,6 +61,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "AFTER_SYNC",
         "AFTER_COMMIT"
@@ -123,6 +124,7 @@
       "default": "ON",
       "id": "rpl_semi_sync_master",
       "name": "rpl_semi_sync_master",
+      "type": "enumeration",
       "validValues": [
         "OFF",
         "ON",
@@ -135,6 +137,7 @@
       "default": "ON",
       "id": "rpl_semi_sync_slave",
       "name": "rpl_semi_sync_slave",
+      "type": "enumeration",
       "validValues": [
         "OFF",
         "ON",

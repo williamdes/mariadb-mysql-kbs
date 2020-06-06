@@ -1347,8 +1347,17 @@
       "type": "boolean"
     },
     {
+      "dynamic": true,
       "id": "spider_use_handler",
-      "name": "spider_use_handler"
+      "name": "spider_use_handler",
+      "range": {
+        "from": -1
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
     },
     {
       "dynamic": true,

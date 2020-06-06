@@ -168,6 +168,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "FULL",
         "NOBLOB",
@@ -184,6 +185,7 @@
         "global",
         "session"
       ],
+      "type": "enumeration",
       "validValues": [
         "NO_LOG",
         "MINIMAL",
@@ -787,6 +789,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "conservative",
         "optimistic",
@@ -823,6 +826,7 @@
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "NO",
         "YES",

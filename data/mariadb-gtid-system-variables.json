@@ -2,6 +2,16 @@
   "data": [
     {
       "default": "Null",
+      "dynamic": true,
+      "id": "gtid_slave_pos",
+      "name": "gtid_slave_pos",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "default": "Null",
       "dynamic": false,
       "id": "gtid_binlog_pos",
       "name": "gtid_binlog_pos",
@@ -29,6 +39,17 @@
         "global"
       ],
       "type": "string"
+    },
+    {
+      "cli": "--gtid-strict-mode[={0|1}]",
+      "default": "Off",
+      "dynamic": true,
+      "id": "gtid_strict_mode",
+      "name": "gtid_strict_mode",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--gtid-domain-id=#",

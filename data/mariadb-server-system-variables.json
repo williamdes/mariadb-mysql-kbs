@@ -2328,18 +2328,9 @@
       "type": "integer"
     },
     {
-      "cli": "--query-cache-size=#",
-      "default": "1M (>= MariaDB 10.1.7), 0 (<= MariaDB 10.1.6) (although frequently given a default value in some setups)",
-      "dynamic": true,
       "id": "query_cache_size",
       "name": "query_cache_size",
-      "scope": [
-        "global"
-      ],
-      "type": "integer",
-      "validValues": [
-        "0"
-      ]
+      "type": "byte"
     },
     {
       "cli": "query-cache-strip-comments",
@@ -2354,24 +2345,8 @@
       "type": "boolean"
     },
     {
-      "cli": "--query-cache-type=#",
-      "default": "OFF (>= MariaDB 10.1.7), ON (<= MariaDB 10.1.6)",
-      "dynamic": true,
       "id": "query_cache_type",
-      "name": "query_cache_type",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "0",
-        "OFF",
-        "1",
-        "ON",
-        "2",
-        "DEMAND"
-      ]
+      "name": "query_cache_type"
     },
     {
       "cli": "--query-cache-wlock-invalidate",

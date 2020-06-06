@@ -14802,12 +14802,7 @@
 |name|value|
 |----|-----|
 |Name|`query_cache_size`|
-|Command line|`--query-cache-size=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1M (>= MariaDB 10.1.7), 0 (<= MariaDB 10.1.6) (although frequently given a default value in some setups)`|
-|Dynamic|`true`|
-|Valid value(s)|`0`|
+|Type of variable|`byte`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -14833,12 +14828,6 @@
 |name|value|
 |----|-----|
 |Name|`query_cache_type`|
-|Command line|`--query-cache-type=#`|
-|Type of variable|`enumeration`|
-|Scope|`global`, `session`|
-|Default value|`OFF (>= MariaDB 10.1.7), ON (<= MariaDB 10.1.6)`|
-|Dynamic|`true`|
-|Valid value(s)|`0`, `OFF`, `1`, `ON`, `2`, `DEMAND`|
 
 ### Documentation(s)
 |source|anchor name|

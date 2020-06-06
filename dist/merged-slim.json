@@ -13750,17 +13750,8 @@
             ]
         },
         "query_cache_size": {
-            "cli": "--query-cache-size=#",
-            "default": "1M (>= MariaDB 10.1.7), 0 (<= MariaDB 10.1.6) (although frequently given a default value in some setups)",
-            "dynamic": true,
             "name": "query_cache_size",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "validValues": [
-                "0"
-            ],
+            "type": "byte",
             "ids": [
                 "29#query_cache_size"
             ]
@@ -13780,23 +13771,7 @@
             ]
         },
         "query_cache_type": {
-            "cli": "--query-cache-type=#",
-            "default": "OFF (>= MariaDB 10.1.7), ON (<= MariaDB 10.1.6)",
-            "dynamic": true,
             "name": "query_cache_type",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "0",
-                "OFF",
-                "1",
-                "ON",
-                "2",
-                "DEMAND"
-            ],
             "ids": [
                 "29#query_cache_type"
             ]

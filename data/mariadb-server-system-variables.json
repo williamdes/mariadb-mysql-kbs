@@ -114,7 +114,7 @@
       "type": "integer"
     },
     {
-      "default": "utf8 (>= MariaDB 5.5)",
+      "default": "utf8",
       "dynamic": true,
       "id": "character_set_client",
       "name": "character_set_client",
@@ -125,7 +125,7 @@
       "type": "string"
     },
     {
-      "default": "utf8 (>= MariaDB 5.5)",
+      "default": "utf8",
       "dynamic": true,
       "id": "character_set_connection",
       "name": "character_set_connection",
@@ -247,7 +247,7 @@
     },
     {
       "cli": "--completion-type=name",
-      "default": "NO_CHAIN (>=MariaDB/MySQL 5.5.3), 0 (<= MariaDB/MySQL 5.5.2)",
+      "default": "NO_CHAIN",
       "dynamic": true,
       "id": "completion_type",
       "name": "completion_type",
@@ -267,7 +267,7 @@
     },
     {
       "cli": "--concurrent-insert[=name]",
-      "default": "AUTO (>=MariaDB/MySQL 5.5.3), 1 (<= MariaDB/MySQL 5.5.2)",
+      "default": "AUTO",
       "dynamic": true,
       "id": "concurrent_insert",
       "name": "concurrent_insert",
@@ -326,7 +326,7 @@
     },
     {
       "cli": "-#, --debug[=debug_options]",
-      "default": "d:t:i:o,/tmp/mysqld.trace (Unix) or d:t:i:O,\\mysqld.trace (Windows)",
+      "default": "<= MariaDB 10.4: d:t:i:o,/tmp/mysqld.trace (Unix) or d:t:i:O,\\mysqld.trace (Windows), >= MariaDB 10.5: d:t:i:o,/tmp/mariadbd.trace (Unix) or d:t:i:O,\\mariadbd.trace (Windows)",
       "dynamic": true,
       "id": "debug",
       "name": "debug",
@@ -394,7 +394,7 @@
     },
     {
       "cli": "--default-storage-engine=name",
-      "default": "InnoDB (>= MariaDB 5.5), MyISAM (<MariaDB 5.3)",
+      "default": "InnoDB",
       "dynamic": true,
       "id": "default_storage_engine",
       "name": "default_storage_engine",
@@ -577,7 +577,7 @@
     },
     {
       "cli": "--engine-condition-pushdown",
-      "default": "OFF (MariaDB 5.5), ON (<= MariaDB 5.3)",
+      "default": "OFF",
       "dynamic": true,
       "id": "engine_condition_pushdown",
       "name": "engine_condition_pushdown",
@@ -1564,7 +1564,7 @@
     },
     {
       "cli": "--max-join-size=#",
-      "default": "18446744073709551615 (>= MariaDB/MySQL 5.5.0), 4294967295 (< MariaDB/MySQL 5.5.0)",
+      "default": "18446744073709551615",
       "dynamic": true,
       "id": "max_join_size",
       "name": "max_join_size",

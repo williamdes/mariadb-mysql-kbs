@@ -1827,7 +1827,7 @@
 |Command line|`--wsrep-ignore-apply-errors`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0`|
+|Default value|`7`|
 |Dynamic|`true`|
 |Range|from: `0` to: `7`|
 
@@ -12786,7 +12786,7 @@
 |Command line|`--engine-condition-pushdown`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`OFF (MariaDB 5.5), ON (<= MariaDB 5.3)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)

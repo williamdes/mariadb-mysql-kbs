@@ -3,7 +3,7 @@
     "description": "An index of the MariaDB and MySQL Knowledge bases",
     "homepage": "https://github.com/williamdes/mariadb-mysql-kbs",
     "type": "library",
-    "readme": "https://github.com/williamdes/mariadb-mysql-kbs/blob/master/README.md",
+    "readme": "https://github.com/williamdes/mariadb-mysql-kbs/blob/main/README.md",
     "license": "MPL-2.0",
     "version": "1.2.10",
     "keywords": [

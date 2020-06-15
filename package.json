@@ -5,7 +5,7 @@
     "description": "An index of the MariaDB and MySQL Knowledge bases",
     "main": "src/index.js",
     "homepage": "https://github.com/williamdes/mariadb-mysql-kbs#readme",
-    "readme": "https://github.com/williamdes/mariadb-mysql-kbs/blob/master/README.md",
+    "readme": "https://github.com/williamdes/mariadb-mysql-kbs/blob/main/README.md",
     "license": "MPL-2.0",
     "bugs": {
         "url": "https://github.com/williamdes/mariadb-mysql-kbs/issues",

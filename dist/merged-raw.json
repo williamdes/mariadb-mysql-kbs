@@ -36184,10 +36184,11 @@
         },
         "tc_heuristic_recover": {
             "cli": "--tc-heuristic-recover=name",
-            "default": "COMMIT",
+            "default": "OFF",
             "name": "tc_heuristic_recover",
             "type": "enumeration",
             "validValues": [
+                "OFF",
                 "COMMIT",
                 "ROLLBACK"
             ],

@@ -30598,8 +30598,8 @@
 |Name|`tc_heuristic_recover`|
 |Command line|`--tc-heuristic-recover=name`|
 |Type of variable|`enumeration`|
-|Default value|`COMMIT`|
-|Valid value(s)|`COMMIT`, `ROLLBACK`|
+|Default value|`OFF`|
+|Valid value(s)|`OFF`, `COMMIT`, `ROLLBACK`|
 
 ### Documentation(s)
 |source|anchor name|

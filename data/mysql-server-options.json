@@ -467,11 +467,12 @@
     },
     {
       "cli": "--tc-heuristic-recover=name",
-      "default": "COMMIT",
+      "default": "OFF",
       "id": "option_mysqld_tc-heuristic-recover",
       "name": "tc_heuristic_recover",
       "type": "enumeration",
       "validValues": [
+        "OFF",
         "COMMIT",
         "ROLLBACK"
       ]

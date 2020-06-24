@@ -2,12 +2,15 @@
 cd $(dirname $0)/../scripts
 echo "Running in : $(pwd)"
 
+echo "Cleaning..."
+rm -rf ./../docs
+
 echo "Installing..."
-composer require --no-interaction sami/sami --prefer-dist --no-progress --no-suggest
+composer require --no-interaction code-lts/doctum:dev-main --prefer-dist --no-progress --no-suggest
 echo "Parsing..."
-./vendor/bin/sami.php --no-interaction parse ./sami-config.php
+./vendor/bin/doctum.php --no-interaction parse ./doctum-config.php
 echo "Updating..."
-./vendor/bin/sami.php --no-interaction --verbose update ./sami-config.php
+./vendor/bin/doctum.php --no-interaction --verbose update ./doctum-config.php
 ERR="$?"
 sleep 2
 echo "Done !"

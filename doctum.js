@@ -86,7 +86,7 @@ window.projectVersion = 'master';
         return tokens;
     };
 
-    root.Sami = {
+    root.Doctum = {
         /**
          * Cleans the provided term. If no term is provided, then one is
          * grabbed from the query string "search" parameter.
@@ -158,10 +158,10 @@ window.projectVersion = 'master';
         // Modify the HTML to work correctly based on the current depth
         rootPath = $('body').attr('data-root-path');
         treeHtml = treeHtml.replace(/href="/g, 'href="' + rootPath);
-        Sami.injectApiTree($('#api-tree'));
+        Doctum.injectApiTree($('#api-tree'));
     });
 
-    return root.Sami;
+    return root.Doctum;
 })(window);
 
 $(function() {
@@ -206,7 +206,7 @@ $(function() {
             name: 'search',
             displayKey: 'name',
             source: function (q, cb) {
-                cb(Sami.search(q));
+                cb(Doctum.search(q));
             }
         });
 

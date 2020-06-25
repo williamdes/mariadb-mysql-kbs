@@ -148,6 +148,11 @@
   dependencies:
     debug "^4.1.1"
 
+"@kwsites/promise-deferred@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@kwsites/promise-deferred/-/promise-deferred-1.0.1.tgz#63b170e0d02b85a1fa6ad6bdea1f2f14f6f6adc2"
+  integrity sha512-+D6vnc8qMjU2s8DP7khMWA3/+ONsGYu8bTqRhC2mhYdG3mUEC7OGHX7x71V7VPADDcoR6/hMbuafdoGOthekMw==
+
 "@octokit/auth-token@^2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@octokit/auth-token/-/auth-token-2.4.0.tgz#b64178975218b99e4dfe948253f0673cbbb59d9f"
@@ -2293,12 +2298,13 @@ simple-git@^1.131.0:
   dependencies:
     debug "^4.0.1"
 
-simple-git@^2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-2.8.0.tgz#c8ebda4a16b57c9f774a62df62cb74cfd2c4f3d5"
-  integrity sha512-0iXwizUaanqdjn9IpboozWN2opA7jl1JZzeQEePyFXRUGOtwVuSgkMGXLnd7Toa7jqV+uZ1VnDZlCBxxSEk1Dw==
+simple-git@^2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-2.11.0.tgz#5bd99fe3465dcbcb82f0eb23ab3c1615cb947374"
+  integrity sha512-wFePCEQYY6BzVOg/BuUVEhr3jZPF/cPG/BN2UXgax6NHc3bJ9UrDc5AME281gs2C7J1UZ6BGRJYT64khx9T+ng==
   dependencies:
     "@kwsites/file-exists" "^1.1.1"
+    "@kwsites/promise-deferred" "^1.0.1"
     debug "^4.1.1"
 
 slide@^1.1.5:
@@ -2471,17 +2477,17 @@ strip-json-comments@3.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.0.1.tgz#85713975a91fb87bf1b305cca77395e40d2a64a7"
   integrity sha512-VTyMAUfdm047mwKl+u79WIdrZxtFtn+nBxHeb844XBQ9uMNTuTHdx2hc5RiAJYqwTj3wc/xe5HLSdJSkJ+WfZw==
 
-sudo-bot@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/sudo-bot/-/sudo-bot-1.2.0.tgz#dc40672f5feda5add133d7ca5edf27fdf707e9c4"
-  integrity sha512-mpHGQfKEk1hx1E0sZfi3GWymhctTM7UQsIcY6UGjYRY9HkIHteMlBSMxEBKypCDVjdBMfJR4YHQYAUmMUVuQ5A==
+sudo-bot@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/sudo-bot/-/sudo-bot-1.2.1.tgz#16d673c81b61c683aedea9096ee188d20e46389d"
+  integrity sha512-o67M22yM1xHit5HXphKIDTTsctXIKSurt2I9L0AJWs/uG1yydFcQrQUQvBw0l4btdiFoqx2PmLzWSDlpPLZ+NQ==
   dependencies:
     "@octokit/rest" "^18.0.0"
     dotenv "^8.2.0"
     ignore "^5.1.8"
     jsonwebtoken "^8.5.1"
     openpgp "^4.10.4"
-    simple-git "^2.8.0"
+    simple-git "^2.11.0"
     snack-cli "^2.0.0"
 
 supports-color@7.1.0, supports-color@^7.1.0:

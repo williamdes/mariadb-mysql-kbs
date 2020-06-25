@@ -13,7 +13,7 @@ $description = json_decode(file_get_contents(__DIR__ . '/../composer.json'))->de
 return new Doctum(
     $iterator, [
         'title'       => $description,
-        'build_dir'   => __DIR__ . '/../docs',
+        'build_dir'   => __DIR__ . '/../docs/build',
         'cache_dir'   => __DIR__ . '/../tmp'
     ]
 );

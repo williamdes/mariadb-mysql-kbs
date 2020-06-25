@@ -2477,10 +2477,10 @@ strip-json-comments@3.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.0.1.tgz#85713975a91fb87bf1b305cca77395e40d2a64a7"
   integrity sha512-VTyMAUfdm047mwKl+u79WIdrZxtFtn+nBxHeb844XBQ9uMNTuTHdx2hc5RiAJYqwTj3wc/xe5HLSdJSkJ+WfZw==
 
-sudo-bot@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/sudo-bot/-/sudo-bot-1.2.1.tgz#16d673c81b61c683aedea9096ee188d20e46389d"
-  integrity sha512-o67M22yM1xHit5HXphKIDTTsctXIKSurt2I9L0AJWs/uG1yydFcQrQUQvBw0l4btdiFoqx2PmLzWSDlpPLZ+NQ==
+sudo-bot@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/sudo-bot/-/sudo-bot-1.2.2.tgz#9392cbe32e9df7131ee6fa26dcbfae1610fae1f3"
+  integrity sha512-5pZbUU4lwDwdapgV6MU5ntmFS9cKkiScknulDpEyGX1SFSQtu2sl6qs0ZLols9Pfg1KWOHtn72b8V9y/Bt6xHg==
   dependencies:
     "@octokit/rest" "^18.0.0"
     dotenv "^8.2.0"

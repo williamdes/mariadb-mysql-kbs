@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @param {Array} modifiedFiles The modified files
+ * @param {string[]} modifiedFiles The modified files
  * @returns {string} The commit message
  */
 const commitMessage = function (modifiedFiles) {
@@ -24,7 +24,7 @@ const commitMessage = function (modifiedFiles) {
 };
 
 /**
- * @param {Array} modifiedFiles The modified files
+ * @param {string[]} modifiedFiles The modified files
  * @returns {string} The pr message
  */
 const prMessage = function (modifiedFiles) {
@@ -47,7 +47,7 @@ const prMessage = function (modifiedFiles) {
 };
 
 /**
- * @param {Array} modifiedFiles The modified files
+ * @param {string[]} modifiedFiles The modified files
  * @returns {string} The pr content
  */
 const prContent = function (modifiedFiles) {
@@ -77,7 +77,7 @@ const prContent = function (modifiedFiles) {
 };
 
 /**
- * @param {Array} modifiedFiles The modified files
+ * @param {string[]} modifiedFiles The modified files
  * @returns {string} The pr branch
  */
 const prBranch = function (modifiedFiles) {

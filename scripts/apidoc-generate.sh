@@ -8,7 +8,7 @@ rm -rf ./../docs
 echo "Installing..."
 composer require --no-interaction code-lts/doctum:dev-main --prefer-dist --no-progress --no-suggest
 echo "Parsing..."
-./vendor/bin/doctum.php --no-interaction parse ./doctum-config.php
+./vendor/bin/doctum.php --no-interaction render ./doctum-config.php
 echo "Updating..."
 ./vendor/bin/doctum.php --no-interaction --verbose update ./doctum-config.php
 ERR="$?"

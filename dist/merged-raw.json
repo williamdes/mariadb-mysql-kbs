@@ -8522,7 +8522,7 @@
         },
         "slave_parallel_mode": {
             "default": "optimistic (>= MariaDB 10.5.1), conservative (<= MariaDB 10.5.0)",
-            "dynamic": false,
+            "dynamic": true,
             "name": "slave_parallel_mode",
             "scope": [
                 "global"
@@ -18328,26 +18328,6 @@
                 }
             ]
         },
-        "show_old_temporals": {
-            "default": "OFF",
-            "dynamic": true,
-            "name": "show_old_temporals",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "show_old_temporals",
-                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_show_old_temporals",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
         "skip_external_locking": {
             "cli": "--skip-external-locking[={OFF|ON}]",
             "default": "1",
@@ -19860,6 +19840,25 @@
                 }
             ]
         },
+        "spider_buffer_size": {
+            "dynamic": true,
+            "name": "spider_buffer_size",
+            "range": {
+                "from": -1,
+                "to": 2147483647
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "spider_buffer_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/"
+                }
+            ]
+        },
         "spider_bulk_size": {
             "dynamic": true,
             "name": "spider_bulk_size",
@@ -19982,8 +19981,7 @@
                 "to": 1000
             },
             "scope": [
-                "global",
-                "session"
+                "global"
             ],
             "type": "integer",
             "ids": [
@@ -19997,6 +19995,10 @@
             "default": "1",
             "dynamic": true,
             "name": "spider_connect_error_interval",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
             "scope": [
                 "global"
             ],
@@ -20085,7 +20087,7 @@
             "name": "spider_crd_bg_mode",
             "range": {
                 "from": -1,
-                "to": 1
+                "to": 2
             },
             "scope": [
                 "global",
@@ -20464,11 +20466,15 @@
         "spider_internal_sql_log_off": {
             "dynamic": true,
             "name": "spider_internal_sql_log_off",
+            "range": {
+                "from": -1,
+                "to": 1
+            },
             "scope": [
                 "global",
                 "session"
             ],
-            "type": "boolean",
+            "type": "integer",
             "ids": [
                 {
                     "anchor": "spider_internal_sql_log_off",
@@ -20540,13 +20546,17 @@
             ]
         },
         "spider_load_crd_at_startup": {
+            "default": "-1",
             "dynamic": true,
             "name": "spider_load_crd_at_startup",
+            "range": {
+                "from": -1,
+                "to": 1
+            },
             "scope": [
-                "global",
-                "session"
+                "global"
             ],
-            "type": "boolean",
+            "type": "integer",
             "ids": [
                 {
                     "anchor": "spider_load_crd_at_startup",
@@ -20555,11 +20565,15 @@
             ]
         },
         "spider_load_sts_at_startup": {
+            "default": "-1",
             "dynamic": true,
             "name": "spider_load_sts_at_startup",
+            "range": {
+                "from": -1,
+                "to": 1
+            },
             "scope": [
-                "global",
-                "session"
+                "global"
             ],
             "type": "boolean",
             "ids": [
@@ -20570,6 +20584,7 @@
             ]
         },
         "spider_local_lock_table": {
+            "default": "0",
             "dynamic": true,
             "name": "spider_local_lock_table",
             "scope": [
@@ -20604,8 +20619,11 @@
             "name": "spider_log_result_error_with_sql",
             "range": {
                 "from": 0,
-                "to": 3
+                "to": 4
             },
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -37697,6 +37715,23 @@
             "ids": [
                 {
                     "anchor": "sysvar_show_create_table_verbosity",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "show_old_temporals": {
+            "cli": "--show-old-temporals[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "show_old_temporals",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_show_old_temporals",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

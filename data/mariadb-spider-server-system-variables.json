@@ -110,6 +110,20 @@
     },
     {
       "dynamic": true,
+      "id": "spider_buffer_size",
+      "name": "spider_buffer_size",
+      "range": {
+        "from": -1,
+        "to": 2147483647
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "dynamic": true,
       "id": "spider_bulk_size",
       "name": "spider_bulk_size",
       "range": {
@@ -201,8 +215,7 @@
         "to": 1000
       },
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "integer"
     },
@@ -211,6 +224,10 @@
       "dynamic": true,
       "id": "spider_connect_error_interval",
       "name": "spider_connect_error_interval",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],
@@ -274,7 +291,7 @@
       "name": "spider_crd_bg_mode",
       "range": {
         "from": -1,
-        "to": 1
+        "to": 2
       },
       "scope": [
         "global",
@@ -548,11 +565,15 @@
       "dynamic": true,
       "id": "spider_internal_sql_log_off",
       "name": "spider_internal_sql_log_off",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
         "global",
         "session"
       ],
-      "type": "boolean"
+      "type": "integer"
     },
     {
       "id": "spider_internal_unlock",
@@ -598,26 +619,35 @@
       "type": "integer"
     },
     {
+      "default": "-1",
       "dynamic": true,
       "id": "spider_load_crd_at_startup",
       "name": "spider_load_crd_at_startup",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
-      "type": "boolean"
+      "type": "integer"
     },
     {
+      "default": "-1",
       "dynamic": true,
       "id": "spider_load_sts_at_startup",
       "name": "spider_load_sts_at_startup",
+      "range": {
+        "from": -1,
+        "to": 1
+      },
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "boolean"
     },
     {
+      "default": "0",
       "dynamic": true,
       "id": "spider_local_lock_table",
       "name": "spider_local_lock_table",
@@ -643,8 +673,11 @@
       "name": "spider_log_result_error_with_sql",
       "range": {
         "from": 0,
-        "to": 3
+        "to": 4
       },
+      "scope": [
+        "global"
+      ],
       "type": "integer"
     },
     {

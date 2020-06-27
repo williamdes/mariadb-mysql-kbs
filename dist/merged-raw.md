@@ -7141,7 +7141,7 @@
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`optimistic (>= MariaDB 10.5.1), conservative (<= MariaDB 10.5.0)`|
-|Dynamic|`false`|
+|Dynamic|`true`|
 |Valid value(s)|`conservative`, `optimistic`, `none`, `aggressive`, `minimal`|
 
 ### Documentation(s)
@@ -15218,21 +15218,6 @@
 |mariadb.com|[shared_memory_base_name](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#shared_memory_base_name)|
 |dev.mysql.com|[sysvar_shared_memory_base_name](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_shared_memory_base_name)|
 
-## show_old_temporals
-|name|value|
-|----|-----|
-|Name|`show_old_temporals`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[show_old_temporals](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#show_old_temporals)|
-|dev.mysql.com|[sysvar_show_old_temporals](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_old_temporals)|
-
 ## skip_external_locking
 |name|value|
 |----|-----|
@@ -16432,6 +16417,20 @@
 |------|----|
 |mariadb.com|[spider_block_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/#spider_block_size)|
 
+## spider_buffer_size
+|name|value|
+|----|-----|
+|Name|`spider_buffer_size`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Dynamic|`true`|
+|Range|from: `-1` to: `2147483647`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[spider_buffer_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/#spider_buffer_size)|
+
 ## spider_bulk_size
 |name|value|
 |----|-----|
@@ -16521,7 +16520,7 @@
 |----|-----|
 |Name|`spider_conn_wait_timeout`|
 |Type of variable|`integer`|
-|Scope|`global`, `session`|
+|Scope|`global`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1000`|
 
@@ -16538,6 +16537,7 @@
 |Scope|`global`|
 |Default value|`1`|
 |Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -16606,7 +16606,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `1`|
+|Range|from: `-1` to: `2`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -16892,9 +16892,10 @@
 |name|value|
 |----|-----|
 |Name|`spider_internal_sql_log_off`|
-|Type of variable|`boolean`|
+|Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
+|Range|from: `-1` to: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -16957,9 +16958,11 @@
 |name|value|
 |----|-----|
 |Name|`spider_load_crd_at_startup`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`-1`|
 |Dynamic|`true`|
+|Range|from: `-1` to: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -16971,8 +16974,10 @@
 |----|-----|
 |Name|`spider_load_sts_at_startup`|
 |Type of variable|`boolean`|
-|Scope|`global`, `session`|
+|Scope|`global`|
+|Default value|`-1`|
 |Dynamic|`true`|
+|Range|from: `-1` to: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -16985,6 +16990,7 @@
 |Name|`spider_local_lock_table`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
+|Default value|`0`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -17010,8 +17016,9 @@
 |----|-----|
 |Name|`spider_log_result_error_with_sql`|
 |Type of variable|`integer`|
+|Scope|`global`|
 |Dynamic|`true`|
-|Range|from: `0` to: `3`|
+|Range|from: `0` to: `4`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31907,6 +31914,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_show_create_table_verbosity](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_create_table_verbosity)|
+
+## show_old_temporals
+|name|value|
+|----|-----|
+|Name|`show_old_temporals`|
+|Command line|`--show-old-temporals[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_show_old_temporals](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_old_temporals)|
 
 ## sql_require_primary_key
 |name|value|

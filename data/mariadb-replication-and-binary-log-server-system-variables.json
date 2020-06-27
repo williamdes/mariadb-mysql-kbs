@@ -783,7 +783,7 @@
     },
     {
       "default": "optimistic (>= MariaDB 10.5.1), conservative (<= MariaDB 10.5.0)",
-      "dynamic": false,
+      "dynamic": true,
       "id": "slave_parallel_mode",
       "name": "slave_parallel_mode",
       "scope": [

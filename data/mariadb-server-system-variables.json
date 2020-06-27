@@ -2642,18 +2642,6 @@
       "type": "string"
     },
     {
-      "cli": "--show_old_temporals{=0|1}",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "show_old_temporals",
-      "name": "show_old_temporals",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--skip-external-locking",
       "default": "1",
       "dynamic": false,

@@ -684,7 +684,7 @@
     {
       "cli": "--innodb-doublewrite-batch-size=#",
       "default": "0",
-      "dynamic": true,
+      "dynamic": false,
       "id": "sysvar_innodb_doublewrite_batch_size",
       "name": "innodb_doublewrite_batch_size",
       "range": {

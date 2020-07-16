@@ -684,7 +684,7 @@
     {
       "cli": "--innodb-doublewrite-batch-size=#",
       "default": "0",
-      "dynamic": true,
+      "dynamic": false,
       "id": "sysvar_innodb_doublewrite_batch_size",
       "name": "innodb_doublewrite_batch_size",
       "range": {
@@ -998,6 +998,10 @@
       "dynamic": true,
       "id": "sysvar_innodb_ft_num_word_optimize",
       "name": "innodb_ft_num_word_optimize",
+      "range": {
+        "from": 1000,
+        "to": 10000
+      },
       "scope": [
         "global"
       ],
@@ -2152,6 +2156,17 @@
       "dynamic": false,
       "id": "sysvar_innodb_use_native_aio",
       "name": "innodb_use_native_aio",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--innodb-validate-tablespace-paths[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": false,
+      "id": "sysvar_innodb_validate_tablespace_paths",
+      "name": "innodb_validate_tablespace_paths",
       "scope": [
         "global"
       ],

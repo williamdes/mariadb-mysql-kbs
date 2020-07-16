@@ -60,6 +60,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--rocksdb-allow-to-start-after-corruption={0|1}",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "rocksdb_allow_to_start_after_corruption",
+      "name": "rocksdb_allow_to_start_after_corruption",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--rocksdb-background-sync={0|1}",
       "default": "OFF",
       "dynamic": false,
@@ -92,7 +103,8 @@
       "id": "rocksdb_blind_delete_primary_key",
       "name": "rocksdb_blind_delete_primary_key",
       "scope": [
-        "global"
+        "global",
+        "session"
       ],
       "type": "boolean"
     },
@@ -152,8 +164,7 @@
         "to": 2147483647
       },
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "integer"
     },
@@ -163,6 +174,18 @@
       "dynamic": true,
       "id": "rocksdb_bulk_load",
       "name": "rocksdb_bulk_load",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rocksdb-bulk-load_allow_sk={0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "rocksdb_bulk_load_allow_sk",
+      "name": "rocksdb_bulk_load_allow_sk",
       "scope": [
         "global",
         "session"
@@ -192,14 +215,15 @@
         "to": 1073741824
       },
       "scope": [
-        "global"
+        "global",
+        "session"
       ],
       "type": "integer"
     },
     {
       "cli": "--rocksdb-bytes-per-sync=#",
       "default": "0",
-      "dynamic": false,
+      "dynamic": true,
       "id": "rocksdb_bytes_per_sync",
       "name": "rocksdb_bytes_per_sync",
       "range": {
@@ -212,11 +236,47 @@
       "type": "integer"
     },
     {
-      "cli": "--rocksdb-cache-index-and-filter_blocks={0|1}",
+      "cli": "--rocksdb-cache-dump={0|1}",
+      "default": "ON",
+      "dynamic": true,
+      "id": "rocksdb_cache_dump",
+      "name": "rocksdb_cache_dump",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rocksdb-cache-high-pri-pool-ratio=#",
+      "default": "0.000000",
+      "dynamic": true,
+      "id": "rocksdb_cache_high_pri_pool_ratio",
+      "name": "rocksdb_cache_high_pri_pool_ratio",
+      "range": {
+        "from": 0,
+        "to": 1
+      },
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--rocksdb-cache-index-and-filter-blocks={0|1}",
       "default": "ON",
       "dynamic": false,
       "id": "rocksdb_cache_index_and_filter_blocks",
       "name": "rocksdb_cache_index_and_filter_blocks",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rocksdb-cache-index-and-filter-with-high-priority={0|1}",
+      "default": "ON",
+      "dynamic": false,
+      "id": "rocksdb_cache_index_and_filter_with_high_priority",
+      "name": "rocksdb_cache_index_and_filter_with_high_priority",
       "scope": [
         "global"
       ],
@@ -256,7 +316,20 @@
       "id": "rocksdb_commit_in_the_middle",
       "name": "rocksdb_commit_in_the_middle",
       "scope": [
-        "global"
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rocksdb-commit-time-batch-for-recovery={0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "rocksdb_commit_time_batch_for_recovery",
+      "name": "rocksdb_commit_time_batch_for_recovery",
+      "scope": [
+        "global",
+        "session"
       ],
       "type": "boolean"
     },
@@ -441,14 +514,28 @@
       "type": "integer"
     },
     {
+      "cli": "--rocksdb-debug_manual_compaction_delay=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "rocksdb_debug_manual_compaction_delay",
+      "name": "rocksdb_debug_manual_compaction_delay",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--rocksdb-debug-optimizer-no-zero-cardinality={0|1}",
       "default": "ON",
       "dynamic": true,
       "id": "rocksdb_debug_optimizer_no_zero_cardinality",
       "name": "rocksdb_debug_optimizer_no_zero_cardinality",
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "boolean"
     },
@@ -459,8 +546,7 @@
       "id": "rocksdb_debug_ttl_ignore_pk",
       "name": "rocksdb_debug_ttl_ignore_pk",
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "boolean"
     },
@@ -475,8 +561,7 @@
         "to": 3600
       },
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "integer"
     },
@@ -491,8 +576,7 @@
         "to": 3600
       },
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "integer"
     },
@@ -507,8 +591,7 @@
         "to": 3600
       },
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "integer"
     },
@@ -525,7 +608,7 @@
     },
     {
       "cli": "--rocksdb-delayed-write-rate=#",
-      "default": "16777216",
+      "default": "0 (Previously 16777216)",
       "dynamic": true,
       "id": "rocksdb_delayed_write_rate",
       "name": "rocksdb_delayed_write_rate",
@@ -537,6 +620,17 @@
         "global"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--rocksdb-delete-cf=val",
+      "default": "(Empty string)",
+      "dynamic": false,
+      "id": "rocksdb_delete_cf",
+      "name": "rocksdb_delete_cf",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
     },
     {
       "cli": "--rocksdb-delete-obsolete-files-period-micros=#",
@@ -570,6 +664,17 @@
       "dynamic": false,
       "id": "rocksdb_enable_bulk_load_api",
       "name": "rocksdb_enable_bulk_load_api",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rocksdb-enable-insert-with-update-caching={0|1}",
+      "default": "ON",
+      "dynamic": true,
+      "id": "rocksdb_enable_insert_with_update_caching",
+      "name": "rocksdb_enable_insert_with_update_caching",
       "scope": [
         "global"
       ],
@@ -611,7 +716,7 @@
     {
       "cli": "--rocksdb-enable-write-thread-adaptive-yield={0|1}",
       "default": "OFF",
-      "dynamic": true,
+      "dynamic": false,
       "id": "rocksdb_enable_write_thread_adaptive_yield",
       "name": "rocksdb_enable_write_thread_adaptive_yield",
       "scope": [
@@ -631,6 +736,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--rocksdb-error-on-suboptimal-collation={0|1}",
+      "default": "ON",
+      "dynamic": false,
+      "id": "rocksdb_error_on_suboptimal_collation",
+      "name": "rocksdb_error_on_suboptimal_collation",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--rocksdb-flush-log-at-trx-commit=#",
       "default": "1",
       "dynamic": true,
@@ -641,8 +757,7 @@
         "to": 2
       },
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "integer"
     },
@@ -691,8 +806,7 @@
       "id": "rocksdb_force_flush_memtable_and_lzero_now",
       "name": "rocksdb_force_flush_memtable_and_lzero_now",
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "boolean"
     },
@@ -703,14 +817,13 @@
       "id": "rocksdb_force_flush_memtable_now",
       "name": "rocksdb_force_flush_memtable_now",
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "boolean"
     },
     {
       "cli": "--rocksdb-force-index-records-in-range=#",
-      "default": "1",
+      "default": "0",
       "dynamic": true,
       "id": "rocksdb_force_index_records_in_range",
       "name": "rocksdb_force_index_records_in_range",
@@ -741,6 +854,17 @@
       "dynamic": false,
       "id": "rocksdb_hash_index_allow_collision",
       "name": "rocksdb_hash_index_allow_collision",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rocksdb-ignore-unknown-options={0|1}",
+      "default": "ON",
+      "dynamic": false,
+      "id": "rocksdb_ignore_unknown_options",
+      "name": "rocksdb_ignore_unknown_options",
       "scope": [
         "global"
       ],
@@ -876,7 +1000,7 @@
     },
     {
       "cli": "--rocksdb-manifest-preallocation-size=#",
-      "default": "0",
+      "default": "4194304",
       "dynamic": false,
       "id": "rocksdb_manifest_preallocation_size",
       "name": "rocksdb_manifest_preallocation_size",
@@ -886,6 +1010,22 @@
       },
       "scope": [
         "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--rocksdb-manual-compation-threads=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "rocksdb_manual_compaction_threads",
+      "name": "rocksdb_manual_compaction_threads",
+      "range": {
+        "from": 0,
+        "to": 128
+      },
+      "scope": [
+        "global",
+        "session"
       ],
       "type": "integer"
     },
@@ -989,7 +1129,7 @@
     },
     {
       "cli": "--rocksdb-manifest-log-file-size=#",
-      "default": "18446744073709551615",
+      "default": "1073741824",
       "dynamic": false,
       "id": "rocksdb_max_manifest_file_size",
       "name": "rocksdb_max_manifest_file_size",
@@ -1003,13 +1143,28 @@
       "type": "integer"
     },
     {
+      "cli": "--rocksdb-manual_compactions=#",
+      "default": "10",
+      "dynamic": true,
+      "id": "rocksdb_max_manual_compactions",
+      "name": "rocksdb_max_manual_compactions",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--rocksdb-max-open-files=#",
-      "default": "-1",
+      "default": "-2",
       "dynamic": false,
       "id": "rocksdb_max_open_files",
       "name": "rocksdb_max_open_files",
       "range": {
-        "from": -1,
+        "from": -2,
         "to": 2147483647
       },
       "scope": [
@@ -1174,7 +1329,7 @@
       "name": "rocksdb_perf_context_level",
       "range": {
         "from": 0,
-        "to": 4
+        "to": 5
       },
       "scope": [
         "global",
@@ -1204,8 +1359,7 @@
         "to": 18446744073709552000
       },
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "integer"
     },
@@ -1275,11 +1429,33 @@
       "type": "integer"
     },
     {
+      "cli": "--rocksdb-remove-mariabackup-checkpoint={0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "rocksdb_remove_mariabackup_checkpoint",
+      "name": "rocksdb_remove_mariabackup_checkpoint",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--rocksdb-reset-stats={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "rocksdb_reset_stats",
       "name": "rocksdb_reset_stats",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rocksdb-rollback-on-timeout={0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "rocksdb_rollback_on_timeout",
+      "name": "rocksdb_rollback_on_timeout",
       "scope": [
         "global"
       ],
@@ -1393,6 +1569,36 @@
       "type": "integer"
     },
     {
+      "cli": "--rocksdb-stats-level=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "rocksdb_stats_level",
+      "name": "rocksdb_stats_level",
+      "range": {
+        "from": 0,
+        "to": 4
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--rocksdb-stats-recalc_rate=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "rocksdb_stats_recalc_rate",
+      "name": "rocksdb_stats_recalc_rate",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--rocksdb-store-row-debug-checksums={0|1}",
       "default": "OFF",
       "dynamic": true,
@@ -1445,7 +1651,7 @@
       "name": "rocksdb_table_cache_numshardbits",
       "range": {
         "from": 0,
-        "to": 2147483647
+        "to": 19
       },
       "scope": [
         "global"
@@ -1488,6 +1694,17 @@
       "scope": [
         "global",
         "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rocksdb-two-write-queues={0|1}",
+      "default": "ON",
+      "dynamic": false,
+      "id": "rocksdb_two_write_queues",
+      "name": "rocksdb_two_write_queues",
+      "scope": [
+        "global"
       ],
       "type": "boolean"
     },
@@ -1609,7 +1826,7 @@
     {
       "cli": "--rocksdb-wal-bytes-per-sync=#",
       "default": "0",
-      "dynamic": false,
+      "dynamic": true,
       "id": "rocksdb_wal_bytes_per_sync",
       "name": "rocksdb_wal_bytes_per_sync",
       "range": {
@@ -1717,7 +1934,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--rocksdb-write-ignore-missing-column-familiesl={0|1}",
+      "cli": "--rocksdb-write-ignore-missing-column-families={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "rocksdb_write_ignore_missing_column_families",
@@ -1727,6 +1944,22 @@
         "session"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--rocksdb-write-policy=val",
+      "default": "write_committed",
+      "dynamic": false,
+      "id": "rocksdb_write_policy",
+      "name": "rocksdb_write_policy",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "write_committed",
+        "write_prepared",
+        "write_unprepared"
+      ]
     }
   ],
   "name": "myrocks-system-variables",

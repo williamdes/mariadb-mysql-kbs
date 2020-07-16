@@ -10,8 +10,26 @@
       "type": "integer"
     },
     {
+      "id": "spider_direct_delete",
+      "name": "Spider_direct_delete",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "spider_direct_order_limit",
       "name": "Spider_direct_order_limit",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "id": "spider_direct_update",
+      "name": "Spider_direct_update",
       "scope": [
         "global",
         "session"
@@ -30,6 +48,15 @@
     {
       "id": "spider_mon_table_cache_version_req",
       "name": "Spider_mon_table_cache_version_req",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "id": "spider_parallel_search",
+      "name": "Spider_parallel_search",
       "scope": [
         "global",
         "session"

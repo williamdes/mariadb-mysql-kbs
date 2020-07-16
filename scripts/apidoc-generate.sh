@@ -6,11 +6,11 @@ echo "Cleaning..."
 rm -rf ./../docs/*
 
 echo "Installing..."
-composer require --no-interaction code-lts/doctum:dev-main --prefer-dist --no-progress --no-suggest
+curl -O https://doctum.long-term.support/releases/latest/doctum.phar
 echo "Parsing..."
-./vendor/bin/doctum.php --no-interaction parse ./doctum-config.php
+php ./doctum.phar --no-interaction parse ./doctum-config.php
 echo "Updating..."
-./vendor/bin/doctum.php --no-interaction --verbose render ./doctum-config.php --force
+php ./doctum.phar --no-interaction --verbose render ./doctum-config.php --force
 ERR="$?"
 mv ./../docs/build/* ./../docs/
 sleep 2

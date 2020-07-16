@@ -205,8 +205,8 @@ const pages = [
         name: 'replication-options-gtids',
     },
     {
-        url: KB_URL + 'replication-options-slave.html',
-        name: 'replication-options-slave',
+        url: KB_URL + 'replication-options-replica.html',
+        name: 'replication-options-replica',
     },
     {
         url: KB_URL + 'replication-options-master.html',

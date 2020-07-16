@@ -674,6 +674,6 @@
       "type": "integer"
     }
   ],
-  "name": "replication-options-slave",
-  "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-slave.html"
+  "name": "replication-options-replica",
+  "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html"
 }

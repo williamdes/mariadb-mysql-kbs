@@ -6603,6 +6603,7 @@
 |Command line|`--binlog-format=format`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
+|Default value|`ROW`|
 |Dynamic|`true`|
 |Valid value(s)|`ROW`, `STATEMENT`, `MIXED`|
 
@@ -7624,6 +7625,7 @@
 |Command line|`--sync-binlog=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`1`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -29819,6 +29821,7 @@
 |Command line|`--binlog-error-action[=value]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
+|Default value|`ABORT_SERVER`|
 |Dynamic|`true`|
 |Valid value(s)|`IGNORE_ERROR`, `ABORT_SERVER`|
 

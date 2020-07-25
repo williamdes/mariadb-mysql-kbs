@@ -996,6 +996,22 @@
       "type": "string"
     },
     {
+      "cli": "--in-predicate-conversion-threshold=#",
+      "default": "1000",
+      "dynamic": false,
+      "id": "in_predicate_conversion_threshold",
+      "name": "in_predicate_conversion_threshold",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "default": "0",
       "dynamic": false,
       "id": "in_transaction",

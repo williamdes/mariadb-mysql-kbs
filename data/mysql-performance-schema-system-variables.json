@@ -524,6 +524,17 @@
       "type": "integer"
     },
     {
+      "cli": "--performance-schema-show-processlist[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_performance_schema_show_processlist",
+      "name": "performance_schema_show_processlist",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--performance-schema-users-size=#",
       "default": "(-1 signifies autoscaling; do not use -1)",
       "dynamic": false,

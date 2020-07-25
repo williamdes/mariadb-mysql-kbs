@@ -12551,6 +12551,24 @@
                 "29#ignore_db_dirs"
             ]
         },
+        "in_predicate_conversion_threshold": {
+            "cli": "--in-predicate-conversion-threshold=#",
+            "default": "1000",
+            "dynamic": false,
+            "name": "in_predicate_conversion_threshold",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#in_predicate_conversion_threshold"
+            ]
+        },
         "in_transaction": {
             "default": "0",
             "dynamic": false,
@@ -26952,6 +26970,19 @@
             "type": "integer",
             "ids": [
                 "20#sysvar_performance_schema_max_prepared_statements_instances"
+            ]
+        },
+        "performance_schema_show_processlist": {
+            "cli": "--performance-schema-show-processlist[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "performance_schema_show_processlist",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "20#sysvar_performance_schema_show_processlist"
             ]
         },
         "authentication_ldap_sasl_auth_method_name": {

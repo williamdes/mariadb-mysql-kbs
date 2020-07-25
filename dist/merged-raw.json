@@ -16157,6 +16157,27 @@
                 }
             ]
         },
+        "in_predicate_conversion_threshold": {
+            "cli": "--in-predicate-conversion-threshold=#",
+            "default": "1000",
+            "dynamic": false,
+            "name": "in_predicate_conversion_threshold",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "in_predicate_conversion_threshold",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                }
+            ]
+        },
         "in_transaction": {
             "default": "0",
             "dynamic": false,
@@ -34771,6 +34792,22 @@
             "ids": [
                 {
                     "anchor": "sysvar_performance_schema_max_prepared_statements_instances",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
+        "performance_schema_show_processlist": {
+            "cli": "--performance-schema-show-processlist[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "performance_schema_show_processlist",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_performance_schema_show_processlist",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
                 }
             ]

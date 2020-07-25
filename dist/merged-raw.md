@@ -13614,6 +13614,22 @@
 |------|----|
 |mariadb.com|[ignore_db_dirs](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#ignore_db_dirs)|
 
+## in_predicate_conversion_threshold
+|name|value|
+|----|-----|
+|Name|`in_predicate_conversion_threshold`|
+|Command line|`--in-predicate-conversion-threshold=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`1000`|
+|Dynamic|`false`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[in_predicate_conversion_threshold](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#in_predicate_conversion_threshold)|
+
 ## in_transaction
 |name|value|
 |----|-----|
@@ -29271,6 +29287,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_performance_schema_max_prepared_statements_instances](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_prepared_statements_instances)|
+
+## performance_schema_show_processlist
+|name|value|
+|----|-----|
+|Name|`performance_schema_show_processlist`|
+|Command line|`--performance-schema-show-processlist[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_performance_schema_show_processlist](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_show_processlist)|
 
 ## authentication_ldap_sasl_auth_method_name
 |name|value|

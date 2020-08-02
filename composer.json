@@ -33,7 +33,7 @@
     "scripts": {
         "build": "php src/merge.php",
         "test": "phpunit",
-        "phpstan": "phpstan analyse src test --configuration=phpstan.neon --memory-limit=100M",
+        "phpstan": "phpstan analyse src test --configuration=phpstan.neon",
         "phpcs": "phpcs --standard=phpcs.xml --no-cache --colors -p -n",
         "phpcbf": "phpcbf --standard=phpcs.xml"
     },

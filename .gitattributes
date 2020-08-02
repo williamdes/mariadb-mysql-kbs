@@ -7,7 +7,6 @@ data/* linguist-vendored
 dist/* linguist-vendored
 docs/* linguist-documentation
 test/data/* linguist-vendored
-/.dependabot export-ignore
 /docs export-ignore
 /scripts export-ignore
 /test/*.js export-ignore

@@ -54,7 +54,6 @@
             "/dist/merged-raw.json",
             "/test",
             "*.js",
-            "/.dependabot",
             "/.jshintrc",
             "/.npmignore",
             "/.editorconfig",

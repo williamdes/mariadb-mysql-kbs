@@ -55,6 +55,7 @@ jobs:
                   php-version: ${{ matrix.php-version }}
                   extensions: posix, mbstring
                   coverage: xdebug
+                  tools: composer:v2
             - name: Cache module
               uses: actions/cache@v2
               with:

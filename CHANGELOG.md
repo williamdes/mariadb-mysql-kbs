@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [eb62400](https://github.com/williamdes/mariadb-mysql-kbs/commit/eb62400bc18d0e9d2f845434cc367707fe68daa0) update: [MariaDB] && [MySQL] updates
+- [bf0405b](https://github.com/williamdes/mariadb-mysql-kbs/commit/bf0405b255e1b79c358175f1391acdd94286f261) update: [MySQL] updates
+- [85e3b2b](https://github.com/williamdes/mariadb-mysql-kbs/commit/85e3b2b0402948b01f4d2751d2776fedbee4ced1) update: [MariaDB] && [MySQL] updates
+- [5f24772](https://github.com/williamdes/mariadb-mysql-kbs/commit/5f24772774a2e6753183aa14d6381a66fe63f819) update: [MariaDB] updates
 - [17e905f](https://github.com/williamdes/mariadb-mysql-kbs/commit/17e905f2ba8cbc42193398c6718169564700627d) update: [MariaDB] updates
 - [7fb17c1](https://github.com/williamdes/mariadb-mysql-kbs/commit/7fb17c1a1f7f29d9e623f5702d696b7744356cda) update: [MariaDB] updates
 - [2ab4b94](https://github.com/williamdes/mariadb-mysql-kbs/commit/2ab4b9445dda64d4d76206b20d4680802197d06f) update: [MySQL] updates
@@ -26,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- [633e667](https://github.com/williamdes/mariadb-mysql-kbs/commit/633e667efd6d05b4497b672af6e2a110234df81e) fix: rename mysql options slave to replica
 - [1da576b](https://github.com/williamdes/mariadb-mysql-kbs/commit/1da576b61e661762e41c3bf501b9e163f8a2f298) fix: remove an invalid edge case
 - [6cb4b61](https://github.com/williamdes/mariadb-mysql-kbs/commit/6cb4b611d443f038e22e3ea2821dbb7b10e3328c) fix: support bad naming for enums
 - [f836f84](https://github.com/williamdes/mariadb-mysql-kbs/commit/f836f84a0ee1d0c4e19cd848af50494fea33a7ae) fix: activate back h3 detection
@@ -40,6 +45,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Features
 
+- [7823f6b](https://github.com/williamdes/mariadb-mysql-kbs/commit/7823f6ba556f393a329028b4e049e2e3a737cd0f) feat: move to phar method to generate docs
+- [b0b51b9](https://github.com/williamdes/mariadb-mysql-kbs/commit/b0b51b9473c450fd1ba967d477f700695a5339e9) feat: add a PR template for documentation updates
 - [6e0e3c4](https://github.com/williamdes/mariadb-mysql-kbs/commit/6e0e3c4a8fff19ed2832078d974aea52e55291ea) feat: remove sami/sami and use code-lts/doctum
 - [00439a0](https://github.com/williamdes/mariadb-mysql-kbs/commit/00439a01b887dd21d22e2d364e73674c0a35cac5) feat: set main as the default branch
 - [bb22aac](https://github.com/williamdes/mariadb-mysql-kbs/commit/bb22aac607c5a5f5118b36b358e447877dcc998b) feat: add test cases for the MariaDB extraction script
@@ -52,6 +59,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Others
 
+- [c304be5](https://github.com/williamdes/mariadb-mysql-kbs/commit/c304be5bddc74d02b991aa21a001667f66fa39a4) ci: use actions/cache@v2
+- [5e0e575](https://github.com/williamdes/mariadb-mysql-kbs/commit/5e0e57542b669cbaf125160e3ea62ce08389a9dd) chore: update phpstan config
+- [bd06752](https://github.com/williamdes/mariadb-mysql-kbs/commit/bd067524ca5e0f38fe444d580f38a44f41399d86) chore: upgrade dependabot to v2
+- [b945b95](https://github.com/williamdes/mariadb-mysql-kbs/commit/b945b95fc7944800eb960a7f7e09c0d6319ddcc5) chore: upgrade @sudo-bot/sudo-bot to ^1.2.3
+- [9d4752e](https://github.com/williamdes/mariadb-mysql-kbs/commit/9d4752ebb4be10870363eb70e105b96693fecbd9) chore: upgrade @sudo-bot/sudo-bot to ^1.2.2
+- [ef3e911](https://github.com/williamdes/mariadb-mysql-kbs/commit/ef3e911dba1d68f9877f82ed0f3b9e9ffced1ccf) chore: upgrade @sudo-bot/sudo-bot to ^1.2.1
+- [87feee1](https://github.com/williamdes/mariadb-mysql-kbs/commit/87feee104b810e70869495a705111518f871875a) chore: improve doctum config
 - [5ae8538](https://github.com/williamdes/mariadb-mysql-kbs/commit/5ae85389ce9fd94992dda42bac6583316a448316) ci: make the script render instead of parse
 - [ce383e6](https://github.com/williamdes/mariadb-mysql-kbs/commit/ce383e63f65da54ea1cbfbfef491035a4533c59f) chore: upgrade crawler and mocha
 - [2444a8d](https://github.com/williamdes/mariadb-mysql-kbs/commit/2444a8d4a8ed7c8c8778655a488f63f0b6708c86) chore: upgrade @sudo-bot/sudo-bot to ^1.2.0

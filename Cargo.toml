@@ -1,0 +1,39 @@
+[package]
+name = "mariadb-mysql-kbs"
+version = "1.2.8"
+authors = ["William Desportes <williamdes@wdes.fr>"]
+edition = "2018"
+description = "An index of the MariaDB and MySQL Knowledge bases"
+documentation = "https://github.com/williamdes/mariadb-mysql-kbs/blob/v1.2.8/README.md"
+homepage = "https://github.com/williamdes/mariadb-mysql-kbs/tree/v1.2.8#readme"
+repository = "https://github.com/williamdes/mariadb-mysql-kbs"
+readme = "README.md"
+keywords = ["mariadb", "mysql", "dataset", "kb", "knowledge-base", "mysql-knowledge-bases", "mariadb-knowledge-bases"]
+categories = ["command-line-utilities"]
+license = "MPL-2.0"
+include = [
+    "**/*.rs",
+    "dist/*.json",
+    "dist/*.md",
+    "data/*.json",
+    "Cargo.toml",
+]
+
+[badges]
+travis-ci = { repository = "mariadb-mysql-kbs", branch = "master" }
+codecov = { repository = "mariadb-mysql-kbs", branch = "master", service = "github" }
+is-it-maintained-issue-resolution = { repository = "mariadb-mysql-kbs" }
+is-it-maintained-open-issues = { repository = "mariadb-mysql-kbs" }
+maintenance = { status = "actively-developed" }
+
+[lib]
+name = "mariadb_mysql_kbs"
+path = "src/rust/lib.rs"
+test = true
+doctest = true
+bench = true
+doc = true
+
+[[bin]]
+name = "mariadb-mysql-kbs"
+path = "src/rust/mariadb-mysql-kbs.rs"

@@ -20,6 +20,10 @@ class JsonEncodeTest extends TestCase
         $this->assertEquals('{"name":"a"}', json_encode($entry));
         $entry = new KBEntry('a', 'b', true);
         $this->assertEquals('{"name":"a","type":"b","dynamic":true}', json_encode($entry));
+        $entry = new KBEntry('a', 'b', true);
+        $entry->addDocumentation('d');
+        $entry->addDocumentation('e', '#f');
+        $this->assertEquals('{"name":"a","type":"b","dynamic":true,"docs":[{"url":"d"},{"url":"e","anchor":"#f"}]}', json_encode($entry));
     }
 
     /**

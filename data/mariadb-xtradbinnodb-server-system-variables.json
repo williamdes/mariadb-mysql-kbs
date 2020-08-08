@@ -739,10 +739,14 @@
     },
     {
       "cli": "--innodb-concurrency-tickets=#",
-      "default": "5000 (from MariaDB 10.0), 500 (before mariaDB 10,0)",
+      "default": "5000",
       "dynamic": true,
       "id": "innodb_concurrency_tickets",
       "name": "innodb_concurrency_tickets",
+      "range": {
+        "from": 1,
+        "to": 18446744073709552000
+      },
       "scope": [
         "global"
       ],
@@ -1907,7 +1911,7 @@
     },
     {
       "cli": "--innodb-log-file-size=#",
-      "default": "50331648 (48MB) (from MariaDB 10.0), 5242880 (5MB) (before MariaDB 10.0)",
+      "default": "100663296 (96MB) (>= MariaDB 10.5), 50331648 (48MB) (<= MariaDB 10.4)",
       "dynamic": false,
       "id": "innodb_log_file_size",
       "name": "innodb_log_file_size",
@@ -2883,6 +2887,10 @@
       "dynamic": true,
       "id": "innodb_thread_sleep_delay",
       "name": "innodb_thread_sleep_delay",
+      "range": {
+        "from": 0,
+        "to": 1000000
+      },
       "scope": [
         "global"
       ],

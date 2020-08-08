@@ -24516,7 +24516,7 @@
 |Scope|`global`|
 |Default value|`5000`|
 |Dynamic|`true`|
-|Range|from: `1` to: `4294967295`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -25861,7 +25861,6 @@
 |Command line|`--innodb-log-file-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`50331648`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -32302,6 +32301,54 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_schema_definition_cache](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_schema_definition_cache)|
+
+## select_into_buffer_size
+|name|value|
+|----|-----|
+|Name|`select_into_buffer_size`|
+|Command line|`--select-into-buffer-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`131072`|
+|Dynamic|`true`|
+|Range|from: `8192` to: `2147479552`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_select_into_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_select_into_buffer_size)|
+
+## select_into_disk_sync
+|name|value|
+|----|-----|
+|Name|`select_into_disk_sync`|
+|Command line|`--select-into-disk-sync={ON|OFF}`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+|Valid value(s)|`OFF`, `ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_select_into_disk_sync](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_select_into_disk_sync)|
+
+## select_into_disk_sync_delay
+|name|value|
+|----|-----|
+|Name|`select_into_disk_sync_delay`|
+|Command line|`--select-into-disk-sync-delay=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `31536000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_select_into_disk_sync_delay](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_select_into_disk_sync_delay)|
 
 ## session_track_gtids
 |name|value|

@@ -2708,6 +2708,54 @@
       ]
     },
     {
+      "cli": "--select-into-buffer-size=#",
+      "default": "131072",
+      "dynamic": true,
+      "id": "sysvar_select_into_buffer_size",
+      "name": "select_into_buffer_size",
+      "range": {
+        "from": 8192,
+        "to": 2147479552
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--select-into-disk-sync={ON|OFF}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_select_into_disk_sync",
+      "name": "select_into_disk_sync",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean",
+      "validValues": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "cli": "--select-into-disk-sync-delay=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_select_into_disk_sync_delay",
+      "name": "select_into_disk_sync_delay",
+      "range": {
+        "from": 0,
+        "to": 31536000
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--session-track-gtids=value",
       "default": "OFF",
       "dynamic": true,

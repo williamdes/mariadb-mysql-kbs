@@ -131,7 +131,13 @@ function parsePage($, cbSuccess) {
     var anchors = [];
     $('.informaltable, .table')
         .filter(function (i, elem) {
-            return $(elem).find('th').first().text() === 'Property';
+            const summaryAttribute = $(elem).find('table').first().attr('summary');
+            // 0 is the start position in the summary attribute
+            const canFindAValidTableHeader = summaryAttribute
+                ? summaryAttribute.indexOf('Properties for') === 0
+                : false;
+            const canFindAValidTableHeaderTh = $(elem).find('th').first().text() === 'Property';
+            return canFindAValidTableHeaderTh || canFindAValidTableHeader;
         })
         .each(function (i, elem) {
             let doc = {

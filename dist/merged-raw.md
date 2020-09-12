@@ -16328,7 +16328,7 @@
 |Command line|`--transaction-read-only=#`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`OFF-READ`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)

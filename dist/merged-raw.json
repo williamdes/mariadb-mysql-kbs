@@ -19694,7 +19694,7 @@
         },
         "tx_read_only": {
             "cli": "--transaction-read-only=#",
-            "default": "OFF-READ",
+            "default": "OFF",
             "dynamic": true,
             "name": "tx_read_only",
             "scope": [

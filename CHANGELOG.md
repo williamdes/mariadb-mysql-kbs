@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [238e5ae](https://github.com/williamdes/mariadb-mysql-kbs/commit/238e5ae2aa76868164f2a7f0de9e08dcdebde304) update: [MariaDB] && [MySQL] updates
 - [eb62400](https://github.com/williamdes/mariadb-mysql-kbs/commit/eb62400bc18d0e9d2f845434cc367707fe68daa0) update: [MariaDB] && [MySQL] updates
 - [bf0405b](https://github.com/williamdes/mariadb-mysql-kbs/commit/bf0405b255e1b79c358175f1391acdd94286f261) update: [MySQL] updates
 - [85e3b2b](https://github.com/williamdes/mariadb-mysql-kbs/commit/85e3b2b0402948b01f4d2751d2776fedbee4ced1) update: [MariaDB] && [MySQL] updates
@@ -30,6 +31,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- [e23b886](https://github.com/williamdes/mariadb-mysql-kbs/commit/e23b8868e34fbe922ba0e83bcf5b55ee0c9b6966) fix: use stdout instead of stderr for phpunit
 - [633e667](https://github.com/williamdes/mariadb-mysql-kbs/commit/633e667efd6d05b4497b672af6e2a110234df81e) fix: rename mysql options slave to replica
 - [1da576b](https://github.com/williamdes/mariadb-mysql-kbs/commit/1da576b61e661762e41c3bf501b9e163f8a2f298) fix: remove an invalid edge case
 - [6cb4b61](https://github.com/williamdes/mariadb-mysql-kbs/commit/6cb4b611d443f038e22e3ea2821dbb7b10e3328c) fix: support bad naming for enums

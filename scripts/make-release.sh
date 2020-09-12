@@ -1,6 +1,8 @@
 #!/bin/bash
 # Source: https://github.community/t5/How-to-use-Git-and-GitHub/How-to-create-full-release-from-command-line-not-just-a-tag/m-p/16072/highlight/true#M4943
 
+set -e
+
 version=$1
 
 if [ -z "$version" ]; then
@@ -11,6 +13,24 @@ fi
 if [[ "$version" =~ [a-z]+ ]]; then
     echo 'Version must not contain any letter, "v" prefix is added in the script.';
     exit 1;
+fi
+
+if ! command -v jq &> /dev/null
+then
+    echo "jq could not be found"
+    exit
+fi
+
+if ! command -v gpg &> /dev/null
+then
+    echo "gpg could not be found"
+    exit
+fi
+
+if ! command -v curl &> /dev/null
+then
+    echo "curl could not be found"
+    exit
 fi
 
 branch=$(git rev-parse --abbrev-ref HEAD)
@@ -104,5 +124,23 @@ echo "Create release $version for repo: $user/$repo branch: $branch"
 read -r -p "Are you sure to publish the draft? [Y/n]" response
 response=${response,,} # tolower
 if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
-    curl -H "Authorization: token $token" --data "$(generate_post_data)" "https://api.github.com/repos/$user/$repo/releases"
+    RELEASE_OUT="$(curl -H "Authorization: token $token" --data "$(generate_post_data)" "https://api.github.com/repos/$user/$repo/releases")"
 fi
+
+GPG_KEY=${GPG_KEY:-C4D91FDFCEF6B4A3C653FD7890A0EF1B8251A889}
+
+echo "Make and publish the signature for this release."
+read -r -p "Are you sure to sign and upload to the draft? [Y/n]" response
+response=${response,,} # tolower
+if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
+    curl -L https://github.com/williamdes/mariadb-mysql-kbs/archive/v$version.tar.gz -O
+    gpg --detach-sign --armor --local-user "${GPG_KEY}" v$version.tar.gz
+    releaseId=$(echo $RELEASE_OUT | jq -r '.id')
+    curl -L \
+         -H "Authorization: token $token" \
+         -H "Content-Type: application/pgp-signature" \
+         --data-binary @v$version.tar.gz.asc \
+         "https://uploads.github.com/repos/$user/$repo/releases/$releaseId/assets?name=v$version.tar.gz.asc"
+fi
+
+echo "Done."

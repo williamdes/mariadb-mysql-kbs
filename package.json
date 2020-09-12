@@ -49,8 +49,7 @@
         "jshint": "jshint ./",
         "build": "node ./src/index.js",
         "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov",
-        "sudo-bot-pr": "sudo-bot --env scripts/sudo-bot/.env --verbose",
-        "sign-release": "gpg --detach-sign --armor --default-key williamdes@wdes.fr $VERSION.tar.gz"
+        "sudo-bot-pr": "sudo-bot --env scripts/sudo-bot/.env --verbose"
     },
     "author": {
         "email": "williamdes@wdes.fr",

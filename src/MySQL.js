@@ -131,11 +131,9 @@ function parsePage($, cbSuccess) {
     var anchors = [];
     $('.informaltable, .table')
         .filter(function (i, elem) {
-            const summaryAttribute = $(elem).find('table').first().attr('summary');
+            const summaryAttr = $(elem).find('table').first().attr('summary');
             // 0 is the start position in the summary attribute
-            const canFindAValidTableHeader = summaryAttribute
-                ? summaryAttribute.indexOf('Properties for') === 0
-                : false;
+            const canFindAValidTableHeader = summaryAttr ? summaryAttr.indexOf('Properties for') === 0 : false;
             const canFindAValidTableHeaderTh = $(elem).find('th').first().text() === 'Property';
             return canFindAValidTableHeaderTh || canFindAValidTableHeader;
         })

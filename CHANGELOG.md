@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [749afd6](https://github.com/williamdes/mariadb-mysql-kbs/commit/749afd6b2dec8e203109628b3ee4d62d3ae5437a) update: [MariaDB] updates
 - [238e5ae](https://github.com/williamdes/mariadb-mysql-kbs/commit/238e5ae2aa76868164f2a7f0de9e08dcdebde304) update: [MariaDB] && [MySQL] updates
 - [eb62400](https://github.com/williamdes/mariadb-mysql-kbs/commit/eb62400bc18d0e9d2f845434cc367707fe68daa0) update: [MariaDB] && [MySQL] updates
 - [bf0405b](https://github.com/williamdes/mariadb-mysql-kbs/commit/bf0405b255e1b79c358175f1391acdd94286f261) update: [MySQL] updates
@@ -31,6 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- [438f58b](https://github.com/williamdes/mariadb-mysql-kbs/commit/438f58b093f9e97e6a50f3ad6b8c7ff15fc1636d) fix: use another way to validate variables in MySQL documentation
 - [e23b886](https://github.com/williamdes/mariadb-mysql-kbs/commit/e23b8868e34fbe922ba0e83bcf5b55ee0c9b6966) fix: use stdout instead of stderr for phpunit
 - [633e667](https://github.com/williamdes/mariadb-mysql-kbs/commit/633e667efd6d05b4497b672af6e2a110234df81e) fix: rename mysql options slave to replica
 - [1da576b](https://github.com/williamdes/mariadb-mysql-kbs/commit/1da576b61e661762e41c3bf501b9e163f8a2f298) fix: remove an invalid edge case
@@ -61,6 +63,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Others
 
+- [dc34e69](https://github.com/williamdes/mariadb-mysql-kbs/commit/dc34e69cf2358156b79913010afd221337a3f1f8) ci: update some commands
 - [c304be5](https://github.com/williamdes/mariadb-mysql-kbs/commit/c304be5bddc74d02b991aa21a001667f66fa39a4) ci: use actions/cache@v2
 - [5e0e575](https://github.com/williamdes/mariadb-mysql-kbs/commit/5e0e57542b669cbaf125160e3ea62ce08389a9dd) chore: update phpstan config
 - [bd06752](https://github.com/williamdes/mariadb-mysql-kbs/commit/bd067524ca5e0f38fe444d580f38a44f41399d86) chore: upgrade dependabot to v2

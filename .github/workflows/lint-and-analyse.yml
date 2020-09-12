@@ -25,10 +25,10 @@ jobs:
             - name: Lint files
               run: |
                   set +e
-                  yarn run jshint -- --verbose
+                  yarn run jshint --verbose
                   JSHINT=$?
                   echo "Running prettier"
-                  yarn run prettier -- --list-different
+                  yarn run prettier --list-different
                   PRETTIER=$?
                   if [[ $JSHINT != 0 ]] || [[ $PRETTIER != 0 ]]; then
                       echo "You have some errors to fix !";

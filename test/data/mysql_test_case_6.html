@@ -1,0 +1,226 @@
+<html>
+<div class="itemizedlist">
+    <ul class="itemizedlist" style="list-style-type: disc; ">
+        <li class="listitem">
+            <p><a name="sysvar_auto_increment_increment"></a>
+                <a class="link" href="replication-options-master.html#sysvar_auto_increment_increment"><code
+                        class="literal">auto_increment_increment</code></a>
+            </p><a class="indexterm" name="idm45671975279808"></a><a class="indexterm" name="idm45671975278704"></a>
+            <div class="informaltable">
+                <table frame="box" rules="all" summary="Properties for auto_increment_increment">
+                    <colgroup>
+                        <col width="30%">
+                        <col width="70%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>Command-Line Format</th>
+                            <td><code class="literal">--auto-increment-increment=#</code></td>
+                        </tr>
+                        <tr>
+                            <th>System Variable</th>
+                            <td><code
+                                    class="literal"><a class="link" href="replication-options-master.html#sysvar_auto_increment_increment">auto_increment_increment</a></code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Scope</th>
+                            <td>Global, Session</td>
+                        </tr>
+                        <tr>
+                            <th>Dynamic</th>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <th><a class="link" href="optimizer-hints.html#optimizer-hints-set-var"
+                                    title="Variable-Setting Hint Syntax"><code class="literal">SET_VAR</code></a> Hint
+                                Applies</th>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <th>Type</th>
+                            <td>Integer</td>
+                        </tr>
+                        <tr>
+                            <th>Default Value</th>
+                            <td><code class="literal">1</code></td>
+                        </tr>
+                        <tr>
+                            <th>Minimum Value</th>
+                            <td><code class="literal">1</code></td>
+                        </tr>
+                        <tr>
+                            <th>Maximum Value</th>
+                            <td><code class="literal">65535</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                [...]
+            </p>
+            <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+
+                <div class="admon-title">
+                    Note
+                </div>
+                <p>
+                    <a class="link" href="replication-options-master.html#sysvar_auto_increment_increment"><code
+                            class="literal">auto_increment_increment</code></a>
+                    is also supported for use with
+                    <a class="link" href="mysql-cluster.html" title="Chapter&nbsp;22&nbsp;MySQL NDB Cluster 8.0"><code
+                            class="literal">NDB</code></a> tables.
+                </p>
+            </div>
+            <p>
+                [...]
+            </p>
+            <p>
+                [...]
+            </p>
+            <p>
+                [...]
+            </p>
+            <div class="itemizedlist">
+                <ul class="itemizedlist" style="list-style-type: circle; ">
+                    <li class="listitem">
+                        <p>
+                            <a class="link" href="replication-options-master.html#sysvar_auto_increment_increment"><code
+                                    class="literal">auto_increment_increment</code></a>
+                            controls the interval between successive column values.
+                            For example:
+                        </p>
+                        <div class="copytoclipboard-wrapper" style="position: relative;">
+                            [...]
+                        </div>
+                    </li>
+                    <li class="listitem">
+                        <p>
+                            <a class="link" href="replication-options-master.html#sysvar_auto_increment_offset"><code
+                                    class="literal">auto_increment_offset</code></a>
+                            determines the starting point for the
+                            <code class="literal">AUTO_INCREMENT</code> column value. Consider
+                            the following, assuming that these statements are
+                            executed during the same session as the example given in
+                            the description for
+                            <a class="link" href="replication-options-master.html#sysvar_auto_increment_increment"><code
+                                    class="literal">auto_increment_increment</code></a>:
+                        </p>
+                        <div class="copytoclipboard-wrapper" style="position: relative;">
+                            [...]
+                        </div>
+                        <p>
+                            When the value of
+                            <a class="link" href="replication-options-master.html#sysvar_auto_increment_offset"><code
+                                    class="literal">auto_increment_offset</code></a>
+                            is greater than that of
+                            <a class="link" href="replication-options-master.html#sysvar_auto_increment_increment"><code
+                                    class="literal">auto_increment_increment</code></a>,
+                            the value of
+                            <a class="link" href="replication-options-master.html#sysvar_auto_increment_offset"><code
+                                    class="literal">auto_increment_offset</code></a>
+                            is ignored.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                [...]
+            </p>
+            <p>
+                <code class="literal">auto_increment_offset</code> +
+                <em class="replaceable"><code>N</code></em> ×
+                <code class="literal">auto_increment_increment</code>
+            </p>
+            <p>
+                where <em class="replaceable"><code>N</code></em> is a positive integer
+                value in the series [1, 2, 3, ...]. For example:
+            </p>
+            <div class="copytoclipboard-wrapper" style="position: relative;">
+                [...]
+            </div>
+            <p>
+                [...]
+            </p>
+            <p>
+                [...]
+            </p>
+            <p>
+                [...]
+            </p>
+        </li>
+        <li class="listitem">
+            <p><a name="sysvar_auto_increment_offset"></a>
+                <a class="link" href="replication-options-master.html#sysvar_auto_increment_offset"><code
+                        class="literal">auto_increment_offset</code></a>
+            </p><a class="indexterm" name="idm45671975176880"></a><a class="indexterm" name="idm45671975175840"></a>
+            <div class="informaltable">
+                <table frame="box" rules="all" summary="Properties for auto_increment_offset">
+                    <colgroup>
+                        <col width="30%">
+                        <col width="70%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>Command-Line Format</th>
+                            <td><code class="literal">--auto-increment-offset=#</code></td>
+                        </tr>
+                        <tr>
+                            <th>System Variable</th>
+                            <td><code
+                                    class="literal"><a class="link" href="replication-options-master.html#sysvar_auto_increment_offset">auto_increment_offset</a></code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Scope</th>
+                            <td>Global, Session</td>
+                        </tr>
+                        <tr>
+                            <th>Dynamic</th>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <th><a class="link" href="optimizer-hints.html#optimizer-hints-set-var"
+                                    title="Variable-Setting Hint Syntax"><code class="literal">SET_VAR</code></a> Hint
+                                Applies</th>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <th>Type</th>
+                            <td>Integer</td>
+                        </tr>
+                        <tr>
+                            <th>Default Value</th>
+                            <td><code class="literal">1</code></td>
+                        </tr>
+                        <tr>
+                            <th>Minimum Value</th>
+                            <td><code class="literal">1</code></td>
+                        </tr>
+                        <tr>
+                            <th>Maximum Value</th>
+                            <td><code class="literal">65535</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                [...]
+            </p>
+            <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+
+                <div class="admon-title">
+                    Note
+                </div>
+                <p>
+                    [...]
+                </p>
+            </div>
+            <p>
+                [...]
+            </p>
+        </li>
+    </ul>
+</div>
+
+</html>

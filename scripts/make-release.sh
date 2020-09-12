@@ -104,5 +104,5 @@ echo "Create release $version for repo: $user/$repo branch: $branch"
 read -r -p "Are you sure to publish the draft? [Y/n]" response
 response=${response,,} # tolower
 if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
-    curl --data "$(generate_post_data)" "https://api.github.com/repos/$user/$repo/releases?access_token=$token"
+    curl -H "Authorization: token $token" --data "$(generate_post_data)" "https://api.github.com/repos/$user/$repo/releases"
 fi

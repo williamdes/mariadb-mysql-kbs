@@ -16,13 +16,13 @@
     };
 
     var searchIndex = [
-                        {"type":"Namespace","link":"Williamdes.html","name":"Williamdes","doc":"Namespace Williamdes"},{"type":"Namespace","link":"Williamdes/MariaDBMySQLKBS.html","name":"Williamdes\\MariaDBMySQLKBS","doc":"Namespace Williamdes\\MariaDBMySQLKBS"},                                                        {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","doc":""},
+                        {"type":"Namespace","link":"Williamdes.html","name":"Williamdes","doc":"Namespace Williamdes"},{"type":"Namespace","link":"Williamdes/MariaDBMySQLKBS.html","name":"Williamdes\\MariaDBMySQLKBS","doc":"Namespace Williamdes\\MariaDBMySQLKBS"},                                                        {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","doc":null},
                                 {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","fromLink":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html#method___construct","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation::__construct","doc":"Create a KBEntry object"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","fromLink":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html#method_getUrl","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation::getUrl","doc":"Get the url"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","fromLink":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html#method_getAnchor","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation::getAnchor","doc":"Get the anchor"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","fromLink":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html#method_jsonSerialize","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation::jsonSerialize","doc":"Used for json_encode function\nThis can seem useless, do not remove it."},
             
-                                                {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry","doc":""},
+                                                {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry","doc":null},
                                 {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method___construct","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::__construct","doc":"Create a KBEntry object"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_getName","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::getName","doc":"Get the variable name"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_isDynamic","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::isDynamic","doc":"Is the variable dynamic"},
@@ -30,11 +30,11 @@
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_hasDocumentations","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::hasDocumentations","doc":"Variable has documentations"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_getDocumentations","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::getDocumentations","doc":"Get all documentations"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_addDocumentation","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::addDocumentation","doc":"Add documentation link"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_jsonSerialize","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::jsonSerialize","doc":"Used for json_encode function\nThis can seem useless, do not remove it."},
+        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_jsonSerialize","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::jsonSerialize","doc":null},
             
                                                 {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/KBException.html","name":"Williamdes\\MariaDBMySQLKBS\\KBException","doc":"KBException class"},
                 
-                                                {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/Search.html","name":"Williamdes\\MariaDBMySQLKBS\\Search","doc":""},
+                                                {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/Search.html","name":"Williamdes\\MariaDBMySQLKBS\\Search","doc":null},
                                 {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_loadData","name":"Williamdes\\MariaDBMySQLKBS\\Search::loadData","doc":"Load data from disk"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_loadTestData","name":"Williamdes\\MariaDBMySQLKBS\\Search::loadTestData","doc":"Load test data"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_getByName","name":"Williamdes\\MariaDBMySQLKBS\\Search::getByName","doc":"get the first link to doc available"},
@@ -44,7 +44,7 @@
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_getDynamicVariables","name":"Williamdes\\MariaDBMySQLKBS\\Search::getDynamicVariables","doc":"Return the list of dynamic variables"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_getVariablesWithDynamic","name":"Williamdes\\MariaDBMySQLKBS\\Search::getVariablesWithDynamic","doc":"Return the list of variables having dynamic = $dynamic"},
             
-                                                {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html","name":"Williamdes\\MariaDBMySQLKBS\\SlimData","doc":""},
+                                                {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html","name":"Williamdes\\MariaDBMySQLKBS\\SlimData","doc":null},
                                 {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\SlimData","fromLink":"Williamdes/MariaDBMySQLKBS/SlimData.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html#method___construct","name":"Williamdes\\MariaDBMySQLKBS\\SlimData::__construct","doc":"Create a slimData object"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\SlimData","fromLink":"Williamdes/MariaDBMySQLKBS/SlimData.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html#method_addVariable","name":"Williamdes\\MariaDBMySQLKBS\\SlimData::addVariable","doc":"Add a variable"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\SlimData","fromLink":"Williamdes/MariaDBMySQLKBS/SlimData.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html#method_jsonSerialize","name":"Williamdes\\MariaDBMySQLKBS\\SlimData::jsonSerialize","doc":"Used for json_encode function\nThis can seem useless, do not remove it."},
@@ -161,23 +161,7 @@
 
 $(function() {
 
-    // Enable the version switcher
-    $('#version-switcher').on('change', function() {
-        window.location = $(this).val()
-    });
-
-    var versionToSelect = document.evaluate(
-        '//option[@data-version="main"]',
-        document.getElementById('version-switcher'),
-        null,
-        XPathResult.FIRST_ORDERED_NODE_TYPE,
-        null
-    ).singleNodeValue;
-
-    if (versionToSelect && typeof versionToSelect.selected === 'boolean') {
-        versionToSelect.selected = true;
-    }
-
+    
     
         // Toggle left-nav divs on click
         $('#api-tree .hd span').on('click', function() {

@@ -736,6 +736,17 @@
       "type": "integer"
     },
     {
+      "cli": "--innodb=extend-and-initialize[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": true,
+      "id": "sysvar_innodb_extend_and_initialize",
+      "name": "innodb_extend_and_initialize",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-fast-shutdown=#",
       "default": "1",
       "dynamic": true,

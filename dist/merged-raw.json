@@ -33186,6 +33186,22 @@
                 }
             ]
         },
+        "innodb_extend_and_initialize": {
+            "cli": "--innodb=extend-and-initialize[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "innodb_extend_and_initialize",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_extend_and_initialize",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
         "innodb_fil_make_page_dirty_debug": {
             "cli": "--innodb-fil-make-page-dirty-debug=#",
             "default": "0",

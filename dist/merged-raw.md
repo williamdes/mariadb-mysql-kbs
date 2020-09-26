@@ -27912,6 +27912,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_doublewrite_pages](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_doublewrite_pages)|
 
+## innodb_extend_and_initialize
+|name|value|
+|----|-----|
+|Name|`innodb_extend_and_initialize`|
+|Command line|`--innodb=extend-and-initialize[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_extend_and_initialize](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_extend_and_initialize)|
+
 ## innodb_fil_make_page_dirty_debug
 |name|value|
 |----|-----|

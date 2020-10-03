@@ -759,7 +759,7 @@
       "name": "slave_net_timeout",
       "range": {
         "from": 1,
-        "to": "upwards"
+        "to": 31536000
       },
       "scope": [
         "global"

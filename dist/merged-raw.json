@@ -8811,7 +8811,7 @@
             "name": "slave_net_timeout",
             "range": {
                 "from": 1,
-                "to": "upwards"
+                "to": 31536000
             },
             "scope": [
                 "global"
@@ -30414,7 +30414,7 @@
         },
         "innodb_lock_schedule_algorithm": {
             "cli": "--innodb-lock-schedule-algorithm=#",
-            "default": "VATS (10.2), FCFS (10.1)",
+            "default": "FCFS (10.3.9, 10.2.17), VATS (10.2.3), FCFS (10.1)",
             "dynamic": false,
             "name": "innodb_lock_schedule_algorithm",
             "scope": [

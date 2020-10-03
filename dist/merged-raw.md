@@ -7401,7 +7401,7 @@
 |Scope|`global`|
 |Default value|`60`|
 |Dynamic|`true`|
-|Range|from: `1` to: `upwards`|
+|Range|from: `1` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -25678,7 +25678,7 @@
 |Command line|`--innodb-lock-schedule-algorithm=#`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`VATS (10.2), FCFS (10.1)`|
+|Default value|`FCFS (10.3.9, 10.2.17), VATS (10.2.3), FCFS (10.1)`|
 |Dynamic|`false`|
 |Valid value(s)|`FCFS`, `VATS`|
 

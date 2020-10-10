@@ -6177,7 +6177,6 @@
         },
         "binlog_format": {
             "cli": "--binlog-format=format",
-            "default": "ROW",
             "dynamic": true,
             "name": "binlog_format",
             "scope": [
@@ -7145,7 +7144,6 @@
         },
         "sync_binlog": {
             "cli": "--sync-binlog=#",
-            "default": "1",
             "dynamic": true,
             "name": "sync_binlog",
             "range": {
@@ -12710,6 +12708,7 @@
             "scope": [
                 "global"
             ],
+            "type": "boolean",
             "ids": [
                 "29#large_files_support",
                 "15#sysvar_large_files_support"
@@ -23511,7 +23510,7 @@
         },
         "innodb_lock_schedule_algorithm": {
             "cli": "--innodb-lock-schedule-algorithm=#",
-            "default": "FCFS (10.3.9, 10.2.17), VATS (10.2.3), FCFS (10.1)",
+            "default": "FCFS (MariaDB 10.3.9, MariaDB 10.2.17), VATS (MariaDB 10.2.3), FCFS (MariaDB 10.1)",
             "dynamic": false,
             "name": "innodb_lock_schedule_algorithm",
             "scope": [
@@ -27485,7 +27484,6 @@
         },
         "binlog_error_action": {
             "cli": "--binlog-error-action[=value]",
-            "default": "ABORT_SERVER",
             "dynamic": true,
             "name": "binlog_error_action",
             "scope": [

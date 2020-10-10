@@ -1220,7 +1220,8 @@
       "name": "large_files_support",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--large-pages[={OFF|ON}]",

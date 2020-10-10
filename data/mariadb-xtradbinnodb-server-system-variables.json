@@ -1751,7 +1751,7 @@
     },
     {
       "cli": "--innodb-lock-schedule-algorithm=#",
-      "default": "FCFS (10.3.9, 10.2.17), VATS (10.2.3), FCFS (10.1)",
+      "default": "FCFS (MariaDB 10.3.9, MariaDB 10.2.17), VATS (MariaDB 10.2.3), FCFS (MariaDB 10.1)",
       "dynamic": false,
       "id": "innodb_lock_schedule_algorithm",
       "name": "innodb_lock_schedule_algorithm",

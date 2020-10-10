@@ -6603,7 +6603,6 @@
 |Command line|`--binlog-format=format`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`ROW`|
 |Dynamic|`true`|
 |Valid value(s)|`ROW`, `STATEMENT`, `MIXED`|
 
@@ -7625,7 +7624,6 @@
 |Command line|`--sync-binlog=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -13772,6 +13770,7 @@
 |name|value|
 |----|-----|
 |Name|`large_files_support`|
+|Type of variable|`boolean`|
 |Scope|`global`|
 |Dynamic|`false`|
 
@@ -25678,7 +25677,7 @@
 |Command line|`--innodb-lock-schedule-algorithm=#`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`FCFS (10.3.9, 10.2.17), VATS (10.2.3), FCFS (10.1)`|
+|Default value|`FCFS (MariaDB 10.3.9, MariaDB 10.2.17), VATS (MariaDB 10.2.3), FCFS (MariaDB 10.1)`|
 |Dynamic|`false`|
 |Valid value(s)|`FCFS`, `VATS`|
 
@@ -29866,7 +29865,6 @@
 |Command line|`--binlog-error-action[=value]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`ABORT_SERVER`|
 |Dynamic|`true`|
 |Valid value(s)|`IGNORE_ERROR`, `ABORT_SERVER`|
 

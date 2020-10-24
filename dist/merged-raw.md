@@ -6460,7 +6460,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[auto_increment_increment](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#auto_increment_increment)|
-|dev.mysql.com|[sysvar_auto_increment_increment](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment)|
+|dev.mysql.com|[sysvar_auto_increment_increment](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment)|
 
 ## auto_increment_offset
 |name|value|
@@ -6476,7 +6476,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[auto_increment_offset](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#auto_increment_offset)|
-|dev.mysql.com|[sysvar_auto_increment_offset](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset)|
+|dev.mysql.com|[sysvar_auto_increment_offset](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset)|
 
 ## binlog_annotate_row_events
 |name|value|
@@ -8343,7 +8343,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[rpl_semi_sync_master_enabled](https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/#rpl_semi_sync_master_enabled)|
-|dev.mysql.com|[sysvar_rpl_semi_sync_master_enabled](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_enabled)|
+|dev.mysql.com|[sysvar_rpl_semi_sync_master_enabled](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_enabled)|
 
 ## rpl_semi_sync_master_timeout
 |name|value|
@@ -8358,7 +8358,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[rpl_semi_sync_master_timeout](https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/#rpl_semi_sync_master_timeout)|
-|dev.mysql.com|[sysvar_rpl_semi_sync_master_timeout](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_timeout)|
+|dev.mysql.com|[sysvar_rpl_semi_sync_master_timeout](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_timeout)|
 
 ## rpl_semi_sync_master_trace_level
 |name|value|
@@ -8373,7 +8373,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[rpl_semi_sync_master_trace_level](https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/#rpl_semi_sync_master_trace_level)|
-|dev.mysql.com|[sysvar_rpl_semi_sync_master_trace_level](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_trace_level)|
+|dev.mysql.com|[sysvar_rpl_semi_sync_master_trace_level](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_trace_level)|
 
 ## rpl_semi_sync_master_wait_no_slave
 |name|value|
@@ -8388,7 +8388,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[rpl_semi_sync_master_wait_no_slave](https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/#rpl_semi_sync_master_wait_no_slave)|
-|dev.mysql.com|[sysvar_rpl_semi_sync_master_wait_no_slave](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_no_slave)|
+|dev.mysql.com|[sysvar_rpl_semi_sync_master_wait_no_slave](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_no_slave)|
 
 ## rpl_semi_sync_master_wait_point
 |name|value|
@@ -8405,7 +8405,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[rpl_semi_sync_master_wait_point](https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/#rpl_semi_sync_master_wait_point)|
-|dev.mysql.com|[sysvar_rpl_semi_sync_master_wait_point](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_point)|
+|dev.mysql.com|[sysvar_rpl_semi_sync_master_wait_point](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_point)|
 
 ## rpl_semi_sync_slave_delay_master
 |name|value|
@@ -30265,61 +30265,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_gtid_purged](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_gtid_purged)|
 
-## show_slave_auth_info
-|name|value|
-|----|-----|
-|Name|`show_slave_auth_info`|
-|Command line|`--show-slave-auth-info[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Default value|`OFF`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_show-slave-auth-info](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#option_mysqld_show-slave-auth-info)|
-
-## immediate_server_version
-|name|value|
-|----|-----|
-|Name|`immediate_server_version`|
-|Type of variable|`integer`|
-|Scope|`session`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_immediate_server_version](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_immediate_server_version)|
-
-## original_server_version
-|name|value|
-|----|-----|
-|Name|`original_server_version`|
-|Type of variable|`integer`|
-|Scope|`session`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_original_server_version](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_original_server_version)|
-
-## rpl_semi_sync_master_wait_for_slave_count
-|name|value|
-|----|-----|
-|Name|`rpl_semi_sync_master_wait_for_slave_count`|
-|Command line|`--rpl-semi-sync-master-wait-for-slave-count=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1`|
-|Dynamic|`true`|
-|Range|from: `1` to: `65535`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_rpl_semi_sync_master_wait_for_slave_count](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count)|
-
 ## master_info_file
 |name|value|
 |----|-----|
@@ -30557,6 +30502,61 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_slave_rows_search_algorithms](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_slave_rows_search_algorithms)|
+
+## show_slave_auth_info
+|name|value|
+|----|-----|
+|Name|`show_slave_auth_info`|
+|Command line|`--show-slave-auth-info[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_show-slave-auth-info](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#option_mysqld_show-slave-auth-info)|
+
+## immediate_server_version
+|name|value|
+|----|-----|
+|Name|`immediate_server_version`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_immediate_server_version](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_immediate_server_version)|
+
+## original_server_version
+|name|value|
+|----|-----|
+|Name|`original_server_version`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_original_server_version](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_original_server_version)|
+
+## rpl_semi_sync_master_wait_for_slave_count
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_master_wait_for_slave_count`|
+|Command line|`--rpl-semi-sync-master-wait-for-slave-count=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`true`|
+|Range|from: `1` to: `65535`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_rpl_semi_sync_master_wait_for_slave_count](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count)|
 
 ## server_uuid
 |name|value|

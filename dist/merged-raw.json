@@ -7545,7 +7545,7 @@
                 },
                 {
                     "anchor": "sysvar_auto_increment_increment",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
                 }
             ]
         },
@@ -7569,7 +7569,7 @@
                 },
                 {
                     "anchor": "sysvar_auto_increment_offset",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
                 }
             ]
         },
@@ -9908,7 +9908,7 @@
                 },
                 {
                     "anchor": "sysvar_rpl_semi_sync_master_enabled",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
                 }
             ]
         },
@@ -9927,7 +9927,7 @@
                 },
                 {
                     "anchor": "sysvar_rpl_semi_sync_master_timeout",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
                 }
             ]
         },
@@ -9946,7 +9946,7 @@
                 },
                 {
                     "anchor": "sysvar_rpl_semi_sync_master_trace_level",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
                 }
             ]
         },
@@ -9965,7 +9965,7 @@
                 },
                 {
                     "anchor": "sysvar_rpl_semi_sync_master_wait_no_slave",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
                 }
             ]
         },
@@ -9989,7 +9989,7 @@
                 },
                 {
                     "anchor": "sysvar_rpl_semi_sync_master_wait_point",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
                 }
             ]
         },
@@ -35952,66 +35952,6 @@
                 }
             ]
         },
-        "show_slave_auth_info": {
-            "cli": "--show-slave-auth-info[={OFF|ON}]",
-            "default": "OFF",
-            "name": "show_slave_auth_info",
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_show-slave-auth-info",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
-                }
-            ]
-        },
-        "immediate_server_version": {
-            "dynamic": true,
-            "name": "immediate_server_version",
-            "scope": [
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_immediate_server_version",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
-                }
-            ]
-        },
-        "original_server_version": {
-            "dynamic": true,
-            "name": "original_server_version",
-            "scope": [
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_original_server_version",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
-                }
-            ]
-        },
-        "rpl_semi_sync_master_wait_for_slave_count": {
-            "cli": "--rpl-semi-sync-master-wait-for-slave-count=#",
-            "default": "1",
-            "dynamic": true,
-            "name": "rpl_semi_sync_master_wait_for_slave_count",
-            "range": {
-                "from": 1,
-                "to": 65535
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_rpl_semi_sync_master_wait_for_slave_count",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
-                }
-            ]
-        },
         "master_info_file": {
             "cli": "--master-info-file=file_name",
             "default": "master.info",
@@ -36284,6 +36224,66 @@
                 {
                     "anchor": "sysvar_slave_rows_search_algorithms",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html"
+                }
+            ]
+        },
+        "show_slave_auth_info": {
+            "cli": "--show-slave-auth-info[={OFF|ON}]",
+            "default": "OFF",
+            "name": "show_slave_auth_info",
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_show-slave-auth-info",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
+                }
+            ]
+        },
+        "immediate_server_version": {
+            "dynamic": true,
+            "name": "immediate_server_version",
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_immediate_server_version",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
+                }
+            ]
+        },
+        "original_server_version": {
+            "dynamic": true,
+            "name": "original_server_version",
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_original_server_version",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
+                }
+            ]
+        },
+        "rpl_semi_sync_master_wait_for_slave_count": {
+            "cli": "--rpl-semi-sync-master-wait-for-slave-count=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "rpl_semi_sync_master_wait_for_slave_count",
+            "range": {
+                "from": 1,
+                "to": 65535
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_rpl_semi_sync_master_wait_for_slave_count",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
                 }
             ]
         },

@@ -27885,54 +27885,6 @@
                 "45#sysvar_gtid_purged"
             ]
         },
-        "show_slave_auth_info": {
-            "cli": "--show-slave-auth-info[={OFF|ON}]",
-            "default": "OFF",
-            "name": "show_slave_auth_info",
-            "type": "boolean",
-            "ids": [
-                "21#option_mysqld_show-slave-auth-info"
-            ]
-        },
-        "immediate_server_version": {
-            "dynamic": true,
-            "name": "immediate_server_version",
-            "scope": [
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "21#sysvar_immediate_server_version"
-            ]
-        },
-        "original_server_version": {
-            "dynamic": true,
-            "name": "original_server_version",
-            "scope": [
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "21#sysvar_original_server_version"
-            ]
-        },
-        "rpl_semi_sync_master_wait_for_slave_count": {
-            "cli": "--rpl-semi-sync-master-wait-for-slave-count=#",
-            "default": "1",
-            "dynamic": true,
-            "name": "rpl_semi_sync_master_wait_for_slave_count",
-            "range": {
-                "from": 1,
-                "to": 65535
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "21#sysvar_rpl_semi_sync_master_wait_for_slave_count"
-            ]
-        },
         "master_info_file": {
             "cli": "--master-info-file=file_name",
             "default": "master.info",
@@ -28158,6 +28110,54 @@
             ],
             "ids": [
                 "24#sysvar_slave_rows_search_algorithms"
+            ]
+        },
+        "show_slave_auth_info": {
+            "cli": "--show-slave-auth-info[={OFF|ON}]",
+            "default": "OFF",
+            "name": "show_slave_auth_info",
+            "type": "boolean",
+            "ids": [
+                "21#option_mysqld_show-slave-auth-info"
+            ]
+        },
+        "immediate_server_version": {
+            "dynamic": true,
+            "name": "immediate_server_version",
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "21#sysvar_immediate_server_version"
+            ]
+        },
+        "original_server_version": {
+            "dynamic": true,
+            "name": "original_server_version",
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "21#sysvar_original_server_version"
+            ]
+        },
+        "rpl_semi_sync_master_wait_for_slave_count": {
+            "cli": "--rpl-semi-sync-master-wait-for-slave-count=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "rpl_semi_sync_master_wait_for_slave_count",
+            "range": {
+                "from": 1,
+                "to": 65535
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "21#sysvar_rpl_semi_sync_master_wait_for_slave_count"
             ]
         },
         "server_uuid": {
@@ -30681,7 +30681,7 @@
         "https://mariadb.com/kb/en/library/documentation/oqgraph-system-and-status-variables/",
         "https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/",
         "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html",
-        "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html",
+        "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html",
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html",
         "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html",
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html",

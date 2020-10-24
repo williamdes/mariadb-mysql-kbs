@@ -132,6 +132,6 @@
       ]
     }
   ],
-  "name": "replication-options-master",
-  "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
+  "name": "replication-options-source",
+  "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html"
 }

@@ -7526,6 +7526,7 @@
             ]
         },
         "auto_increment_increment": {
+            "cli": "--auto-increment-increment[=#]",
             "default": "1",
             "dynamic": true,
             "name": "auto_increment_increment",
@@ -7542,14 +7543,11 @@
                 {
                     "anchor": "auto_increment_increment",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_auto_increment_increment",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
                 }
             ]
         },
         "auto_increment_offset": {
+            "cli": "--auto-increment-offset[=#]",
             "default": "1",
             "dynamic": true,
             "name": "auto_increment_offset",
@@ -7566,10 +7564,6 @@
                 {
                     "anchor": "auto_increment_offset",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_auto_increment_offset",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
                 }
             ]
         },
@@ -7743,6 +7737,7 @@
         },
         "binlog_format": {
             "cli": "--binlog-format=format",
+            "default": "ROW",
             "dynamic": true,
             "name": "binlog_format",
             "scope": [
@@ -9115,6 +9110,7 @@
         },
         "sync_binlog": {
             "cli": "--sync-binlog=#",
+            "default": "1",
             "dynamic": true,
             "name": "sync_binlog",
             "range": {
@@ -9892,6 +9888,7 @@
             ]
         },
         "rpl_semi_sync_master_enabled": {
+            "cli": "--rpl-semi-sync-master-enabled[={0|1}]",
             "default": "OFF",
             "dynamic": true,
             "name": "rpl_semi_sync_master_enabled",
@@ -9903,17 +9900,18 @@
                 {
                     "anchor": "rpl_semi_sync_master_enabled",
                     "url": "https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/"
-                },
-                {
-                    "anchor": "sysvar_rpl_semi_sync_master_enabled",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
                 }
             ]
         },
         "rpl_semi_sync_master_timeout": {
-            "default": "10000",
+            "cli": "--rpl-semi-sync-master-timeout[=#]",
+            "default": "10000 (10 seconds)",
             "dynamic": true,
             "name": "rpl_semi_sync_master_timeout",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
             "scope": [
                 "global"
             ],
@@ -9922,17 +9920,18 @@
                 {
                     "anchor": "rpl_semi_sync_master_timeout",
                     "url": "https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/"
-                },
-                {
-                    "anchor": "sysvar_rpl_semi_sync_master_timeout",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
                 }
             ]
         },
         "rpl_semi_sync_master_trace_level": {
+            "cli": "--rpl-semi-sync-master-trace-level[=#]",
             "default": "32",
             "dynamic": true,
             "name": "rpl_semi_sync_master_trace_level",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
             "scope": [
                 "global"
             ],
@@ -9941,14 +9940,11 @@
                 {
                     "anchor": "rpl_semi_sync_master_trace_level",
                     "url": "https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/"
-                },
-                {
-                    "anchor": "sysvar_rpl_semi_sync_master_trace_level",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
                 }
             ]
         },
         "rpl_semi_sync_master_wait_no_slave": {
+            "cli": "--rpl-semi-sync-master-wait-no-slave[={0|1}]",
             "default": "ON",
             "dynamic": true,
             "name": "rpl_semi_sync_master_wait_no_slave",
@@ -9960,16 +9956,12 @@
                 {
                     "anchor": "rpl_semi_sync_master_wait_no_slave",
                     "url": "https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/"
-                },
-                {
-                    "anchor": "sysvar_rpl_semi_sync_master_wait_no_slave",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
                 }
             ]
         },
         "rpl_semi_sync_master_wait_point": {
             "cli": "--rpl-semi-sync-master-wait-point=value",
-            "default": "AFTER_SYNC",
+            "default": "AFTER_COMMIT",
             "dynamic": true,
             "name": "rpl_semi_sync_master_wait_point",
             "scope": [
@@ -9984,10 +9976,6 @@
                 {
                     "anchor": "rpl_semi_sync_master_wait_point",
                     "url": "https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/"
-                },
-                {
-                    "anchor": "sysvar_rpl_semi_sync_master_wait_point",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
                 }
             ]
         },
@@ -35440,6 +35428,7 @@
         },
         "binlog_error_action": {
             "cli": "--binlog-error-action[=value]",
+            "default": "ABORT_SERVER",
             "dynamic": true,
             "name": "binlog_error_action",
             "scope": [
@@ -35946,66 +35935,6 @@
                 {
                     "anchor": "sysvar_gtid_purged",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html"
-                }
-            ]
-        },
-        "show_slave_auth_info": {
-            "cli": "--show-slave-auth-info[={OFF|ON}]",
-            "default": "OFF",
-            "name": "show_slave_auth_info",
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_show-slave-auth-info",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
-                }
-            ]
-        },
-        "immediate_server_version": {
-            "dynamic": true,
-            "name": "immediate_server_version",
-            "scope": [
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_immediate_server_version",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
-                }
-            ]
-        },
-        "original_server_version": {
-            "dynamic": true,
-            "name": "original_server_version",
-            "scope": [
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_original_server_version",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
-                }
-            ]
-        },
-        "rpl_semi_sync_master_wait_for_slave_count": {
-            "cli": "--rpl-semi-sync-master-wait-for-slave-count=#",
-            "default": "1",
-            "dynamic": true,
-            "name": "rpl_semi_sync_master_wait_for_slave_count",
-            "range": {
-                "from": 1,
-                "to": 65535
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_rpl_semi_sync_master_wait_for_slave_count",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html"
                 }
             ]
         },

@@ -213,8 +213,8 @@ const pages = [
         name: 'replication-options-replica',
     },
     {
-        url: KB_URL + 'replication-options-master.html',
-        name: 'replication-options-master',
+        url: KB_URL + 'replication-options-source.html',
+        name: 'replication-options-source',
     },
     {
         url: KB_URL + 'replication-options.html',

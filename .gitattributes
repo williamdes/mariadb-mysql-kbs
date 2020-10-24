@@ -1,16 +1,12 @@
 # Any change here will affect the distributed archive for Debian and other providers..
-data/* linguist-detectable=false
-dist/* linguist-detectable=false
-docs/* linguist-detectable=false
-test/data/* linguist-detectable=false
-data/* linguist-vendored
-dist/* linguist-vendored
-docs/* linguist-documentation
-test/data/* linguist-vendored
+data/* linguist-vendored linguist-detectable=false
+dist/* linguist-vendored linguist-detectable=false
+dist/merged-ultraslim.* linguist-vendored
+docs/* linguist-detectable=false linguist-documentation
 /docs export-ignore
 /scripts export-ignore
 /test/*.js export-ignore
-/test/data/*.html export-ignore
+/test/data/*.html linguist-vendored export-ignore linguist-detectable=false
 /.github export-ignore
 /.prettierignore export-ignore
 /CODEOWNERS export-ignore

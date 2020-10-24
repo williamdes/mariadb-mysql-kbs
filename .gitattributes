@@ -1,5 +1,6 @@
 # Any change here will affect the distributed archive for Debian and other providers..
 data/* linguist-vendored linguist-detectable=false
+dist/merged-ultraslim.* linguist-vendored -diff linguist-generated=true
 dist/* linguist-vendored linguist-detectable=false
 dist/merged-ultraslim.* linguist-vendored
 docs/* linguist-detectable=false linguist-documentation

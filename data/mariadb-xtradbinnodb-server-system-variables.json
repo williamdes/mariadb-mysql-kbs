@@ -1951,7 +1951,7 @@
     },
     {
       "cli": "--innodb-log-optimize-ddl={0|1}",
-      "default": "ON (<= MariaDB 10.5.0), OFF (>= MariaDB 10.5.1)",
+      "default": "OFF (>= MariaDB 10.5.1, MariaDB 10.4.16, MariaDB 10.3.26, MariaDB 10.2.35), ON (<= MariaDB 10.5.0, MariaDB 10.4.15, MariaDB 10.3.25, MariaDB 10.2.34)",
       "dynamic": true,
       "id": "innodb_log_optimize_ddl",
       "name": "innodb_log_optimize_ddl",
@@ -2017,8 +2017,8 @@
     },
     {
       "cli": "--innodb-max-dirty-pages-pct=#",
-      "default": "75",
-      "dynamic": false,
+      "default": "75.000000",
+      "dynamic": true,
       "id": "innodb_max_dirty_pages_pct",
       "name": "innodb_max_dirty_pages_pct",
       "range": {

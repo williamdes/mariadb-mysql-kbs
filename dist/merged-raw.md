@@ -25907,7 +25907,7 @@
 |Command line|`--innodb-log-optimize-ddl={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON (<= MariaDB 10.5.0), OFF (>= MariaDB 10.5.1)`|
+|Default value|`OFF (>= MariaDB 10.5.1, MariaDB 10.4.16, MariaDB 10.3.26, MariaDB 10.2.35), ON (<= MariaDB 10.5.0, MariaDB 10.4.15, MariaDB 10.3.25, MariaDB 10.2.34)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -25988,6 +25988,7 @@
 |Command line|`--innodb-max-dirty-pages-pct=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Dynamic|`true`|
 |Range|from: `0`|
 
 ### Documentation(s)
@@ -31449,6 +31450,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_block_encryption_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_block_encryption_mode)|
+
+## caching_sha2_password_digest_rounds
+|name|value|
+|----|-----|
+|Name|`caching_sha2_password_digest_rounds`|
+|Command line|`--caching-sha2-password-digest-rounds=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`5000`|
+|Dynamic|`false`|
+|Range|from: `5000` to: `4095000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_caching_sha2_password_digest_rounds](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_caching_sha2_password_digest_rounds)|
 
 ## caching_sha2_password_auto_generate_rsa_keys
 |name|value|

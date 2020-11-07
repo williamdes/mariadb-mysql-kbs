@@ -30697,7 +30697,7 @@
         },
         "innodb_log_optimize_ddl": {
             "cli": "--innodb-log-optimize-ddl={0|1}",
-            "default": "ON (<= MariaDB 10.5.0), OFF (>= MariaDB 10.5.1)",
+            "default": "OFF (>= MariaDB 10.5.1, MariaDB 10.4.16, MariaDB 10.3.26, MariaDB 10.2.35), ON (<= MariaDB 10.5.0, MariaDB 10.4.15, MariaDB 10.3.25, MariaDB 10.2.34)",
             "dynamic": true,
             "name": "innodb_log_optimize_ddl",
             "scope": [
@@ -30799,6 +30799,7 @@
         },
         "innodb_max_dirty_pages_pct": {
             "cli": "--innodb-max-dirty-pages-pct=#",
+            "dynamic": true,
             "name": "innodb_max_dirty_pages_pct",
             "range": {
                 "from": 0
@@ -37186,6 +37187,26 @@
             "ids": [
                 {
                     "anchor": "sysvar_block_encryption_mode",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "caching_sha2_password_digest_rounds": {
+            "cli": "--caching-sha2-password-digest-rounds=#",
+            "default": "5000",
+            "dynamic": false,
+            "name": "caching_sha2_password_digest_rounds",
+            "range": {
+                "from": 5000,
+                "to": 4095000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_caching_sha2_password_digest_rounds",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

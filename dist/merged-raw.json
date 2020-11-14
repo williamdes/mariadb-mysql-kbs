@@ -38638,6 +38638,26 @@
                 }
             ]
         },
+        "thread_pool_dedicated_listeners": {
+            "cli": "--thread-pool-dedicated-listeners[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "thread_pool_dedicated_listeners",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "validValues": [
+                "OFF",
+                "ON"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_thread_pool_dedicated_listeners",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "thread_pool_high_priority_connection": {
             "cli": "--thread-pool-high-priority-connection=#",
             "default": "0",
@@ -38675,6 +38695,26 @@
             "ids": [
                 {
                     "anchor": "sysvar_thread_pool_max_active_query_threads",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "thread_pool_max_transactions_limit": {
+            "cli": "--thread-pool-max-transactions-limit=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "thread_pool_max_transactions_limit",
+            "range": {
+                "from": 0,
+                "to": 1000000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_thread_pool_max_transactions_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

@@ -31449,6 +31449,20 @@
                 }
             ]
         },
+        "innodb_read_only_compressed": {
+            "cli": "--innodb-read-only-compressed, --skip-innodb-read-only-compressed",
+            "default": "ON",
+            "dynamic": false,
+            "name": "innodb_read_only_compressed",
+            "scope": [],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "innodb_read_only_compressed",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
+                }
+            ]
+        },
         "innodb_recovery_stats": {
             "default": "OFF",
             "dynamic": false,
@@ -38578,6 +38592,26 @@
             "ids": [
                 {
                     "anchor": "sysvar_tablespace_definition_cache",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "temptable_max_mmap": {
+            "cli": "--temptable-max-mmap=#",
+            "default": "1073741824",
+            "dynamic": true,
+            "name": "temptable_max_mmap",
+            "range": {
+                "from": 0,
+                "to": 2
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_temptable_max_mmap",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

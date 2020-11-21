@@ -2419,6 +2419,15 @@
       "type": "boolean"
     },
     {
+      "cli": "--innodb-read-only-compressed, --skip-innodb-read-only-compressed",
+      "default": "ON",
+      "dynamic": false,
+      "id": "innodb_read_only_compressed",
+      "name": "innodb_read_only_compressed",
+      "scope": [],
+      "type": "boolean"
+    },
+    {
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_recovery_stats",

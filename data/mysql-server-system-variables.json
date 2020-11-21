@@ -3430,6 +3430,21 @@
       "type": "integer"
     },
     {
+      "cli": "--temptable-max-mmap=#",
+      "default": "1073741824",
+      "dynamic": true,
+      "id": "sysvar_temptable_max_mmap",
+      "name": "temptable_max_mmap",
+      "range": {
+        "from": 0,
+        "to": 2
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--temptable-max-ram=#",
       "default": "1073741824",
       "dynamic": true,

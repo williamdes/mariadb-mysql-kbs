@@ -26464,6 +26464,21 @@
 |mariadb.com|[innodb_read_only](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_read_only)|
 |dev.mysql.com|[sysvar_innodb_read_only](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_only)|
 
+## innodb_read_only_compressed
+|name|value|
+|----|-----|
+|Name|`innodb_read_only_compressed`|
+|Command line|`--innodb-read-only-compressed, --skip-innodb-read-only-compressed`|
+|Type of variable|`boolean`|
+|Scope|``|
+|Default value|`ON`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_read_only_compressed](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_read_only_compressed)|
+
 ## innodb_recovery_stats
 |name|value|
 |----|-----|
@@ -32641,6 +32656,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_tablespace_definition_cache](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tablespace_definition_cache)|
+
+## temptable_max_mmap
+|name|value|
+|----|-----|
+|Name|`temptable_max_mmap`|
+|Command line|`--temptable-max-mmap=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1073741824`|
+|Dynamic|`true`|
+|Range|from: `0` to: `2`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_temptable_max_mmap](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_temptable_max_mmap)|
 
 ## temptable_max_ram
 |name|value|

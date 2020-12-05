@@ -266,7 +266,7 @@
       ]
     },
     {
-      "cli": "--concurrent-insert[=name]",
+      "cli": "--concurrent-insert[=value]",
       "default": "AUTO",
       "dynamic": true,
       "id": "concurrent_insert",

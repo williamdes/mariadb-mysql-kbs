@@ -11663,6 +11663,7 @@
             ]
         },
         "concurrent_insert": {
+            "cli": "--concurrent-insert[=value]",
             "default": "AUTO",
             "dynamic": true,
             "name": "concurrent_insert",

@@ -12693,6 +12693,7 @@
 |name|value|
 |----|-----|
 |Name|`concurrent_insert`|
+|Command line|`--concurrent-insert[=value]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`AUTO`|

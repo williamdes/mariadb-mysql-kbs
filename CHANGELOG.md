@@ -5,6 +5,30 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+### Changed
+
+- [1f7868b](https://github.com/williamdes/mariadb-mysql-kbs/commit/1f7868baba0df415ec7fb5e4358494127915bafe) update: [MariaDB] updates
+- [fce5e6a](https://github.com/williamdes/mariadb-mysql-kbs/commit/fce5e6ab7c105d8e1b9493724ea942ee8aea84c3) update: [MariaDB] && [MySQL] updates
+- [8aabb2b](https://github.com/williamdes/mariadb-mysql-kbs/commit/8aabb2b929f601a29645df0c8c55166f18e64a76) update: [MariaDB] && [MySQL] updates
+- [deaa820](https://github.com/williamdes/mariadb-mysql-kbs/commit/deaa8204e46a2af4947489d348a58331367d5d94) update: [MariaDB] && [MySQL] updates
+- [fd5e5de](https://github.com/williamdes/mariadb-mysql-kbs/commit/fd5e5de7c0019df37d905ae1e28ee4340d16cc51) update: 🤖 Some updates 🤖
+- [4278ad9](https://github.com/williamdes/mariadb-mysql-kbs/commit/4278ad9b212e6679d5c19d27d49f516f01f03863) update: [MariaDB] && [MySQL] updates
+- [37a7156](https://github.com/williamdes/mariadb-mysql-kbs/commit/37a7156d2027122955fc8087b1d056f54dd1ca74) update: [MariaDB] && [MySQL] updates
+- [74c152c](https://github.com/williamdes/mariadb-mysql-kbs/commit/74c152cc366fa0bd9fcdf5e774aa6a4002a52fa8) update: [MariaDB] updates
+- [3b86e1f](https://github.com/williamdes/mariadb-mysql-kbs/commit/3b86e1f34a60651c071289b920bd52a6ad0bac4c) update: [MySQL] updates
+
+### Fixed
+
+- [4d33f7e](https://github.com/williamdes/mariadb-mysql-kbs/commit/4d33f7eb822920e5336e64d0e8f4930e336257c9) fix: Rename master to source for MySQL replication options
+
+### Others
+
+- [3550bd1](https://github.com/williamdes/mariadb-mysql-kbs/commit/3550bd164152a29e1bce45285f208d97032a2d4d) chore: update dependencies
+- [35b9c29](https://github.com/williamdes/mariadb-mysql-kbs/commit/35b9c2998f2f8c2abd2c136836c157e5a0749755) ci: update lint and analyse workflows
+- [7c08136](https://github.com/williamdes/mariadb-mysql-kbs/commit/7c08136d1042b62c50a076e4ecc4f2415576de02) chore: change php requirements to "^7.1 || ^8.0"
+- [b48b3be](https://github.com/williamdes/mariadb-mysql-kbs/commit/b48b3bedd294dfb873f2992692ff8cf19b3d6924) chore: remove .gitignore from vendor bundles
+
 ## [v1.2.11]
 
 ### Changed

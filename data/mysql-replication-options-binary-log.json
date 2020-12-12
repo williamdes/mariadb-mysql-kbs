@@ -548,7 +548,7 @@
     },
     {
       "cli": "--transaction-write-set-extraction[=value]",
-      "default": "OFF",
+      "default": "XXHASH64",
       "dynamic": true,
       "id": "sysvar_transaction_write_set_extraction",
       "name": "transaction_write_set_extraction",

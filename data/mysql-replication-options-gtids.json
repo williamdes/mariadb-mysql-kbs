@@ -39,7 +39,6 @@
     },
     {
       "cli": "--gtid-executed-compression-period=#",
-      "default": "1000",
       "dynamic": true,
       "id": "sysvar_gtid_executed_compression_period",
       "name": "gtid_executed_compression_period",

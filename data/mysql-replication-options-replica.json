@@ -417,8 +417,7 @@
       "id": "sysvar_slave_checkpoint_period",
       "name": "slave_checkpoint_period",
       "range": {
-        "from": 1,
-        "to": 4
+        "from": 1
       },
       "scope": [
         "global"
@@ -484,7 +483,8 @@
       "id": "sysvar_slave_net_timeout",
       "name": "slave_net_timeout",
       "range": {
-        "from": 1
+        "from": 1,
+        "to": 4294967295
       },
       "scope": [
         "global"
@@ -623,9 +623,13 @@
       ]
     },
     {
+      "default": "0",
       "dynamic": true,
       "id": "sysvar_sql_slave_skip_counter",
       "name": "sql_slave_skip_counter",
+      "range": {
+        "from": 0
+      },
       "scope": [
         "global"
       ],

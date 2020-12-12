@@ -8810,8 +8810,7 @@
             "dynamic": true,
             "name": "slave_net_timeout",
             "range": {
-                "from": 1,
-                "to": 31536000
+                "from": 1
             },
             "scope": [
                 "global"
@@ -9097,8 +9096,12 @@
             ]
         },
         "sql_slave_skip_counter": {
+            "default": "0",
             "dynamic": true,
             "name": "sql_slave_skip_counter",
+            "range": {
+                "from": 0
+            },
             "scope": [
                 "global"
             ],
@@ -18125,7 +18128,6 @@
             "scope": [
                 "session"
             ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "pseudo_slave_mode",
@@ -34732,6 +34734,10 @@
                 "session"
             ],
             "type": "boolean",
+            "validValues": [
+                "ON",
+                "OFF"
+            ],
             "ids": [
                 {
                     "anchor": "sysvar_ndbinfo_show_hidden",
@@ -34740,13 +34746,11 @@
             ]
         },
         "ndbinfo_table_prefix": {
-            "cli": "--ndbinfo-table-prefix=name",
             "default": "ndb$",
-            "dynamic": true,
+            "dynamic": false,
             "name": "ndbinfo_table_prefix",
             "scope": [
-                "global",
-                "session"
+                "global"
             ],
             "type": "string",
             "ids": [
@@ -35790,7 +35794,7 @@
         },
         "transaction_write_set_extraction": {
             "cli": "--transaction-write-set-extraction[=value]",
-            "default": "OFF",
+            "default": "0",
             "dynamic": true,
             "name": "transaction_write_set_extraction",
             "scope": [
@@ -35879,7 +35883,6 @@
         },
         "gtid_executed_compression_period": {
             "cli": "--gtid-executed-compression-period=#",
-            "default": "1000",
             "dynamic": true,
             "name": "gtid_executed_compression_period",
             "range": {
@@ -36152,8 +36155,7 @@
             "dynamic": true,
             "name": "slave_checkpoint_period",
             "range": {
-                "from": 1,
-                "to": 4
+                "from": 1
             },
             "scope": [
                 "global"

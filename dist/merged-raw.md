@@ -7401,7 +7401,7 @@
 |Scope|`global`|
 |Default value|`60`|
 |Dynamic|`true`|
-|Range|from: `1` to: `31536000`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7610,7 +7610,9 @@
 |Name|`sql_slave_skip_counter`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15092,7 +15094,6 @@
 |name|value|
 |----|-----|
 |Name|`pseudo_slave_mode`|
-|Type of variable|`integer`|
 |Scope|`session`|
 |Dynamic|`true`|
 
@@ -29238,6 +29239,7 @@
 |Scope|`global`, `session`|
 |Default value|`OFF`|
 |Dynamic|`true`|
+|Valid value(s)|`ON`, `OFF`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29248,11 +29250,10 @@
 |name|value|
 |----|-----|
 |Name|`ndbinfo_table_prefix`|
-|Command line|`--ndbinfo-table-prefix=name`|
 |Type of variable|`string`|
-|Scope|`global`, `session`|
+|Scope|`global`|
 |Default value|`ndb$`|
-|Dynamic|`true`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -30141,7 +30142,7 @@
 |Command line|`--transaction-write-set-extraction[=value]`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`OFF`|
+|Default value|`0`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -30216,7 +30217,6 @@
 |Command line|`--gtid-executed-compression-period=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1000`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -30451,7 +30451,7 @@
 |Scope|`global`|
 |Default value|`300`|
 |Dynamic|`true`|
-|Range|from: `1` to: `4`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|

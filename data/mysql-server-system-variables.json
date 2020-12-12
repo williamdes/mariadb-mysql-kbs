@@ -2473,7 +2473,7 @@
       "scope": [
         "session"
       ],
-      "type": "integer"
+      "type": "boolean"
     },
     {
       "dynamic": true,

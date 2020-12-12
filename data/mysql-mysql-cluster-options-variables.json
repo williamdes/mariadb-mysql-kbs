@@ -882,17 +882,19 @@
         "global",
         "session"
       ],
-      "type": "boolean"
+      "type": "boolean",
+      "validValues": [
+        "ON",
+        "OFF"
+      ]
     },
     {
-      "cli": "--ndbinfo-table-prefix=name",
       "default": "ndb$",
-      "dynamic": true,
+      "dynamic": false,
       "id": "sysvar_ndbinfo_table_prefix",
       "name": "ndbinfo_table_prefix",
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "string"
     },

@@ -186,6 +186,21 @@
       ]
     },
     {
+      "cli": "--audit-log-prune-seconds=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_audit_log_prune_seconds",
+      "name": "audit_log_prune_seconds",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--audit-log-read-buffer-size=#",
       "id": "sysvar_audit_log_read_buffer_size",
       "name": "audit_log_read_buffer_size",

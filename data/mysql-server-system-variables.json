@@ -3517,21 +3517,6 @@
       "type": "integer"
     },
     {
-      "cli": "--thread-pool-dedicated-listeners[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "sysvar_thread_pool_dedicated_listeners",
-      "name": "thread_pool_dedicated_listeners",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean",
-      "validValues": [
-        "OFF",
-        "ON"
-      ]
-    },
-    {
       "cli": "--thread-pool-high-priority-connection=#",
       "default": "0",
       "dynamic": true,
@@ -3556,21 +3541,6 @@
       "range": {
         "from": 0,
         "to": 512
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--thread-pool-max-transactions-limit=#",
-      "default": "0",
-      "dynamic": true,
-      "id": "sysvar_thread_pool_max_transactions_limit",
-      "name": "thread_pool_max_transactions_limit",
-      "range": {
-        "from": 0,
-        "to": 1000000
       },
       "scope": [
         "global"

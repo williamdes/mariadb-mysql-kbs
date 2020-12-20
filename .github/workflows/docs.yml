@@ -8,7 +8,7 @@ jobs:
     run-sudo-bot-build-docs:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v1
+            - uses: actions/checkout@v2
               with:
                   submodules: true
             - uses: actions/setup-node@v1
@@ -24,18 +24,19 @@ jobs:
                   key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-yarn-
-            - name: composer cache module
-              uses: actions/cache@v2
-              with:
-                  path: ~/.composer/cache/
-                  key: composer-cache
             - name: Install
               run: |
                   yarn install
-            - name: Build docs
-              run: |
-                  ls -lah
-                  ./scripts/apidoc-generate.sh
+            - name: Clean docs
+              run: rm -rf ./docs/*
+            - name: build doctum docs
+              uses: sudo-bot/action-doctum@dev
+              with:
+                  config-file: ./scripts/doctum-config.php
+                  method: "update"
+                  cli-args: "--output-format=github --no-ansi --no-progress -v --force"
+            - name: Move docs
+              run: mv ./docs/build/* ./docs/
             - name: Run sudo-bot
               run: |
                   openssl aes-256-cbc -K ${{ secrets.ENCRYPTED_KEY }} -iv ${{ secrets.ENCRYPTED_IV }} -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d

@@ -35,8 +35,10 @@ jobs:
                   config-file: ./scripts/doctum-config.php
                   method: "update"
                   cli-args: "--output-format=github --no-ansi --no-progress -v --force"
+            - name: Own the docs
+              run: sudo chown -R $USER:$USER ./docs/build/* && sudo chmod 777 -R ./docs/build/*
             - name: Move docs
-              run: sudo chown -R $USER:$USER ./docs/build/* && mv ./docs/build/* ./docs/
+              run: mv ./docs/build/* ./docs/
             - name: Run sudo-bot
               run: |
                   openssl aes-256-cbc -K ${{ secrets.ENCRYPTED_KEY }} -iv ${{ secrets.ENCRYPTED_IV }} -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d

@@ -36,7 +36,7 @@ jobs:
                   method: "update"
                   cli-args: "--output-format=github --no-ansi --no-progress -v --force"
             - name: Move docs
-              run: chmod 777 -R ./docs/build/* && mv ./docs/build/* ./docs/
+              run: sudo chown -R $USER:$USER ./docs/build/* && mv ./docs/build/* ./docs/
             - name: Run sudo-bot
               run: |
                   openssl aes-256-cbc -K ${{ secrets.ENCRYPTED_KEY }} -iv ${{ secrets.ENCRYPTED_IV }} -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d

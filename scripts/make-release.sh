@@ -54,8 +54,7 @@ if [[ $url =~ $re ]]; then
 fi
 
 
-generate_post_data()
-{
+function generate_post_data {
   cat <<EOF
 {
   "tag_name": "v$version",
@@ -66,6 +65,17 @@ generate_post_data()
   "prerelease": false
 }
 EOF
+}
+
+function uploadArtifact {
+    FILE_NAME="$1"
+    MIME_TYPE="$2"
+    ARTIFACT_OUT=$(curl -# -S -s -L \
+        -H "Authorization: token ${GITHUB_TOKEN}" \
+        -H "Content-Type: ${MIME_TYPE}" \
+        --data-binary @${FILE_NAME} \
+        "https://uploads.github.com/repos/$user/$repo/releases/$releaseId/assets?name=${FILE_NAME}")
+    echo "Uploaded: $(echo $ARTIFACT_OUT | jq -r '.name')."
 }
 
 tmp=$(mktemp)
@@ -133,14 +143,11 @@ echo "Make and publish the signature for this release."
 read -r -p "Are you sure to sign and upload to the draft? [Y/n]" response
 response=${response,,} # tolower
 if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
-    curl -L https://github.com/williamdes/mariadb-mysql-kbs/archive/v$version.tar.gz -O
+    curl -L https://github.com/$user/$repo/archive/v$version.tar.gz -O
     gpg --detach-sign --armor --local-user "${GPG_KEY}" v$version.tar.gz
     releaseId=$(echo $RELEASE_OUT | jq -r '.id')
-    curl -L \
-         -H "Authorization: token $token" \
-         -H "Content-Type: application/pgp-signature" \
-         --data-binary @v$version.tar.gz.asc \
-         "https://uploads.github.com/repos/$user/$repo/releases/$releaseId/assets?name=v$version.tar.gz.asc"
+    echo "Created release: $(echo $RELEASE_OUT | jq -r '.html_url')"
+    uploadArtifact "v$version.tar.gz.asc" 'application/pgp-signature'
 fi
 
 echo "Done."

@@ -5,7 +5,7 @@
     "type": "library",
     "readme": "https://github.com/williamdes/mariadb-mysql-kbs/blob/main/README.md",
     "license": "MPL-2.0",
-    "version": "1.2.11",
+    "version": "1.2.12",
     "keywords": [
         "mariadb",
         "mysql",

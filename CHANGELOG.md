@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [b78197e](https://github.com/williamdes/mariadb-mysql-kbs/commit/b78197e1c16522c86fab4b23c8b75050efd27dd0) update: [MySQL] updates
+- [537d185](https://github.com/williamdes/mariadb-mysql-kbs/commit/537d1853dbe02c175ad917f17bd1fbf852a7ff06) update: [MySQL] updates
 - [1f7868b](https://github.com/williamdes/mariadb-mysql-kbs/commit/1f7868baba0df415ec7fb5e4358494127915bafe) update: [MariaDB] updates
 - [fce5e6a](https://github.com/williamdes/mariadb-mysql-kbs/commit/fce5e6ab7c105d8e1b9493724ea942ee8aea84c3) update: [MariaDB] && [MySQL] updates
 - [8aabb2b](https://github.com/williamdes/mariadb-mysql-kbs/commit/8aabb2b929f601a29645df0c8c55166f18e64a76) update: [MariaDB] && [MySQL] updates
@@ -20,10 +22,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- [a8a7893](https://github.com/williamdes/mariadb-mysql-kbs/commit/a8a78939ccad4937600d06364f265b79745b1b9a) fix: KBEntry::jsonSerialize phpdoc block
 - [4d33f7e](https://github.com/williamdes/mariadb-mysql-kbs/commit/4d33f7eb822920e5336e64d0e8f4930e336257c9) fix: Rename master to source for MySQL replication options
+
+### Features
+
+- [2402554](https://github.com/williamdes/mariadb-mysql-kbs/commit/240255492c4f19a895e0422e8e509caecce27928) feat: improve release script
+- [632dc1c](https://github.com/williamdes/mariadb-mysql-kbs/commit/632dc1cc09142588f5443c8d6c419215d233cb70) feat: update documentation submodule
+- [c9bcc1c](https://github.com/williamdes/mariadb-mysql-kbs/commit/c9bcc1cacde7f2932e1015499b4fc277f6621e62) feat: improve API docs config
 
 ### Others
 
+- [bba46a3](https://github.com/williamdes/mariadb-mysql-kbs/commit/bba46a3ac03b1d999786a4f1f0bb9de3c6f1d59c) ci: use sudo-bot/action-doctum
 - [3550bd1](https://github.com/williamdes/mariadb-mysql-kbs/commit/3550bd164152a29e1bce45285f208d97032a2d4d) chore: update dependencies
 - [35b9c29](https://github.com/williamdes/mariadb-mysql-kbs/commit/35b9c2998f2f8c2abd2c136836c157e5a0749755) ci: update lint and analyse workflows
 - [7c08136](https://github.com/williamdes/mariadb-mysql-kbs/commit/7c08136d1042b62c50a076e4ecc4f2415576de02) chore: change php requirements to "^7.1 || ^8.0"

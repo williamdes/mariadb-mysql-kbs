@@ -36109,6 +36109,38 @@
                 }
             ]
         },
+        "replication_optimize_for_static_plugin_config": {
+            "cli": "--replication-optimize-for-static-plugin-config[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "replication_optimize_for_static_plugin_config",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_replication_optimize_for_static_plugin_config",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html"
+                }
+            ]
+        },
+        "replication_sender_observe_commit_only": {
+            "cli": "--replication-sender-observe-commit-only[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "replication_sender_observe_commit_only",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_replication_sender_observe_commit_only",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html"
+                }
+            ]
+        },
         "rpl_read_size": {
             "cli": "--rpl-read-size=#",
             "default": "8192",

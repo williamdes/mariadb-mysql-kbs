@@ -30410,6 +30410,36 @@
 |------|----|
 |dev.mysql.com|[sysvar_relay_log_info_repository](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_relay_log_info_repository)|
 
+## replication_optimize_for_static_plugin_config
+|name|value|
+|----|-----|
+|Name|`replication_optimize_for_static_plugin_config`|
+|Command line|`--replication-optimize-for-static-plugin-config[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_replication_optimize_for_static_plugin_config](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_replication_optimize_for_static_plugin_config)|
+
+## replication_sender_observe_commit_only
+|name|value|
+|----|-----|
+|Name|`replication_sender_observe_commit_only`|
+|Command line|`--replication-sender-observe-commit-only[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_replication_sender_observe_commit_only](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_replication_sender_observe_commit_only)|
+
 ## rpl_read_size
 |name|value|
 |----|-----|

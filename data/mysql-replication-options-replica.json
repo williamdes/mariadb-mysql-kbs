@@ -299,6 +299,28 @@
       "type": "integer"
     },
     {
+      "cli": "--replication-optimize-for-static-plugin-config[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_replication_optimize_for_static_plugin_config",
+      "name": "replication_optimize_for_static_plugin_config",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--replication-sender-observe-commit-only[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_replication_sender_observe_commit_only",
+      "name": "replication_sender_observe_commit_only",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--report-host=host_name",
       "dynamic": false,
       "id": "sysvar_report_host",

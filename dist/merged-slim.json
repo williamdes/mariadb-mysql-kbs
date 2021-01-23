@@ -7102,6 +7102,7 @@
         "slave_type_conversions": {
             "cli": "--slave-type-conversions=set",
             "default": "",
+            "dynamic": true,
             "name": "slave_type_conversions",
             "scope": [
                 "global"

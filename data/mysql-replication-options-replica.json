@@ -630,7 +630,7 @@
     {
       "cli": "--slave-type-conversions=set",
       "default": "",
-      "dynamic": false,
+      "dynamic": true,
       "id": "sysvar_slave_type_conversions",
       "name": "slave_type_conversions",
       "scope": [

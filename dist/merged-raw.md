@@ -7580,6 +7580,7 @@
 |Type of variable|`set`|
 |Scope|`global`|
 |Default value|``|
+|Dynamic|`true`|
 |Valid value(s)|`ALL_LOSSY`, `ALL_NON_LOSSY`|
 
 ### Documentation(s)

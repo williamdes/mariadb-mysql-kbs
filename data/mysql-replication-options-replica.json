@@ -109,8 +109,12 @@
     {
       "cli": "--skip-slave-start[={OFF|ON}]",
       "default": "OFF",
+      "dynamic": false,
       "id": "option_mysqld_skip-slave-start",
       "name": "skip_slave_start",
+      "scope": [
+        "global"
+      ],
       "type": "boolean"
     },
     {
@@ -416,6 +420,17 @@
         "global"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--skip-slave-start[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "sysvar_skip_slave_start",
+      "name": "skip_slave_start",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--slave-checkpoint-group=#",

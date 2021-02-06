@@ -27952,10 +27952,15 @@
         "skip_slave_start": {
             "cli": "--skip-slave-start[={OFF|ON}]",
             "default": "OFF",
+            "dynamic": false,
             "name": "skip_slave_start",
+            "scope": [
+                "global"
+            ],
             "type": "boolean",
             "ids": [
-                "24#option_mysqld_skip-slave-start"
+                "24#option_mysqld_skip-slave-start",
+                "24#sysvar_skip_slave_start"
             ]
         },
         "abort_slave_event_count": {
@@ -29409,7 +29414,7 @@
         },
         "named_pipe_full_access_group": {
             "cli": "--named-pipe-full-access-group=value",
-            "default": "*everyone*",
+            "default": "empty string",
             "dynamic": false,
             "name": "named_pipe_full_access_group",
             "scope": [
@@ -29417,8 +29422,9 @@
             ],
             "type": "string",
             "validValues": [
-                "*everyone*",
-                "empty string"
+                "empty string",
+                "valid Windows local group name",
+                "*everyone*"
             ],
             "ids": [
                 "15#sysvar_named_pipe_full_access_group"

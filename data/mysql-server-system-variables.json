@@ -2030,7 +2030,7 @@
     },
     {
       "cli": "--named-pipe-full-access-group=value",
-      "default": "*everyone*",
+      "default": "empty string",
       "dynamic": false,
       "id": "sysvar_named_pipe_full_access_group",
       "name": "named_pipe_full_access_group",
@@ -2039,8 +2039,9 @@
       ],
       "type": "string",
       "validValues": [
-        "*everyone*",
-        "empty string"
+        "empty string",
+        "valid Windows local group name",
+        "*everyone*"
       ]
     },
     {

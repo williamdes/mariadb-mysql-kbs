@@ -30345,12 +30345,15 @@
 |Name|`skip_slave_start`|
 |Command line|`--skip-slave-start[={OFF|ON}]`|
 |Type of variable|`boolean`|
+|Scope|`global`|
 |Default value|`OFF`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_skip-slave-start](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#option_mysqld_skip-slave-start)|
+|dev.mysql.com|[sysvar_skip_slave_start](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_skip_slave_start)|
 
 ## abort_slave_event_count
 |name|value|
@@ -32038,9 +32041,9 @@
 |Command line|`--named-pipe-full-access-group=value`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`*everyone*`|
+|Default value|`empty string`|
 |Dynamic|`false`|
-|Valid value(s)|`*everyone*`, `empty string`|
+|Valid value(s)|`empty string`, `valid Windows local group name`, `*everyone*`|
 
 ### Documentation(s)
 |source|anchor name|

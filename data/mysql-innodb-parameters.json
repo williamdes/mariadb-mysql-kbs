@@ -2162,6 +2162,17 @@
       "type": "integer"
     },
     {
+      "cli": "--innodb-use-fdatasync[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_innodb_use_fdatasync",
+      "name": "innodb_use_fdatasync",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-use-native-aio[={OFF|ON}]",
       "default": "ON",
       "dynamic": false,

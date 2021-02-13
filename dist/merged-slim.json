@@ -26022,6 +26022,19 @@
                 "41#sysvar_innodb_undo_log_encrypt"
             ]
         },
+        "innodb_use_fdatasync": {
+            "cli": "--innodb-use-fdatasync[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_use_fdatasync",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "41#sysvar_innodb_use_fdatasync"
+            ]
+        },
         "innodb_validate_tablespace_paths": {
             "cli": "--innodb-validate-tablespace-paths[={OFF|ON}]",
             "default": "ON",

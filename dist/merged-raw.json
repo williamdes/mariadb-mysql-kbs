@@ -33618,6 +33618,22 @@
                 }
             ]
         },
+        "innodb_use_fdatasync": {
+            "cli": "--innodb-use-fdatasync[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_use_fdatasync",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_use_fdatasync",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
         "innodb_validate_tablespace_paths": {
             "cli": "--innodb-validate-tablespace-paths[={OFF|ON}]",
             "default": "ON",

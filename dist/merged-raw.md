@@ -28289,6 +28289,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_undo_log_encrypt](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_undo_log_encrypt)|
 
+## innodb_use_fdatasync
+|name|value|
+|----|-----|
+|Name|`innodb_use_fdatasync`|
+|Command line|`--innodb-use-fdatasync[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_use_fdatasync](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_use_fdatasync)|
+
 ## innodb_validate_tablespace_paths
 |name|value|
 |----|-----|

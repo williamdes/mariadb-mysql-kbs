@@ -1898,6 +1898,22 @@
 |------|----|
 |mariadb.com|[wsrep_max_ws_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_max_ws_size)|
 
+## wsrep_mode
+|name|value|
+|----|-----|
+|Name|`wsrep_mode`|
+|Command line|`--wsrep-mode=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`(Empty)`|
+|Dynamic|`true`|
+|Valid value(s)|`BINLOG_ROW_FORMAT_ONLY`, `REQUIRED_PRIMARY_KEY`, `STRICT_REPLICATION`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_mode](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_mode)|
+
 ## wsrep_mysql_replication_bundle
 |name|value|
 |----|-----|
@@ -1967,7 +1983,7 @@
 |Type of variable|`string`|
 |Scope|`global`|
 |Default value|`Empty`|
-|Dynamic|`true`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2026,9 +2042,9 @@
 |Name|`wsrep_provider`|
 |Command line|`--wsrep-provider=value`|
 |Type of variable|`string`|
-|Scope|`global`|
+|Scope|`global`, `mariadb 10.4.18`, `mariadb 10.3.28`, `mariadb 10.2.37) 
+yes (<= mariadb 10.5.8`, `mariadb 10.4.17`, `mariadb 10.3.27`, `mariadb 10.2.36)`|
 |Default value|`None`|
-|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15582,7 +15598,9 @@
 |----|-----|
 |Name|`skip_show_database`|
 |Command line|`--skip-show-database`|
+|Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`0`|
 |Dynamic|`false`|
 
 ### Documentation(s)

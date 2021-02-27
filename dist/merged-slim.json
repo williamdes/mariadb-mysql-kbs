@@ -1634,6 +1634,24 @@
                 "6#wsrep_max_ws_size"
             ]
         },
+        "wsrep_mode": {
+            "cli": "--wsrep-mode=value",
+            "default": "(Empty)",
+            "dynamic": true,
+            "name": "wsrep_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "BINLOG_ROW_FORMAT_ONLY",
+                "REQUIRED_PRIMARY_KEY",
+                "STRICT_REPLICATION"
+            ],
+            "ids": [
+                "6#wsrep_mode"
+            ]
+        },
         "wsrep_mysql_replication_bundle": {
             "cli": "--wsrep-mysql-replication-bundle=#",
             "default": "0",
@@ -1693,7 +1711,7 @@
         "wsrep_notify_cmd": {
             "cli": "--wsrep-notify-command=value",
             "default": "Empty",
-            "dynamic": true,
+            "dynamic": false,
             "name": "wsrep_notify_cmd",
             "scope": [
                 "global"
@@ -1754,10 +1772,15 @@
         "wsrep_provider": {
             "cli": "--wsrep-provider=value",
             "default": "None",
-            "dynamic": true,
             "name": "wsrep_provider",
             "scope": [
-                "global"
+                "global",
+                "mariadb 10.4.18",
+                "mariadb 10.3.28",
+                "mariadb 10.2.37) \nyes (<= mariadb 10.5.8",
+                "mariadb 10.4.17",
+                "mariadb 10.3.27",
+                "mariadb 10.2.36)"
             ],
             "type": "string",
             "ids": [
@@ -14496,11 +14519,13 @@
         },
         "skip_show_database": {
             "cli": "--skip-show-database",
+            "default": "0",
             "dynamic": false,
             "name": "skip_show_database",
             "scope": [
                 "global"
             ],
+            "type": "boolean",
             "ids": [
                 "29#skip_show_database",
                 "16#option_mysqld_skip-show-database",

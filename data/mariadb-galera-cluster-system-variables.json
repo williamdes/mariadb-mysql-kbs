@@ -275,6 +275,22 @@
       "type": "integer"
     },
     {
+      "cli": "--wsrep-mode=value",
+      "default": "(Empty)",
+      "dynamic": true,
+      "id": "wsrep_mode",
+      "name": "wsrep_mode",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "BINLOG_ROW_FORMAT_ONLY",
+        "REQUIRED_PRIMARY_KEY",
+        "STRICT_REPLICATION"
+      ]
+    },
+    {
       "cli": "--wsrep-mysql-replication-bundle=#",
       "default": "0",
       "dynamic": false,
@@ -325,7 +341,7 @@
     {
       "cli": "--wsrep-notify-command=value",
       "default": "Empty",
-      "dynamic": true,
+      "dynamic": false,
       "id": "wsrep_notify_cmd",
       "name": "wsrep_notify_cmd",
       "scope": [
@@ -378,11 +394,16 @@
     {
       "cli": "--wsrep-provider=value",
       "default": "None",
-      "dynamic": true,
       "id": "wsrep_provider",
       "name": "wsrep_provider",
       "scope": [
-        "global"
+        "global",
+        "mariadb 10.4.18",
+        "mariadb 10.3.28",
+        "mariadb 10.2.37) \nyes (<= mariadb 10.5.8",
+        "mariadb 10.4.17",
+        "mariadb 10.3.27",
+        "mariadb 10.2.36)"
       ],
       "type": "string"
     },

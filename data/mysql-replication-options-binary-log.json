@@ -319,7 +319,8 @@
       "id": "sysvar_binlog_transaction_compression",
       "name": "binlog_transaction_compression",
       "scope": [
-        "global"
+        "global",
+        "session"
       ],
       "type": "boolean"
     },
@@ -334,7 +335,8 @@
         "to": 22
       },
       "scope": [
-        "global"
+        "global",
+        "session"
       ],
       "type": "integer"
     },
@@ -469,13 +471,13 @@
     },
     {
       "cli": "--max-binlog-cache-size=#",
-      "default": "18446744073709551615",
+      "default": "18446744073709547520",
       "dynamic": true,
       "id": "sysvar_max_binlog_cache_size",
       "name": "max_binlog_cache_size",
       "range": {
         "from": 4096,
-        "to": 18446744073709552000
+        "to": 18446744073709548000
       },
       "scope": [
         "global"

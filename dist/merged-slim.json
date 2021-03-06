@@ -734,12 +734,49 @@
                 "to": 65500
             },
             "scope": [
+                "global",
                 "session",
                 "global"
             ],
             "type": "integer",
             "ids": [
                 "4#connect_conv_size"
+            ]
+        },
+        "connect_default_depth": {
+            "cli": "--connect-default-depth=#",
+            "default": "5",
+            "dynamic": true,
+            "name": "connect_default_depth",
+            "range": {
+                "from": -1,
+                "to": 16
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "4#connect_default_depth"
+            ]
+        },
+        "connect_default_prec": {
+            "cli": "--connect-default-prec=#",
+            "default": "6",
+            "dynamic": true,
+            "name": "connect_default_prec",
+            "range": {
+                "from": 0,
+                "to": 16
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "4#connect_default_prec"
             ]
         },
         "connect_enable_mongo": {
@@ -757,16 +794,31 @@
             ]
         },
         "connect_exact_info": {
-            "cli": "--connect-exact-info=#",
+            "cli": "--connect-exact-info={0|1}",
             "default": "OFF",
             "dynamic": true,
             "name": "connect_exact_info",
             "scope": [
+                "global",
                 "session"
             ],
             "type": "boolean",
             "ids": [
                 "4#connect_exact_info"
+            ]
+        },
+        "connect_force_bson": {
+            "cli": "--connect-force-bson={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "connect_force_bson",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "4#connect_force_bson"
             ]
         },
         "connect_indx_map": {
@@ -794,6 +846,20 @@
             "type": "string",
             "ids": [
                 "4#connect_java_wrapper"
+            ]
+        },
+        "connect_json_all_path": {
+            "cli": "--connect-json-all-path={0|1}",
+            "default": "ON",
+            "dynamic": true,
+            "name": "connect_json_all_path",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "4#connect_json_all_path"
             ]
         },
         "connect_json_grp_size": {
@@ -843,12 +909,12 @@
         },
         "connect_type_conv": {
             "cli": "--connect-type-conv=#",
-            "default": "YES (>= Connect 1.06.006), NO (<= Connect 1.06.005)",
+            "default": "YES",
             "dynamic": true,
             "name": "connect_type_conv",
             "scope": [
-                "session",
-                "global"
+                "global",
+                "session"
             ],
             "type": "enumeration",
             "validValues": [
@@ -896,10 +962,6 @@
             "default": "0",
             "dynamic": true,
             "name": "connect_xtrace",
-            "range": {
-                "from": 0,
-                "to": 2147483647
-            },
             "scope": [
                 "global"
             ],
@@ -1634,6 +1696,24 @@
                 "6#wsrep_max_ws_size"
             ]
         },
+        "wsrep_mode": {
+            "cli": "--wsrep-mode=value",
+            "default": "(Empty)",
+            "dynamic": true,
+            "name": "wsrep_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "BINLOG_ROW_FORMAT_ONLY",
+                "REQUIRED_PRIMARY_KEY",
+                "STRICT_REPLICATION"
+            ],
+            "ids": [
+                "6#wsrep_mode"
+            ]
+        },
         "wsrep_mysql_replication_bundle": {
             "cli": "--wsrep-mysql-replication-bundle=#",
             "default": "0",
@@ -1693,7 +1773,7 @@
         "wsrep_notify_cmd": {
             "cli": "--wsrep-notify-command=value",
             "default": "Empty",
-            "dynamic": true,
+            "dynamic": false,
             "name": "wsrep_notify_cmd",
             "scope": [
                 "global"
@@ -1754,10 +1834,15 @@
         "wsrep_provider": {
             "cli": "--wsrep-provider=value",
             "default": "None",
-            "dynamic": true,
             "name": "wsrep_provider",
             "scope": [
-                "global"
+                "global",
+                "mariadb 10.4.18",
+                "mariadb 10.3.28",
+                "mariadb 10.2.37) \nyes (<= mariadb 10.5.8",
+                "mariadb 10.4.17",
+                "mariadb 10.3.27",
+                "mariadb 10.2.36)"
             ],
             "type": "string",
             "ids": [
@@ -6450,12 +6535,12 @@
         },
         "max_binlog_cache_size": {
             "cli": "--max-binlog-cache-size=#",
-            "default": "18446744073709551615",
+            "default": "18446744073709547520",
             "dynamic": true,
             "name": "max_binlog_cache_size",
             "range": {
                 "from": 4096,
-                "to": 1.8446744073709552e+19
+                "to": 1.8446744073709548e+19
             },
             "scope": [
                 "global"
@@ -14496,11 +14581,13 @@
         },
         "skip_show_database": {
             "cli": "--skip-show-database",
+            "default": "0",
             "dynamic": false,
             "name": "skip_show_database",
             "scope": [
                 "global"
             ],
+            "type": "boolean",
             "ids": [
                 "29#skip_show_database",
                 "16#option_mysqld_skip-show-database",
@@ -27686,7 +27773,8 @@
             "dynamic": true,
             "name": "binlog_transaction_compression",
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "boolean",
             "ids": [
@@ -27703,7 +27791,8 @@
                 "to": 22
             },
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "integer",
             "ids": [

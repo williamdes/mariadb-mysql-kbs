@@ -1288,7 +1288,7 @@
     },
     {
       "cli": "--innodb-flush-method=name",
-      "default": "fsync (>= MariaDB 10.3.7), Not set (<= MariaDB 10.3.6)",
+      "default": "O_DIRECT (Unix, >= MariaDB 10.6.0), fsync (Unix, >= MariaDB 10.3.7, <= MariaDB 10.5), Not set (<= MariaDB 10.3.6)",
       "dynamic": false,
       "id": "innodb_flush_method",
       "name": "innodb_flush_method",
@@ -2032,7 +2032,7 @@
     },
     {
       "cli": "--innodb-max-dirty-pages-pct-lwm=#",
-      "default": "0 (>= MariaDB 10.2.2, <= MariaDB 10.0.14), 0.001000 (>= MariaDB 10.0.15, <= MariaDB 10.2.1)",
+      "default": "0 (>= MariaDB 10.2.2), 0.001000 (<= MariaDB 10.2.1)",
       "dynamic": true,
       "id": "innodb_max_dirty_pages_pct_lwm",
       "name": "innodb_max_dirty_pages_pct_lwm",

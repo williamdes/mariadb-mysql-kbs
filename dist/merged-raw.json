@@ -887,6 +887,7 @@
                 "to": 65500
             },
             "scope": [
+                "global",
                 "session",
                 "global"
             ],
@@ -894,6 +895,48 @@
             "ids": [
                 {
                     "anchor": "connect_conv_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
+                }
+            ]
+        },
+        "connect_default_depth": {
+            "cli": "--connect-default-depth=#",
+            "default": "5",
+            "dynamic": true,
+            "name": "connect_default_depth",
+            "range": {
+                "from": -1,
+                "to": 16
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "connect_default_depth",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
+                }
+            ]
+        },
+        "connect_default_prec": {
+            "cli": "--connect-default-prec=#",
+            "default": "6",
+            "dynamic": true,
+            "name": "connect_default_prec",
+            "range": {
+                "from": 0,
+                "to": 16
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "connect_default_prec",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
                 }
             ]
@@ -916,17 +959,35 @@
             ]
         },
         "connect_exact_info": {
-            "cli": "--connect-exact-info=#",
+            "cli": "--connect-exact-info={0|1}",
             "default": "OFF",
             "dynamic": true,
             "name": "connect_exact_info",
             "scope": [
+                "global",
                 "session"
             ],
             "type": "boolean",
             "ids": [
                 {
                     "anchor": "connect_exact_info",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
+                }
+            ]
+        },
+        "connect_force_bson": {
+            "cli": "--connect-force-bson={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "connect_force_bson",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "connect_force_bson",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
                 }
             ]
@@ -960,6 +1021,23 @@
             "ids": [
                 {
                     "anchor": "connect_java_wrapper",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
+                }
+            ]
+        },
+        "connect_json_all_path": {
+            "cli": "--connect-json-all-path={0|1}",
+            "default": "ON",
+            "dynamic": true,
+            "name": "connect_json_all_path",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "connect_json_all_path",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
                 }
             ]
@@ -1020,12 +1098,12 @@
         },
         "connect_type_conv": {
             "cli": "--connect-type-conv=#",
-            "default": "YES (>= Connect 1.06.006), NO (<= Connect 1.06.005)",
+            "default": "YES",
             "dynamic": true,
             "name": "connect_type_conv",
             "scope": [
-                "session",
-                "global"
+                "global",
+                "session"
             ],
             "type": "enumeration",
             "validValues": [
@@ -1082,10 +1160,6 @@
             "default": "0",
             "dynamic": true,
             "name": "connect_xtrace",
-            "range": {
-                "from": 0,
-                "to": 2147483647
-            },
             "scope": [
                 "global"
             ],
@@ -2078,6 +2152,27 @@
                 }
             ]
         },
+        "wsrep_mode": {
+            "cli": "--wsrep-mode=value",
+            "default": "(Empty)",
+            "dynamic": true,
+            "name": "wsrep_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "BINLOG_ROW_FORMAT_ONLY",
+                "REQUIRED_PRIMARY_KEY",
+                "STRICT_REPLICATION"
+            ],
+            "ids": [
+                {
+                    "anchor": "wsrep_mode",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
+                }
+            ]
+        },
         "wsrep_mysql_replication_bundle": {
             "cli": "--wsrep-mysql-replication-bundle=#",
             "default": "0",
@@ -2149,7 +2244,7 @@
         "wsrep_notify_cmd": {
             "cli": "--wsrep-notify-command=value",
             "default": "Empty",
-            "dynamic": true,
+            "dynamic": false,
             "name": "wsrep_notify_cmd",
             "scope": [
                 "global"
@@ -2222,10 +2317,15 @@
         "wsrep_provider": {
             "cli": "--wsrep-provider=value",
             "default": "None",
-            "dynamic": true,
             "name": "wsrep_provider",
             "scope": [
-                "global"
+                "global",
+                "mariadb 10.4.18",
+                "mariadb 10.3.28",
+                "mariadb 10.2.37) \nyes (<= mariadb 10.5.8",
+                "mariadb 10.4.17",
+                "mariadb 10.3.27",
+                "mariadb 10.2.36)"
             ],
             "type": "string",
             "ids": [
@@ -8151,12 +8251,12 @@
         },
         "max_binlog_cache_size": {
             "cli": "--max-binlog-cache-size=#",
-            "default": "18446744073709551615",
+            "default": "18446744073709547520",
             "dynamic": true,
             "name": "max_binlog_cache_size",
             "range": {
                 "from": 4096,
-                "to": 1.8446744073709552e+19
+                "to": 1.8446744073709548e+19
             },
             "scope": [
                 "global"
@@ -18744,11 +18844,13 @@
         },
         "skip_show_database": {
             "cli": "--skip-show-database",
+            "default": "0",
             "dynamic": false,
             "name": "skip_show_database",
             "scope": [
                 "global"
             ],
+            "type": "boolean",
             "ids": [
                 {
                     "anchor": "skip_show_database",
@@ -35696,7 +35798,8 @@
             "dynamic": true,
             "name": "binlog_transaction_compression",
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "boolean",
             "ids": [
@@ -35716,7 +35819,8 @@
                 "to": 22
             },
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "integer",
             "ids": [

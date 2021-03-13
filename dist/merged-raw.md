@@ -726,7 +726,7 @@
 |Name|`connect_conv_size`|
 |Command line|`--connect-conv-size=#`|
 |Type of variable|`integer`|
-|Scope|`session`, `global`|
+|Scope|`global`, `session`, `global`|
 |Default value|`>= MariaDB 10.4.8, MariaDB 10.3.18, MariaDB 10.2.27: 1024, <= MariaDB 10.4.7, MariaDB 10.3.17, MariaDB 10.2.26: 8192`|
 |Dynamic|`true`|
 |Range|from: `0` to: `65500`|
@@ -735,6 +735,38 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[connect_conv_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_conv_size)|
+
+## connect_default_depth
+|name|value|
+|----|-----|
+|Name|`connect_default_depth`|
+|Command line|`--connect-default-depth=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`5`|
+|Dynamic|`true`|
+|Range|from: `-1` to: `16`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[connect_default_depth](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_default_depth)|
+
+## connect_default_prec
+|name|value|
+|----|-----|
+|Name|`connect_default_prec`|
+|Command line|`--connect-default-prec=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`6`|
+|Dynamic|`true`|
+|Range|from: `0` to: `16`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[connect_default_prec](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_default_prec)|
 
 ## connect_enable_mongo
 |name|value|
@@ -755,9 +787,9 @@
 |name|value|
 |----|-----|
 |Name|`connect_exact_info`|
-|Command line|`--connect-exact-info=#`|
+|Command line|`--connect-exact-info={0|1}`|
 |Type of variable|`boolean`|
-|Scope|`session`|
+|Scope|`global`, `session`|
 |Default value|`OFF`|
 |Dynamic|`true`|
 
@@ -765,6 +797,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[connect_exact_info](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_exact_info)|
+
+## connect_force_bson
+|name|value|
+|----|-----|
+|Name|`connect_force_bson`|
+|Command line|`--connect-force-bson={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[connect_force_bson](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_force_bson)|
 
 ## connect_indx_map
 |name|value|
@@ -795,6 +842,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[connect_java_wrapper](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_java_wrapper)|
+
+## connect_json_all_path
+|name|value|
+|----|-----|
+|Name|`connect_json_all_path`|
+|Command line|`--connect-json-all-path={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[connect_json_all_path](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_json_all_path)|
 
 ## connect_json_grp_size
 |name|value|
@@ -848,8 +910,8 @@
 |Name|`connect_type_conv`|
 |Command line|`--connect-type-conv=#`|
 |Type of variable|`enumeration`|
-|Scope|`session`, `global`|
-|Default value|`YES (>= Connect 1.06.006), NO (<= Connect 1.06.005)`|
+|Scope|`global`, `session`|
+|Default value|`YES`|
 |Dynamic|`true`|
 |Valid value(s)|`NO`, `YES`, `SKIP`|
 
@@ -898,7 +960,6 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `2147483647`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -1898,6 +1959,22 @@
 |------|----|
 |mariadb.com|[wsrep_max_ws_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_max_ws_size)|
 
+## wsrep_mode
+|name|value|
+|----|-----|
+|Name|`wsrep_mode`|
+|Command line|`--wsrep-mode=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`(Empty)`|
+|Dynamic|`true`|
+|Valid value(s)|`BINLOG_ROW_FORMAT_ONLY`, `DISALLOW_LOCAL_GTID`, `REQUIRED_PRIMARY_KEY`, `REPLICATE_ARIA`, `REPLICATE_MYISAM`, `STRICT_REPLICATION`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_mode](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_mode)|
+
 ## wsrep_mysql_replication_bundle
 |name|value|
 |----|-----|
@@ -1967,7 +2044,7 @@
 |Type of variable|`string`|
 |Scope|`global`|
 |Default value|`Empty`|
-|Dynamic|`true`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2026,9 +2103,9 @@
 |Name|`wsrep_provider`|
 |Command line|`--wsrep-provider=value`|
 |Type of variable|`string`|
-|Scope|`global`|
+|Scope|`global`, `mariadb 10.4.18`, `mariadb 10.3.28`, `mariadb 10.2.37) 
+yes (<= mariadb 10.5.8`, `mariadb 10.4.17`, `mariadb 10.3.27`, `mariadb 10.2.36)`|
 |Default value|`None`|
-|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6895,7 +6972,7 @@
 |Command line|`--max-binlog-cache-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`18446744073709551615`|
+|Default value|`18446744073709547520`|
 |Dynamic|`true`|
 |Range|from: `4096` to: `1.844674407371E+19`|
 
@@ -7075,7 +7152,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7401,7 +7478,7 @@
 |Scope|`global`|
 |Default value|`60`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7648,7 +7725,7 @@
 |Scope|`global`|
 |Default value|`10000`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7665,7 +7742,7 @@
 |Scope|`global`|
 |Default value|`10000`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -14813,6 +14890,22 @@
 |mariadb.com|[open_files_limit](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#open_files_limit)|
 |dev.mysql.com|[sysvar_open_files_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_open_files_limit)|
 
+## optimizer_max_sel_arg_weight
+|name|value|
+|----|-----|
+|Name|`optimizer_max_sel_arg_weight`|
+|Command line|`--optimizer-max-sel-arg-weight=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`32000`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[optimizer_max_sel_arg_weight](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_max_sel_arg_weight)|
+
 ## optimizer_prune_level
 |name|value|
 |----|-----|
@@ -14874,22 +14967,6 @@
 |mariadb.com|[optimizer_switch](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_switch)|
 |dev.mysql.com|[sysvar_optimizer_switch](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)|
 
-## optimizer_use_condition_selectivity
-|name|value|
-|----|-----|
-|Name|`optimizer_use_condition_selectivity`|
-|Command line|`--optimizer-use-condition-selectivity=#`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)`|
-|Dynamic|`true`|
-|Range|from: `1` to: `5`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[optimizer_use_condition_selectivity](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_use_condition_selectivity)|
-
 ## optimizer_trace
 |name|value|
 |----|-----|
@@ -14919,6 +14996,22 @@
 |------|----|
 |mariadb.com|[optimizer_trace_max_mem_size](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_trace_max_mem_size)|
 |dev.mysql.com|[sysvar_optimizer_trace_max_mem_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace_max_mem_size)|
+
+## optimizer_use_condition_selectivity
+|name|value|
+|----|-----|
+|Name|`optimizer_use_condition_selectivity`|
+|Command line|`--optimizer-use-condition-selectivity=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)`|
+|Dynamic|`true`|
+|Range|from: `1` to: `5`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[optimizer_use_condition_selectivity](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_use_condition_selectivity)|
 
 ## pid_file
 |name|value|
@@ -15582,7 +15675,9 @@
 |----|-----|
 |Name|`skip_show_database`|
 |Command line|`--skip-show-database`|
+|Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`0`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -21842,6 +21937,18 @@
 |------|----|
 |mariadb.com|[innodb_buffer_pool_pages_lru_flushed](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_buffer_pool_pages_lru_flushed)|
 
+## Innodb_buffer_pool_pages_LRU_freed
+|name|value|
+|----|-----|
+|Name|`Innodb_buffer_pool_pages_LRU_freed`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_buffer_pool_pages_lru_freed](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_buffer_pool_pages_lru_freed)|
+
 ## Innodb_buffer_pool_pages_free
 |name|value|
 |----|-----|
@@ -23799,7 +23906,6 @@
 |Command line|`--innodb-adaptive-max-sleep-delay=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`150000`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1000000`|
 
@@ -24194,6 +24300,22 @@
 |mariadb.com|[innodb_buffer_pool_load_now](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_buffer_pool_load_now)|
 |dev.mysql.com|[sysvar_innodb_buffer_pool_load_now](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_buffer_pool_load_now)|
 
+## innodb_buffer_pool_load_pages_abort
+|name|value|
+|----|-----|
+|Name|`innodb_buffer_pool_load_pages_abort`|
+|Command line|`--innodb-buffer-pool-load-pages-abort=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`9223372036854775807`|
+|Dynamic|`true`|
+|Range|from: `1` to: `9.2233720368548E+18`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_buffer_pool_load_pages_abort](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_buffer_pool_load_pages_abort)|
+
 ## innodb_buffer_pool_populate
 |name|value|
 |----|-----|
@@ -24518,7 +24640,6 @@
 |Command line|`--innodb-concurrency-tickets=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`5000`|
 |Dynamic|`true`|
 |Range|from: `1`|
 
@@ -25935,6 +26056,22 @@
 |mariadb.com|[innodb_log_write_ahead_size](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_log_write_ahead_size)|
 |dev.mysql.com|[sysvar_innodb_log_write_ahead_size](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_write_ahead_size)|
 
+## innodb_lru_flush_size
+|name|value|
+|----|-----|
+|Name|`innodb_lru_flush_size`|
+|Command line|`--innodb-lru-flush-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`32`|
+|Dynamic|`true`|
+|Range|from: `1` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_lru_flush_size](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_lru_flush_size)|
+
 ## innodb_lru_scan_depth
 |name|value|
 |----|-----|
@@ -25942,7 +26079,6 @@
 |Command line|`--innodb-lru-scan-depth=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1024`|
 |Dynamic|`true`|
 |Range|from: `100`|
 
@@ -25991,6 +26127,7 @@
 |Command line|`--innodb-max-dirty-pages-pct=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`90`|
 |Dynamic|`true`|
 |Range|from: `0`|
 
@@ -26049,6 +26186,22 @@
 |------|----|
 |mariadb.com|[innodb_max_purge_lag_delay](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_max_purge_lag_delay)|
 |dev.mysql.com|[sysvar_innodb_max_purge_lag_delay](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_max_purge_lag_delay)|
+
+## innodb_max_purge_lag_wait
+|name|value|
+|----|-----|
+|Name|`innodb_max_purge_lag_wait`|
+|Command line|`--innodb-max-purge-wait=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`4294967295`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_max_purge_lag_wait](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_max_purge_lag_wait)|
 
 ## innodb_max_undo_log_size
 |name|value|
@@ -27053,7 +27206,6 @@
 |Command line|`--innodb-thread-sleep-delay=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`10000`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1000000`|
 
@@ -30063,7 +30215,7 @@
 |Name|`binlog_transaction_compression`|
 |Command line|`--binlog-transaction-compression[={OFF|ON}]`|
 |Type of variable|`boolean`|
-|Scope|`global`|
+|Scope|`global`, `session`|
 |Default value|`OFF`|
 |Dynamic|`true`|
 
@@ -30078,7 +30230,7 @@
 |Name|`binlog_transaction_compression_level_zstd`|
 |Command line|`--binlog-transaction-compression-level-zstd=#`|
 |Type of variable|`integer`|
-|Scope|`global`|
+|Scope|`global`, `session`|
 |Default value|`3`|
 |Dynamic|`true`|
 |Range|from: `1` to: `22`|
@@ -30516,7 +30668,7 @@
 |Scope|`global`|
 |Default value|`300`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|

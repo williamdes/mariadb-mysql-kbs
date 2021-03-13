@@ -2978,12 +2978,14 @@
     },
     {
       "cli": "--skip-show-database",
+      "default": "OFF",
       "dynamic": false,
       "id": "sysvar_skip_show_database",
       "name": "skip_show_database",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--slow-launch-time=#",

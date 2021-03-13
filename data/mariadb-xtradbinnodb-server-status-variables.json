@@ -121,6 +121,14 @@
       "type": "integer"
     },
     {
+      "id": "innodb_buffer_pool_pages_lru_freed",
+      "name": "Innodb_buffer_pool_pages_LRU_freed",
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "innodb_buffer_pool_pages_free",
       "name": "Innodb_buffer_pool_pages_free",
       "scope": [

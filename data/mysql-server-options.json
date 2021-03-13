@@ -370,12 +370,14 @@
     },
     {
       "cli": "--skip-show-database",
+      "default": "OFF",
       "dynamic": false,
       "id": "option_mysqld_skip-show-database",
       "name": "skip_show_database",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--skip-stack-trace",

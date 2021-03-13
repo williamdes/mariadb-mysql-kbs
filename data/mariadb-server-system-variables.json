@@ -2017,6 +2017,22 @@
       "type": "integer"
     },
     {
+      "cli": "--optimizer-max-sel-arg-weight=#",
+      "default": "32000",
+      "dynamic": true,
+      "id": "optimizer_max_sel_arg_weight",
+      "name": "optimizer_max_sel_arg_weight",
+      "range": {
+        "from": 0,
+        "to": 18446744073709552000
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--optimizer-prune-level[=#]",
       "default": "1",
       "dynamic": true,
@@ -2107,22 +2123,6 @@
       ]
     },
     {
-      "cli": "--optimizer-use-condition-selectivity=#",
-      "default": "4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)",
-      "dynamic": true,
-      "id": "optimizer_use_condition_selectivity",
-      "name": "optimizer_use_condition_selectivity",
-      "range": {
-        "from": 1,
-        "to": 5
-      },
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--optimizer-trace=value",
       "default": "enabled=off",
       "dynamic": true,
@@ -2146,6 +2146,22 @@
       "range": {
         "from": 1,
         "to": 18446744073709552000
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--optimizer-use-condition-selectivity=#",
+      "default": "4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)",
+      "dynamic": true,
+      "id": "optimizer_use_condition_selectivity",
+      "name": "optimizer_use_condition_selectivity",
+      "range": {
+        "from": 1,
+        "to": 5
       },
       "scope": [
         "global",

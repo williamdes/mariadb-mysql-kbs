@@ -34,8 +34,41 @@
         "to": 65500
       },
       "scope": [
+        "global",
         "session",
         "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--connect-default-depth=#",
+      "default": "5",
+      "dynamic": true,
+      "id": "connect_default_depth",
+      "name": "connect_default_depth",
+      "range": {
+        "from": -1,
+        "to": 16
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--connect-default-prec=#",
+      "default": "6",
+      "dynamic": true,
+      "id": "connect_default_prec",
+      "name": "connect_default_prec",
+      "range": {
+        "from": 0,
+        "to": 16
+      },
+      "scope": [
+        "global",
+        "session"
       ],
       "type": "integer"
     },
@@ -52,12 +85,25 @@
       "type": "boolean"
     },
     {
-      "cli": "--connect-exact-info=#",
+      "cli": "--connect-exact-info={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "connect_exact_info",
       "name": "connect_exact_info",
       "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--connect-force-bson={0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "connect_force_bson",
+      "name": "connect_force_bson",
+      "scope": [
+        "global",
         "session"
       ],
       "type": "boolean"
@@ -84,6 +130,18 @@
         "session"
       ],
       "type": "string"
+    },
+    {
+      "cli": "--connect-json-all-path={0|1}",
+      "default": "ON",
+      "dynamic": true,
+      "id": "connect_json_all_path",
+      "name": "connect_json_all_path",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--connect-json-grp-size=#",
@@ -126,13 +184,13 @@
     },
     {
       "cli": "--connect-type-conv=#",
-      "default": "YES (>= Connect 1.06.006), NO (<= Connect 1.06.005)",
+      "default": "YES",
       "dynamic": true,
       "id": "connect_type_conv",
       "name": "connect_type_conv",
       "scope": [
-        "session",
-        "global"
+        "global",
+        "session"
       ],
       "type": "enumeration",
       "validValues": [
@@ -174,10 +232,6 @@
       "dynamic": true,
       "id": "connect_xtrace",
       "name": "connect_xtrace",
-      "range": {
-        "from": 0,
-        "to": 2147483647
-      },
       "scope": [
         "global"
       ],

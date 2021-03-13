@@ -734,12 +734,49 @@
                 "to": 65500
             },
             "scope": [
+                "global",
                 "session",
                 "global"
             ],
             "type": "integer",
             "ids": [
                 "4#connect_conv_size"
+            ]
+        },
+        "connect_default_depth": {
+            "cli": "--connect-default-depth=#",
+            "default": "5",
+            "dynamic": true,
+            "name": "connect_default_depth",
+            "range": {
+                "from": -1,
+                "to": 16
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "4#connect_default_depth"
+            ]
+        },
+        "connect_default_prec": {
+            "cli": "--connect-default-prec=#",
+            "default": "6",
+            "dynamic": true,
+            "name": "connect_default_prec",
+            "range": {
+                "from": 0,
+                "to": 16
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "4#connect_default_prec"
             ]
         },
         "connect_enable_mongo": {
@@ -757,16 +794,31 @@
             ]
         },
         "connect_exact_info": {
-            "cli": "--connect-exact-info=#",
+            "cli": "--connect-exact-info={0|1}",
             "default": "OFF",
             "dynamic": true,
             "name": "connect_exact_info",
             "scope": [
+                "global",
                 "session"
             ],
             "type": "boolean",
             "ids": [
                 "4#connect_exact_info"
+            ]
+        },
+        "connect_force_bson": {
+            "cli": "--connect-force-bson={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "connect_force_bson",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "4#connect_force_bson"
             ]
         },
         "connect_indx_map": {
@@ -794,6 +846,20 @@
             "type": "string",
             "ids": [
                 "4#connect_java_wrapper"
+            ]
+        },
+        "connect_json_all_path": {
+            "cli": "--connect-json-all-path={0|1}",
+            "default": "ON",
+            "dynamic": true,
+            "name": "connect_json_all_path",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "4#connect_json_all_path"
             ]
         },
         "connect_json_grp_size": {
@@ -843,12 +909,12 @@
         },
         "connect_type_conv": {
             "cli": "--connect-type-conv=#",
-            "default": "YES (>= Connect 1.06.006), NO (<= Connect 1.06.005)",
+            "default": "YES",
             "dynamic": true,
             "name": "connect_type_conv",
             "scope": [
-                "session",
-                "global"
+                "global",
+                "session"
             ],
             "type": "enumeration",
             "validValues": [
@@ -896,10 +962,6 @@
             "default": "0",
             "dynamic": true,
             "name": "connect_xtrace",
-            "range": {
-                "from": 0,
-                "to": 2147483647
-            },
             "scope": [
                 "global"
             ],
@@ -1634,6 +1696,27 @@
                 "6#wsrep_max_ws_size"
             ]
         },
+        "wsrep_mode": {
+            "cli": "--wsrep-mode=value",
+            "default": "(Empty)",
+            "dynamic": true,
+            "name": "wsrep_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "BINLOG_ROW_FORMAT_ONLY",
+                "DISALLOW_LOCAL_GTID",
+                "REQUIRED_PRIMARY_KEY",
+                "REPLICATE_ARIA",
+                "REPLICATE_MYISAM",
+                "STRICT_REPLICATION"
+            ],
+            "ids": [
+                "6#wsrep_mode"
+            ]
+        },
         "wsrep_mysql_replication_bundle": {
             "cli": "--wsrep-mysql-replication-bundle=#",
             "default": "0",
@@ -1693,7 +1776,7 @@
         "wsrep_notify_cmd": {
             "cli": "--wsrep-notify-command=value",
             "default": "Empty",
-            "dynamic": true,
+            "dynamic": false,
             "name": "wsrep_notify_cmd",
             "scope": [
                 "global"
@@ -1754,10 +1837,15 @@
         "wsrep_provider": {
             "cli": "--wsrep-provider=value",
             "default": "None",
-            "dynamic": true,
             "name": "wsrep_provider",
             "scope": [
-                "global"
+                "global",
+                "mariadb 10.4.18",
+                "mariadb 10.3.28",
+                "mariadb 10.2.37) \nyes (<= mariadb 10.5.8",
+                "mariadb 10.4.17",
+                "mariadb 10.3.27",
+                "mariadb 10.2.36)"
             ],
             "type": "string",
             "ids": [
@@ -6450,12 +6538,12 @@
         },
         "max_binlog_cache_size": {
             "cli": "--max-binlog-cache-size=#",
-            "default": "18446744073709551615",
+            "default": "18446744073709547520",
             "dynamic": true,
             "name": "max_binlog_cache_size",
             "range": {
                 "from": 4096,
-                "to": 1.8446744073709552e+19
+                "to": 1.8446744073709548e+19
             },
             "scope": [
                 "global"
@@ -6625,7 +6713,8 @@
             "dynamic": false,
             "name": "relay_log_space_limit",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -6914,7 +7003,8 @@
             "dynamic": true,
             "name": "slave_net_timeout",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 31536000
             },
             "scope": [
                 "global"
@@ -7172,7 +7262,8 @@
             "dynamic": true,
             "name": "sync_master_info",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -7189,7 +7280,8 @@
             "dynamic": true,
             "name": "sync_relay_log",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -13748,6 +13840,24 @@
                 "15#sysvar_open_files_limit"
             ]
         },
+        "optimizer_max_sel_arg_weight": {
+            "cli": "--optimizer-max-sel-arg-weight=#",
+            "default": "32000",
+            "dynamic": true,
+            "name": "optimizer_max_sel_arg_weight",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#optimizer_max_sel_arg_weight"
+            ]
+        },
         "optimizer_prune_level": {
             "default": "1",
             "dynamic": true,
@@ -13813,24 +13923,6 @@
                 "15#sysvar_optimizer_switch"
             ]
         },
-        "optimizer_use_condition_selectivity": {
-            "cli": "--optimizer-use-condition-selectivity=#",
-            "default": "4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)",
-            "dynamic": true,
-            "name": "optimizer_use_condition_selectivity",
-            "range": {
-                "from": 1,
-                "to": 5
-            },
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "29#optimizer_use_condition_selectivity"
-            ]
-        },
         "optimizer_trace": {
             "cli": "--optimizer-trace=value",
             "dynamic": true,
@@ -13857,6 +13949,24 @@
             "ids": [
                 "29#optimizer_trace_max_mem_size",
                 "15#sysvar_optimizer_trace_max_mem_size"
+            ]
+        },
+        "optimizer_use_condition_selectivity": {
+            "cli": "--optimizer-use-condition-selectivity=#",
+            "default": "4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)",
+            "dynamic": true,
+            "name": "optimizer_use_condition_selectivity",
+            "range": {
+                "from": 1,
+                "to": 5
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "29#optimizer_use_condition_selectivity"
             ]
         },
         "pid_file": {
@@ -14496,11 +14606,13 @@
         },
         "skip_show_database": {
             "cli": "--skip-show-database",
+            "default": "0",
             "dynamic": false,
             "name": "skip_show_database",
             "scope": [
                 "global"
             ],
+            "type": "boolean",
             "ids": [
                 "29#skip_show_database",
                 "16#option_mysqld_skip-show-database",
@@ -20005,6 +20117,16 @@
                 "39#innodb_buffer_pool_pages_lru_flushed"
             ]
         },
+        "Innodb_buffer_pool_pages_LRU_freed": {
+            "name": "Innodb_buffer_pool_pages_LRU_freed",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "39#innodb_buffer_pool_pages_lru_freed"
+            ]
+        },
         "Innodb_buffer_pool_pages_free": {
             "name": "Innodb_buffer_pool_pages_free",
             "scope": [
@@ -21634,7 +21756,6 @@
         },
         "innodb_adaptive_max_sleep_delay": {
             "cli": "--innodb-adaptive-max-sleep-delay=#",
-            "default": "150000",
             "dynamic": true,
             "name": "innodb_adaptive_max_sleep_delay",
             "range": {
@@ -22014,6 +22135,23 @@
                 "41#sysvar_innodb_buffer_pool_load_now"
             ]
         },
+        "innodb_buffer_pool_load_pages_abort": {
+            "cli": "--innodb-buffer-pool-load-pages-abort=#",
+            "default": "9223372036854775807",
+            "dynamic": true,
+            "name": "innodb_buffer_pool_load_pages_abort",
+            "range": {
+                "from": 1,
+                "to": 9.223372036854776e+18
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "40#innodb_buffer_pool_load_pages_abort"
+            ]
+        },
         "innodb_buffer_pool_populate": {
             "cli": "innodb-buffer-pool-populate={0|1}",
             "default": "OFF",
@@ -22348,7 +22486,6 @@
         },
         "innodb_concurrency_tickets": {
             "cli": "--innodb-concurrency-tickets=#",
-            "default": "5000",
             "dynamic": true,
             "name": "innodb_concurrency_tickets",
             "range": {
@@ -23760,9 +23897,25 @@
                 "41#sysvar_innodb_log_write_ahead_size"
             ]
         },
+        "innodb_lru_flush_size": {
+            "cli": "--innodb-lru-flush-size=#",
+            "default": "32",
+            "dynamic": true,
+            "name": "innodb_lru_flush_size",
+            "range": {
+                "from": 1,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "40#innodb_lru_flush_size"
+            ]
+        },
         "innodb_lru_scan_depth": {
             "cli": "--innodb-lru-scan-depth=#",
-            "default": "1024",
             "dynamic": true,
             "name": "innodb_lru_scan_depth",
             "range": {
@@ -23813,6 +23966,7 @@
         },
         "innodb_max_dirty_pages_pct": {
             "cli": "--innodb-max-dirty-pages-pct=#",
+            "default": "90",
             "dynamic": true,
             "name": "innodb_max_dirty_pages_pct",
             "range": {
@@ -23877,6 +24031,23 @@
             "ids": [
                 "40#innodb_max_purge_lag_delay",
                 "41#sysvar_innodb_max_purge_lag_delay"
+            ]
+        },
+        "innodb_max_purge_lag_wait": {
+            "cli": "--innodb-max-purge-wait=#",
+            "default": "4294967295",
+            "dynamic": true,
+            "name": "innodb_max_purge_lag_wait",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "40#innodb_max_purge_lag_wait"
             ]
         },
         "innodb_max_undo_log_size": {
@@ -24852,7 +25023,6 @@
         },
         "innodb_thread_sleep_delay": {
             "cli": "--innodb-thread-sleep-delay=#",
-            "default": "10000",
             "dynamic": true,
             "name": "innodb_thread_sleep_delay",
             "range": {
@@ -27686,7 +27856,8 @@
             "dynamic": true,
             "name": "binlog_transaction_compression",
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "boolean",
             "ids": [
@@ -27703,7 +27874,8 @@
                 "to": 22
             },
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "integer",
             "ids": [
@@ -28114,7 +28286,8 @@
             "dynamic": true,
             "name": "slave_checkpoint_period",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 4294967295
             },
             "scope": [
                 "global"

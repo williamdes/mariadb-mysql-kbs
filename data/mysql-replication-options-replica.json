@@ -50,7 +50,8 @@
       "id": "option_mysqld_relay-log-space-limit",
       "name": "relay_log_space_limit",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 4294967295
       },
       "scope": [
         "global"
@@ -295,7 +296,8 @@
       "id": "sysvar_relay_log_space_limit",
       "name": "relay_log_space_limit",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 4294967295
       },
       "scope": [
         "global"
@@ -454,7 +456,8 @@
       "id": "sysvar_slave_checkpoint_period",
       "name": "slave_checkpoint_period",
       "range": {
-        "from": 1
+        "from": 1,
+        "to": 4294967295
       },
       "scope": [
         "global"
@@ -521,7 +524,7 @@
       "name": "slave_net_timeout",
       "range": {
         "from": 1,
-        "to": 4294967295
+        "to": 31536000
       },
       "scope": [
         "global"
@@ -679,7 +682,8 @@
       "id": "sysvar_sync_master_info",
       "name": "sync_master_info",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 4294967295
       },
       "scope": [
         "global"
@@ -693,7 +697,8 @@
       "id": "sysvar_sync_relay_log",
       "name": "sync_relay_log",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 4294967295
       },
       "scope": [
         "global"
@@ -707,7 +712,8 @@
       "id": "sysvar_sync_relay_log_info",
       "name": "sync_relay_log_info",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 4294967295
       },
       "scope": [
         "global"

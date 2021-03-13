@@ -1,0 +1,210 @@
+{
+  "data": [
+    {
+      "cli": "--s3-access-key=val",
+      "default": "(Empty)",
+      "dynamic": false,
+      "id": "s3_access_key",
+      "name": "s3_access_key",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--s3-block-size=#",
+      "default": "4194304",
+      "dynamic": true,
+      "id": "s3_block_size",
+      "name": "s3_block_size",
+      "range": {
+        "from": 4194304,
+        "to": 16777216
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--s3-bucket=val",
+      "default": "MariaDB",
+      "dynamic": false,
+      "id": "s3_bucket",
+      "name": "s3_bucket",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--s3-debug{=0|1}",
+      "default": "0",
+      "dynamic": false,
+      "id": "s3_debug",
+      "name": "s3_debug",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean",
+      "validValues": []
+    },
+    {
+      "cli": "--s3-host-name=val",
+      "default": "s3.amazonaws.com",
+      "dynamic": false,
+      "id": "s3_host_name",
+      "name": "s3_host_name",
+      "scope": [],
+      "type": "string"
+    },
+    {
+      "cli": "--s3-pagecache-age-threshold=val",
+      "default": "300",
+      "dynamic": true,
+      "id": "s3_pagecache_age_threshold",
+      "name": "s3_pagecache_age_threshold",
+      "range": {
+        "from": 100,
+        "to": 18446744073709552000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--s3-pagecache-buffer-size=val",
+      "default": "134217728 (128M)",
+      "dynamic": false,
+      "id": "s3_pagecache_buffer_size",
+      "name": "s3_pagecache_buffer_size",
+      "range": {
+        "from": 33554432,
+        "to": 18446744073709552000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--s3-pagecache-division-limit=val",
+      "default": "100",
+      "dynamic": true,
+      "id": "s3_pagecache_division_limit",
+      "name": "s3_pagecache_division_limit",
+      "range": {
+        "from": 1,
+        "to": 100
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--s3-pagecache-file-hash-size=#",
+      "default": "512",
+      "dynamic": false,
+      "id": "s3_pagecache_file_hash_size",
+      "name": "s3_pagecache_file_hash_size",
+      "range": {
+        "from": 32,
+        "to": 16384
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--s3-port=#",
+      "default": "0",
+      "dynamic": false,
+      "id": "s3_port",
+      "name": "s3_port",
+      "range": {
+        "from": 0,
+        "to": 65535
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--s3-protocol-version=val",
+      "default": "Auto",
+      "dynamic": true,
+      "id": "s3_protocol_version",
+      "name": "s3_protocol_version",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "Auto",
+        "Amazon",
+        "Original"
+      ]
+    },
+    {
+      "cli": "--s3-region=val",
+      "default": "(Empty)",
+      "dynamic": false,
+      "id": "s3_region",
+      "name": "s3_region",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--s3-replicate-alter-as-create-select{=0|1}",
+      "default": "1",
+      "dynamic": false,
+      "id": "s3_replicate_alter_as_create_select",
+      "name": "s3_replicate_alter_as_create_select",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--s3-secret-key=val",
+      "default": "(Empty)",
+      "dynamic": false,
+      "id": "s3_secret_key",
+      "name": "s3_secret_key",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--s3-slave-ignore-updates{=0|1}",
+      "default": "0",
+      "dynamic": false,
+      "id": "s3_slave_ignore_updates",
+      "name": "s3_slave_ignore_updates",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--s3-use-http{=0|1}",
+      "default": "0",
+      "dynamic": false,
+      "id": "s3_use_http",
+      "name": "s3_use_http",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    }
+  ],
+  "name": "s3-storage-engine-system-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+}

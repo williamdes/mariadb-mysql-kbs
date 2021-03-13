@@ -166,9 +166,7 @@ const storageEngines = [
     'myrocks',
     'cassandra',
     'galera-cluster',
-    'mroonga',
     'myisam',
-    'tokudb',
     'connect',
 ];
 

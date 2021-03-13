@@ -572,5 +572,21 @@ module.exports = function () {
                 done();
             });
         });
+        test('test case 7', function (done) {
+            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mariadb_test_case_7.html'));
+            MariaDB.parsePage($, function (resultData) {
+                expect(resultData).to.deep.equal([
+                    {
+                        cli: '--wsrep-provider=value',
+                        default: 'None',
+                        id: 'wsrep_provider',
+                        name: 'wsrep_provider',
+                        scope: ['global'],
+                        type: 'string',
+                    },
+                ]);
+                done();
+            });
+        });
     });
 };

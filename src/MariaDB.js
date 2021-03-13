@@ -41,8 +41,6 @@ const createDoc = function ($, element) {
                                 return 'session';
                             } else if (item.match(/global/)) {
                                 return 'global';
-                            } else {
-                                return item.trim();
                             }
                         });
                     doc.scope = doc.scope.filter(function (e) {

@@ -127,7 +127,7 @@
     },
     {
       "cli": "--innodb-adaptive-max-sleep-delay=#",
-      "default": "150000",
+      "default": "0 (>= MariaDB 10.5.5), 150000 (<= MariaDB 10.5.4)",
       "dynamic": true,
       "id": "innodb_adaptive_max_sleep_delay",
       "name": "innodb_adaptive_max_sleep_delay",
@@ -446,6 +446,21 @@
       "type": "boolean"
     },
     {
+      "cli": "--innodb-buffer-pool-load-pages-abort=#",
+      "default": "9223372036854775807",
+      "dynamic": true,
+      "id": "innodb_buffer_pool_load_pages_abort",
+      "name": "innodb_buffer_pool_load_pages_abort",
+      "range": {
+        "from": 1,
+        "to": 9223372036854776000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "innodb-buffer-pool-populate={0|1}",
       "default": "OFF",
       "dynamic": false,
@@ -739,7 +754,7 @@
     },
     {
       "cli": "--innodb-concurrency-tickets=#",
-      "default": "5000",
+      "default": "0 (>= MariaDB 10.5.5), 5000 (<= MariaDB 10.5.4)",
       "dynamic": true,
       "id": "innodb_concurrency_tickets",
       "name": "innodb_concurrency_tickets",
@@ -1288,7 +1303,7 @@
     },
     {
       "cli": "--innodb-flush-method=name",
-      "default": "fsync (>= MariaDB 10.3.7), Not set (<= MariaDB 10.3.6)",
+      "default": "O_DIRECT (Unix, >= MariaDB 10.6.0), fsync (Unix, >= MariaDB 10.3.7, <= MariaDB 10.5), Not set (<= MariaDB 10.3.6)",
       "dynamic": false,
       "id": "innodb_flush_method",
       "name": "innodb_flush_method",
@@ -1975,8 +1990,23 @@
       "type": "integer"
     },
     {
+      "cli": "--innodb-lru-flush-size=#",
+      "default": "32",
+      "dynamic": true,
+      "id": "innodb_lru_flush_size",
+      "name": "innodb_lru_flush_size",
+      "range": {
+        "from": 1,
+        "to": 18446744073709552000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--innodb-lru-scan-depth=#",
-      "default": "1024",
+      "default": "1536 (>= MariaDB 10.5.7), 1024 (<= MariaDB 10.5.6)",
       "dynamic": true,
       "id": "innodb_lru_scan_depth",
       "name": "innodb_lru_scan_depth",
@@ -2017,7 +2047,7 @@
     },
     {
       "cli": "--innodb-max-dirty-pages-pct=#",
-      "default": "75.000000",
+      "default": "90.000000 (>= MariaDB 10.5.7), 75.000000 (<= MariaDB 10.5.6)",
       "dynamic": true,
       "id": "innodb_max_dirty_pages_pct",
       "name": "innodb_max_dirty_pages_pct",
@@ -2032,7 +2062,7 @@
     },
     {
       "cli": "--innodb-max-dirty-pages-pct-lwm=#",
-      "default": "0 (>= MariaDB 10.2.2, <= MariaDB 10.0.14), 0.001000 (>= MariaDB 10.0.15, <= MariaDB 10.2.1)",
+      "default": "0 (>= MariaDB 10.2.2), 0.001000 (<= MariaDB 10.2.1)",
       "dynamic": true,
       "id": "innodb_max_dirty_pages_pct_lwm",
       "name": "innodb_max_dirty_pages_pct_lwm",
@@ -2066,6 +2096,21 @@
       "dynamic": true,
       "id": "innodb_max_purge_lag_delay",
       "name": "innodb_max_purge_lag_delay",
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--innodb-max-purge-wait=#",
+      "default": "4294967295",
+      "dynamic": true,
+      "id": "innodb_max_purge_lag_wait",
+      "name": "innodb_max_purge_lag_wait",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],
@@ -2892,7 +2937,7 @@
     },
     {
       "cli": "--innodb-thread-sleep-delay=#",
-      "default": "10000",
+      "default": "0 (>= MariaDB 10.5.5.), 10000 (<= MariaDB 10.5.4)",
       "dynamic": true,
       "id": "innodb_thread_sleep_delay",
       "name": "innodb_thread_sleep_delay",

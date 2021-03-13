@@ -887,6 +887,7 @@
                 "to": 65500
             },
             "scope": [
+                "global",
                 "session",
                 "global"
             ],
@@ -894,6 +895,48 @@
             "ids": [
                 {
                     "anchor": "connect_conv_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
+                }
+            ]
+        },
+        "connect_default_depth": {
+            "cli": "--connect-default-depth=#",
+            "default": "5",
+            "dynamic": true,
+            "name": "connect_default_depth",
+            "range": {
+                "from": -1,
+                "to": 16
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "connect_default_depth",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
+                }
+            ]
+        },
+        "connect_default_prec": {
+            "cli": "--connect-default-prec=#",
+            "default": "6",
+            "dynamic": true,
+            "name": "connect_default_prec",
+            "range": {
+                "from": 0,
+                "to": 16
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "connect_default_prec",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
                 }
             ]
@@ -916,17 +959,35 @@
             ]
         },
         "connect_exact_info": {
-            "cli": "--connect-exact-info=#",
+            "cli": "--connect-exact-info={0|1}",
             "default": "OFF",
             "dynamic": true,
             "name": "connect_exact_info",
             "scope": [
+                "global",
                 "session"
             ],
             "type": "boolean",
             "ids": [
                 {
                     "anchor": "connect_exact_info",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
+                }
+            ]
+        },
+        "connect_force_bson": {
+            "cli": "--connect-force-bson={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "connect_force_bson",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "connect_force_bson",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
                 }
             ]
@@ -960,6 +1021,23 @@
             "ids": [
                 {
                     "anchor": "connect_java_wrapper",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
+                }
+            ]
+        },
+        "connect_json_all_path": {
+            "cli": "--connect-json-all-path={0|1}",
+            "default": "ON",
+            "dynamic": true,
+            "name": "connect_json_all_path",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "connect_json_all_path",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
                 }
             ]
@@ -1020,12 +1098,12 @@
         },
         "connect_type_conv": {
             "cli": "--connect-type-conv=#",
-            "default": "YES (>= Connect 1.06.006), NO (<= Connect 1.06.005)",
+            "default": "YES",
             "dynamic": true,
             "name": "connect_type_conv",
             "scope": [
-                "session",
-                "global"
+                "global",
+                "session"
             ],
             "type": "enumeration",
             "validValues": [
@@ -1082,10 +1160,6 @@
             "default": "0",
             "dynamic": true,
             "name": "connect_xtrace",
-            "range": {
-                "from": 0,
-                "to": 2147483647
-            },
             "scope": [
                 "global"
             ],
@@ -2078,6 +2152,30 @@
                 }
             ]
         },
+        "wsrep_mode": {
+            "cli": "--wsrep-mode=value",
+            "default": "(Empty)",
+            "dynamic": true,
+            "name": "wsrep_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "BINLOG_ROW_FORMAT_ONLY",
+                "DISALLOW_LOCAL_GTID",
+                "REQUIRED_PRIMARY_KEY",
+                "REPLICATE_ARIA",
+                "REPLICATE_MYISAM",
+                "STRICT_REPLICATION"
+            ],
+            "ids": [
+                {
+                    "anchor": "wsrep_mode",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/"
+                }
+            ]
+        },
         "wsrep_mysql_replication_bundle": {
             "cli": "--wsrep-mysql-replication-bundle=#",
             "default": "0",
@@ -2149,7 +2247,7 @@
         "wsrep_notify_cmd": {
             "cli": "--wsrep-notify-command=value",
             "default": "Empty",
-            "dynamic": true,
+            "dynamic": false,
             "name": "wsrep_notify_cmd",
             "scope": [
                 "global"
@@ -2222,7 +2320,6 @@
         "wsrep_provider": {
             "cli": "--wsrep-provider=value",
             "default": "None",
-            "dynamic": true,
             "name": "wsrep_provider",
             "scope": [
                 "global"
@@ -3196,7 +3293,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_action_on_fulltext_query_error",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3213,7 +3310,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_boolean_mode_syntax_flags",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3229,7 +3326,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_database_path_prefix",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3245,7 +3342,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_default_parser",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3262,7 +3359,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_default_tokenizer",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3278,7 +3375,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_default_wrapper_engine",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3295,7 +3392,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_dry_write",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3311,7 +3408,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_enable_operations_recording",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3328,7 +3425,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_enable_optimization",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3343,7 +3440,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_libgroonga_embedded",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3358,7 +3455,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_libgroonga_support_lz4",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3373,7 +3470,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_libgroonga_support_zlib",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3388,7 +3485,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_libgroonga_support_zstd",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3402,7 +3499,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_libgroonga_version",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3422,7 +3519,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_lock_timeout",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3438,7 +3535,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_log_file",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3454,7 +3551,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_log_level",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3475,7 +3572,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_match_escalation_threshold",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3496,7 +3593,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_max_n_records_for_estimate",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3512,7 +3609,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_query_log_file",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3528,7 +3625,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_vector_column_delimiter",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -3542,7 +3639,7 @@
             "ids": [
                 {
                     "anchor": "mroonga_version",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/"
                 }
             ]
         },
@@ -8151,12 +8248,12 @@
         },
         "max_binlog_cache_size": {
             "cli": "--max-binlog-cache-size=#",
-            "default": "18446744073709551615",
+            "default": "18446744073709547520",
             "dynamic": true,
             "name": "max_binlog_cache_size",
             "range": {
                 "from": 4096,
-                "to": 1.8446744073709552e+19
+                "to": 1.8446744073709548e+19
             },
             "scope": [
                 "global"
@@ -8404,7 +8501,8 @@
             "dynamic": false,
             "name": "relay_log_space_limit",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -8810,7 +8908,8 @@
             "dynamic": true,
             "name": "slave_net_timeout",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 31536000
             },
             "scope": [
                 "global"
@@ -9152,7 +9251,8 @@
             "dynamic": true,
             "name": "sync_master_info",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -9175,7 +9275,8 @@
             "dynamic": true,
             "name": "sync_relay_log",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -9744,6 +9845,290 @@
                 {
                     "anchor": "transactions_multi_engine",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-status-variables/"
+                }
+            ]
+        },
+        "s3_access_key": {
+            "cli": "--s3-access-key=val",
+            "default": "(Empty)",
+            "dynamic": false,
+            "name": "s3_access_key",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "s3_access_key",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_block_size": {
+            "cli": "--s3-block-size=#",
+            "default": "4194304",
+            "dynamic": true,
+            "name": "s3_block_size",
+            "range": {
+                "from": 4194304,
+                "to": 16777216
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "s3_block_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_bucket": {
+            "cli": "--s3-bucket=val",
+            "default": "MariaDB",
+            "dynamic": false,
+            "name": "s3_bucket",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "s3_bucket",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_debug": {
+            "cli": "--s3-debug{=0|1}",
+            "default": "0",
+            "dynamic": false,
+            "name": "s3_debug",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "validValues": [],
+            "ids": [
+                {
+                    "anchor": "s3_debug",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_host_name": {
+            "cli": "--s3-host-name=val",
+            "default": "s3.amazonaws.com",
+            "dynamic": false,
+            "name": "s3_host_name",
+            "scope": [],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "s3_host_name",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_pagecache_age_threshold": {
+            "cli": "--s3-pagecache-age-threshold=val",
+            "default": "300",
+            "dynamic": true,
+            "name": "s3_pagecache_age_threshold",
+            "range": {
+                "from": 100,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "s3_pagecache_age_threshold",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_pagecache_buffer_size": {
+            "cli": "--s3-pagecache-buffer-size=val",
+            "default": "134217728 (128M)",
+            "dynamic": false,
+            "name": "s3_pagecache_buffer_size",
+            "range": {
+                "from": 33554432,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "s3_pagecache_buffer_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_pagecache_division_limit": {
+            "cli": "--s3-pagecache-division-limit=val",
+            "default": "100",
+            "dynamic": true,
+            "name": "s3_pagecache_division_limit",
+            "range": {
+                "from": 1,
+                "to": 100
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "s3_pagecache_division_limit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_pagecache_file_hash_size": {
+            "cli": "--s3-pagecache-file-hash-size=#",
+            "default": "512",
+            "dynamic": false,
+            "name": "s3_pagecache_file_hash_size",
+            "range": {
+                "from": 32,
+                "to": 16384
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "s3_pagecache_file_hash_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_port": {
+            "cli": "--s3-port=#",
+            "default": "0",
+            "dynamic": false,
+            "name": "s3_port",
+            "range": {
+                "from": 0,
+                "to": 65535
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "s3_port",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_protocol_version": {
+            "cli": "--s3-protocol-version=val",
+            "default": "Auto",
+            "dynamic": true,
+            "name": "s3_protocol_version",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "Auto",
+                "Amazon",
+                "Original"
+            ],
+            "ids": [
+                {
+                    "anchor": "s3_protocol_version",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_region": {
+            "cli": "--s3-region=val",
+            "default": "(Empty)",
+            "dynamic": false,
+            "name": "s3_region",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "s3_region",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_replicate_alter_as_create_select": {
+            "cli": "--s3-replicate-alter-as-create-select{=0|1}",
+            "default": "1",
+            "dynamic": false,
+            "name": "s3_replicate_alter_as_create_select",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "s3_replicate_alter_as_create_select",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_secret_key": {
+            "cli": "--s3-secret-key=val",
+            "default": "(Empty)",
+            "dynamic": false,
+            "name": "s3_secret_key",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "s3_secret_key",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_slave_ignore_updates": {
+            "cli": "--s3-slave-ignore-updates{=0|1}",
+            "default": "0",
+            "dynamic": false,
+            "name": "s3_slave_ignore_updates",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "s3_slave_ignore_updates",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_use_http": {
+            "cli": "--s3-use-http{=0|1}",
+            "default": "0",
+            "dynamic": false,
+            "name": "s3_use_http",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "s3_use_http",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/"
                 }
             ]
         },
@@ -17750,6 +18135,27 @@
                 }
             ]
         },
+        "optimizer_max_sel_arg_weight": {
+            "cli": "--optimizer-max-sel-arg-weight=#",
+            "default": "32000",
+            "dynamic": true,
+            "name": "optimizer_max_sel_arg_weight",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "optimizer_max_sel_arg_weight",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                }
+            ]
+        },
         "optimizer_prune_level": {
             "default": "1",
             "dynamic": true,
@@ -17836,27 +18242,6 @@
                 }
             ]
         },
-        "optimizer_use_condition_selectivity": {
-            "cli": "--optimizer-use-condition-selectivity=#",
-            "default": "4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)",
-            "dynamic": true,
-            "name": "optimizer_use_condition_selectivity",
-            "range": {
-                "from": 1,
-                "to": 5
-            },
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "optimizer_use_condition_selectivity",
-                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
-                }
-            ]
-        },
         "optimizer_trace": {
             "cli": "--optimizer-trace=value",
             "dynamic": true,
@@ -17894,6 +18279,27 @@
                 {
                     "anchor": "sysvar_optimizer_trace_max_mem_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "optimizer_use_condition_selectivity": {
+            "cli": "--optimizer-use-condition-selectivity=#",
+            "default": "4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)",
+            "dynamic": true,
+            "name": "optimizer_use_condition_selectivity",
+            "range": {
+                "from": 1,
+                "to": 5
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "optimizer_use_condition_selectivity",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 }
             ]
         },
@@ -18744,11 +19150,13 @@
         },
         "skip_show_database": {
             "cli": "--skip-show-database",
+            "default": "0",
             "dynamic": false,
             "name": "skip_show_database",
             "scope": [
                 "global"
             ],
+            "type": "boolean",
             "ids": [
                 {
                     "anchor": "skip_show_database",
@@ -22977,8 +23385,7 @@
             "default": "auto",
             "name": "thread_pool_priority",
             "scope": [
-                "global",
-                "connection"
+                "global"
             ],
             "type": "enumeration",
             "validValues": [
@@ -24804,7 +25211,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_alter_print_error",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24824,7 +25231,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_analyze_time",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24844,7 +25251,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_block_size",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24860,7 +25267,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_bulk_fetch",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24872,7 +25279,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_cache_size",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24891,7 +25298,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_check_jemalloc",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24907,7 +25314,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_checkpoint_lock",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24922,7 +25329,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_checkpoint_on_flush_logs",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24941,7 +25348,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_checkpointing_period",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24960,7 +25367,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_cleaner_iterations",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24979,7 +25386,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_cleaner_period",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -24995,7 +25402,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_commit_sync",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25011,7 +25418,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_create_index_online",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25023,7 +25430,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_data_dir",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25042,7 +25449,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_debug",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25054,7 +25461,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_directio",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25070,7 +25477,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_disable_hot_alter",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25086,7 +25493,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_disable_prefetching",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25102,7 +25509,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_disable_slow_alter",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25123,7 +25530,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_empty_scan",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25138,7 +25545,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_fs_reserve_percent",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25158,7 +25565,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_fsync_log_period",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25174,7 +25581,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_hide_default_row_format",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25194,7 +25601,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_killed_time",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25209,7 +25616,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_last_lock_timeout",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25225,7 +25632,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_load_save_space",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25245,7 +25652,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_loader_memory_size",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25265,7 +25672,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_lock_timeout",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25281,7 +25688,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_lock_timeout_debug",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25293,7 +25700,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_log_dir",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25309,7 +25716,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_max_lock_memory",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25329,7 +25736,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_optimize_index_fraction",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25345,7 +25752,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_optimize_index_name",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25365,7 +25772,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_optimize_throttle",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25386,7 +25793,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_pk_insert_mode",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25402,7 +25809,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_prelock_empty",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25422,7 +25829,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_read_block_size",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25442,7 +25849,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_read_buf_size",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25461,7 +25868,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_read_status_frequency",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25486,7 +25893,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_row_format",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25502,7 +25909,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_rpl_check_readonly",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25518,7 +25925,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_rpl_lookup_rows",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25534,7 +25941,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_rpl_lookup_rows_delay",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25550,7 +25957,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_rpl_unique_checks",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25566,7 +25973,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_rpl_unique_checks_delay",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25582,7 +25989,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_support_xa",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25594,7 +26001,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_tmp_dir",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25605,7 +26012,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_version",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25624,7 +26031,7 @@
             "ids": [
                 {
                     "anchor": "tokudb_write_status_frequency",
-                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/"
+                    "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
                 }
             ]
         },
@@ -25872,6 +26279,19 @@
             "ids": [
                 {
                     "anchor": "innodb_buffer_pool_pages_lru_flushed",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/"
+                }
+            ]
+        },
+        "Innodb_buffer_pool_pages_LRU_freed": {
+            "name": "Innodb_buffer_pool_pages_LRU_freed",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_buffer_pool_pages_lru_freed",
                     "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/"
                 }
             ]
@@ -27997,7 +28417,6 @@
         },
         "innodb_adaptive_max_sleep_delay": {
             "cli": "--innodb-adaptive-max-sleep-delay=#",
-            "default": "150000",
             "dynamic": true,
             "name": "innodb_adaptive_max_sleep_delay",
             "range": {
@@ -28506,6 +28925,26 @@
                 }
             ]
         },
+        "innodb_buffer_pool_load_pages_abort": {
+            "cli": "--innodb-buffer-pool-load-pages-abort=#",
+            "default": "9223372036854775807",
+            "dynamic": true,
+            "name": "innodb_buffer_pool_load_pages_abort",
+            "range": {
+                "from": 1,
+                "to": 9.223372036854776e+18
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_buffer_pool_load_pages_abort",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
+                }
+            ]
+        },
         "innodb_buffer_pool_populate": {
             "cli": "innodb-buffer-pool-populate={0|1}",
             "default": "OFF",
@@ -28930,7 +29369,6 @@
         },
         "innodb_concurrency_tickets": {
             "cli": "--innodb-concurrency-tickets=#",
-            "default": "5000",
             "dynamic": true,
             "name": "innodb_concurrency_tickets",
             "range": {
@@ -30738,9 +31176,28 @@
                 }
             ]
         },
+        "innodb_lru_flush_size": {
+            "cli": "--innodb-lru-flush-size=#",
+            "default": "32",
+            "dynamic": true,
+            "name": "innodb_lru_flush_size",
+            "range": {
+                "from": 1,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_lru_flush_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
+                }
+            ]
+        },
         "innodb_lru_scan_depth": {
             "cli": "--innodb-lru-scan-depth=#",
-            "default": "1024",
             "dynamic": true,
             "name": "innodb_lru_scan_depth",
             "range": {
@@ -30803,6 +31260,7 @@
         },
         "innodb_max_dirty_pages_pct": {
             "cli": "--innodb-max-dirty-pages-pct=#",
+            "default": "90",
             "dynamic": true,
             "name": "innodb_max_dirty_pages_pct",
             "range": {
@@ -30890,6 +31348,26 @@
                 {
                     "anchor": "sysvar_innodb_max_purge_lag_delay",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
+        "innodb_max_purge_lag_wait": {
+            "cli": "--innodb-max-purge-wait=#",
+            "default": "4294967295",
+            "dynamic": true,
+            "name": "innodb_max_purge_lag_wait",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_max_purge_lag_wait",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
                 }
             ]
         },
@@ -32178,7 +32656,6 @@
         },
         "innodb_thread_sleep_delay": {
             "cli": "--innodb-thread-sleep-delay=#",
-            "default": "10000",
             "dynamic": true,
             "name": "innodb_thread_sleep_delay",
             "range": {
@@ -35696,7 +36173,8 @@
             "dynamic": true,
             "name": "binlog_transaction_compression",
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "boolean",
             "ids": [
@@ -35716,7 +36194,8 @@
                 "to": 22
             },
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "integer",
             "ids": [
@@ -36232,7 +36711,8 @@
             "dynamic": true,
             "name": "slave_checkpoint_period",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 4294967295
             },
             "scope": [
                 "global"

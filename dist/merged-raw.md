@@ -726,7 +726,7 @@
 |Name|`connect_conv_size`|
 |Command line|`--connect-conv-size=#`|
 |Type of variable|`integer`|
-|Scope|`session`, `global`|
+|Scope|`global`, `session`, `global`|
 |Default value|`>= MariaDB 10.4.8, MariaDB 10.3.18, MariaDB 10.2.27: 1024, <= MariaDB 10.4.7, MariaDB 10.3.17, MariaDB 10.2.26: 8192`|
 |Dynamic|`true`|
 |Range|from: `0` to: `65500`|
@@ -735,6 +735,38 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[connect_conv_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_conv_size)|
+
+## connect_default_depth
+|name|value|
+|----|-----|
+|Name|`connect_default_depth`|
+|Command line|`--connect-default-depth=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`5`|
+|Dynamic|`true`|
+|Range|from: `-1` to: `16`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[connect_default_depth](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_default_depth)|
+
+## connect_default_prec
+|name|value|
+|----|-----|
+|Name|`connect_default_prec`|
+|Command line|`--connect-default-prec=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`6`|
+|Dynamic|`true`|
+|Range|from: `0` to: `16`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[connect_default_prec](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_default_prec)|
 
 ## connect_enable_mongo
 |name|value|
@@ -755,9 +787,9 @@
 |name|value|
 |----|-----|
 |Name|`connect_exact_info`|
-|Command line|`--connect-exact-info=#`|
+|Command line|`--connect-exact-info={0|1}`|
 |Type of variable|`boolean`|
-|Scope|`session`|
+|Scope|`global`, `session`|
 |Default value|`OFF`|
 |Dynamic|`true`|
 
@@ -765,6 +797,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[connect_exact_info](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_exact_info)|
+
+## connect_force_bson
+|name|value|
+|----|-----|
+|Name|`connect_force_bson`|
+|Command line|`--connect-force-bson={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[connect_force_bson](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_force_bson)|
 
 ## connect_indx_map
 |name|value|
@@ -795,6 +842,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[connect_java_wrapper](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_java_wrapper)|
+
+## connect_json_all_path
+|name|value|
+|----|-----|
+|Name|`connect_json_all_path`|
+|Command line|`--connect-json-all-path={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[connect_json_all_path](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_json_all_path)|
 
 ## connect_json_grp_size
 |name|value|
@@ -848,8 +910,8 @@
 |Name|`connect_type_conv`|
 |Command line|`--connect-type-conv=#`|
 |Type of variable|`enumeration`|
-|Scope|`session`, `global`|
-|Default value|`YES (>= Connect 1.06.006), NO (<= Connect 1.06.005)`|
+|Scope|`global`, `session`|
+|Default value|`YES`|
 |Dynamic|`true`|
 |Valid value(s)|`NO`, `YES`, `SKIP`|
 
@@ -898,7 +960,6 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `2147483647`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -1898,6 +1959,22 @@
 |------|----|
 |mariadb.com|[wsrep_max_ws_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_max_ws_size)|
 
+## wsrep_mode
+|name|value|
+|----|-----|
+|Name|`wsrep_mode`|
+|Command line|`--wsrep-mode=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`(Empty)`|
+|Dynamic|`true`|
+|Valid value(s)|`BINLOG_ROW_FORMAT_ONLY`, `DISALLOW_LOCAL_GTID`, `REQUIRED_PRIMARY_KEY`, `REPLICATE_ARIA`, `REPLICATE_MYISAM`, `STRICT_REPLICATION`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_mode](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_mode)|
+
 ## wsrep_mysql_replication_bundle
 |name|value|
 |----|-----|
@@ -1967,7 +2044,7 @@
 |Type of variable|`string`|
 |Scope|`global`|
 |Default value|`Empty`|
-|Dynamic|`true`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2028,7 +2105,6 @@
 |Type of variable|`string`|
 |Scope|`global`|
 |Default value|`None`|
-|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2852,7 +2928,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_action_on_fulltext_query_error](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_action_on_fulltext_query_error)|
+|mariadb.com|[mroonga_action_on_fulltext_query_error](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_action_on_fulltext_query_error)|
 
 ## mroonga_boolean_mode_syntax_flags
 |name|value|
@@ -2867,7 +2943,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_boolean_mode_syntax_flags](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_boolean_mode_syntax_flags)|
+|mariadb.com|[mroonga_boolean_mode_syntax_flags](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_boolean_mode_syntax_flags)|
 
 ## mroonga_database_path_prefix
 |name|value|
@@ -2882,7 +2958,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_database_path_prefix](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_database_path_prefix)|
+|mariadb.com|[mroonga_database_path_prefix](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_database_path_prefix)|
 
 ## mroonga_default_parser
 |name|value|
@@ -2897,7 +2973,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_default_parser](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_default_parser)|
+|mariadb.com|[mroonga_default_parser](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_default_parser)|
 
 ## mroonga_default_tokenizer
 |name|value|
@@ -2912,7 +2988,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_default_tokenizer](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_default_tokenizer)|
+|mariadb.com|[mroonga_default_tokenizer](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_default_tokenizer)|
 
 ## mroonga_default_wrapper_engine
 |name|value|
@@ -2927,7 +3003,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_default_wrapper_engine](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_default_wrapper_engine)|
+|mariadb.com|[mroonga_default_wrapper_engine](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_default_wrapper_engine)|
 
 ## mroonga_dry_write
 |name|value|
@@ -2942,7 +3018,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_dry_write](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_dry_write)|
+|mariadb.com|[mroonga_dry_write](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_dry_write)|
 
 ## mroonga_enable_operations_recording
 |name|value|
@@ -2957,7 +3033,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_enable_operations_recording](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_enable_operations_recording)|
+|mariadb.com|[mroonga_enable_operations_recording](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_enable_operations_recording)|
 
 ## mroonga_enable_optimization
 |name|value|
@@ -2972,7 +3048,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_enable_optimization](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_enable_optimization)|
+|mariadb.com|[mroonga_enable_optimization](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_enable_optimization)|
 
 ## mroonga_libgroonga_embedded
 |name|value|
@@ -2986,7 +3062,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_libgroonga_embedded](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_libgroonga_embedded)|
+|mariadb.com|[mroonga_libgroonga_embedded](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_libgroonga_embedded)|
 
 ## mroonga_libgroonga_support_lz4
 |name|value|
@@ -3000,7 +3076,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_libgroonga_support_lz4](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_libgroonga_support_lz4)|
+|mariadb.com|[mroonga_libgroonga_support_lz4](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_libgroonga_support_lz4)|
 
 ## mroonga_libgroonga_support_zlib
 |name|value|
@@ -3014,7 +3090,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_libgroonga_support_zlib](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_libgroonga_support_zlib)|
+|mariadb.com|[mroonga_libgroonga_support_zlib](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_libgroonga_support_zlib)|
 
 ## mroonga_libgroonga_support_zstd
 |name|value|
@@ -3028,7 +3104,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_libgroonga_support_zstd](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_libgroonga_support_zstd)|
+|mariadb.com|[mroonga_libgroonga_support_zstd](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_libgroonga_support_zstd)|
 
 ## mroonga_libgroonga_version
 |name|value|
@@ -3041,7 +3117,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_libgroonga_version](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_libgroonga_version)|
+|mariadb.com|[mroonga_libgroonga_version](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_libgroonga_version)|
 
 ## mroonga_lock_timeout
 |name|value|
@@ -3057,7 +3133,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_lock_timeout](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_lock_timeout)|
+|mariadb.com|[mroonga_lock_timeout](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_lock_timeout)|
 
 ## mroonga_log_file
 |name|value|
@@ -3072,7 +3148,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_log_file](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_log_file)|
+|mariadb.com|[mroonga_log_file](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_log_file)|
 
 ## mroonga_log_level
 |name|value|
@@ -3087,7 +3163,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_log_level](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_log_level)|
+|mariadb.com|[mroonga_log_level](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_log_level)|
 
 ## mroonga_match_escalation_threshold
 |name|value|
@@ -3103,7 +3179,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_match_escalation_threshold](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_match_escalation_threshold)|
+|mariadb.com|[mroonga_match_escalation_threshold](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_match_escalation_threshold)|
 
 ## mroonga_max_n_records_for_estimate
 |name|value|
@@ -3119,7 +3195,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_max_n_records_for_estimate](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_max_n_records_for_estimate)|
+|mariadb.com|[mroonga_max_n_records_for_estimate](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_max_n_records_for_estimate)|
 
 ## mroonga_query_log_file
 |name|value|
@@ -3134,7 +3210,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_query_log_file](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_query_log_file)|
+|mariadb.com|[mroonga_query_log_file](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_query_log_file)|
 
 ## mroonga_vector_column_delimiter
 |name|value|
@@ -3149,7 +3225,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_vector_column_delimiter](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_vector_column_delimiter)|
+|mariadb.com|[mroonga_vector_column_delimiter](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_vector_column_delimiter)|
 
 ## mroonga_version
 |name|value|
@@ -3162,7 +3238,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[mroonga_version](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/mroonga/mroonga-system-variables/#mroonga_version)|
+|mariadb.com|[mroonga_version](https://mariadb.com/kb/en/library/documentation/mroonga-system-variables/#mroonga_version)|
 
 ## key_buffer_size
 |name|value|
@@ -6895,7 +6971,7 @@
 |Command line|`--max-binlog-cache-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`18446744073709551615`|
+|Default value|`18446744073709547520`|
 |Dynamic|`true`|
 |Range|from: `4096` to: `1.844674407371E+19`|
 
@@ -7075,7 +7151,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7401,7 +7477,7 @@
 |Scope|`global`|
 |Default value|`60`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7648,7 +7724,7 @@
 |Scope|`global`|
 |Default value|`10000`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7665,7 +7741,7 @@
 |Scope|`global`|
 |Default value|`10000`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -8167,6 +8243,253 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[transactions_multi_engine](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-status-variables/#transactions_multi_engine)|
+
+## s3_access_key
+|name|value|
+|----|-----|
+|Name|`s3_access_key`|
+|Command line|`--s3-access-key=val`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`(Empty)`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_access_key](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_access_key)|
+
+## s3_block_size
+|name|value|
+|----|-----|
+|Name|`s3_block_size`|
+|Command line|`--s3-block-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`4194304`|
+|Dynamic|`true`|
+|Range|from: `4194304` to: `16777216`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_block_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_block_size)|
+
+## s3_bucket
+|name|value|
+|----|-----|
+|Name|`s3_bucket`|
+|Command line|`--s3-bucket=val`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`MariaDB`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_bucket](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_bucket)|
+
+## s3_debug
+|name|value|
+|----|-----|
+|Name|`s3_debug`|
+|Command line|`--s3-debug{=0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_debug](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_debug)|
+
+## s3_host_name
+|name|value|
+|----|-----|
+|Name|`s3_host_name`|
+|Command line|`--s3-host-name=val`|
+|Type of variable|`string`|
+|Scope|``|
+|Default value|`s3.amazonaws.com`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_host_name](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_host_name)|
+
+## s3_pagecache_age_threshold
+|name|value|
+|----|-----|
+|Name|`s3_pagecache_age_threshold`|
+|Command line|`--s3-pagecache-age-threshold=val`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`300`|
+|Dynamic|`true`|
+|Range|from: `100` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_pagecache_age_threshold](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_pagecache_age_threshold)|
+
+## s3_pagecache_buffer_size
+|name|value|
+|----|-----|
+|Name|`s3_pagecache_buffer_size`|
+|Command line|`--s3-pagecache-buffer-size=val`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`134217728 (128M)`|
+|Dynamic|`false`|
+|Range|from: `33554432` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_pagecache_buffer_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_pagecache_buffer_size)|
+
+## s3_pagecache_division_limit
+|name|value|
+|----|-----|
+|Name|`s3_pagecache_division_limit`|
+|Command line|`--s3-pagecache-division-limit=val`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`100`|
+|Dynamic|`true`|
+|Range|from: `1` to: `100`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_pagecache_division_limit](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_pagecache_division_limit)|
+
+## s3_pagecache_file_hash_size
+|name|value|
+|----|-----|
+|Name|`s3_pagecache_file_hash_size`|
+|Command line|`--s3-pagecache-file-hash-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`512`|
+|Dynamic|`false`|
+|Range|from: `32` to: `16384`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_pagecache_file_hash_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_pagecache_file_hash_size)|
+
+## s3_port
+|name|value|
+|----|-----|
+|Name|`s3_port`|
+|Command line|`--s3-port=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+|Range|from: `0` to: `65535`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_port](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_port)|
+
+## s3_protocol_version
+|name|value|
+|----|-----|
+|Name|`s3_protocol_version`|
+|Command line|`--s3-protocol-version=val`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`Auto`|
+|Dynamic|`true`|
+|Valid value(s)|`Auto`, `Amazon`, `Original`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_protocol_version](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_protocol_version)|
+
+## s3_region
+|name|value|
+|----|-----|
+|Name|`s3_region`|
+|Command line|`--s3-region=val`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`(Empty)`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_region](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_region)|
+
+## s3_replicate_alter_as_create_select
+|name|value|
+|----|-----|
+|Name|`s3_replicate_alter_as_create_select`|
+|Command line|`--s3-replicate-alter-as-create-select{=0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_replicate_alter_as_create_select](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_replicate_alter_as_create_select)|
+
+## s3_secret_key
+|name|value|
+|----|-----|
+|Name|`s3_secret_key`|
+|Command line|`--s3-secret-key=val`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`(Empty)`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_secret_key](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_secret_key)|
+
+## s3_slave_ignore_updates
+|name|value|
+|----|-----|
+|Name|`s3_slave_ignore_updates`|
+|Command line|`--s3-slave-ignore-updates{=0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_slave_ignore_updates](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_slave_ignore_updates)|
+
+## s3_use_http
+|name|value|
+|----|-----|
+|Name|`s3_use_http`|
+|Command line|`--s3-use-http{=0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_use_http](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/s3-storage-engine/s3-storage-engine-system-variables/#s3_use_http)|
 
 ## Rpl_semi_sync_master_clients
 |name|value|
@@ -14813,6 +15136,22 @@
 |mariadb.com|[open_files_limit](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#open_files_limit)|
 |dev.mysql.com|[sysvar_open_files_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_open_files_limit)|
 
+## optimizer_max_sel_arg_weight
+|name|value|
+|----|-----|
+|Name|`optimizer_max_sel_arg_weight`|
+|Command line|`--optimizer-max-sel-arg-weight=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`32000`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[optimizer_max_sel_arg_weight](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_max_sel_arg_weight)|
+
 ## optimizer_prune_level
 |name|value|
 |----|-----|
@@ -14874,22 +15213,6 @@
 |mariadb.com|[optimizer_switch](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_switch)|
 |dev.mysql.com|[sysvar_optimizer_switch](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)|
 
-## optimizer_use_condition_selectivity
-|name|value|
-|----|-----|
-|Name|`optimizer_use_condition_selectivity`|
-|Command line|`--optimizer-use-condition-selectivity=#`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)`|
-|Dynamic|`true`|
-|Range|from: `1` to: `5`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[optimizer_use_condition_selectivity](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_use_condition_selectivity)|
-
 ## optimizer_trace
 |name|value|
 |----|-----|
@@ -14919,6 +15242,22 @@
 |------|----|
 |mariadb.com|[optimizer_trace_max_mem_size](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_trace_max_mem_size)|
 |dev.mysql.com|[sysvar_optimizer_trace_max_mem_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace_max_mem_size)|
+
+## optimizer_use_condition_selectivity
+|name|value|
+|----|-----|
+|Name|`optimizer_use_condition_selectivity`|
+|Command line|`--optimizer-use-condition-selectivity=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)`|
+|Dynamic|`true`|
+|Range|from: `1` to: `5`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[optimizer_use_condition_selectivity](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_use_condition_selectivity)|
 
 ## pid_file
 |name|value|
@@ -15582,7 +15921,9 @@
 |----|-----|
 |Name|`skip_show_database`|
 |Command line|`--skip-show-database`|
+|Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`0`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -18951,7 +19292,7 @@
 |Name|`thread_pool_priority`|
 |Command line|`--thread-pool-priority=#`|
 |Type of variable|`enumeration`|
-|Scope|`global`, `connection`|
+|Scope|`global`|
 |Default value|`auto`|
 |Valid value(s)|`high`, `low`, `auto`|
 
@@ -20932,7 +21273,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_alter_print_error](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_alter_print_error)|
+|mariadb.com|[tokudb_alter_print_error](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_alter_print_error)|
 
 ## tokudb_analyze_time
 |name|value|
@@ -20947,7 +21288,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_analyze_time](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_analyze_time)|
+|mariadb.com|[tokudb_analyze_time](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_analyze_time)|
 
 ## tokudb_block_size
 |name|value|
@@ -20962,7 +21303,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_block_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_block_size)|
+|mariadb.com|[tokudb_block_size](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_block_size)|
 
 ## tokudb_bulk_fetch
 |name|value|
@@ -20976,7 +21317,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_bulk_fetch](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_bulk_fetch)|
+|mariadb.com|[tokudb_bulk_fetch](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_bulk_fetch)|
 
 ## tokudb_cache_size
 |name|value|
@@ -20989,7 +21330,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_cache_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_cache_size)|
+|mariadb.com|[tokudb_cache_size](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_cache_size)|
 
 ## tokudb_check_jemalloc
 |name|value|
@@ -21004,7 +21345,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_check_jemalloc](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_check_jemalloc)|
+|mariadb.com|[tokudb_check_jemalloc](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_check_jemalloc)|
 
 ## tokudb_checkpoint_lock
 |name|value|
@@ -21018,7 +21359,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_checkpoint_lock](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_checkpoint_lock)|
+|mariadb.com|[tokudb_checkpoint_lock](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_checkpoint_lock)|
 
 ## tokudb_checkpoint_on_flush_logs
 |name|value|
@@ -21032,7 +21373,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_checkpoint_on_flush_logs](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_checkpoint_on_flush_logs)|
+|mariadb.com|[tokudb_checkpoint_on_flush_logs](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_checkpoint_on_flush_logs)|
 
 ## tokudb_checkpointing_period
 |name|value|
@@ -21047,7 +21388,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_checkpointing_period](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_checkpointing_period)|
+|mariadb.com|[tokudb_checkpointing_period](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_checkpointing_period)|
 
 ## tokudb_cleaner_iterations
 |name|value|
@@ -21062,7 +21403,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_cleaner_iterations](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_cleaner_iterations)|
+|mariadb.com|[tokudb_cleaner_iterations](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_cleaner_iterations)|
 
 ## tokudb_cleaner_period
 |name|value|
@@ -21077,7 +21418,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_cleaner_period](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_cleaner_period)|
+|mariadb.com|[tokudb_cleaner_period](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_cleaner_period)|
 
 ## tokudb_commit_sync
 |name|value|
@@ -21091,7 +21432,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_commit_sync](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_commit_sync)|
+|mariadb.com|[tokudb_commit_sync](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_commit_sync)|
 
 ## tokudb_create_index_online
 |name|value|
@@ -21105,7 +21446,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_create_index_online](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_create_index_online)|
+|mariadb.com|[tokudb_create_index_online](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_create_index_online)|
 
 ## tokudb_data_dir
 |name|value|
@@ -21118,7 +21459,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_data_dir](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_data_dir)|
+|mariadb.com|[tokudb_data_dir](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_data_dir)|
 
 ## tokudb_debug
 |name|value|
@@ -21133,7 +21474,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_debug](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_debug)|
+|mariadb.com|[tokudb_debug](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_debug)|
 
 ## tokudb_directio
 |name|value|
@@ -21146,7 +21487,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_directio](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_directio)|
+|mariadb.com|[tokudb_directio](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_directio)|
 
 ## tokudb_disable_hot_alter
 |name|value|
@@ -21160,7 +21501,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_disable_hot_alter](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_disable_hot_alter)|
+|mariadb.com|[tokudb_disable_hot_alter](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_disable_hot_alter)|
 
 ## tokudb_disable_prefetching
 |name|value|
@@ -21174,7 +21515,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_disable_prefetching](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_disable_prefetching)|
+|mariadb.com|[tokudb_disable_prefetching](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_disable_prefetching)|
 
 ## tokudb_disable_slow_alter
 |name|value|
@@ -21188,7 +21529,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_disable_slow_alter](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_disable_slow_alter)|
+|mariadb.com|[tokudb_disable_slow_alter](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_disable_slow_alter)|
 
 ## tokudb_empty_scan
 |name|value|
@@ -21203,7 +21544,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_empty_scan](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_empty_scan)|
+|mariadb.com|[tokudb_empty_scan](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_empty_scan)|
 
 ## tokudb_fs_reserve_percent
 |name|value|
@@ -21217,7 +21558,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_fs_reserve_percent](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_fs_reserve_percent)|
+|mariadb.com|[tokudb_fs_reserve_percent](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_fs_reserve_percent)|
 
 ## tokudb_fsync_log_period
 |name|value|
@@ -21232,7 +21573,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_fsync_log_period](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_fsync_log_period)|
+|mariadb.com|[tokudb_fsync_log_period](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_fsync_log_period)|
 
 ## tokudb_hide_default_row_format
 |name|value|
@@ -21246,7 +21587,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_hide_default_row_format](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_hide_default_row_format)|
+|mariadb.com|[tokudb_hide_default_row_format](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_hide_default_row_format)|
 
 ## tokudb_killed_time
 |name|value|
@@ -21261,7 +21602,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_killed_time](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_killed_time)|
+|mariadb.com|[tokudb_killed_time](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_killed_time)|
 
 ## tokudb_last_lock_timeout
 |name|value|
@@ -21274,7 +21615,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_last_lock_timeout](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_last_lock_timeout)|
+|mariadb.com|[tokudb_last_lock_timeout](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_last_lock_timeout)|
 
 ## tokudb_load_save_space
 |name|value|
@@ -21288,7 +21629,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_load_save_space](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_load_save_space)|
+|mariadb.com|[tokudb_load_save_space](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_load_save_space)|
 
 ## tokudb_loader_memory_size
 |name|value|
@@ -21303,7 +21644,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_loader_memory_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_loader_memory_size)|
+|mariadb.com|[tokudb_loader_memory_size](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_loader_memory_size)|
 
 ## tokudb_lock_timeout
 |name|value|
@@ -21318,7 +21659,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_lock_timeout](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_lock_timeout)|
+|mariadb.com|[tokudb_lock_timeout](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_lock_timeout)|
 
 ## tokudb_lock_timeout_debug
 |name|value|
@@ -21332,7 +21673,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_lock_timeout_debug](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_lock_timeout_debug)|
+|mariadb.com|[tokudb_lock_timeout_debug](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_lock_timeout_debug)|
 
 ## tokudb_log_dir
 |name|value|
@@ -21345,7 +21686,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_log_dir](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_log_dir)|
+|mariadb.com|[tokudb_log_dir](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_log_dir)|
 
 ## tokudb_max_lock_memory
 |name|value|
@@ -21359,7 +21700,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_max_lock_memory](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_max_lock_memory)|
+|mariadb.com|[tokudb_max_lock_memory](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_max_lock_memory)|
 
 ## tokudb_optimize_index_fraction
 |name|value|
@@ -21374,7 +21715,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_optimize_index_fraction](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_optimize_index_fraction)|
+|mariadb.com|[tokudb_optimize_index_fraction](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_optimize_index_fraction)|
 
 ## tokudb_optimize_index_name
 |name|value|
@@ -21388,7 +21729,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_optimize_index_name](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_optimize_index_name)|
+|mariadb.com|[tokudb_optimize_index_name](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_optimize_index_name)|
 
 ## tokudb_optimize_throttle
 |name|value|
@@ -21403,7 +21744,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_optimize_throttle](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_optimize_throttle)|
+|mariadb.com|[tokudb_optimize_throttle](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_optimize_throttle)|
 
 ## tokudb_pk_insert_mode
 |name|value|
@@ -21418,7 +21759,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_pk_insert_mode](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_pk_insert_mode)|
+|mariadb.com|[tokudb_pk_insert_mode](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_pk_insert_mode)|
 
 ## tokudb_prelock_empty
 |name|value|
@@ -21432,7 +21773,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_prelock_empty](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_prelock_empty)|
+|mariadb.com|[tokudb_prelock_empty](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_prelock_empty)|
 
 ## tokudb_read_block_size
 |name|value|
@@ -21447,7 +21788,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_read_block_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_read_block_size)|
+|mariadb.com|[tokudb_read_block_size](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_read_block_size)|
 
 ## tokudb_read_buf_size
 |name|value|
@@ -21462,7 +21803,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_read_buf_size](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_read_buf_size)|
+|mariadb.com|[tokudb_read_buf_size](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_read_buf_size)|
 
 ## tokudb_read_status_frequency
 |name|value|
@@ -21477,7 +21818,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_read_status_frequency](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_read_status_frequency)|
+|mariadb.com|[tokudb_read_status_frequency](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_read_status_frequency)|
 
 ## tokudb_row_format
 |name|value|
@@ -21492,7 +21833,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_row_format](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_row_format)|
+|mariadb.com|[tokudb_row_format](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_row_format)|
 
 ## tokudb_rpl_check_readonly
 |name|value|
@@ -21506,7 +21847,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_rpl_check_readonly](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_rpl_check_readonly)|
+|mariadb.com|[tokudb_rpl_check_readonly](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_rpl_check_readonly)|
 
 ## tokudb_rpl_lookup_rows
 |name|value|
@@ -21520,7 +21861,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_rpl_lookup_rows](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_rpl_lookup_rows)|
+|mariadb.com|[tokudb_rpl_lookup_rows](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_rpl_lookup_rows)|
 
 ## tokudb_rpl_lookup_rows_delay
 |name|value|
@@ -21534,7 +21875,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_rpl_lookup_rows_delay](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_rpl_lookup_rows_delay)|
+|mariadb.com|[tokudb_rpl_lookup_rows_delay](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_rpl_lookup_rows_delay)|
 
 ## tokudb_rpl_unique_checks
 |name|value|
@@ -21548,7 +21889,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_rpl_unique_checks](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_rpl_unique_checks)|
+|mariadb.com|[tokudb_rpl_unique_checks](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_rpl_unique_checks)|
 
 ## tokudb_rpl_unique_checks_delay
 |name|value|
@@ -21562,7 +21903,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_rpl_unique_checks_delay](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_rpl_unique_checks_delay)|
+|mariadb.com|[tokudb_rpl_unique_checks_delay](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_rpl_unique_checks_delay)|
 
 ## tokudb_support_xa
 |name|value|
@@ -21576,7 +21917,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_support_xa](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_support_xa)|
+|mariadb.com|[tokudb_support_xa](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_support_xa)|
 
 ## tokudb_tmp_dir
 |name|value|
@@ -21589,7 +21930,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_tmp_dir](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_tmp_dir)|
+|mariadb.com|[tokudb_tmp_dir](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_tmp_dir)|
 
 ## tokudb_version
 |name|value|
@@ -21601,7 +21942,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_version](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_version)|
+|mariadb.com|[tokudb_version](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_version)|
 
 ## tokudb_write_status_frequency
 |name|value|
@@ -21616,7 +21957,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[tokudb_write_status_frequency](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/tokudb/tokudb-system-variables/#tokudb_write_status_frequency)|
+|mariadb.com|[tokudb_write_status_frequency](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_write_status_frequency)|
 
 ## system_versioning_alter_history
 |name|value|
@@ -21841,6 +22182,18 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[innodb_buffer_pool_pages_lru_flushed](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_buffer_pool_pages_lru_flushed)|
+
+## Innodb_buffer_pool_pages_LRU_freed
+|name|value|
+|----|-----|
+|Name|`Innodb_buffer_pool_pages_LRU_freed`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_buffer_pool_pages_lru_freed](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_buffer_pool_pages_lru_freed)|
 
 ## Innodb_buffer_pool_pages_free
 |name|value|
@@ -23799,7 +24152,6 @@
 |Command line|`--innodb-adaptive-max-sleep-delay=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`150000`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1000000`|
 
@@ -24194,6 +24546,22 @@
 |mariadb.com|[innodb_buffer_pool_load_now](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_buffer_pool_load_now)|
 |dev.mysql.com|[sysvar_innodb_buffer_pool_load_now](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_buffer_pool_load_now)|
 
+## innodb_buffer_pool_load_pages_abort
+|name|value|
+|----|-----|
+|Name|`innodb_buffer_pool_load_pages_abort`|
+|Command line|`--innodb-buffer-pool-load-pages-abort=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`9223372036854775807`|
+|Dynamic|`true`|
+|Range|from: `1` to: `9.2233720368548E+18`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_buffer_pool_load_pages_abort](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_buffer_pool_load_pages_abort)|
+
 ## innodb_buffer_pool_populate
 |name|value|
 |----|-----|
@@ -24518,7 +24886,6 @@
 |Command line|`--innodb-concurrency-tickets=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`5000`|
 |Dynamic|`true`|
 |Range|from: `1`|
 
@@ -25935,6 +26302,22 @@
 |mariadb.com|[innodb_log_write_ahead_size](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_log_write_ahead_size)|
 |dev.mysql.com|[sysvar_innodb_log_write_ahead_size](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_write_ahead_size)|
 
+## innodb_lru_flush_size
+|name|value|
+|----|-----|
+|Name|`innodb_lru_flush_size`|
+|Command line|`--innodb-lru-flush-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`32`|
+|Dynamic|`true`|
+|Range|from: `1` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_lru_flush_size](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_lru_flush_size)|
+
 ## innodb_lru_scan_depth
 |name|value|
 |----|-----|
@@ -25942,7 +26325,6 @@
 |Command line|`--innodb-lru-scan-depth=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1024`|
 |Dynamic|`true`|
 |Range|from: `100`|
 
@@ -25991,6 +26373,7 @@
 |Command line|`--innodb-max-dirty-pages-pct=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`90`|
 |Dynamic|`true`|
 |Range|from: `0`|
 
@@ -26049,6 +26432,22 @@
 |------|----|
 |mariadb.com|[innodb_max_purge_lag_delay](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_max_purge_lag_delay)|
 |dev.mysql.com|[sysvar_innodb_max_purge_lag_delay](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_max_purge_lag_delay)|
+
+## innodb_max_purge_lag_wait
+|name|value|
+|----|-----|
+|Name|`innodb_max_purge_lag_wait`|
+|Command line|`--innodb-max-purge-wait=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`4294967295`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_max_purge_lag_wait](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_max_purge_lag_wait)|
 
 ## innodb_max_undo_log_size
 |name|value|
@@ -27053,7 +27452,6 @@
 |Command line|`--innodb-thread-sleep-delay=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`10000`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1000000`|
 
@@ -30063,7 +30461,7 @@
 |Name|`binlog_transaction_compression`|
 |Command line|`--binlog-transaction-compression[={OFF|ON}]`|
 |Type of variable|`boolean`|
-|Scope|`global`|
+|Scope|`global`, `session`|
 |Default value|`OFF`|
 |Dynamic|`true`|
 
@@ -30078,7 +30476,7 @@
 |Name|`binlog_transaction_compression_level_zstd`|
 |Command line|`--binlog-transaction-compression-level-zstd=#`|
 |Type of variable|`integer`|
-|Scope|`global`|
+|Scope|`global`, `session`|
 |Default value|`3`|
 |Dynamic|`true`|
 |Range|from: `1` to: `22`|
@@ -30516,7 +30914,7 @@
 |Scope|`global`|
 |Default value|`300`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|

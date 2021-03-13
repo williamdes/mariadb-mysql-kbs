@@ -275,6 +275,25 @@
       "type": "integer"
     },
     {
+      "cli": "--wsrep-mode=value",
+      "default": "(Empty)",
+      "dynamic": true,
+      "id": "wsrep_mode",
+      "name": "wsrep_mode",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "BINLOG_ROW_FORMAT_ONLY",
+        "DISALLOW_LOCAL_GTID",
+        "REQUIRED_PRIMARY_KEY",
+        "REPLICATE_ARIA",
+        "REPLICATE_MYISAM",
+        "STRICT_REPLICATION"
+      ]
+    },
+    {
       "cli": "--wsrep-mysql-replication-bundle=#",
       "default": "0",
       "dynamic": false,
@@ -325,7 +344,7 @@
     {
       "cli": "--wsrep-notify-command=value",
       "default": "Empty",
-      "dynamic": true,
+      "dynamic": false,
       "id": "wsrep_notify_cmd",
       "name": "wsrep_notify_cmd",
       "scope": [
@@ -378,7 +397,6 @@
     {
       "cli": "--wsrep-provider=value",
       "default": "None",
-      "dynamic": true,
       "id": "wsrep_provider",
       "name": "wsrep_provider",
       "scope": [

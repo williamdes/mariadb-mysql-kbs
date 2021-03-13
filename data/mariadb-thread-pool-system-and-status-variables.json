@@ -128,8 +128,7 @@
       "id": "thread_pool_priority",
       "name": "thread_pool_priority",
       "scope": [
-        "global",
-        "connection"
+        "global"
       ],
       "type": "enumeration",
       "validValues": [

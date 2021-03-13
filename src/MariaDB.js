@@ -160,9 +160,26 @@ function parsePage($, cbSuccess) {
 
 const KB_URL = 'https://mariadb.com/kb/en/library/documentation/';
 
-const storageEngines = ['aria', 'myrocks', 'cassandra', 'galera-cluster', 'mroonga', 'myisam', 'tokudb', 'connect'];
+const storageEngines = [
+    's3-storage-engine',
+    'aria',
+    'myrocks',
+    'cassandra',
+    'galera-cluster',
+    'mroonga',
+    'myisam',
+    'tokudb',
+    'connect',
+];
 
-const systemVariables = ['xtradbinnodb-server', 'mariadb-audit-plugin', 'ssltls', 'performance-schema'];
+const systemVariables = [
+    'mroonga',
+    'tokudb',
+    'xtradbinnodb-server',
+    'mariadb-audit-plugin',
+    'ssltls',
+    'performance-schema',
+];
 
 const custom = [
     {

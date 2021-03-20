@@ -7220,7 +7220,8 @@
             "dynamic": true,
             "name": "sql_slave_skip_counter",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -18187,6 +18188,9 @@
             "range": {
                 "from": 0
             },
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 "36#thread_pool_prio_kickup_timer",
@@ -22543,6 +22547,10 @@
             ],
             "type": "enumeration",
             "validValues": [
+                "crc32",
+                "full_crc32",
+                "strict_crc32",
+                "strict_full_crc32",
                 "innodb",
                 "crc32",
                 "full_crc32",
@@ -26023,6 +26031,7 @@
         },
         "innodb_directories": {
             "cli": "--innodb-directories=dir_name",
+            "default": "NULL",
             "dynamic": false,
             "name": "innodb_directories",
             "scope": [

@@ -7689,7 +7689,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -19276,6 +19276,7 @@
 |----|-----|
 |Name|`thread_pool_prio_kickup_timer`|
 |Type of variable|`integer`|
+|Scope|`global`|
 |Default value|`1000`|
 |Dynamic|`true`|
 |Range|from: `0`|
@@ -24727,7 +24728,7 @@
 |Scope|`global`|
 |Default value|`crc32`|
 |Dynamic|`true`|
-|Valid value(s)|`innodb`, `crc32`, `full_crc32`, `none`, `strict_innodb`, `strict_crc32`, `strict_none`, `strict_full_crc32`, `innodb`, `crc32`, `none`, `strict_innodb`, `strict_crc32`, `strict_none`|
+|Valid value(s)|`crc32`, `full_crc32`, `strict_crc32`, `strict_full_crc32`, `innodb`, `crc32`, `full_crc32`, `none`, `strict_innodb`, `strict_crc32`, `strict_none`, `strict_full_crc32`, `innodb`, `crc32`, `none`, `strict_innodb`, `strict_crc32`, `strict_none`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28277,6 +28278,7 @@
 |Command line|`--innodb-directories=dir_name`|
 |Type of variable|`directory name`|
 |Scope|`global`|
+|Default value|`NULL`|
 |Dynamic|`false`|
 
 ### Documentation(s)

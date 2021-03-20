@@ -60,7 +60,7 @@
     },
     {
       "cli": "--back-log=#",
-      "default": "The lower of 900 and (50 + max_connections/5) (>= MariaDB 10.1.7), The lower of 150 or the value of max_connections (beween MariaDB 10.0.8 and MariaDB 10.1.7), 50 (<= MariaDB 10.0.8)",
+      "default": "The lower of 900 and (50 + max_connections/5)",
       "dynamic": false,
       "id": "back_log",
       "name": "back_log",

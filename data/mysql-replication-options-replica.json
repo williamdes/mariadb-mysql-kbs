@@ -668,7 +668,8 @@
       "id": "sysvar_sql_slave_skip_counter",
       "name": "sql_slave_skip_counter",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 4294967295
       },
       "scope": [
         "global"

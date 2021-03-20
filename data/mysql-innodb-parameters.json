@@ -651,6 +651,7 @@
     },
     {
       "cli": "--innodb-directories=dir_name",
+      "default": "NULL",
       "dynamic": false,
       "id": "sysvar_innodb_directories",
       "name": "innodb_directories",

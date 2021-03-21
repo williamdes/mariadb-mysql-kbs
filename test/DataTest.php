@@ -1,10 +1,12 @@
 <?php
+
 declare(strict_types = 1);
+
 namespace Williamdes\MariaDBMySQLKBS\Test;
 
-use \PHPUnit\Framework\TestCase;
-use \Swaggest\JsonSchema\Schema;
-use \stdClass;
+use PHPUnit\Framework\TestCase;
+use Swaggest\JsonSchema\Schema;
+use stdClass;
 
 class DataTest extends TestCase
 {
@@ -49,8 +51,12 @@ class DataTest extends TestCase
      */
     public function testFileSample(): void
     {
-        $slimDataTestData = json_decode((string) file_get_contents(__DIR__ . "/data/ultraSlimDataTestWithVariables.json"));
-        $this->assertTrue(self::validate($slimDataTestData, __DIR__ . '/../schemas/merged-ultraslim.json'));
+        $slimDataTestData = json_decode(
+            (string) file_get_contents(__DIR__ . '/data/ultraSlimDataTestWithVariables.json')
+        );
+        $this->assertTrue(
+            self::validate($slimDataTestData, __DIR__ . '/../schemas/merged-ultraslim.json')
+        );
     }
 
     /**
@@ -61,7 +67,7 @@ class DataTest extends TestCase
      */
     public function testFileSlim(): void
     {
-        $slimData = json_decode((string) file_get_contents(__DIR__ . "/../dist/merged-slim.json"));
+        $slimData = json_decode((string) file_get_contents(__DIR__ . '/../dist/merged-slim.json'));
         $this->assertTrue(self::validate($slimData, __DIR__ . '/../schemas/merged-slim.json'));
     }
 
@@ -73,7 +79,7 @@ class DataTest extends TestCase
      */
     public function testFileUltraSlim(): void
     {
-        $slimData = json_decode((string) file_get_contents(__DIR__ . "/../dist/merged-ultraslim.json"));
+        $slimData = json_decode((string) file_get_contents(__DIR__ . '/../dist/merged-ultraslim.json'));
         $this->assertTrue(self::validate($slimData, __DIR__ . '/../schemas/merged-ultraslim.json'));
     }
 
@@ -85,7 +91,7 @@ class DataTest extends TestCase
      */
     public function testFileRaw(): void
     {
-        $slimData = json_decode((string) file_get_contents(__DIR__ . "/../dist/merged-raw.json"));
+        $slimData = json_decode((string) file_get_contents(__DIR__ . '/../dist/merged-raw.json'));
         $this->assertTrue(self::validate($slimData, __DIR__ . '/../schemas/merged-raw.json'));
     }
 

@@ -1,9 +1,11 @@
 <?php
+
 declare(strict_types = 1);
+
 namespace Williamdes\MariaDBMySQLKBS;
 
-use \stdClass;
-use \JsonSerializable;
+use stdClass;
+use JsonSerializable;
 
 class KBEntry extends stdClass implements JsonSerializable
 {
@@ -115,7 +117,7 @@ class KBEntry extends stdClass implements JsonSerializable
      * @param string|null $anchor The anchor
      * @return KBDocumentation
      */
-    public function addDocumentation(string $url, ?string $anchor = null ): KBDocumentation
+    public function addDocumentation(string $url, ?string $anchor = null): KBDocumentation
     {
         $this->url = $url;
         if ($this->docs === null) {

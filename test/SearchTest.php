@@ -1,11 +1,13 @@
 <?php
+
 declare(strict_types = 1);
+
 namespace Williamdes\MariaDBMySQLKBS\Test;
 
-use \PHPUnit\Framework\TestCase;
-use \Williamdes\MariaDBMySQLKBS\SlimData;
-use \Williamdes\MariaDBMySQLKBS\Search;
-use \Williamdes\MariaDBMySQLKBS\KBException;
+use PHPUnit\Framework\TestCase;
+use Williamdes\MariaDBMySQLKBS\SlimData;
+use Williamdes\MariaDBMySQLKBS\Search;
+use Williamdes\MariaDBMySQLKBS\KBException;
 
 class SearchTest extends TestCase
 {
@@ -18,12 +20,12 @@ class SearchTest extends TestCase
     public static function setUpBeforeClass(): void
     {
         $sd = new SlimData();
-        $sd->addVariable("variable-1", "boolean", true);
-        $sd->addVariable("variable-2", null, null);
-        $sd->addVariable("variable-3", null, true);
-        $variable4 = $sd->addVariable("variable-4", null, false);
-        $variable4->addDocumentation("https://mariadb.com/testurl/for/variable/4", "myanchor");
-        $variable4->addDocumentation("https://dev.mysql.com/testurl_for-variable/4", "my_anchor");
+        $sd->addVariable('variable-1', 'boolean', true);
+        $sd->addVariable('variable-2', null, null);
+        $sd->addVariable('variable-3', null, true);
+        $variable4 = $sd->addVariable('variable-4', null, false);
+        $variable4->addDocumentation('https://mariadb.com/testurl/for/variable/4', 'myanchor');
+        $variable4->addDocumentation('https://dev.mysql.com/testurl_for-variable/4', 'my_anchor');
         Search::loadTestData($sd);
     }
 
@@ -34,8 +36,8 @@ class SearchTest extends TestCase
      */
     public function testGetByName(): void
     {
-        $found = Search::getByName("variable-4");
-        $this->assertEquals("https://mariadb.com/testurl/for/variable/4#myanchor", $found);
+        $found = Search::getByName('variable-4');
+        $this->assertEquals('https://mariadb.com/testurl/for/variable/4#myanchor', $found);
     }
 
     /**
@@ -45,8 +47,8 @@ class SearchTest extends TestCase
      */
     public function testGetByNameMYSQL(): void
     {
-        $found = Search::getByName("variable-4", Search::MYSQL);
-        $this->assertEquals("https://dev.mysql.com/testurl_for-variable/4#my_anchor", $found);
+        $found = Search::getByName('variable-4', Search::MYSQL);
+        $this->assertEquals('https://dev.mysql.com/testurl_for-variable/4#my_anchor', $found);
     }
 
     /**
@@ -56,8 +58,8 @@ class SearchTest extends TestCase
      */
     public function testGetByNameMARIADB(): void
     {
-        $found = Search::getByName("variable-4", Search::MARIADB);
-        $this->assertEquals("https://mariadb.com/testurl/for/variable/4#myanchor", $found);
+        $found = Search::getByName('variable-4', Search::MARIADB);
+        $this->assertEquals('https://mariadb.com/testurl/for/variable/4#myanchor', $found);
     }
 
     /**
@@ -132,7 +134,7 @@ class SearchTest extends TestCase
         $this->expectException(KBException::class);
         $this->expectExceptionCode(0);
         $this->expectExceptionMessage('.merged-ultraslim.json does not exist !');
-        Search::$DATA_DIR = ".";
+        Search::$DATA_DIR = '.';
         Search::$loaded   = false;
         Search::loadData();
     }
@@ -176,8 +178,8 @@ class SearchTest extends TestCase
      */
     public function testGetVariableType(): void
     {
-        $type = Search::getVariableType("variable-1");
-        $this->assertEquals("boolean", $type);
+        $type = Search::getVariableType('variable-1');
+        $this->assertEquals('boolean', $type);
     }
 
 }

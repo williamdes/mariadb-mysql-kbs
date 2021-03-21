@@ -1,9 +1,11 @@
 <?php
+
 declare(strict_types = 1);
+
 namespace Williamdes\MariaDBMySQLKBS;
 
-use \stdClass;
-use \JsonSerializable;
+use stdClass;
+use JsonSerializable;
 
 class KBDocumentation extends stdClass implements JsonSerializable
 {

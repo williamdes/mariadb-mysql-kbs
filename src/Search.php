@@ -131,7 +131,7 @@ class Search
         if (isset($kbEntry->t)) {
             return Search::$data->varTypes->{$kbEntry->t};
         } else {
-            throw new KBException($name . 'does have a known type !');
+            throw new KBException($name . ' does have a known type !');
         }
     }
 

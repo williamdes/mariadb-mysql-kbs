@@ -2237,7 +2237,7 @@
     },
     {
       "cli": "--innodb-old-blocks-time=#",
-      "default": "1000 (from MariaDB 10.0), 0 (before MariaDB 10.0)",
+      "default": "1000",
       "dynamic": true,
       "id": "innodb_old_blocks_time",
       "name": "innodb_old_blocks_time",
@@ -2267,7 +2267,7 @@
     },
     {
       "cli": "--innodb-open-files=#",
-      "default": "autosized (from MariaDB 10.0), 300 (before MariaDB 10.0)",
+      "default": "autosized",
       "dynamic": false,
       "id": "innodb_open_files",
       "name": "innodb_open_files",
@@ -2385,7 +2385,7 @@
     },
     {
       "cli": "--innodb-purge-threads=#",
-      "default": "4 (>= MariaDB 10.2.2), 1 (>=MariaDB 10.0 to <= MariaDB 10.2.1), 0 (MariaDB 5.5)",
+      "default": "4 (>= MariaDB 10.2.2), 1 (>=MariaDB 10.0 to <= MariaDB 10.2.1)",
       "dynamic": false,
       "id": "innodb_purge_threads",
       "name": "innodb_purge_threads",
@@ -2743,7 +2743,7 @@
     },
     {
       "cli": "--innodb-stats-on-metadata",
-      "default": "OFF (from MariaDB 10.0), ON (before MariaDB 10.0)",
+      "default": "OFF",
       "dynamic": true,
       "id": "innodb_stats_on_metadata",
       "name": "innodb_stats_on_metadata",

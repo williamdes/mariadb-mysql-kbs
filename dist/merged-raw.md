@@ -27203,7 +27203,7 @@
 |Command line|`--innodb-stats-on-metadata[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`0`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27939,6 +27939,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_audit_log_include_accounts](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_include_accounts)|
+
+## audit_log_max_size
+|name|value|
+|----|-----|
+|Name|`audit_log_max_size`|
+|Command line|`--audit-log-max-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_audit_log_max_size](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_max_size)|
 
 ## audit_log_password_history_keep_days
 |name|value|

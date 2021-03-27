@@ -154,6 +154,20 @@
       "type": "string"
     },
     {
+      "cli": "--audit-log-max-size=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_audit_log_max_size",
+      "name": "audit_log_max_size",
+      "range": {
+        "from": 0
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--audit-log-password-history-keep-days=#",
       "default": "0",
       "dynamic": true,

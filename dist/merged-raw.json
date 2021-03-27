@@ -32350,7 +32350,7 @@
         },
         "innodb_stats_on_metadata": {
             "cli": "--innodb-stats-on-metadata[={OFF|ON}]",
-            "default": "0",
+            "default": "OFF",
             "dynamic": true,
             "name": "innodb_stats_on_metadata",
             "scope": [
@@ -33240,6 +33240,25 @@
             "ids": [
                 {
                     "anchor": "sysvar_audit_log_include_accounts",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html"
+                }
+            ]
+        },
+        "audit_log_max_size": {
+            "cli": "--audit-log-max-size=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "audit_log_max_size",
+            "range": {
+                "from": 0
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_audit_log_max_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html"
                 }
             ]

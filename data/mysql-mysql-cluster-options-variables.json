@@ -265,6 +265,11 @@
       "type": "integer"
     },
     {
+      "cli": "--ndb-optimized-node-selection",
+      "id": "option_mysqld_ndb-optimized-node-selection",
+      "name": "ndb_optimized_node_selection"
+    },
+    {
       "cli": "--ndb-transid-mysql-connection-map[=state]",
       "default": "ON",
       "id": "option_mysqld_ndb-transid-mysql-connection-map",

@@ -1657,7 +1657,7 @@
     },
     {
       "cli": "--max-recursive-iterations=#",
-      "default": "4294967295",
+      "default": "1000  (>= MariaDB 10.6.0), 4294967295 (< MariaDB 10.6.0)",
       "dynamic": true,
       "id": "max_recursive_iterations",
       "name": "max_recursive_iterations",

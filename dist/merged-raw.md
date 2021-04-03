@@ -6656,6 +6656,21 @@
 |dev.mysql.com|[sysvar_binlog_direct_non_transactional_updates](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_direct_non_transactional_updates)|
 |dev.mysql.com|[sysvar_binlog_direct_non_transactional_updates](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_direct_non_transactional_updates)|
 
+## binlog_expire_logs_seconds
+|name|value|
+|----|-----|
+|Name|`binlog_expire_logs_seconds`|
+|Command line|`--binlog-expire-logs-seconds=#`|
+|Type of variable|`integer`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_expire_logs_seconds](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_expire_logs_seconds)|
+|dev.mysql.com|[sysvar_binlog_expire_logs_seconds](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_expire_logs_seconds)|
+
 ## binlog_file_cache_size
 |name|value|
 |----|-----|
@@ -14740,7 +14755,7 @@
 |Command line|`--max-recursive-iterations=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`4294967295`|
+|Default value|`1000  (>= MariaDB 10.6.0), 4294967295 (< MariaDB 10.6.0)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -27997,7 +28012,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28026,6 +28041,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28613,6 +28629,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_saved_page_number_debug](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_saved_page_number_debug)|
 
+## innodb_segment_reserve_factor
+|name|value|
+|----|-----|
+|Name|`innodb_segment_reserve_factor`|
+|Command line|`--innodb-segment-reserve-factor=#`|
+|Type of variable|`numeric`|
+|Scope|`global`|
+|Default value|`12.5`|
+|Dynamic|`true`|
+|Range|from: `0.03` to: `40`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_segment_reserve_factor](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_segment_reserve_factor)|
+
 ## innodb_spin_wait_pause_multiplier
 |name|value|
 |----|-----|
@@ -29071,6 +29103,23 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_ndb-optimization-delay](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-optimization-delay)|
 
+## ndb_optimized_node_selection
+|name|value|
+|----|-----|
+|Name|`ndb_optimized_node_selection`|
+|Command line|`--ndb-optimized-node-selection=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`3`|
+|Dynamic|`false`|
+|Range|from: `0` to: `3`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_ndb-optimized-node-selection](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-optimized-node-selection)|
+|dev.mysql.com|[sysvar_ndb_optimized_node_selection](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_optimized_node_selection)|
+
 ## ndb_transid_mysql_connection_map
 |name|value|
 |----|-----|
@@ -29339,22 +29388,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_ndb_log_binlog_index](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_binlog_index)|
-
-## ndb_optimized_node_selection
-|name|value|
-|----|-----|
-|Name|`ndb_optimized_node_selection`|
-|Command line|`--ndb-optimized-node-selection=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`3`|
-|Dynamic|`false`|
-|Range|from: `0` to: `3`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_ndb_optimized_node_selection](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_optimized_node_selection)|
 
 ## ndb_read_backup
 |name|value|
@@ -30342,22 +30375,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_binlog_error_action](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_error_action)|
 |dev.mysql.com|[sysvar_binlog_error_action](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_error_action)|
-
-## binlog_expire_logs_seconds
-|name|value|
-|----|-----|
-|Name|`binlog_expire_logs_seconds`|
-|Command line|`--binlog-expire-logs-seconds=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`2592000`|
-|Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_binlog_expire_logs_seconds](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_expire_logs_seconds)|
 
 ## binlog_group_commit_sync_delay
 |name|value|

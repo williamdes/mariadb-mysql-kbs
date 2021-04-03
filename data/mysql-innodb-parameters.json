@@ -1814,6 +1814,21 @@
       "type": "integer"
     },
     {
+      "cli": "--innodb-segment-reserve-factor=#",
+      "default": "12.5",
+      "dynamic": true,
+      "id": "sysvar_innodb_segment_reserve_factor",
+      "name": "innodb_segment_reserve_factor",
+      "range": {
+        "from": 0.03,
+        "to": 40
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "numeric"
+    },
+    {
       "cli": "--innodb-sort-buffer-size=#",
       "default": "1048576",
       "dynamic": false,

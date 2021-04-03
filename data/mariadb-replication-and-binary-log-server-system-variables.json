@@ -115,6 +115,22 @@
       "type": "boolean"
     },
     {
+      "cli": "--binlog-expire-logs-seconds=#",
+      "default": "OFF (0)",
+      "dynamic": true,
+      "id": "binlog_expire_logs_seconds",
+      "name": "binlog_expire_logs_seconds",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--binlog-file-cache-size=#",
       "default": "16384",
       "dynamic": true,

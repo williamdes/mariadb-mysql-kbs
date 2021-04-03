@@ -7817,6 +7817,26 @@
                 }
             ]
         },
+        "binlog_expire_logs_seconds": {
+            "cli": "--binlog-expire-logs-seconds=#",
+            "dynamic": true,
+            "name": "binlog_expire_logs_seconds",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "binlog_expire_logs_seconds",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_binlog_expire_logs_seconds",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                }
+            ]
+        },
         "binlog_file_cache_size": {
             "cli": "--binlog-file-cache-size=#",
             "default": "16384",
@@ -17607,7 +17627,7 @@
         },
         "max_recursive_iterations": {
             "cli": "--max-recursive-iterations=#",
-            "default": "4294967295",
+            "default": "1000  (>= MariaDB 10.6.0), 4294967295 (< MariaDB 10.6.0)",
             "dynamic": true,
             "name": "max_recursive_iterations",
             "range": {
@@ -33311,8 +33331,7 @@
             "dynamic": true,
             "name": "audit_log_prune_seconds",
             "range": {
-                "from": 0,
-                "to": 4294967295
+                "from": 0
             },
             "scope": [
                 "global"
@@ -33344,6 +33363,10 @@
             "default": "0",
             "dynamic": true,
             "name": "audit_log_rotate_on_size",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
             "scope": [
                 "global"
             ],
@@ -34020,6 +34043,26 @@
                 }
             ]
         },
+        "innodb_segment_reserve_factor": {
+            "cli": "--innodb-segment-reserve-factor=#",
+            "default": "12.5",
+            "dynamic": true,
+            "name": "innodb_segment_reserve_factor",
+            "range": {
+                "from": 0.03,
+                "to": 40
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "numeric",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_segment_reserve_factor",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
         "innodb_spin_wait_pause_multiplier": {
             "cli": "--innodb-spin-wait-pause-multiplier=#",
             "default": "50",
@@ -34564,6 +34607,30 @@
                 }
             ]
         },
+        "ndb_optimized_node_selection": {
+            "cli": "--ndb-optimized-node-selection=#",
+            "default": "3",
+            "dynamic": false,
+            "name": "ndb_optimized_node_selection",
+            "range": {
+                "from": 0,
+                "to": 3
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-optimized-node-selection",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ndb_optimized_node_selection",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
         "ndb_transid_mysql_connection_map": {
             "cli": "--ndb-transid-mysql-connection-map[=state]",
             "default": "ON",
@@ -34872,26 +34939,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_ndb_log_binlog_index",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
-                }
-            ]
-        },
-        "ndb_optimized_node_selection": {
-            "cli": "--ndb-optimized-node-selection=#",
-            "default": "3",
-            "dynamic": false,
-            "name": "ndb_optimized_node_selection",
-            "range": {
-                "from": 0,
-                "to": 3
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_ndb_optimized_node_selection",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
                 }
             ]
@@ -36023,26 +36070,6 @@
                 {
                     "anchor": "sysvar_binlog_error_action",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                }
-            ]
-        },
-        "binlog_expire_logs_seconds": {
-            "cli": "--binlog-expire-logs-seconds=#",
-            "default": "2592000",
-            "dynamic": true,
-            "name": "binlog_expire_logs_seconds",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sysvar_binlog_expire_logs_seconds",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
                 }
             ]
         },

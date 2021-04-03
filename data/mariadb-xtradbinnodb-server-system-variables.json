@@ -3000,7 +3000,7 @@
     },
     {
       "cli": "--innodb-undo-directory=name",
-      "default": "NULL (>= 10.2.2), . (<= 10.2.1)",
+      "default": "NULL (>= MariaDB 10.2.2), . (<= MariaDB 10.2.1)",
       "dynamic": false,
       "id": "innodb_undo_directory",
       "name": "innodb_undo_directory",

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ROOT="$(realpath "$(dirname $0)/../")"
+ROOT="$(realpath "$(dirname $0)/../../")"
 
 echo "Running in: ${ROOT}"
 

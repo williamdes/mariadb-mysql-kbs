@@ -44,7 +44,7 @@ jobs:
               env:
                 INSTALLATION_ID: ${{ secrets.INSTALLATION_ID }}
                 GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-                GPG_PASSPHRASE: ${{ secrets.GPG_PRIVATE_KEY }}
+                GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
                 GH_APP_JWT_PRIV_PEM_CONTENTS: ${{ secrets.GH_APP_JWT_PRIV_PEM_CONTENTS }}
                 TARGET_BRANCH: "main"
               run: ./scripts/sudo-bot/create-pr.sh

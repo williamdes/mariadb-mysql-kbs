@@ -52,8 +52,6 @@ printf 'Starting to run sudo-bot\n'
 
 ~/.yarn/bin/sudo-bot --version
 
-set -x
-
 printf 'Running...\n'
 
 ~/.yarn/bin/sudo-bot --verbose \
@@ -70,8 +68,6 @@ printf 'Running...\n'
     --commit-author-name='Sudo Bot' \
     --gpg-private-key-file='~/.private-key.asc' \
     --gpg-private-key-passphrase="${GPG_PASSPHRASE}"
-
-set +x
 
 printf 'End.\n'
 

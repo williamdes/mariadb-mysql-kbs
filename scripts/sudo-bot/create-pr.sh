@@ -62,8 +62,8 @@ printf 'Running...\n'
     --repository-slug='williamdes/mariadb-mysql-kbs' \
     --target-branch="${TARGET_BRANCH}" \
     --assign='williamdes' \
-    --template='./scripts/sudo-bot/template-docs.js' \
-    --ignore-file='./scripts/sudo-bot/.sudo-bot-ignore' \
+    --template="${ROOT}/scripts/sudo-bot/template-docs.js" \
+    --ignore-file="${ROOT}/scripts/sudo-bot/.sudo-bot-ignore" \
     --commit-author-email='sudo-bot@wdes.fr' \
     --commit-author-name='Sudo Bot' \
     --gpg-private-key-file='~/.private-key.asc' \

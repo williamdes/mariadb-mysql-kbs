@@ -36,11 +36,24 @@ extractSecrets() {
     printf '%s' "${GPG_PRIVATE_KEY}" > ~/.private-key.asc
 }
 
+copyUsefullFiles() {
+    cp ./scripts/sudo-bot/template-docs.js ~/template-docs.js
+    cp ./scripts/sudo-bot/.sudo-bot-ignore ~/.sudo-bot-ignore
+}
+
 flushSecrets() {
     rm ~/.secret_jwt.pem
 }
 
+flushUsefullFiles() {
+    rm ~/template-docs.js
+    rm ~/.sudo-bot-ignore
+}
+
 printf 'Running scipt...\n'
+
+# Before they do not exist anymore, changing branch in moveBuildToTempFolder
+copyUsefullFiles
 
 moveBuildToTempFolder
 cleanGhPages
@@ -62,8 +75,8 @@ printf 'Running...\n'
     --repository-slug='williamdes/mariadb-mysql-kbs' \
     --target-branch="${TARGET_BRANCH}" \
     --assign='williamdes' \
-    --template="${ROOT}/scripts/sudo-bot/template-docs.js" \
-    --ignore-file="${ROOT}/scripts/sudo-bot/.sudo-bot-ignore" \
+    --template='~/template-docs.js' \
+    --ignore-file='~/.sudo-bot-ignore' \
     --commit-author-email='sudo-bot@wdes.fr' \
     --commit-author-name='Sudo Bot' \
     --gpg-private-key-file='~/.private-key.asc' \
@@ -72,3 +85,4 @@ printf 'Running...\n'
 printf 'End.\n'
 
 flushSecrets
+flushUsefullFiles

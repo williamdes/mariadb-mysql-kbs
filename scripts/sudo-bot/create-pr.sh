@@ -54,15 +54,21 @@ flushSecrets() {
     rm ~/.secret_jwt.pem
 }
 
+printf 'Running scipt...\n'
+
 moveBuildToTempFolder
 cleanGhPages
 moveBuildFilesToCurrentDir
 
 extractSecrets
 
+printf 'Starting to run sudo-bot\n'
+
 ~/.yarn/bin/sudo-bot --version
 
 set -x
+
+printf 'Running...\n'
 
 ~/.yarn/bin/sudo-bot --verbose \
     --target-branch='gh-pages' \
@@ -80,5 +86,7 @@ set -x
     --gpg-private-key-passphrase="${GPG_PASSPHRASE}"
 
 set +x
+
+printf 'End.\n'
 
 flushSecrets

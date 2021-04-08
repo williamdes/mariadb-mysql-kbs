@@ -60,6 +60,10 @@ moveBuildFilesToCurrentDir
 
 extractSecrets
 
+~/.yarn/bin/sudo-bot --version
+
+set -x
+
 ~/.yarn/bin/sudo-bot --verbose \
     --target-branch='gh-pages' \
     --jwt-file='~/.secret_jwt.pem' \
@@ -74,5 +78,7 @@ extractSecrets
     --commit-author-name='Sudo Bot' \
     --gpg-private-key-file='~/.private-key.asc' \
     --gpg-private-key-passphrase="${GPG_PASSPHRASE}"
+
+set +x
 
 flushSecrets

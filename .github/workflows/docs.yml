@@ -1,4 +1,4 @@
-name: Run sudo-bot to docs
+name: Build PHP documentation
 
 on:
     repository_dispatch:
@@ -9,19 +9,16 @@ jobs:
     run-sudo-bot-build-docs:
         environment:
             name: "sudo-bot"
+            url: https://williamdes.github.io/mariadb-mysql-kbs/
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - name: Clean docs
-              run: rm -rf ./docs/*
             - name: build doctum docs
               uses: sudo-bot/action-doctum@dev
               with:
                   config-file: ./scripts/doctum-config.php
                   method: "update"
                   cli-args: "--output-format=github --no-ansi --no-progress -v --force"
-            - name: Move docs
-              run: sudo mv ./docs/build/* ./docs/
             - uses: actions/setup-node@v1
               with:
                   node-version: 12

@@ -6,6 +6,16 @@
     "readme": "https://github.com/williamdes/mariadb-mysql-kbs#readme",
     "license": "MPL-2.0",
     "version": "1.2.12",
+    "funding": [
+        {
+            "type": "tidelift",
+            "url": "https://tidelift.com/funding/github/packagist/williamdes/mariadb-mysql-kbs"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/williamdes"
+        }
+    ],
     "keywords": [
         "mariadb",
         "mysql",

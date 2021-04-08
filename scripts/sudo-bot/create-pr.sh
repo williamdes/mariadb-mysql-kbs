@@ -27,7 +27,7 @@ cleanGhPages() {
 }
 
 moveBuildFilesToCurrentDir() {
-    mv "${TEMP_DIR}"/build/* ./api-docs/
+    mv "${TEMP_DIR}"/build/* ./
     rm -rf "${TEMP_DIR}"
 }
 
@@ -41,7 +41,7 @@ moveBuildFilesToCurrentDir
 
 
 moveBuildFilesToCurrentDir() {
-    mv "${TEMP_DIR}"/build/* ./api-docs/
+    mv "${TEMP_DIR}"/build/* ./
     rm -rf "${TEMP_DIR}"
 }
 

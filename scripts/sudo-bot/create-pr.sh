@@ -9,9 +9,9 @@ cd "${ROOT}"
 set -e
 
 moveBuildToTempFolder() {
-    # Remove cache dir, do not upload it
+    # Remove tmp dir, do not upload it
     # Use sudo because build was not ran as the same user
-    ${SUDO_BIN:-sudo} rm -rf ./cache
+    ${SUDO_BIN:-sudo} rm -rf ./tmp
 
     TEMP_DIR="$(mktemp -d --suffix=mariadb-mysql-kbs-docs)"
     cp -rp build "${TEMP_DIR}"

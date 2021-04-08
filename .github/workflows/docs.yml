@@ -45,7 +45,7 @@ jobs:
                   CWD=$(pwd)
                   cp ${CWD}/scripts/sudo-bot/.env.ci-docs ${CWD}/scripts/sudo-bot/.env
                   sed -i "s,{{HOME}},${CWD},g" ${CWD}/scripts/sudo-bot/.env
-                  sed -i "s,{{GPG_PRIV_PASSWORD}},${{ secrets.GPG_PRIV_PASSWORD }},g" ${CWD}/scripts/sudo-bot/.env
+                  sed -i "s,{{GPG_PASSPHRASE}},${{ secrets.GPG_PASSPHRASE }},g" ${CWD}/scripts/sudo-bot/.env
                   sed -i "s,{{INSTALLATION_ID}},${{ secrets.INSTALLATION_ID }},g" ${CWD}/scripts/sudo-bot/.env
                   cd ${CWD}/docs/
                   ${CWD}/node_modules/.bin/sudo-bot --target-branch gh-pages --env ${CWD}/scripts/sudo-bot/.env --verbose

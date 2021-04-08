@@ -45,7 +45,7 @@ jobs:
                   CWD=$(pwd)
                   cp scripts/sudo-bot/.env.ci scripts/sudo-bot/.env
                   sed -i "s,{{HOME}},${CWD},g" scripts/sudo-bot/.env
-                  sed -i "s,{{GPG_PRIV_PASSWORD}},${{ secrets.GPG_PRIV_PASSWORD }},g" scripts/sudo-bot/.env
+                  sed -i "s,{{GPG_PASSPHRASE}},${{ secrets.GPG_PASSPHRASE }},g" scripts/sudo-bot/.env
                   sed -i "s,{{INSTALLATION_ID}},${{ secrets.INSTALLATION_ID }},g" scripts/sudo-bot/.env
                   yarn run sudo-bot-pr
                   rm -f scripts/sudo-bot/.env

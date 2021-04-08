@@ -3,14 +3,25 @@ name: Run sudo-bot to docs
 on:
     repository_dispatch:
         types: run-build-docs
+    workflow_dispatch:
 
 jobs:
     run-sudo-bot-build-docs:
+        environment:
+            name: "sudo-bot"
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+            - name: Clean docs
+              run: rm -rf ./docs/*
+            - name: build doctum docs
+              uses: sudo-bot/action-doctum@dev
               with:
-                  submodules: true
+                  config-file: ./scripts/doctum-config.php
+                  method: "update"
+                  cli-args: "--output-format=github --no-ansi --no-progress -v --force"
+            - name: Move docs
+              run: sudo mv ./docs/build/* ./docs/
             - uses: actions/setup-node@v1
               with:
                   node-version: 12
@@ -24,30 +35,13 @@ jobs:
                   key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-yarn-
-            - name: Install
-              run: |
-                  yarn install
-            - name: Clean docs
-              run: rm -rf ./docs/*
-            - name: build doctum docs
-              uses: sudo-bot/action-doctum@dev
-              with:
-                  config-file: ./scripts/doctum-config.php
-                  method: "update"
-                  cli-args: "--output-format=github --no-ansi --no-progress -v --force"
-            - name: Move docs
-              run: sudo mv ./docs/build/* ./docs/
+            - name: Install sudo-bot
+              run: yarn global add sudo-bot
             - name: Run sudo-bot
-              run: |
-                  openssl aes-256-cbc -K ${{ secrets.ENCRYPTED_KEY }} -iv ${{ secrets.ENCRYPTED_IV }} -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d
-                  tar -C scripts/sudo-bot/ -xvf scripts/sudo-bot/keys.tar
-                  rm scripts/sudo-bot/keys.tar
-                  CWD=$(pwd)
-                  cp ${CWD}/scripts/sudo-bot/.env.ci-docs ${CWD}/scripts/sudo-bot/.env
-                  sed -i "s,{{HOME}},${CWD},g" ${CWD}/scripts/sudo-bot/.env
-                  sed -i "s,{{GPG_PASSPHRASE}},${{ secrets.GPG_PASSPHRASE }},g" ${CWD}/scripts/sudo-bot/.env
-                  sed -i "s,{{INSTALLATION_ID}},${{ secrets.INSTALLATION_ID }},g" ${CWD}/scripts/sudo-bot/.env
-                  cd ${CWD}/docs/
-                  ${CWD}/node_modules/.bin/sudo-bot --target-branch gh-pages --env ${CWD}/scripts/sudo-bot/.env --verbose
-                  cd ${CWD}
-                  rm -f ${CWD}/scripts/sudo-bot/.env
+              env:
+                INSTALLATION_ID: ${{ secrets.INSTALLATION_ID }}
+                GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+                GPG_PASSPHRASE: ${{ secrets.GPG_PRIVATE_KEY }}
+                GH_APP_JWT_PRIV_PEM_CONTENTS: ${{ secrets.GH_APP_JWT_PRIV_PEM_CONTENTS }}
+                TARGET_BRANCH: "gh-pages"
+              run: ./scripts/sudo-bot/create-pr.sh

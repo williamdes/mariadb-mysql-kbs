@@ -3,6 +3,7 @@ name: Run sudo-bot to update files
 on:
     repository_dispatch:
         types: run-cron
+    workflow_dispatch:
     schedule:
         - cron: "30 13 * * 6"
 
@@ -32,23 +33,21 @@ jobs:
             - name: Install
               run: |
                   yarn install
-                  composer install --no-interaction --prefer-dist --no-progress --no-suggest
+                  composer install --no-interaction
             - name: Build
               run: |
                   yarn run build
                   composer run build
+            - name: Install sudo-bot
+              run: yarn global add sudo-bot
             - name: Run sudo-bot
-              run: |
-                  openssl aes-256-cbc -K ${{ secrets.ENCRYPTED_KEY }} -iv ${{ secrets.ENCRYPTED_IV }} -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d
-                  tar -C scripts/sudo-bot/ -xvf scripts/sudo-bot/keys.tar
-                  rm scripts/sudo-bot/keys.tar
-                  CWD=$(pwd)
-                  cp scripts/sudo-bot/.env.ci scripts/sudo-bot/.env
-                  sed -i "s,{{HOME}},${CWD},g" scripts/sudo-bot/.env
-                  sed -i "s,{{GPG_PASSPHRASE}},${{ secrets.GPG_PASSPHRASE }},g" scripts/sudo-bot/.env
-                  sed -i "s,{{INSTALLATION_ID}},${{ secrets.INSTALLATION_ID }},g" scripts/sudo-bot/.env
-                  yarn run sudo-bot-pr
-                  rm -f scripts/sudo-bot/.env
+              env:
+                INSTALLATION_ID: ${{ secrets.INSTALLATION_ID }}
+                GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+                GPG_PASSPHRASE: ${{ secrets.GPG_PRIVATE_KEY }}
+                GH_APP_JWT_PRIV_PEM_CONTENTS: ${{ secrets.GH_APP_JWT_PRIV_PEM_CONTENTS }}
+                TARGET_BRANCH: "main"
+              run: ./scripts/sudo-bot/create-pr.sh
             - name: Run test
               run: |
                   yarn run test

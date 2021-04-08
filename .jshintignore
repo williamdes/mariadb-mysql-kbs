@@ -1,6 +1,5 @@
 /tmp
 /build
-/docs
 vendor
 scripts/vendor
 node_modules

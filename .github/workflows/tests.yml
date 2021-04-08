@@ -29,10 +29,6 @@ jobs:
                       ${{ runner.os }}-yarn-
             - name: Install modules
               run: yarn install
-            - name: Create setup files
-              run: |
-                  openssl aes-256-cbc -K ${{ secrets.ENCRYPTED_KEY }} -iv ${{ secrets.ENCRYPTED_IV }} -in scripts/sudo-bot/keys.tar.enc -out scripts/sudo-bot/keys.tar -d
-                  tar -C scripts/sudo-bot/ -xvf scripts/sudo-bot/keys.tar
             - name: Run node tests
               run: |
                   yarn run test

@@ -2,7 +2,6 @@
 /build
 vendor
 node_modules
-.env
 /.nyc_output
 /coverage
 /coverage.lcov

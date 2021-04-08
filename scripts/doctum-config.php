@@ -21,7 +21,7 @@ return new Doctum(
     $iterator,
     [
         'title'       => $description,
-        'build_dir'   => __DIR__ . '/../docs/build',
+        'build_dir'   => __DIR__ . '/../build',
         'cache_dir'   => __DIR__ . '/../tmp',
         'source_dir'  => $rootDir,
         'remote_repository'    => new GitHubRemoteRepository('williamdes/mariadb-mysql-kbs', $rootDir),

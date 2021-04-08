@@ -3,8 +3,6 @@ data/* linguist-vendored linguist-detectable=false
 dist/merged-ultraslim.* linguist-vendored -diff linguist-generated=true
 dist/* linguist-vendored linguist-detectable=false
 dist/merged-ultraslim.* linguist-vendored
-docs/* linguist-detectable=false linguist-documentation
-/docs export-ignore
 /scripts export-ignore
 /test/*.js export-ignore
 /test/data/*.html linguist-vendored export-ignore linguist-detectable=false

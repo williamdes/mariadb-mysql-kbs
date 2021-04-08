@@ -26,7 +26,6 @@
     ],
     "nyc": {
         "exclude": [
-            "docs",
             "data",
             "test",
             "build",
@@ -64,8 +63,7 @@
         "jshint": "^2.12.0",
         "mocha": "^8.3.2",
         "nyc": "^15.1.0",
-        "prettier": "^2.2.1",
-        "sudo-bot": "^1.2.3"
+        "prettier": "^2.2.1"
     },
     "directories": {
         "lib": "src",

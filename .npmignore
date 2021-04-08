@@ -13,7 +13,6 @@
 /phpstan.neon
 /.github
 /dist/merged-raw.md
-/docs
 /vendor
 /tmp
 /.gitmodules

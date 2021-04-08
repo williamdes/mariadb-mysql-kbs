@@ -61,18 +61,18 @@ moveBuildFilesToCurrentDir
 extractSecrets
 
 ~/.yarn/bin/sudo-bot --verbose \
-    --target-branch 'gh-pages' \
-    --jwt-file '~/.secret_jwt.pem' \
-    --gh-app-id '17453' \
-    --installation-id "${INSTALLATION_ID}" \
-    --repository-slug 'williamdes/mariadb-mysql-kbs' \
-    --target-branch "${TARGET_BRANCH}" \
-    --assign 'williamdes' \
-    --template "./scripts/sudo-bot/template-docs.js" \
-    --ignore-file "./scripts/sudo-bot/.sudo-bot-ignore" \
-    --commit-author-email "sudo-bot@wdes.fr" \
-    --commit-author-name "Sudo Bot" \
-    --gpg-private-key-file "~/.private-key.asc" \
-    --gpg-private-key-passphrase "${GPG_PASSPHRASE}"
+    --target-branch='gh-pages' \
+    --jwt-file='~/.secret_jwt.pem' \
+    --gh-app-id='17453' \
+    --installation-id="${INSTALLATION_ID}" \
+    --repository-slug='williamdes/mariadb-mysql-kbs' \
+    --target-branch="${TARGET_BRANCH}" \
+    --assign='williamdes' \
+    --template='./scripts/sudo-bot/template-docs.js' \
+    --ignore-file='./scripts/sudo-bot/.sudo-bot-ignore' \
+    --commit-author-email='sudo-bot@wdes.fr' \
+    --commit-author-name='Sudo Bot' \
+    --gpg-private-key-file='~/.private-key.asc' \
+    --gpg-private-key-passphrase="${GPG_PASSPHRASE}"
 
 flushSecrets

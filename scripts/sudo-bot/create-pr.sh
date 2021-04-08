@@ -31,20 +31,6 @@ moveBuildFilesToCurrentDir() {
     rm -rf "${TEMP_DIR}"
 }
 
-moveBuildToTempFolder
-cleanGhPages
-moveBuildFilesToCurrentDir
-
-~/.yarn/bin/sudo-bot --verbose \
-    --target-branch gh-pages
-    --jwt-file
-
-
-moveBuildFilesToCurrentDir() {
-    mv "${TEMP_DIR}"/build/* ./
-    rm -rf "${TEMP_DIR}"
-}
-
 extractSecrets() {
     printf '%s' "${GH_APP_JWT_PRIV_PEM_CONTENTS}" > ~/.secret_jwt.pem
     printf '%s' "${GPG_PRIVATE_KEY}" > ~/.private-key.asc

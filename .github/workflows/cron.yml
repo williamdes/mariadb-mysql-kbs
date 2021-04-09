@@ -9,6 +9,8 @@ on:
 
 jobs:
     run-sudo-bot-cron:
+        environment:
+            name: "sudo-bot"
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2

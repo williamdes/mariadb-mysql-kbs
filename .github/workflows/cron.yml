@@ -50,6 +50,7 @@ jobs:
                 GH_APP_JWT_PRIV_PEM_CONTENTS: ${{ secrets.GH_APP_JWT_PRIV_PEM_CONTENTS }}
                 TARGET_BRANCH: "main"
                 SKIP_DOCS_STEPS: "yes"
+                TEMPLATE_FILE: "template.js"
               run: ./scripts/sudo-bot/create-pr.sh
             - name: Run test
               run: |

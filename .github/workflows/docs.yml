@@ -44,4 +44,5 @@ jobs:
                 GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
                 GH_APP_JWT_PRIV_PEM_CONTENTS: ${{ secrets.GH_APP_JWT_PRIV_PEM_CONTENTS }}
                 TARGET_BRANCH: "gh-pages"
+                TEMPLATE_FILE: "template-docs.js"
               run: ./scripts/sudo-bot/create-pr.sh

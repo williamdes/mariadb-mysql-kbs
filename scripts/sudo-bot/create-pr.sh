@@ -39,7 +39,7 @@ extractSecrets() {
 }
 
 copyUsefullFiles() {
-    cp ./scripts/sudo-bot/template-docs.js ~/template-docs.js
+    cp ./scripts/sudo-bot/${TEMPLATE_FILE} ~/${TEMPLATE_FILE}
     cp ./scripts/sudo-bot/.sudo-bot-ignore ~/.sudo-bot-ignore
 }
 
@@ -48,7 +48,7 @@ flushSecrets() {
 }
 
 flushUsefullFiles() {
-    rm ~/template-docs.js
+    rm ~/${TEMPLATE_FILE}
     rm ~/.sudo-bot-ignore
 }
 
@@ -80,7 +80,7 @@ printf 'Running...\n'
     --repository-slug='williamdes/mariadb-mysql-kbs' \
     --target-branch="${TARGET_BRANCH}" \
     --assign='williamdes' \
-    --template="${HOME}/template-docs.js" \
+    --template="${HOME}/${TEMPLATE_FILE}" \
     --ignore-file="${HOME}/.sudo-bot-ignore" \
     --commit-author-email='sudo-bot@wdes.fr' \
     --commit-author-name='Sudo Bot' \

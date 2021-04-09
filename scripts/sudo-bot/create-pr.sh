@@ -52,14 +52,16 @@ flushUsefullFiles() {
     rm ~/.sudo-bot-ignore
 }
 
-printf 'Running scipt...\n'
+printf 'Running script...\n'
 
 # Before they do not exist anymore, changing branch in moveBuildToTempFolder
 copyUsefullFiles
 
-moveBuildToTempFolder
-cleanGhPages
-moveBuildFilesToCurrentDir
+if [ -z "${SKIP_DOCS_STEPS}" ]; then
+    moveBuildToTempFolder
+    cleanGhPages
+    moveBuildFilesToCurrentDir
+fi
 
 extractSecrets
 

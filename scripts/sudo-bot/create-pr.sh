@@ -1,8 +1,10 @@
 #!/bin/bash
 
 ROOT="$(realpath "$(dirname $0)/../../")"
+HOME="$(realpath ~/)"
 
 echo "Running in: ${ROOT}"
+echo "Home: ${HOME}"
 
 cd "${ROOT}"
 
@@ -67,19 +69,20 @@ printf 'Starting to run sudo-bot\n'
 
 printf 'Running...\n'
 
+# Manually expand ~ because NodeJs seems not understanding it
 ~/.yarn/bin/sudo-bot --verbose \
     --target-branch='gh-pages' \
-    --jwt-file='~/.secret_jwt.pem' \
+    --jwt-file="${HOME}/.secret_jwt.pem" \
     --gh-app-id='17453' \
     --installation-id="${INSTALLATION_ID}" \
     --repository-slug='williamdes/mariadb-mysql-kbs' \
     --target-branch="${TARGET_BRANCH}" \
     --assign='williamdes' \
-    --template='~/template-docs.js' \
-    --ignore-file='~/.sudo-bot-ignore' \
+    --template="${HOME}/template-docs.js" \
+    --ignore-file="${HOME}/.sudo-bot-ignore" \
     --commit-author-email='sudo-bot@wdes.fr' \
     --commit-author-name='Sudo Bot' \
-    --gpg-private-key-file='~/.private-key.asc' \
+    --gpg-private-key-file="${HOME}/.private-key.asc" \
     --gpg-private-key-passphrase="${GPG_PASSPHRASE}"
 
 printf 'End.\n'

@@ -218,6 +218,28 @@
       "type": "boolean"
     },
     {
+      "cli": "--ndb-log-update-as-write[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": true,
+      "id": "option_mysqld_ndb-log-update-as-write",
+      "name": "ndb_log_update_as_write",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--ndb-log-updated-only[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": true,
+      "id": "option_mysqld_ndb-log-updated-only",
+      "name": "ndb_log_updated_only",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--ndb-log-update-minimal[={OFF|ON}]",
       "default": "OFF",
       "dynamic": true,

@@ -26767,6 +26767,32 @@
                 "44#sysvar_ndb_log_transaction_id"
             ]
         },
+        "ndb_log_update_as_write": {
+            "cli": "--ndb-log-update-as-write[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "ndb_log_update_as_write",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "44#option_mysqld_ndb-log-update-as-write"
+            ]
+        },
+        "ndb_log_updated_only": {
+            "cli": "--ndb-log-updated-only[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "ndb_log_updated_only",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "44#option_mysqld_ndb-log-updated-only"
+            ]
+        },
         "ndb_log_update_minimal": {
             "cli": "--ndb-log-update-minimal[={OFF|ON}]",
             "default": "OFF",

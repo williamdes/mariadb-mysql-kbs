@@ -34540,6 +34540,38 @@
                 }
             ]
         },
+        "ndb_log_update_as_write": {
+            "cli": "--ndb-log-update-as-write[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "ndb_log_update_as_write",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-log-update-as-write",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
+        "ndb_log_updated_only": {
+            "cli": "--ndb-log-updated-only[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "ndb_log_updated_only",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_ndb-log-updated-only",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+                }
+            ]
+        },
         "ndb_log_update_minimal": {
             "cli": "--ndb-log-update-minimal[={OFF|ON}]",
             "default": "OFF",

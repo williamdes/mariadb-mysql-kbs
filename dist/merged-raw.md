@@ -29044,6 +29044,36 @@
 |dev.mysql.com|[option_mysqld_ndb-log-transaction-id](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-transaction-id)|
 |dev.mysql.com|[sysvar_ndb_log_transaction_id](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#sysvar_ndb_log_transaction_id)|
 
+## ndb_log_update_as_write
+|name|value|
+|----|-----|
+|Name|`ndb_log_update_as_write`|
+|Command line|`--ndb-log-update-as-write[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_ndb-log-update-as-write](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-update-as-write)|
+
+## ndb_log_updated_only
+|name|value|
+|----|-----|
+|Name|`ndb_log_updated_only`|
+|Command line|`--ndb-log-updated-only[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_ndb-log-updated-only](https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html#option_mysqld_ndb-log-updated-only)|
+
 ## ndb_log_update_minimal
 |name|value|
 |----|-----|

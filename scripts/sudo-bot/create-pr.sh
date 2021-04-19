@@ -12,14 +12,12 @@ set -e
 
 moveBuildToTempFolder() {
     # Remove tmp dir, do not upload it
-    # Use sudo because build was not ran as the same user
-    ${SUDO_BIN:-sudo} rm -rf ./tmp
+    rm -rf ./tmp
 
     TEMP_DIR="$(mktemp -d --suffix=mariadb-mysql-kbs-docs)"
     cp -rp build "${TEMP_DIR}"
     # Remove build dir, do not upload it
-    # Use sudo because build was not ran as the same user
-    ${SUDO_BIN:-sudo} rm -rf ./build
+    rm -rf ./build
 }
 
 cleanGhPages() {

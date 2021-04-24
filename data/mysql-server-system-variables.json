@@ -3794,17 +3794,6 @@
       ]
     },
     {
-      "cli": "--validate-user-plugins[={OFF|ON}]",
-      "default": "ON",
-      "dynamic": false,
-      "id": "sysvar_validate_user_plugins",
-      "name": "validate_user_plugins",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "dynamic": false,
       "id": "sysvar_version_comment",
       "name": "version_comment",

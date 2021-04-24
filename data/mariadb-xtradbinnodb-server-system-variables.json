@@ -825,6 +825,22 @@
       "type": "boolean"
     },
     {
+      "cli": "--innodb-deadlock-report=val",
+      "default": "full",
+      "dynamic": true,
+      "id": "innodb_deadlock_report",
+      "name": "innodb_deadlock_report",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "off",
+        "basic",
+        "full"
+      ]
+    },
+    {
       "cli": "--innodb-default-page-encryption-key=#",
       "default": "1",
       "dynamic": true,

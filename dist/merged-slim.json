@@ -12083,19 +12083,18 @@
                 "30#datetime_format"
             ]
         },
-        "debug": {
+        "debug/debug_dbug": {
             "cli": "-#, --debug[=debug_options]",
+            "default": "<= MariaDB 10.4: d:t:i:o,/tmp/mysqld.trace (Unix) or d:t:i:O,\\mysqld.trace (Windows), >= MariaDB 10.5: d:t:i:o,/tmp/mariadbd.trace (Unix) or d:t:i:O,\\mariadbd.trace (Windows)",
             "dynamic": true,
-            "name": "debug",
+            "name": "debug/debug_dbug",
             "scope": [
                 "global",
                 "session"
             ],
             "type": "string",
             "ids": [
-                "30#debug",
-                "16#option_mysqld_debug",
-                "15#sysvar_debug"
+                "30#debugdebug_dbug"
             ]
         },
         "debug_no_thread_alarm": {
@@ -13682,7 +13681,7 @@
         },
         "max_recursive_iterations": {
             "cli": "--max-recursive-iterations=#",
-            "default": "1000  (>= MariaDB 10.6.0), 4294967295 (< MariaDB 10.6.0)",
+            "default": "1000  (>= MariaDB 10.6.0), 4294967295 (<= MariaDB 10.5)",
             "dynamic": true,
             "name": "max_recursive_iterations",
             "range": {
@@ -14042,7 +14041,7 @@
         },
         "old_mode": {
             "cli": "--old-mode",
-            "default": "(empty string)",
+            "default": "UTF8_IS_UTF8MB3 (>= MariaDB 10.6) (empty string) (<= MariaDB 10.5)",
             "dynamic": true,
             "name": "old_mode",
             "scope": [
@@ -22812,6 +22811,24 @@
                 "42#sysvar_innodb_deadlock_detect"
             ]
         },
+        "innodb_deadlock_report": {
+            "cli": "--innodb-deadlock-report=val",
+            "default": "full",
+            "dynamic": true,
+            "name": "innodb_deadlock_report",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "off",
+                "basic",
+                "full"
+            ],
+            "ids": [
+                "41#innodb_deadlock_report"
+            ]
+        },
         "innodb_default_page_encryption_key": {
             "cli": "--innodb-default-page-encryption-key=#",
             "default": "1",
@@ -28060,7 +28077,7 @@
             "name": "binlog_group_commit_sync_no_delay_count",
             "range": {
                 "from": 0,
-                "to": 1000000
+                "to": 100000
             },
             "scope": [
                 "global"
@@ -28220,7 +28237,7 @@
         "log_bin_use_v1_row_events": {
             "cli": "--log-bin-use-v1-row-events[={OFF|ON}]",
             "default": "OFF",
-            "dynamic": false,
+            "dynamic": true,
             "name": "log_bin_use_v1_row_events",
             "scope": [
                 "global"
@@ -28784,6 +28801,20 @@
                 "16#option_mysqld_daemonize"
             ]
         },
+        "debug": {
+            "cli": "--debug[=debug_options]",
+            "dynamic": true,
+            "name": "debug",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "string",
+            "ids": [
+                "16#option_mysqld_debug",
+                "15#sysvar_debug"
+            ]
+        },
         "debug_sync_timeout": {
             "cli": "--debug-sync-timeout[=#]",
             "name": "debug_sync_timeout",
@@ -29170,6 +29201,15 @@
             "type": "boolean",
             "ids": [
                 "16#option_mysqld_validate-config"
+            ]
+        },
+        "validate_user_plugins": {
+            "cli": "--validate-user-plugins[={OFF|ON}]",
+            "default": "ON",
+            "name": "validate_user_plugins",
+            "type": "boolean",
+            "ids": [
+                "16#option_mysqld_validate-user-plugins"
             ]
         },
         "activate_all_roles_on_login": {
@@ -30703,19 +30743,6 @@
             ],
             "ids": [
                 "15#sysvar_use_secondary_engine"
-            ]
-        },
-        "validate_user_plugins": {
-            "cli": "--validate-user-plugins[={OFF|ON}]",
-            "default": "ON",
-            "dynamic": false,
-            "name": "validate_user_plugins",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "15#sysvar_validate_user_plugins"
             ]
         },
         "version_compile_zlib": {

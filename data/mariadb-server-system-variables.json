@@ -328,8 +328,8 @@
       "cli": "-#, --debug[=debug_options]",
       "default": "<= MariaDB 10.4: d:t:i:o,/tmp/mysqld.trace (Unix) or d:t:i:O,\\mysqld.trace (Windows), >= MariaDB 10.5: d:t:i:o,/tmp/mariadbd.trace (Unix) or d:t:i:O,\\mariadbd.trace (Windows)",
       "dynamic": true,
-      "id": "debug",
-      "name": "debug",
+      "id": "debugdebug_dbug",
+      "name": "debug/debug_dbug",
       "scope": [
         "global",
         "session"
@@ -1657,7 +1657,7 @@
     },
     {
       "cli": "--max-recursive-iterations=#",
-      "default": "1000  (>= MariaDB 10.6.0), 4294967295 (< MariaDB 10.6.0)",
+      "default": "1000  (>= MariaDB 10.6.0), 4294967295 (<= MariaDB 10.5)",
       "dynamic": true,
       "id": "max_recursive_iterations",
       "name": "max_recursive_iterations",
@@ -1979,7 +1979,7 @@
     },
     {
       "cli": "--old-mode",
-      "default": "(empty string)",
+      "default": "UTF8_IS_UTF8MB3 (>= MariaDB 10.6) (empty string) (<= MariaDB 10.5)",
       "dynamic": true,
       "id": "old_mode",
       "name": "old_mode",

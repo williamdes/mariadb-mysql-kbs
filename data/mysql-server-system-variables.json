@@ -1330,12 +1330,14 @@
       "type": "integer"
     },
     {
+      "default": "OFF",
       "dynamic": false,
       "id": "sysvar_locked_in_memory",
       "name": "locked_in_memory",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--log-error[=file_name]",
@@ -3792,17 +3794,6 @@
         "ON",
         "FORCED"
       ]
-    },
-    {
-      "cli": "--validate-user-plugins[={OFF|ON}]",
-      "default": "ON",
-      "dynamic": false,
-      "id": "sysvar_validate_user_plugins",
-      "name": "validate_user_plugins",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
     },
     {
       "dynamic": false,

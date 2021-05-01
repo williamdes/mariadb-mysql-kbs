@@ -544,6 +544,13 @@
       "id": "option_mysqld_validate-config",
       "name": "validate_config",
       "type": "boolean"
+    },
+    {
+      "cli": "--validate-user-plugins[={OFF|ON}]",
+      "default": "ON",
+      "id": "option_mysqld_validate-user-plugins",
+      "name": "validate_user_plugins",
+      "type": "boolean"
     }
   ],
   "name": "server-options",

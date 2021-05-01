@@ -13116,21 +13116,20 @@
 |------|----|
 |mariadb.com|[datetime_format](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#datetime_format)|
 
-## debug
+## debug/debug_dbug
 |name|value|
 |----|-----|
-|Name|`debug`|
+|Name|`debug/debug_dbug`|
 |Command line|`-#, --debug[=debug_options]`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
+|Default value|`<= MariaDB 10.4: d:t:i:o,/tmp/mysqld.trace (Unix) or d:t:i:O,\mysqld.trace (Windows), >= MariaDB 10.5: d:t:i:o,/tmp/mariadbd.trace (Unix) or d:t:i:O,\mariadbd.trace (Windows)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[debug](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#debug)|
-|dev.mysql.com|[option_mysqld_debug](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_debug)|
-|dev.mysql.com|[sysvar_debug](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_debug)|
+|mariadb.com|[debugdebug_dbug](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#debugdebug_dbug)|
 
 ## debug_no_thread_alarm
 |name|value|
@@ -14264,7 +14263,9 @@
 |name|value|
 |----|-----|
 |Name|`locked_in_memory`|
+|Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`OFF`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -14755,7 +14756,7 @@
 |Command line|`--max-recursive-iterations=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`1000  (>= MariaDB 10.6.0), 4294967295 (< MariaDB 10.6.0)`|
+|Default value|`1000  (>= MariaDB 10.6.0), 4294967295 (<= MariaDB 10.5)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -15113,7 +15114,7 @@
 |Command line|`--old-mode`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`(empty string)`|
+|Default value|`UTF8_IS_UTF8MB3 (>= MariaDB 10.6) (empty string) (<= MariaDB 10.5)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -24972,6 +24973,22 @@
 |mariadb.com|[innodb_deadlock_detect](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_deadlock_detect)|
 |dev.mysql.com|[sysvar_innodb_deadlock_detect](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_deadlock_detect)|
 
+## innodb_deadlock_report
+|name|value|
+|----|-----|
+|Name|`innodb_deadlock_report`|
+|Command line|`--innodb-deadlock-report=val`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`full`|
+|Dynamic|`true`|
+|Valid value(s)|`off`, `basic`, `full`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_deadlock_report](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_deadlock_report)|
+
 ## innodb_default_page_encryption_key
 |name|value|
 |----|-----|
@@ -30432,7 +30449,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `1000000`|
+|Range|from: `0` to: `100000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -30593,7 +30610,7 @@
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
-|Dynamic|`false`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -30697,7 +30714,7 @@
 |----|-----|
 |Name|`gtid_executed`|
 |Type of variable|`string`|
-|Scope|`global`, `session`|
+|Scope|`global`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -30931,7 +30948,7 @@
 |Scope|`global`|
 |Default value|`8192`|
 |Dynamic|`true`|
-|Range|from: `8192` to: `4294967295`|
+|Range|from: `8192` to: `4294959104`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31212,6 +31229,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_daemonize](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_daemonize)|
+
+## debug
+|name|value|
+|----|-----|
+|Name|`debug`|
+|Command line|`--debug[=debug_options]`|
+|Type of variable|`string`|
+|Scope|`global`, `session`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_debug](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_debug)|
+|dev.mysql.com|[sysvar_debug](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_debug)|
 
 ## debug_sync_timeout
 |name|value|
@@ -31738,6 +31770,19 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_validate-config](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_validate-config)|
+
+## validate_user_plugins
+|name|value|
+|----|-----|
+|Name|`validate_user_plugins`|
+|Command line|`--validate-user-plugins[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_validate-user-plugins](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_validate-user-plugins)|
 
 ## activate_all_roles_on_login
 |name|value|
@@ -33326,21 +33371,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_use_secondary_engine](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_use_secondary_engine)|
-
-## validate_user_plugins
-|name|value|
-|----|-----|
-|Name|`validate_user_plugins`|
-|Command line|`--validate-user-plugins[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`ON`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_validate_user_plugins](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_validate_user_plugins)|
 
 ## version_compile_zlib
 |name|value|

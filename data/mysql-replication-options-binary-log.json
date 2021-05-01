@@ -185,7 +185,7 @@
       "name": "binlog_group_commit_sync_no_delay_count",
       "range": {
         "from": 0,
-        "to": 1000000
+        "to": 100000
       },
       "scope": [
         "global"
@@ -428,7 +428,7 @@
     {
       "cli": "--log-bin-use-v1-row-events[={OFF|ON}]",
       "default": "OFF",
-      "dynamic": false,
+      "dynamic": true,
       "id": "sysvar_log_bin_use_v1_row_events",
       "name": "log_bin_use_v1_row_events",
       "scope": [

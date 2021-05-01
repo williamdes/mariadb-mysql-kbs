@@ -32,8 +32,7 @@
       "id": "sysvar_gtid_executed",
       "name": "gtid_executed",
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "string"
     },

@@ -888,8 +888,7 @@
             },
             "scope": [
                 "global",
-                "session",
-                "global"
+                "session"
             ],
             "type": "integer",
             "ids": [
@@ -1109,6 +1108,7 @@
             "validValues": [
                 "NO",
                 "YES",
+                "FORCE",
                 "SKIP"
             ],
             "ids": [
@@ -34961,7 +34961,7 @@
         "ndb_log_bin": {
             "cli": "--ndb-log-bin[={OFF|ON}]",
             "default": "ON",
-            "dynamic": true,
+            "dynamic": false,
             "name": "ndb_log_bin",
             "scope": [
                 "global",

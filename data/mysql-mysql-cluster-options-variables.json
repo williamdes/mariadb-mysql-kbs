@@ -549,7 +549,7 @@
     {
       "cli": "--ndb-log-bin[={OFF|ON}]",
       "default": "ON",
-      "dynamic": true,
+      "dynamic": false,
       "id": "sysvar_ndb_log_bin",
       "name": "ndb_log_bin",
       "scope": [

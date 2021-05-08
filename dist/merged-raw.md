@@ -726,7 +726,7 @@
 |Name|`connect_conv_size`|
 |Command line|`--connect-conv-size=#`|
 |Type of variable|`integer`|
-|Scope|`global`, `session`, `global`|
+|Scope|`global`, `session`|
 |Default value|`>= MariaDB 10.4.8, MariaDB 10.3.18, MariaDB 10.2.27: 1024, <= MariaDB 10.4.7, MariaDB 10.3.17, MariaDB 10.2.26: 8192`|
 |Dynamic|`true`|
 |Range|from: `0` to: `65500`|
@@ -913,7 +913,7 @@
 |Scope|`global`, `session`|
 |Default value|`YES`|
 |Dynamic|`true`|
-|Valid value(s)|`NO`, `YES`, `SKIP`|
+|Valid value(s)|`NO`, `YES`, `FORCE`, `SKIP`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29414,7 +29414,7 @@
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`ON`|
-|Dynamic|`true`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|

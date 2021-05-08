@@ -35,8 +35,7 @@
       },
       "scope": [
         "global",
-        "session",
-        "global"
+        "session"
       ],
       "type": "integer"
     },
@@ -196,6 +195,7 @@
       "validValues": [
         "NO",
         "YES",
+        "FORCE",
         "SKIP"
       ]
     },

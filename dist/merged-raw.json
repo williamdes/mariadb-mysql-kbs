@@ -28709,7 +28709,7 @@
             ]
         },
         "innodb_blocking_buffer_pool_restore": {
-            "cli": "innodb-blocking-buffer-pool-restore={1|2}",
+            "cli": "innodb-blocking-buffer-pool-restore={0|1}",
             "default": "OFF",
             "dynamic": false,
             "name": "innodb_blocking_buffer_pool_restore",
@@ -28806,7 +28806,7 @@
             ]
         },
         "innodb_buffer_pool_dump_pct": {
-            "cli": "--innodb-buffer-pool-dump-pct=#",
+            "cli": "--innodb-buffer-pool-dump-pct={0|1}",
             "default": "25",
             "dynamic": true,
             "name": "innodb_buffer_pool_dump_pct",
@@ -29582,7 +29582,7 @@
             ]
         },
         "innodb_defragment": {
-            "cli": "--innodb-defragment=#",
+            "cli": "--innodb-defragment={0|1}",
             "default": "OFF",
             "dynamic": true,
             "name": "innodb_defragment",
@@ -29840,7 +29840,7 @@
             ]
         },
         "innodb_encrypt_tables": {
-            "cli": "--innodb-encrypt-tables=value",
+            "cli": "--innodb-encrypt-tables={0|1}",
             "default": "OFF",
             "dynamic": true,
             "name": "innodb_encrypt_tables",
@@ -29861,7 +29861,7 @@
             ]
         },
         "innodb_encrypt_temporary_tables": {
-            "cli": "--innodb-encrypt-temporary-tables=value",
+            "cli": "--innodb-encrypt-temporary-tables={0|1}",
             "default": "OFF",
             "dynamic": false,
             "name": "innodb_encrypt_temporary_tables",
@@ -29961,7 +29961,7 @@
             ]
         },
         "innodb_extra_undoslots": {
-            "cli": "--innodb-extra-undoslots=#",
+            "cli": "--innodb-extra-undoslots={0|1}",
             "default": "OFF",
             "dynamic": false,
             "name": "innodb_extra_undoslots",
@@ -30074,7 +30074,7 @@
             ]
         },
         "innodb_file_format_check": {
-            "cli": "--innodb-file-format-check=#",
+            "cli": "--innodb-file-format-check={0|1}",
             "default": "ON",
             "dynamic": false,
             "name": "innodb_file_format_check",
@@ -30728,7 +30728,7 @@
             ]
         },
         "innodb_immediate_scrub_data_uncompressed": {
-            "cli": "--innodb-immediate-scrub-data-uncompressed=#",
+            "cli": "--innodb-immediate-scrub-data-uncompressed={0|1}",
             "default": "OFF",
             "dynamic": true,
             "name": "innodb_immediate_scrub_data_uncompressed",
@@ -31005,7 +31005,7 @@
             ]
         },
         "innodb_log_archive": {
-            "cli": "--innodb-log-archive=value",
+            "cli": "--innodb-log-archive={0|1}",
             "default": "OFF",
             "dynamic": true,
             "name": "innodb_log_archive",
@@ -31763,7 +31763,7 @@
             ]
         },
         "innodb_prefix_index_cluster_optimization": {
-            "cli": "--innodb-prefix-index-cluster-optimization=#",
+            "cli": "--innodb-prefix-index-cluster-optimization={0|1}",
             "default": "OFF",
             "dynamic": true,
             "name": "innodb_prefix_index_cluster_optimization",
@@ -32464,7 +32464,7 @@
             ]
         },
         "innodb_stats_traditional": {
-            "cli": "--innodb-stats-traditional=#",
+            "cli": "--innodb-stats-traditional={0|1}",
             "default": "ON",
             "dynamic": true,
             "name": "innodb_stats_traditional",
@@ -32911,7 +32911,7 @@
             ]
         },
         "innodb_use_mtflush": {
-            "cli": "--innodb-use-mtflush=#",
+            "cli": "--innodb-use-mtflush={0|1}",
             "default": "OFF",
             "dynamic": false,
             "name": "innodb_use_mtflush",
@@ -32966,7 +32966,7 @@
             ]
         },
         "innodb_use_stacktrace": {
-            "cli": "--innodb-use-stacktrace=#",
+            "cli": "--innodb-use-stacktrace={0|1}",
             "default": "OFF",
             "dynamic": false,
             "name": "innodb_use_stacktrace",
@@ -32982,7 +32982,7 @@
             ]
         },
         "innodb_use_sys_malloc": {
-            "cli": "--innodb-use-sys-malloc=#",
+            "cli": "--innodb-use-sys-malloc={0|1}",
             "default": "ON",
             "dynamic": false,
             "name": "innodb_use_sys_malloc",
@@ -33014,7 +33014,7 @@
             ]
         },
         "innodb_use_trim": {
-            "cli": "--innodb-use-trim=#",
+            "cli": "--innodb-use-trim={0|1}",
             "default": "ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)",
             "dynamic": false,
             "name": "innodb_use_trim",

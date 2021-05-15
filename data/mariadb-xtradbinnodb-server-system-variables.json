@@ -41,7 +41,7 @@
       ]
     },
     {
-      "cli": "--innodb-adaptive-flushing=#",
+      "cli": "--innodb-adaptive-flushing={0|1}",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_adaptive_flushing",
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "cli": "--innodb-adaptive-hash-index=#",
+      "cli": "--innodb-adaptive-hash-index={0|1}",
       "default": "OFF (>= MariaDB 10.5), ON (<= MariaDB 10.4)",
       "dynamic": true,
       "id": "innodb_adaptive_hash_index",
@@ -171,7 +171,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-api-disable-rowlock=#",
+      "cli": "--innodb-api-disable-rowlock={0|1}",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_api_disable_rowlock",
@@ -182,7 +182,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-api-enable-binlog=#",
+      "cli": "--innodb-api-enable-binlog={0|1}",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_api_enable_binlog",
@@ -193,7 +193,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-api-enable-mdl=#",
+      "cli": "--innodb-api-enable-mdl={0|1}",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_api_enable_mdl",
@@ -302,7 +302,7 @@
       "type": "boolean"
     },
     {
-      "cli": "innodb-blocking-buffer-pool-restore={1|2}",
+      "cli": "innodb-blocking-buffer-pool-restore={0|1}",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_blocking_buffer_pool_restore",
@@ -342,7 +342,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-buffer-pool-dump-at-shutdown=#",
+      "cli": "--innodb-buffer-pool-dump-at-shutdown={0|1}",
       "default": "ON (>= MariaDB 10.2.2), OFF (<= MariaDB 10.2.1)",
       "dynamic": true,
       "id": "innodb_buffer_pool_dump_at_shutdown",
@@ -353,7 +353,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-buffer-pool-dump-now=#",
+      "cli": "--innodb-buffer-pool-dump-now={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_buffer_pool_dump_now",
@@ -364,7 +364,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-buffer-pool-dump-pct=#",
+      "cli": "--innodb-buffer-pool-dump-pct={0|1}",
       "default": "25 (>= MariaDB 10.2.2), 100 (<= MariaDB 10.2.1)",
       "dynamic": true,
       "id": "innodb_buffer_pool_dump_pct",
@@ -413,7 +413,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-buffer-pool-load-abort=#",
+      "cli": "--innodb-buffer-pool-load-abort={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_buffer_pool_load_abort",
@@ -424,7 +424,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-buffer-pool-load-at-startup=#",
+      "cli": "--innodb-buffer-pool-load-at-startup={0|1}",
       "default": "ON (>= MariaDB 10.2.2), OFF (<= MariaDB 10.2.1)",
       "dynamic": false,
       "id": "innodb_buffer_pool_load_at_startup",
@@ -435,7 +435,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-buffer-pool-load-now=#",
+      "cli": "--innodb-buffer-pool-load-now={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_buffer_pool_load_now",
@@ -654,7 +654,7 @@
       ]
     },
     {
-      "cli": "--innodb-cmp-per-index-enabled=#",
+      "cli": "--innodb-cmp-per-index-enabled={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_cmp_per_index_enabled",
@@ -888,7 +888,7 @@
       ]
     },
     {
-      "cli": "--innodb-defragment=#",
+      "cli": "--innodb-defragment={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_defragment",
@@ -984,7 +984,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-disable-sort-file-cache=#",
+      "cli": "--innodb-disable-sort-file-cache={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_disable_sort_file_cache",
@@ -1070,7 +1070,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-encrypt-tables=value",
+      "cli": "--innodb-encrypt-tables={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_encrypt_tables",
@@ -1086,7 +1086,7 @@
       ]
     },
     {
-      "cli": "--innodb-encrypt-temporary-tables=value",
+      "cli": "--innodb-encrypt-temporary-tables={0|1}",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_encrypt_temporary_tables",
@@ -1161,7 +1161,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-extra-undoslots=#",
+      "cli": "--innodb-extra-undoslots={0|1}",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_extra_undoslots",
@@ -1240,7 +1240,7 @@
       ]
     },
     {
-      "cli": "--innodb-file-format-check=#",
+      "cli": "--innodb-file-format-check={0|1}",
       "default": "ON",
       "dynamic": false,
       "id": "innodb_file_format_check",
@@ -1479,7 +1479,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-ft-enable-diag-print=#",
+      "cli": "--innodb-ft-enable-diag-print={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_ft_enable_diag_print",
@@ -1490,7 +1490,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-ft-enable-stopword=#",
+      "cli": "--innodb-ft-enable-stopword={0|1}",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_ft_enable_stopword",
@@ -1668,7 +1668,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-immediate-scrub-data-uncompressed=#",
+      "cli": "--innodb-immediate-scrub-data-uncompressed={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_immediate_scrub_data_uncompressed",
@@ -1860,7 +1860,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-log-archive=value",
+      "cli": "--innodb-log-archive={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_log_archive",
@@ -1934,7 +1934,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-log-compressed-pages=#",
+      "cli": "--innodb-log-compressed-pages={0|1}",
       "default": "ON (>= MariaDB 10.2.4, >= MariaDB 10.1.26, <= MariaDB 10.1.1), OFF (MariaDB 10.2.0 - MariaDB 10.2.3, MariaDB 10.1.2 - MariaDB 10.1.25)",
       "dynamic": true,
       "id": "innodb_log_compressed_pages",
@@ -2297,7 +2297,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-optimize-fulltext-only=#",
+      "cli": "--innodb-optimize-fulltext-only={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_optimize_fulltext_only",
@@ -2348,7 +2348,7 @@
       "name": "innodb_pass_corrupt_table"
     },
     {
-      "cli": "--innodb-prefix-index-cluster-optimization=#",
+      "cli": "--innodb-prefix-index-cluster-optimization={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_prefix_index_cluster_optimization",
@@ -2359,7 +2359,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-print-all-deadlocks=#",
+      "cli": "--innodb-print-all-deadlocks={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_print_all_deadlocks",
@@ -2415,7 +2415,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-random-read-ahead=#",
+      "cli": "--innodb-random-read-ahead={0|1}",
       "default": "OFF",
       "dynamic": true,
       "id": "innodb_random_read_ahead",
@@ -2473,7 +2473,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-read-only=#",
+      "cli": "--innodb-read-only={0|1}",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_read_only",
@@ -2696,7 +2696,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-stats-auto-recalc=#",
+      "cli": "--innodb-stats-auto-recalc={0|1}",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_stats_auto_recalc",
@@ -2769,7 +2769,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-stats-persistent=#",
+      "cli": "--innodb-stats-persistent={0|1}",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_stats_persistent",
@@ -2806,7 +2806,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-stats-traditional=#",
+      "cli": "--innodb-stats-traditional={0|1}",
       "default": "ON",
       "dynamic": true,
       "id": "innodb_stats_traditional",
@@ -2864,7 +2864,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-strict-mode=#",
+      "cli": "--innodb-strict-mode={0|1}",
       "default": "ON (>= MariaDB 10.2.2), OFF (<= MariaDB 10.2.1)",
       "dynamic": true,
       "id": "innodb_strict_mode",
@@ -3100,7 +3100,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-use-mtflush=#",
+      "cli": "--innodb-use-mtflush={0|1}",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_use_mtflush",
@@ -3111,7 +3111,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-use-native-aio=#",
+      "cli": "--innodb-use-native-aio={0|1}",
       "default": "ON",
       "dynamic": false,
       "id": "innodb_use_native_aio",
@@ -3137,7 +3137,7 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-use-stacktrace=#",
+      "cli": "--innodb-use-stacktrace={0|1}",
       "default": "OFF",
       "dynamic": false,
       "id": "innodb_use_stacktrace",
@@ -3148,7 +3148,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-use-sys-malloc=#",
+      "cli": "--innodb-use-sys-malloc={0|1}",
       "default": "ON",
       "dynamic": false,
       "id": "innodb_use_sys_malloc",
@@ -3170,7 +3170,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-use-trim=#",
+      "cli": "--innodb-use-trim={0|1}",
       "default": "ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)",
       "dynamic": false,
       "id": "innodb_use_trim",

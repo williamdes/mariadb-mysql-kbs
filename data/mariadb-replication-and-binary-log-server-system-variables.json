@@ -116,7 +116,7 @@
     },
     {
       "cli": "--binlog-expire-logs-seconds=#",
-      "default": "OFF (0)",
+      "default": "0",
       "dynamic": true,
       "id": "binlog_expire_logs_seconds",
       "name": "binlog_expire_logs_seconds",
@@ -242,7 +242,7 @@
     },
     {
       "cli": "--expire-logs-days=#",
-      "default": "0",
+      "default": "0.000000 (>= MariaDB 10.6.1), 0 (<= MariaDB 10.6.0)",
       "dynamic": true,
       "id": "expire_logs_days",
       "name": "expire_logs_days",

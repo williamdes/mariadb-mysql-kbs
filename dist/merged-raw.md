@@ -24382,7 +24382,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_blocking_buffer_pool_restore`|
-|Command line|`innodb-blocking-buffer-pool-restore={1|2}`|
+|Command line|`innodb-blocking-buffer-pool-restore={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -24460,7 +24460,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_buffer_pool_dump_pct`|
-|Command line|`--innodb-buffer-pool-dump-pct=#`|
+|Command line|`--innodb-buffer-pool-dump-pct={0|1}`|
 |Scope|`global`|
 |Default value|`25`|
 |Dynamic|`true`|
@@ -25042,7 +25042,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_defragment`|
-|Command line|`--innodb-defragment=#`|
+|Command line|`--innodb-defragment={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -25256,7 +25256,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_encrypt_tables`|
-|Command line|`--innodb-encrypt-tables=value`|
+|Command line|`--innodb-encrypt-tables={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -25272,7 +25272,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_encrypt_temporary_tables`|
-|Command line|`--innodb-encrypt-temporary-tables=value`|
+|Command line|`--innodb-encrypt-temporary-tables={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -25352,7 +25352,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_extra_undoslots`|
-|Command line|`--innodb-extra-undoslots=#`|
+|Command line|`--innodb-extra-undoslots={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -25445,7 +25445,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_file_format_check`|
-|Command line|`--innodb-file-format-check=#`|
+|Command line|`--innodb-file-format-check={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON`|
@@ -25939,7 +25939,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_immediate_scrub_data_uncompressed`|
-|Command line|`--innodb-immediate-scrub-data-uncompressed=#`|
+|Command line|`--innodb-immediate-scrub-data-uncompressed={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -26171,7 +26171,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_log_archive`|
-|Command line|`--innodb-log-archive=value`|
+|Command line|`--innodb-log-archive={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -26744,7 +26744,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_prefix_index_cluster_optimization`|
-|Command line|`--innodb-prefix-index-cluster-optimization=#`|
+|Command line|`--innodb-prefix-index-cluster-optimization={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -27295,7 +27295,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_stats_traditional`|
-|Command line|`--innodb-stats-traditional=#`|
+|Command line|`--innodb-stats-traditional={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON`|
@@ -27660,7 +27660,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_use_mtflush`|
-|Command line|`--innodb-use-mtflush=#`|
+|Command line|`--innodb-use-mtflush={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -27706,7 +27706,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_use_stacktrace`|
-|Command line|`--innodb-use-stacktrace=#`|
+|Command line|`--innodb-use-stacktrace={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -27721,7 +27721,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_use_sys_malloc`|
-|Command line|`--innodb-use-sys-malloc=#`|
+|Command line|`--innodb-use-sys-malloc={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON`|
@@ -27751,7 +27751,7 @@
 |name|value|
 |----|-----|
 |Name|`innodb_use_trim`|
-|Command line|`--innodb-use-trim=#`|
+|Command line|`--innodb-use-trim={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)`|

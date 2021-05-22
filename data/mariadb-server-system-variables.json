@@ -2111,13 +2111,16 @@
         "mrr={on|off}",
         "mrr_cost_based={on|off}",
         "mrr_sort_keys={on|off}",
+        "not_null_range_scan={on|off}",
         "optimize_join_buffer_size={on|off}",
         "orderby_uses_equalities={on|off}",
         "outer_join_with_cache={on|off}",
         "partial_match_rowid_merge={on|off}",
         "partial_match_table_scan={on|off}",
+        "rowid_filter={on|off}",
         "semijoin={on|off}",
         "semijoin_with_cache={on|off}",
+        "split_materialized={on|off}",
         "subquery_cache={on|off}",
         "table_elimination={on|off}"
       ]

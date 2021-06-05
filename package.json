@@ -55,6 +55,9 @@
         "name": "William Desportes",
         "url": "https://william.wdes.fr"
     },
+    "engines": {
+        "node": ">=12"
+    },
     "dependencies": {},
     "devDependencies": {
         "chai": "^4.3.4",

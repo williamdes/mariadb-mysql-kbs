@@ -143,6 +143,17 @@
       ]
     },
     {
+      "cli": "--audit-log-format-unix-timestamp[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_audit_log_format_unix_timestamp",
+      "name": "audit_log_format_unix_timestamp",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--audit-log-include-accounts=value",
       "default": "NULL",
       "dynamic": true,

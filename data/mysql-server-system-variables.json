@@ -691,8 +691,8 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "ON",
         "OFF",
+        "ON",
         "ALL"
       ]
     },
@@ -1140,8 +1140,8 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "TempTable",
-        "MEMORY"
+        "MEMORY",
+        "TempTable"
       ]
     },
     {
@@ -1992,8 +1992,8 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "nulls_equal",
         "nulls_unequal",
+        "nulls_equal",
         "nulls_ignored"
       ]
     },
@@ -2565,13 +2565,12 @@
       "id": "sysvar_rbr_exec_mode",
       "name": "rbr_exec_mode",
       "scope": [
-        "global",
         "session"
       ],
       "type": "enumeration",
       "validValues": [
-        "IDEMPOTENT",
-        "STRICT"
+        "STRICT",
+        "IDEMPOTENT"
       ]
     },
     {

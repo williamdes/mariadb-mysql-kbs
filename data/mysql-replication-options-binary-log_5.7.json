@@ -131,9 +131,9 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "ROW",
+        "MIXED",
         "STATEMENT",
-        "MIXED"
+        "ROW"
       ]
     },
     {

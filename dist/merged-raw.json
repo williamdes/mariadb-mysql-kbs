@@ -3954,8 +3954,8 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "nulls_equal",
                 "nulls_unequal",
+                "nulls_equal",
                 "nulls_ignored"
             ],
             "ids": [
@@ -7869,9 +7869,9 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "ROW",
+                "MIXED",
                 "STATEMENT",
-                "MIXED"
+                "ROW"
             ],
             "ids": [
                 {
@@ -8865,8 +8865,8 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "IDEMPOTENT",
-                "STRICT"
+                "STRICT",
+                "IDEMPOTENT"
             ],
             "ids": [
                 {
@@ -15684,8 +15684,8 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "ON",
                 "OFF",
+                "ON",
                 "ALL"
             ],
             "ids": [
@@ -29565,11 +29565,6 @@
                 "global"
             ],
             "type": "enumeration",
-            "validValues": [
-                "redundant",
-                "compact",
-                "dynamic"
-            ],
             "ids": [
                 {
                     "anchor": "innodb_default_row_format",
@@ -33264,6 +33259,22 @@
                 }
             ]
         },
+        "audit_log_format_unix_timestamp": {
+            "cli": "--audit-log-format-unix-timestamp[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "audit_log_format_unix_timestamp",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_audit_log_format_unix_timestamp",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html"
+                }
+            ]
+        },
         "audit_log_include_accounts": {
             "cli": "--audit-log-include-accounts=value",
             "default": "NULL",
@@ -36231,7 +36242,7 @@
         },
         "binlog_row_value_options": {
             "cli": "--binlog-row-value-options=#",
-            "default": "''",
+            "default": "",
             "dynamic": true,
             "name": "binlog_row_value_options",
             "scope": [
@@ -38233,8 +38244,8 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "TempTable",
-                "MEMORY"
+                "MEMORY",
+                "TempTable"
             ],
             "ids": [
                 {
@@ -38807,13 +38818,12 @@
             "dynamic": true,
             "name": "rbr_exec_mode",
             "scope": [
-                "global",
                 "session"
             ],
             "type": "enumeration",
             "validValues": [
-                "IDEMPOTENT",
-                "STRICT"
+                "STRICT",
+                "IDEMPOTENT"
             ],
             "ids": [
                 {

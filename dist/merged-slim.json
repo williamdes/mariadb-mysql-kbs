@@ -3156,8 +3156,8 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "nulls_equal",
                 "nulls_unequal",
+                "nulls_equal",
                 "nulls_ignored"
             ],
             "ids": [
@@ -6282,9 +6282,9 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "ROW",
+                "MIXED",
                 "STATEMENT",
-                "MIXED"
+                "ROW"
             ],
             "ids": [
                 "8#binlog_format",
@@ -6966,8 +6966,8 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "IDEMPOTENT",
-                "STRICT"
+                "STRICT",
+                "IDEMPOTENT"
             ],
             "ids": [
                 "8#slave_exec_mode",
@@ -12231,8 +12231,8 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "ON",
                 "OFF",
+                "ON",
                 "ALL"
             ],
             "ids": [
@@ -22875,11 +22875,6 @@
                 "global"
             ],
             "type": "enumeration",
-            "validValues": [
-                "redundant",
-                "compact",
-                "dynamic"
-            ],
             "ids": [
                 "41#innodb_default_row_format",
                 "42#sysvar_innodb_default_row_format"
@@ -25737,6 +25732,19 @@
                 "43#sysvar_audit_log_format"
             ]
         },
+        "audit_log_format_unix_timestamp": {
+            "cli": "--audit-log-format-unix-timestamp[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "audit_log_format_unix_timestamp",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "43#sysvar_audit_log_format_unix_timestamp"
+            ]
+        },
         "audit_log_include_accounts": {
             "cli": "--audit-log-include-accounts=value",
             "default": "NULL",
@@ -28137,7 +28145,7 @@
         },
         "binlog_row_value_options": {
             "cli": "--binlog-row-value-options=#",
-            "default": "''",
+            "default": "",
             "dynamic": true,
             "name": "binlog_row_value_options",
             "scope": [
@@ -29722,8 +29730,8 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "TempTable",
-                "MEMORY"
+                "MEMORY",
+                "TempTable"
             ],
             "ids": [
                 "15#sysvar_internal_tmp_mem_storage_engine"
@@ -30197,13 +30205,12 @@
             "dynamic": true,
             "name": "rbr_exec_mode",
             "scope": [
-                "global",
                 "session"
             ],
             "type": "enumeration",
             "validValues": [
-                "IDEMPOTENT",
-                "STRICT"
+                "STRICT",
+                "IDEMPOTENT"
             ],
             "ids": [
                 "15#sysvar_rbr_exec_mode"

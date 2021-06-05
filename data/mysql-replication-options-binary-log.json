@@ -157,9 +157,9 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "ROW",
+        "MIXED",
         "STATEMENT",
-        "MIXED"
+        "ROW"
       ]
     },
     {
@@ -273,7 +273,7 @@
     },
     {
       "cli": "--binlog-row-value-options=#",
-      "default": "''",
+      "default": "",
       "dynamic": true,
       "id": "sysvar_binlog_row_value_options",
       "name": "binlog_row_value_options",

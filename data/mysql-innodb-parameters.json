@@ -468,11 +468,11 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "innodb",
         "crc32",
-        "none",
-        "strict_innodb",
         "strict_crc32",
+        "innodb",
+        "strict_innodb",
+        "none",
         "strict_none"
       ]
     },
@@ -644,9 +644,9 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "DYNAMIC",
+        "REDUNDANT",
         "COMPACT",
-        "REDUNDANT"
+        "DYNAMIC"
       ]
     },
     {

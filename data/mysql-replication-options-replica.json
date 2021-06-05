@@ -486,8 +486,8 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "IDEMPOTENT",
-        "STRICT"
+        "STRICT",
+        "IDEMPOTENT"
       ]
     },
     {

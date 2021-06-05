@@ -3468,7 +3468,7 @@
 |Scope|`global`, `session`|
 |Default value|`nulls_unequal`|
 |Dynamic|`true`|
-|Valid value(s)|`nulls_equal`, `nulls_unequal`, `nulls_ignored`|
+|Valid value(s)|`nulls_unequal`, `nulls_equal`, `nulls_ignored`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6696,7 +6696,7 @@
 |Scope|`global`, `session`|
 |Default value|`ROW`|
 |Dynamic|`true`|
-|Valid value(s)|`ROW`, `STATEMENT`, `MIXED`|
+|Valid value(s)|`MIXED`, `STATEMENT`, `ROW`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7443,7 +7443,7 @@
 |Scope|`global`|
 |Default value|`IDEMPOTENT (NDB)STRICT (Other)`|
 |Dynamic|`true`|
-|Valid value(s)|`IDEMPOTENT`, `STRICT`|
+|Valid value(s)|`STRICT`, `IDEMPOTENT`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -13263,7 +13263,7 @@
 |Scope|`global`|
 |Default value|`ON`|
 |Dynamic|`true`|
-|Valid value(s)|`ON`, `OFF`, `ALL`|
+|Valid value(s)|`OFF`, `ON`, `ALL`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -25030,7 +25030,6 @@
 |Scope|`global`|
 |Default value|`DYNAMIC`|
 |Dynamic|`true`|
-|Valid value(s)|`redundant`, `compact`, `dynamic`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27957,6 +27956,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_audit_log_format](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_format)|
 
+## audit_log_format_unix_timestamp
+|name|value|
+|----|-----|
+|Name|`audit_log_format_unix_timestamp`|
+|Command line|`--audit-log-format-unix-timestamp[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_audit_log_format_unix_timestamp](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_format_unix_timestamp)|
+
 ## audit_log_include_accounts
 |name|value|
 |----|-----|
@@ -30512,7 +30526,7 @@
 |Command line|`--binlog-row-value-options=#`|
 |Type of variable|`set`|
 |Scope|`global`, `session`|
-|Default value|`''`|
+|Default value|``|
 |Dynamic|`true`|
 |Valid value(s)|`PARTIAL_JSON`|
 
@@ -32323,7 +32337,7 @@
 |Scope|`global`, `session`|
 |Default value|`TempTable`|
 |Dynamic|`true`|
-|Valid value(s)|`TempTable`, `MEMORY`|
+|Valid value(s)|`MEMORY`, `TempTable`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -32822,10 +32836,10 @@
 |----|-----|
 |Name|`rbr_exec_mode`|
 |Type of variable|`enumeration`|
-|Scope|`global`, `session`|
+|Scope|`session`|
 |Default value|`STRICT`|
 |Dynamic|`true`|
-|Valid value(s)|`IDEMPOTENT`, `STRICT`|
+|Valid value(s)|`STRICT`, `IDEMPOTENT`|
 
 ### Documentation(s)
 |source|anchor name|

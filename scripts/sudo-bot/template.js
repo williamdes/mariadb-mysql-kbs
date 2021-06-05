@@ -7,8 +7,9 @@
 const commitMessage = function (modifiedFiles) {
     const nbrMySQLFiles = modifiedFiles.filter((file) => file.match(/mysql-[a-z\-\._0-9]+.json$/g)).length;
     const nbrMariaDBFiles = modifiedFiles.filter((file) => file.match(/mariadb-[a-z\-\._0-9]+.json$/g)).length;
-    const nbrMergedData = modifiedFiles.filter((file) => file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g))
-        .length;
+    const nbrMergedData = modifiedFiles.filter((file) =>
+        file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g)
+    ).length;
 
     const hasMySQLFiles = nbrMySQLFiles > 0;
     const hasMariaDBFiles = nbrMariaDBFiles > 0;
@@ -30,8 +31,9 @@ const commitMessage = function (modifiedFiles) {
 const prMessage = function (modifiedFiles) {
     const nbrMySQLFiles = modifiedFiles.filter((file) => file.match(/mysql-[a-z\-\._0-9]+.json$/g)).length;
     const nbrMariaDBFiles = modifiedFiles.filter((file) => file.match(/mariadb-[a-z\-\._0-9]+.json$/g)).length;
-    const nbrMergedData = modifiedFiles.filter((file) => file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g))
-        .length;
+    const nbrMergedData = modifiedFiles.filter((file) =>
+        file.match(/merged-(slim|ultraslim|raw).(json|md|php)$/g)
+    ).length;
 
     const hasMySQLFiles = nbrMySQLFiles > 0;
     const hasMariaDBFiles = nbrMariaDBFiles > 0;

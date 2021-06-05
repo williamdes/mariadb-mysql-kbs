@@ -160,15 +160,7 @@ function parsePage($, cbSuccess) {
 
 const KB_URL = 'https://mariadb.com/kb/en/library/documentation/';
 
-const storageEngines = [
-    's3-storage-engine',
-    'aria',
-    'myrocks',
-    'cassandra',
-    'galera-cluster',
-    'myisam',
-    'connect',
-];
+const storageEngines = ['s3-storage-engine', 'aria', 'myrocks', 'cassandra', 'galera-cluster', 'myisam', 'connect'];
 
 const systemVariables = [
     'mroonga',

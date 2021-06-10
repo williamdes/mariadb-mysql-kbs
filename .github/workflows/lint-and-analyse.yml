@@ -43,7 +43,6 @@ jobs:
               uses: shivammathur/setup-php@v2
               with:
                   php-version: 7.1
-                  tools: composer:v2
             - name: Validate composer.json and composer.lock
               run: composer validate
             - name: Cache module
@@ -64,7 +63,6 @@ jobs:
               uses: shivammathur/setup-php@v2
               with:
                   php-version: 7.1
-                  tools: composer:v2
             - name: Cache module
               uses: actions/cache@v2
               with:

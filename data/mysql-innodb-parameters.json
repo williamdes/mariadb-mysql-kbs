@@ -1455,7 +1455,7 @@
     },
     {
       "cli": "--innodb-monitor-reset={counter|module|pattern|all}",
-      "default": "empty string",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_innodb_monitor_reset",
       "name": "innodb_monitor_reset",
@@ -1472,7 +1472,7 @@
     },
     {
       "cli": "--innodb-monitor-reset-all={counter|module|pattern|all}",
-      "default": "empty string",
+      "default": "NULL",
       "dynamic": true,
       "id": "sysvar_innodb_monitor_reset_all",
       "name": "innodb_monitor_reset_all",

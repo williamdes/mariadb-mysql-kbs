@@ -26572,7 +26572,7 @@
 |----|-----|
 |Name|`innodb_monitor_reset`|
 |Scope|`global`|
-|Default value|`empty string`|
+|Default value|`NULL`|
 |Dynamic|`true`|
 |Valid value(s)|`counter`, `module`, `pattern`, `all`|
 
@@ -26587,7 +26587,7 @@
 |----|-----|
 |Name|`innodb_monitor_reset_all`|
 |Scope|`global`|
-|Default value|`empty string`|
+|Default value|`NULL`|
 |Dynamic|`true`|
 |Valid value(s)|`counter`, `module`, `pattern`, `all`|
 
@@ -30661,6 +30661,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_original_commit_timestamp](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_original_commit_timestamp)|
 
+## source_verify_checksum
+|name|value|
+|----|-----|
+|Name|`source_verify_checksum`|
+|Command line|`--source-verify-checksum[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_source_verify_checksum](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_source_verify_checksum)|
+
 ## transaction_write_set_extraction
 |name|value|
 |----|-----|
@@ -30891,6 +30906,35 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_disconnect-slave-event-count](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#option_mysqld_disconnect-slave-event-count)|
 
+## init_replica
+|name|value|
+|----|-----|
+|Name|`init_replica`|
+|Command line|`--init-replica=name`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_init_replica](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_init_replica)|
+
+## log_slow_replica_statements
+|name|value|
+|----|-----|
+|Name|`log_slow_replica_statements`|
+|Command line|`--log-slow-replica-statements[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_log_slow_replica_statements](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_log_slow_replica_statements)|
+
 ## master_info_repository
 |name|value|
 |----|-----|
@@ -30922,6 +30966,69 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_relay_log_info_repository](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_relay_log_info_repository)|
+
+## replica_compressed_protocol
+|name|value|
+|----|-----|
+|Name|`replica_compressed_protocol`|
+|Command line|`--replica-compressed-protocol[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_replica_compressed_protocol](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_replica_compressed_protocol)|
+
+## replica_exec_mode
+|name|value|
+|----|-----|
+|Name|`replica_exec_mode`|
+|Command line|`--replica-exec-mode=mode`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`IDEMPOTENT (NDB)STRICT (Other)`|
+|Dynamic|`true`|
+|Valid value(s)|`STRICT`, `IDEMPOTENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_replica_exec_mode](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_replica_exec_mode)|
+
+## replica_max_allowed_packet
+|name|value|
+|----|-----|
+|Name|`replica_max_allowed_packet`|
+|Command line|`--replica-max-allowed-packet=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1073741824`|
+|Dynamic|`true`|
+|Range|from: `1024` to: `1073741824`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_replica_max_allowed_packet](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_replica_max_allowed_packet)|
+
+## replica_type_conversions
+|name|value|
+|----|-----|
+|Name|`replica_type_conversions`|
+|Command line|`--replica-type-conversions=set`|
+|Type of variable|`set`|
+|Scope|`global`|
+|Default value|``|
+|Dynamic|`true`|
+|Valid value(s)|`ALL_LOSSY`, `ALL_NON_LOSSY`, `ALL_SIGNED`, `ALL_UNSIGNED`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_replica_type_conversions](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_replica_type_conversions)|
 
 ## replication_optimize_for_static_plugin_config
 |name|value|
@@ -30968,6 +31075,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_rpl_read_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_rpl_read_size)|
+
+## rpl_stop_replica_timeout
+|name|value|
+|----|-----|
+|Name|`rpl_stop_replica_timeout`|
+|Command line|`--rpl-stop-replica-timeout=seconds`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`31536000`|
+|Dynamic|`true`|
+|Range|from: `2` to: `31536000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_rpl_stop_replica_timeout](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_rpl_stop_replica_timeout)|
 
 ## rpl_stop_slave_timeout
 |name|value|
@@ -31078,6 +31201,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_slave_rows_search_algorithms](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_slave_rows_search_algorithms)|
+
+## sync_source_info
+|name|value|
+|----|-----|
+|Name|`sync_source_info`|
+|Command line|`--sync-source-info=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`10000`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_sync_source_info](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_sync_source_info)|
 
 ## show_slave_auth_info
 |name|value|

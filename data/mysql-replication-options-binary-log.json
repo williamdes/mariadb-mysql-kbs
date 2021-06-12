@@ -524,6 +524,17 @@
       "type": "numeric"
     },
     {
+      "cli": "--source-verify-checksum[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_source_verify_checksum",
+      "name": "source_verify_checksum",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "default": "ON",
       "dynamic": true,
       "id": "sysvar_sql_log_bin",

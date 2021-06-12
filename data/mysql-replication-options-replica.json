@@ -160,6 +160,16 @@
       "type": "integer"
     },
     {
+      "cli": "--init-replica=name",
+      "dynamic": true,
+      "id": "sysvar_init_replica",
+      "name": "init_replica",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--init-slave=name",
       "dynamic": true,
       "id": "sysvar_init_slave",
@@ -168,6 +178,17 @@
         "global"
       ],
       "type": "string"
+    },
+    {
+      "cli": "--log-slow-replica-statements[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_log_slow_replica_statements",
+      "name": "log_slow_replica_statements",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--log-slow-slave-statements[={OFF|ON}]",
@@ -305,6 +326,64 @@
       "type": "integer"
     },
     {
+      "cli": "--replica-compressed-protocol[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_replica_compressed_protocol",
+      "name": "replica_compressed_protocol",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--replica-exec-mode=mode",
+      "default": "IDEMPOTENT (NDB)STRICT (Other)",
+      "dynamic": true,
+      "id": "sysvar_replica_exec_mode",
+      "name": "replica_exec_mode",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "STRICT",
+        "IDEMPOTENT"
+      ]
+    },
+    {
+      "cli": "--replica-max-allowed-packet=#",
+      "default": "1073741824",
+      "dynamic": true,
+      "id": "sysvar_replica_max_allowed_packet",
+      "name": "replica_max_allowed_packet",
+      "range": {
+        "from": 1024,
+        "to": 1073741824
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--replica-type-conversions=set",
+      "default": "",
+      "dynamic": true,
+      "id": "sysvar_replica_type_conversions",
+      "name": "replica_type_conversions",
+      "scope": [
+        "global"
+      ],
+      "type": "set",
+      "validValues": [
+        "ALL_LOSSY",
+        "ALL_NON_LOSSY",
+        "ALL_SIGNED",
+        "ALL_UNSIGNED"
+      ]
+    },
+    {
       "cli": "--replication-optimize-for-static-plugin-config[={OFF|ON}]",
       "default": "OFF",
       "dynamic": true,
@@ -403,6 +482,21 @@
       "dynamic": true,
       "id": "sysvar_rpl_semi_sync_slave_trace_level",
       "name": "rpl_semi_sync_slave_trace_level",
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--rpl-stop-replica-timeout=seconds",
+      "default": "31536000",
+      "dynamic": true,
+      "id": "sysvar_rpl_stop_replica_timeout",
+      "name": "rpl_stop_replica_timeout",
+      "range": {
+        "from": 2,
+        "to": 31536000
+      },
       "scope": [
         "global"
       ],
@@ -712,6 +806,21 @@
       "dynamic": true,
       "id": "sysvar_sync_relay_log_info",
       "name": "sync_relay_log_info",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--sync-source-info=#",
+      "default": "10000",
+      "dynamic": true,
+      "id": "sysvar_sync_source_info",
+      "name": "sync_source_info",
       "range": {
         "from": 0,
         "to": 4294967295

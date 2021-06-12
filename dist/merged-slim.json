@@ -24396,7 +24396,7 @@
             ]
         },
         "innodb_monitor_reset": {
-            "default": "empty string",
+            "default": "NULL",
             "dynamic": true,
             "name": "innodb_monitor_reset",
             "scope": [
@@ -24414,7 +24414,7 @@
             ]
         },
         "innodb_monitor_reset_all": {
-            "default": "empty string",
+            "default": "NULL",
             "dynamic": true,
             "name": "innodb_monitor_reset_all",
             "scope": [
@@ -28283,6 +28283,19 @@
                 "22#sysvar_original_commit_timestamp"
             ]
         },
+        "source_verify_checksum": {
+            "cli": "--source-verify-checksum[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "source_verify_checksum",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "22#sysvar_source_verify_checksum"
+            ]
+        },
         "transaction_write_set_extraction": {
             "cli": "--transaction-write-set-extraction[=value]",
             "default": "0",
@@ -28493,6 +28506,31 @@
                 "24#option_mysqld_disconnect-slave-event-count"
             ]
         },
+        "init_replica": {
+            "cli": "--init-replica=name",
+            "dynamic": true,
+            "name": "init_replica",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "24#sysvar_init_replica"
+            ]
+        },
+        "log_slow_replica_statements": {
+            "cli": "--log-slow-replica-statements[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "log_slow_replica_statements",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "24#sysvar_log_slow_replica_statements"
+            ]
+        },
         "master_info_repository": {
             "cli": "--master-info-repository={FILE|TABLE}",
             "default": "TABLE",
@@ -28525,6 +28563,72 @@
             ],
             "ids": [
                 "24#sysvar_relay_log_info_repository"
+            ]
+        },
+        "replica_compressed_protocol": {
+            "cli": "--replica-compressed-protocol[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "replica_compressed_protocol",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "24#sysvar_replica_compressed_protocol"
+            ]
+        },
+        "replica_exec_mode": {
+            "cli": "--replica-exec-mode=mode",
+            "default": "IDEMPOTENT (NDB)STRICT (Other)",
+            "dynamic": true,
+            "name": "replica_exec_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "STRICT",
+                "IDEMPOTENT"
+            ],
+            "ids": [
+                "24#sysvar_replica_exec_mode"
+            ]
+        },
+        "replica_max_allowed_packet": {
+            "cli": "--replica-max-allowed-packet=#",
+            "default": "1073741824",
+            "dynamic": true,
+            "name": "replica_max_allowed_packet",
+            "range": {
+                "from": 1024,
+                "to": 1073741824
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_replica_max_allowed_packet"
+            ]
+        },
+        "replica_type_conversions": {
+            "cli": "--replica-type-conversions=set",
+            "default": "",
+            "dynamic": true,
+            "name": "replica_type_conversions",
+            "scope": [
+                "global"
+            ],
+            "type": "set",
+            "validValues": [
+                "ALL_LOSSY",
+                "ALL_NON_LOSSY",
+                "ALL_SIGNED",
+                "ALL_UNSIGNED"
+            ],
+            "ids": [
+                "24#sysvar_replica_type_conversions"
             ]
         },
         "replication_optimize_for_static_plugin_config": {
@@ -28568,6 +28672,23 @@
             "type": "integer",
             "ids": [
                 "24#sysvar_rpl_read_size"
+            ]
+        },
+        "rpl_stop_replica_timeout": {
+            "cli": "--rpl-stop-replica-timeout=seconds",
+            "default": "31536000",
+            "dynamic": true,
+            "name": "rpl_stop_replica_timeout",
+            "range": {
+                "from": 2,
+                "to": 31536000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_rpl_stop_replica_timeout"
             ]
         },
         "rpl_stop_slave_timeout": {
@@ -28684,6 +28805,23 @@
             ],
             "ids": [
                 "24#sysvar_slave_rows_search_algorithms"
+            ]
+        },
+        "sync_source_info": {
+            "cli": "--sync-source-info=#",
+            "default": "10000",
+            "dynamic": true,
+            "name": "sync_source_info",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_sync_source_info"
             ]
         },
         "show_slave_auth_info": {

@@ -108,6 +108,17 @@
       "type": "string"
     },
     {
+      "cli": "--skip-replica-start[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "option_mysqld_skip-replica-start",
+      "name": "skip_replica_start",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--skip-slave-start[={OFF|ON}]",
       "default": "OFF",
       "dynamic": false,
@@ -326,6 +337,36 @@
       "type": "integer"
     },
     {
+      "cli": "--replica-checkpoint-group=#",
+      "default": "512",
+      "dynamic": true,
+      "id": "sysvar_replica_checkpoint_group",
+      "name": "replica_checkpoint_group",
+      "range": {
+        "from": 32,
+        "to": 524280
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--replica-checkpoint-period=#",
+      "default": "300",
+      "dynamic": true,
+      "id": "sysvar_replica_checkpoint_period",
+      "name": "replica_checkpoint_period",
+      "range": {
+        "from": 1,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--replica-compressed-protocol[={OFF|ON}]",
       "default": "OFF",
       "dynamic": true,
@@ -352,6 +393,17 @@
       ]
     },
     {
+      "cli": "--replica-load-tmpdir=dir_name",
+      "default": "Value of --tmpdir",
+      "dynamic": false,
+      "id": "sysvar_replica_load_tmpdir",
+      "name": "replica_load_tmpdir",
+      "scope": [
+        "global"
+      ],
+      "type": "directory name"
+    },
+    {
       "cli": "--replica-max-allowed-packet=#",
       "default": "1073741824",
       "dynamic": true,
@@ -360,6 +412,103 @@
       "range": {
         "from": 1024,
         "to": 1073741824
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--replica-net-timeout=#",
+      "default": "60",
+      "dynamic": true,
+      "id": "sysvar_replica_net_timeout",
+      "name": "replica_net_timeout",
+      "range": {
+        "from": 1,
+        "to": 31536000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--replica-parallel-type=value",
+      "default": "DATABASE",
+      "dynamic": true,
+      "id": "sysvar_replica_parallel_type",
+      "name": "replica_parallel_type",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "DATABASE",
+        "LOGICAL_CLOCK"
+      ]
+    },
+    {
+      "cli": "--replica-parallel-workers=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_replica_parallel_workers",
+      "name": "replica_parallel_workers",
+      "range": {
+        "from": 0,
+        "to": 1024
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--replica-pending-jobs-size-max=#",
+      "default": "128M",
+      "dynamic": true,
+      "id": "sysvar_replica_pending_jobs_size_max",
+      "name": "replica_pending_jobs_size_max",
+      "range": {
+        "from": 1024,
+        "to": 16
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--replica-preserve-commit-order[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_replica_preserve_commit_order",
+      "name": "replica_preserve_commit_order",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--replica-sql-verify-checksum[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": true,
+      "id": "sysvar_replica_sql_verify_checksum",
+      "name": "replica_sql_verify_checksum",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--replica-transaction-retries=#",
+      "default": "10",
+      "dynamic": true,
+      "id": "sysvar_replica_transaction_retries",
+      "name": "replica_transaction_retries",
+      "range": {
+        "from": 0,
+        "to": 18446744073709552000
       },
       "scope": [
         "global"
@@ -516,6 +665,17 @@
         "global"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--skip-replica-start[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "sysvar_skip_replica_start",
+      "name": "skip_replica_start",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--skip-slave-start[={OFF|ON}]",
@@ -715,6 +875,23 @@
       ]
     },
     {
+      "cli": "--replica-skip-errors=name",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "sysvar_replica_skip_errors",
+      "name": "replica_skip_errors",
+      "scope": [
+        "global"
+      ],
+      "type": "string",
+      "validValues": [
+        "OFF",
+        "[list of error codes]",
+        "all",
+        "ddl_exist_errors"
+      ]
+    },
+    {
       "cli": "--slave-sql-verify-checksum[={OFF|ON}]",
       "default": "ON",
       "dynamic": true,
@@ -755,6 +932,20 @@
         "ALL_SIGNED",
         "ALL_UNSIGNED"
       ]
+    },
+    {
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_sql_replica_skip_counter",
+      "name": "sql_replica_skip_counter",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     },
     {
       "default": "0",

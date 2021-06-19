@@ -28258,6 +28258,19 @@
                 "23#sysvar_log_bin_use_v1_row_events"
             ]
         },
+        "log_replica_updates": {
+            "cli": "--log-replica-updates[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": false,
+            "name": "log_replica_updates",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "22#sysvar_log_replica_updates"
+            ]
+        },
         "log_statements_unsafe_for_binlog": {
             "cli": "--log-statements-unsafe-for-binlog[={OFF|ON}]",
             "default": "ON",
@@ -28471,6 +28484,20 @@
                 "24#option_mysqld_replicate-same-server-id"
             ]
         },
+        "skip_replica_start": {
+            "cli": "--skip-replica-start[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "skip_replica_start",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "24#option_mysqld_skip-replica-start",
+                "24#sysvar_skip_replica_start"
+            ]
+        },
         "skip_slave_start": {
             "cli": "--skip-slave-start[={OFF|ON}]",
             "default": "OFF",
@@ -28565,6 +28592,40 @@
                 "24#sysvar_relay_log_info_repository"
             ]
         },
+        "replica_checkpoint_group": {
+            "cli": "--replica-checkpoint-group=#",
+            "default": "512",
+            "dynamic": true,
+            "name": "replica_checkpoint_group",
+            "range": {
+                "from": 32,
+                "to": 524280
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_replica_checkpoint_group"
+            ]
+        },
+        "replica_checkpoint_period": {
+            "cli": "--replica-checkpoint-period=#",
+            "default": "300",
+            "dynamic": true,
+            "name": "replica_checkpoint_period",
+            "range": {
+                "from": 1,
+                "to": 4294967295
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_replica_checkpoint_period"
+            ]
+        },
         "replica_compressed_protocol": {
             "cli": "--replica-compressed-protocol[={OFF|ON}]",
             "default": "OFF",
@@ -28595,6 +28656,19 @@
                 "24#sysvar_replica_exec_mode"
             ]
         },
+        "replica_load_tmpdir": {
+            "cli": "--replica-load-tmpdir=dir_name",
+            "default": "Value of --tmpdir",
+            "dynamic": false,
+            "name": "replica_load_tmpdir",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                "24#sysvar_replica_load_tmpdir"
+            ]
+        },
         "replica_max_allowed_packet": {
             "cli": "--replica-max-allowed-packet=#",
             "default": "1073741824",
@@ -28610,6 +28684,117 @@
             "type": "integer",
             "ids": [
                 "24#sysvar_replica_max_allowed_packet"
+            ]
+        },
+        "replica_net_timeout": {
+            "cli": "--replica-net-timeout=#",
+            "default": "60",
+            "dynamic": true,
+            "name": "replica_net_timeout",
+            "range": {
+                "from": 1,
+                "to": 31536000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_replica_net_timeout"
+            ]
+        },
+        "replica_parallel_type": {
+            "cli": "--replica-parallel-type=value",
+            "default": "DATABASE",
+            "dynamic": true,
+            "name": "replica_parallel_type",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "DATABASE",
+                "LOGICAL_CLOCK"
+            ],
+            "ids": [
+                "24#sysvar_replica_parallel_type"
+            ]
+        },
+        "replica_parallel_workers": {
+            "cli": "--replica-parallel-workers=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "replica_parallel_workers",
+            "range": {
+                "from": 0,
+                "to": 1024
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_replica_parallel_workers"
+            ]
+        },
+        "replica_pending_jobs_size_max": {
+            "cli": "--replica-pending-jobs-size-max=#",
+            "default": "128M",
+            "dynamic": true,
+            "name": "replica_pending_jobs_size_max",
+            "range": {
+                "from": 1024,
+                "to": 16
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_replica_pending_jobs_size_max"
+            ]
+        },
+        "replica_preserve_commit_order": {
+            "cli": "--replica-preserve-commit-order[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "replica_preserve_commit_order",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "24#sysvar_replica_preserve_commit_order"
+            ]
+        },
+        "replica_sql_verify_checksum": {
+            "cli": "--replica-sql-verify-checksum[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "replica_sql_verify_checksum",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "24#sysvar_replica_sql_verify_checksum"
+            ]
+        },
+        "replica_transaction_retries": {
+            "cli": "--replica-transaction-retries=#",
+            "default": "10",
+            "dynamic": true,
+            "name": "replica_transaction_retries",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_replica_transaction_retries"
             ]
         },
         "replica_type_conversions": {
@@ -28805,6 +28990,41 @@
             ],
             "ids": [
                 "24#sysvar_slave_rows_search_algorithms"
+            ]
+        },
+        "replica_skip_errors": {
+            "cli": "--replica-skip-errors=name",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "replica_skip_errors",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "validValues": [
+                "OFF",
+                "[list of error codes]",
+                "all",
+                "ddl_exist_errors"
+            ],
+            "ids": [
+                "24#sysvar_replica_skip_errors"
+            ]
+        },
+        "sql_replica_skip_counter": {
+            "default": "0",
+            "dynamic": true,
+            "name": "sql_replica_skip_counter",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_sql_replica_skip_counter"
             ]
         },
         "sync_source_info": {
@@ -30318,6 +30538,17 @@
             ],
             "ids": [
                 "15#sysvar_protocol_compression_algorithms"
+            ]
+        },
+        "pseudo_replica_mode": {
+            "dynamic": true,
+            "name": "pseudo_replica_mode",
+            "scope": [
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "15#sysvar_pseudo_replica_mode"
             ]
         },
         "range_optimizer_max_mem_size": {

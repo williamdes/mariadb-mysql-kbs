@@ -2471,6 +2471,15 @@
     },
     {
       "dynamic": true,
+      "id": "sysvar_pseudo_replica_mode",
+      "name": "pseudo_replica_mode",
+      "scope": [
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "dynamic": true,
       "id": "sysvar_pseudo_slave_mode",
       "name": "pseudo_slave_mode",
       "scope": [

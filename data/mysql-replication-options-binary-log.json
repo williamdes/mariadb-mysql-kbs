@@ -437,6 +437,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--log-replica-updates[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": false,
+      "id": "sysvar_log_replica_updates",
+      "name": "log_replica_updates",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--log-slave-updates[={OFF|ON}]",
       "default": "ON",
       "dynamic": false,

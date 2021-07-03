@@ -615,6 +615,28 @@
       "type": "integer"
     },
     {
+      "cli": "--rpl-semi-sync-replica-enabled[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_rpl_semi_sync_replica_enabled",
+      "name": "rpl_semi_sync_replica_enabled",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rpl-semi-sync-replica-trace-level=#",
+      "default": "32",
+      "dynamic": true,
+      "id": "sysvar_rpl_semi_sync_replica_trace_level",
+      "name": "rpl_semi_sync_replica_trace_level",
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--rpl-semi-sync-slave-enabled[={OFF|ON}]",
       "default": "OFF",
       "dynamic": true,

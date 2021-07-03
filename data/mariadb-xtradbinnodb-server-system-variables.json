@@ -1807,13 +1807,12 @@
       "name": "innodb_lock_wait_timeout",
       "range": {
         "from": 0,
-        "to": 1073741824
+        "to": 100000000
       },
       "scope": [
         "global",
         "session"
-      ],
-      "type": "integer"
+      ]
     },
     {
       "cli": "--innodb-locking-fake-changes",

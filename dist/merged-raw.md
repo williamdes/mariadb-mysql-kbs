@@ -31264,6 +31264,36 @@
 |------|----|
 |dev.mysql.com|[sysvar_rpl_read_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_rpl_read_size)|
 
+## rpl_semi_sync_replica_enabled
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_replica_enabled`|
+|Command line|`--rpl-semi-sync-replica-enabled[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_rpl_semi_sync_replica_enabled](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_rpl_semi_sync_replica_enabled)|
+
+## rpl_semi_sync_replica_trace_level
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_replica_trace_level`|
+|Command line|`--rpl-semi-sync-replica-trace-level=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`32`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_rpl_semi_sync_replica_trace_level](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_rpl_semi_sync_replica_trace_level)|
+
 ## rpl_stop_replica_timeout
 |name|value|
 |----|-----|
@@ -31437,6 +31467,19 @@
 |------|----|
 |dev.mysql.com|[sysvar_sync_source_info](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_sync_source_info)|
 
+## show_replica_auth_info
+|name|value|
+|----|-----|
+|Name|`show_replica_auth_info`|
+|Command line|`--show-replica-auth-info[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_show-replica-auth-info](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#option_mysqld_show-replica-auth-info)|
+
 ## show_slave_auth_info
 |name|value|
 |----|-----|
@@ -31491,6 +31534,98 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_rpl_semi_sync_master_wait_for_slave_count](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count)|
+
+## rpl_semi_sync_source_enabled
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_source_enabled`|
+|Command line|`--rpl-semi-sync-source-enabled[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_rpl_semi_sync_source_enabled](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_source_enabled)|
+
+## rpl_semi_sync_source_timeout
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_source_timeout`|
+|Command line|`--rpl-semi-sync-source-timeout=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`10000`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_rpl_semi_sync_source_timeout](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_source_timeout)|
+
+## rpl_semi_sync_source_trace_level
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_source_trace_level`|
+|Command line|`--rpl-semi-sync-source-trace-level=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`32`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_rpl_semi_sync_source_trace_level](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_source_trace_level)|
+
+## rpl_semi_sync_source_wait_for_replica_count
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_source_wait_for_replica_count`|
+|Command line|`--rpl-semi-sync-source-wait-for-replica-count=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`true`|
+|Range|from: `1` to: `65535`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_rpl_semi_sync_source_wait_for_replica_count](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_source_wait_for_replica_count)|
+
+## rpl_semi_sync_source_wait_no_replica
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_source_wait_no_replica`|
+|Command line|`--rpl-semi-sync-source-wait-no-replica[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_rpl_semi_sync_source_wait_no_replica](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_source_wait_no_replica)|
+
+## rpl_semi_sync_source_wait_point
+|name|value|
+|----|-----|
+|Name|`rpl_semi_sync_source_wait_point`|
+|Command line|`--rpl-semi-sync-source-wait-point=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`AFTER_SYNC`|
+|Dynamic|`true`|
+|Valid value(s)|`AFTER_SYNC`, `AFTER_COMMIT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_rpl_semi_sync_source_wait_point](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_source_wait_point)|
 
 ## server_uuid
 |name|value|

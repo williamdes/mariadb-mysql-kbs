@@ -1,6 +1,13 @@
 {
   "data": [
     {
+      "cli": "--show-replica-auth-info[={OFF|ON}]",
+      "default": "OFF",
+      "id": "option_mysqld_show-replica-auth-info",
+      "name": "show_replica_auth_info",
+      "type": "boolean"
+    },
+    {
       "cli": "--show-slave-auth-info[={OFF|ON}]",
       "default": "OFF",
       "id": "option_mysqld_show-slave-auth-info",
@@ -122,6 +129,80 @@
       "dynamic": true,
       "id": "sysvar_rpl_semi_sync_master_wait_point",
       "name": "rpl_semi_sync_master_wait_point",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "AFTER_SYNC",
+        "AFTER_COMMIT"
+      ]
+    },
+    {
+      "cli": "--rpl-semi-sync-source-enabled[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_rpl_semi_sync_source_enabled",
+      "name": "rpl_semi_sync_source_enabled",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rpl-semi-sync-source-timeout=#",
+      "default": "10000",
+      "dynamic": true,
+      "id": "sysvar_rpl_semi_sync_source_timeout",
+      "name": "rpl_semi_sync_source_timeout",
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--rpl-semi-sync-source-trace-level=#",
+      "default": "32",
+      "dynamic": true,
+      "id": "sysvar_rpl_semi_sync_source_trace_level",
+      "name": "rpl_semi_sync_source_trace_level",
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--rpl-semi-sync-source-wait-for-replica-count=#",
+      "default": "1",
+      "dynamic": true,
+      "id": "sysvar_rpl_semi_sync_source_wait_for_replica_count",
+      "name": "rpl_semi_sync_source_wait_for_replica_count",
+      "range": {
+        "from": 1,
+        "to": 65535
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--rpl-semi-sync-source-wait-no-replica[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": true,
+      "id": "sysvar_rpl_semi_sync_source_wait_no_replica",
+      "name": "rpl_semi_sync_source_wait_no_replica",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--rpl-semi-sync-source-wait-point=value",
+      "default": "AFTER_SYNC",
+      "dynamic": true,
+      "id": "sysvar_rpl_semi_sync_source_wait_point",
+      "name": "rpl_semi_sync_source_wait_point",
       "scope": [
         "global"
       ],

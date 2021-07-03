@@ -28859,6 +28859,32 @@
                 "24#sysvar_rpl_read_size"
             ]
         },
+        "rpl_semi_sync_replica_enabled": {
+            "cli": "--rpl-semi-sync-replica-enabled[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "rpl_semi_sync_replica_enabled",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "24#sysvar_rpl_semi_sync_replica_enabled"
+            ]
+        },
+        "rpl_semi_sync_replica_trace_level": {
+            "cli": "--rpl-semi-sync-replica-trace-level=#",
+            "default": "32",
+            "dynamic": true,
+            "name": "rpl_semi_sync_replica_trace_level",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "24#sysvar_rpl_semi_sync_replica_trace_level"
+            ]
+        },
         "rpl_stop_replica_timeout": {
             "cli": "--rpl-stop-replica-timeout=seconds",
             "default": "31536000",
@@ -29044,6 +29070,15 @@
                 "24#sysvar_sync_source_info"
             ]
         },
+        "show_replica_auth_info": {
+            "cli": "--show-replica-auth-info[={OFF|ON}]",
+            "default": "OFF",
+            "name": "show_replica_auth_info",
+            "type": "boolean",
+            "ids": [
+                "21#option_mysqld_show-replica-auth-info"
+            ]
+        },
         "show_slave_auth_info": {
             "cli": "--show-slave-auth-info[={OFF|ON}]",
             "default": "OFF",
@@ -29090,6 +29125,92 @@
             "type": "integer",
             "ids": [
                 "21#sysvar_rpl_semi_sync_master_wait_for_slave_count"
+            ]
+        },
+        "rpl_semi_sync_source_enabled": {
+            "cli": "--rpl-semi-sync-source-enabled[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "rpl_semi_sync_source_enabled",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "21#sysvar_rpl_semi_sync_source_enabled"
+            ]
+        },
+        "rpl_semi_sync_source_timeout": {
+            "cli": "--rpl-semi-sync-source-timeout=#",
+            "default": "10000",
+            "dynamic": true,
+            "name": "rpl_semi_sync_source_timeout",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "21#sysvar_rpl_semi_sync_source_timeout"
+            ]
+        },
+        "rpl_semi_sync_source_trace_level": {
+            "cli": "--rpl-semi-sync-source-trace-level=#",
+            "default": "32",
+            "dynamic": true,
+            "name": "rpl_semi_sync_source_trace_level",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "21#sysvar_rpl_semi_sync_source_trace_level"
+            ]
+        },
+        "rpl_semi_sync_source_wait_for_replica_count": {
+            "cli": "--rpl-semi-sync-source-wait-for-replica-count=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "rpl_semi_sync_source_wait_for_replica_count",
+            "range": {
+                "from": 1,
+                "to": 65535
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "21#sysvar_rpl_semi_sync_source_wait_for_replica_count"
+            ]
+        },
+        "rpl_semi_sync_source_wait_no_replica": {
+            "cli": "--rpl-semi-sync-source-wait-no-replica[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "rpl_semi_sync_source_wait_no_replica",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "21#sysvar_rpl_semi_sync_source_wait_no_replica"
+            ]
+        },
+        "rpl_semi_sync_source_wait_point": {
+            "cli": "--rpl-semi-sync-source-wait-point=value",
+            "default": "AFTER_SYNC",
+            "dynamic": true,
+            "name": "rpl_semi_sync_source_wait_point",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "AFTER_SYNC",
+                "AFTER_COMMIT"
+            ],
+            "ids": [
+                "21#sysvar_rpl_semi_sync_source_wait_point"
             ]
         },
         "server_uuid": {

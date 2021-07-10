@@ -14450,10 +14450,6 @@
             "default": "4096 (4KB)",
             "dynamic": true,
             "name": "query_cache_min_res_unit",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
             "scope": [
                 "global"
             ],
@@ -29068,6 +29064,24 @@
             "type": "integer",
             "ids": [
                 "24#sysvar_sync_source_info"
+            ]
+        },
+        "terminology_use_previous": {
+            "cli": "--terminology-use-previous=#",
+            "default": "NONE",
+            "dynamic": true,
+            "name": "terminology_use_previous",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "NONE",
+                "BEFORE_8_0_26"
+            ],
+            "ids": [
+                "24#sysvar_terminology_use_previous"
             ]
         },
         "show_replica_auth_info": {

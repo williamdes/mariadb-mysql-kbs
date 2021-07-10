@@ -2345,10 +2345,6 @@
       "dynamic": true,
       "id": "query_alloc_block_size",
       "name": "query_alloc_block_size",
-      "range": {
-        "from": 1024,
-        "to": 4294967295
-      },
       "scope": [
         "global",
         "session"
@@ -2376,10 +2372,6 @@
       "dynamic": true,
       "id": "query_cache_min_res_unit",
       "name": "query_cache_min_res_unit",
-      "range": {
-        "from": 0,
-        "to": 4294967295
-      },
       "scope": [
         "global"
       ],

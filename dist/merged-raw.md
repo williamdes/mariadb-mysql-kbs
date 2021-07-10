@@ -15514,7 +15514,6 @@
 |Scope|`global`|
 |Default value|`4096 (4KB)`|
 |Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31466,6 +31465,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_sync_source_info](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_sync_source_info)|
+
+## terminology_use_previous
+|name|value|
+|----|-----|
+|Name|`terminology_use_previous`|
+|Command line|`--terminology-use-previous=#`|
+|Type of variable|`enumeration`|
+|Scope|`global`, `session`|
+|Default value|`NONE`|
+|Dynamic|`true`|
+|Valid value(s)|`NONE`, `BEFORE_8_0_26`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_terminology_use_previous](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_terminology_use_previous)|
 
 ## show_replica_auth_info
 |name|value|

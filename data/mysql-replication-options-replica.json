@@ -1042,6 +1042,22 @@
         "global"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--terminology-use-previous=#",
+      "default": "NONE",
+      "dynamic": true,
+      "id": "sysvar_terminology_use_previous",
+      "name": "terminology_use_previous",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "NONE",
+        "BEFORE_8_0_26"
+      ]
     }
   ],
   "name": "replication-options-replica",

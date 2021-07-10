@@ -18629,10 +18629,6 @@
             "default": "4096 (4KB)",
             "dynamic": true,
             "name": "query_cache_min_res_unit",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
             "scope": [
                 "global"
             ],
@@ -37373,6 +37369,27 @@
             "ids": [
                 {
                     "anchor": "sysvar_sync_source_info",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html"
+                }
+            ]
+        },
+        "terminology_use_previous": {
+            "cli": "--terminology-use-previous=#",
+            "default": "NONE",
+            "dynamic": true,
+            "name": "terminology_use_previous",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "NONE",
+                "BEFORE_8_0_26"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_terminology_use_previous",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html"
                 }
             ]

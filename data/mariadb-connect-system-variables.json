@@ -144,7 +144,7 @@
     },
     {
       "cli": "--connect-json-grp-size=#",
-      "default": "10",
+      "default": "50 (>= Connect 1.7.0003), 10 (<= Connect 1.7.0002)",
       "dynamic": true,
       "id": "connect_json_grp_size",
       "name": "connect_json_grp_size",

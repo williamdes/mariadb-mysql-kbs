@@ -865,7 +865,7 @@
 |Command line|`--connect-json-grp-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`10`|
+|Default value|`50 (>= Connect 1.7.0003), 10 (<= Connect 1.7.0002)`|
 |Dynamic|`true`|
 |Range|from: `1` to: `2147483647`|
 

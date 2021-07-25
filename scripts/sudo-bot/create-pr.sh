@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh -eu
 
 ROOT="$(realpath "$(dirname $0)/../../")"
 HOME="$(realpath ~/)"
@@ -65,7 +65,7 @@ extractSecrets
 
 printf 'Starting to run sudo-bot\n'
 
-SUDO_BOT="$(yarn bin sudo-bot)"
+SUDO_BOT="$(yarn global bin sudo-bot)"
 
 printf 'Found at: %s\n' "${SUDO_BOT}"
 

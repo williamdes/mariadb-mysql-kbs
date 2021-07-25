@@ -65,12 +65,16 @@ extractSecrets
 
 printf 'Starting to run sudo-bot\n'
 
-~/.yarn/bin/sudo-bot --version
+SUDO_BOT="$(yarn bin sudo-bot)"
+
+printf 'Found at: %s\n' "${SUDO_BOT}"
+
+$SUDO_BOT --version
 
 printf 'Running...\n'
 
 # Manually expand ~ because NodeJs seems not understanding it
-~/.yarn/bin/sudo-bot --verbose \
+$SUDO_BOT --verbose \
     --target-branch='gh-pages' \
     --jwt-file="${HOME}/.secret_jwt.pem" \
     --gh-app-id='17453' \

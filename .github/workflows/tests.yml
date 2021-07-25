@@ -39,6 +39,7 @@ jobs:
     test-php:
         name: Test on php ${{ matrix.php-version }} and ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
+        continue-on-error: ${{ matrix.experimental }}
         strategy:
             matrix:
                 php-version: ["7.1", "7.2", "7.3", "7.4", "8.0"]

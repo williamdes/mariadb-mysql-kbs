@@ -29877,6 +29877,36 @@
 |------|----|
 |dev.mysql.com|[sysvar_performance_schema_show_processlist](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_show_processlist)|
 
+## authentication_kerberos_service_key_tab
+|name|value|
+|----|-----|
+|Name|`authentication_kerberos_service_key_tab`|
+|Command line|`--authentication-kerberos-service-key-tab=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Default value|`datadir/mysql.keytab`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_authentication_kerberos_service_key_tab](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html#sysvar_authentication_kerberos_service_key_tab)|
+
+## authentication_kerberos_service_principal
+|name|value|
+|----|-----|
+|Name|`authentication_kerberos_service_principal`|
+|Command line|`--authentication-kerberos-service-principal=name`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`mysql/host_name@realm_name`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_authentication_kerberos_service_principal](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html#sysvar_authentication_kerberos_service_principal)|
+
 ## authentication_ldap_sasl_auth_method_name
 |name|value|
 |----|-----|

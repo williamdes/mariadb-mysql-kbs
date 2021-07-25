@@ -35491,6 +35491,38 @@
                 }
             ]
         },
+        "authentication_kerberos_service_key_tab": {
+            "cli": "--authentication-kerberos-service-key-tab=file_name",
+            "default": "datadir/mysql.keytab",
+            "dynamic": false,
+            "name": "authentication_kerberos_service_key_tab",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                {
+                    "anchor": "sysvar_authentication_kerberos_service_key_tab",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html"
+                }
+            ]
+        },
+        "authentication_kerberos_service_principal": {
+            "cli": "--authentication-kerberos-service-principal=name",
+            "default": "mysql/host_name@realm_name",
+            "dynamic": true,
+            "name": "authentication_kerberos_service_principal",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sysvar_authentication_kerberos_service_principal",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html"
+                }
+            ]
+        },
         "authentication_ldap_sasl_auth_method_name": {
             "cli": "--authentication-ldap-sasl-auth-method-name=value",
             "default": "SCRAM-SHA-1",

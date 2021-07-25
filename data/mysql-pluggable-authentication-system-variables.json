@@ -1,6 +1,28 @@
 {
   "data": [
     {
+      "cli": "--authentication-kerberos-service-key-tab=file_name",
+      "default": "datadir/mysql.keytab",
+      "dynamic": false,
+      "id": "sysvar_authentication_kerberos_service_key_tab",
+      "name": "authentication_kerberos_service_key_tab",
+      "scope": [
+        "global"
+      ],
+      "type": "file name"
+    },
+    {
+      "cli": "--authentication-kerberos-service-principal=name",
+      "default": "mysql/host_name@realm_name",
+      "dynamic": true,
+      "id": "sysvar_authentication_kerberos_service_principal",
+      "name": "authentication_kerberos_service_principal",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--authentication-ldap-sasl-auth-method-name=value",
       "default": "SCRAM-SHA-1",
       "dynamic": true,

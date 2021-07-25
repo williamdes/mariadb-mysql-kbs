@@ -67,6 +67,13 @@ printf 'Starting to run sudo-bot\n'
 
 SUDO_BOT="$(yarn global bin sudo-bot)"
 
+# To fix yarn giving the value "/usr/local/bin"
+if [ ! -f "${SUDO_BOT}" ]; then
+    if [ -f "${SUDO_BOT}/sudo-bot" ]; then
+        SUDO_BOT="${SUDO_BOT}/sudo-bot"
+    fi
+fi
+
 printf 'Found at: %s\n' "${SUDO_BOT}"
 
 $SUDO_BOT --version

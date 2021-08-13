@@ -5,6 +5,8 @@ on:
             - closed
 jobs:
     lock:
+        environment:
+            name: sudo-bot-workflows
         runs-on: ubuntu-latest
         steps:
             - name: lock pull request

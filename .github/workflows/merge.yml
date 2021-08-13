@@ -5,6 +5,8 @@ on:
             - labeled
 jobs:
     merge:
+        environment:
+            name: sudo-bot-workflows
         runs-on: ubuntu-latest
         steps:
             - name: merge pull request

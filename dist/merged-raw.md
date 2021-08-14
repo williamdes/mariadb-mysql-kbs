@@ -14296,8 +14296,9 @@
 |Command line|`--log-disabled_statements=value`|
 |Type of variable|`set`|
 |Scope|`global`, `session`|
-|Default value|`(empty string)`|
+|Default value|`sp`|
 |Dynamic|`false`|
+|Valid value(s)|`slave`, `sp`|
 
 ### Documentation(s)
 |source|anchor name|

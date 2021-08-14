@@ -1739,7 +1739,7 @@
     },
     {
       "cli": "--innodb-io-capacity-max=#",
-      "default": "2000",
+      "default": "2000 or twice innodb_io_capacity, whichever is higher.",
       "dynamic": true,
       "id": "innodb_io_capacity_max",
       "name": "innodb_io_capacity_max",

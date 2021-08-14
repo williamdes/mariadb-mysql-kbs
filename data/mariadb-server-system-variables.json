@@ -92,6 +92,7 @@
     },
     {
       "cli": "--bind-address=addr",
+      "default": "(Empty string)",
       "dynamic": false,
       "id": "bind_address",
       "name": "bind_address",
@@ -1250,7 +1251,7 @@
     },
     {
       "cli": "--log-disabled_statements=value",
-      "default": "(empty string)",
+      "default": "sp",
       "dynamic": false,
       "id": "log_disabled_statements",
       "name": "log_disabled_statements",
@@ -1258,7 +1259,11 @@
         "global",
         "session"
       ],
-      "type": "set"
+      "type": "set",
+      "validValues": [
+        "slave",
+        "sp"
+      ]
     },
     {
       "cli": "--log-error[=name], --skip-log-error",

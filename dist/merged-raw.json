@@ -16995,7 +16995,7 @@
         },
         "log_disabled_statements": {
             "cli": "--log-disabled_statements=value",
-            "default": "(empty string)",
+            "default": "sp",
             "dynamic": false,
             "name": "log_disabled_statements",
             "scope": [
@@ -17003,6 +17003,10 @@
                 "session"
             ],
             "type": "set",
+            "validValues": [
+                "slave",
+                "sp"
+            ],
             "ids": [
                 {
                     "anchor": "log_disabled_statements",

@@ -6248,7 +6248,7 @@
         },
         "rocksdb_supported_compression_types": {
             "cli": "--rocksdb-supported-compression-types=value",
-            "default": "Snappy,Zlib",
+            "default": "Snappy,Zlib,ZSTDNotFinal",
             "dynamic": false,
             "name": "rocksdb_supported_compression_types",
             "scope": [

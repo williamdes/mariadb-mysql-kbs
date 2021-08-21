@@ -5430,7 +5430,7 @@
 |Command line|`--rocksdb-supported-compression-types=value`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`Snappy,Zlib`|
+|Default value|`Snappy,Zlib,ZSTDNotFinal`|
 |Dynamic|`false`|
 
 ### Documentation(s)

@@ -1109,8 +1109,8 @@
       "type": "integer"
     },
     {
-      "id": "innodb_row_lock_time_waits",
-      "name": "Innodb_row_lock_time_waits",
+      "id": "innodb_row_lock_waits",
+      "name": "Innodb_row_lock_waits",
       "scope": [
         "global"
       ],

@@ -27920,15 +27920,15 @@
                 }
             ]
         },
-        "Innodb_row_lock_time_waits": {
-            "name": "Innodb_row_lock_time_waits",
+        "Innodb_row_lock_waits": {
+            "name": "Innodb_row_lock_waits",
             "scope": [
                 "global"
             ],
             "type": "integer",
             "ids": [
                 {
-                    "anchor": "innodb_row_lock_time_waits",
+                    "anchor": "innodb_row_lock_waits",
                     "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/"
                 }
             ]
@@ -33659,6 +33659,27 @@
                 }
             ]
         },
+        "innodb_ddl_buffer_size": {
+            "cli": "--innodb-ddl-buffer-size=#",
+            "default": "1048576",
+            "dynamic": true,
+            "name": "innodb_ddl_buffer_size",
+            "range": {
+                "from": 65536,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_ddl_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
         "innodb_ddl_log_crash_reset_debug": {
             "cli": "--innodb-ddl-log-crash-reset-debug[={OFF|ON}]",
             "default": "OFF",
@@ -33671,6 +33692,26 @@
             "ids": [
                 {
                     "anchor": "sysvar_innodb_ddl_log_crash_reset_debug",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
+        "innodb_ddl_threads": {
+            "cli": "--innodb-ddl-threads=#",
+            "default": "4",
+            "dynamic": true,
+            "name": "innodb_ddl_threads",
+            "range": {
+                "from": 1,
+                "to": 64
+            },
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_ddl_threads",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
                 }
             ]

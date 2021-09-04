@@ -23712,17 +23712,17 @@
 |------|----|
 |mariadb.com|[innodb_row_lock_time_max](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_row_lock_time_max)|
 
-## Innodb_row_lock_time_waits
+## Innodb_row_lock_waits
 |name|value|
 |----|-----|
-|Name|`Innodb_row_lock_time_waits`|
+|Name|`Innodb_row_lock_waits`|
 |Type of variable|`integer`|
 |Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[innodb_row_lock_time_waits](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_row_lock_time_waits)|
+|mariadb.com|[innodb_row_lock_waits](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/#innodb_row_lock_waits)|
 
 ## Innodb_rows_deleted
 |name|value|
@@ -28304,6 +28304,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_compress_debug](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_compress_debug)|
 
+## innodb_ddl_buffer_size
+|name|value|
+|----|-----|
+|Name|`innodb_ddl_buffer_size`|
+|Command line|`--innodb-ddl-buffer-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`1048576`|
+|Dynamic|`true`|
+|Range|from: `65536` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_ddl_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ddl_buffer_size)|
+
 ## innodb_ddl_log_crash_reset_debug
 |name|value|
 |----|-----|
@@ -28318,6 +28334,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_innodb_ddl_log_crash_reset_debug](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ddl_log_crash_reset_debug)|
+
+## innodb_ddl_threads
+|name|value|
+|----|-----|
+|Name|`innodb_ddl_threads`|
+|Command line|`--innodb-ddl-threads=#`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Default value|`4`|
+|Dynamic|`true`|
+|Range|from: `1` to: `64`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_ddl_threads](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ddl_threads)|
 
 ## innodb_dedicated_server
 |name|value|

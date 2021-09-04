@@ -21605,14 +21605,14 @@
                 "40#innodb_row_lock_time_max"
             ]
         },
-        "Innodb_row_lock_time_waits": {
-            "name": "Innodb_row_lock_time_waits",
+        "Innodb_row_lock_waits": {
+            "name": "Innodb_row_lock_waits",
             "scope": [
                 "global"
             ],
             "type": "integer",
             "ids": [
-                "40#innodb_row_lock_time_waits"
+                "40#innodb_row_lock_waits"
             ]
         },
         "Innodb_rows_deleted": {
@@ -26063,6 +26063,24 @@
                 "42#sysvar_innodb_compress_debug"
             ]
         },
+        "innodb_ddl_buffer_size": {
+            "cli": "--innodb-ddl-buffer-size=#",
+            "default": "1048576",
+            "dynamic": true,
+            "name": "innodb_ddl_buffer_size",
+            "range": {
+                "from": 65536,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "42#sysvar_innodb_ddl_buffer_size"
+            ]
+        },
         "innodb_ddl_log_crash_reset_debug": {
             "cli": "--innodb-ddl-log-crash-reset-debug[={OFF|ON}]",
             "default": "OFF",
@@ -26074,6 +26092,23 @@
             "type": "boolean",
             "ids": [
                 "42#sysvar_innodb_ddl_log_crash_reset_debug"
+            ]
+        },
+        "innodb_ddl_threads": {
+            "cli": "--innodb-ddl-threads=#",
+            "default": "4",
+            "dynamic": true,
+            "name": "innodb_ddl_threads",
+            "range": {
+                "from": 1,
+                "to": 64
+            },
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "42#sysvar_innodb_ddl_threads"
             ]
         },
         "innodb_dedicated_server": {

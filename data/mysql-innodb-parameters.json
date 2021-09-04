@@ -601,6 +601,22 @@
       "type": "directory name"
     },
     {
+      "cli": "--innodb-ddl-buffer-size=#",
+      "default": "1048576",
+      "dynamic": true,
+      "id": "sysvar_innodb_ddl_buffer_size",
+      "name": "innodb_ddl_buffer_size",
+      "range": {
+        "from": 65536,
+        "to": 4294967295
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--innodb-ddl-log-crash-reset-debug[={OFF|ON}]",
       "default": "OFF",
       "dynamic": true,
@@ -610,6 +626,21 @@
         "global"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--innodb-ddl-threads=#",
+      "default": "4",
+      "dynamic": true,
+      "id": "sysvar_innodb_ddl_threads",
+      "name": "innodb_ddl_threads",
+      "range": {
+        "from": 1,
+        "to": 64
+      },
+      "scope": [
+        "session"
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-deadlock-detect[={OFF|ON}]",

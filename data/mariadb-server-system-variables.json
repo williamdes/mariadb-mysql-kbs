@@ -910,7 +910,10 @@
       "type": "enumeration",
       "validValues": [
         "SINGLE_PREC_HB",
-        "DOUBLE_PREC_HB"
+        "DOUBLE_PREC_HB",
+        "SINGLE_PREC_HB",
+        "DOUBLE_PREC_HB",
+        "JSON_HB"
       ]
     },
     {
@@ -1427,7 +1430,7 @@
     },
     {
       "cli": "--long-query-time=#",
-      "default": "10.000000 >= MariaDB 10.1.13, 10 <= MariaDB 10.1.12",
+      "default": "10.000000",
       "dynamic": true,
       "id": "long_query_time",
       "name": "long_query_time",
@@ -1496,7 +1499,7 @@
     },
     {
       "cli": "--max-connect-errors=#",
-      "default": "100 (from MariaDB 10.0), 10 (before MariaDB 10.0)",
+      "default": "100",
       "dynamic": true,
       "id": "max_connect_errors",
       "name": "max_connect_errors",
@@ -2094,6 +2097,7 @@
       "validValues": [
         "condition_pushdown_for_derived={on|off}",
         "condition_pushdown_for_subquery={on|off}",
+        "condition_pushdown_from_having={on|off}",
         "default",
         "derived_merge={on|off}",
         "derived_with_keys={on|off}",
@@ -3143,7 +3147,7 @@
     },
     {
       "cli": "--thread-stack=#",
-      "default": "299008 (MariaDB 10.2.5), 297984 (MariaDB 10.2.1), 296960 (MariaDB 10.2.0), 295936 (MariaDB 10.1), 294912 (<= MariaDB 10.0)",
+      "default": "299008 (MariaDB 10.2.5), 297984 (MariaDB 10.2.1), 296960 (MariaDB 10.2.0), 295936 (MariaDB 10.1)",
       "dynamic": false,
       "id": "thread_stack",
       "name": "thread_stack",

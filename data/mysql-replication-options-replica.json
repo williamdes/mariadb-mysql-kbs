@@ -435,7 +435,6 @@
     },
     {
       "cli": "--replica-parallel-type=value",
-      "default": "DATABASE",
       "dynamic": true,
       "id": "sysvar_replica_parallel_type",
       "name": "replica_parallel_type",
@@ -450,7 +449,6 @@
     },
     {
       "cli": "--replica-parallel-workers=#",
-      "default": "0",
       "dynamic": true,
       "id": "sysvar_replica_parallel_workers",
       "name": "replica_parallel_workers",
@@ -480,7 +478,6 @@
     },
     {
       "cli": "--replica-preserve-commit-order[={OFF|ON}]",
-      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_replica_preserve_commit_order",
       "name": "replica_preserve_commit_order",
@@ -809,7 +806,6 @@
     },
     {
       "cli": "--slave-parallel-type=value",
-      "default": "DATABASE",
       "dynamic": true,
       "id": "sysvar_slave_parallel_type",
       "name": "slave_parallel_type",
@@ -824,7 +820,6 @@
     },
     {
       "cli": "--slave-parallel-workers=#",
-      "default": "0",
       "dynamic": true,
       "id": "sysvar_slave_parallel_workers",
       "name": "slave_parallel_workers",
@@ -853,7 +848,6 @@
     },
     {
       "cli": "--slave-preserve-commit-order[={OFF|ON}]",
-      "default": "OFF",
       "dynamic": true,
       "id": "sysvar_slave_preserve_commit_order",
       "name": "slave_preserve_commit_order",

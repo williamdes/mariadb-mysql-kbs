@@ -7078,7 +7078,6 @@
         },
         "slave_parallel_workers": {
             "cli": "--slave-parallel-workers=#",
-            "default": "0",
             "dynamic": true,
             "name": "slave_parallel_workers",
             "range": {
@@ -12788,7 +12787,10 @@
             "type": "enumeration",
             "validValues": [
                 "SINGLE_PREC_HB",
-                "DOUBLE_PREC_HB"
+                "DOUBLE_PREC_HB",
+                "SINGLE_PREC_HB",
+                "DOUBLE_PREC_HB",
+                "JSON_HB"
             ],
             "ids": [
                 "30#histogram_type"
@@ -28766,7 +28768,6 @@
         },
         "replica_parallel_type": {
             "cli": "--replica-parallel-type=value",
-            "default": "DATABASE",
             "dynamic": true,
             "name": "replica_parallel_type",
             "scope": [
@@ -28783,7 +28784,6 @@
         },
         "replica_parallel_workers": {
             "cli": "--replica-parallel-workers=#",
-            "default": "0",
             "dynamic": true,
             "name": "replica_parallel_workers",
             "range": {
@@ -28817,7 +28817,6 @@
         },
         "replica_preserve_commit_order": {
             "cli": "--replica-preserve-commit-order[={OFF|ON}]",
-            "default": "OFF",
             "dynamic": true,
             "name": "replica_preserve_commit_order",
             "scope": [
@@ -29016,7 +29015,6 @@
         },
         "slave_parallel_type": {
             "cli": "--slave-parallel-type=value",
-            "default": "DATABASE",
             "dynamic": true,
             "name": "slave_parallel_type",
             "scope": [
@@ -29049,7 +29047,6 @@
         },
         "slave_preserve_commit_order": {
             "cli": "--slave-preserve-commit-order[={OFF|ON}]",
-            "default": "OFF",
             "dynamic": true,
             "name": "slave_preserve_commit_order",
             "scope": [

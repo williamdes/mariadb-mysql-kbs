@@ -7554,7 +7554,6 @@
 |Command line|`--slave-parallel-workers=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1024`|
 
@@ -13849,7 +13848,7 @@
 |Scope|`global`, `session`|
 |Default value|`DOUBLE_PREC_HB (>= MariaDB 10.4.3), SINGLE_PREC_HB(<= MariaDB 10.4.2)`|
 |Dynamic|`true`|
-|Valid value(s)|`SINGLE_PREC_HB`, `DOUBLE_PREC_HB`|
+|Valid value(s)|`SINGLE_PREC_HB`, `DOUBLE_PREC_HB`, `SINGLE_PREC_HB`, `DOUBLE_PREC_HB`, `JSON_HB`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31177,7 +31176,6 @@
 |Command line|`--replica-parallel-type=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`DATABASE`|
 |Dynamic|`true`|
 |Valid value(s)|`DATABASE`, `LOGICAL_CLOCK`|
 
@@ -31193,7 +31191,6 @@
 |Command line|`--replica-parallel-workers=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1024`|
 
@@ -31225,7 +31222,6 @@
 |Command line|`--replica-preserve-commit-order[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -31427,7 +31423,6 @@
 |Command line|`--slave-parallel-type=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`DATABASE`|
 |Dynamic|`true`|
 |Valid value(s)|`DATABASE`, `LOGICAL_CLOCK`|
 
@@ -31458,7 +31453,6 @@
 |Command line|`--slave-preserve-commit-order[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)

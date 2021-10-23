@@ -27594,6 +27594,19 @@
                 "20#sysvar_performance_schema_show_processlist"
             ]
         },
+        "authentication_fido_rp_id": {
+            "cli": "--authentication-fido-rp-id=value",
+            "default": "MySQL",
+            "dynamic": true,
+            "name": "authentication_fido_rp_id",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "46#sysvar_authentication_fido_rp_id"
+            ]
+        },
         "authentication_kerberos_service_key_tab": {
             "cli": "--authentication-kerberos-service-key-tab=file_name",
             "default": "datadir/mysql.keytab",
@@ -27604,7 +27617,7 @@
             ],
             "type": "file name",
             "ids": [
-                "46#sysvar_authentication_kerberos_service_key_tab"
+                "45#sysvar_authentication_kerberos_service_key_tab"
             ]
         },
         "authentication_kerberos_service_principal": {
@@ -29935,6 +29948,19 @@
                 "15#sysvar_admin_tls_version"
             ]
         },
+        "authentication_policy": {
+            "cli": "--authentication-policy=value",
+            "default": "*,,",
+            "dynamic": true,
+            "name": "authentication_policy",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "15#sysvar_authentication_policy"
+            ]
+        },
         "authentication_windows_log_level": {
             "cli": "--authentication-windows-log-level=#",
             "default": "2",
@@ -30074,6 +30100,40 @@
                 "15#sysvar_check_proxy_users"
             ]
         },
+        "connection_memory_chunk_size": {
+            "cli": "--connection-memory-chunk-size=#",
+            "default": "8912",
+            "dynamic": true,
+            "name": "connection_memory_chunk_size",
+            "range": {
+                "from": 0,
+                "to": 536870912
+            },
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "15#sysvar_connection_memory_chunk_size"
+            ]
+        },
+        "connection_memory_limit": {
+            "cli": "--connection-memory-limit=#",
+            "default": "18446744073709551615",
+            "dynamic": true,
+            "name": "connection_memory_limit",
+            "range": {
+                "from": 2097152,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "15#sysvar_connection_memory_limit"
+            ]
+        },
         "create_admin_listener_thread": {
             "cli": "--create-admin-listener-thread[={OFF|ON}]",
             "default": "OFF",
@@ -30209,6 +30269,36 @@
             "type": "integer",
             "ids": [
                 "15#sysvar_generated_random_password_length"
+            ]
+        },
+        "global_connection_memory_limit": {
+            "cli": "--global-connection-memory-limit=#",
+            "default": "18446744073709551615",
+            "dynamic": true,
+            "name": "global_connection_memory_limit",
+            "range": {
+                "from": 2097152,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "15#sysvar_global_connection_memory_limit"
+            ]
+        },
+        "global_connection_memory_tracking": {
+            "cli": "--global-connection-memory-tracking={TRUE|FALSE}",
+            "default": "FALSE",
+            "dynamic": true,
+            "name": "global_connection_memory_tracking",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "15#sysvar_global_connection_memory_tracking"
             ]
         },
         "have_statement_timeout": {

@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "cli": "--authentication-fido-rp-id=value",
+      "default": "MySQL",
+      "dynamic": true,
+      "id": "sysvar_authentication_fido_rp_id",
+      "name": "authentication_fido_rp_id",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--authentication-kerberos-service-key-tab=file_name",
       "default": "datadir/mysql.keytab",
       "dynamic": false,

@@ -29909,6 +29909,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_performance_schema_show_processlist](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_show_processlist)|
 
+## authentication_fido_rp_id
+|name|value|
+|----|-----|
+|Name|`authentication_fido_rp_id`|
+|Command line|`--authentication-fido-rp-id=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`MySQL`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_authentication_fido_rp_id](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html#sysvar_authentication_fido_rp_id)|
+
 ## authentication_kerberos_service_key_tab
 |name|value|
 |----|-----|
@@ -32543,6 +32558,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_admin_tls_version](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_admin_tls_version)|
 
+## authentication_policy
+|name|value|
+|----|-----|
+|Name|`authentication_policy`|
+|Command line|`--authentication-policy=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`*,,`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_authentication_policy](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_authentication_policy)|
+
 ## authentication_windows_log_level
 |name|value|
 |----|-----|
@@ -32695,6 +32725,38 @@
 |------|----|
 |dev.mysql.com|[sysvar_check_proxy_users](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_check_proxy_users)|
 
+## connection_memory_chunk_size
+|name|value|
+|----|-----|
+|Name|`connection_memory_chunk_size`|
+|Command line|`--connection-memory-chunk-size=#`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Default value|`8912`|
+|Dynamic|`true`|
+|Range|from: `0` to: `536870912`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_connection_memory_chunk_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_connection_memory_chunk_size)|
+
+## connection_memory_limit
+|name|value|
+|----|-----|
+|Name|`connection_memory_limit`|
+|Command line|`--connection-memory-limit=#`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Default value|`18446744073709551615`|
+|Dynamic|`true`|
+|Range|from: `2097152` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_connection_memory_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_connection_memory_limit)|
+
 ## create_admin_listener_thread
 |name|value|
 |----|-----|
@@ -32831,6 +32893,37 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_generated_random_password_length](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_generated_random_password_length)|
+
+## global_connection_memory_limit
+|name|value|
+|----|-----|
+|Name|`global_connection_memory_limit`|
+|Command line|`--global-connection-memory-limit=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`18446744073709551615`|
+|Dynamic|`true`|
+|Range|from: `2097152` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_global_connection_memory_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_global_connection_memory_limit)|
+
+## global_connection_memory_tracking
+|name|value|
+|----|-----|
+|Name|`global_connection_memory_tracking`|
+|Command line|`--global-connection-memory-tracking={TRUE|FALSE}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`FALSE`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_global_connection_memory_tracking](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_global_connection_memory_tracking)|
 
 ## have_statement_timeout
 |name|value|

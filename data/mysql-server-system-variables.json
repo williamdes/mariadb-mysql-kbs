@@ -136,6 +136,17 @@
       "type": "string"
     },
     {
+      "cli": "--authentication-policy=value",
+      "default": "*,,",
+      "dynamic": true,
+      "id": "sysvar_authentication_policy",
+      "name": "authentication_policy",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--authentication-windows-log-level=#",
       "default": "2",
       "dynamic": false,
@@ -513,6 +524,36 @@
       },
       "scope": [
         "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--connection-memory-chunk-size=#",
+      "default": "8912",
+      "dynamic": true,
+      "id": "sysvar_connection_memory_chunk_size",
+      "name": "connection_memory_chunk_size",
+      "range": {
+        "from": 0,
+        "to": 536870912
+      },
+      "scope": [
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--connection-memory-limit=#",
+      "default": "18446744073709551615",
+      "dynamic": true,
+      "id": "sysvar_connection_memory_limit",
+      "name": "connection_memory_limit",
+      "range": {
+        "from": 2097152,
+        "to": 18446744073709552000
+      },
+      "scope": [
+        "session"
       ],
       "type": "integer"
     },
@@ -985,6 +1026,32 @@
         "session"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--global-connection-memory-limit=#",
+      "default": "18446744073709551615",
+      "dynamic": true,
+      "id": "sysvar_global_connection_memory_limit",
+      "name": "global_connection_memory_limit",
+      "range": {
+        "from": 2097152,
+        "to": 18446744073709552000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--global-connection-memory-tracking={TRUE|FALSE}",
+      "default": "FALSE",
+      "dynamic": true,
+      "id": "sysvar_global_connection_memory_tracking",
+      "name": "global_connection_memory_tracking",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--group-concat-max-len=#",

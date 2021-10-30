@@ -38705,6 +38705,7 @@
                 "to": 536870912
             },
             "scope": [
+                "global",
                 "session"
             ],
             "type": "integer",
@@ -38725,6 +38726,7 @@
                 "to": 1.8446744073709552e+19
             },
             "scope": [
+                "global",
                 "session"
             ],
             "type": "integer",
@@ -38925,7 +38927,8 @@
             "dynamic": true,
             "name": "global_connection_memory_tracking",
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "boolean",
             "ids": [

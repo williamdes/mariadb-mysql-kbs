@@ -538,6 +538,7 @@
         "to": 536870912
       },
       "scope": [
+        "global",
         "session"
       ],
       "type": "integer"
@@ -553,6 +554,7 @@
         "to": 18446744073709552000
       },
       "scope": [
+        "global",
         "session"
       ],
       "type": "integer"
@@ -1049,7 +1051,8 @@
       "id": "sysvar_global_connection_memory_tracking",
       "name": "global_connection_memory_tracking",
       "scope": [
-        "global"
+        "global",
+        "session"
       ],
       "type": "boolean"
     },

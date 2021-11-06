@@ -32731,7 +32731,7 @@
 |Name|`connection_memory_chunk_size`|
 |Command line|`--connection-memory-chunk-size=#`|
 |Type of variable|`integer`|
-|Scope|`session`|
+|Scope|`global`, `session`|
 |Default value|`8912`|
 |Dynamic|`true`|
 |Range|from: `0` to: `536870912`|
@@ -32747,7 +32747,7 @@
 |Name|`connection_memory_limit`|
 |Command line|`--connection-memory-limit=#`|
 |Type of variable|`integer`|
-|Scope|`session`|
+|Scope|`global`, `session`|
 |Default value|`18446744073709551615`|
 |Dynamic|`true`|
 |Range|from: `2097152` to: `1.844674407371E+19`|
@@ -32916,7 +32916,7 @@
 |Name|`global_connection_memory_tracking`|
 |Command line|`--global-connection-memory-tracking={TRUE|FALSE}`|
 |Type of variable|`boolean`|
-|Scope|`global`|
+|Scope|`global`, `session`|
 |Default value|`FALSE`|
 |Dynamic|`true`|
 

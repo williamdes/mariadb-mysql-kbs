@@ -588,5 +588,23 @@ module.exports = function () {
                 done();
             });
         });
+        test('test case 8', function (done) {
+            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mariadb_test_case_8.html'));
+            MariaDB.parsePage($, function (resultData) {
+                expect(resultData).to.deep.equal([
+                    {
+                        cli: '--tls-version=value',
+                        default: 'TLSv1.1,TLSv1.2,TLSv1.3',
+                        dynamic: false,
+                        id: 'tls_version',
+                        name: 'tls_version',
+                        scope: ['global'],
+                        type: 'enumeration',
+                        validValues: ['TLSv1.0', 'TLSv1.1', 'TLSv1.2', 'TLSv1.3'],
+                    },
+                ]);
+                done();
+            });
+        });
     });
 };

@@ -1,0 +1,34 @@
+<html>
+
+<body>
+    <div>
+        <h4 class="anchored_heading" id="tls_version"><code>tls_version</code></h4>
+        <ul start="1">
+            <li><strong>Description:</strong> This system variable accepts a comma-separated list (with no whitespaces)
+                of TLS protocol versions. A TLS protocol version will only be enabled if it is present in this list. All
+                other TLS protocol versions will not be permitted.
+                <ul start="1">
+                    <li>See <a href="/kb/en/secure-connections-overview/#tls-protocol-versions">Secure Connections
+                            Overview: TLS Protocol Versions</a> for more information.
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Commandline:</strong> <code>--tls-version=value</code>
+            </li>
+            <li><strong>Scope:</strong> Global
+            </li>
+            <li><strong>Dynamic:</strong> No
+            </li>
+            <li><strong>Data Type:</strong> <code>enumerated</code>
+            </li>
+            <li><strong>Default Value:</strong> TLSv1.1,TLSv1.2,TLSv1.3
+            </li>
+            <li><strong>Valid Values:</strong> TLSv1.0,TLSv1.1,TLSv1.2,TLSv1.3
+            </li>
+            <li><strong>Introduced:</strong> <a href="/kb/en/mariadb-1046-release-notes/">MariaDB 10.4.6</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -84,10 +84,15 @@ const createDoc = function ($, element) {
                     );
                     break;
                 case 'valid values:':
-                    doc.validValues = valueKey
-                        .find('code')
-                        .get()
-                        .map((el) => $(el).text());
+                    if (valueKey.has('code').length > 0) {
+                        doc.validValues = valueKey
+                            .find('code')
+                            .get()
+                            .map((el) => $(el).text());
+                    }
+                    if (valueKey.has('code').length === 0) {
+                        doc.validValues = value.trim().split(',');
+                    }
                     break;
                 case 'range:':
                     doc.range = valueKey

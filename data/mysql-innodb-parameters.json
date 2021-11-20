@@ -1577,12 +1577,11 @@
     {
       "cli": "--innodb-open-files=#",
       "default": "(-1 signifies autosizing; do not use -1)",
-      "dynamic": false,
       "id": "sysvar_innodb_open_files",
       "name": "innodb_open_files",
       "range": {
         "from": 10,
-        "to": 4294967295
+        "to": 2147483647
       },
       "scope": [
         "global"
@@ -1969,6 +1968,10 @@
       "dynamic": true,
       "id": "sysvar_innodb_stats_persistent_sample_pages",
       "name": "innodb_stats_persistent_sample_pages",
+      "range": {
+        "from": 1,
+        "to": 18446744073709552000
+      },
       "scope": [
         "global"
       ],

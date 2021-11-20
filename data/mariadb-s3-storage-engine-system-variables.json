@@ -47,7 +47,10 @@
         "global"
       ],
       "type": "boolean",
-      "validValues": []
+      "validValues": [
+        "0",
+        "1"
+      ]
     },
     {
       "cli": "--s3-host-name=val",

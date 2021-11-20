@@ -100,7 +100,11 @@
         "global"
       ],
       "type": "string",
-      "validValues": []
+      "validValues": [
+        "Host name",
+        "IPv4",
+        "IPv6"
+      ]
     },
     {
       "cli": "--bulk-insert-buffer-size=#",

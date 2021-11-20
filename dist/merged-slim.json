@@ -7781,7 +7781,10 @@
                 "global"
             ],
             "type": "boolean",
-            "validValues": [],
+            "validValues": [
+                "0",
+                "1"
+            ],
             "ids": [
                 "26#s3_debug"
             ]
@@ -22311,7 +22314,10 @@
                 "global"
             ],
             "type": "string",
-            "validValues": [],
+            "validValues": [
+                "\"\"",
+                "\"uncompressed\""
+            ],
             "ids": [
                 "41#innodb_buffer_pool_evict"
             ]
@@ -24501,11 +24507,9 @@
         "innodb_open_files": {
             "cli": "--innodb-open-files=#",
             "default": "(-1 signifies autosizing; do not use -1)",
-            "dynamic": false,
             "name": "innodb_open_files",
             "range": {
-                "from": 10,
-                "to": 4294967295
+                "from": 10
             },
             "scope": [
                 "global"
@@ -25087,6 +25091,10 @@
             "default": "20",
             "dynamic": true,
             "name": "innodb_stats_persistent_sample_pages",
+            "range": {
+                "from": 1,
+                "to": 1.8446744073709552e+19
+            },
             "scope": [
                 "global"
             ],
@@ -30110,6 +30118,7 @@
                 "to": 536870912
             },
             "scope": [
+                "global",
                 "session"
             ],
             "type": "integer",
@@ -30127,6 +30136,7 @@
                 "to": 1.8446744073709552e+19
             },
             "scope": [
+                "global",
                 "session"
             ],
             "type": "integer",
@@ -30294,7 +30304,8 @@
             "dynamic": true,
             "name": "global_connection_memory_tracking",
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "boolean",
             "ids": [

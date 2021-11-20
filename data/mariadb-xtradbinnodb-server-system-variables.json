@@ -388,7 +388,10 @@
         "global"
       ],
       "type": "string",
-      "validValues": []
+      "validValues": [
+        "\"\"",
+        "\"uncompressed\""
+      ]
     },
     {
       "cli": "--innodb-buffer-pool-filename=file",

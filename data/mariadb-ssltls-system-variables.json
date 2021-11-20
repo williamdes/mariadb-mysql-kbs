@@ -92,7 +92,7 @@
       "type": "string"
     },
     {
-      "cli": "--tls-version=name",
+      "cli": "--tls-version=value",
       "default": "TLSv1.1,TLSv1.2,TLSv1.3",
       "dynamic": false,
       "id": "tls_version",

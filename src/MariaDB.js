@@ -91,7 +91,11 @@ const createDoc = function ($, element) {
                             .map((el) => $(el).text());
                     }
                     if (valueKey.has('code').length === 0) {
-                        doc.validValues = value.trim().split(',');
+                        doc.validValues = []; // Default if the value is non detected further
+                        let cleanValue = cleaner.cleanTextValidValues(value.trim());
+                        if (cleanValue !== '') {
+                            doc.validValues = cleanValue.split(',').map((el) => el.trim());
+                        }
                     }
                     break;
                 case 'range:':

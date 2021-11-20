@@ -132,8 +132,27 @@ const cleanTextDefault = function (defaultTextValue) {
     return defaultTextValue;
 };
 
+/**
+ * Clean text of a valid values list
+ * @param {String} validValuesText The valid values text
+ * @returns {String} The same or an alternative text
+ */
+const cleanTextValidValues = function (validValuesText) {
+    if (validValuesText.match(/^See .* for the full list\.$/)) {
+        validValuesText = '';
+    }
+    if (validValuesText.match(/^.* or .*$/)) {
+        validValuesText = validValuesText.replace(' or ', ',');
+    }
+    if (validValuesText === 'See description') {
+        validValuesText = '';
+    }
+    return validValuesText;
+};
+
 module.exports = {
     getCleanTypeFromMixedString: getCleanTypeFromMixedString,
+    cleanTextValidValues: cleanTextValidValues,
     realTypes: realTypes,
     regexCli: regexCli,
     cleanType: cleanType,

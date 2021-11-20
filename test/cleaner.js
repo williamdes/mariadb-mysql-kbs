@@ -204,5 +204,30 @@ module.exports = function () {
             expect(foundType).to.equal('numeric');
             done();
         });
+        test('get clean text vie valid values non valid value dataset-1', function (done) {
+            const cleanedValue = cleaner.cleanTextValidValues('See description');
+            expect(cleanedValue).to.equal('');
+            done();
+        });
+        test('get clean text vie valid values non valid value dataset-2', function (done) {
+            const cleanedValue = cleaner.cleanTextValidValues('See alter_algorithm for the full list.');
+            expect(cleanedValue).to.equal('');
+            done();
+        });
+        test('get clean text vie valid values non valid value dataset-3', function (done) {
+            const cleanedValue = cleaner.cleanTextValidValues('See OLD Mode for the full list.');
+            expect(cleanedValue).to.equal('');
+            done();
+        });
+        test('get clean text vie valid values non valid value dataset-4', function (done) {
+            const cleanedValue = cleaner.cleanTextValidValues('0 or 1');
+            expect(cleanedValue).to.equal('0,1');
+            done();
+        });
+        test('get clean text vie valid values non valid value dataset-5', function (done) {
+            const cleanedValue = cleaner.cleanTextValidValues('"" or "uncompressed"');
+            expect(cleanedValue).to.equal('"","uncompressed"');
+            done();
+        });
     });
 };

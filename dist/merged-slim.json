@@ -2413,6 +2413,10 @@
             "default": "1000000",
             "dynamic": true,
             "name": "server_audit_file_rotate_size",
+            "range": {
+                "from": 100,
+                "to": 9.223372036854776e+18
+            },
             "scope": [
                 "global"
             ],
@@ -2478,7 +2482,17 @@
         },
         "server_audit_mode": {
             "cli": "--server-audit-mode[=#]",
+            "default": "0",
+            "dynamic": true,
             "name": "server_audit_mode",
+            "range": {
+                "from": 0,
+                "to": 1
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
             "ids": [
                 "11#server_audit_mode"
             ]

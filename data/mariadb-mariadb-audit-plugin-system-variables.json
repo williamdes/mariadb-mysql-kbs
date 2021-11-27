@@ -73,6 +73,10 @@
       "dynamic": true,
       "id": "server_audit_file_rotate_size",
       "name": "server_audit_file_rotate_size",
+      "range": {
+        "from": 100,
+        "to": 9223372036854776000
+      },
       "scope": [
         "global"
       ],
@@ -127,8 +131,18 @@
     },
     {
       "cli": "--server-audit-mode[=#]",
+      "default": "0",
+      "dynamic": true,
       "id": "server_audit_mode",
-      "name": "server_audit_mode"
+      "name": "server_audit_mode",
+      "range": {
+        "from": 0,
+        "to": 1
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     },
     {
       "cli": "--server-audit-output-type=value",

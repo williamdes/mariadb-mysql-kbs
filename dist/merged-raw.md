@@ -2708,6 +2708,7 @@
 |Scope|`global`|
 |Default value|`1000000`|
 |Dynamic|`true`|
+|Range|from: `100` to: `9.2233720368548E+18`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2779,6 +2780,11 @@
 |----|-----|
 |Name|`server_audit_mode`|
 |Command line|`--server-audit-mode[=#]`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1`|
 
 ### Documentation(s)
 |source|anchor name|

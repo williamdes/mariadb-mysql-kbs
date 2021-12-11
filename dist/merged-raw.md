@@ -28348,7 +28348,7 @@
 |Name|`innodb_ddl_threads`|
 |Command line|`--innodb-ddl-threads=#`|
 |Type of variable|`integer`|
-|Scope|`session`|
+|Scope|`global`, `session`|
 |Default value|`4`|
 |Dynamic|`true`|
 |Range|from: `1` to: `64`|
@@ -32558,7 +32558,6 @@
 |Command line|`--admin-tls-version=protocol_list`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`TLSv1,TLSv1.1,TLSv1.2,TLSv1.3 (OpenSSL 1.1.1 and higher)TLSv1,TLSv1.1,TLSv1.2 (otherwise)`|
 |Dynamic|`true`|
 
 ### Documentation(s)

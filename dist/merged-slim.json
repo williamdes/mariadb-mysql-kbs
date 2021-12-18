@@ -13466,7 +13466,6 @@
         },
         "lower_case_table_names": {
             "cli": "--lower-case-table-names[=#]",
-            "default": "0",
             "dynamic": false,
             "name": "lower_case_table_names",
             "range": {
@@ -26128,6 +26127,7 @@
                 "to": 64
             },
             "scope": [
+                "global",
                 "session"
             ],
             "type": "integer",
@@ -29959,7 +29959,6 @@
         },
         "admin_tls_version": {
             "cli": "--admin-tls-version=protocol_list",
-            "default": "TLSv1,TLSv1.1,TLSv1.2,TLSv1.3 (OpenSSL 1.1.1 and higher)TLSv1,TLSv1.1,TLSv1.2 (otherwise)",
             "dynamic": true,
             "name": "admin_tls_version",
             "scope": [

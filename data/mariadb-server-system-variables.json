@@ -103,7 +103,9 @@
       "validValues": [
         "Host name",
         "IPv4",
-        "IPv6"
+        "IPv6",
+        "::",
+        "*"
       ]
     },
     {

@@ -9,7 +9,6 @@ use JsonSerializable;
 
 class KBDocumentation extends stdClass implements JsonSerializable
 {
-
     /**
      * The URL
      *

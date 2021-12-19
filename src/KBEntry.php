@@ -9,7 +9,6 @@ use JsonSerializable;
 
 class KBEntry extends stdClass implements JsonSerializable
 {
-
     /**
      * The name of the variable
      *

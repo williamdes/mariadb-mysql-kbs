@@ -9,7 +9,6 @@ use JsonSerializable;
 
 class SlimData extends stdClass implements JsonSerializable
 {
-
     /**
      * Variables
      *

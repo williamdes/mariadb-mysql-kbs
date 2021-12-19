@@ -8,7 +8,6 @@ use stdClass;
 
 class Search
 {
-
     /**
      * Loaded data
      *

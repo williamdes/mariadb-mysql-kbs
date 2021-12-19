@@ -8,3 +8,4 @@ node_modules
 /williamdes-mariadb-mysql-kbs-*.tar
 .phpunit.result.cache
 /target
+composer.lock

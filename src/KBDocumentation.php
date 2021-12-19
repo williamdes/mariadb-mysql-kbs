@@ -65,7 +65,7 @@ class KBDocumentation extends stdClass implements JsonSerializable
      */
     public function jsonSerialize(): array
     {
-        $outObj        = array();
+        $outObj        = [];
         $outObj['url'] = $this->url;
         if ($this->anchor !== null) {
             $outObj['anchor'] = $this->anchor;

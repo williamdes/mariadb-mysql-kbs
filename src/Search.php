@@ -171,7 +171,7 @@ class Search
     public static function getVariablesWithDynamic(bool $dynamic): array
     {
         self::loadData();
-        $staticVars = array();
+        $staticVars = [];
         foreach (Search::$data->vars as $name => $var) {
             if (isset($var->d)) {
                 if ($var->d === $dynamic) {

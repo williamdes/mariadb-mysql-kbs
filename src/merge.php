@@ -86,7 +86,7 @@ function fixRange(stdClass &$current, stdClass &$cache): void
     }
 }
 
-$variables = array();
+$variables = [];
 
 $nbr                = 0;
 $nbrConflicts       = 0;
@@ -104,7 +104,7 @@ foreach ($files as $file) {
         if (isset($identifier)) {
             if (isset($variables[$identifier]) === false) {
                 if (isset($doc->ids) === false) {
-                    $doc->ids = array();
+                    $doc->ids = [];
                 }
                 $variables[$identifier] = $doc;
                 $kbEntry                = new stdClass();
@@ -114,7 +114,7 @@ foreach ($files as $file) {
                 unset($doc->id);
             } else {
                 if (isset($doc->ids) === false) {
-                    $doc->ids = array();
+                    $doc->ids = [];
                 }
                 $kbEntry         = new stdClass();
                 $kbEntry->anchor = $doc->id;
@@ -138,7 +138,7 @@ foreach ($files as $file) {
                         } elseif (json_encode($cacheValue) !== json_encode($docValue)) {
                             $nbrConflicts++;
                             if ($key === 'type') {
-                                $realTypes = array(
+                                $realTypes = [
                                     'string',
                                     'boolean',
                                     'integer',
@@ -148,7 +148,7 @@ foreach ($files as $file) {
                                     'directory name',
                                     'file name',
                                     'byte'
-                                );
+                                ];
                                 if (
                                     in_array($cacheValue, $realTypes)// original
                                     && in_array($docValue, $realTypes) === false// dupe
@@ -201,8 +201,8 @@ foreach ($files as $file) {
                                     .PHP_EOL;
                                 }*/
                             } elseif ($key === 'default') {
-                                $originalValues    = array('on', 'off', 'ON', 'OFF', 'true', 'false', 'TRUE', 'FALSE');
-                                $destinationValues = array('1', '0', '1', '0', '1', '0', '1', '0');
+                                $originalValues    = ['on', 'off', 'ON', 'OFF', 'true', 'false', 'TRUE', 'FALSE'];
+                                $destinationValues = ['1', '0', '1', '0', '1', '0', '1', '0'];
                                 $docValue          = str_replace($originalValues, $destinationValues, $docValue);
                                 $cacheValue        = str_replace($originalValues, $destinationValues, $cacheValue);
                                 if ($docValue === $cacheValue) {
@@ -225,10 +225,10 @@ foreach ($files as $file) {
                                 }
                             } elseif ($key === 'validValues') {
                                 if (is_array($cacheValue) === false) {
-                                    $cacheValue = array($cacheValue);
+                                    $cacheValue = [$cacheValue];
                                 }
                                 if (is_array($docValue) === false) {
-                                    $docValue = array($docValue);
+                                    $docValue = [$docValue];
                                 }
                                 $intersecValidValues = array_intersect($docValue, $cacheValue);
                                 if (
@@ -238,7 +238,7 @@ foreach ($files as $file) {
                                     $newData->$key = $intersecValidValues;
                                     $nbrConflictsSolved++;
                                 } elseif (
-                                    array_values(array_diff($docValue, $cacheValue)) === array('32768','65536')
+                                    array_values(array_diff($docValue, $cacheValue)) === ['32768','65536']
                                 ) {// Missing translation (in bytes) for 32k and 64k
                                     $intersecValidValues[] = '32768';
                                     $intersecValidValues[] = '65536';
@@ -261,8 +261,8 @@ foreach ($files as $file) {
                                     . json_encode(array_values(array_diff($docValue, $cacheValue))) . PHP_EOL;
                                 }
                             } elseif ($key === 'cli') {
-                                $replaceSource      = array('file', 'dir_name', '-- ', '_');
-                                $replaceDest        = array('path', 'path', '--', '-');
+                                $replaceSource      = ['file', 'dir_name', '-- ', '_'];
+                                $replaceDest        = ['path', 'path', '--', '-'];
                                 $replacedDocValue   = str_replace($replaceSource, $replaceDest, $docValue);
                                 $replacedCacheValue = str_replace($replaceSource, $replaceDest, $cacheValue);
                                 if (
@@ -284,8 +284,8 @@ foreach ($files as $file) {
                                     strlen(
                                         str_replace(
                                             str_replace(
-                                                array('#'),
-                                                array(''),
+                                                ['#'],
+                                                [''],
                                                 $replacedDocValue
                                             ),
                                             '',
@@ -299,8 +299,8 @@ foreach ($files as $file) {
                                     strlen(
                                         str_replace(
                                             str_replace(
-                                                array('#'),
-                                                array(''),
+                                                ['#'],
+                                                [''],
                                                 $replacedCacheValue
                                             ),
                                             '',
@@ -311,7 +311,7 @@ foreach ($files as $file) {
                                     $newData->$key = $replacedDocValue;
                                     $nbrConflictsSolved++;
                                 } elseif (
-                                    strlen(str_replace(str_replace(array('#'), array(''), $docValue), '', $cacheValue)) !== strlen($cacheValue)
+                                    strlen(str_replace(str_replace(['#'], [''], $docValue), '', $cacheValue)) !== strlen($cacheValue)
                                 ) {// More precise doc, value hint, eg: --blablabla={0|1}
                                     $newData->$key = $cacheValue;
                                     $nbrConflictsSolved++;
@@ -413,7 +413,7 @@ foreach ($fileOut->vars as $id => $doc) {
     $md .= '|source|anchor name|' . PHP_EOL;
     $md .= '|------|----|' . PHP_EOL;
     foreach ($doc->ids as &$kbEntry) {
-        $matchs = array();
+        $matchs = [];
         preg_match('/:\/\/([a-z.]+)/i', $kbEntry->url, $matchs);
         $md .= '|' . $matchs[1] . '|[' . $kbEntry->anchor . '](' . $kbEntry->url . '#' . $kbEntry->anchor . ')|' . PHP_EOL;
     }
@@ -424,7 +424,7 @@ file_put_contents(__DIR__ . '/../dist/merged-raw.md', $md . PHP_EOL);
 
 file_put_contents(__DIR__ . '/../dist/merged-raw.json', json_encode($fileOut, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . PHP_EOL);
 
-$fileOut->urls = array();
+$fileOut->urls = [];
 
 foreach ($fileOut->vars as $id => $doc) {
     foreach ($doc->ids as &$kbEntry) {
@@ -440,8 +440,8 @@ $fileOut->version = 1.0;
 file_put_contents(__DIR__ . '/../dist/merged-slim.json', json_encode($fileOut, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . PHP_EOL);
 
 $fileOut->vars     = json_decode(json_encode($variables));
-$fileOut->types    = array( 'MYSQL' => 1, 'MARIADB' => 2 );
-$fileOut->varTypes = array(
+$fileOut->types    = [ 'MYSQL' => 1, 'MARIADB' => 2 ];
+$fileOut->varTypes = [
     'string' => 1,
     'boolean' => 2,
     'integer' => 3,
@@ -451,7 +451,7 @@ $fileOut->varTypes = array(
     'directory name' => 7,
     'file name' => 8,
     'byte' => 9
-);
+];
 foreach ($fileOut->vars as $id => &$doc) {
     $data = new stdClass();
     if (isset($doc->dynamic)) {
@@ -460,7 +460,7 @@ foreach ($fileOut->vars as $id => &$doc) {
     if (isset($doc->type)) {
         $data->t = $fileOut->varTypes[$doc->type];
     }
-    $data->a = array();
+    $data->a = [];
     foreach ($doc->ids as &$kbEntry) {
         $urlId = array_search($kbEntry->url, $fileOut->urls, true);
         if ($urlId === false) {
@@ -487,8 +487,8 @@ file_put_contents(__DIR__ . '/../dist/merged-ultraslim.json', json_encode($fileO
 $content = '<?php' . PHP_EOL . '$data = ' . json_encode($fileOut, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . ';' . PHP_EOL;
 
 $content = str_replace(
-    array('{', '}', ':'),
-    array('[', ']', '=>'),
+    ['{', '}', ':'],
+    ['[', ']', '=>'],
     $content
 );
 

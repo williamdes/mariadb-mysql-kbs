@@ -120,7 +120,7 @@ class KBEntry extends stdClass implements JsonSerializable
     {
         $this->url = $url;
         if ($this->docs === null) {
-            $this->docs = array();
+            $this->docs = [];
         }
         $kbd          = new KBDocumentation($url, $anchor);
         $this->docs[] = $kbd;
@@ -135,7 +135,7 @@ class KBEntry extends stdClass implements JsonSerializable
      */
     public function jsonSerialize(): array
     {
-        $outObj         = array();
+        $outObj         = [];
         $outObj['name'] = $this->name;
         if ($this->type !== null) {
             $outObj['type'] = $this->type;

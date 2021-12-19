@@ -14,7 +14,7 @@ class SlimData extends stdClass implements JsonSerializable
      *
      * @var KBEntry[]
      */
-    private $vars = array();
+    private $vars = [];
 
     /**
      * File revision
@@ -28,21 +28,21 @@ class SlimData extends stdClass implements JsonSerializable
      *
      * @var string[]
      */
-    private $urls = array();
+    private $urls = [];
 
     /**
      * Types of documentation
      *
      * @var array<string,int>
      */
-    private $types = array('MYSQL' => 1, 'MARIADB' => 2);
+    private $types = ['MYSQL' => 1, 'MARIADB' => 2];
 
     /**
      * Types of variables
      *
      * @var array<string,int>
      */
-    private $varTypes = array(
+    private $varTypes = [
         'string' => 1,
         'boolean' => 2,
         'integer' => 3,
@@ -52,7 +52,7 @@ class SlimData extends stdClass implements JsonSerializable
         'directory name' => 7,
         'file name' => 8,
         'byte' => 9
-    );
+    ];
 
     /**
      * Create a slimData object
@@ -103,7 +103,7 @@ class SlimData extends stdClass implements JsonSerializable
      */
     public function jsonSerialize(): array
     {
-        $outObj = array();
+        $outObj = [];
         if (count($this->vars) > 0) {
             $vars = new stdClass();
             foreach ($this->vars as $var) {
@@ -122,7 +122,7 @@ class SlimData extends stdClass implements JsonSerializable
                 }
 
                 if ($var->hasDocumentations()) {
-                    $variable->a = array();
+                    $variable->a = [];
                     foreach ($var->getDocumentations() as $kbd) {
                         $entry    = new stdClass();
                         $entry->a = $kbd->getAnchor();

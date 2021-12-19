@@ -93,7 +93,6 @@ fi
 
 echo "Change package versions"
 
-jq --indent 4 --arg a "$version" '.version = $a' composer.json > "$tmp" && mv "$tmp" composer.json
 jq --indent 4 --arg a "$version" '.version = $a' package.json > "$tmp" && mv "$tmp" package.json
 if [ -f package-lock.json ]; then
     jq --indent 4 --arg a "$version" '.version = $a' package-lock.json > "$tmp" && mv "$tmp" package-lock.json
@@ -104,7 +103,7 @@ git diff
 read -r -p "Are you sure to commit the diff? [Y/n]" response
 response=${response,,} # tolower
 if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
-    git add composer.json package.json
+    git add package.json
     if [ -f package-lock.json ]; then
         git add package-lock.json
     fi

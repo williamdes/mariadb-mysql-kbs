@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [v1.2.13]
 
 ### Changed
 
@@ -65,11 +65,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Documentation
 
+- [b0af14e](https://github.com/williamdes/mariadb-mysql-kbs/commit/b0af14ef9e78259da65be9fc3756013fe50dc7b4) docs: update CHANGELOG
 - [41631bf](https://github.com/williamdes/mariadb-mysql-kbs/commit/41631bf402f20242aa55e2f2815488dafe9508de) docs: add FUNDING and SECURITY
 - [474885d](https://github.com/williamdes/mariadb-mysql-kbs/commit/474885d4eb22a3bab8e81b72dd7cf002a5723c29) docs: update docs submodule
 
 ### Others
 
+- [5a708dd](https://github.com/williamdes/mariadb-mysql-kbs/commit/5a708ddd0d444fde62eee557350677ffb538ea23) chore: do not try to change version in composer.json
+- [b492531](https://github.com/williamdes/mariadb-mysql-kbs/commit/b492531f6ee0eb067ef6cea95b7039729d8acd8d) ci: set back coverage to xdebug for PHP 7.1
 - [095d6bf](https://github.com/williamdes/mariadb-mysql-kbs/commit/095d6bfbd2bd71665959d824f2edfdfa667da6a2) ci: set PHP 8.1 as a normal tested version and nightly as an experimental version
 - [848c359](https://github.com/williamdes/mariadb-mysql-kbs/commit/848c359c933f90568ff65ce4a6efb9267430c968) chore: ignore composer.lock
 - [7f56820](https://github.com/williamdes/mariadb-mysql-kbs/commit/7f5682015cb6728ab7871da69d92e49a112ed213) chore: remove version field from composer.json
@@ -710,7 +713,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [d9cd2a8](https://github.com/williamdes/mariadb-mysql-kbs/commit/d9cd2a8123a67d6adfddf0414988b98fcac9f082) fixed: bug in MariaDB script
 
 
-[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.12...HEAD
+[v1.2.13]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.12...v1.2.13
 [v1.2.12]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.11...v1.2.12
 [v1.2.11]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.10...v1.2.11
 [v1.2.10]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.9...v1.2.10

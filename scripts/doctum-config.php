@@ -13,7 +13,7 @@ use Symfony\Component\Finder\Finder;
 $srcFiles = realpath(__DIR__ . '/../src');
 $rootDir  = realpath(__DIR__ . '/../') . DIRECTORY_SEPARATOR;
 
-$iterator = Finder::create()->files()->name('*.php')->in($srcFiles);
+$iterator = Finder::create()->files()->name('*.php')->notName('merge.php')->in($srcFiles);
 
 $description = json_decode(file_get_contents(__DIR__ . '/../composer.json'))->description;
 

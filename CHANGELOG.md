@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [e96314f](https://github.com/williamdes/mariadb-mysql-kbs/commit/e96314f47373a45c1829a91d1cd5fa574343ea4a) update: [MariaDB] && [MySQL] updates
+- [d4cbcc7](https://github.com/williamdes/mariadb-mysql-kbs/commit/d4cbcc7acf033e7cf4a22aeda749f9870e2d1beb) update: [MariaDB] updates
+- [6d0aed2](https://github.com/williamdes/mariadb-mysql-kbs/commit/6d0aed2a94f4247655cc1ccbd47a1950abac6eb3) update: [MariaDB] && [MySQL] updates
+- [6646d76](https://github.com/williamdes/mariadb-mysql-kbs/commit/6646d764c62136474f0ffaa42ba7bb1a324f3c0f) update: [MySQL] updates
+- [be98073](https://github.com/williamdes/mariadb-mysql-kbs/commit/be9807377b13d08ed6998ae185400d27686f4f38) update: [MariaDB] && [MySQL] updates
+- [f6fd5f6](https://github.com/williamdes/mariadb-mysql-kbs/commit/f6fd5f6a2f06d4116266833b3f68d7a8a1d10be6) update: [MariaDB] && [MySQL] updates
+- [cb8f850](https://github.com/williamdes/mariadb-mysql-kbs/commit/cb8f850bb4cf0b9619986313696d476aad53e8ee) update: [MariaDB] updates
+- [05e1883](https://github.com/williamdes/mariadb-mysql-kbs/commit/05e18834cbd44f544d8a131a477f90af9df439f0) update: [MariaDB] updates
+- [15deeb9](https://github.com/williamdes/mariadb-mysql-kbs/commit/15deeb9672cb3309adcdd7b2554e5abb5e6ebc56) update: [MySQL] updates
 - [1a8bf0a](https://github.com/williamdes/mariadb-mysql-kbs/commit/1a8bf0a2c31013b3bcf11f0862ef0e39f5b9ba74) update: [MariaDB] updates
 - [90a0b26](https://github.com/williamdes/mariadb-mysql-kbs/commit/90a0b26638e67e32e230a1a1022878dbe8e7dd35) update: [MariaDB] && [MySQL] updates
 - [50ab914](https://github.com/williamdes/mariadb-mysql-kbs/commit/50ab914b6df67ce5a4d63121bd8b1772bcadf872) update: [MariaDB] && [MySQL] updates
@@ -30,6 +39,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- [a402856](https://github.com/williamdes/mariadb-mysql-kbs/commit/a4028565d062339f18a504f39c61cfa04a962802) fix: exclude merge.php from Doctum
+- [c69d529](https://github.com/williamdes/mariadb-mysql-kbs/commit/c69d5296b09e7a5478b23d00ab865e3b3564a0cd) fix: cleanup the accepted values for an enum
+- [2104623](https://github.com/williamdes/mariadb-mysql-kbs/commit/21046232efaa4f5ec355477fe50b0dab19a44ca2) fix: MariaDb enum values without a code tag
+- [66c6992](https://github.com/williamdes/mariadb-mysql-kbs/commit/66c69927e3945cdc65f7919e7a757bd50dfe75c3) fix: create PR script install in "/usr/local/bin"
+- [4f10b0e](https://github.com/williamdes/mariadb-mysql-kbs/commit/4f10b0eb4f2551fa1d2643fead412bb8b6f9dd2d) fix: yarn binary path
 - [de8ef42](https://github.com/williamdes/mariadb-mysql-kbs/commit/de8ef42628bcfeb04627aa850783d88d82046ba6) fix: binary path for sudo-bot
 - [c1528ea](https://github.com/williamdes/mariadb-mysql-kbs/commit/c1528ea35b0838ceefc18dbbf82141848a8c0213) fix: coding standard migration mistake
 - [de8945b](https://github.com/williamdes/mariadb-mysql-kbs/commit/de8945b622f3360245784f7fa7653537c72b592b) fix: data URLs
@@ -37,11 +51,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Improvements
 
+- [0e7508c](https://github.com/williamdes/mariadb-mysql-kbs/commit/0e7508c01dfc6bb783032345007cab8b2bdbb603) style: stop using old array syntax
+- [2784c48](https://github.com/williamdes/mariadb-mysql-kbs/commit/2784c48571fb629758f821bef07e55729efcf98c) style: coding standard fixes and ignore for tests
 - [ce5e57b](https://github.com/williamdes/mariadb-mysql-kbs/commit/ce5e57b79cf9fb7e7960dcef6bd0df94c58162c4) style: run prettier
 - [daeec8f](https://github.com/williamdes/mariadb-mysql-kbs/commit/daeec8f36ab548854fc035fed214d2887f563a34) style: migrate to wdes/coding-standard and composer json cleanup
 
 ### Features
 
+- [1b8f387](https://github.com/williamdes/mariadb-mysql-kbs/commit/1b8f3874c595b9ee5991041c4926ce062e80bef4) feat: pass phpstan v1 max level
 - [0273dbf](https://github.com/williamdes/mariadb-mysql-kbs/commit/0273dbfdfa6c7b808954235fd40c9897ad8ad121) feat: simplify PHP 8 composer installs
 - [7c6a94e](https://github.com/williamdes/mariadb-mysql-kbs/commit/7c6a94e557d593b2cd168a462c43dbbac2b1b52c) feat: add new S3 data file
 - [29960a3](https://github.com/williamdes/mariadb-mysql-kbs/commit/29960a349e49bb6be5e299593f6dd6829cae5a25) feat: add new data sets
@@ -53,6 +70,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Others
 
+- [095d6bf](https://github.com/williamdes/mariadb-mysql-kbs/commit/095d6bfbd2bd71665959d824f2edfdfa667da6a2) ci: set PHP 8.1 as a normal tested version and nightly as an experimental version
+- [848c359](https://github.com/williamdes/mariadb-mysql-kbs/commit/848c359c933f90568ff65ce4a6efb9267430c968) chore: ignore composer.lock
+- [7f56820](https://github.com/williamdes/mariadb-mysql-kbs/commit/7f5682015cb6728ab7871da69d92e49a112ed213) chore: remove version field from composer.json
+- [ed98920](https://github.com/williamdes/mariadb-mysql-kbs/commit/ed98920339eecdae90c986a6c7dc8e11337add96) chore: upgrade phpstan to ^1.2.0
+- [4dc14cd](https://github.com/williamdes/mariadb-mysql-kbs/commit/4dc14cd791e74e929274b6a276d8b8c80015a2a6) ci: do not require SKIP_DOCS_STEPS ENV
+- [624b71e](https://github.com/williamdes/mariadb-mysql-kbs/commit/624b71e435557946d45ea387abe4d6bcf32f5a09) chore: update jshint, mocha, prettier
+- [af0326c](https://github.com/williamdes/mariadb-mysql-kbs/commit/af0326c04ccefffed1f1bbe26c5f086387985883) ci: add new workflow environment names
 - [2e6ae05](https://github.com/williamdes/mariadb-mysql-kbs/commit/2e6ae05b8fa1ba7ba8339ecb10a5baa09a112ae0) chore: update dependencies
 - [a5a3627](https://github.com/williamdes/mariadb-mysql-kbs/commit/a5a36270c7a1423d404dbeb21257ed3556af0fc5) ci: fix workflow
 - [12cb0c7](https://github.com/williamdes/mariadb-mysql-kbs/commit/12cb0c705abedc4f7eca992fc8e32c41dc68b905) ci: adjust lint and analyse CI config and run tests on PHP 8.1

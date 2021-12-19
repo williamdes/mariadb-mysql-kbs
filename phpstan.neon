@@ -3,7 +3,7 @@ parameters:
         paths:
             - src
             - test
-        excludes_analyse:
+        excludePaths:
             - src/merge.php
             - dist/*
             - tmp/*

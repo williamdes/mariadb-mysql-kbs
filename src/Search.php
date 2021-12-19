@@ -11,7 +11,7 @@ class Search
     /**
      * Loaded data
      *
-     * @var mixed
+     * @var stdClass
      */
     public static $data;
 
@@ -51,8 +51,13 @@ class Search
             if ($contents === false) {
                 throw new KBException($filePath . ' does not exist !');
             }
-            Search::$data   = json_decode($contents);
-            Search::$loaded = true;
+            $decodedData = json_decode($contents);
+            if ($decodedData instanceof stdClass) {
+                Search::$data   = $decodedData;
+                Search::$loaded = true;
+                return;
+            }
+            throw new KBException($filePath . ' could not be JSON decoded !');
         }
     }
 
@@ -64,8 +69,11 @@ class Search
      */
     public static function loadTestData(SlimData $slimData): void
     {
-        Search::$data   = json_decode((string) json_encode($slimData));
-        Search::$loaded = true;
+        $decodedData = json_decode((string) json_encode($slimData));
+        if ($decodedData instanceof stdClass) {
+            Search::$data   = $decodedData;
+            Search::$loaded = true;
+        }
     }
 
     /**

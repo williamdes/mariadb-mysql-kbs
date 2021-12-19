@@ -55,7 +55,7 @@ printf 'Running script...\n'
 # Before they do not exist anymore, changing branch in moveBuildToTempFolder
 copyUsefullFiles
 
-if [ -z "${SKIP_DOCS_STEPS}" ]; then
+if [ -z "${SKIP_DOCS_STEPS:-}" ]; then
     moveBuildToTempFolder
     cleanGhPages
     moveBuildFilesToCurrentDir

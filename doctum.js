@@ -49,6 +49,8 @@
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\SlimData","fromLink":"Williamdes/MariaDBMySQLKBS/SlimData.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html#method_addVariable","name":"Williamdes\\MariaDBMySQLKBS\\SlimData::addVariable","doc":"<p>Add a variable</p>"},
         {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\SlimData","fromLink":"Williamdes/MariaDBMySQLKBS/SlimData.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html#method_jsonSerialize","name":"Williamdes\\MariaDBMySQLKBS\\SlimData::jsonSerialize","doc":"<p>Used for json_encode function\nThis can seem useless, do not remove it.</p>"},
             
+                {"type":"Function","link":"[Global_Namespace].html#function_JSONcompare","name":"\\JSONcompare","doc":"<p>Compare 2 variables</p>"},
+        {"type":"Function","link":"[Global_Namespace].html#function_fixRange","name":"\\fixRange","doc":"<p>Fix key=range</p>"},
                                 // Fix trailing commas in the index
         {}
     ];

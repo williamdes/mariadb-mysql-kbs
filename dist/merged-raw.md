@@ -24423,7 +24423,6 @@
 |Scope|`global`|
 |Default value|`134217728`|
 |Dynamic|`false`|
-|Range|from: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|

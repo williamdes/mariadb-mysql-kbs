@@ -22263,9 +22263,6 @@
             "default": "134217728",
             "dynamic": false,
             "name": "innodb_buffer_pool_chunk_size",
-            "range": {
-                "from": 1048576
-            },
             "scope": [
                 "global"
             ],

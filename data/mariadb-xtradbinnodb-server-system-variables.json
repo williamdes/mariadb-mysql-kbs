@@ -334,7 +334,8 @@
       "id": "innodb_buffer_pool_chunk_size",
       "name": "innodb_buffer_pool_chunk_size",
       "range": {
-        "from": 1048576
+        "from": 0,
+        "to": 18446744073709552000
       },
       "scope": [
         "global"

@@ -3933,6 +3933,17 @@
         "session"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--xa-detach-on-prepare[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": true,
+      "id": "sysvar_xa_detach_on_prepare",
+      "name": "xa_detach_on_prepare",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     }
   ],
   "name": "server-system-variables",

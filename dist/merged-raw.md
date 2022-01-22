@@ -24652,7 +24652,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`134217728`|
-|Range|from: `5242880` to: `9.2233720368548E+18`|
+|Range|from: `5242880` to: `25165824`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27825,6 +27825,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_audit_log_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_buffer_size)|
+
+## audit_log_disable
+|name|value|
+|----|-----|
+|Name|`audit_log_disable`|
+|Command line|`--audit-log-disable[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_audit_log_disable](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_disable)|
 
 ## audit_log_compression
 |name|value|
@@ -34089,6 +34104,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_windowing_use_high_precision](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_windowing_use_high_precision)|
+
+## xa_detach_on_prepare
+|name|value|
+|----|-----|
+|Name|`xa_detach_on_prepare`|
+|Command line|`--xa-detach-on-prepare[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_xa_detach_on_prepare](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_xa_detach_on_prepare)|
 
 ## version_tokens_session
 |name|value|

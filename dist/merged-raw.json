@@ -29052,7 +29052,7 @@
             "name": "innodb_buffer_pool_size",
             "range": {
                 "from": 5242880,
-                "to": 9.223372036854776e+18
+                "to": 25165824
             },
             "scope": [
                 "global"
@@ -33115,6 +33115,22 @@
             "ids": [
                 {
                     "anchor": "sysvar_audit_log_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html"
+                }
+            ]
+        },
+        "audit_log_disable": {
+            "cli": "--audit-log-disable[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "audit_log_disable",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_audit_log_disable",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html"
                 }
             ]
@@ -40313,6 +40329,22 @@
             "ids": [
                 {
                     "anchor": "sysvar_windowing_use_high_precision",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "xa_detach_on_prepare": {
+            "cli": "--xa-detach-on-prepare[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "xa_detach_on_prepare",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_xa_detach_on_prepare",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

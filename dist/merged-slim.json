@@ -22476,7 +22476,7 @@
             "name": "innodb_buffer_pool_size",
             "range": {
                 "from": 5242880,
-                "to": 9.223372036854776e+18
+                "to": 25165824
             },
             "scope": [
                 "global"
@@ -25617,6 +25617,19 @@
             "type": "integer",
             "ids": [
                 "43#sysvar_audit_log_buffer_size"
+            ]
+        },
+        "audit_log_disable": {
+            "cli": "--audit-log-disable[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "audit_log_disable",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "43#sysvar_audit_log_disable"
             ]
         },
         "audit_log_compression": {
@@ -31453,6 +31466,19 @@
             "type": "boolean",
             "ids": [
                 "15#sysvar_windowing_use_high_precision"
+            ]
+        },
+        "xa_detach_on_prepare": {
+            "cli": "--xa-detach-on-prepare[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "xa_detach_on_prepare",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "15#sysvar_xa_detach_on_prepare"
             ]
         },
         "version_tokens_session": {

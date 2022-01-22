@@ -510,13 +510,13 @@
     },
     {
       "cli": "--innodb-buffer-pool-size=#",
-      "default": "134217728 (128MB)",
+      "default": "134217728 (128iMB)",
       "dynamic": false,
       "id": "innodb_buffer_pool_size",
       "name": "innodb_buffer_pool_size",
       "range": {
         "from": 5242880,
-        "to": 9223372036854776000
+        "to": 25165824
       },
       "scope": [
         "global"

@@ -30534,6 +30534,21 @@
 |dev.mysql.com|[sysvar_binlog_error_action](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_error_action)|
 |dev.mysql.com|[sysvar_binlog_error_action](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_error_action)|
 
+## binlog_expire_logs_auto_purge
+|name|value|
+|----|-----|
+|Name|`binlog_expire_logs_auto_purge`|
+|Command line|`--binlog-expire-logs-auto-purge={ON|OFF}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_binlog_expire_logs_auto_purge](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_expire_logs_auto_purge)|
+
 ## binlog_group_commit_sync_delay
 |name|value|
 |----|-----|

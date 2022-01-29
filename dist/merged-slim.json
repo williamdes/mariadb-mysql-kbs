@@ -28170,6 +28170,19 @@
                 "23#sysvar_binlog_error_action"
             ]
         },
+        "binlog_expire_logs_auto_purge": {
+            "cli": "--binlog-expire-logs-auto-purge={ON|OFF}",
+            "default": "ON",
+            "dynamic": true,
+            "name": "binlog_expire_logs_auto_purge",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "22#sysvar_binlog_expire_logs_auto_purge"
+            ]
+        },
         "binlog_group_commit_sync_delay": {
             "cli": "--binlog-group-commit-sync-delay=#",
             "default": "0",

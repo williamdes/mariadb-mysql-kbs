@@ -146,6 +146,17 @@
       "type": "integer"
     },
     {
+      "cli": "--binlog-expire-logs-auto-purge={ON|OFF}",
+      "default": "ON",
+      "dynamic": true,
+      "id": "sysvar_binlog_expire_logs_auto_purge",
+      "name": "binlog_expire_logs_auto_purge",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--binlog-format=format",
       "default": "ROW",
       "dynamic": true,

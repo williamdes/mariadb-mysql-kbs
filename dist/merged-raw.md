@@ -32785,7 +32785,7 @@
 |Scope|`global`, `session`|
 |Default value|`18446744073709551615`|
 |Dynamic|`true`|
-|Range|from: `2097152` to: `1.844674407371E+19`|
+|Range|from: `16777612` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|

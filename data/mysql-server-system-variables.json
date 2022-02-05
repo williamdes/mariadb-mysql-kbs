@@ -549,7 +549,7 @@
       "id": "sysvar_connection_memory_limit",
       "name": "connection_memory_limit",
       "range": {
-        "from": 2097152,
+        "from": 16777612,
         "to": 18446744073709552000
       },
       "scope": [

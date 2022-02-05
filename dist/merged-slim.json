@@ -30168,7 +30168,7 @@
             "dynamic": true,
             "name": "connection_memory_limit",
             "range": {
-                "from": 2097152,
+                "from": 16777612,
                 "to": 1.8446744073709552e+19
             },
             "scope": [

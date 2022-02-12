@@ -550,7 +550,7 @@
     },
     {
       "cli": "--innodb-change-buffering=#",
-      "default": "all",
+      "default": ">= MariaDB 10.5.15, MariaDB 10.6.7, MariaDB 10.7.3, MariaDB 10.8.2: none, <= MariaDB 10.5.14, MariaDB 10.6.6, MariaDB 10.7.2, MariaDB 10.8.1:all",
       "dynamic": true,
       "id": "innodb_change_buffering",
       "name": "innodb_change_buffering",
@@ -1954,7 +1954,7 @@
       "id": "innodb_log_file_size",
       "name": "innodb_log_file_size",
       "range": {
-        "from": 1048576,
+        "from": 4194304,
         "to": 512
       },
       "scope": [
@@ -2488,7 +2488,7 @@
     },
     {
       "cli": "--innodb-read-only-compressed, --skip-innodb-read-only-compressed",
-      "default": "ON",
+      "default": "OFF (>= MariaDB 10.6.6), ON (<= MariaDB 10.6.5)",
       "dynamic": false,
       "id": "innodb_read_only_compressed",
       "name": "innodb_read_only_compressed",

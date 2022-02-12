@@ -26270,6 +26270,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `4194304` to: `512`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26909,7 +26910,7 @@
 |Command line|`--innodb-read-only-compressed, --skip-innodb-read-only-compressed`|
 |Type of variable|`boolean`|
 |Scope|``|
-|Default value|`ON`|
+|Default value|`OFF (>= MariaDB 10.6.6), ON (<= MariaDB 10.6.5)`|
 |Dynamic|`false`|
 
 ### Documentation(s)

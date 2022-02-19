@@ -30172,7 +30172,7 @@
             "dynamic": true,
             "name": "connection_memory_limit",
             "range": {
-                "from": 16777612,
+                "from": 2097152,
                 "to": 1.8446744073709552e+19
             },
             "scope": [
@@ -30327,7 +30327,7 @@
             "dynamic": true,
             "name": "global_connection_memory_limit",
             "range": {
-                "from": 2097152,
+                "from": 16777216,
                 "to": 1.8446744073709552e+19
             },
             "scope": [

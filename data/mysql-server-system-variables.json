@@ -1247,7 +1247,7 @@
       "id": "sysvar_key_buffer_size",
       "name": "key_buffer_size",
       "range": {
-        "from": 8
+        "from": 0
       },
       "scope": [
         "global"

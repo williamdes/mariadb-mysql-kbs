@@ -2938,10 +2938,6 @@
             "cli": "--key-buffer-size=#",
             "dynamic": true,
             "name": "key_buffer_size",
-            "range": {
-                "from": 8,
-                "to": "upwards"
-            },
             "scope": [
                 "global"
             ],
@@ -22260,7 +22256,6 @@
         },
         "innodb_buffer_pool_chunk_size": {
             "cli": "--innodb-buffer-pool-chunk-size=#",
-            "default": "134217728",
             "dynamic": false,
             "name": "innodb_buffer_pool_chunk_size",
             "scope": [

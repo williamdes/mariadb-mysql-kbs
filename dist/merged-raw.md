@@ -3254,7 +3254,6 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
-|Range|from: `8` to: `upwards`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -24421,7 +24420,6 @@
 |Command line|`--innodb-buffer-pool-chunk-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`134217728`|
 |Dynamic|`false`|
 
 ### Documentation(s)

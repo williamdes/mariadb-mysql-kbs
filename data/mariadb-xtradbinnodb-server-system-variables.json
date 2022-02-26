@@ -329,13 +329,13 @@
     },
     {
       "cli": "--innodb-buffer-pool-chunk-size=#",
-      "default": "134217728",
+      "default": "autosize (0), resulting in innodb_buffer_pool_size/64, if large_pages round down to multiple of largest page size, with 1MiB minimum (>= MariaDB 10.8.1), 134217728 (<= MariaDB 10.8.0)",
       "dynamic": false,
       "id": "innodb_buffer_pool_chunk_size",
       "name": "innodb_buffer_pool_chunk_size",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 1048576
       },
       "scope": [
         "global"

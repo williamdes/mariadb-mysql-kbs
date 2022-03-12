@@ -15486,7 +15486,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `1024` to: `4294967295`|
+|Range|from: `1024` to: `4294966272`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15635,7 +15635,7 @@
 |Scope|`global`, `session`|
 |Default value|`4096`|
 |Dynamic|`true`|
-|Range|from: `4096` to: `4294967295`|
+|Range|from: `4096` to: `4294966272`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -33842,6 +33842,38 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_ssl_fips_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_fips_mode)|
+
+## ssl_session_cache_mode
+|name|value|
+|----|-----|
+|Name|`ssl_session_cache_mode`|
+|Command line|`--ssl_session_cache_mode={SERVER|OFF}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`SERVER`|
+|Dynamic|`true`|
+|Valid value(s)|`SERVER`, `OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ssl_session_cache_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_session_cache_mode)|
+
+## ssl_session_cache_timeout
+|name|value|
+|----|-----|
+|Name|`ssl_session_cache_timeout`|
+|Command line|`--ssl_session_cache_timeout`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`300`|
+|Dynamic|`true`|
+|Range|from: `0` to: `84600`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_ssl_session_cache_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_session_cache_timeout)|
 
 ## stored_program_definition_cache
 |name|value|

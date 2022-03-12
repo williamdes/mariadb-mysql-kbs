@@ -14434,7 +14434,7 @@
             "name": "query_alloc_block_size",
             "range": {
                 "from": 1024,
-                "to": 4294967295
+                "to": 4294966272
             },
             "scope": [
                 "global",
@@ -14581,7 +14581,7 @@
             "name": "range_alloc_block_size",
             "range": {
                 "from": 4096,
-                "to": 4294967295
+                "to": 4294966272
             },
             "scope": [
                 "global",
@@ -31208,6 +31208,40 @@
             ],
             "ids": [
                 "15#sysvar_ssl_fips_mode"
+            ]
+        },
+        "ssl_session_cache_mode": {
+            "cli": "--ssl_session_cache_mode={SERVER|OFF}",
+            "default": "SERVER",
+            "dynamic": true,
+            "name": "ssl_session_cache_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "validValues": [
+                "SERVER",
+                "OFF"
+            ],
+            "ids": [
+                "15#sysvar_ssl_session_cache_mode"
+            ]
+        },
+        "ssl_session_cache_timeout": {
+            "cli": "--ssl_session_cache_timeout",
+            "default": "300",
+            "dynamic": true,
+            "name": "ssl_session_cache_timeout",
+            "range": {
+                "from": 0,
+                "to": 84600
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "15#sysvar_ssl_session_cache_timeout"
             ]
         },
         "stored_program_definition_cache": {

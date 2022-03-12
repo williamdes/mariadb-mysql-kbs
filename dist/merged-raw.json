@@ -18604,7 +18604,7 @@
             "name": "query_alloc_block_size",
             "range": {
                 "from": 1024,
-                "to": 4294967295
+                "to": 4294966272
             },
             "scope": [
                 "global",
@@ -18790,7 +18790,7 @@
             "name": "range_alloc_block_size",
             "range": {
                 "from": 4096,
-                "to": 4294967295
+                "to": 4294966272
             },
             "scope": [
                 "global",
@@ -40020,6 +40020,46 @@
             "ids": [
                 {
                     "anchor": "sysvar_ssl_fips_mode",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "ssl_session_cache_mode": {
+            "cli": "--ssl_session_cache_mode={SERVER|OFF}",
+            "default": "SERVER",
+            "dynamic": true,
+            "name": "ssl_session_cache_mode",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "validValues": [
+                "SERVER",
+                "OFF"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_ssl_session_cache_mode",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "ssl_session_cache_timeout": {
+            "cli": "--ssl_session_cache_timeout",
+            "default": "300",
+            "dynamic": true,
+            "name": "ssl_session_cache_timeout",
+            "range": {
+                "from": 0,
+                "to": 84600
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_ssl_session_cache_timeout",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

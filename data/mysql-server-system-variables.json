@@ -2572,7 +2572,7 @@
       "name": "query_alloc_block_size",
       "range": {
         "from": 1024,
-        "to": 4294967295
+        "to": 4294966272
       },
       "scope": [
         "global",
@@ -2612,7 +2612,7 @@
       "name": "range_alloc_block_size",
       "range": {
         "from": 4096,
-        "to": 4294967295
+        "to": 4294966272
       },
       "scope": [
         "global",
@@ -3355,6 +3355,36 @@
         "global"
       ],
       "type": "file name"
+    },
+    {
+      "cli": "--ssl_session_cache_mode={SERVER|OFF}",
+      "default": "SERVER",
+      "dynamic": true,
+      "id": "sysvar_ssl_session_cache_mode",
+      "name": "ssl_session_cache_mode",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean",
+      "validValues": [
+        "SERVER",
+        "OFF"
+      ]
+    },
+    {
+      "cli": "--ssl_session_cache_timeout",
+      "default": "300",
+      "dynamic": true,
+      "id": "sysvar_ssl_session_cache_timeout",
+      "name": "ssl_session_cache_timeout",
+      "range": {
+        "from": 0,
+        "to": 84600
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     },
     {
       "cli": "--stored-program-cache=#",

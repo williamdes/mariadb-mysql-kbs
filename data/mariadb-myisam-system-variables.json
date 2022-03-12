@@ -174,7 +174,7 @@
     },
     {
       "cli": "--myisam-sort-buffer-size=#",
-      "default": "134217720 (128MB), 8388608 (8MB - before MariaDB 10.0.3)",
+      "default": "134217720 (128MB)",
       "dynamic": true,
       "id": "myisam_sort_buffer_size",
       "name": "myisam_sort_buffer_size",

@@ -277,6 +277,7 @@
       "type": "boolean"
     },
     {
+      "default": "None",
       "dynamic": false,
       "id": "log_bin_basename",
       "name": "log_bin_basename",
@@ -309,6 +310,7 @@
     },
     {
       "cli": "--log-bin-index=name",
+      "default": "None",
       "dynamic": false,
       "id": "log_bin_index",
       "name": "log_bin_index",
@@ -446,6 +448,7 @@
       ]
     },
     {
+      "default": "None",
       "dynamic": false,
       "id": "relay_log_basename",
       "name": "relay_log_basename",
@@ -936,7 +939,6 @@
       "id": "sql_log_bin",
       "name": "sql_log_bin",
       "scope": [
-        "global",
         "session"
       ],
       "type": "boolean"
@@ -968,7 +970,7 @@
     },
     {
       "cli": "--sync-master-info=#",
-      "default": "10000 (>= MariaDB 10.1.7), 0 (<= MariaDB 10.1.6)",
+      "default": "10000 (>= MariaDB 10.1.7)",
       "dynamic": true,
       "id": "sync_master_info",
       "name": "sync_master_info",
@@ -979,7 +981,7 @@
     },
     {
       "cli": "--sync-relay-log=#",
-      "default": "10000 (>= MariaDB 10.1.7), 0 (<= MariaDB 10.1.6)",
+      "default": "10000",
       "dynamic": true,
       "id": "sync_relay_log",
       "name": "sync_relay_log",
@@ -990,7 +992,7 @@
     },
     {
       "cli": "--sync-relay-log-info=#",
-      "default": "10000 (>= MariaDB 10.1.7), 0 (<= MariaDB 10.1.6)",
+      "default": "10000",
       "dynamic": true,
       "id": "sync_relay_log_info",
       "name": "sync_relay_log_info",

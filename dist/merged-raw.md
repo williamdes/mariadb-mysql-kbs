@@ -33847,12 +33847,12 @@
 |name|value|
 |----|-----|
 |Name|`ssl_session_cache_mode`|
-|Command line|`--ssl_session_cache_mode={SERVER|OFF}`|
+|Command line|`--ssl_session_cache_mode={ON|OFF}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`SERVER`|
+|Default value|`ON`|
 |Dynamic|`true`|
-|Valid value(s)|`SERVER`, `OFF`|
+|Valid value(s)|`ON`, `OFF`|
 
 ### Documentation(s)
 |source|anchor name|

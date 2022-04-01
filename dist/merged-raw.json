@@ -40025,8 +40025,8 @@
             ]
         },
         "ssl_session_cache_mode": {
-            "cli": "--ssl_session_cache_mode={SERVER|OFF}",
-            "default": "SERVER",
+            "cli": "--ssl_session_cache_mode={ON|OFF}",
+            "default": "ON",
             "dynamic": true,
             "name": "ssl_session_cache_mode",
             "scope": [
@@ -40034,7 +40034,7 @@
             ],
             "type": "boolean",
             "validValues": [
-                "SERVER",
+                "ON",
                 "OFF"
             ],
             "ids": [
@@ -40771,11 +40771,11 @@
         },
         "mysqlx_read_timeout": {
             "cli": "--mysqlx-read-timeout=#",
-            "default": "28800",
+            "default": "30",
             "dynamic": true,
             "name": "mysqlx_read_timeout",
             "range": {
-                "from": 30,
+                "from": 1,
                 "to": 2147483
             },
             "scope": [

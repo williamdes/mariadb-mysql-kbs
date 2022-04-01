@@ -3357,8 +3357,8 @@
       "type": "file name"
     },
     {
-      "cli": "--ssl_session_cache_mode={SERVER|OFF}",
-      "default": "SERVER",
+      "cli": "--ssl_session_cache_mode={ON|OFF}",
+      "default": "ON",
       "dynamic": true,
       "id": "sysvar_ssl_session_cache_mode",
       "name": "ssl_session_cache_mode",
@@ -3367,7 +3367,7 @@
       ],
       "type": "boolean",
       "validValues": [
-        "SERVER",
+        "ON",
         "OFF"
       ]
     },

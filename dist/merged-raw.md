@@ -33847,12 +33847,12 @@
 |name|value|
 |----|-----|
 |Name|`ssl_session_cache_mode`|
-|Command line|`--ssl_session_cache_mode={SERVER|OFF}`|
+|Command line|`--ssl_session_cache_mode={ON|OFF}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`SERVER`|
+|Default value|`ON`|
 |Dynamic|`true`|
-|Valid value(s)|`SERVER`, `OFF`|
+|Valid value(s)|`ON`, `OFF`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -34471,9 +34471,9 @@
 |Command line|`--mysqlx-read-timeout=#`|
 |Type of variable|`integer`|
 |Scope|`session`|
-|Default value|`28800`|
+|Default value|`30`|
 |Dynamic|`true`|
-|Range|from: `30` to: `2147483`|
+|Range|from: `1` to: `2147483`|
 
 ### Documentation(s)
 |source|anchor name|

@@ -248,12 +248,12 @@
     },
     {
       "cli": "--mysqlx-read-timeout=#",
-      "default": "28800",
+      "default": "30",
       "dynamic": true,
       "id": "sysvar_mysqlx_read_timeout",
       "name": "mysqlx_read_timeout",
       "range": {
-        "from": 30,
+        "from": 1,
         "to": 2147483
       },
       "scope": [

@@ -32,6 +32,6 @@ return new Doctum(
             'before_text' => 'Go back to the',
             'link_text'   => 'MariaDB and MySQL Knowledge bases',
             'after_text'  => 'project',
-        ]
+        ],
     ]
 );

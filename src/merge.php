@@ -147,7 +147,7 @@ foreach ($files as $file) {
                                     'set',
                                     'directory name',
                                     'file name',
-                                    'byte'
+                                    'byte',
                                 ];
                                 if (
                                     in_array($cacheValue, $realTypes)// original
@@ -450,7 +450,7 @@ $fileOut->varTypes = [
     'set' => 6,
     'directory name' => 7,
     'file name' => 8,
-    'byte' => 9
+    'byte' => 9,
 ];
 foreach ($fileOut->vars as $id => &$doc) {
     $data = new stdClass();

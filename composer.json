@@ -40,11 +40,11 @@
         }
     ],
     "scripts": {
-        "build": "./src/merge.php",
-        "test": "./vendor/bin/phpunit",
-        "phpstan": "./vendor/bin/phpstan",
-        "phpcs": "./vendor/bin/phpcs --no-cache",
-        "phpcbf": "./vendor/bin/phpcbf"
+        "build": "@php ./src/merge.php",
+        "test": "@php phpunit",
+        "phpstan": "@php phpstan",
+        "phpcs": "@php phpcs",
+        "phpcbf": "@php phpcbf"
     },
     "require": {
         "php": "^7.1 || ^8.0"

@@ -12,7 +12,7 @@ jobs:
             url: https://williamdes.github.io/mariadb-mysql-kbs/
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   # To also fetch the gh-pages branch
                   fetch-depth: 0

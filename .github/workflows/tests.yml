@@ -12,7 +12,7 @@ jobs:
                 os: [ubuntu-latest]
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - name: Use Node.js ${{ matrix.node_version }}
               uses: actions/setup-node@v1
               with:
@@ -49,7 +49,7 @@ jobs:
                 include:
                     - { php-version: 'nightly', composer-options: '--ignore-platform-req=php', experimental: true, os: ubuntu-latest }
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - name: Use php ${{ matrix.php-version }}
               uses: shivammathur/setup-php@v2
               with:

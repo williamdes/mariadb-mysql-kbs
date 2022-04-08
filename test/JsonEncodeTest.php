@@ -1,10 +1,12 @@
 <?php
+
 declare(strict_types = 1);
+
 namespace Williamdes\MariaDBMySQLKBS\Test;
 
-use \PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 use Williamdes\MariaDBMySQLKBS\KBDocumentation;
-use \Williamdes\MariaDBMySQLKBS\KBEntry;
+use Williamdes\MariaDBMySQLKBS\KBEntry;
 
 class JsonEncodeTest extends TestCase
 {
@@ -23,7 +25,10 @@ class JsonEncodeTest extends TestCase
         $entry = new KBEntry('a', 'b', true);
         $entry->addDocumentation('d');
         $entry->addDocumentation('e', '#f');
-        $this->assertEquals('{"name":"a","type":"b","dynamic":true,"docs":[{"url":"d"},{"url":"e","anchor":"#f"}]}', json_encode($entry));
+        $this->assertEquals(
+            '{"name":"a","type":"b","dynamic":true,"docs":[{"url":"d"},{"url":"e","anchor":"#f"}]}',
+            json_encode($entry)
+        );
     }
 
     /**
@@ -38,4 +43,5 @@ class JsonEncodeTest extends TestCase
         $entry = new KBDocumentation('a', 'b');
         $this->assertEquals('{"url":"a","anchor":"b"}', json_encode($entry));
     }
+
 }

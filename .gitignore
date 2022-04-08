@@ -6,6 +6,7 @@ node_modules
 /coverage
 /coverage.lcov
 /williamdes-mariadb-mysql-kbs-*.tar
-.phpunit.result.cache
+/.phpunit.result.cache
+/.php_cs.cache
 /target
 composer.lock

@@ -67,5 +67,10 @@
     },
     "non-feature-branches": [
         "update/*"
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
 }

@@ -6,6 +6,10 @@
       "dynamic": false,
       "id": "aria_block_size",
       "name": "aria_block_size",
+      "range": {
+        "from": 4096,
+        "to": 32768
+      },
       "scope": [
         "global"
       ],
@@ -239,7 +243,7 @@
     },
     {
       "cli": "--aria-sort-buffer-size=#",
-      "default": "268434432 (from MariaDB 10.0.3), 134217728 (before MariaDB 10.0.3)",
+      "default": "268434432",
       "dynamic": true,
       "id": "aria_sort_buffer_size",
       "name": "aria_sort_buffer_size",

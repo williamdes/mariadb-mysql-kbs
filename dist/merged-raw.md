@@ -104,6 +104,7 @@
 |Scope|`global`|
 |Default value|`8192`|
 |Dynamic|`false`|
+|Range|from: `4096` to: `32768`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -377,7 +378,7 @@
 |Command line|`--aria-sort-buffer-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`268434432 (from MariaDB 10.0.3), 134217728 (before MariaDB 10.0.3)`|
+|Default value|`268434432`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -4680,6 +4681,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[rocksdb_lock_wait_timeout](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myrocks/myrocks-system-variables/#rocksdb_lock_wait_timeout)|
+
+## rocksdb_log_dir
+|name|value|
+|----|-----|
+|Name|`rocksdb_log_dir`|
+|Command line|`--rocksdb-log-dir=#`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`(Empty)`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_log_dir](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myrocks/myrocks-system-variables/#rocksdb_log_dir)|
 
 ## rocksdb_log_file_time_to_roll
 |name|value|

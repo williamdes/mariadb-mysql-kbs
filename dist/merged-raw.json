@@ -109,6 +109,10 @@
             "default": "8192",
             "dynamic": false,
             "name": "aria_block_size",
+            "range": {
+                "from": 4096,
+                "to": 32768
+            },
             "scope": [
                 "global"
             ],
@@ -433,7 +437,7 @@
         },
         "aria_sort_buffer_size": {
             "cli": "--aria-sort-buffer-size=#",
-            "default": "268434432 (from MariaDB 10.0.3), 134217728 (before MariaDB 10.0.3)",
+            "default": "268434432",
             "dynamic": true,
             "name": "aria_sort_buffer_size",
             "scope": [
@@ -5363,6 +5367,22 @@
             "ids": [
                 {
                     "anchor": "rocksdb_lock_wait_timeout",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myrocks/myrocks-system-variables/"
+                }
+            ]
+        },
+        "rocksdb_log_dir": {
+            "cli": "--rocksdb-log-dir=#",
+            "default": "(Empty)",
+            "dynamic": false,
+            "name": "rocksdb_log_dir",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "rocksdb_log_dir",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myrocks/myrocks-system-variables/"
                 }
             ]

@@ -984,6 +984,17 @@
       "type": "integer"
     },
     {
+      "cli": "--rocksdb-log-dir=#",
+      "default": "(Empty)",
+      "dynamic": false,
+      "id": "rocksdb_log_dir",
+      "name": "rocksdb_log_dir",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--rocksdb-log-file-time-to_roll=#",
       "default": "0",
       "dynamic": false,

@@ -33228,6 +33228,7 @@
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -33491,6 +33492,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_persist_only_admin_x509_subject](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_persist_only_admin_x509_subject)|
+
+## persist_sensitive_variables_in_plaintext
+|name|value|
+|----|-----|
+|Name|`persist_sensitive_variables_in_plaintext`|
+|Command line|`--persist_sensitive_variables_in_plaintext[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_persist_sensitive_variables_in_plaintext](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_persist_sensitive_variables_in_plaintext)|
 
 ## print_identified_with_as_hex
 |name|value|
@@ -33813,6 +33829,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_show_create_table_verbosity](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_create_table_verbosity)|
 
+## show_gipk_in_create_table_and_information_schema
+|name|value|
+|----|-----|
+|Name|`show_gipk_in_create_table_and_information_schema`|
+|Command line|`--show-gipk-in-create-table-and-information-schema[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_show_gipk_in_create_table_and_information_schema](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_gipk_in_create_table_and_information_schema)|
+
 ## show_old_temporals
 |name|value|
 |----|-----|
@@ -33827,6 +33858,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_show_old_temporals](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_old_temporals)|
+
+## sql_generate_invisible_primary_key
+|name|value|
+|----|-----|
+|Name|`sql_generate_invisible_primary_key`|
+|Command line|`--sql-generate-invisible-primary-key[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_sql_generate_invisible_primary_key](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_generate_invisible_primary_key)|
 
 ## sql_require_primary_key
 |name|value|

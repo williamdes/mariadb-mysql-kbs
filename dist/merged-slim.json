@@ -30601,6 +30601,10 @@
             "default": "0",
             "dynamic": true,
             "name": "max_execution_time",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
             "scope": [
                 "global",
                 "session"
@@ -30856,6 +30860,19 @@
             "type": "string",
             "ids": [
                 "15#sysvar_persist_only_admin_x509_subject"
+            ]
+        },
+        "persist_sensitive_variables_in_plaintext": {
+            "cli": "--persist_sensitive_variables_in_plaintext[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": false,
+            "name": "persist_sensitive_variables_in_plaintext",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "15#sysvar_persist_sensitive_variables_in_plaintext"
             ]
         },
         "print_identified_with_as_hex": {
@@ -31181,6 +31198,20 @@
                 "15#sysvar_show_create_table_verbosity"
             ]
         },
+        "show_gipk_in_create_table_and_information_schema": {
+            "cli": "--show-gipk-in-create-table-and-information-schema[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "show_gipk_in_create_table_and_information_schema",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "15#sysvar_show_gipk_in_create_table_and_information_schema"
+            ]
+        },
         "show_old_temporals": {
             "cli": "--show-old-temporals[={OFF|ON}]",
             "default": "OFF",
@@ -31193,6 +31224,20 @@
             "type": "boolean",
             "ids": [
                 "15#sysvar_show_old_temporals"
+            ]
+        },
+        "sql_generate_invisible_primary_key": {
+            "cli": "--sql-generate-invisible-primary-key[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "sql_generate_invisible_primary_key",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "15#sysvar_sql_generate_invisible_primary_key"
             ]
         },
         "sql_require_primary_key": {

@@ -14495,6 +14495,20 @@
                 }
             ]
         },
+        "Resultset_metadata_skipped": {
+            "name": "Resultset_metadata_skipped",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "resultset_metadata_skipped",
+                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
+                }
+            ]
+        },
         "Rows_read": {
             "name": "Rows_read",
             "scope": [
@@ -15859,7 +15873,7 @@
         },
         "encrypt_tmp_files": {
             "cli": "--encrypt-tmp-files[={0|1}]",
-            "default": "OFF (>= MariaDB 10.1.7), ON (<= MariaDB 10.1.6)",
+            "default": "OFF",
             "dynamic": false,
             "name": "encrypt_tmp_files",
             "scope": [
@@ -17793,7 +17807,7 @@
         },
         "max_statement_time": {
             "cli": "--max-statement-time[=#]",
-            "default": "0.000000 >= MariaDB 10.1.13, 0 <= MariaDB 10.1.12",
+            "default": "0.000000",
             "dynamic": true,
             "name": "max_statement_time",
             "range": {

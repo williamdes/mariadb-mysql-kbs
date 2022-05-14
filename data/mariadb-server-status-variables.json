@@ -2516,6 +2516,15 @@
       "type": "integer"
     },
     {
+      "id": "resultset_metadata_skipped",
+      "name": "Resultset_metadata_skipped",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "rows_read",
       "name": "Rows_read",
       "scope": [

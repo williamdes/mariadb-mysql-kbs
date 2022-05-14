@@ -546,7 +546,7 @@
     },
     {
       "cli": "--encrypt-tmp-files[={0|1}]",
-      "default": "OFF (>= MariaDB 10.1.7), ON (<= MariaDB 10.1.6)",
+      "default": "OFF",
       "dynamic": false,
       "id": "encrypt_tmp_files",
       "name": "encrypt_tmp_files",
@@ -1074,7 +1074,7 @@
     },
     {
       "cli": "--join-buffer-size=#",
-      "default": "262144 (256kB) (>=MariaDB 10.1.7), 131072 (128kB) (<=MariaDB 10.1.6)",
+      "default": "262144 (256kB)",
       "dynamic": true,
       "id": "join_buffer_size",
       "name": "join_buffer_size",
@@ -1489,7 +1489,7 @@
     },
     {
       "cli": "--max-allowed-packet=#",
-      "default": "16777216 (16M) >= MariaDB 10.2.4, 4194304 (4M) >= MariaDB 10.1.7, 1048576 (1MB) <= MariaDB 10.1.6, 1073741824 (1GB) (client-side)",
+      "default": "16777216 (16M) >= MariaDB 10.2.4, 4194304 (4M) >= MariaDB 10.1.7, 1073741824 (1GB) (client-side)",
       "dynamic": false,
       "id": "max_allowed_packet",
       "name": "max_allowed_packet",
@@ -1767,7 +1767,7 @@
     },
     {
       "cli": "--max-statement-time[=#]",
-      "default": "0.000000 >= MariaDB 10.1.13, 0 <= MariaDB 10.1.12",
+      "default": "0.000000",
       "dynamic": true,
       "id": "max_statement_time",
       "name": "max_statement_time",

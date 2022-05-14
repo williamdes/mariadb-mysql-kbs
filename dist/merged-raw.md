@@ -12299,6 +12299,18 @@
 |------|----|
 |mariadb.com|[questions](https://mariadb.com/kb/en/library/documentation/server-status-variables/#questions)|
 
+## Resultset_metadata_skipped
+|name|value|
+|----|-----|
+|Name|`Resultset_metadata_skipped`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[resultset_metadata_skipped](https://mariadb.com/kb/en/library/documentation/server-status-variables/#resultset_metadata_skipped)|
+
 ## Rows_read
 |name|value|
 |----|-----|
@@ -13394,7 +13406,7 @@
 |Command line|`--encrypt-tmp-files[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF (>= MariaDB 10.1.7), ON (<= MariaDB 10.1.6)`|
+|Default value|`OFF`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -14874,7 +14886,7 @@
 |Command line|`--max-statement-time[=#]`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`0.000000 >= MariaDB 10.1.13, 0 <= MariaDB 10.1.12`|
+|Default value|`0.000000`|
 |Dynamic|`true`|
 |Range|from: `0` to: `upwards`|
 

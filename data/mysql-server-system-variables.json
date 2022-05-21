@@ -1588,7 +1588,8 @@
       "id": "sysvar_long_query_time",
       "name": "long_query_time",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 31536000
       },
       "scope": [
         "global",

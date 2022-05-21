@@ -14518,7 +14518,7 @@
 |Scope|`global`, `session`|
 |Default value|`10`|
 |Dynamic|`true`|
-|Range|from: `0` to: `upwards`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|

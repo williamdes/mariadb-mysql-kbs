@@ -17297,8 +17297,7 @@
             "dynamic": true,
             "name": "long_query_time",
             "range": {
-                "from": 0,
-                "to": "upwards"
+                "from": 0
             },
             "scope": [
                 "global",

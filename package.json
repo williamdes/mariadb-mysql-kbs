@@ -56,7 +56,7 @@
         "url": "https://william.wdes.fr"
     },
     "engines": {
-        "node": ">=12"
+        "node": ">=14"
     },
     "dependencies": {},
     "devDependencies": {

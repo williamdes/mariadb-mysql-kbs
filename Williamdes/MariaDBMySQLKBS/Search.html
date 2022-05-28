@@ -10,25 +10,37 @@
         <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
         <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
         <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
         <script async defer src="../../js/bootstrap.min.js"></script>
-        <script src="../../js/typeahead.min.js"></script>
-        <script src="../../doctum.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
     </head>
 
-    <body id="class" data-name="class:Williamdes_MariaDBMySQLKBS_Search" data-root-path="../../">
+    <body id="class" data-name="class:Williamdes_MariaDBMySQLKBS_Search" data-root-path="../../" data-search-index-url="../../doctum-search.json">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../search.html">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
             <span class="icon icon-search"></span>
             <input name="search"
+                   id="doctum-search-auto-complete"
                    class="typeahead form-control"
                    type="search"
-                   placeholder="Search">
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
         </form>
     </div>
 
@@ -128,7 +140,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_data">
-                    static                                                            mixed
+                    static                                                            <a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a>
                                                                                 
                                     </td>
                 <td>$data</td>
@@ -247,7 +259,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_loadData">
-        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L44">at line 44</a></div>
+        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L43">at line 43</a></div>
         <code>        static            void
     <strong>loadData</strong>()
         </code>
@@ -288,7 +300,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_loadTestData">
-        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L66">at line 66</a></div>
+        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L70">at line 70</a></div>
         <code>        static            void
     <strong>loadTestData</strong>(<a href="../../Williamdes/MariaDBMySQLKBS/SlimData.html"><abbr title="Williamdes\MariaDBMySQLKBS\SlimData">SlimData</abbr></a> $slimData)
         </code>
@@ -330,7 +342,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getByName">
-        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L80">at line 80</a></div>
+        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L87">at line 87</a></div>
         <code>        static            string
     <strong>getByName</strong>(string $name, int $type = Search::ANY)
         </code>
@@ -386,7 +398,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVariable">
-        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L110">at line 110</a></div>
+        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L117">at line 117</a></div>
         <code>        static            <a target="_blank" rel="noopener" href="https://www.php.net/stdClass">stdClass</a>
     <strong>getVariable</strong>(string $name)
         </code>
@@ -437,7 +449,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVariableType">
-        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L127">at line 127</a></div>
+        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L134">at line 134</a></div>
         <code>        static            string
     <strong>getVariableType</strong>(string $name)
         </code>
@@ -488,7 +500,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getStaticVariables">
-        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L143">at line 143</a></div>
+        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L150">at line 150</a></div>
         <code>        static            array
     <strong>getStaticVariables</strong>()
         </code>
@@ -520,7 +532,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDynamicVariables">
-        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L153">at line 153</a></div>
+        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L160">at line 160</a></div>
         <code>        static            array
     <strong>getDynamicVariables</strong>()
         </code>
@@ -552,7 +564,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVariablesWithDynamic">
-        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L164">at line 164</a></div>
+        <div class="location"><a href="https://github.com/williamdes/mariadb-mysql-kbs/blob/main/src/Search.php#L171">at line 171</a></div>
         <code>        static            array
     <strong>getVariablesWithDynamic</strong>(bool $dynamic)
         </code>

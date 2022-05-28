@@ -223,6 +223,7 @@ const status = [
     'ssltls',
     'mariadb-audit-plugin',
     'semisynchronous-replication-plugin',
+    'sql-error-log-plugin',
 ];
 
 const pages = [];

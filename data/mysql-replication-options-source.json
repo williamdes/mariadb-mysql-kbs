@@ -47,18 +47,28 @@
       "type": "integer"
     },
     {
+      "default": "999999",
       "dynamic": true,
       "id": "sysvar_immediate_server_version",
       "name": "immediate_server_version",
+      "range": {
+        "from": 0,
+        "to": 999999
+      },
       "scope": [
         "session"
       ],
       "type": "integer"
     },
     {
+      "default": "999999",
       "dynamic": true,
       "id": "sysvar_original_server_version",
       "name": "original_server_version",
+      "range": {
+        "from": 0,
+        "to": 999999
+      },
       "scope": [
         "session"
       ],
@@ -81,6 +91,10 @@
       "dynamic": true,
       "id": "sysvar_rpl_semi_sync_master_timeout",
       "name": "rpl_semi_sync_master_timeout",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],
@@ -92,6 +106,10 @@
       "dynamic": true,
       "id": "sysvar_rpl_semi_sync_master_trace_level",
       "name": "rpl_semi_sync_master_trace_level",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],
@@ -155,6 +173,10 @@
       "dynamic": true,
       "id": "sysvar_rpl_semi_sync_source_timeout",
       "name": "rpl_semi_sync_source_timeout",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],
@@ -166,6 +188,10 @@
       "dynamic": true,
       "id": "sysvar_rpl_semi_sync_source_trace_level",
       "name": "rpl_semi_sync_source_trace_level",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],

@@ -628,6 +628,10 @@
       "dynamic": true,
       "id": "sysvar_rpl_semi_sync_replica_trace_level",
       "name": "rpl_semi_sync_replica_trace_level",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],
@@ -650,13 +654,17 @@
       "dynamic": true,
       "id": "sysvar_rpl_semi_sync_slave_trace_level",
       "name": "rpl_semi_sync_slave_trace_level",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],
       "type": "integer"
     },
     {
-      "cli": "--rpl-stop-replica-timeout=seconds",
+      "cli": "--rpl-stop-replica-timeout=#",
       "default": "31536000",
       "dynamic": true,
       "id": "sysvar_rpl_stop_replica_timeout",
@@ -671,7 +679,7 @@
       "type": "integer"
     },
     {
-      "cli": "--rpl-stop-slave-timeout=seconds",
+      "cli": "--rpl-stop-slave-timeout=#",
       "default": "31536000",
       "dynamic": true,
       "id": "sysvar_rpl_stop_slave_timeout",

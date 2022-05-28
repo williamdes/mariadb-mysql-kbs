@@ -758,6 +758,10 @@
       "dynamic": true,
       "id": "sysvar_delayed_insert_timeout",
       "name": "delayed_insert_timeout",
+      "range": {
+        "from": 1,
+        "to": 31536000
+      },
       "scope": [
         "global"
       ],
@@ -909,7 +913,8 @@
       "id": "sysvar_flush_time",
       "name": "flush_time",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 31536000
       },
       "scope": [
         "global"
@@ -940,11 +945,13 @@
     },
     {
       "cli": "--ft-max-word-len=#",
+      "default": "82",
       "dynamic": false,
       "id": "sysvar_ft_max_word_len",
       "name": "ft_max_word_len",
       "range": {
-        "from": 10
+        "from": 10,
+        "to": 82
       },
       "scope": [
         "global"
@@ -958,7 +965,8 @@
       "id": "sysvar_ft_min_word_len",
       "name": "ft_min_word_len",
       "range": {
-        "from": 1
+        "from": 1,
+        "to": 82
       },
       "scope": [
         "global"
@@ -1174,7 +1182,8 @@
       "id": "sysvar_interactive_timeout",
       "name": "interactive_timeout",
       "range": {
-        "from": 1
+        "from": 1,
+        "to": 31536000
       },
       "scope": [
         "global",
@@ -1323,6 +1332,10 @@
       "dynamic": false,
       "id": "sysvar_large_page_size",
       "name": "large_page_size",
+      "range": {
+        "from": 0,
+        "to": 65535
+      },
       "scope": [
         "global"
       ],
@@ -1576,6 +1589,10 @@
       "dynamic": true,
       "id": "sysvar_log_throttle_queries_not_using_indexes",
       "name": "log_throttle_queries_not_using_indexes",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],
@@ -1767,9 +1784,14 @@
       "type": "integer"
     },
     {
+      "default": "0",
       "dynamic": true,
       "id": "sysvar_max_insert_delayed_threads",
       "name": "max_insert_delayed_threads",
+      "range": {
+        "from": 20,
+        "to": 16384
+      },
       "scope": [
         "global",
         "session"
@@ -1875,6 +1897,7 @@
       "id": "sysvar_max_sp_recursion_depth",
       "name": "max_sp_recursion_depth",
       "range": {
+        "from": 0,
         "to": 255
       },
       "scope": [
@@ -1987,6 +2010,9 @@
       "dynamic": true,
       "id": "sysvar_myisam_max_sort_file_size",
       "name": "myisam_max_sort_file_size",
+      "range": {
+        "from": 0
+      },
       "scope": [
         "global"
       ],
@@ -2142,7 +2168,8 @@
       "id": "sysvar_net_read_timeout",
       "name": "net_read_timeout",
       "range": {
-        "from": 1
+        "from": 1,
+        "to": 31536000
       },
       "scope": [
         "global",
@@ -2172,7 +2199,8 @@
       "id": "sysvar_net_write_timeout",
       "name": "net_write_timeout",
       "range": {
-        "from": 1
+        "from": 1,
+        "to": 31536000
       },
       "scope": [
         "global",
@@ -2326,6 +2354,10 @@
       "dynamic": true,
       "id": "sysvar_optimizer_trace_limit",
       "name": "optimizer_trace_limit",
+      "range": {
+        "from": 0,
+        "to": 2147483647
+      },
       "scope": [
         "global",
         "session"
@@ -2338,6 +2370,10 @@
       "dynamic": true,
       "id": "sysvar_optimizer_trace_max_mem_size",
       "name": "optimizer_trace_max_mem_size",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global",
         "session"
@@ -2350,6 +2386,10 @@
       "dynamic": true,
       "id": "sysvar_optimizer_trace_offset",
       "name": "optimizer_trace_offset",
+      "range": {
+        "from": -2147483647,
+        "to": 2147483647
+      },
       "scope": [
         "global",
         "session"
@@ -2536,9 +2576,14 @@
       ]
     },
     {
+      "default": "10",
       "dynamic": false,
       "id": "sysvar_protocol_version",
       "name": "protocol_version",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],
@@ -2572,9 +2617,14 @@
       "type": "boolean"
     },
     {
+      "default": "2147483647",
       "dynamic": true,
       "id": "sysvar_pseudo_thread_id",
       "name": "pseudo_thread_id",
+      "range": {
+        "from": 0,
+        "to": 2147483647
+      },
       "scope": [
         "session"
       ],
@@ -2612,9 +2662,14 @@
       "type": "integer"
     },
     {
+      "default": "N/A",
       "dynamic": true,
       "id": "sysvar_rand_seed1",
       "name": "rand_seed1",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "session"
       ],
@@ -3099,6 +3154,10 @@
       "dynamic": true,
       "id": "sysvar_slow_launch_time",
       "name": "slow_launch_time",
+      "range": {
+        "from": 0,
+        "to": 31536000
+      },
       "scope": [
         "global"
       ],
@@ -3290,9 +3349,14 @@
       "type": "boolean"
     },
     {
+      "default": "18446744073709551615",
       "dynamic": true,
       "id": "sysvar_sql_select_limit",
       "name": "sql_select_limit",
+      "range": {
+        "from": 0,
+        "to": 18446744073709552000
+      },
       "scope": [
         "global",
         "session"

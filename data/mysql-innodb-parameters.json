@@ -69,6 +69,10 @@
       "dynamic": false,
       "id": "sysvar_daemon_memcached_r_batch_size",
       "name": "daemon_memcached_r_batch_size",
+      "range": {
+        "from": 1,
+        "to": 1073741824
+      },
       "scope": [
         "global"
       ],
@@ -80,6 +84,10 @@
       "dynamic": false,
       "id": "sysvar_daemon_memcached_w_batch_size",
       "name": "daemon_memcached_w_batch_size",
+      "range": {
+        "from": 1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -206,6 +214,10 @@
       "dynamic": true,
       "id": "sysvar_innodb_api_trx_level",
       "name": "innodb_api_trx_level",
+      "range": {
+        "from": 0,
+        "to": 3
+      },
       "scope": [
         "global"
       ],
@@ -439,6 +451,7 @@
       "id": "sysvar_innodb_change_buffering_debug",
       "name": "innodb_change_buffering_debug",
       "range": {
+        "from": 0,
         "to": 2
       },
       "scope": [
@@ -802,6 +815,7 @@
       "id": "sysvar_innodb_fil_make_page_dirty_debug",
       "name": "innodb_fil_make_page_dirty_debug",
       "range": {
+        "from": 0,
         "to": 2
       },
       "scope": [
@@ -1837,6 +1851,7 @@
       "id": "sysvar_innodb_saved_page_number_debug",
       "name": "innodb_saved_page_number_debug",
       "range": {
+        "from": 0,
         "to": 2
       },
       "scope": [
@@ -1984,6 +1999,10 @@
       "dynamic": true,
       "id": "sysvar_innodb_stats_transient_sample_pages",
       "name": "innodb_stats_transient_sample_pages",
+      "range": {
+        "from": 1,
+        "to": 18446744073709552000
+      },
       "scope": [
         "global"
       ],
@@ -2158,6 +2177,7 @@
       "id": "sysvar_innodb_trx_rseg_n_slots_debug",
       "name": "innodb_trx_rseg_n_slots_debug",
       "range": {
+        "from": 0,
         "to": 1024
       },
       "scope": [

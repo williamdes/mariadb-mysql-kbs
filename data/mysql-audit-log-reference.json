@@ -118,9 +118,14 @@
       "type": "file name"
     },
     {
+      "default": "1",
       "dynamic": false,
       "id": "sysvar_audit_log_filter_id",
       "name": "audit_log_filter_id",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global",
         "session"

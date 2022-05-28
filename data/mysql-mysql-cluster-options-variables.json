@@ -259,6 +259,7 @@
     },
     {
       "cli": "--ndb-nodeid=#",
+      "default": "N/A",
       "dynamic": false,
       "id": "option_mysqld_ndb-nodeid",
       "name": "ndb_nodeid",
@@ -360,6 +361,10 @@
       "dynamic": true,
       "id": "sysvar_ndb_cache_check_time",
       "name": "ndb_cache_check_time",
+      "range": {
+        "from": 0,
+        "to": 31536000
+      },
       "scope": [
         "global"
       ],
@@ -471,6 +476,10 @@
       "dynamic": true,
       "id": "sysvar_ndb_extra_logging",
       "name": "ndb_extra_logging",
+      "range": {
+        "from": 0,
+        "to": 1
+      },
       "scope": [
         "global"
       ],
@@ -871,6 +880,10 @@
       "dynamic": true,
       "id": "sysvar_ndbinfo_max_bytes",
       "name": "ndbinfo_max_bytes",
+      "range": {
+        "from": 0,
+        "to": 65535
+      },
       "scope": [
         "global",
         "session"
@@ -883,6 +896,10 @@
       "dynamic": true,
       "id": "sysvar_ndbinfo_max_rows",
       "name": "ndbinfo_max_rows",
+      "range": {
+        "from": 1,
+        "to": 256
+      },
       "scope": [
         "global",
         "session"

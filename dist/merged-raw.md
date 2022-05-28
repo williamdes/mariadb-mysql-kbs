@@ -3395,6 +3395,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -5946,6 +5947,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -5961,6 +5963,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1024`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -5976,6 +5979,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -5991,6 +5995,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1024`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6006,6 +6011,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6021,6 +6027,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1024`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6036,6 +6043,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6051,6 +6059,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1024`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6098,6 +6107,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6163,6 +6173,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6178,6 +6189,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6193,6 +6205,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `0` to: `1024`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6208,6 +6221,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6239,6 +6253,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `104857600`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6270,6 +6285,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6301,6 +6317,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `104857600`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6333,6 +6350,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6380,8 +6398,8 @@
 |Command line|`--performance-schema-max-statement-classes=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`(-1 signifies autosizing; do not use -1)`|
 |Dynamic|`false`|
+|Range|from: `0` to: `256`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6398,6 +6416,7 @@
 |Scope|`global`|
 |Default value|`10`|
 |Dynamic|`false`|
+|Range|from: `1` to: `256`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6413,6 +6432,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6428,6 +6448,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6443,6 +6464,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6474,6 +6496,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6505,6 +6528,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6520,6 +6544,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -8715,6 +8740,7 @@
 |Scope|`global`|
 |Default value|`10000`|
 |Dynamic|`true`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -8730,6 +8756,7 @@
 |Scope|`global`|
 |Default value|`32`|
 |Dynamic|`true`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -8823,6 +8850,7 @@
 |Scope|`global`|
 |Default value|`32`|
 |Dynamic|`true`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -13330,6 +13358,7 @@
 |Scope|`global`|
 |Default value|`300`|
 |Dynamic|`true`|
+|Range|from: `1` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -13573,7 +13602,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -13620,7 +13649,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
-|Range|from: `10`|
+|Range|from: `10` to: `82`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -13637,7 +13666,7 @@
 |Scope|`global`|
 |Default value|`4`|
 |Dynamic|`false`|
-|Range|from: `1`|
+|Range|from: `1` to: `82`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -14070,7 +14099,7 @@
 |Scope|`global`, `session`|
 |Default value|`28800`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -14164,6 +14193,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
+|Range|from: `0` to: `65535`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -14692,7 +14722,9 @@
 |Name|`max_insert_delayed_threads`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `20` to: `16384`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -14872,6 +14904,7 @@
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `255`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15069,7 +15102,7 @@
 |Scope|`global`, `session`|
 |Default value|`30`|
 |Dynamic|`true`|
-|Range|from: `1` to: `upwards`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15103,7 +15136,7 @@
 |Scope|`global`, `session`|
 |Default value|`60`|
 |Dynamic|`true`|
-|Range|from: `1` to: `upwards`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15442,7 +15475,9 @@
 |Name|`protocol_version`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`10`|
 |Dynamic|`false`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15498,7 +15533,9 @@
 |Name|`pseudo_thread_id`|
 |Type of variable|`integer`|
 |Scope|`session`|
+|Default value|`2147483647`|
 |Dynamic|`true`|
+|Range|from: `0` to: `2147483647`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15636,7 +15673,9 @@
 |Name|`rand_seed1`|
 |Type of variable|`integer`|
 |Scope|`session`|
+|Default value|`N/A`|
 |Dynamic|`true`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15990,6 +16029,7 @@
 |Scope|`global`|
 |Default value|`2`|
 |Dynamic|`true`|
+|Range|from: `0` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -16254,7 +16294,9 @@
 |Name|`sql_select_limit`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`18446744073709551615`|
 |Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -24297,6 +24339,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `3`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -24743,6 +24786,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `2`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27346,6 +27390,7 @@
 |Scope|`global`|
 |Default value|`8`|
 |Dynamic|`true`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27966,7 +28011,9 @@
 |Name|`audit_log_filter_id`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`1`|
 |Dynamic|`false`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28254,6 +28301,7 @@
 |Scope|`global`|
 |Default value|`1`|
 |Dynamic|`false`|
+|Range|from: `1` to: `1073741824`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28269,6 +28317,7 @@
 |Scope|`global`|
 |Default value|`1`|
 |Dynamic|`false`|
+|Range|from: `1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28514,7 +28563,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|to: `2`|
+|Range|from: `0` to: `2`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28732,7 +28781,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|to: `2`|
+|Range|from: `0` to: `2`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28825,7 +28874,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|to: `1024`|
+|Range|from: `0` to: `1024`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29219,6 +29268,7 @@
 |Command line|`--ndb-nodeid=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`N/A`|
 |Dynamic|`false`|
 |Range|from: `1` to: `63`|
 
@@ -29342,6 +29392,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29419,6 +29470,7 @@
 |Scope|`global`|
 |Default value|`1`|
 |Dynamic|`true`|
+|Range|from: `0` to: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29816,6 +29868,7 @@
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `65535`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29831,6 +29884,7 @@
 |Scope|`global`, `session`|
 |Default value|`10`|
 |Dynamic|`true`|
+|Range|from: `1` to: `256`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29936,6 +29990,7 @@
 |Scope|`global`|
 |Default value|`(-1 signifies autoscaling; do not use -1)`|
 |Dynamic|`false`|
+|Range|from: `-1` to: `4194304`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31424,6 +31479,7 @@
 |Scope|`global`|
 |Default value|`32`|
 |Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31434,7 +31490,7 @@
 |name|value|
 |----|-----|
 |Name|`rpl_stop_replica_timeout`|
-|Command line|`--rpl-stop-replica-timeout=seconds`|
+|Command line|`--rpl-stop-replica-timeout=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`31536000`|
@@ -31450,7 +31506,7 @@
 |name|value|
 |----|-----|
 |Name|`rpl_stop_slave_timeout`|
-|Command line|`--rpl-stop-slave-timeout=seconds`|
+|Command line|`--rpl-stop-slave-timeout=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`31536000`|
@@ -31649,7 +31705,9 @@
 |Name|`immediate_server_version`|
 |Type of variable|`integer`|
 |Scope|`session`|
+|Default value|`999999`|
 |Dynamic|`true`|
+|Range|from: `0` to: `999999`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31662,7 +31720,9 @@
 |Name|`original_server_version`|
 |Type of variable|`integer`|
 |Scope|`session`|
+|Default value|`999999`|
 |Dynamic|`true`|
+|Range|from: `0` to: `999999`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31709,6 +31769,7 @@
 |Scope|`global`|
 |Default value|`10000`|
 |Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31724,6 +31785,7 @@
 |Scope|`global`|
 |Default value|`32`|
 |Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -33210,6 +33272,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -33377,6 +33440,7 @@
 |Scope|`global`, `session`|
 |Default value|`1`|
 |Dynamic|`true`|
+|Range|from: `0` to: `2147483647`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -33392,6 +33456,7 @@
 |Scope|`global`, `session`|
 |Default value|`-1`|
 |Dynamic|`true`|
+|Range|from: `-2147483647` to: `2147483647`|
 
 ### Documentation(s)
 |source|anchor name|

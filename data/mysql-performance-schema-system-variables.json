@@ -62,6 +62,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_events_stages_history_long_size",
       "name": "performance_schema_events_stages_history_long_size",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -73,6 +77,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_events_stages_history_size",
       "name": "performance_schema_events_stages_history_size",
+      "range": {
+        "from": -1,
+        "to": 1024
+      },
       "scope": [
         "global"
       ],
@@ -84,6 +92,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_events_statements_history_long_size",
       "name": "performance_schema_events_statements_history_long_size",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -95,6 +107,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_events_statements_history_size",
       "name": "performance_schema_events_statements_history_size",
+      "range": {
+        "from": -1,
+        "to": 1024
+      },
       "scope": [
         "global"
       ],
@@ -106,6 +122,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_events_transactions_history_long_size",
       "name": "performance_schema_events_transactions_history_long_size",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -117,6 +137,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_events_transactions_history_size",
       "name": "performance_schema_events_transactions_history_size",
+      "range": {
+        "from": -1,
+        "to": 1024
+      },
       "scope": [
         "global"
       ],
@@ -128,6 +152,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_events_waits_history_long_size",
       "name": "performance_schema_events_waits_history_long_size",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -139,6 +167,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_events_waits_history_size",
       "name": "performance_schema_events_waits_history_size",
+      "range": {
+        "from": -1,
+        "to": 1024
+      },
       "scope": [
         "global"
       ],
@@ -178,6 +210,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_cond_instances",
       "name": "performance_schema_max_cond_instances",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -233,6 +269,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_file_handles",
       "name": "performance_schema_max_file_handles",
+      "range": {
+        "from": 0,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -244,6 +284,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_file_instances",
       "name": "performance_schema_max_file_instances",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -255,6 +299,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_index_stat",
       "name": "performance_schema_max_index_stat",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -266,6 +314,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_memory_classes",
       "name": "performance_schema_max_memory_classes",
+      "range": {
+        "from": 0,
+        "to": 1024
+      },
       "scope": [
         "global"
       ],
@@ -277,6 +329,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_metadata_locks",
       "name": "performance_schema_max_metadata_locks",
+      "range": {
+        "from": -1,
+        "to": 10485760
+      },
       "scope": [
         "global"
       ],
@@ -301,6 +357,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_mutex_instances",
       "name": "performance_schema_max_mutex_instances",
+      "range": {
+        "from": -1,
+        "to": 104857600
+      },
       "scope": [
         "global"
       ],
@@ -312,6 +372,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_prepared_statements_instances",
       "name": "performance_schema_max_prepared_statements_instances",
+      "range": {
+        "from": -1,
+        "to": 4194304
+      },
       "scope": [
         "global"
       ],
@@ -337,6 +401,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_program_instances",
       "name": "performance_schema_max_program_instances",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -344,10 +412,14 @@
     },
     {
       "cli": "--performance-schema-max-rwlock-instances=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "(-1 signifies autosizing; do not use -1)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_rwlock_instances",
       "name": "performance_schema_max_rwlock_instances",
+      "range": {
+        "from": -1,
+        "to": 104857600
+      },
       "scope": [
         "global"
       ],
@@ -373,6 +445,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_socket_instances",
       "name": "performance_schema_max_socket_instances",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -408,10 +484,13 @@
     },
     {
       "cli": "--performance-schema-max-statement-classes=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_statement_classes",
       "name": "performance_schema_max_statement_classes",
+      "range": {
+        "from": 0,
+        "to": 256
+      },
       "scope": [
         "global"
       ],
@@ -423,6 +502,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_statement_stack",
       "name": "performance_schema_max_statement_stack",
+      "range": {
+        "from": 1,
+        "to": 256
+      },
       "scope": [
         "global"
       ],
@@ -434,6 +517,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_table_handles",
       "name": "performance_schema_max_table_handles",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -445,6 +532,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_table_instances",
       "name": "performance_schema_max_table_instances",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -456,6 +547,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_max_table_lock_stat",
       "name": "performance_schema_max_table_lock_stat",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -477,10 +572,14 @@
     },
     {
       "cli": "--performance-schema-max-thread-instances=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "(-1 signifies autosizing; do not use -1)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_thread_instances",
       "name": "performance_schema_max_thread_instances",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -507,6 +606,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_setup_actors_size",
       "name": "performance_schema_setup_actors_size",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],
@@ -518,6 +621,10 @@
       "dynamic": false,
       "id": "sysvar_performance_schema_setup_objects_size",
       "name": "performance_schema_setup_objects_size",
+      "range": {
+        "from": -1,
+        "to": 1048576
+      },
       "scope": [
         "global"
       ],

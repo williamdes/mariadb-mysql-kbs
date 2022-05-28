@@ -1,170 +1,87 @@
+var Doctum = {
+    treeJson: {"tree":{"l":0,"n":"","p":"","c":[{"l":1,"n":"Williamdes","p":"Williamdes","c":[{"l":2,"n":"MariaDBMySQLKBS","p":"Williamdes/MariaDBMySQLKBS","c":[{"l":3,"n":"KBDocumentation","p":"Williamdes/MariaDBMySQLKBS/KBDocumentation"},{"l":3,"n":"KBEntry","p":"Williamdes/MariaDBMySQLKBS/KBEntry"},{"l":3,"n":"KBException","p":"Williamdes/MariaDBMySQLKBS/KBException"},{"l":3,"n":"Search","p":"Williamdes/MariaDBMySQLKBS/Search"},{"l":3,"n":"SlimData","p":"Williamdes/MariaDBMySQLKBS/SlimData"}]}]}]},"treeOpenLevel":2},
+    /** @var boolean */
+    treeLoaded: false,
+    /** @var boolean */
+    listenersRegistered: false,
+    autoCompleteData: null,
+    /** @var boolean */
+    autoCompleteLoading: false,
+    /** @var boolean */
+    autoCompleteLoaded: false,
+    /** @var string|null */
+    rootPath: null,
+    /** @var string|null */
+    autoCompleteDataUrl: null,
+    /** @var HTMLElement|null */
+    doctumSearchAutoComplete: null,
+    /** @var HTMLElement|null */
+    doctumSearchAutoCompleteProgressBarContainer: null,
+    /** @var HTMLElement|null */
+    doctumSearchAutoCompleteProgressBar: null,
+    /** @var number */
+    doctumSearchAutoCompleteProgressBarPercent: 0,
+    /** @var autoComplete|null */
+    autoCompleteJS: null,
+    querySearchSecurityRegex: /([^0-9a-zA-Z:\\\\_\s])/gi,
+    buildTreeNode: function (treeNode, htmlNode, treeOpenLevel) {
+        var ulNode = document.createElement('ul');
+        for (var childKey in treeNode.c) {
+            var child = treeNode.c[childKey];
+            var liClass = document.createElement('li');
+            var hasChildren = child.hasOwnProperty('c');
+            var nodeSpecialName = (hasChildren ? 'namespace:' : 'class:') + child.p.replace(/\//g, '_');
+            liClass.setAttribute('data-name', nodeSpecialName);
 
-
-(function(root) {
-
-    var bhIndex = null;
-    var rootPath = '';
-    var treeHtml = '<ul><li data-name="namespace:Williamdes" class="opened"><div style="padding-left:0px" class="hd"><span class="icon icon-play"></span><a href="Williamdes.html">Williamdes</a></div><div class="bd"><ul><li data-name="namespace:Williamdes_MariaDBMySQLKBS" class="opened"><div style="padding-left:18px" class="hd"><span class="icon icon-play"></span><a href="Williamdes/MariaDBMySQLKBS.html">MariaDBMySQLKBS</a></div><div class="bd"><ul><li data-name="class:Williamdes_MariaDBMySQLKBS_KBDocumentation" ><div style="padding-left:44px" class="hd leaf"><a href="Williamdes/MariaDBMySQLKBS/KBDocumentation.html">KBDocumentation</a></div></li><li data-name="class:Williamdes_MariaDBMySQLKBS_KBEntry" ><div style="padding-left:44px" class="hd leaf"><a href="Williamdes/MariaDBMySQLKBS/KBEntry.html">KBEntry</a></div></li><li data-name="class:Williamdes_MariaDBMySQLKBS_KBException" ><div style="padding-left:44px" class="hd leaf"><a href="Williamdes/MariaDBMySQLKBS/KBException.html">KBException</a></div></li><li data-name="class:Williamdes_MariaDBMySQLKBS_Search" ><div style="padding-left:44px" class="hd leaf"><a href="Williamdes/MariaDBMySQLKBS/Search.html">Search</a></div></li><li data-name="class:Williamdes_MariaDBMySQLKBS_SlimData" ><div style="padding-left:44px" class="hd leaf"><a href="Williamdes/MariaDBMySQLKBS/SlimData.html">SlimData</a></div></li></ul></div></li></ul></div></li></ul>';
-
-    var searchTypeClasses = {
-        'Namespace': 'label-default',
-        'Class': 'label-info',
-        'Interface': 'label-primary',
-        'Trait': 'label-success',
-        'Method': 'label-danger',
-        '_': 'label-warning'
-    };
-
-    var searchIndex = [
-                        {"type":"Namespace","link":"Williamdes.html","name":"Williamdes","doc":"Namespace Williamdes"},{"type":"Namespace","link":"Williamdes/MariaDBMySQLKBS.html","name":"Williamdes\\MariaDBMySQLKBS","doc":"Namespace Williamdes\\MariaDBMySQLKBS"},                                                        {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","doc":null},
-                                {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","fromLink":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html#method___construct","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation::__construct","doc":"<p>Create a KBEntry object</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","fromLink":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html#method_getUrl","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation::getUrl","doc":"<p>Get the url</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","fromLink":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html#method_getAnchor","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation::getAnchor","doc":"<p>Get the anchor</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation","fromLink":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html","link":"Williamdes/MariaDBMySQLKBS/KBDocumentation.html#method_jsonSerialize","name":"Williamdes\\MariaDBMySQLKBS\\KBDocumentation::jsonSerialize","doc":"<p>Used for json_encode function\nThis can seem useless, do not remove it.</p>"},
-            
-                                                {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry","doc":null},
-                                {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method___construct","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::__construct","doc":"<p>Create a KBEntry object</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_getName","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::getName","doc":"<p>Get the variable name</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_isDynamic","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::isDynamic","doc":"<p>Is the variable dynamic</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_getType","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::getType","doc":"<p>Get the variable type</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_hasDocumentations","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::hasDocumentations","doc":"<p>Variable has documentations</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_getDocumentations","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::getDocumentations","doc":"<p>Get all documentations</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_addDocumentation","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::addDocumentation","doc":"<p>Add documentation link</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\KBEntry","fromLink":"Williamdes/MariaDBMySQLKBS/KBEntry.html","link":"Williamdes/MariaDBMySQLKBS/KBEntry.html#method_jsonSerialize","name":"Williamdes\\MariaDBMySQLKBS\\KBEntry::jsonSerialize","doc":"<p>Used for json_encode function\nThis can seem useless, do not remove it.</p>"},
-            
-                                                {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/KBException.html","name":"Williamdes\\MariaDBMySQLKBS\\KBException","doc":"<p>KBException class</p>"},
-                
-                                                {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/Search.html","name":"Williamdes\\MariaDBMySQLKBS\\Search","doc":null},
-                                {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_loadData","name":"Williamdes\\MariaDBMySQLKBS\\Search::loadData","doc":"<p>Load data from disk</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_loadTestData","name":"Williamdes\\MariaDBMySQLKBS\\Search::loadTestData","doc":"<p>Load test data</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_getByName","name":"Williamdes\\MariaDBMySQLKBS\\Search::getByName","doc":"<p>get the first link to doc available</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_getVariable","name":"Williamdes\\MariaDBMySQLKBS\\Search::getVariable","doc":"<p>Get a variable</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_getVariableType","name":"Williamdes\\MariaDBMySQLKBS\\Search::getVariableType","doc":"<p>get the type of the variable</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_getStaticVariables","name":"Williamdes\\MariaDBMySQLKBS\\Search::getStaticVariables","doc":"<p>Return the list of static variables</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_getDynamicVariables","name":"Williamdes\\MariaDBMySQLKBS\\Search::getDynamicVariables","doc":"<p>Return the list of dynamic variables</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\Search","fromLink":"Williamdes/MariaDBMySQLKBS/Search.html","link":"Williamdes/MariaDBMySQLKBS/Search.html#method_getVariablesWithDynamic","name":"Williamdes\\MariaDBMySQLKBS\\Search::getVariablesWithDynamic","doc":"<p>Return the list of variables having dynamic = $dynamic</p>"},
-            
-                                                {"type":"Class","fromName":"Williamdes\\MariaDBMySQLKBS","fromLink":"Williamdes/MariaDBMySQLKBS.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html","name":"Williamdes\\MariaDBMySQLKBS\\SlimData","doc":null},
-                                {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\SlimData","fromLink":"Williamdes/MariaDBMySQLKBS/SlimData.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html#method___construct","name":"Williamdes\\MariaDBMySQLKBS\\SlimData::__construct","doc":"<p>Create a slimData object</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\SlimData","fromLink":"Williamdes/MariaDBMySQLKBS/SlimData.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html#method_addVariable","name":"Williamdes\\MariaDBMySQLKBS\\SlimData::addVariable","doc":"<p>Add a variable</p>"},
-        {"type":"Method","fromName":"Williamdes\\MariaDBMySQLKBS\\SlimData","fromLink":"Williamdes/MariaDBMySQLKBS/SlimData.html","link":"Williamdes/MariaDBMySQLKBS/SlimData.html#method_jsonSerialize","name":"Williamdes\\MariaDBMySQLKBS\\SlimData::jsonSerialize","doc":"<p>Used for json_encode function\nThis can seem useless, do not remove it.</p>"},
-            
-                                        // Fix trailing commas in the index
-        {}
-    ];
-
-    /** Tokenizes strings by namespaces and functions */
-    function tokenizer(term) {
-        if (!term) {
-            return [];
-        }
-
-        var tokens = [term];
-        var meth = term.indexOf('::');
-
-        // Split tokens into methods if "::" is found.
-        if (meth > -1) {
-            tokens.push(term.substr(meth + 2));
-            term = term.substr(0, meth - 2);
-        }
-
-        // Split by namespace or fake namespace.
-        if (term.indexOf('\\') > -1) {
-            tokens = tokens.concat(term.split('\\'));
-        } else if (term.indexOf('_') > 0) {
-            tokens = tokens.concat(term.split('_'));
-        }
-
-        // Merge in splitting the string by case and return
-        tokens = tokens.concat(term.match(/(([A-Z]?[^A-Z]*)|([a-z]?[^a-z]*))/g).slice(0,-1));
-
-        return tokens;
-    };
-
-    root.Doctum = {
-        /**
-         * Cleans the provided term. If no term is provided, then one is
-         * grabbed from the query string "search" parameter.
-         */
-        cleanSearchTerm: function(term) {
-            // Grab from the query string
-            if (typeof term === 'undefined') {
-                var name = 'search';
-                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-                var results = regex.exec(location.search);
-                if (results === null) {
-                    return null;
+            // Create the node that will have the text
+            var divHd = document.createElement('div');
+            var levelCss = child.l - 1;
+            divHd.className = hasChildren ? 'hd' : 'hd leaf';
+            divHd.style.paddingLeft = (hasChildren ? (levelCss * 18) : (8 + (levelCss * 18))) + 'px';
+            if (hasChildren) {
+                if (child.l <= treeOpenLevel) {
+                    liClass.className = 'opened';
                 }
-                term = decodeURIComponent(results[1].replace(/\+/g, " "));
+                var spanIcon = document.createElement('span');
+                spanIcon.className = 'icon icon-play';
+                divHd.appendChild(spanIcon);
             }
+            var aLink = document.createElement('a');
 
-            return term.replace(/<(?:.|\n)*?>/gm, '');
-        },
+            // Edit the HTML link to work correctly based on the current depth
+            aLink.href = Doctum.rootPath + child.p + '.html';
+            aLink.innerText = child.n;
+            divHd.appendChild(aLink);
+            liClass.appendChild(divHd);
 
-        /** Searches through the index for a given term */
-        search: function(term) {
-            // Create a new search index if needed
-            if (!bhIndex) {
-                bhIndex = new Bloodhound({
-                    limit: 500,
-                    local: searchIndex,
-                    datumTokenizer: function (d) {
-                        return tokenizer(d.name);
-                    },
-                    queryTokenizer: Bloodhound.tokenizers.whitespace
-                });
-                bhIndex.initialize();
+            // It has children
+            if (hasChildren) {
+                var divBd = document.createElement('div');
+                divBd.className = 'bd';
+                Doctum.buildTreeNode(child, divBd, treeOpenLevel);
+                liClass.appendChild(divBd);
             }
-
-            results = [];
-            bhIndex.get(term, function(matches) {
-                results = matches;
-            });
-
-            if (!rootPath) {
-                return results;
-            }
-
-            // Fix the element links based on the current page depth.
-            return $.map(results, function(ele) {
-                if (ele.link.indexOf('..') > -1) {
-                    return ele;
-                }
-                ele.link = rootPath + ele.link;
-                if (ele.fromLink) {
-                    ele.fromLink = rootPath + ele.fromLink;
-                }
-                return ele;
-            });
-        },
-
-        /** Get a search class for a specific type */
-        getSearchClass: function(type) {
-            return searchTypeClasses[type] || searchTypeClasses['_'];
-        },
-
-        /** Add the left-nav tree to the site */
-        injectApiTree: function(ele) {
-            ele.html(treeHtml);
+            ulNode.appendChild(liClass);
         }
-    };
+        htmlNode.appendChild(ulNode);
+    },
+    initListeners: function () {
+        if (Doctum.listenersRegistered) {
+            // Quick exit, already registered
+            return;
+        }
+                Doctum.listenersRegistered = true;
+    },
+    loadTree: function () {
+        if (Doctum.treeLoaded) {
+            // Quick exit, already registered
+            return;
+        }
+        Doctum.rootPath = document.body.getAttribute('data-root-path');
+        Doctum.buildTreeNode(Doctum.treeJson.tree, document.getElementById('api-tree'), Doctum.treeJson.treeOpenLevel);
 
-    $(function() {
-        // Modify the HTML to work correctly based on the current depth
-        rootPath = $('body').attr('data-root-path');
-        treeHtml = treeHtml.replace(/href="/g, 'href="' + rootPath);
-        Doctum.injectApiTree($('#api-tree'));
-    });
-
-    return root.Doctum;
-})(window);
-
-$(function() {
-
-    
-    
         // Toggle left-nav divs on click
-        $('#api-tree .hd span').on('click', function() {
+        $('#api-tree .hd span').on('click', function () {
             $(this).parent().parent().toggleClass('opened');
         });
 
@@ -185,36 +102,215 @@ $(function() {
                 container.scrollTop(scrollPos);
             }
         }
-
-    
-    
-        var form = $('#search-form .typeahead');
-        form.typeahead({
-            hint: true,
-            highlight: true,
-            minLength: 1
-        }, {
-            name: 'search',
-            displayKey: 'name',
-            source: function (q, cb) {
-                cb(Doctum.search(q));
+        Doctum.treeLoaded = true;
+    },
+    pagePartiallyLoaded: function (event) {
+        Doctum.initListeners();
+        Doctum.loadTree();
+        Doctum.loadAutoComplete();
+    },
+    pageFullyLoaded: function (event) {
+        // it may not have received DOMContentLoaded event
+        Doctum.initListeners();
+        Doctum.loadTree();
+        Doctum.loadAutoComplete();
+        // Fire the event in the search page too
+        if (typeof DoctumSearch === 'object') {
+            DoctumSearch.pageFullyLoaded();
+        }
+    },
+    loadAutoComplete: function () {
+        if (Doctum.autoCompleteLoaded) {
+            // Quick exit, already loaded
+            return;
+        }
+        Doctum.autoCompleteDataUrl = document.body.getAttribute('data-search-index-url');
+        Doctum.doctumSearchAutoComplete = document.getElementById('doctum-search-auto-complete');
+        Doctum.doctumSearchAutoCompleteProgressBarContainer = document.getElementById('search-progress-bar-container');
+        Doctum.doctumSearchAutoCompleteProgressBar = document.getElementById('search-progress-bar');
+        if (Doctum.doctumSearchAutoComplete !== null) {
+            // Wait for it to be loaded
+            Doctum.doctumSearchAutoComplete.addEventListener('init', function (_) {
+                Doctum.autoCompleteLoaded = true;
+                Doctum.doctumSearchAutoComplete.addEventListener('selection', function (event) {
+                    // Go to selection page
+                    window.location = Doctum.rootPath + event.detail.selection.value.p;
+                });
+                Doctum.doctumSearchAutoComplete.addEventListener('navigate', function (event) {
+                    // Set selection in text box
+                    if (typeof event.detail.selection.value === 'object') {
+                        Doctum.doctumSearchAutoComplete.value = event.detail.selection.value.n;
+                    }
+                });
+                Doctum.doctumSearchAutoComplete.addEventListener('results', function (event) {
+                    Doctum.markProgressFinished();
+                });
+            });
+        }
+        // Check if the lib is loaded
+        if (typeof autoComplete === 'function') {
+            Doctum.bootAutoComplete();
+        }
+    },
+    markInProgress: function () {
+            Doctum.doctumSearchAutoCompleteProgressBarContainer.className = 'search-bar';
+            Doctum.doctumSearchAutoCompleteProgressBar.className = 'progress-bar indeterminate';
+            if (typeof DoctumSearch === 'object' && DoctumSearch.pageFullyLoaded) {
+                DoctumSearch.doctumSearchPageAutoCompleteProgressBarContainer.className = 'search-bar';
+                DoctumSearch.doctumSearchPageAutoCompleteProgressBar.className = 'progress-bar indeterminate';
             }
-        });
-
-        // The selection is direct-linked when the user selects a suggestion.
-        form.on('typeahead:selected', function(e, suggestion) {
-            window.location = suggestion.link;
-        });
-
-        // The form is submitted when the user hits enter.
-        form.keypress(function (e) {
-            if (e.which == 13) {
-                $('#search-form').submit();
-                return true;
+    },
+    markProgressFinished: function () {
+        Doctum.doctumSearchAutoCompleteProgressBarContainer.className = 'search-bar hidden';
+        Doctum.doctumSearchAutoCompleteProgressBar.className = 'progress-bar';
+        if (typeof DoctumSearch === 'object' && DoctumSearch.pageFullyLoaded) {
+            DoctumSearch.doctumSearchPageAutoCompleteProgressBarContainer.className = 'search-bar hidden';
+            DoctumSearch.doctumSearchPageAutoCompleteProgressBar.className = 'progress-bar';
+        }
+    },
+    makeProgess: function () {
+        Doctum.makeProgressOnProgressBar(
+            Doctum.doctumSearchAutoCompleteProgressBarPercent,
+            Doctum.doctumSearchAutoCompleteProgressBar
+        );
+        if (typeof DoctumSearch === 'object' && DoctumSearch.pageFullyLoaded) {
+            Doctum.makeProgressOnProgressBar(
+                Doctum.doctumSearchAutoCompleteProgressBarPercent,
+                DoctumSearch.doctumSearchPageAutoCompleteProgressBar
+            );
+        }
+    },
+    loadAutoCompleteData: function (query) {
+        return new Promise(function (resolve, reject) {
+            if (Doctum.autoCompleteData !== null) {
+                resolve(Doctum.autoCompleteData);
+                return;
             }
+            Doctum.markInProgress();
+            function reqListener() {
+                Doctum.autoCompleteLoading = false;
+                Doctum.autoCompleteData = JSON.parse(this.responseText).items;
+                Doctum.markProgressFinished();
+
+                setTimeout(function () {
+                    resolve(Doctum.autoCompleteData);
+                }, 50);// Let the UI render once before sending the results for processing. This gives time to the progress bar to hide
+            }
+            function reqError(err) {
+                Doctum.autoCompleteLoading = false;
+                Doctum.autoCompleteData = null;
+                console.error(err);
+                reject(err);
+            }
+
+            var oReq = new XMLHttpRequest();
+            oReq.onload = reqListener;
+            oReq.onerror = reqError;
+            oReq.onprogress = function (pe) {
+                if (pe.lengthComputable) {
+                    Doctum.doctumSearchAutoCompleteProgressBarPercent = parseInt(pe.loaded / pe.total * 100, 10);
+                    Doctum.makeProgess();
+                }
+            };
+            oReq.onloadend = function (_) {
+                Doctum.markProgressFinished();
+            };
+            oReq.open('get', Doctum.autoCompleteDataUrl, true);
+            oReq.send();
+        });
+    },
+    /**
+     * Make some progress on a progress bar
+     *
+     * @param number percentage
+     * @param HTMLElement progressBar
+     * @return void
+     */
+    makeProgressOnProgressBar: function(percentage, progressBar) {
+        progressBar.className = 'progress-bar';
+        progressBar.style.width = percentage + '%';
+        progressBar.setAttribute(
+            'aria-valuenow', percentage
+        );
+    },
+    searchEngine: function (query, record) {
+        if (typeof query !== 'string') {
+            return '';
+        }
+        // replace all (mode = g) spaces and non breaking spaces (\s) by pipes
+        // g = global mode to mark also the second word searched
+        // i = case insensitive
+        // how this function works:
+        // First: search if the query has the keywords in sequence
+        // Second: replace the keywords by a mark and leave all the text in between non marked
+        
+        if (record.match(new RegExp('(' + query.replace(/\s/g, ').*(') + ')', 'gi')) === null) {
+            return '';// Does not match
+        }
+
+        var replacedRecord = record.replace(new RegExp('(' + query.replace(/\s/g, '|') + ')', 'gi'), function (group) {
+            return '<mark class="auto-complete-highlight">' + group + '</mark>';
         });
 
-    
-});
+        if (replacedRecord !== record) {
+            return replacedRecord;// This should not happen but just in case there was no match done
+        }
+
+        return '';
+    },
+    /**
+     * Clean the search query
+     *
+     * @param string query
+     * @return string
+     */
+    cleanSearchQuery: function (query) {
+        // replace any chars that could lead to injecting code in our regex
+        // remove start or end spaces
+        // replace backslashes by an escaped version, use case in search: \myRootFunction
+        return query.replace(Doctum.querySearchSecurityRegex, '').trim().replace(/\\/g, '\\\\');
+    },
+    bootAutoComplete: function () {
+        Doctum.autoCompleteJS = new autoComplete(
+            {
+                selector: '#doctum-search-auto-complete',
+                searchEngine: function (query, record) {
+                    return Doctum.searchEngine(query, record);
+                },
+                submit: true,
+                data: {
+                    src: function (q) {
+                        Doctum.markInProgress();
+                        return Doctum.loadAutoCompleteData(q);
+                    },
+                    keys: ['n'],// Data 'Object' key to be searched
+                    cache: false, // Is not compatible with async fetch of data
+                },
+                query: (input) => {
+                    return Doctum.cleanSearchQuery(input);
+                },
+                trigger: (query) => {
+                    return Doctum.cleanSearchQuery(query).length > 0;
+                },
+                resultsList: {
+                    tag: 'ul',
+                    class: 'auto-complete-dropdown-menu',
+                    destination: '#auto-complete-results',
+                    position: 'afterbegin',
+                    maxResults: 500,
+                    noResults: false,
+                },
+                resultItem: {
+                    tag: 'li',
+                    class: 'auto-complete-result',
+                    highlight: 'auto-complete-highlight',
+                    selected: 'auto-complete-selected'
+                },
+            }
+        );
+    }
+};
 
 
+document.addEventListener('DOMContentLoaded', Doctum.pagePartiallyLoaded, false);
+window.addEventListener('load', Doctum.pageFullyLoaded, false);

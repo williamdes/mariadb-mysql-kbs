@@ -1,0 +1,197 @@
+{
+  "data": [
+    {
+      "cli": "--handlersocket-accept-balance=\"value\"",
+      "default": "0",
+      "dynamic": false,
+      "id": "handlersocket_accept_balance",
+      "name": "handlersocket_accept_balance",
+      "range": {
+        "from": 0,
+        "to": 10000
+      },
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-address=\"value\"",
+      "default": "Empty, previously 0.0.0.0",
+      "dynamic": false,
+      "id": "handlersocket_address",
+      "name": "handlersocket_address",
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-backlog=\"value\"",
+      "default": "32768",
+      "dynamic": false,
+      "id": "handlersocket_backlog",
+      "name": "handlersocket_backlog",
+      "range": {
+        "from": 5,
+        "to": 1000000
+      },
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-epoll=\"value\"",
+      "default": "1",
+      "dynamic": false,
+      "id": "handlersocket_epoll",
+      "name": "handlersocket_epoll",
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-plain-secret=\"value\"",
+      "default": "Empty",
+      "dynamic": false,
+      "id": "handlersocket_plain_secret",
+      "name": "handlersocket_plain_secret",
+      "type": "string"
+    },
+    {
+      "cli": "--handlersocket-plain-secret-wr=\"value\"",
+      "default": "Empty",
+      "dynamic": false,
+      "id": "handlersocket_plain_secret_wr",
+      "name": "handlersocket_plain_secret_wr",
+      "type": "string"
+    },
+    {
+      "cli": "--handlersocket-port=\"value\"",
+      "default": "Empty, previously 9998",
+      "dynamic": false,
+      "id": "handlersocket_port",
+      "name": "handlersocket_port",
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-port-wr=\"value\"",
+      "default": "Empty, previously 9999",
+      "dynamic": false,
+      "id": "handlersocket_port_wr",
+      "name": "handlersocket_port_wr",
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-rcvbuf=\"value\"",
+      "default": "0",
+      "dynamic": false,
+      "id": "handlersocket_rcvbuf",
+      "name": "handlersocket_rcvbuf",
+      "range": {
+        "from": 0,
+        "to": 1677216
+      },
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-readsize=\"value\"",
+      "default": "0 (possibly 4096)",
+      "dynamic": false,
+      "id": "handlersocket_readsize",
+      "name": "handlersocket_readsize",
+      "range": {
+        "from": 0,
+        "to": 1677216
+      },
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-sndbuf=\"value\"",
+      "default": "0",
+      "dynamic": false,
+      "id": "handlersocket_sndbuf",
+      "name": "handlersocket_sndbuf",
+      "range": {
+        "from": 0,
+        "to": 1677216
+      },
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-threads=\"value\"",
+      "default": "16",
+      "dynamic": false,
+      "id": "handlersocket_threads",
+      "name": "handlersocket_threads",
+      "range": {
+        "from": 1,
+        "to": 3000
+      },
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-threads-wr=\"value\"",
+      "default": "1",
+      "dynamic": false,
+      "id": "handlersocket_threads_wr",
+      "name": "handlersocket_threads_wr",
+      "range": {
+        "from": 1,
+        "to": 3000
+      },
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-timeout=\"value\"",
+      "default": "300",
+      "dynamic": false,
+      "id": "handlersocket_timeout",
+      "name": "handlersocket_timeout",
+      "range": {
+        "from": 30,
+        "to": 3600
+      },
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-verbose=\"value\"",
+      "default": "10",
+      "dynamic": false,
+      "id": "handlersocket_verbose",
+      "name": "handlersocket_verbose",
+      "scope": [
+        "global"
+      ]
+    },
+    {
+      "cli": "--handlersocket-wrlock-timeout=\"value\"",
+      "dynamic": false,
+      "id": "handlersocket_wrlock_timeout",
+      "name": "handlersocket_wrlock_timeout",
+      "range": {
+        "from": 0,
+        "to": 3600
+      },
+      "scope": [
+        "global"
+      ]
+    }
+  ],
+  "name": "handlersocket-configuration-options-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+}

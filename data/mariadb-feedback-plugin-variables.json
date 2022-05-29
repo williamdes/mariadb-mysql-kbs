@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "cli": "--feedback-http=proxy=value",
+      "default": "'' (empty)",
+      "id": "feedback_http_proxy",
+      "name": "feedback_http_proxy",
+      "type": "string"
+    },
+    {
+      "cli": "--feedback-send-retry-wait=#",
+      "default": "60",
+      "dynamic": true,
+      "id": "feedback_send_retry_wait",
+      "name": "feedback_send_retry_wait",
+      "scope": [
+        "global"
+      ],
+      "type": "integer",
+      "validValues": [
+        "1",
+        "86400"
+      ]
+    },
+    {
+      "cli": "--feedback-send-timeout=#",
+      "default": "60",
+      "dynamic": true,
+      "id": "feedback_send_timeout",
+      "name": "feedback_send_timeout",
+      "scope": [
+        "global"
+      ],
+      "type": "integer",
+      "validValues": [
+        "1",
+        "86400"
+      ]
+    },
+    {
+      "dynamic": false,
+      "id": "feedback_server_uid",
+      "name": "feedback_server_uid",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--feedback-url=url",
+      "default": "https://mariadb.org/feedback_plugin/post",
+      "dynamic": false,
+      "id": "feedback_url",
+      "name": "feedback_url",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--feedback-user-info=string",
+      "default": "Empty string",
+      "dynamic": false,
+      "id": "feedback_user_info",
+      "name": "feedback_user_info",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--feedback=value",
+      "default": "ON",
+      "id": "feedback",
+      "name": "feedback",
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "ON",
+        "FORCE",
+        "FORCE_PLUS_PERMANENT"
+      ]
+    }
+  ],
+  "name": "feedback-plugin-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/feedback-plugin/"
+}

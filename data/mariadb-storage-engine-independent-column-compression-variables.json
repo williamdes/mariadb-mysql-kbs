@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "cli": "--column-compression-threshold=#",
+      "default": "100",
+      "dynamic": true,
+      "id": "column_compression_threshold",
+      "name": "column_compression_threshold",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--column-compression-zlib-level=#",
+      "default": "6",
+      "dynamic": true,
+      "id": "column_compression_zlib_level",
+      "name": "column_compression_zlib_level",
+      "range": {
+        "from": 1,
+        "to": 9
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--column-compression-zlib-strategy=#",
+      "default": "DEFAULT_STRATEGY",
+      "dynamic": true,
+      "id": "column_compression_zlib_strategy",
+      "name": "column_compression_zlib_strategy",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "DEFAULT_STRATEGY",
+        "FILTERED",
+        "HUFFMAN_ONLY",
+        "RLE",
+        "FIXED"
+      ]
+    },
+    {
+      "cli": "--column-compression-zlib-wrap{=0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "column_compression_zlib_wrap",
+      "name": "column_compression_zlib_wrap",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "id": "column_compressions",
+      "name": "Column_compressions",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "id": "column_decompressions",
+      "name": "Column_decompressions",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    }
+  ],
+  "name": "storage-engine-independent-column-compression-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/"
+}

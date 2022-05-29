@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "cli": "--disks=value",
+      "default": "ON",
+      "id": "disks",
+      "name": "disks",
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "ON",
+        "FORCE",
+        "FORCE_PLUS_PERMANENT"
+      ]
+    }
+  ],
+  "name": "disks-plugin-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/disks-plugin/"
+}

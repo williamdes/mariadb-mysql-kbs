@@ -1,0 +1,116 @@
+{
+  "data": [
+    {
+      "cli": "--pbxt-auto-increment-mode=#",
+      "default": "0",
+      "id": "pbxt_auto_increment_mode",
+      "name": "pbxt_auto_increment_mode"
+    },
+    {
+      "cli": "--pbxt-checkpoint-frequency=#",
+      "default": "24MB",
+      "id": "pbxt_checkpoint_frequency",
+      "name": "pbxt_checkpoint_frequency"
+    },
+    {
+      "cli": "--pbxt-data-file-grow-size=#",
+      "default": "2MB",
+      "id": "pbxt_data_file_grow_size",
+      "name": "pbxt_data_file_grow_size",
+      "type": "integer"
+    },
+    {
+      "cli": "--pbxt-data-log-threshold=#",
+      "default": "64MB",
+      "id": "pbxt_data_log_threshold",
+      "name": "pbxt_data_log_threshold",
+      "type": "integer"
+    },
+    {
+      "cli": "--pbxt-flush-log-at-trx-commit=#",
+      "default": "1",
+      "id": "pbxt_flush_log_at_trx_commit",
+      "name": "pbxt_flush_log_at_trx_commit"
+    },
+    {
+      "cli": "--pbxt-garbage-threshold=#",
+      "default": "50",
+      "id": "pbxt_garbage_threshold",
+      "name": "pbxt_garbage_threshold"
+    },
+    {
+      "cli": "--pbxt-index-cache-size=#",
+      "default": "32MB",
+      "id": "pbxt_index_cache_size",
+      "name": "pbxt_index_cache_size"
+    },
+    {
+      "cli": "--pbxt-log-buffer-size=#",
+      "default": "256MB",
+      "id": "pbxt_log_buffer_size",
+      "name": "pbxt_log_buffer_size",
+      "type": "integer"
+    },
+    {
+      "cli": "--pbxt-log-cache-size=#",
+      "default": "32MB",
+      "id": "pbxt_log_cache_size",
+      "name": "pbxt_log_cache_size",
+      "type": "integer"
+    },
+    {
+      "cli": "--pbxt-log-file-count=#",
+      "default": "3",
+      "id": "pbxt_log_file_count",
+      "name": "pbxt_log_file_count",
+      "type": "integer"
+    },
+    {
+      "cli": "--pbxt-log-file-threshold=#",
+      "default": "32MB",
+      "id": "pbxt_log_file_threshold",
+      "name": "pbxt_log_file_threshold",
+      "type": "integer"
+    },
+    {
+      "cli": "--pbxt-offline-log-function=#",
+      "default": "0",
+      "id": "pbxt_offline_log_function",
+      "name": "pbxt_offline_log_function"
+    },
+    {
+      "cli": "--pbxt-record-cache-size=#",
+      "default": "32MB",
+      "id": "pbxt_record_cache_size",
+      "name": "pbxt_record_cache_size"
+    },
+    {
+      "cli": "--pbxt-row-file-grow-size=#",
+      "default": "256KB",
+      "id": "pbxt_row_file_grow_size",
+      "name": "pbxt_row_file_grow_size",
+      "type": "integer"
+    },
+    {
+      "cli": "--pbxt-sweeper-priority=#",
+      "default": "0",
+      "id": "pbxt_sweeper_priority",
+      "name": "pbxt_sweeper_priority"
+    },
+    {
+      "cli": "--pbxt-support-xa=#",
+      "default": "TRUE",
+      "id": "pbxt_support_xa",
+      "name": "pbxt_support_xa"
+    },
+    {
+      "cli": "--pbxt-transaction-buffer-size=#",
+      "default": "1MB",
+      "id": "pbxt_transaction_buffer_size",
+      "name": "pbxt_transaction_buffer_size",
+      "type": "integer"
+    }
+  ],
+  "name": "pbxt-system-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+}

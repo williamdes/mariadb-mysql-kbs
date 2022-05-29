@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "cli": "--file-key-management-encryption-algorithm=value",
+      "default": "AES_CBC",
+      "dynamic": false,
+      "id": "file_key_management_encryption_algorithm",
+      "name": "file_key_management_encryption_algorithm",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "AES_CBC",
+        "AES_CTR"
+      ]
+    },
+    {
+      "cli": "--file-key-management-filekey=value",
+      "default": "(empty)",
+      "dynamic": false,
+      "id": "file_key_management_filekey",
+      "name": "file_key_management_filekey",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--file-key-management-filename=value",
+      "default": "(empty)",
+      "dynamic": false,
+      "id": "file_key_management_filename",
+      "name": "file_key_management_filename",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--file-key-management=value",
+      "default": "ON",
+      "id": "file_key_management",
+      "name": "file_key_management",
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "ON",
+        "FORCE",
+        "FORCE_PLUS_PERMANENT"
+      ]
+    }
+  ],
+  "name": "file-key-management-encryption-plugin-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/file-key-management-encryption-plugin/"
+}

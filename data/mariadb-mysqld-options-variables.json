@@ -1,0 +1,693 @@
+{
+  "data": [
+    {
+      "id": "-autoset-",
+      "name": "--autoset-*"
+    },
+    {
+      "id": "-disable-",
+      "name": "--disable-*"
+    },
+    {
+      "id": "-enable-",
+      "name": "--enable-*"
+    },
+    {
+      "id": "-loose-",
+      "name": "--loose-*"
+    },
+    {
+      "id": "-maximum-",
+      "name": "--maximum-*"
+    },
+    {
+      "id": "-skip-",
+      "name": "--skip-*"
+    },
+    {
+      "cli": "--defaults-extra-file=name",
+      "id": "-defaults-extra-file",
+      "name": "--defaults-extra-file"
+    },
+    {
+      "cli": "--defaults-file=name",
+      "id": "-defaults-file",
+      "name": "--defaults-file"
+    },
+    {
+      "cli": "--defaults-group-suffix=name",
+      "id": "-defaults-group-suffix",
+      "name": "--defaults-group-suffix"
+    },
+    {
+      "cli": "--no-defaults",
+      "id": "-no-defaults",
+      "name": "--no-defaults"
+    },
+    {
+      "cli": "--print-defaults",
+      "id": "-print-defaults",
+      "name": "--print-defaults"
+    },
+    {
+      "id": "-a-ansi",
+      "name": "-a, --ansi"
+    },
+    {
+      "id": "-new",
+      "name": "--new"
+    },
+    {
+      "id": "-old-style-user-limits",
+      "name": "--old-style-user-limits"
+    },
+    {
+      "id": "-safe-mode",
+      "name": "--safe-mode"
+    },
+    {
+      "id": "-skip-new",
+      "name": "--skip-new"
+    },
+    {
+      "cli": "--character-set-client-handshake",
+      "id": "-character-set-client-handshake",
+      "name": "--character-set-client-handshake"
+    },
+    {
+      "cli": "--default-character-set=name",
+      "id": "-default-character-set",
+      "name": "--default-character-set"
+    },
+    {
+      "id": "-language",
+      "name": "--language"
+    },
+    {
+      "id": "-console",
+      "name": "--console"
+    },
+    {
+      "id": "-install",
+      "name": "--install"
+    },
+    {
+      "id": "-install-manual",
+      "name": "--install-manual"
+    },
+    {
+      "id": "-remove",
+      "name": "--remove"
+    },
+    {
+      "id": "-slow-start-timeout",
+      "name": "--slow-start-timeout",
+      "type": "integer"
+    },
+    {
+      "id": "-standalone",
+      "name": "--standalone"
+    },
+    {
+      "cli": "--abort-slave-event-count=#",
+      "id": "-abort-slave-event-count",
+      "name": "--abort-slave-event-count"
+    },
+    {
+      "cli": "--binlog-do-db=name",
+      "id": "-binlog-do-db",
+      "name": "--binlog-do-db"
+    },
+    {
+      "cli": "--binlog-ignore-db=name",
+      "id": "-binlog-ignore-db",
+      "name": "--binlog-ignore-db"
+    },
+    {
+      "cli": "--binlog-row-event-max-size=#",
+      "id": "-binlog-row-event-max-size",
+      "name": "--binlog-row-event-max-size",
+      "type": "byte"
+    },
+    {
+      "cli": "--disconnect-slave-event-count=#",
+      "id": "-disconnect-slave-event-count",
+      "name": "--disconnect-slave-event-count"
+    },
+    {
+      "cli": "--flashback",
+      "id": "-flashback",
+      "name": "--flashback"
+    },
+    {
+      "cli": "--init-rpl-role=name",
+      "id": "-init-rpl-role",
+      "name": "--init-rpl-role"
+    },
+    {
+      "cli": "--log-basename=name",
+      "id": "-log-basename",
+      "name": "--log-basename"
+    },
+    {
+      "cli": "--log-bin-trust-routine-creators",
+      "id": "-log-bin-trust-routine-creators",
+      "name": "--log-bin-trust-routine-creators"
+    },
+    {
+      "cli": "--master-host=name",
+      "id": "-master-host",
+      "name": "--master-host"
+    },
+    {
+      "cli": "--master-info-file=name",
+      "id": "-master-info-file",
+      "name": "--master-info-file"
+    },
+    {
+      "cli": "--master-password=name",
+      "id": "-master-password",
+      "name": "--master-password"
+    },
+    {
+      "cli": "--master-port=#",
+      "id": "-master-port",
+      "name": "--master-port"
+    },
+    {
+      "cli": "--master-retry-count=#",
+      "default": "86400",
+      "id": "-master-retry-count",
+      "name": "--master-retry-count",
+      "type": "integer"
+    },
+    {
+      "cli": "--master-ssl",
+      "id": "-master-ssl",
+      "name": "--master-ssl"
+    },
+    {
+      "cli": "--master-ssl-ca[=name]",
+      "id": "-master-ssl-ca",
+      "name": "--master-ssl-ca"
+    },
+    {
+      "cli": "--master-ssl-capath[=name]",
+      "id": "-master-ssl-capath",
+      "name": "--master-ssl-capath"
+    },
+    {
+      "cli": "--master-ssl-cert[=name]",
+      "id": "-master-ssl-cert",
+      "name": "--master-ssl-cert"
+    },
+    {
+      "cli": "--master-ssl-cipher[=name]",
+      "id": "-master-ssl-cipher",
+      "name": "--master-ssl-cipher"
+    },
+    {
+      "cli": "--master-ssl-key[=name]",
+      "id": "-master-ssl-key",
+      "name": "--master-ssl-key"
+    },
+    {
+      "cli": "--master-user=name",
+      "id": "-master-user",
+      "name": "--master-user"
+    },
+    {
+      "cli": "--max-binlog-dump-events=#",
+      "id": "-max-binlog-dump-events",
+      "name": "--max-binlog-dump-events"
+    },
+    {
+      "cli": "--replicate-rewrite-db=master_database->slave_database",
+      "id": "-replicate-rewrite-db",
+      "name": "--replicate-rewrite-db"
+    },
+    {
+      "cli": "--replicate-same-server-id",
+      "id": "-replicate-same-server-id",
+      "name": "--replicate-same-server-id"
+    },
+    {
+      "cli": "--sporadic-binlog-dump-fail",
+      "id": "-sporadic-binlog-dump-fail",
+      "name": "--sporadic-binlog-dump-fail"
+    },
+    {
+      "cli": "--sysdate-is-now",
+      "id": "-sysdate-is-now",
+      "name": "--sysdate-is-now"
+    },
+    {
+      "cli": "--record-buffer=#",
+      "id": "-record-buffer",
+      "name": "--record-buffer"
+    },
+    {
+      "cli": "--table-open-cache=#",
+      "id": "-table-cache",
+      "name": "--table-cache"
+    },
+    {
+      "cli": "----skip-bdb",
+      "id": "-skip-bdb",
+      "name": "--skip-bdb"
+    },
+    {
+      "cli": "--external-locking",
+      "id": "-external-locking",
+      "name": "--external-locking"
+    },
+    {
+      "cli": "--log-isam[=file_name]",
+      "id": "-log-isam",
+      "name": "--log-isam"
+    },
+    {
+      "cli": "--innodb=value, --skip-innodb",
+      "id": "-innodb",
+      "name": "--innodb"
+    },
+    {
+      "cli": "--innodb-cmp",
+      "default": "ON",
+      "id": "-innodb-cmp",
+      "name": "--innodb-cmp"
+    },
+    {
+      "cli": "--innodb-cmp-reset",
+      "default": "ON",
+      "id": "-innodb-cmp-reset",
+      "name": "--innodb-cmp-reset"
+    },
+    {
+      "cli": "--innodb-cmpmem",
+      "default": "ON",
+      "id": "-innodb-cmpmem",
+      "name": "--innodb-cmpmem"
+    },
+    {
+      "cli": "--innodb-cmpmem-reset",
+      "default": "ON",
+      "id": "-innodb-cmpmem-reset",
+      "name": "--innodb-cmpmem-reset"
+    },
+    {
+      "cli": "--innodb-file-io-threads",
+      "default": "4",
+      "id": "-innodb-file-io-threads",
+      "name": "--innodb-file-io-threads"
+    },
+    {
+      "cli": "--innodb-index-stats",
+      "default": "ON",
+      "id": "-innodb-index-stats",
+      "name": "--innodb-index-stats"
+    },
+    {
+      "cli": "--innodb-lock-waits",
+      "default": "ON",
+      "id": "-innodb-lock-waits",
+      "name": "--innodb-lock-waits"
+    },
+    {
+      "cli": "--innodb-locks",
+      "default": "ON",
+      "id": "-innodb-locks",
+      "name": "--innodb-locks"
+    },
+    {
+      "cli": "--innodb-rseg",
+      "default": "ON",
+      "id": "-innodb-rseg",
+      "name": "--innodb-rseg"
+    },
+    {
+      "cli": "--innodb-status-file",
+      "default": "FALSE",
+      "id": "-innodb-status-file",
+      "name": "--innodb-status-file"
+    },
+    {
+      "cli": "--innodb-sys-indexes",
+      "default": "ON",
+      "id": "-innodb-sys-indexes",
+      "name": "--innodb-sys-indexes"
+    },
+    {
+      "cli": "--innodb-sys-stats",
+      "default": "ON",
+      "id": "-innodb-sys-stats",
+      "name": "--innodb-sys-stats"
+    },
+    {
+      "cli": "--innodb-sys-tables",
+      "default": "ON",
+      "id": "-innodb-sys-tables",
+      "name": "--innodb-sys-tables"
+    },
+    {
+      "cli": "--innodb-table-stats",
+      "default": "ON",
+      "id": "-innodb-table-stats",
+      "name": "--innodb-table-stats"
+    },
+    {
+      "cli": "--innodb-trx",
+      "default": "ON",
+      "id": "-innodb-trx",
+      "name": "--innodb-trx"
+    },
+    {
+      "cli": "--aria-log-dir-path=value",
+      "default": "SAME AS DATADIR",
+      "id": "-aria-log-dir-path",
+      "name": "--aria-log-dir-path"
+    },
+    {
+      "cli": "--performance-schema-consumer-events-stages-current",
+      "default": "OFF",
+      "id": "-performance-schema-consumer-events-stages-current",
+      "name": "--performance-schema-consumer-events-stages-current"
+    },
+    {
+      "cli": "--performance-schema-consumer-events-stages-history",
+      "default": "OFF",
+      "id": "-performance-schema-consumer-events-stages-history",
+      "name": "--performance-schema-consumer-events-stages-history"
+    },
+    {
+      "cli": "--performance-schema-consumer-events-stages-history-long",
+      "default": "OFF",
+      "id": "-performance-schema-consumer-events-stages-history-long",
+      "name": "--performance-schema-consumer-events-stages-history-long"
+    },
+    {
+      "cli": "--performance-schema-consumer-events-statements-current",
+      "default": "ON",
+      "id": "-performance-schema-consumer-events-statements-current",
+      "name": "--performance-schema-consumer-events-statements-current"
+    },
+    {
+      "cli": "--performance-schema-consumer-events-statements-history",
+      "default": "OFF",
+      "id": "-performance-schema-consumer-events-statements-history",
+      "name": "--performance-schema-consumer-events-statements-history"
+    },
+    {
+      "cli": "--performance-schema-consumer-events-statements-history-long",
+      "default": "OFF",
+      "id": "-performance-schema-consumer-events-statements-history-long",
+      "name": "--performance-schema-consumer-events-statements-history-long"
+    },
+    {
+      "cli": "--performance-schema-consumer-events-waits-current",
+      "default": "OFF",
+      "id": "-performance-schema-consumer-events-waits-current",
+      "name": "--performance-schema-consumer-events-waits-current"
+    },
+    {
+      "cli": "--performance-schema-consumer-events-waits-history",
+      "default": "OFF",
+      "id": "-performance-schema-consumer-events-waits-history",
+      "name": "--performance-schema-consumer-events-waits-history"
+    },
+    {
+      "cli": "--performance-schema-consumer-events-waits-history-long",
+      "default": "OFF",
+      "id": "-performance-schema-consumer-events-waits-history-long",
+      "name": "--performance-schema-consumer-events-waits-history-long"
+    },
+    {
+      "cli": "--performance-schema-consumer-global-instrumentation",
+      "default": "ON",
+      "id": "-performance-schema-consumer-global-instrumentation",
+      "name": "--performance-schema-consumer-global-instrumentation"
+    },
+    {
+      "cli": "--performance-schema-consumer-statements-digest",
+      "default": "ON",
+      "id": "-performance-schema-consumer-statements-digest",
+      "name": "--performance-schema-consumer-statements-digest"
+    },
+    {
+      "cli": "--performance-schema-consumer-thread-instrumentation",
+      "default": "ON",
+      "id": "-performance-schema-consumer-thread-instrumentation",
+      "name": "--performance-schema-consumer-thread-instrumentation"
+    },
+    {
+      "cli": "--wsrep-new-cluster",
+      "id": "-wsrep-new-cluster",
+      "name": "--wsrep-new-cluster"
+    },
+    {
+      "id": "-debug-assert-if-crashed-table",
+      "name": "--debug-assert-if-crashed-table"
+    },
+    {
+      "id": "-debug-binlog-fsync-sleep",
+      "name": "--debug-binlog-fsync-sleep",
+      "type": "integer"
+    },
+    {
+      "id": "-debug-crc-break",
+      "name": "--debug-crc-break"
+    },
+    {
+      "id": "-debug-flush",
+      "name": "--debug-flush"
+    },
+    {
+      "id": "-debug-no-sync",
+      "name": "--debug-no-sync"
+    },
+    {
+      "id": "-debug-sync-timeout",
+      "name": "--debug-sync-timeout",
+      "type": "integer"
+    },
+    {
+      "id": "-gdb",
+      "name": "--gdb"
+    },
+    {
+      "id": "-silent-startup",
+      "name": "--silent-startup"
+    },
+    {
+      "id": "-sync-sys",
+      "name": "--sync-sys"
+    },
+    {
+      "id": "-thread-alarm",
+      "name": "--thread-alarm"
+    },
+    {
+      "cli": "--allow-suspicious-udfs",
+      "id": "-allow-suspicious-udfs",
+      "name": "--allow-suspicious-udfs"
+    },
+    {
+      "cli": "--bootstrap",
+      "id": "-bootstrap",
+      "name": "--bootstrap"
+    },
+    {
+      "cli": "--chroot=name",
+      "id": "-chroot",
+      "name": "--chroot"
+    },
+    {
+      "cli": "--des-key-file=name",
+      "id": "-des-key-file",
+      "name": "--des-key-file"
+    },
+    {
+      "cli": "--exit-info[=#]",
+      "id": "-exit-info",
+      "name": "--exit-info"
+    },
+    {
+      "cli": "--getopt-prefix-matching={0|1}",
+      "default": "TRUE",
+      "id": "-getopt-prefix-matching",
+      "name": "--getopt-prefix-matching"
+    },
+    {
+      "cli": "--help",
+      "id": "-help",
+      "name": "--help"
+    },
+    {
+      "cli": "--log-ddl-recovery=name",
+      "default": "ddl-recover.log",
+      "id": "-log-ddl-recovery",
+      "name": "--log-ddl-recovery"
+    },
+    {
+      "cli": "--log-short-format",
+      "id": "-log-short-format",
+      "name": "--log-short-format"
+    },
+    {
+      "cli": "--log-slow-file=name",
+      "id": "-log-slow-file",
+      "name": "--log-slow-file"
+    },
+    {
+      "cli": "--log-slow-time=#",
+      "id": "-log-slow-time",
+      "name": "--log-slow-time"
+    },
+    {
+      "cli": "--log-tc=name",
+      "default": "tc.log",
+      "id": "-log-tc",
+      "name": "--log-tc"
+    },
+    {
+      "cli": "--master-connect-retry=#",
+      "id": "-master-connect-retry",
+      "name": "--master-connect-retry",
+      "type": "integer"
+    },
+    {
+      "cli": "--memlock",
+      "id": "-memlock",
+      "name": "--memlock"
+    },
+    {
+      "cli": "--ndb-use-copying-alter-table",
+      "id": "-ndb-use-copying-alter-table",
+      "name": "--ndb-use-copying-alter-table"
+    },
+    {
+      "cli": "--one-thread",
+      "id": "-one-thread",
+      "name": "--one-thread"
+    },
+    {
+      "cli": "--plugin-load=name",
+      "id": "-plugin-load",
+      "name": "--plugin-load"
+    },
+    {
+      "cli": "--plugin-load-add=name",
+      "id": "-plugin-load-add",
+      "name": "--plugin-load-add"
+    },
+    {
+      "cli": "--port-open-timeout=#",
+      "id": "-port-open-timeout",
+      "name": "--port-open-timeout",
+      "type": "integer"
+    },
+    {
+      "cli": "--safe-user-create",
+      "id": "-safe-user-create",
+      "name": "--safe-user-create"
+    },
+    {
+      "cli": "--safemalloc-mem-limit=#",
+      "id": "-safemalloc-mem-limit",
+      "name": "--safemalloc-mem-limit"
+    },
+    {
+      "cli": "--show-slave-auth-info",
+      "id": "-show-slave-auth-info",
+      "name": "--show-slave-auth-info"
+    },
+    {
+      "cli": "--skip-grant-tables",
+      "id": "-skip-grant-tables",
+      "name": "--skip-grant-tables"
+    },
+    {
+      "cli": "--skip-host-cache",
+      "id": "-skip-host-cache",
+      "name": "--skip-host-cache"
+    },
+    {
+      "cli": "--skip-partition, --disable-partition",
+      "id": "-skip-partition",
+      "name": "--skip-partition"
+    },
+    {
+      "cli": "--skip-slave-start",
+      "id": "-skip-slave-start",
+      "name": "--skip-slave-start"
+    },
+    {
+      "cli": "--skip-ssl",
+      "id": "-skip-ssl",
+      "name": "--skip-ssl"
+    },
+    {
+      "cli": "--skip-symlink",
+      "id": "-skip-symlink",
+      "name": "--skip-symlink"
+    },
+    {
+      "cli": "--skip-thread-priority",
+      "id": "-skip-thread-priority",
+      "name": "--skip-thread-priority"
+    },
+    {
+      "cli": "--sql-bin-update-same=#",
+      "id": "-sql-bin-update-same",
+      "name": "--sql-bin-update-same"
+    },
+    {
+      "cli": "--ssl",
+      "id": "-ssl",
+      "name": "--ssl"
+    },
+    {
+      "cli": "--stack-trace, --skip-stack-trace",
+      "id": "-stack-trace",
+      "name": "--stack-trace"
+    },
+    {
+      "cli": "--symbolic-links",
+      "id": "-symbolic-links",
+      "name": "--symbolic-links"
+    },
+    {
+      "cli": "--tc-heuristic-recover=name",
+      "id": "-tc-heuristic-recover",
+      "name": "--tc-heuristic-recover"
+    },
+    {
+      "cli": "--temp-pool",
+      "id": "-temp-pool",
+      "name": "--temp-pool"
+    },
+    {
+      "cli": "--test-expect-abort",
+      "id": "-test-expect-abort",
+      "name": "--test-expect-abort"
+    },
+    {
+      "cli": "--test-ignore-wrong-options",
+      "id": "-test-ignore-wrong-options",
+      "name": "--test-ignore-wrong-options",
+      "type": "enumeration"
+    },
+    {
+      "cli": "--user=name",
+      "id": "-user",
+      "name": "--user"
+    },
+    {
+      "cli": "-v,  --verbose",
+      "id": "-verbose",
+      "name": "--verbose"
+    }
+  ],
+  "name": "mysqld-options-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+}

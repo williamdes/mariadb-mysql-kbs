@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "default": "OFF",
+      "dynamic": true,
+      "id": "query_response_time_flush",
+      "name": "query_response_time_flush",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--query-response-time-range-base=#",
+      "default": "10",
+      "dynamic": true,
+      "id": "query_response_time_range_base",
+      "name": "query_response_time_range_base",
+      "range": {
+        "from": 2,
+        "to": 1000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "default": "0",
+      "dynamic": true,
+      "id": "query_response_time_exec_time_debug",
+      "name": "query_response_time_exec_time_debug",
+      "range": {
+        "from": 0,
+        "to": 31536000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "query-response-time-stats[={0|1}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "query_response_time_stats",
+      "name": "query_response_time_stats",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--query-response-time=value",
+      "default": "ON",
+      "id": "query_response_time",
+      "name": "query_response_time",
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "ON",
+        "FORCE",
+        "FORCE_PLUS_PERMANENT"
+      ]
+    },
+    {
+      "cli": "--query-response-time-audit=value",
+      "default": "ON",
+      "id": "query_response_time_audit",
+      "name": "query_response_time_audit",
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "ON",
+        "FORCE",
+        "FORCE_PLUS_PERMANENT"
+      ]
+    }
+  ],
+  "name": "query-response-time-plugin-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/"
+}

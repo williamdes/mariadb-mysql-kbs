@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "cli": "--gssapi-keytab-path",
+      "default": "''",
+      "dynamic": false,
+      "id": "gssapi_keytab_path",
+      "name": "gssapi_keytab_path",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--gssapi-principal-name",
+      "default": "''",
+      "dynamic": false,
+      "id": "gssapi_principal_name",
+      "name": "gssapi_principal_name",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--gssapi-mech-name",
+      "default": "Negotiate",
+      "dynamic": false,
+      "id": "gssapi_mech_name",
+      "name": "gssapi_mech_name",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "Kerberos",
+        "Negotiate"
+      ]
+    },
+    {
+      "cli": "--gssapi=value",
+      "default": "ON",
+      "id": "gssapi",
+      "name": "gssapi",
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "ON",
+        "FORCE",
+        "FORCE_PLUS_PERMANENT"
+      ]
+    }
+  ],
+  "name": "authentication-plugin-gssapi-variables",
+  "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-gssapi/"
+}

@@ -227,10 +227,6 @@ const custom = [
         name: 'handlersocket-configuration-options-variables',
     },
     {
-        url: 'mysqld-options/',
-        name: 'mysqld-options-variables',
-    },
-    {
         url: 'storage-engine-independent-column-compression/',
         name: 'storage-engine-independent-column-compression-variables',
     },

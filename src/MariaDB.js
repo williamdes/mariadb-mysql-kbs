@@ -171,7 +171,24 @@ const KB_URL = 'https://mariadb.com/kb/en/library/documentation/';
 
 const storageEngines = ['s3-storage-engine', 'aria', 'myrocks', 'cassandra', 'galera-cluster', 'myisam', 'connect'];
 
+const plugins = [
+    'mariadb-audit-plugin',
+    'semisynchronous-replication-plugin',
+    'sql-error-log-plugin',
+    'authentication-plugin-gssapi',
+    'authentication-plugin-pam',
+    'aws-key-management-encryption-plugin',
+    'cracklib-password-check-plugin',
+    'disks-plugin',
+    'feedback-plugin',
+    'file-key-management-encryption-plugin',
+    'query-cache-information-plugin',
+    'query-response-time-plugin',
+    'simple-password-check-plugin',
+];
+
 const systemVariables = [
+    'pbxt',
     'mroonga',
     'tokudb',
     'xtradbinnodb-server',
@@ -205,6 +222,22 @@ const custom = [
         url: 'system-versioned-tables/',
         name: 'versioned-tables-system-variables',
     },
+    {
+        url: 'handlersocket-configuration-options/',
+        name: 'handlersocket-configuration-options-variables',
+    },
+    {
+        url: 'mysqld-options/',
+        name: 'mysqld-options-variables',
+    },
+    {
+        url: 'storage-engine-independent-column-compression/',
+        name: 'storage-engine-independent-column-compression-variables',
+    },
+    {
+        url: 'user-statistics/',
+        name: 'user-statistics-variables',
+    },
 ];
 
 const status = [
@@ -221,9 +254,8 @@ const status = [
     'oqgraph-system-and',
     'thread-pool-system-and',
     'ssltls',
-    'mariadb-audit-plugin',
-    'semisynchronous-replication-plugin',
-    'sql-error-log-plugin',
+    'performance-schema',
+    'myrocks',
 ];
 
 const pages = [];
@@ -253,6 +285,13 @@ systemVariables.forEach((systemVariableName) => {
     pages.push({
         url: KB_URL + systemVariableName + '-system-variables/',
         name: systemVariableName + '-system-variables',
+    });
+});
+
+plugins.forEach((pluginName) => {
+    pages.push({
+        url: KB_URL + pluginName + '/',
+        name: pluginName + '-variables',
     });
 });
 

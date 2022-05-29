@@ -496,6 +496,247 @@
 |------|----|
 |mariadb.com|[deadlock_timeout_short](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/aria/aria-system-variables/#deadlock_timeout_short)|
 
+## gssapi_keytab_path
+|name|value|
+|----|-----|
+|Name|`gssapi_keytab_path`|
+|Command line|`--gssapi-keytab-path`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`''`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[gssapi_keytab_path](https://mariadb.com/kb/en/library/documentation/authentication-plugin-gssapi/#gssapi_keytab_path)|
+
+## gssapi_principal_name
+|name|value|
+|----|-----|
+|Name|`gssapi_principal_name`|
+|Command line|`--gssapi-principal-name`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`''`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[gssapi_principal_name](https://mariadb.com/kb/en/library/documentation/authentication-plugin-gssapi/#gssapi_principal_name)|
+
+## gssapi_mech_name
+|name|value|
+|----|-----|
+|Name|`gssapi_mech_name`|
+|Command line|`--gssapi-mech-name`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`Negotiate`|
+|Dynamic|`false`|
+|Valid value(s)|`Kerberos`, `Negotiate`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[gssapi_mech_name](https://mariadb.com/kb/en/library/documentation/authentication-plugin-gssapi/#gssapi_mech_name)|
+
+## gssapi
+|name|value|
+|----|-----|
+|Name|`gssapi`|
+|Command line|`--gssapi=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[gssapi](https://mariadb.com/kb/en/library/documentation/authentication-plugin-gssapi/#gssapi)|
+
+## pam_debug
+|name|value|
+|----|-----|
+|Name|`pam_debug`|
+|Command line|`--pam-debug`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pam_debug](https://mariadb.com/kb/en/library/documentation/authentication-plugin-pam/#pam_debug)|
+
+## pam_use_cleartext_plugin
+|name|value|
+|----|-----|
+|Name|`pam_use_cleartext_plugin`|
+|Command line|`--pam-use-cleartext-plugin`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pam_use_cleartext_plugin](https://mariadb.com/kb/en/library/documentation/authentication-plugin-pam/#pam_use_cleartext_plugin)|
+
+## pam_winbind_workaround
+|name|value|
+|----|-----|
+|Name|`pam_winbind_workaround`|
+|Command line|`--pam-winbind-workaround`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pam_winbind_workaround](https://mariadb.com/kb/en/library/documentation/authentication-plugin-pam/#pam_winbind_workaround)|
+
+## pam
+|name|value|
+|----|-----|
+|Name|`pam`|
+|Command line|`--pam=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pam](https://mariadb.com/kb/en/library/documentation/authentication-plugin-pam/#pam)|
+
+## aws_key_management_key_spec
+|name|value|
+|----|-----|
+|Name|`aws_key_management_key_spec`|
+|Command line|`--aws-key-management-key-spec=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`AES_128`|
+|Dynamic|`false`|
+|Valid value(s)|`AES_128`, `AES_256`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[aws_key_management_key_spec](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_key_spec)|
+
+## aws_key_management_log_level
+|name|value|
+|----|-----|
+|Name|`aws_key_management_log_level`|
+|Command line|`--aws-key-management-log-level=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`Off`|
+|Dynamic|`false`|
+|Valid value(s)|`Off`, `Fatal`, `Warn`, `Info`, `Debug`, `Trace`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[aws_key_management_log_level](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_log_level)|
+
+## aws_key_management_master_key_id
+|name|value|
+|----|-----|
+|Name|`aws_key_management_master_key_id`|
+|Command line|`--aws-key-management-master-key-id=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|``|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[aws_key_management_master_key_id](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_master_key_id)|
+
+## aws_key_management_mock
+|name|value|
+|----|-----|
+|Name|`aws_key_management_mock`|
+|Command line|`--aws-key-management-mock`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`false`|
+|Valid value(s)|`OFF`, `ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[aws_key_management_mock](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_mock)|
+
+## aws_key_management_region
+|name|value|
+|----|-----|
+|Name|`aws_key_management_region`|
+|Command line|`--aws-key-management-region=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`'us-east-1'`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[aws_key_management_region](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_region)|
+
+## aws_key_management_request_timeout
+|name|value|
+|----|-----|
+|Name|`aws_key_management_request_timeout`|
+|Command line|`--aws-key-management-request-timeout=value`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[aws_key_management_request_timeout](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_request_timeout)|
+
+## aws_key_management_rotate_key
+|name|value|
+|----|-----|
+|Name|`aws_key_management_rotate_key`|
+|Command line|`--aws-key-management-rotate-key=value`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|``|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[aws_key_management_rotate_key](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_rotate_key)|
+
+## aws_key_management
+|name|value|
+|----|-----|
+|Name|`aws_key_management`|
+|Command line|`--aws-key-management=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[aws_key_management](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management)|
+
 ## Cassandra_multiget_keys_scanned
 |name|value|
 |----|-----|
@@ -966,6 +1207,211 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[connect_xtrace](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/#connect_xtrace)|
+
+## cracklib_password_check_dictionary
+|name|value|
+|----|-----|
+|Name|`cracklib_password_check_dictionary`|
+|Command line|`--cracklib-password-check-dictionary=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Depends on the system. Often /usr/share/cracklib/pw_dict`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[cracklib_password_check_dictionary](https://mariadb.com/kb/en/library/documentation/cracklib-password-check-plugin/#cracklib_password_check_dictionary)|
+
+## cracklib_password_check
+|name|value|
+|----|-----|
+|Name|`cracklib_password_check`|
+|Command line|`--cracklib-password-check=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[cracklib_password_check](https://mariadb.com/kb/en/library/documentation/cracklib-password-check-plugin/#cracklib_password_check)|
+
+## disks
+|name|value|
+|----|-----|
+|Name|`disks`|
+|Command line|`--disks=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[disks](https://mariadb.com/kb/en/library/documentation/disks-plugin/#disks)|
+
+## feedback_http_proxy
+|name|value|
+|----|-----|
+|Name|`feedback_http_proxy`|
+|Command line|`--feedback-http=proxy=value`|
+|Type of variable|`string`|
+|Default value|`'' (empty)`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[feedback_http_proxy](https://mariadb.com/kb/en/library/documentation/feedback-plugin/#feedback_http_proxy)|
+
+## feedback_send_retry_wait
+|name|value|
+|----|-----|
+|Name|`feedback_send_retry_wait`|
+|Command line|`--feedback-send-retry-wait=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`60`|
+|Dynamic|`true`|
+|Valid value(s)|`1`, `86400`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[feedback_send_retry_wait](https://mariadb.com/kb/en/library/documentation/feedback-plugin/#feedback_send_retry_wait)|
+
+## feedback_send_timeout
+|name|value|
+|----|-----|
+|Name|`feedback_send_timeout`|
+|Command line|`--feedback-send-timeout=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`60`|
+|Dynamic|`true`|
+|Valid value(s)|`1`, `86400`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[feedback_send_timeout](https://mariadb.com/kb/en/library/documentation/feedback-plugin/#feedback_send_timeout)|
+
+## feedback_server_uid
+|name|value|
+|----|-----|
+|Name|`feedback_server_uid`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[feedback_server_uid](https://mariadb.com/kb/en/library/documentation/feedback-plugin/#feedback_server_uid)|
+
+## feedback_url
+|name|value|
+|----|-----|
+|Name|`feedback_url`|
+|Command line|`--feedback-url=url`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`https://mariadb.org/feedback_plugin/post`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[feedback_url](https://mariadb.com/kb/en/library/documentation/feedback-plugin/#feedback_url)|
+
+## feedback_user_info
+|name|value|
+|----|-----|
+|Name|`feedback_user_info`|
+|Command line|`--feedback-user-info=string`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Empty string`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[feedback_user_info](https://mariadb.com/kb/en/library/documentation/feedback-plugin/#feedback_user_info)|
+
+## feedback
+|name|value|
+|----|-----|
+|Name|`feedback`|
+|Command line|`--feedback=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[feedback](https://mariadb.com/kb/en/library/documentation/feedback-plugin/#feedback)|
+
+## file_key_management_encryption_algorithm
+|name|value|
+|----|-----|
+|Name|`file_key_management_encryption_algorithm`|
+|Command line|`--file-key-management-encryption-algorithm=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`AES_CBC`|
+|Dynamic|`false`|
+|Valid value(s)|`AES_CBC`, `AES_CTR`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[file_key_management_encryption_algorithm](https://mariadb.com/kb/en/library/documentation/file-key-management-encryption-plugin/#file_key_management_encryption_algorithm)|
+
+## file_key_management_filekey
+|name|value|
+|----|-----|
+|Name|`file_key_management_filekey`|
+|Command line|`--file-key-management-filekey=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`(empty)`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[file_key_management_filekey](https://mariadb.com/kb/en/library/documentation/file-key-management-encryption-plugin/#file_key_management_filekey)|
+
+## file_key_management_filename
+|name|value|
+|----|-----|
+|Name|`file_key_management_filename`|
+|Command line|`--file-key-management-filename=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`(empty)`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[file_key_management_filename](https://mariadb.com/kb/en/library/documentation/file-key-management-encryption-plugin/#file_key_management_filename)|
+
+## file_key_management
+|name|value|
+|----|-----|
+|Name|`file_key_management`|
+|Command line|`--file-key-management=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[file_key_management](https://mariadb.com/kb/en/library/documentation/file-key-management-encryption-plugin/#file_key_management)|
 
 ## wsrep_applier_thread_count
 |name|value|
@@ -2594,6 +3040,238 @@
 |------|----|
 |mariadb.com|[gtid_cleanup_batch_size](https://mariadb.com/kb/en/library/documentation/gtid/#gtid_cleanup_batch_size)|
 
+## handlersocket_accept_balance
+|name|value|
+|----|-----|
+|Name|`handlersocket_accept_balance`|
+|Command line|`--handlersocket-accept-balance="value"`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+|Range|from: `0` to: `10000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_accept_balance](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_accept_balance)|
+
+## handlersocket_address
+|name|value|
+|----|-----|
+|Name|`handlersocket_address`|
+|Command line|`--handlersocket-address="value"`|
+|Scope|`global`|
+|Default value|`Empty, previously 0.0.0.0`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_address](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_address)|
+
+## handlersocket_backlog
+|name|value|
+|----|-----|
+|Name|`handlersocket_backlog`|
+|Command line|`--handlersocket-backlog="value"`|
+|Scope|`global`|
+|Default value|`32768`|
+|Dynamic|`false`|
+|Range|from: `5` to: `1000000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_backlog](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_backlog)|
+
+## handlersocket_epoll
+|name|value|
+|----|-----|
+|Name|`handlersocket_epoll`|
+|Command line|`--handlersocket-epoll="value"`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_epoll](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_epoll)|
+
+## handlersocket_plain_secret
+|name|value|
+|----|-----|
+|Name|`handlersocket_plain_secret`|
+|Command line|`--handlersocket-plain-secret="value"`|
+|Type of variable|`string`|
+|Default value|`Empty`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_plain_secret](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_plain_secret)|
+
+## handlersocket_plain_secret_wr
+|name|value|
+|----|-----|
+|Name|`handlersocket_plain_secret_wr`|
+|Command line|`--handlersocket-plain-secret-wr="value"`|
+|Type of variable|`string`|
+|Default value|`Empty`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_plain_secret_wr](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_plain_secret_wr)|
+
+## handlersocket_port
+|name|value|
+|----|-----|
+|Name|`handlersocket_port`|
+|Command line|`--handlersocket-port="value"`|
+|Scope|`global`|
+|Default value|`Empty, previously 9998`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_port](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_port)|
+
+## handlersocket_port_wr
+|name|value|
+|----|-----|
+|Name|`handlersocket_port_wr`|
+|Command line|`--handlersocket-port-wr="value"`|
+|Scope|`global`|
+|Default value|`Empty, previously 9999`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_port_wr](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_port_wr)|
+
+## handlersocket_rcvbuf
+|name|value|
+|----|-----|
+|Name|`handlersocket_rcvbuf`|
+|Command line|`--handlersocket-rcvbuf="value"`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+|Range|from: `0` to: `1677216`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_rcvbuf](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_rcvbuf)|
+
+## handlersocket_readsize
+|name|value|
+|----|-----|
+|Name|`handlersocket_readsize`|
+|Command line|`--handlersocket-readsize="value"`|
+|Scope|`global`|
+|Default value|`0 (possibly 4096)`|
+|Dynamic|`false`|
+|Range|from: `0` to: `1677216`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_readsize](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_readsize)|
+
+## handlersocket_sndbuf
+|name|value|
+|----|-----|
+|Name|`handlersocket_sndbuf`|
+|Command line|`--handlersocket-sndbuf="value"`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+|Range|from: `0` to: `1677216`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_sndbuf](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_sndbuf)|
+
+## handlersocket_threads
+|name|value|
+|----|-----|
+|Name|`handlersocket_threads`|
+|Command line|`--handlersocket-threads="value"`|
+|Scope|`global`|
+|Default value|`16`|
+|Dynamic|`false`|
+|Range|from: `1` to: `3000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_threads](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_threads)|
+
+## handlersocket_threads_wr
+|name|value|
+|----|-----|
+|Name|`handlersocket_threads_wr`|
+|Command line|`--handlersocket-threads-wr="value"`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`false`|
+|Range|from: `1` to: `3000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_threads_wr](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_threads_wr)|
+
+## handlersocket_timeout
+|name|value|
+|----|-----|
+|Name|`handlersocket_timeout`|
+|Command line|`--handlersocket-timeout="value"`|
+|Scope|`global`|
+|Default value|`300`|
+|Dynamic|`false`|
+|Range|from: `30` to: `3600`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_timeout](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_timeout)|
+
+## handlersocket_verbose
+|name|value|
+|----|-----|
+|Name|`handlersocket_verbose`|
+|Command line|`--handlersocket-verbose="value"`|
+|Scope|`global`|
+|Default value|`10`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_verbose](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_verbose)|
+
+## handlersocket_wrlock_timeout
+|name|value|
+|----|-----|
+|Name|`handlersocket_wrlock_timeout`|
+|Command line|`--handlersocket-wrlock-timeout="value"`|
+|Scope|`global`|
+|Dynamic|`false`|
+|Range|from: `0` to: `3600`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[handlersocket_wrlock_timeout](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_wrlock_timeout)|
+
 ## Server_audit_active
 |name|value|
 |----|-----|
@@ -3498,6 +4176,1350 @@
 |------|----|
 |mariadb.com|[myisam_use_mmap](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myisam/myisam-system-variables/#myisam_use_mmap)|
 |dev.mysql.com|[sysvar_myisam_use_mmap](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_myisam_use_mmap)|
+
+## Rocksdb_block_cache_add
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_add`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_add](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_add)|
+
+## Rocksdb_block_cache_add_failures
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_add_failures`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_add_failures](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_add_failures)|
+
+## Rocksdb_block_cache_bytes_read
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_bytes_read`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_bytes_read](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_bytes_read)|
+
+## Rocksdb_block_cache_bytes_write
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_bytes_write`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_bytes_write](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_bytes_write)|
+
+## Rocksdb_block_cache_data_add
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_data_add`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_data_add](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_data_add)|
+
+## Rocksdb_block_cache_data_bytes_insert
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_data_bytes_insert`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_data_bytes_insert](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_data_bytes_insert)|
+
+## Rocksdb_block_cache_data_hit
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_data_hit`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_data_hit](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_data_hit)|
+
+## Rocksdb_block_cache_data_miss
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_data_miss`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_data_miss](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_data_miss)|
+
+## Rocksdb_block_cache_filter_add
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_filter_add`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_filter_add](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_filter_add)|
+
+## Rocksdb_block_cache_filter_bytes_evict
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_filter_bytes_evict`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_filter_bytes_evict](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_filter_bytes_evict)|
+
+## Rocksdb_block_cache_filter_bytes_insert
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_filter_bytes_insert`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_filter_bytes_insert](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_filter_bytes_insert)|
+
+## Rocksdb_block_cache_filter_hit
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_filter_hit`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_filter_hit](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_filter_hit)|
+
+## Rocksdb_block_cache_filter_miss
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_filter_miss`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_filter_miss](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_filter_miss)|
+
+## Rocksdb_block_cache_hit
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_hit`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_hit](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_hit)|
+
+## Rocksdb_block_cache_index_add
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_index_add`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_index_add](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_index_add)|
+
+## Rocksdb_block_cache_index_bytes_evict
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_index_bytes_evict`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_index_bytes_evict](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_index_bytes_evict)|
+
+## Rocksdb_block_cache_index_bytes_insert
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_index_bytes_insert`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_index_bytes_insert](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_index_bytes_insert)|
+
+## Rocksdb_block_cache_index_hit
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_index_hit`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_index_hit](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_index_hit)|
+
+## Rocksdb_block_cache_index_miss
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_index_miss`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_index_miss](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_index_miss)|
+
+## Rocksdb_block_cache_miss
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cache_miss`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cache_miss](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cache_miss)|
+
+## Rocksdb_block_cachecompressed_hit
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cachecompressed_hit`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cachecompressed_hit](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cachecompressed_hit)|
+
+## Rocksdb_block_cachecompressed_miss
+|name|value|
+|----|-----|
+|Name|`Rocksdb_block_cachecompressed_miss`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_block_cachecompressed_miss](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_block_cachecompressed_miss)|
+
+## Rocksdb_bloom_filter_full_positive
+|name|value|
+|----|-----|
+|Name|`Rocksdb_bloom_filter_full_positive`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_bloom_filter_full_positive](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_bloom_filter_full_positive)|
+
+## Rocksdb_bloom_filter_full_true_positive
+|name|value|
+|----|-----|
+|Name|`Rocksdb_bloom_filter_full_true_positive`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_bloom_filter_full_true_positive](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_bloom_filter_full_true_positive)|
+
+## Rocksdb_bloom_filter_prefix_checked
+|name|value|
+|----|-----|
+|Name|`Rocksdb_bloom_filter_prefix_checked`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_bloom_filter_prefix_checked](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_bloom_filter_prefix_checked)|
+
+## Rocksdb_bloom_filter_prefix_useful
+|name|value|
+|----|-----|
+|Name|`Rocksdb_bloom_filter_prefix_useful`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_bloom_filter_prefix_useful](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_bloom_filter_prefix_useful)|
+
+## Rocksdb_bloom_filter_useful
+|name|value|
+|----|-----|
+|Name|`Rocksdb_bloom_filter_useful`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_bloom_filter_useful](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_bloom_filter_useful)|
+
+## Rocksdb_bytes_read
+|name|value|
+|----|-----|
+|Name|`Rocksdb_bytes_read`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_bytes_read](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_bytes_read)|
+
+## Rocksdb_bytes_written
+|name|value|
+|----|-----|
+|Name|`Rocksdb_bytes_written`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_bytes_written](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_bytes_written)|
+
+## Rocksdb_compact_read_bytes
+|name|value|
+|----|-----|
+|Name|`Rocksdb_compact_read_bytes`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_compact_read_bytes](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_compact_read_bytes)|
+
+## Rocksdb_compact_write_bytes
+|name|value|
+|----|-----|
+|Name|`Rocksdb_compact_write_bytes`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_compact_write_bytes](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_compact_write_bytes)|
+
+## Rocksdb_compaction_key_drop_new
+|name|value|
+|----|-----|
+|Name|`Rocksdb_compaction_key_drop_new`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_compaction_key_drop_new](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_compaction_key_drop_new)|
+
+## Rocksdb_compaction_key_drop_obsolete
+|name|value|
+|----|-----|
+|Name|`Rocksdb_compaction_key_drop_obsolete`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_compaction_key_drop_obsolete](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_compaction_key_drop_obsolete)|
+
+## Rocksdb_compaction_key_drop_user
+|name|value|
+|----|-----|
+|Name|`Rocksdb_compaction_key_drop_user`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_compaction_key_drop_user](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_compaction_key_drop_user)|
+
+## Rocksdb_covered_secondary_key_lookups
+|name|value|
+|----|-----|
+|Name|`Rocksdb_covered_secondary_key_lookups`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_covered_secondary_key_lookups](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_covered_secondary_key_lookups)|
+
+## Rocksdb_flush_write_bytes
+|name|value|
+|----|-----|
+|Name|`Rocksdb_flush_write_bytes`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_flush_write_bytes](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_flush_write_bytes)|
+
+## Rocksdb_get_hit_l0
+|name|value|
+|----|-----|
+|Name|`Rocksdb_get_hit_l0`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_get_hit_l0](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_get_hit_l0)|
+
+## Rocksdb_get_hit_l1
+|name|value|
+|----|-----|
+|Name|`Rocksdb_get_hit_l1`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_get_hit_l1](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_get_hit_l1)|
+
+## Rocksdb_get_hit_l2_and_up
+|name|value|
+|----|-----|
+|Name|`Rocksdb_get_hit_l2_and_up`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_get_hit_l2_and_up](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_get_hit_l2_and_up)|
+
+## Rocksdb_getupdatessince_calls
+|name|value|
+|----|-----|
+|Name|`Rocksdb_getupdatessince_calls`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_getupdatessince_calls](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_getupdatessince_calls)|
+
+## Rocksdb_iter_bytes_read
+|name|value|
+|----|-----|
+|Name|`Rocksdb_iter_bytes_read`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_iter_bytes_read](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_iter_bytes_read)|
+
+## Rocksdb_l0_num_files_stall_micros
+|name|value|
+|----|-----|
+|Name|`Rocksdb_l0_num_files_stall_micros`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_l0_num_files_stall_micros](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_l0_num_files_stall_micros)|
+
+## Rocksdb_l0_slowdown_micros
+|name|value|
+|----|-----|
+|Name|`Rocksdb_l0_slowdown_micros`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_l0_slowdown_micros](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_l0_slowdown_micros)|
+
+## Rocksdb_manual_compactions_processed
+|name|value|
+|----|-----|
+|Name|`Rocksdb_manual_compactions_processed`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_manual_compactions_processed](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_manual_compactions_processed)|
+
+## Rocksdb_manual_compactions_running
+|name|value|
+|----|-----|
+|Name|`Rocksdb_manual_compactions_running`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_manual_compactions_running](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_manual_compactions_running)|
+
+## Rocksdb_memtable_compaction_micros
+|name|value|
+|----|-----|
+|Name|`Rocksdb_memtable_compaction_micros`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_memtable_compaction_micros](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_memtable_compaction_micros)|
+
+## Rocksdb_memtable_hit
+|name|value|
+|----|-----|
+|Name|`Rocksdb_memtable_hit`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_memtable_hit](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_memtable_hit)|
+
+## Rocksdb_memtable_miss
+|name|value|
+|----|-----|
+|Name|`Rocksdb_memtable_miss`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_memtable_miss](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_memtable_miss)|
+
+## Rocksdb_memtable_total
+|name|value|
+|----|-----|
+|Name|`Rocksdb_memtable_total`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_memtable_total](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_memtable_total)|
+
+## Rocksdb_memtable_unflushed
+|name|value|
+|----|-----|
+|Name|`Rocksdb_memtable_unflushed`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_memtable_unflushed](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_memtable_unflushed)|
+
+## Rocksdb_no_file_closes
+|name|value|
+|----|-----|
+|Name|`Rocksdb_no_file_closes`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_no_file_closes](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_no_file_closes)|
+
+## Rocksdb_no_file_errors
+|name|value|
+|----|-----|
+|Name|`Rocksdb_no_file_errors`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_no_file_errors](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_no_file_errors)|
+
+## Rocksdb_no_file_opens
+|name|value|
+|----|-----|
+|Name|`Rocksdb_no_file_opens`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_no_file_opens](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_no_file_opens)|
+
+## Rocksdb_num_iterators
+|name|value|
+|----|-----|
+|Name|`Rocksdb_num_iterators`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_num_iterators](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_num_iterators)|
+
+## Rocksdb_number_block_not_compressed
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_block_not_compressed`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_block_not_compressed](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_block_not_compressed)|
+
+## Rocksdb_number_db_next
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_db_next`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_db_next](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_db_next)|
+
+## Rocksdb_number_db_next_found
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_db_next_found`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_db_next_found](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_db_next_found)|
+
+## Rocksdb_number_db_prev
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_db_prev`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_db_prev](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_db_prev)|
+
+## Rocksdb_number_db_prev_found
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_db_prev_found`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_db_prev_found](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_db_prev_found)|
+
+## Rocksdb_number_db_seek
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_db_seek`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_db_seek](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_db_seek)|
+
+## Rocksdb_number_db_seek_found
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_db_seek_found`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_db_seek_found](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_db_seek_found)|
+
+## Rocksdb_number_deletes_filtered
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_deletes_filtered`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_deletes_filtered](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_deletes_filtered)|
+
+## Rocksdb_number_keys_read
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_keys_read`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_keys_read](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_keys_read)|
+
+## Rocksdb_number_keys_updated
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_keys_updated`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_keys_updated](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_keys_updated)|
+
+## Rocksdb_number_keys_written
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_keys_written`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_keys_written](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_keys_written)|
+
+## Rocksdb_number_merge_failures
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_merge_failures`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_merge_failures](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_merge_failures)|
+
+## Rocksdb_number_multiget_bytes_read
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_multiget_bytes_read`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_multiget_bytes_read](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_multiget_bytes_read)|
+
+## Rocksdb_number_multiget_get
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_multiget_get`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_multiget_get](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_multiget_get)|
+
+## Rocksdb_number_multiget_keys_read
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_multiget_keys_read`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_multiget_keys_read](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_multiget_keys_read)|
+
+## Rocksdb_number_reseeks_iteration
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_reseeks_iteration`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_reseeks_iteration](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_reseeks_iteration)|
+
+## Rocksdb_number_sst_entry_delete
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_sst_entry_delete`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_sst_entry_delete](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_sst_entry_delete)|
+
+## Rocksdb_number_sst_entry_merge
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_sst_entry_merge`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_sst_entry_merge](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_sst_entry_merge)|
+
+## Rocksdb_number_sst_entry_other
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_sst_entry_other`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_sst_entry_other](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_sst_entry_other)|
+
+## Rocksdb_number_sst_entry_put
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_sst_entry_put`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_sst_entry_put](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_sst_entry_put)|
+
+## Rocksdb_number_sst_entry_singledelete
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_sst_entry_singledelete`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_sst_entry_singledelete](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_sst_entry_singledelete)|
+
+## Rocksdb_number_superversion_acquires
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_superversion_acquires`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_superversion_acquires](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_superversion_acquires)|
+
+## Rocksdb_number_superversion_cleanups
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_superversion_cleanups`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_superversion_cleanups](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_superversion_cleanups)|
+
+## Rocksdb_number_superversion_releases
+|name|value|
+|----|-----|
+|Name|`Rocksdb_number_superversion_releases`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_number_superversion_releases](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_number_superversion_releases)|
+
+## Rocksdb_queries_point
+|name|value|
+|----|-----|
+|Name|`Rocksdb_queries_point`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_queries_point](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_queries_point)|
+
+## Rocksdb_queries_range
+|name|value|
+|----|-----|
+|Name|`Rocksdb_queries_range`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_queries_range](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_queries_range)|
+
+## Rocksdb_row_lock_deadlocks
+|name|value|
+|----|-----|
+|Name|`Rocksdb_row_lock_deadlocks`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_row_lock_deadlocks](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_row_lock_deadlocks)|
+
+## Rocksdb_row_lock_wait_timeouts
+|name|value|
+|----|-----|
+|Name|`Rocksdb_row_lock_wait_timeouts`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_row_lock_wait_timeouts](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_row_lock_wait_timeouts)|
+
+## Rocksdb_rows_deleted
+|name|value|
+|----|-----|
+|Name|`Rocksdb_rows_deleted`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_rows_deleted](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_rows_deleted)|
+
+## Rocksdb_rows_deleted_blind
+|name|value|
+|----|-----|
+|Name|`Rocksdb_rows_deleted_blind`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_rows_deleted_blind](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_rows_deleted_blind)|
+
+## Rocksdb_rows_expired
+|name|value|
+|----|-----|
+|Name|`Rocksdb_rows_expired`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_rows_expired](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_rows_expired)|
+
+## Rocksdb_rows_filtered
+|name|value|
+|----|-----|
+|Name|`Rocksdb_rows_filtered`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_rows_filtered](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_rows_filtered)|
+
+## Rocksdb_rows_inserted
+|name|value|
+|----|-----|
+|Name|`Rocksdb_rows_inserted`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_rows_inserted](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_rows_inserted)|
+
+## Rocksdb_rows_read
+|name|value|
+|----|-----|
+|Name|`Rocksdb_rows_read`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_rows_read](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_rows_read)|
+
+## Rocksdb_rows_updated
+|name|value|
+|----|-----|
+|Name|`Rocksdb_rows_updated`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_rows_updated](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_rows_updated)|
+
+## Rocksdb_snapshot_conflict_errors
+|name|value|
+|----|-----|
+|Name|`Rocksdb_snapshot_conflict_errors`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_snapshot_conflict_errors](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_snapshot_conflict_errors)|
+
+## Rocksdb_stall_l0_file_count_limit_slowdowns
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_l0_file_count_limit_slowdowns`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_l0_file_count_limit_slowdowns](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_l0_file_count_limit_slowdowns)|
+
+## Rocksdb_stall_l0_file_count_limit_stops
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_l0_file_count_limit_stops`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_l0_file_count_limit_stops](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_l0_file_count_limit_stops)|
+
+## Rocksdb_stall_locked_l0_file_count_limit_slowdowns
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_locked_l0_file_count_limit_slowdowns`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_locked_l0_file_count_limit_slowdowns](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_locked_l0_file_count_limit_slowdowns)|
+
+## Rocksdb_stall_locked_l0_file_count_limit_stops
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_locked_l0_file_count_limit_stops`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_locked_l0_file_count_limit_stops](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_locked_l0_file_count_limit_stops)|
+
+## Rocksdb_stall_memtable_limit_slowdowns
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_memtable_limit_slowdowns`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_memtable_limit_slowdowns](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_memtable_limit_slowdowns)|
+
+## Rocksdb_stall_memtable_limit_stops
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_memtable_limit_stops`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_memtable_limit_stops](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_memtable_limit_stops)|
+
+## Rocksdb_stall_micros
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_micros`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_micros](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_micros)|
+
+## Rocksdb_stall_pending_compaction_limit_slowdowns
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_pending_compaction_limit_slowdowns`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_pending_compaction_limit_slowdowns](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_pending_compaction_limit_slowdowns)|
+
+## Rocksdb_stall_pending_compaction_limit_stops
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_pending_compaction_limit_stops`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_pending_compaction_limit_stops](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_pending_compaction_limit_stops)|
+
+## Rocksdb_stall_total_slowdowns
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_total_slowdowns`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_total_slowdowns](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_total_slowdowns)|
+
+## Rocksdb_stall_total_stops
+|name|value|
+|----|-----|
+|Name|`Rocksdb_stall_total_stops`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_stall_total_stops](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_stall_total_stops)|
+
+## Rocksdb_system_rows_deleted
+|name|value|
+|----|-----|
+|Name|`Rocksdb_system_rows_deleted`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_system_rows_deleted](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_system_rows_deleted)|
+
+## Rocksdb_system_rows_inserted
+|name|value|
+|----|-----|
+|Name|`Rocksdb_system_rows_inserted`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_system_rows_inserted](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_system_rows_inserted)|
+
+## Rocksdb_system_rows_read
+|name|value|
+|----|-----|
+|Name|`Rocksdb_system_rows_read`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_system_rows_read](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_system_rows_read)|
+
+## Rocksdb_system_rows_updated
+|name|value|
+|----|-----|
+|Name|`Rocksdb_system_rows_updated`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_system_rows_updated](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_system_rows_updated)|
+
+## Rocksdb_wal_bytes
+|name|value|
+|----|-----|
+|Name|`Rocksdb_wal_bytes`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_wal_bytes](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_wal_bytes)|
+
+## Rocksdb_wal_group_syncs
+|name|value|
+|----|-----|
+|Name|`Rocksdb_wal_group_syncs`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_wal_group_syncs](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_wal_group_syncs)|
+
+## Rocksdb_wal_synced
+|name|value|
+|----|-----|
+|Name|`Rocksdb_wal_synced`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_wal_synced](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_wal_synced)|
+
+## Rocksdb_write_other
+|name|value|
+|----|-----|
+|Name|`Rocksdb_write_other`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_write_other](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_write_other)|
+
+## Rocksdb_write_self
+|name|value|
+|----|-----|
+|Name|`Rocksdb_write_self`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_write_self](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_write_self)|
+
+## Rocksdb_write_timedout
+|name|value|
+|----|-----|
+|Name|`Rocksdb_write_timedout`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_write_timedout](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_write_timedout)|
+
+## Rocksdb_write_wal
+|name|value|
+|----|-----|
+|Name|`Rocksdb_write_wal`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rocksdb_write_wal](https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/#rocksdb_write_wal)|
 
 ## rocksdb_access_hint_on_compaction_start
 |name|value|
@@ -5843,6 +7865,1503 @@
 |------|----|
 |mariadb.com|[rocksdb_write_policy](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/myrocks/myrocks-system-variables/#rocksdb_write_policy)|
 
+## --autoset-*
+|name|value|
+|----|-----|
+|Name|`--autoset-*`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-autoset-](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-autoset-)|
+
+## --disable-*
+|name|value|
+|----|-----|
+|Name|`--disable-*`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-disable-](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-disable-)|
+
+## --enable-*
+|name|value|
+|----|-----|
+|Name|`--enable-*`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-enable-](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-enable-)|
+
+## --loose-*
+|name|value|
+|----|-----|
+|Name|`--loose-*`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-loose-](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-loose-)|
+
+## --maximum-*
+|name|value|
+|----|-----|
+|Name|`--maximum-*`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-maximum-](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-maximum-)|
+
+## --skip-*
+|name|value|
+|----|-----|
+|Name|`--skip-*`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-skip-](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-skip-)|
+
+## --defaults-extra-file
+|name|value|
+|----|-----|
+|Name|`--defaults-extra-file`|
+|Command line|`--defaults-extra-file=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-defaults-extra-file](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-defaults-extra-file)|
+
+## --defaults-file
+|name|value|
+|----|-----|
+|Name|`--defaults-file`|
+|Command line|`--defaults-file=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-defaults-file](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-defaults-file)|
+
+## --defaults-group-suffix
+|name|value|
+|----|-----|
+|Name|`--defaults-group-suffix`|
+|Command line|`--defaults-group-suffix=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-defaults-group-suffix](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-defaults-group-suffix)|
+
+## --no-defaults
+|name|value|
+|----|-----|
+|Name|`--no-defaults`|
+|Command line|`--no-defaults`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-no-defaults](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-no-defaults)|
+
+## --print-defaults
+|name|value|
+|----|-----|
+|Name|`--print-defaults`|
+|Command line|`--print-defaults`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-print-defaults](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-print-defaults)|
+
+## -a, --ansi
+|name|value|
+|----|-----|
+|Name|`-a, --ansi`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-a-ansi](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-a-ansi)|
+
+## --new
+|name|value|
+|----|-----|
+|Name|`--new`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-new](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-new)|
+
+## --old-style-user-limits
+|name|value|
+|----|-----|
+|Name|`--old-style-user-limits`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-old-style-user-limits](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-old-style-user-limits)|
+
+## --safe-mode
+|name|value|
+|----|-----|
+|Name|`--safe-mode`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-safe-mode](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-safe-mode)|
+
+## --skip-new
+|name|value|
+|----|-----|
+|Name|`--skip-new`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-skip-new](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-skip-new)|
+
+## --character-set-client-handshake
+|name|value|
+|----|-----|
+|Name|`--character-set-client-handshake`|
+|Command line|`--character-set-client-handshake`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-character-set-client-handshake](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-character-set-client-handshake)|
+
+## --default-character-set
+|name|value|
+|----|-----|
+|Name|`--default-character-set`|
+|Command line|`--default-character-set=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-default-character-set](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-default-character-set)|
+
+## --language
+|name|value|
+|----|-----|
+|Name|`--language`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-language](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-language)|
+
+## --console
+|name|value|
+|----|-----|
+|Name|`--console`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-console](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-console)|
+
+## --install
+|name|value|
+|----|-----|
+|Name|`--install`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-install](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-install)|
+
+## --install-manual
+|name|value|
+|----|-----|
+|Name|`--install-manual`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-install-manual](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-install-manual)|
+
+## --remove
+|name|value|
+|----|-----|
+|Name|`--remove`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-remove](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-remove)|
+
+## --slow-start-timeout
+|name|value|
+|----|-----|
+|Name|`--slow-start-timeout`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-slow-start-timeout](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-slow-start-timeout)|
+
+## --standalone
+|name|value|
+|----|-----|
+|Name|`--standalone`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-standalone](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-standalone)|
+
+## --abort-slave-event-count
+|name|value|
+|----|-----|
+|Name|`--abort-slave-event-count`|
+|Command line|`--abort-slave-event-count=#`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-abort-slave-event-count](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-abort-slave-event-count)|
+
+## --binlog-do-db
+|name|value|
+|----|-----|
+|Name|`--binlog-do-db`|
+|Command line|`--binlog-do-db=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-binlog-do-db](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-binlog-do-db)|
+
+## --binlog-ignore-db
+|name|value|
+|----|-----|
+|Name|`--binlog-ignore-db`|
+|Command line|`--binlog-ignore-db=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-binlog-ignore-db](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-binlog-ignore-db)|
+
+## --binlog-row-event-max-size
+|name|value|
+|----|-----|
+|Name|`--binlog-row-event-max-size`|
+|Command line|`--binlog-row-event-max-size=#`|
+|Type of variable|`byte`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-binlog-row-event-max-size](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-binlog-row-event-max-size)|
+
+## --disconnect-slave-event-count
+|name|value|
+|----|-----|
+|Name|`--disconnect-slave-event-count`|
+|Command line|`--disconnect-slave-event-count=#`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-disconnect-slave-event-count](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-disconnect-slave-event-count)|
+
+## --flashback
+|name|value|
+|----|-----|
+|Name|`--flashback`|
+|Command line|`--flashback`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-flashback](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-flashback)|
+
+## --init-rpl-role
+|name|value|
+|----|-----|
+|Name|`--init-rpl-role`|
+|Command line|`--init-rpl-role=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-init-rpl-role](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-init-rpl-role)|
+
+## --log-basename
+|name|value|
+|----|-----|
+|Name|`--log-basename`|
+|Command line|`--log-basename=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-log-basename](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-log-basename)|
+
+## --log-bin-trust-routine-creators
+|name|value|
+|----|-----|
+|Name|`--log-bin-trust-routine-creators`|
+|Command line|`--log-bin-trust-routine-creators`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-log-bin-trust-routine-creators](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-log-bin-trust-routine-creators)|
+
+## --master-host
+|name|value|
+|----|-----|
+|Name|`--master-host`|
+|Command line|`--master-host=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-host](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-host)|
+
+## --master-info-file
+|name|value|
+|----|-----|
+|Name|`--master-info-file`|
+|Command line|`--master-info-file=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-info-file](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-info-file)|
+
+## --master-password
+|name|value|
+|----|-----|
+|Name|`--master-password`|
+|Command line|`--master-password=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-password](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-password)|
+
+## --master-port
+|name|value|
+|----|-----|
+|Name|`--master-port`|
+|Command line|`--master-port=#`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-port](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-port)|
+
+## --master-retry-count
+|name|value|
+|----|-----|
+|Name|`--master-retry-count`|
+|Command line|`--master-retry-count=#`|
+|Type of variable|`integer`|
+|Default value|`86400`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-retry-count](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-retry-count)|
+
+## --master-ssl
+|name|value|
+|----|-----|
+|Name|`--master-ssl`|
+|Command line|`--master-ssl`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-ssl](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-ssl)|
+
+## --master-ssl-ca
+|name|value|
+|----|-----|
+|Name|`--master-ssl-ca`|
+|Command line|`--master-ssl-ca[=name]`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-ssl-ca](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-ssl-ca)|
+
+## --master-ssl-capath
+|name|value|
+|----|-----|
+|Name|`--master-ssl-capath`|
+|Command line|`--master-ssl-capath[=name]`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-ssl-capath](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-ssl-capath)|
+
+## --master-ssl-cert
+|name|value|
+|----|-----|
+|Name|`--master-ssl-cert`|
+|Command line|`--master-ssl-cert[=name]`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-ssl-cert](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-ssl-cert)|
+
+## --master-ssl-cipher
+|name|value|
+|----|-----|
+|Name|`--master-ssl-cipher`|
+|Command line|`--master-ssl-cipher[=name]`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-ssl-cipher](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-ssl-cipher)|
+
+## --master-ssl-key
+|name|value|
+|----|-----|
+|Name|`--master-ssl-key`|
+|Command line|`--master-ssl-key[=name]`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-ssl-key](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-ssl-key)|
+
+## --master-user
+|name|value|
+|----|-----|
+|Name|`--master-user`|
+|Command line|`--master-user=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-user](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-user)|
+
+## --max-binlog-dump-events
+|name|value|
+|----|-----|
+|Name|`--max-binlog-dump-events`|
+|Command line|`--max-binlog-dump-events=#`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-max-binlog-dump-events](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-max-binlog-dump-events)|
+
+## --replicate-rewrite-db
+|name|value|
+|----|-----|
+|Name|`--replicate-rewrite-db`|
+|Command line|`--replicate-rewrite-db=master_database->slave_database`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-replicate-rewrite-db](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-replicate-rewrite-db)|
+
+## --replicate-same-server-id
+|name|value|
+|----|-----|
+|Name|`--replicate-same-server-id`|
+|Command line|`--replicate-same-server-id`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-replicate-same-server-id](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-replicate-same-server-id)|
+
+## --sporadic-binlog-dump-fail
+|name|value|
+|----|-----|
+|Name|`--sporadic-binlog-dump-fail`|
+|Command line|`--sporadic-binlog-dump-fail`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-sporadic-binlog-dump-fail](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-sporadic-binlog-dump-fail)|
+
+## --sysdate-is-now
+|name|value|
+|----|-----|
+|Name|`--sysdate-is-now`|
+|Command line|`--sysdate-is-now`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-sysdate-is-now](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-sysdate-is-now)|
+
+## --record-buffer
+|name|value|
+|----|-----|
+|Name|`--record-buffer`|
+|Command line|`--record-buffer=#`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-record-buffer](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-record-buffer)|
+
+## --table-cache
+|name|value|
+|----|-----|
+|Name|`--table-cache`|
+|Command line|`--table-open-cache=#`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-table-cache](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-table-cache)|
+
+## --skip-bdb
+|name|value|
+|----|-----|
+|Name|`--skip-bdb`|
+|Command line|`----skip-bdb`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-skip-bdb](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-skip-bdb)|
+
+## --external-locking
+|name|value|
+|----|-----|
+|Name|`--external-locking`|
+|Command line|`--external-locking`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-external-locking](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-external-locking)|
+
+## --log-isam
+|name|value|
+|----|-----|
+|Name|`--log-isam`|
+|Command line|`--log-isam[=file_name]`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-log-isam](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-log-isam)|
+
+## --innodb
+|name|value|
+|----|-----|
+|Name|`--innodb`|
+|Command line|`--innodb=value, --skip-innodb`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb)|
+
+## --innodb-cmp
+|name|value|
+|----|-----|
+|Name|`--innodb-cmp`|
+|Command line|`--innodb-cmp`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-cmp](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-cmp)|
+
+## --innodb-cmp-reset
+|name|value|
+|----|-----|
+|Name|`--innodb-cmp-reset`|
+|Command line|`--innodb-cmp-reset`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-cmp-reset](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-cmp-reset)|
+
+## --innodb-cmpmem
+|name|value|
+|----|-----|
+|Name|`--innodb-cmpmem`|
+|Command line|`--innodb-cmpmem`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-cmpmem](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-cmpmem)|
+
+## --innodb-cmpmem-reset
+|name|value|
+|----|-----|
+|Name|`--innodb-cmpmem-reset`|
+|Command line|`--innodb-cmpmem-reset`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-cmpmem-reset](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-cmpmem-reset)|
+
+## --innodb-file-io-threads
+|name|value|
+|----|-----|
+|Name|`--innodb-file-io-threads`|
+|Command line|`--innodb-file-io-threads`|
+|Default value|`4`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-file-io-threads](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-file-io-threads)|
+
+## --innodb-index-stats
+|name|value|
+|----|-----|
+|Name|`--innodb-index-stats`|
+|Command line|`--innodb-index-stats`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-index-stats](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-index-stats)|
+
+## --innodb-lock-waits
+|name|value|
+|----|-----|
+|Name|`--innodb-lock-waits`|
+|Command line|`--innodb-lock-waits`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-lock-waits](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-lock-waits)|
+
+## --innodb-locks
+|name|value|
+|----|-----|
+|Name|`--innodb-locks`|
+|Command line|`--innodb-locks`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-locks](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-locks)|
+
+## --innodb-rseg
+|name|value|
+|----|-----|
+|Name|`--innodb-rseg`|
+|Command line|`--innodb-rseg`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-rseg](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-rseg)|
+
+## --innodb-status-file
+|name|value|
+|----|-----|
+|Name|`--innodb-status-file`|
+|Command line|`--innodb-status-file`|
+|Default value|`FALSE`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-status-file](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-status-file)|
+
+## --innodb-sys-indexes
+|name|value|
+|----|-----|
+|Name|`--innodb-sys-indexes`|
+|Command line|`--innodb-sys-indexes`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-sys-indexes](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-sys-indexes)|
+
+## --innodb-sys-stats
+|name|value|
+|----|-----|
+|Name|`--innodb-sys-stats`|
+|Command line|`--innodb-sys-stats`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-sys-stats](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-sys-stats)|
+
+## --innodb-sys-tables
+|name|value|
+|----|-----|
+|Name|`--innodb-sys-tables`|
+|Command line|`--innodb-sys-tables`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-sys-tables](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-sys-tables)|
+
+## --innodb-table-stats
+|name|value|
+|----|-----|
+|Name|`--innodb-table-stats`|
+|Command line|`--innodb-table-stats`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-table-stats](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-table-stats)|
+
+## --innodb-trx
+|name|value|
+|----|-----|
+|Name|`--innodb-trx`|
+|Command line|`--innodb-trx`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-innodb-trx](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-innodb-trx)|
+
+## --aria-log-dir-path
+|name|value|
+|----|-----|
+|Name|`--aria-log-dir-path`|
+|Command line|`--aria-log-dir-path=value`|
+|Default value|`SAME AS DATADIR`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-aria-log-dir-path](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-aria-log-dir-path)|
+
+## --performance-schema-consumer-events-stages-current
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-events-stages-current`|
+|Command line|`--performance-schema-consumer-events-stages-current`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-events-stages-current](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-events-stages-current)|
+
+## --performance-schema-consumer-events-stages-history
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-events-stages-history`|
+|Command line|`--performance-schema-consumer-events-stages-history`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-events-stages-history](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-events-stages-history)|
+
+## --performance-schema-consumer-events-stages-history-long
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-events-stages-history-long`|
+|Command line|`--performance-schema-consumer-events-stages-history-long`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-events-stages-history-long](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-events-stages-history-long)|
+
+## --performance-schema-consumer-events-statements-current
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-events-statements-current`|
+|Command line|`--performance-schema-consumer-events-statements-current`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-events-statements-current](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-events-statements-current)|
+
+## --performance-schema-consumer-events-statements-history
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-events-statements-history`|
+|Command line|`--performance-schema-consumer-events-statements-history`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-events-statements-history](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-events-statements-history)|
+
+## --performance-schema-consumer-events-statements-history-long
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-events-statements-history-long`|
+|Command line|`--performance-schema-consumer-events-statements-history-long`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-events-statements-history-long](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-events-statements-history-long)|
+
+## --performance-schema-consumer-events-waits-current
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-events-waits-current`|
+|Command line|`--performance-schema-consumer-events-waits-current`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-events-waits-current](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-events-waits-current)|
+
+## --performance-schema-consumer-events-waits-history
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-events-waits-history`|
+|Command line|`--performance-schema-consumer-events-waits-history`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-events-waits-history](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-events-waits-history)|
+
+## --performance-schema-consumer-events-waits-history-long
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-events-waits-history-long`|
+|Command line|`--performance-schema-consumer-events-waits-history-long`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-events-waits-history-long](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-events-waits-history-long)|
+
+## --performance-schema-consumer-global-instrumentation
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-global-instrumentation`|
+|Command line|`--performance-schema-consumer-global-instrumentation`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-global-instrumentation](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-global-instrumentation)|
+
+## --performance-schema-consumer-statements-digest
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-statements-digest`|
+|Command line|`--performance-schema-consumer-statements-digest`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-statements-digest](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-statements-digest)|
+
+## --performance-schema-consumer-thread-instrumentation
+|name|value|
+|----|-----|
+|Name|`--performance-schema-consumer-thread-instrumentation`|
+|Command line|`--performance-schema-consumer-thread-instrumentation`|
+|Default value|`ON`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-performance-schema-consumer-thread-instrumentation](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-performance-schema-consumer-thread-instrumentation)|
+
+## --wsrep-new-cluster
+|name|value|
+|----|-----|
+|Name|`--wsrep-new-cluster`|
+|Command line|`--wsrep-new-cluster`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-wsrep-new-cluster](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-wsrep-new-cluster)|
+
+## --debug-assert-if-crashed-table
+|name|value|
+|----|-----|
+|Name|`--debug-assert-if-crashed-table`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-debug-assert-if-crashed-table](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-debug-assert-if-crashed-table)|
+
+## --debug-binlog-fsync-sleep
+|name|value|
+|----|-----|
+|Name|`--debug-binlog-fsync-sleep`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-debug-binlog-fsync-sleep](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-debug-binlog-fsync-sleep)|
+
+## --debug-crc-break
+|name|value|
+|----|-----|
+|Name|`--debug-crc-break`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-debug-crc-break](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-debug-crc-break)|
+
+## --debug-flush
+|name|value|
+|----|-----|
+|Name|`--debug-flush`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-debug-flush](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-debug-flush)|
+
+## --debug-no-sync
+|name|value|
+|----|-----|
+|Name|`--debug-no-sync`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-debug-no-sync](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-debug-no-sync)|
+
+## --debug-sync-timeout
+|name|value|
+|----|-----|
+|Name|`--debug-sync-timeout`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-debug-sync-timeout](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-debug-sync-timeout)|
+
+## --gdb
+|name|value|
+|----|-----|
+|Name|`--gdb`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-gdb](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-gdb)|
+
+## --silent-startup
+|name|value|
+|----|-----|
+|Name|`--silent-startup`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-silent-startup](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-silent-startup)|
+
+## --sync-sys
+|name|value|
+|----|-----|
+|Name|`--sync-sys`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-sync-sys](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-sync-sys)|
+
+## --thread-alarm
+|name|value|
+|----|-----|
+|Name|`--thread-alarm`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-thread-alarm](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-thread-alarm)|
+
+## --allow-suspicious-udfs
+|name|value|
+|----|-----|
+|Name|`--allow-suspicious-udfs`|
+|Command line|`--allow-suspicious-udfs`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-allow-suspicious-udfs](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-allow-suspicious-udfs)|
+
+## --bootstrap
+|name|value|
+|----|-----|
+|Name|`--bootstrap`|
+|Command line|`--bootstrap`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-bootstrap](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-bootstrap)|
+
+## --chroot
+|name|value|
+|----|-----|
+|Name|`--chroot`|
+|Command line|`--chroot=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-chroot](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-chroot)|
+
+## --des-key-file
+|name|value|
+|----|-----|
+|Name|`--des-key-file`|
+|Command line|`--des-key-file=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-des-key-file](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-des-key-file)|
+
+## --exit-info
+|name|value|
+|----|-----|
+|Name|`--exit-info`|
+|Command line|`--exit-info[=#]`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-exit-info](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-exit-info)|
+
+## --getopt-prefix-matching
+|name|value|
+|----|-----|
+|Name|`--getopt-prefix-matching`|
+|Command line|`--getopt-prefix-matching={0|1}`|
+|Default value|`TRUE`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-getopt-prefix-matching](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-getopt-prefix-matching)|
+
+## --help
+|name|value|
+|----|-----|
+|Name|`--help`|
+|Command line|`--help`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-help](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-help)|
+
+## --log-ddl-recovery
+|name|value|
+|----|-----|
+|Name|`--log-ddl-recovery`|
+|Command line|`--log-ddl-recovery=name`|
+|Default value|`ddl-recover.log`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-log-ddl-recovery](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-log-ddl-recovery)|
+
+## --log-short-format
+|name|value|
+|----|-----|
+|Name|`--log-short-format`|
+|Command line|`--log-short-format`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-log-short-format](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-log-short-format)|
+
+## --log-slow-file
+|name|value|
+|----|-----|
+|Name|`--log-slow-file`|
+|Command line|`--log-slow-file=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-log-slow-file](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-log-slow-file)|
+
+## --log-slow-time
+|name|value|
+|----|-----|
+|Name|`--log-slow-time`|
+|Command line|`--log-slow-time=#`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-log-slow-time](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-log-slow-time)|
+
+## --log-tc
+|name|value|
+|----|-----|
+|Name|`--log-tc`|
+|Command line|`--log-tc=name`|
+|Default value|`tc.log`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-log-tc](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-log-tc)|
+
+## --master-connect-retry
+|name|value|
+|----|-----|
+|Name|`--master-connect-retry`|
+|Command line|`--master-connect-retry=#`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-master-connect-retry](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-master-connect-retry)|
+
+## --memlock
+|name|value|
+|----|-----|
+|Name|`--memlock`|
+|Command line|`--memlock`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-memlock](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-memlock)|
+
+## --ndb-use-copying-alter-table
+|name|value|
+|----|-----|
+|Name|`--ndb-use-copying-alter-table`|
+|Command line|`--ndb-use-copying-alter-table`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-ndb-use-copying-alter-table](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-ndb-use-copying-alter-table)|
+
+## --one-thread
+|name|value|
+|----|-----|
+|Name|`--one-thread`|
+|Command line|`--one-thread`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-one-thread](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-one-thread)|
+
+## --plugin-load
+|name|value|
+|----|-----|
+|Name|`--plugin-load`|
+|Command line|`--plugin-load=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-plugin-load](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-plugin-load)|
+
+## --plugin-load-add
+|name|value|
+|----|-----|
+|Name|`--plugin-load-add`|
+|Command line|`--plugin-load-add=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-plugin-load-add](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-plugin-load-add)|
+
+## --port-open-timeout
+|name|value|
+|----|-----|
+|Name|`--port-open-timeout`|
+|Command line|`--port-open-timeout=#`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-port-open-timeout](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-port-open-timeout)|
+
+## --safe-user-create
+|name|value|
+|----|-----|
+|Name|`--safe-user-create`|
+|Command line|`--safe-user-create`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-safe-user-create](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-safe-user-create)|
+
+## --safemalloc-mem-limit
+|name|value|
+|----|-----|
+|Name|`--safemalloc-mem-limit`|
+|Command line|`--safemalloc-mem-limit=#`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-safemalloc-mem-limit](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-safemalloc-mem-limit)|
+
+## --show-slave-auth-info
+|name|value|
+|----|-----|
+|Name|`--show-slave-auth-info`|
+|Command line|`--show-slave-auth-info`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-show-slave-auth-info](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-show-slave-auth-info)|
+
+## --skip-grant-tables
+|name|value|
+|----|-----|
+|Name|`--skip-grant-tables`|
+|Command line|`--skip-grant-tables`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-skip-grant-tables](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-skip-grant-tables)|
+
+## --skip-host-cache
+|name|value|
+|----|-----|
+|Name|`--skip-host-cache`|
+|Command line|`--skip-host-cache`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-skip-host-cache](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-skip-host-cache)|
+
+## --skip-partition
+|name|value|
+|----|-----|
+|Name|`--skip-partition`|
+|Command line|`--skip-partition, --disable-partition`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-skip-partition](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-skip-partition)|
+
+## --skip-slave-start
+|name|value|
+|----|-----|
+|Name|`--skip-slave-start`|
+|Command line|`--skip-slave-start`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-skip-slave-start](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-skip-slave-start)|
+
+## --skip-ssl
+|name|value|
+|----|-----|
+|Name|`--skip-ssl`|
+|Command line|`--skip-ssl`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-skip-ssl](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-skip-ssl)|
+
+## --skip-symlink
+|name|value|
+|----|-----|
+|Name|`--skip-symlink`|
+|Command line|`--skip-symlink`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-skip-symlink](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-skip-symlink)|
+
+## --skip-thread-priority
+|name|value|
+|----|-----|
+|Name|`--skip-thread-priority`|
+|Command line|`--skip-thread-priority`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-skip-thread-priority](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-skip-thread-priority)|
+
+## --sql-bin-update-same
+|name|value|
+|----|-----|
+|Name|`--sql-bin-update-same`|
+|Command line|`--sql-bin-update-same=#`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-sql-bin-update-same](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-sql-bin-update-same)|
+
+## --ssl
+|name|value|
+|----|-----|
+|Name|`--ssl`|
+|Command line|`--ssl`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-ssl](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-ssl)|
+
+## --stack-trace
+|name|value|
+|----|-----|
+|Name|`--stack-trace`|
+|Command line|`--stack-trace, --skip-stack-trace`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-stack-trace](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-stack-trace)|
+
+## --symbolic-links
+|name|value|
+|----|-----|
+|Name|`--symbolic-links`|
+|Command line|`--symbolic-links`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-symbolic-links](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-symbolic-links)|
+
+## --tc-heuristic-recover
+|name|value|
+|----|-----|
+|Name|`--tc-heuristic-recover`|
+|Command line|`--tc-heuristic-recover=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-tc-heuristic-recover](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-tc-heuristic-recover)|
+
+## --temp-pool
+|name|value|
+|----|-----|
+|Name|`--temp-pool`|
+|Command line|`--temp-pool`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-temp-pool](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-temp-pool)|
+
+## --test-expect-abort
+|name|value|
+|----|-----|
+|Name|`--test-expect-abort`|
+|Command line|`--test-expect-abort`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-test-expect-abort](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-test-expect-abort)|
+
+## --test-ignore-wrong-options
+|name|value|
+|----|-----|
+|Name|`--test-ignore-wrong-options`|
+|Command line|`--test-ignore-wrong-options`|
+|Type of variable|`enumeration`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-test-ignore-wrong-options](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-test-ignore-wrong-options)|
+
+## --user
+|name|value|
+|----|-----|
+|Name|`--user`|
+|Command line|`--user=name`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-user](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-user)|
+
+## --verbose
+|name|value|
+|----|-----|
+|Name|`--verbose`|
+|Command line|`-v,  --verbose`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[-verbose](https://mariadb.com/kb/en/library/documentation/mysqld-options/#-verbose)|
+
 ## oqgraph_allow_create_integer_latch
 |name|value|
 |----|-----|
@@ -5892,6 +9411,578 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[oqgraph_verbose_debug](https://mariadb.com/kb/en/library/documentation/oqgraph-system-and-status-variables/#oqgraph_verbose_debug)|
+
+## pbxt_auto_increment_mode
+|name|value|
+|----|-----|
+|Name|`pbxt_auto_increment_mode`|
+|Command line|`--pbxt-auto-increment-mode=#`|
+|Default value|`0`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_auto_increment_mode](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_auto_increment_mode)|
+
+## pbxt_checkpoint_frequency
+|name|value|
+|----|-----|
+|Name|`pbxt_checkpoint_frequency`|
+|Command line|`--pbxt-checkpoint-frequency=#`|
+|Default value|`24MB`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_checkpoint_frequency](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_checkpoint_frequency)|
+
+## pbxt_data_file_grow_size
+|name|value|
+|----|-----|
+|Name|`pbxt_data_file_grow_size`|
+|Command line|`--pbxt-data-file-grow-size=#`|
+|Type of variable|`integer`|
+|Default value|`2MB`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_data_file_grow_size](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_data_file_grow_size)|
+
+## pbxt_data_log_threshold
+|name|value|
+|----|-----|
+|Name|`pbxt_data_log_threshold`|
+|Command line|`--pbxt-data-log-threshold=#`|
+|Type of variable|`integer`|
+|Default value|`64MB`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_data_log_threshold](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_data_log_threshold)|
+
+## pbxt_flush_log_at_trx_commit
+|name|value|
+|----|-----|
+|Name|`pbxt_flush_log_at_trx_commit`|
+|Command line|`--pbxt-flush-log-at-trx-commit=#`|
+|Default value|`1`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_flush_log_at_trx_commit](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_flush_log_at_trx_commit)|
+
+## pbxt_garbage_threshold
+|name|value|
+|----|-----|
+|Name|`pbxt_garbage_threshold`|
+|Command line|`--pbxt-garbage-threshold=#`|
+|Default value|`50`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_garbage_threshold](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_garbage_threshold)|
+
+## pbxt_index_cache_size
+|name|value|
+|----|-----|
+|Name|`pbxt_index_cache_size`|
+|Command line|`--pbxt-index-cache-size=#`|
+|Default value|`32MB`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_index_cache_size](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_index_cache_size)|
+
+## pbxt_log_buffer_size
+|name|value|
+|----|-----|
+|Name|`pbxt_log_buffer_size`|
+|Command line|`--pbxt-log-buffer-size=#`|
+|Type of variable|`integer`|
+|Default value|`256MB`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_log_buffer_size](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_log_buffer_size)|
+
+## pbxt_log_cache_size
+|name|value|
+|----|-----|
+|Name|`pbxt_log_cache_size`|
+|Command line|`--pbxt-log-cache-size=#`|
+|Type of variable|`integer`|
+|Default value|`32MB`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_log_cache_size](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_log_cache_size)|
+
+## pbxt_log_file_count
+|name|value|
+|----|-----|
+|Name|`pbxt_log_file_count`|
+|Command line|`--pbxt-log-file-count=#`|
+|Type of variable|`integer`|
+|Default value|`3`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_log_file_count](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_log_file_count)|
+
+## pbxt_log_file_threshold
+|name|value|
+|----|-----|
+|Name|`pbxt_log_file_threshold`|
+|Command line|`--pbxt-log-file-threshold=#`|
+|Type of variable|`integer`|
+|Default value|`32MB`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_log_file_threshold](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_log_file_threshold)|
+
+## pbxt_offline_log_function
+|name|value|
+|----|-----|
+|Name|`pbxt_offline_log_function`|
+|Command line|`--pbxt-offline-log-function=#`|
+|Default value|`0`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_offline_log_function](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_offline_log_function)|
+
+## pbxt_record_cache_size
+|name|value|
+|----|-----|
+|Name|`pbxt_record_cache_size`|
+|Command line|`--pbxt-record-cache-size=#`|
+|Default value|`32MB`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_record_cache_size](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_record_cache_size)|
+
+## pbxt_row_file_grow_size
+|name|value|
+|----|-----|
+|Name|`pbxt_row_file_grow_size`|
+|Command line|`--pbxt-row-file-grow-size=#`|
+|Type of variable|`integer`|
+|Default value|`256KB`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_row_file_grow_size](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_row_file_grow_size)|
+
+## pbxt_sweeper_priority
+|name|value|
+|----|-----|
+|Name|`pbxt_sweeper_priority`|
+|Command line|`--pbxt-sweeper-priority=#`|
+|Default value|`0`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_sweeper_priority](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_sweeper_priority)|
+
+## pbxt_support_xa
+|name|value|
+|----|-----|
+|Name|`pbxt_support_xa`|
+|Command line|`--pbxt-support-xa=#`|
+|Default value|`TRUE`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_support_xa](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_support_xa)|
+
+## pbxt_transaction_buffer_size
+|name|value|
+|----|-----|
+|Name|`pbxt_transaction_buffer_size`|
+|Command line|`--pbxt-transaction-buffer-size=#`|
+|Type of variable|`integer`|
+|Default value|`1MB`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[pbxt_transaction_buffer_size](https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/#pbxt_transaction_buffer_size)|
+
+## Performance_schema_accounts_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_accounts_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_accounts_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_accounts_lost)|
+
+## Performance_schema_cond_classes_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_cond_classes_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_cond_classes_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_cond_classes_lost)|
+
+## Performance_schema_cond_instances_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_cond_instances_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_cond_instances_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_cond_instances_lost)|
+
+## Performance_schema_digest_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_digest_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_digest_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_digest_lost)|
+
+## Performance_schema_file_classes_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_file_classes_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_file_classes_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_file_classes_lost)|
+
+## Performance_schema_file_handles_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_file_handles_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_file_handles_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_file_handles_lost)|
+
+## Performance_schema_file_instances_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_file_instances_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_file_instances_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_file_instances_lost)|
+
+## Performance_schema_hosts_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_hosts_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_hosts_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_hosts_lost)|
+
+## Performance_schema_index_stat_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_index_stat_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_index_stat_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_index_stat_lost)|
+
+## Performance_schema_locker_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_locker_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_locker_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_locker_lost)|
+
+## Performance_schema_memory_classes_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_memory_classes_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_memory_classes_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_memory_classes_lost)|
+
+## Performance_schema_metadata_lock_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_metadata_lock_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_metadata_lock_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_metadata_lock_lost)|
+
+## Performance_schema_mutex_classes_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_mutex_classes_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_mutex_classes_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_mutex_classes_lost)|
+
+## Performance_schema_mutex_instances_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_mutex_instances_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_mutex_instances_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_mutex_instances_lost)|
+
+## Performance_schema_nested_statement_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_nested_statement_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_nested_statement_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_nested_statement_lost)|
+
+## Performance_schema_prepared_statements_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_prepared_statements_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_prepared_statements_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_prepared_statements_lost)|
+
+## Performance_schema_program_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_program_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_program_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_program_lost)|
+
+## Performance_schema_rwlock_classes_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_rwlock_classes_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_rwlock_classes_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_rwlock_classes_lost)|
+
+## Performance_schema_rwlock_instances_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_rwlock_instances_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_rwlock_instances_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_rwlock_instances_lost)|
+
+## Performance_schema_session_connect_attrs_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_session_connect_attrs_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_session_connect_attrs_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_session_connect_attrs_lost)|
+
+## Performance_schema_socket_classes_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_socket_classes_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_socket_classes_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_socket_classes_lost)|
+
+## Performance_schema_socket_instances_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_socket_instances_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_socket_instances_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_socket_instances_lost)|
+
+## Performance_schema_stage_classes_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_stage_classes_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_stage_classes_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_stage_classes_lost)|
+
+## Performance_schema_statement_classes_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_statement_classes_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_statement_classes_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_statement_classes_lost)|
+
+## Performance_schema_table_handles_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_table_handles_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_table_handles_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_table_handles_lost)|
+
+## Performance_schema_table_instances_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_table_instances_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_table_instances_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_table_instances_lost)|
+
+## Performance_schema_table_lock_stat_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_table_lock_stat_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_table_lock_stat_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_table_lock_stat_lost)|
+
+## Performance_schema_thread_classes_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_thread_classes_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_thread_classes_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_thread_classes_lost)|
+
+## Performance_schema_thread_instances_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_thread_instances_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_thread_instances_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_thread_instances_lost)|
+
+## Performance_schema_users_lost
+|name|value|
+|----|-----|
+|Name|`Performance_schema_users_lost`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[performance_schema_users_lost](https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/#performance_schema_users_lost)|
 
 ## performance_schema
 |name|value|
@@ -6567,6 +10658,108 @@
 |------|----|
 |mariadb.com|[performance_schema_users_size](https://mariadb.com/kb/en/library/documentation/performance-schema-system-variables/#performance_schema_users_size)|
 |dev.mysql.com|[sysvar_performance_schema_users_size](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_users_size)|
+
+## query_cache_info
+|name|value|
+|----|-----|
+|Name|`query_cache_info`|
+|Command line|`--query-cache-info=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[query_cache_info](https://mariadb.com/kb/en/library/documentation/query-cache-information-plugin/#query_cache_info)|
+
+## query_response_time_flush
+|name|value|
+|----|-----|
+|Name|`query_response_time_flush`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[query_response_time_flush](https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/#query_response_time_flush)|
+
+## query_response_time_range_base
+|name|value|
+|----|-----|
+|Name|`query_response_time_range_base`|
+|Command line|`--query-response-time-range-base=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`10`|
+|Dynamic|`true`|
+|Range|from: `2` to: `1000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[query_response_time_range_base](https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/#query_response_time_range_base)|
+
+## query_response_time_exec_time_debug
+|name|value|
+|----|-----|
+|Name|`query_response_time_exec_time_debug`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `31536000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[query_response_time_exec_time_debug](https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/#query_response_time_exec_time_debug)|
+
+## query_response_time_stats
+|name|value|
+|----|-----|
+|Name|`query_response_time_stats`|
+|Command line|`query-response-time-stats[={0|1}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[query_response_time_stats](https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/#query_response_time_stats)|
+
+## query_response_time
+|name|value|
+|----|-----|
+|Name|`query_response_time`|
+|Command line|`--query-response-time=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[query_response_time](https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/#query_response_time)|
+
+## query_response_time_audit
+|name|value|
+|----|-----|
+|Name|`query_response_time_audit`|
+|Command line|`--query-response-time-audit=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[query_response_time_audit](https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/#query_response_time_audit)|
 
 ## auto_increment_increment
 |name|value|
@@ -16928,6 +21121,84 @@
 |------|----|
 |mariadb.com|[warning_count](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#warning_count)|
 
+## simple_password_check_digits
+|name|value|
+|----|-----|
+|Name|`simple_password_check_digits`|
+|Command line|`--simple-password-check-digits=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[simple_password_check_digits](https://mariadb.com/kb/en/library/documentation/simple-password-check-plugin/#simple_password_check_digits)|
+
+## simple_password_check_letters_same_case
+|name|value|
+|----|-----|
+|Name|`simple_password_check_letters_same_case`|
+|Command line|`--simple-password-check-letters-same-case=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[simple_password_check_letters_same_case](https://mariadb.com/kb/en/library/documentation/simple-password-check-plugin/#simple_password_check_letters_same_case)|
+
+## simple_password_check_minimal_length
+|name|value|
+|----|-----|
+|Name|`simple_password_check_minimal_length`|
+|Command line|`--simple-password-check-minimal-length=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`8`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[simple_password_check_minimal_length](https://mariadb.com/kb/en/library/documentation/simple-password-check-plugin/#simple_password_check_minimal_length)|
+
+## simple_password_check_other_characters
+|name|value|
+|----|-----|
+|Name|`simple_password_check_other_characters`|
+|Command line|`--simple-password-check-other-characters=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[simple_password_check_other_characters](https://mariadb.com/kb/en/library/documentation/simple-password-check-plugin/#simple_password_check_other_characters)|
+
+## simple_password_check
+|name|value|
+|----|-----|
+|Name|`simple_password_check`|
+|Command line|`--simple-password-check=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[simple_password_check](https://mariadb.com/kb/en/library/documentation/simple-password-check-plugin/#simple_password_check)|
+
 ## Sphinx_error
 |name|value|
 |----|-----|
@@ -18772,6 +23043,97 @@
 |------|----|
 |mariadb.com|[spider_xa_register_mode](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/#spider_xa_register_mode)|
 
+## sql_error_log_filename
+|name|value|
+|----|-----|
+|Name|`sql_error_log_filename`|
+|Command line|`--sql-error-log-filename=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`sql_errors.log`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[sql_error_log_filename](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_filename)|
+
+## sql_error_log_rate
+|name|value|
+|----|-----|
+|Name|`sql_error_log_rate`|
+|Command line|`--sql-error-log-rate=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[sql_error_log_rate](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_rate)|
+
+## sql_error_log_rotate
+|name|value|
+|----|-----|
+|Name|`sql_error_log_rotate`|
+|Command line|`--sql-error-log-rotate={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[sql_error_log_rotate](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_rotate)|
+
+## sql_error_log_rotations
+|name|value|
+|----|-----|
+|Name|`sql_error_log_rotations`|
+|Command line|`--sql-error-log-rotations`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`9`|
+|Dynamic|`false`|
+|Range|from: `1` to: `999`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[sql_error_log_rotations](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_rotations)|
+
+## sql_error_log_size_limit
+|name|value|
+|----|-----|
+|Name|`sql_error_log_size_limit`|
+|Command line|`--sql-error-log-size-limit=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1000000`|
+|Dynamic|`false`|
+|Range|from: `100` to: `9.2233720368548E+18`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[sql_error_log_size_limit](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_size_limit)|
+
+## sql_error_log
+|name|value|
+|----|-----|
+|Name|`sql_error_log`|
+|Command line|`--sql-error-log=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[sql_error_log](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log)|
+
 ## Ssl_accept_renegotiates
 |name|value|
 |----|-----|
@@ -19223,6 +23585,93 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[version_ssl_library](https://mariadb.com/kb/en/library/documentation/ssltls-system-variables/#version_ssl_library)|
+
+## column_compression_threshold
+|name|value|
+|----|-----|
+|Name|`column_compression_threshold`|
+|Command line|`--column-compression-threshold=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`100`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[column_compression_threshold](https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/#column_compression_threshold)|
+
+## column_compression_zlib_level
+|name|value|
+|----|-----|
+|Name|`column_compression_zlib_level`|
+|Command line|`--column-compression-zlib-level=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`6`|
+|Dynamic|`true`|
+|Range|from: `1` to: `9`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[column_compression_zlib_level](https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/#column_compression_zlib_level)|
+
+## column_compression_zlib_strategy
+|name|value|
+|----|-----|
+|Name|`column_compression_zlib_strategy`|
+|Command line|`--column-compression-zlib-strategy=#`|
+|Type of variable|`enumeration`|
+|Scope|`global`, `session`|
+|Default value|`DEFAULT_STRATEGY`|
+|Dynamic|`true`|
+|Valid value(s)|`DEFAULT_STRATEGY`, `FILTERED`, `HUFFMAN_ONLY`, `RLE`, `FIXED`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[column_compression_zlib_strategy](https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/#column_compression_zlib_strategy)|
+
+## column_compression_zlib_wrap
+|name|value|
+|----|-----|
+|Name|`column_compression_zlib_wrap`|
+|Command line|`--column-compression-zlib-wrap{=0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[column_compression_zlib_wrap](https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/#column_compression_zlib_wrap)|
+
+## Column_compressions
+|name|value|
+|----|-----|
+|Name|`Column_compressions`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[column_compressions](https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/#column_compressions)|
+
+## Column_decompressions
+|name|value|
+|----|-----|
+|Name|`Column_decompressions`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[column_decompressions](https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/#column_decompressions)|
 
 ## extra_max_connections
 |name|value|
@@ -22049,6 +26498,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[tokudb_write_status_frequency](https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/#tokudb_write_status_frequency)|
+
+## userstat
+|name|value|
+|----|-----|
+|Name|`userstat`|
+|Command line|`--userstat=1`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[userstat](https://mariadb.com/kb/en/library/documentation/user-statistics/#userstat)|
 
 ## system_versioning_alter_history
 |name|value|

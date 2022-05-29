@@ -594,6 +594,288 @@
                 }
             ]
         },
+        "gssapi_keytab_path": {
+            "cli": "--gssapi-keytab-path",
+            "default": "''",
+            "dynamic": false,
+            "name": "gssapi_keytab_path",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "gssapi_keytab_path",
+                    "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-gssapi/"
+                }
+            ]
+        },
+        "gssapi_principal_name": {
+            "cli": "--gssapi-principal-name",
+            "default": "''",
+            "dynamic": false,
+            "name": "gssapi_principal_name",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "gssapi_principal_name",
+                    "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-gssapi/"
+                }
+            ]
+        },
+        "gssapi_mech_name": {
+            "cli": "--gssapi-mech-name",
+            "default": "Negotiate",
+            "dynamic": false,
+            "name": "gssapi_mech_name",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "Kerberos",
+                "Negotiate"
+            ],
+            "ids": [
+                {
+                    "anchor": "gssapi_mech_name",
+                    "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-gssapi/"
+                }
+            ]
+        },
+        "gssapi": {
+            "cli": "--gssapi=value",
+            "default": "ON",
+            "name": "gssapi",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "gssapi",
+                    "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-gssapi/"
+                }
+            ]
+        },
+        "pam_debug": {
+            "cli": "--pam-debug",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "pam_debug",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "pam_debug",
+                    "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-pam/"
+                }
+            ]
+        },
+        "pam_use_cleartext_plugin": {
+            "cli": "--pam-use-cleartext-plugin",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "pam_use_cleartext_plugin",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "pam_use_cleartext_plugin",
+                    "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-pam/"
+                }
+            ]
+        },
+        "pam_winbind_workaround": {
+            "cli": "--pam-winbind-workaround",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "pam_winbind_workaround",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "pam_winbind_workaround",
+                    "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-pam/"
+                }
+            ]
+        },
+        "pam": {
+            "cli": "--pam=value",
+            "default": "ON",
+            "name": "pam",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "pam",
+                    "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-pam/"
+                }
+            ]
+        },
+        "aws_key_management_key_spec": {
+            "cli": "--aws-key-management-key-spec=value",
+            "default": "AES_128",
+            "dynamic": false,
+            "name": "aws_key_management_key_spec",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "AES_128",
+                "AES_256"
+            ],
+            "ids": [
+                {
+                    "anchor": "aws_key_management_key_spec",
+                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
+                }
+            ]
+        },
+        "aws_key_management_log_level": {
+            "cli": "--aws-key-management-log-level=value",
+            "default": "Off",
+            "dynamic": false,
+            "name": "aws_key_management_log_level",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "Off",
+                "Fatal",
+                "Warn",
+                "Info",
+                "Debug",
+                "Trace"
+            ],
+            "ids": [
+                {
+                    "anchor": "aws_key_management_log_level",
+                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
+                }
+            ]
+        },
+        "aws_key_management_master_key_id": {
+            "cli": "--aws-key-management-master-key-id=value",
+            "default": "",
+            "dynamic": false,
+            "name": "aws_key_management_master_key_id",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "aws_key_management_master_key_id",
+                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
+                }
+            ]
+        },
+        "aws_key_management_mock": {
+            "cli": "--aws-key-management-mock",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "aws_key_management_mock",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "validValues": [
+                "OFF",
+                "ON"
+            ],
+            "ids": [
+                {
+                    "anchor": "aws_key_management_mock",
+                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
+                }
+            ]
+        },
+        "aws_key_management_region": {
+            "cli": "--aws-key-management-region=value",
+            "default": "'us-east-1'",
+            "dynamic": false,
+            "name": "aws_key_management_region",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "aws_key_management_region",
+                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
+                }
+            ]
+        },
+        "aws_key_management_request_timeout": {
+            "cli": "--aws-key-management-request-timeout=value",
+            "default": "0",
+            "dynamic": false,
+            "name": "aws_key_management_request_timeout",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "aws_key_management_request_timeout",
+                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
+                }
+            ]
+        },
+        "aws_key_management_rotate_key": {
+            "cli": "--aws-key-management-rotate-key=value",
+            "default": "",
+            "dynamic": true,
+            "name": "aws_key_management_rotate_key",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "aws_key_management_rotate_key",
+                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
+                }
+            ]
+        },
+        "aws_key_management": {
+            "cli": "--aws-key-management=value",
+            "default": "ON",
+            "name": "aws_key_management",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "aws_key_management",
+                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
+                }
+            ]
+        },
         "Cassandra_multiget_keys_scanned": {
             "name": "Cassandra_multiget_keys_scanned",
             "scope": [
@@ -1173,6 +1455,244 @@
                 {
                     "anchor": "connect_xtrace",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/connect/connect-system-variables/"
+                }
+            ]
+        },
+        "cracklib_password_check_dictionary": {
+            "cli": "--cracklib-password-check-dictionary=value",
+            "default": "Depends on the system. Often /usr/share/cracklib/pw_dict",
+            "dynamic": false,
+            "name": "cracklib_password_check_dictionary",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "cracklib_password_check_dictionary",
+                    "url": "https://mariadb.com/kb/en/library/documentation/cracklib-password-check-plugin/"
+                }
+            ]
+        },
+        "cracklib_password_check": {
+            "cli": "--cracklib-password-check=value",
+            "default": "ON",
+            "name": "cracklib_password_check",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "cracklib_password_check",
+                    "url": "https://mariadb.com/kb/en/library/documentation/cracklib-password-check-plugin/"
+                }
+            ]
+        },
+        "disks": {
+            "cli": "--disks=value",
+            "default": "ON",
+            "name": "disks",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "disks",
+                    "url": "https://mariadb.com/kb/en/library/documentation/disks-plugin/"
+                }
+            ]
+        },
+        "feedback_http_proxy": {
+            "cli": "--feedback-http=proxy=value",
+            "default": "'' (empty)",
+            "name": "feedback_http_proxy",
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "feedback_http_proxy",
+                    "url": "https://mariadb.com/kb/en/library/documentation/feedback-plugin/"
+                }
+            ]
+        },
+        "feedback_send_retry_wait": {
+            "cli": "--feedback-send-retry-wait=#",
+            "default": "60",
+            "dynamic": true,
+            "name": "feedback_send_retry_wait",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "validValues": [
+                "1",
+                "86400"
+            ],
+            "ids": [
+                {
+                    "anchor": "feedback_send_retry_wait",
+                    "url": "https://mariadb.com/kb/en/library/documentation/feedback-plugin/"
+                }
+            ]
+        },
+        "feedback_send_timeout": {
+            "cli": "--feedback-send-timeout=#",
+            "default": "60",
+            "dynamic": true,
+            "name": "feedback_send_timeout",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "validValues": [
+                "1",
+                "86400"
+            ],
+            "ids": [
+                {
+                    "anchor": "feedback_send_timeout",
+                    "url": "https://mariadb.com/kb/en/library/documentation/feedback-plugin/"
+                }
+            ]
+        },
+        "feedback_server_uid": {
+            "dynamic": false,
+            "name": "feedback_server_uid",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "feedback_server_uid",
+                    "url": "https://mariadb.com/kb/en/library/documentation/feedback-plugin/"
+                }
+            ]
+        },
+        "feedback_url": {
+            "cli": "--feedback-url=url",
+            "default": "https://mariadb.org/feedback_plugin/post",
+            "dynamic": false,
+            "name": "feedback_url",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "feedback_url",
+                    "url": "https://mariadb.com/kb/en/library/documentation/feedback-plugin/"
+                }
+            ]
+        },
+        "feedback_user_info": {
+            "cli": "--feedback-user-info=string",
+            "default": "Empty string",
+            "dynamic": false,
+            "name": "feedback_user_info",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "feedback_user_info",
+                    "url": "https://mariadb.com/kb/en/library/documentation/feedback-plugin/"
+                }
+            ]
+        },
+        "feedback": {
+            "cli": "--feedback=value",
+            "default": "ON",
+            "name": "feedback",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "feedback",
+                    "url": "https://mariadb.com/kb/en/library/documentation/feedback-plugin/"
+                }
+            ]
+        },
+        "file_key_management_encryption_algorithm": {
+            "cli": "--file-key-management-encryption-algorithm=value",
+            "default": "AES_CBC",
+            "dynamic": false,
+            "name": "file_key_management_encryption_algorithm",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "AES_CBC",
+                "AES_CTR"
+            ],
+            "ids": [
+                {
+                    "anchor": "file_key_management_encryption_algorithm",
+                    "url": "https://mariadb.com/kb/en/library/documentation/file-key-management-encryption-plugin/"
+                }
+            ]
+        },
+        "file_key_management_filekey": {
+            "cli": "--file-key-management-filekey=value",
+            "default": "(empty)",
+            "dynamic": false,
+            "name": "file_key_management_filekey",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "file_key_management_filekey",
+                    "url": "https://mariadb.com/kb/en/library/documentation/file-key-management-encryption-plugin/"
+                }
+            ]
+        },
+        "file_key_management_filename": {
+            "cli": "--file-key-management-filename=value",
+            "default": "(empty)",
+            "dynamic": false,
+            "name": "file_key_management_filename",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "file_key_management_filename",
+                    "url": "https://mariadb.com/kb/en/library/documentation/file-key-management-encryption-plugin/"
+                }
+            ]
+        },
+        "file_key_management": {
+            "cli": "--file-key-management=value",
+            "default": "ON",
+            "name": "file_key_management",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "file_key_management",
+                    "url": "https://mariadb.com/kb/en/library/documentation/file-key-management-encryption-plugin/"
                 }
             ]
         },
@@ -2896,6 +3416,277 @@
                 }
             ]
         },
+        "handlersocket_accept_balance": {
+            "cli": "--handlersocket-accept-balance=\"value\"",
+            "default": "0",
+            "dynamic": false,
+            "name": "handlersocket_accept_balance",
+            "range": {
+                "from": 0,
+                "to": 10000
+            },
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_accept_balance",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_address": {
+            "cli": "--handlersocket-address=\"value\"",
+            "default": "Empty, previously 0.0.0.0",
+            "dynamic": false,
+            "name": "handlersocket_address",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_address",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_backlog": {
+            "cli": "--handlersocket-backlog=\"value\"",
+            "default": "32768",
+            "dynamic": false,
+            "name": "handlersocket_backlog",
+            "range": {
+                "from": 5,
+                "to": 1000000
+            },
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_backlog",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_epoll": {
+            "cli": "--handlersocket-epoll=\"value\"",
+            "default": "1",
+            "dynamic": false,
+            "name": "handlersocket_epoll",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_epoll",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_plain_secret": {
+            "cli": "--handlersocket-plain-secret=\"value\"",
+            "default": "Empty",
+            "dynamic": false,
+            "name": "handlersocket_plain_secret",
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "handlersocket_plain_secret",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_plain_secret_wr": {
+            "cli": "--handlersocket-plain-secret-wr=\"value\"",
+            "default": "Empty",
+            "dynamic": false,
+            "name": "handlersocket_plain_secret_wr",
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "handlersocket_plain_secret_wr",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_port": {
+            "cli": "--handlersocket-port=\"value\"",
+            "default": "Empty, previously 9998",
+            "dynamic": false,
+            "name": "handlersocket_port",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_port",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_port_wr": {
+            "cli": "--handlersocket-port-wr=\"value\"",
+            "default": "Empty, previously 9999",
+            "dynamic": false,
+            "name": "handlersocket_port_wr",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_port_wr",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_rcvbuf": {
+            "cli": "--handlersocket-rcvbuf=\"value\"",
+            "default": "0",
+            "dynamic": false,
+            "name": "handlersocket_rcvbuf",
+            "range": {
+                "from": 0,
+                "to": 1677216
+            },
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_rcvbuf",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_readsize": {
+            "cli": "--handlersocket-readsize=\"value\"",
+            "default": "0 (possibly 4096)",
+            "dynamic": false,
+            "name": "handlersocket_readsize",
+            "range": {
+                "from": 0,
+                "to": 1677216
+            },
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_readsize",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_sndbuf": {
+            "cli": "--handlersocket-sndbuf=\"value\"",
+            "default": "0",
+            "dynamic": false,
+            "name": "handlersocket_sndbuf",
+            "range": {
+                "from": 0,
+                "to": 1677216
+            },
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_sndbuf",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_threads": {
+            "cli": "--handlersocket-threads=\"value\"",
+            "default": "16",
+            "dynamic": false,
+            "name": "handlersocket_threads",
+            "range": {
+                "from": 1,
+                "to": 3000
+            },
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_threads",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_threads_wr": {
+            "cli": "--handlersocket-threads-wr=\"value\"",
+            "default": "1",
+            "dynamic": false,
+            "name": "handlersocket_threads_wr",
+            "range": {
+                "from": 1,
+                "to": 3000
+            },
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_threads_wr",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_timeout": {
+            "cli": "--handlersocket-timeout=\"value\"",
+            "default": "300",
+            "dynamic": false,
+            "name": "handlersocket_timeout",
+            "range": {
+                "from": 30,
+                "to": 3600
+            },
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_timeout",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_verbose": {
+            "cli": "--handlersocket-verbose=\"value\"",
+            "default": "10",
+            "dynamic": false,
+            "name": "handlersocket_verbose",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_verbose",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
+        "handlersocket_wrlock_timeout": {
+            "cli": "--handlersocket-wrlock-timeout=\"value\"",
+            "dynamic": false,
+            "name": "handlersocket_wrlock_timeout",
+            "range": {
+                "from": 0,
+                "to": 3600
+            },
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "handlersocket_wrlock_timeout",
+                    "url": "https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/"
+                }
+            ]
+        },
         "Server_audit_active": {
             "name": "Server_audit_active",
             "type": "boolean",
@@ -4003,6 +4794,1574 @@
                 {
                     "anchor": "sysvar_myisam_use_mmap",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_add": {
+            "name": "Rocksdb_block_cache_add",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_add",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_add_failures": {
+            "name": "Rocksdb_block_cache_add_failures",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_add_failures",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_bytes_read": {
+            "name": "Rocksdb_block_cache_bytes_read",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_bytes_read",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_bytes_write": {
+            "name": "Rocksdb_block_cache_bytes_write",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_bytes_write",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_data_add": {
+            "name": "Rocksdb_block_cache_data_add",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_data_add",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_data_bytes_insert": {
+            "name": "Rocksdb_block_cache_data_bytes_insert",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_data_bytes_insert",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_data_hit": {
+            "name": "Rocksdb_block_cache_data_hit",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_data_hit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_data_miss": {
+            "name": "Rocksdb_block_cache_data_miss",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_data_miss",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_filter_add": {
+            "name": "Rocksdb_block_cache_filter_add",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_filter_add",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_filter_bytes_evict": {
+            "name": "Rocksdb_block_cache_filter_bytes_evict",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_filter_bytes_evict",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_filter_bytes_insert": {
+            "name": "Rocksdb_block_cache_filter_bytes_insert",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_filter_bytes_insert",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_filter_hit": {
+            "name": "Rocksdb_block_cache_filter_hit",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_filter_hit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_filter_miss": {
+            "name": "Rocksdb_block_cache_filter_miss",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_filter_miss",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_hit": {
+            "name": "Rocksdb_block_cache_hit",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_hit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_index_add": {
+            "name": "Rocksdb_block_cache_index_add",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_index_add",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_index_bytes_evict": {
+            "name": "Rocksdb_block_cache_index_bytes_evict",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_index_bytes_evict",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_index_bytes_insert": {
+            "name": "Rocksdb_block_cache_index_bytes_insert",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_index_bytes_insert",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_index_hit": {
+            "name": "Rocksdb_block_cache_index_hit",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_index_hit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_index_miss": {
+            "name": "Rocksdb_block_cache_index_miss",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_index_miss",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cache_miss": {
+            "name": "Rocksdb_block_cache_miss",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cache_miss",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cachecompressed_hit": {
+            "name": "Rocksdb_block_cachecompressed_hit",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cachecompressed_hit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_block_cachecompressed_miss": {
+            "name": "Rocksdb_block_cachecompressed_miss",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_block_cachecompressed_miss",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_bloom_filter_full_positive": {
+            "name": "Rocksdb_bloom_filter_full_positive",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_bloom_filter_full_positive",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_bloom_filter_full_true_positive": {
+            "name": "Rocksdb_bloom_filter_full_true_positive",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_bloom_filter_full_true_positive",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_bloom_filter_prefix_checked": {
+            "name": "Rocksdb_bloom_filter_prefix_checked",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_bloom_filter_prefix_checked",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_bloom_filter_prefix_useful": {
+            "name": "Rocksdb_bloom_filter_prefix_useful",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_bloom_filter_prefix_useful",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_bloom_filter_useful": {
+            "name": "Rocksdb_bloom_filter_useful",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_bloom_filter_useful",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_bytes_read": {
+            "name": "Rocksdb_bytes_read",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_bytes_read",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_bytes_written": {
+            "name": "Rocksdb_bytes_written",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_bytes_written",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_compact_read_bytes": {
+            "name": "Rocksdb_compact_read_bytes",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_compact_read_bytes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_compact_write_bytes": {
+            "name": "Rocksdb_compact_write_bytes",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_compact_write_bytes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_compaction_key_drop_new": {
+            "name": "Rocksdb_compaction_key_drop_new",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_compaction_key_drop_new",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_compaction_key_drop_obsolete": {
+            "name": "Rocksdb_compaction_key_drop_obsolete",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_compaction_key_drop_obsolete",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_compaction_key_drop_user": {
+            "name": "Rocksdb_compaction_key_drop_user",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_compaction_key_drop_user",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_covered_secondary_key_lookups": {
+            "name": "Rocksdb_covered_secondary_key_lookups",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_covered_secondary_key_lookups",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_flush_write_bytes": {
+            "name": "Rocksdb_flush_write_bytes",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_flush_write_bytes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_get_hit_l0": {
+            "name": "Rocksdb_get_hit_l0",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_get_hit_l0",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_get_hit_l1": {
+            "name": "Rocksdb_get_hit_l1",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_get_hit_l1",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_get_hit_l2_and_up": {
+            "name": "Rocksdb_get_hit_l2_and_up",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_get_hit_l2_and_up",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_getupdatessince_calls": {
+            "name": "Rocksdb_getupdatessince_calls",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_getupdatessince_calls",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_iter_bytes_read": {
+            "name": "Rocksdb_iter_bytes_read",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_iter_bytes_read",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_l0_num_files_stall_micros": {
+            "name": "Rocksdb_l0_num_files_stall_micros",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_l0_num_files_stall_micros",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_l0_slowdown_micros": {
+            "name": "Rocksdb_l0_slowdown_micros",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_l0_slowdown_micros",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_manual_compactions_processed": {
+            "name": "Rocksdb_manual_compactions_processed",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_manual_compactions_processed",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_manual_compactions_running": {
+            "name": "Rocksdb_manual_compactions_running",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_manual_compactions_running",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_memtable_compaction_micros": {
+            "name": "Rocksdb_memtable_compaction_micros",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_memtable_compaction_micros",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_memtable_hit": {
+            "name": "Rocksdb_memtable_hit",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_memtable_hit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_memtable_miss": {
+            "name": "Rocksdb_memtable_miss",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_memtable_miss",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_memtable_total": {
+            "name": "Rocksdb_memtable_total",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_memtable_total",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_memtable_unflushed": {
+            "name": "Rocksdb_memtable_unflushed",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_memtable_unflushed",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_no_file_closes": {
+            "name": "Rocksdb_no_file_closes",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_no_file_closes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_no_file_errors": {
+            "name": "Rocksdb_no_file_errors",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_no_file_errors",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_no_file_opens": {
+            "name": "Rocksdb_no_file_opens",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_no_file_opens",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_num_iterators": {
+            "name": "Rocksdb_num_iterators",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_num_iterators",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_block_not_compressed": {
+            "name": "Rocksdb_number_block_not_compressed",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_block_not_compressed",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_db_next": {
+            "name": "Rocksdb_number_db_next",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_db_next",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_db_next_found": {
+            "name": "Rocksdb_number_db_next_found",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_db_next_found",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_db_prev": {
+            "name": "Rocksdb_number_db_prev",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_db_prev",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_db_prev_found": {
+            "name": "Rocksdb_number_db_prev_found",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_db_prev_found",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_db_seek": {
+            "name": "Rocksdb_number_db_seek",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_db_seek",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_db_seek_found": {
+            "name": "Rocksdb_number_db_seek_found",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_db_seek_found",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_deletes_filtered": {
+            "name": "Rocksdb_number_deletes_filtered",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_deletes_filtered",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_keys_read": {
+            "name": "Rocksdb_number_keys_read",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_keys_read",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_keys_updated": {
+            "name": "Rocksdb_number_keys_updated",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_keys_updated",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_keys_written": {
+            "name": "Rocksdb_number_keys_written",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_keys_written",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_merge_failures": {
+            "name": "Rocksdb_number_merge_failures",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_merge_failures",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_multiget_bytes_read": {
+            "name": "Rocksdb_number_multiget_bytes_read",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_multiget_bytes_read",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_multiget_get": {
+            "name": "Rocksdb_number_multiget_get",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_multiget_get",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_multiget_keys_read": {
+            "name": "Rocksdb_number_multiget_keys_read",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_multiget_keys_read",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_reseeks_iteration": {
+            "name": "Rocksdb_number_reseeks_iteration",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_reseeks_iteration",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_sst_entry_delete": {
+            "name": "Rocksdb_number_sst_entry_delete",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_sst_entry_delete",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_sst_entry_merge": {
+            "name": "Rocksdb_number_sst_entry_merge",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_sst_entry_merge",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_sst_entry_other": {
+            "name": "Rocksdb_number_sst_entry_other",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_sst_entry_other",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_sst_entry_put": {
+            "name": "Rocksdb_number_sst_entry_put",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_sst_entry_put",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_sst_entry_singledelete": {
+            "name": "Rocksdb_number_sst_entry_singledelete",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_sst_entry_singledelete",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_superversion_acquires": {
+            "name": "Rocksdb_number_superversion_acquires",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_superversion_acquires",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_superversion_cleanups": {
+            "name": "Rocksdb_number_superversion_cleanups",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_superversion_cleanups",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_number_superversion_releases": {
+            "name": "Rocksdb_number_superversion_releases",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_number_superversion_releases",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_queries_point": {
+            "name": "Rocksdb_queries_point",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_queries_point",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_queries_range": {
+            "name": "Rocksdb_queries_range",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_queries_range",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_row_lock_deadlocks": {
+            "name": "Rocksdb_row_lock_deadlocks",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_row_lock_deadlocks",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_row_lock_wait_timeouts": {
+            "name": "Rocksdb_row_lock_wait_timeouts",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_row_lock_wait_timeouts",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_rows_deleted": {
+            "name": "Rocksdb_rows_deleted",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_rows_deleted",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_rows_deleted_blind": {
+            "name": "Rocksdb_rows_deleted_blind",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_rows_deleted_blind",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_rows_expired": {
+            "name": "Rocksdb_rows_expired",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_rows_expired",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_rows_filtered": {
+            "name": "Rocksdb_rows_filtered",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_rows_filtered",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_rows_inserted": {
+            "name": "Rocksdb_rows_inserted",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_rows_inserted",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_rows_read": {
+            "name": "Rocksdb_rows_read",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_rows_read",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_rows_updated": {
+            "name": "Rocksdb_rows_updated",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_rows_updated",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_snapshot_conflict_errors": {
+            "name": "Rocksdb_snapshot_conflict_errors",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_snapshot_conflict_errors",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_l0_file_count_limit_slowdowns": {
+            "name": "Rocksdb_stall_l0_file_count_limit_slowdowns",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_l0_file_count_limit_slowdowns",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_l0_file_count_limit_stops": {
+            "name": "Rocksdb_stall_l0_file_count_limit_stops",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_l0_file_count_limit_stops",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_locked_l0_file_count_limit_slowdowns": {
+            "name": "Rocksdb_stall_locked_l0_file_count_limit_slowdowns",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_locked_l0_file_count_limit_slowdowns",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_locked_l0_file_count_limit_stops": {
+            "name": "Rocksdb_stall_locked_l0_file_count_limit_stops",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_locked_l0_file_count_limit_stops",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_memtable_limit_slowdowns": {
+            "name": "Rocksdb_stall_memtable_limit_slowdowns",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_memtable_limit_slowdowns",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_memtable_limit_stops": {
+            "name": "Rocksdb_stall_memtable_limit_stops",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_memtable_limit_stops",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_micros": {
+            "name": "Rocksdb_stall_micros",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_micros",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_pending_compaction_limit_slowdowns": {
+            "name": "Rocksdb_stall_pending_compaction_limit_slowdowns",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_pending_compaction_limit_slowdowns",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_pending_compaction_limit_stops": {
+            "name": "Rocksdb_stall_pending_compaction_limit_stops",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_pending_compaction_limit_stops",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_total_slowdowns": {
+            "name": "Rocksdb_stall_total_slowdowns",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_total_slowdowns",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_stall_total_stops": {
+            "name": "Rocksdb_stall_total_stops",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_stall_total_stops",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_system_rows_deleted": {
+            "name": "Rocksdb_system_rows_deleted",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_system_rows_deleted",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_system_rows_inserted": {
+            "name": "Rocksdb_system_rows_inserted",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_system_rows_inserted",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_system_rows_read": {
+            "name": "Rocksdb_system_rows_read",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_system_rows_read",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_system_rows_updated": {
+            "name": "Rocksdb_system_rows_updated",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_system_rows_updated",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_wal_bytes": {
+            "name": "Rocksdb_wal_bytes",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_wal_bytes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_wal_group_syncs": {
+            "name": "Rocksdb_wal_group_syncs",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_wal_group_syncs",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_wal_synced": {
+            "name": "Rocksdb_wal_synced",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_wal_synced",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_write_other": {
+            "name": "Rocksdb_write_other",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_write_other",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_write_self": {
+            "name": "Rocksdb_write_self",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_write_self",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_write_timedout": {
+            "name": "Rocksdb_write_timedout",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_write_timedout",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
+                }
+            ]
+        },
+        "Rocksdb_write_wal": {
+            "name": "Rocksdb_write_wal",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rocksdb_write_wal",
+                    "url": "https://mariadb.com/kb/en/library/documentation/myrocks-status-variables/"
                 }
             ]
         },
@@ -6738,6 +9097,1368 @@
                 }
             ]
         },
+        "--autoset-*": {
+            "name": "--autoset-*",
+            "ids": [
+                {
+                    "anchor": "-autoset-",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--disable-*": {
+            "name": "--disable-*",
+            "ids": [
+                {
+                    "anchor": "-disable-",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--enable-*": {
+            "name": "--enable-*",
+            "ids": [
+                {
+                    "anchor": "-enable-",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--loose-*": {
+            "name": "--loose-*",
+            "ids": [
+                {
+                    "anchor": "-loose-",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--maximum-*": {
+            "name": "--maximum-*",
+            "ids": [
+                {
+                    "anchor": "-maximum-",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--skip-*": {
+            "name": "--skip-*",
+            "ids": [
+                {
+                    "anchor": "-skip-",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--defaults-extra-file": {
+            "cli": "--defaults-extra-file=name",
+            "name": "--defaults-extra-file",
+            "ids": [
+                {
+                    "anchor": "-defaults-extra-file",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--defaults-file": {
+            "cli": "--defaults-file=name",
+            "name": "--defaults-file",
+            "ids": [
+                {
+                    "anchor": "-defaults-file",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--defaults-group-suffix": {
+            "cli": "--defaults-group-suffix=name",
+            "name": "--defaults-group-suffix",
+            "ids": [
+                {
+                    "anchor": "-defaults-group-suffix",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--no-defaults": {
+            "cli": "--no-defaults",
+            "name": "--no-defaults",
+            "ids": [
+                {
+                    "anchor": "-no-defaults",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--print-defaults": {
+            "cli": "--print-defaults",
+            "name": "--print-defaults",
+            "ids": [
+                {
+                    "anchor": "-print-defaults",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "-a, --ansi": {
+            "name": "-a, --ansi",
+            "ids": [
+                {
+                    "anchor": "-a-ansi",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--new": {
+            "name": "--new",
+            "ids": [
+                {
+                    "anchor": "-new",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--old-style-user-limits": {
+            "name": "--old-style-user-limits",
+            "ids": [
+                {
+                    "anchor": "-old-style-user-limits",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--safe-mode": {
+            "name": "--safe-mode",
+            "ids": [
+                {
+                    "anchor": "-safe-mode",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--skip-new": {
+            "name": "--skip-new",
+            "ids": [
+                {
+                    "anchor": "-skip-new",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--character-set-client-handshake": {
+            "cli": "--character-set-client-handshake",
+            "name": "--character-set-client-handshake",
+            "ids": [
+                {
+                    "anchor": "-character-set-client-handshake",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--default-character-set": {
+            "cli": "--default-character-set=name",
+            "name": "--default-character-set",
+            "ids": [
+                {
+                    "anchor": "-default-character-set",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--language": {
+            "name": "--language",
+            "ids": [
+                {
+                    "anchor": "-language",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--console": {
+            "name": "--console",
+            "ids": [
+                {
+                    "anchor": "-console",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--install": {
+            "name": "--install",
+            "ids": [
+                {
+                    "anchor": "-install",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--install-manual": {
+            "name": "--install-manual",
+            "ids": [
+                {
+                    "anchor": "-install-manual",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--remove": {
+            "name": "--remove",
+            "ids": [
+                {
+                    "anchor": "-remove",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--slow-start-timeout": {
+            "name": "--slow-start-timeout",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "-slow-start-timeout",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--standalone": {
+            "name": "--standalone",
+            "ids": [
+                {
+                    "anchor": "-standalone",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--abort-slave-event-count": {
+            "cli": "--abort-slave-event-count=#",
+            "name": "--abort-slave-event-count",
+            "ids": [
+                {
+                    "anchor": "-abort-slave-event-count",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--binlog-do-db": {
+            "cli": "--binlog-do-db=name",
+            "name": "--binlog-do-db",
+            "ids": [
+                {
+                    "anchor": "-binlog-do-db",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--binlog-ignore-db": {
+            "cli": "--binlog-ignore-db=name",
+            "name": "--binlog-ignore-db",
+            "ids": [
+                {
+                    "anchor": "-binlog-ignore-db",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--binlog-row-event-max-size": {
+            "cli": "--binlog-row-event-max-size=#",
+            "name": "--binlog-row-event-max-size",
+            "type": "byte",
+            "ids": [
+                {
+                    "anchor": "-binlog-row-event-max-size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--disconnect-slave-event-count": {
+            "cli": "--disconnect-slave-event-count=#",
+            "name": "--disconnect-slave-event-count",
+            "ids": [
+                {
+                    "anchor": "-disconnect-slave-event-count",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--flashback": {
+            "cli": "--flashback",
+            "name": "--flashback",
+            "ids": [
+                {
+                    "anchor": "-flashback",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--init-rpl-role": {
+            "cli": "--init-rpl-role=name",
+            "name": "--init-rpl-role",
+            "ids": [
+                {
+                    "anchor": "-init-rpl-role",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--log-basename": {
+            "cli": "--log-basename=name",
+            "name": "--log-basename",
+            "ids": [
+                {
+                    "anchor": "-log-basename",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--log-bin-trust-routine-creators": {
+            "cli": "--log-bin-trust-routine-creators",
+            "name": "--log-bin-trust-routine-creators",
+            "ids": [
+                {
+                    "anchor": "-log-bin-trust-routine-creators",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-host": {
+            "cli": "--master-host=name",
+            "name": "--master-host",
+            "ids": [
+                {
+                    "anchor": "-master-host",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-info-file": {
+            "cli": "--master-info-file=name",
+            "name": "--master-info-file",
+            "ids": [
+                {
+                    "anchor": "-master-info-file",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-password": {
+            "cli": "--master-password=name",
+            "name": "--master-password",
+            "ids": [
+                {
+                    "anchor": "-master-password",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-port": {
+            "cli": "--master-port=#",
+            "name": "--master-port",
+            "ids": [
+                {
+                    "anchor": "-master-port",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-retry-count": {
+            "cli": "--master-retry-count=#",
+            "default": "86400",
+            "name": "--master-retry-count",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "-master-retry-count",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-ssl": {
+            "cli": "--master-ssl",
+            "name": "--master-ssl",
+            "ids": [
+                {
+                    "anchor": "-master-ssl",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-ssl-ca": {
+            "cli": "--master-ssl-ca[=name]",
+            "name": "--master-ssl-ca",
+            "ids": [
+                {
+                    "anchor": "-master-ssl-ca",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-ssl-capath": {
+            "cli": "--master-ssl-capath[=name]",
+            "name": "--master-ssl-capath",
+            "ids": [
+                {
+                    "anchor": "-master-ssl-capath",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-ssl-cert": {
+            "cli": "--master-ssl-cert[=name]",
+            "name": "--master-ssl-cert",
+            "ids": [
+                {
+                    "anchor": "-master-ssl-cert",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-ssl-cipher": {
+            "cli": "--master-ssl-cipher[=name]",
+            "name": "--master-ssl-cipher",
+            "ids": [
+                {
+                    "anchor": "-master-ssl-cipher",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-ssl-key": {
+            "cli": "--master-ssl-key[=name]",
+            "name": "--master-ssl-key",
+            "ids": [
+                {
+                    "anchor": "-master-ssl-key",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-user": {
+            "cli": "--master-user=name",
+            "name": "--master-user",
+            "ids": [
+                {
+                    "anchor": "-master-user",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--max-binlog-dump-events": {
+            "cli": "--max-binlog-dump-events=#",
+            "name": "--max-binlog-dump-events",
+            "ids": [
+                {
+                    "anchor": "-max-binlog-dump-events",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--replicate-rewrite-db": {
+            "cli": "--replicate-rewrite-db=master_database->slave_database",
+            "name": "--replicate-rewrite-db",
+            "ids": [
+                {
+                    "anchor": "-replicate-rewrite-db",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--replicate-same-server-id": {
+            "cli": "--replicate-same-server-id",
+            "name": "--replicate-same-server-id",
+            "ids": [
+                {
+                    "anchor": "-replicate-same-server-id",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--sporadic-binlog-dump-fail": {
+            "cli": "--sporadic-binlog-dump-fail",
+            "name": "--sporadic-binlog-dump-fail",
+            "ids": [
+                {
+                    "anchor": "-sporadic-binlog-dump-fail",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--sysdate-is-now": {
+            "cli": "--sysdate-is-now",
+            "name": "--sysdate-is-now",
+            "ids": [
+                {
+                    "anchor": "-sysdate-is-now",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--record-buffer": {
+            "cli": "--record-buffer=#",
+            "name": "--record-buffer",
+            "ids": [
+                {
+                    "anchor": "-record-buffer",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--table-cache": {
+            "cli": "--table-open-cache=#",
+            "name": "--table-cache",
+            "ids": [
+                {
+                    "anchor": "-table-cache",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--skip-bdb": {
+            "cli": "----skip-bdb",
+            "name": "--skip-bdb",
+            "ids": [
+                {
+                    "anchor": "-skip-bdb",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--external-locking": {
+            "cli": "--external-locking",
+            "name": "--external-locking",
+            "ids": [
+                {
+                    "anchor": "-external-locking",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--log-isam": {
+            "cli": "--log-isam[=file_name]",
+            "name": "--log-isam",
+            "ids": [
+                {
+                    "anchor": "-log-isam",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb": {
+            "cli": "--innodb=value, --skip-innodb",
+            "name": "--innodb",
+            "ids": [
+                {
+                    "anchor": "-innodb",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-cmp": {
+            "cli": "--innodb-cmp",
+            "default": "ON",
+            "name": "--innodb-cmp",
+            "ids": [
+                {
+                    "anchor": "-innodb-cmp",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-cmp-reset": {
+            "cli": "--innodb-cmp-reset",
+            "default": "ON",
+            "name": "--innodb-cmp-reset",
+            "ids": [
+                {
+                    "anchor": "-innodb-cmp-reset",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-cmpmem": {
+            "cli": "--innodb-cmpmem",
+            "default": "ON",
+            "name": "--innodb-cmpmem",
+            "ids": [
+                {
+                    "anchor": "-innodb-cmpmem",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-cmpmem-reset": {
+            "cli": "--innodb-cmpmem-reset",
+            "default": "ON",
+            "name": "--innodb-cmpmem-reset",
+            "ids": [
+                {
+                    "anchor": "-innodb-cmpmem-reset",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-file-io-threads": {
+            "cli": "--innodb-file-io-threads",
+            "default": "4",
+            "name": "--innodb-file-io-threads",
+            "ids": [
+                {
+                    "anchor": "-innodb-file-io-threads",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-index-stats": {
+            "cli": "--innodb-index-stats",
+            "default": "ON",
+            "name": "--innodb-index-stats",
+            "ids": [
+                {
+                    "anchor": "-innodb-index-stats",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-lock-waits": {
+            "cli": "--innodb-lock-waits",
+            "default": "ON",
+            "name": "--innodb-lock-waits",
+            "ids": [
+                {
+                    "anchor": "-innodb-lock-waits",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-locks": {
+            "cli": "--innodb-locks",
+            "default": "ON",
+            "name": "--innodb-locks",
+            "ids": [
+                {
+                    "anchor": "-innodb-locks",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-rseg": {
+            "cli": "--innodb-rseg",
+            "default": "ON",
+            "name": "--innodb-rseg",
+            "ids": [
+                {
+                    "anchor": "-innodb-rseg",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-status-file": {
+            "cli": "--innodb-status-file",
+            "default": "FALSE",
+            "name": "--innodb-status-file",
+            "ids": [
+                {
+                    "anchor": "-innodb-status-file",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-sys-indexes": {
+            "cli": "--innodb-sys-indexes",
+            "default": "ON",
+            "name": "--innodb-sys-indexes",
+            "ids": [
+                {
+                    "anchor": "-innodb-sys-indexes",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-sys-stats": {
+            "cli": "--innodb-sys-stats",
+            "default": "ON",
+            "name": "--innodb-sys-stats",
+            "ids": [
+                {
+                    "anchor": "-innodb-sys-stats",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-sys-tables": {
+            "cli": "--innodb-sys-tables",
+            "default": "ON",
+            "name": "--innodb-sys-tables",
+            "ids": [
+                {
+                    "anchor": "-innodb-sys-tables",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-table-stats": {
+            "cli": "--innodb-table-stats",
+            "default": "ON",
+            "name": "--innodb-table-stats",
+            "ids": [
+                {
+                    "anchor": "-innodb-table-stats",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--innodb-trx": {
+            "cli": "--innodb-trx",
+            "default": "ON",
+            "name": "--innodb-trx",
+            "ids": [
+                {
+                    "anchor": "-innodb-trx",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--aria-log-dir-path": {
+            "cli": "--aria-log-dir-path=value",
+            "default": "SAME AS DATADIR",
+            "name": "--aria-log-dir-path",
+            "ids": [
+                {
+                    "anchor": "-aria-log-dir-path",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-events-stages-current": {
+            "cli": "--performance-schema-consumer-events-stages-current",
+            "default": "OFF",
+            "name": "--performance-schema-consumer-events-stages-current",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-events-stages-current",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-events-stages-history": {
+            "cli": "--performance-schema-consumer-events-stages-history",
+            "default": "OFF",
+            "name": "--performance-schema-consumer-events-stages-history",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-events-stages-history",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-events-stages-history-long": {
+            "cli": "--performance-schema-consumer-events-stages-history-long",
+            "default": "OFF",
+            "name": "--performance-schema-consumer-events-stages-history-long",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-events-stages-history-long",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-events-statements-current": {
+            "cli": "--performance-schema-consumer-events-statements-current",
+            "default": "ON",
+            "name": "--performance-schema-consumer-events-statements-current",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-events-statements-current",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-events-statements-history": {
+            "cli": "--performance-schema-consumer-events-statements-history",
+            "default": "OFF",
+            "name": "--performance-schema-consumer-events-statements-history",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-events-statements-history",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-events-statements-history-long": {
+            "cli": "--performance-schema-consumer-events-statements-history-long",
+            "default": "OFF",
+            "name": "--performance-schema-consumer-events-statements-history-long",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-events-statements-history-long",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-events-waits-current": {
+            "cli": "--performance-schema-consumer-events-waits-current",
+            "default": "OFF",
+            "name": "--performance-schema-consumer-events-waits-current",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-events-waits-current",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-events-waits-history": {
+            "cli": "--performance-schema-consumer-events-waits-history",
+            "default": "OFF",
+            "name": "--performance-schema-consumer-events-waits-history",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-events-waits-history",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-events-waits-history-long": {
+            "cli": "--performance-schema-consumer-events-waits-history-long",
+            "default": "OFF",
+            "name": "--performance-schema-consumer-events-waits-history-long",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-events-waits-history-long",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-global-instrumentation": {
+            "cli": "--performance-schema-consumer-global-instrumentation",
+            "default": "ON",
+            "name": "--performance-schema-consumer-global-instrumentation",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-global-instrumentation",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-statements-digest": {
+            "cli": "--performance-schema-consumer-statements-digest",
+            "default": "ON",
+            "name": "--performance-schema-consumer-statements-digest",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-statements-digest",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--performance-schema-consumer-thread-instrumentation": {
+            "cli": "--performance-schema-consumer-thread-instrumentation",
+            "default": "ON",
+            "name": "--performance-schema-consumer-thread-instrumentation",
+            "ids": [
+                {
+                    "anchor": "-performance-schema-consumer-thread-instrumentation",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--wsrep-new-cluster": {
+            "cli": "--wsrep-new-cluster",
+            "name": "--wsrep-new-cluster",
+            "ids": [
+                {
+                    "anchor": "-wsrep-new-cluster",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--debug-assert-if-crashed-table": {
+            "name": "--debug-assert-if-crashed-table",
+            "ids": [
+                {
+                    "anchor": "-debug-assert-if-crashed-table",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--debug-binlog-fsync-sleep": {
+            "name": "--debug-binlog-fsync-sleep",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "-debug-binlog-fsync-sleep",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--debug-crc-break": {
+            "name": "--debug-crc-break",
+            "ids": [
+                {
+                    "anchor": "-debug-crc-break",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--debug-flush": {
+            "name": "--debug-flush",
+            "ids": [
+                {
+                    "anchor": "-debug-flush",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--debug-no-sync": {
+            "name": "--debug-no-sync",
+            "ids": [
+                {
+                    "anchor": "-debug-no-sync",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--debug-sync-timeout": {
+            "name": "--debug-sync-timeout",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "-debug-sync-timeout",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--gdb": {
+            "name": "--gdb",
+            "ids": [
+                {
+                    "anchor": "-gdb",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--silent-startup": {
+            "name": "--silent-startup",
+            "ids": [
+                {
+                    "anchor": "-silent-startup",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--sync-sys": {
+            "name": "--sync-sys",
+            "ids": [
+                {
+                    "anchor": "-sync-sys",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--thread-alarm": {
+            "name": "--thread-alarm",
+            "ids": [
+                {
+                    "anchor": "-thread-alarm",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--allow-suspicious-udfs": {
+            "cli": "--allow-suspicious-udfs",
+            "name": "--allow-suspicious-udfs",
+            "ids": [
+                {
+                    "anchor": "-allow-suspicious-udfs",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--bootstrap": {
+            "cli": "--bootstrap",
+            "name": "--bootstrap",
+            "ids": [
+                {
+                    "anchor": "-bootstrap",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--chroot": {
+            "cli": "--chroot=name",
+            "name": "--chroot",
+            "ids": [
+                {
+                    "anchor": "-chroot",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--des-key-file": {
+            "cli": "--des-key-file=name",
+            "name": "--des-key-file",
+            "ids": [
+                {
+                    "anchor": "-des-key-file",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--exit-info": {
+            "cli": "--exit-info[=#]",
+            "name": "--exit-info",
+            "ids": [
+                {
+                    "anchor": "-exit-info",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--getopt-prefix-matching": {
+            "cli": "--getopt-prefix-matching={0|1}",
+            "default": "TRUE",
+            "name": "--getopt-prefix-matching",
+            "ids": [
+                {
+                    "anchor": "-getopt-prefix-matching",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--help": {
+            "cli": "--help",
+            "name": "--help",
+            "ids": [
+                {
+                    "anchor": "-help",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--log-ddl-recovery": {
+            "cli": "--log-ddl-recovery=name",
+            "default": "ddl-recover.log",
+            "name": "--log-ddl-recovery",
+            "ids": [
+                {
+                    "anchor": "-log-ddl-recovery",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--log-short-format": {
+            "cli": "--log-short-format",
+            "name": "--log-short-format",
+            "ids": [
+                {
+                    "anchor": "-log-short-format",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--log-slow-file": {
+            "cli": "--log-slow-file=name",
+            "name": "--log-slow-file",
+            "ids": [
+                {
+                    "anchor": "-log-slow-file",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--log-slow-time": {
+            "cli": "--log-slow-time=#",
+            "name": "--log-slow-time",
+            "ids": [
+                {
+                    "anchor": "-log-slow-time",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--log-tc": {
+            "cli": "--log-tc=name",
+            "default": "tc.log",
+            "name": "--log-tc",
+            "ids": [
+                {
+                    "anchor": "-log-tc",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--master-connect-retry": {
+            "cli": "--master-connect-retry=#",
+            "name": "--master-connect-retry",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "-master-connect-retry",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--memlock": {
+            "cli": "--memlock",
+            "name": "--memlock",
+            "ids": [
+                {
+                    "anchor": "-memlock",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--ndb-use-copying-alter-table": {
+            "cli": "--ndb-use-copying-alter-table",
+            "name": "--ndb-use-copying-alter-table",
+            "ids": [
+                {
+                    "anchor": "-ndb-use-copying-alter-table",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--one-thread": {
+            "cli": "--one-thread",
+            "name": "--one-thread",
+            "ids": [
+                {
+                    "anchor": "-one-thread",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--plugin-load": {
+            "cli": "--plugin-load=name",
+            "name": "--plugin-load",
+            "ids": [
+                {
+                    "anchor": "-plugin-load",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--plugin-load-add": {
+            "cli": "--plugin-load-add=name",
+            "name": "--plugin-load-add",
+            "ids": [
+                {
+                    "anchor": "-plugin-load-add",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--port-open-timeout": {
+            "cli": "--port-open-timeout=#",
+            "name": "--port-open-timeout",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "-port-open-timeout",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--safe-user-create": {
+            "cli": "--safe-user-create",
+            "name": "--safe-user-create",
+            "ids": [
+                {
+                    "anchor": "-safe-user-create",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--safemalloc-mem-limit": {
+            "cli": "--safemalloc-mem-limit=#",
+            "name": "--safemalloc-mem-limit",
+            "ids": [
+                {
+                    "anchor": "-safemalloc-mem-limit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--show-slave-auth-info": {
+            "cli": "--show-slave-auth-info",
+            "name": "--show-slave-auth-info",
+            "ids": [
+                {
+                    "anchor": "-show-slave-auth-info",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--skip-grant-tables": {
+            "cli": "--skip-grant-tables",
+            "name": "--skip-grant-tables",
+            "ids": [
+                {
+                    "anchor": "-skip-grant-tables",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--skip-host-cache": {
+            "cli": "--skip-host-cache",
+            "name": "--skip-host-cache",
+            "ids": [
+                {
+                    "anchor": "-skip-host-cache",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--skip-partition": {
+            "cli": "--skip-partition, --disable-partition",
+            "name": "--skip-partition",
+            "ids": [
+                {
+                    "anchor": "-skip-partition",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--skip-slave-start": {
+            "cli": "--skip-slave-start",
+            "name": "--skip-slave-start",
+            "ids": [
+                {
+                    "anchor": "-skip-slave-start",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--skip-ssl": {
+            "cli": "--skip-ssl",
+            "name": "--skip-ssl",
+            "ids": [
+                {
+                    "anchor": "-skip-ssl",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--skip-symlink": {
+            "cli": "--skip-symlink",
+            "name": "--skip-symlink",
+            "ids": [
+                {
+                    "anchor": "-skip-symlink",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--skip-thread-priority": {
+            "cli": "--skip-thread-priority",
+            "name": "--skip-thread-priority",
+            "ids": [
+                {
+                    "anchor": "-skip-thread-priority",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--sql-bin-update-same": {
+            "cli": "--sql-bin-update-same=#",
+            "name": "--sql-bin-update-same",
+            "ids": [
+                {
+                    "anchor": "-sql-bin-update-same",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--ssl": {
+            "cli": "--ssl",
+            "name": "--ssl",
+            "ids": [
+                {
+                    "anchor": "-ssl",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--stack-trace": {
+            "cli": "--stack-trace, --skip-stack-trace",
+            "name": "--stack-trace",
+            "ids": [
+                {
+                    "anchor": "-stack-trace",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--symbolic-links": {
+            "cli": "--symbolic-links",
+            "name": "--symbolic-links",
+            "ids": [
+                {
+                    "anchor": "-symbolic-links",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--tc-heuristic-recover": {
+            "cli": "--tc-heuristic-recover=name",
+            "name": "--tc-heuristic-recover",
+            "ids": [
+                {
+                    "anchor": "-tc-heuristic-recover",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--temp-pool": {
+            "cli": "--temp-pool",
+            "name": "--temp-pool",
+            "ids": [
+                {
+                    "anchor": "-temp-pool",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--test-expect-abort": {
+            "cli": "--test-expect-abort",
+            "name": "--test-expect-abort",
+            "ids": [
+                {
+                    "anchor": "-test-expect-abort",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--test-ignore-wrong-options": {
+            "cli": "--test-ignore-wrong-options",
+            "name": "--test-ignore-wrong-options",
+            "type": "enumeration",
+            "ids": [
+                {
+                    "anchor": "-test-ignore-wrong-options",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--user": {
+            "cli": "--user=name",
+            "name": "--user",
+            "ids": [
+                {
+                    "anchor": "-user",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
+        "--verbose": {
+            "cli": "-v,  --verbose",
+            "name": "--verbose",
+            "ids": [
+                {
+                    "anchor": "-verbose",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mysqld-options/"
+                }
+            ]
+        },
         "oqgraph_allow_create_integer_latch": {
             "default": "0",
             "dynamic": true,
@@ -6792,6 +10513,621 @@
                 {
                     "anchor": "oqgraph_verbose_debug",
                     "url": "https://mariadb.com/kb/en/library/documentation/oqgraph-system-and-status-variables/"
+                }
+            ]
+        },
+        "pbxt_auto_increment_mode": {
+            "cli": "--pbxt-auto-increment-mode=#",
+            "default": "0",
+            "name": "pbxt_auto_increment_mode",
+            "ids": [
+                {
+                    "anchor": "pbxt_auto_increment_mode",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_checkpoint_frequency": {
+            "cli": "--pbxt-checkpoint-frequency=#",
+            "default": "24MB",
+            "name": "pbxt_checkpoint_frequency",
+            "ids": [
+                {
+                    "anchor": "pbxt_checkpoint_frequency",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_data_file_grow_size": {
+            "cli": "--pbxt-data-file-grow-size=#",
+            "default": "2MB",
+            "name": "pbxt_data_file_grow_size",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "pbxt_data_file_grow_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_data_log_threshold": {
+            "cli": "--pbxt-data-log-threshold=#",
+            "default": "64MB",
+            "name": "pbxt_data_log_threshold",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "pbxt_data_log_threshold",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_flush_log_at_trx_commit": {
+            "cli": "--pbxt-flush-log-at-trx-commit=#",
+            "default": "1",
+            "name": "pbxt_flush_log_at_trx_commit",
+            "ids": [
+                {
+                    "anchor": "pbxt_flush_log_at_trx_commit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_garbage_threshold": {
+            "cli": "--pbxt-garbage-threshold=#",
+            "default": "50",
+            "name": "pbxt_garbage_threshold",
+            "ids": [
+                {
+                    "anchor": "pbxt_garbage_threshold",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_index_cache_size": {
+            "cli": "--pbxt-index-cache-size=#",
+            "default": "32MB",
+            "name": "pbxt_index_cache_size",
+            "ids": [
+                {
+                    "anchor": "pbxt_index_cache_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_log_buffer_size": {
+            "cli": "--pbxt-log-buffer-size=#",
+            "default": "256MB",
+            "name": "pbxt_log_buffer_size",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "pbxt_log_buffer_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_log_cache_size": {
+            "cli": "--pbxt-log-cache-size=#",
+            "default": "32MB",
+            "name": "pbxt_log_cache_size",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "pbxt_log_cache_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_log_file_count": {
+            "cli": "--pbxt-log-file-count=#",
+            "default": "3",
+            "name": "pbxt_log_file_count",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "pbxt_log_file_count",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_log_file_threshold": {
+            "cli": "--pbxt-log-file-threshold=#",
+            "default": "32MB",
+            "name": "pbxt_log_file_threshold",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "pbxt_log_file_threshold",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_offline_log_function": {
+            "cli": "--pbxt-offline-log-function=#",
+            "default": "0",
+            "name": "pbxt_offline_log_function",
+            "ids": [
+                {
+                    "anchor": "pbxt_offline_log_function",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_record_cache_size": {
+            "cli": "--pbxt-record-cache-size=#",
+            "default": "32MB",
+            "name": "pbxt_record_cache_size",
+            "ids": [
+                {
+                    "anchor": "pbxt_record_cache_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_row_file_grow_size": {
+            "cli": "--pbxt-row-file-grow-size=#",
+            "default": "256KB",
+            "name": "pbxt_row_file_grow_size",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "pbxt_row_file_grow_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_sweeper_priority": {
+            "cli": "--pbxt-sweeper-priority=#",
+            "default": "0",
+            "name": "pbxt_sweeper_priority",
+            "ids": [
+                {
+                    "anchor": "pbxt_sweeper_priority",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_support_xa": {
+            "cli": "--pbxt-support-xa=#",
+            "default": "TRUE",
+            "name": "pbxt_support_xa",
+            "ids": [
+                {
+                    "anchor": "pbxt_support_xa",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "pbxt_transaction_buffer_size": {
+            "cli": "--pbxt-transaction-buffer-size=#",
+            "default": "1MB",
+            "name": "pbxt_transaction_buffer_size",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "pbxt_transaction_buffer_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/pbxt-system-variables/"
+                }
+            ]
+        },
+        "Performance_schema_accounts_lost": {
+            "name": "Performance_schema_accounts_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_accounts_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_cond_classes_lost": {
+            "name": "Performance_schema_cond_classes_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_cond_classes_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_cond_instances_lost": {
+            "name": "Performance_schema_cond_instances_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_cond_instances_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_digest_lost": {
+            "name": "Performance_schema_digest_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_digest_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_file_classes_lost": {
+            "name": "Performance_schema_file_classes_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_file_classes_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_file_handles_lost": {
+            "name": "Performance_schema_file_handles_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_file_handles_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_file_instances_lost": {
+            "name": "Performance_schema_file_instances_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_file_instances_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_hosts_lost": {
+            "name": "Performance_schema_hosts_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_hosts_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_index_stat_lost": {
+            "name": "Performance_schema_index_stat_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_index_stat_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_locker_lost": {
+            "name": "Performance_schema_locker_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_locker_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_memory_classes_lost": {
+            "name": "Performance_schema_memory_classes_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_memory_classes_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_metadata_lock_lost": {
+            "name": "Performance_schema_metadata_lock_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_metadata_lock_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_mutex_classes_lost": {
+            "name": "Performance_schema_mutex_classes_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_mutex_classes_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_mutex_instances_lost": {
+            "name": "Performance_schema_mutex_instances_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_mutex_instances_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_nested_statement_lost": {
+            "name": "Performance_schema_nested_statement_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_nested_statement_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_prepared_statements_lost": {
+            "name": "Performance_schema_prepared_statements_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_prepared_statements_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_program_lost": {
+            "name": "Performance_schema_program_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_program_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_rwlock_classes_lost": {
+            "name": "Performance_schema_rwlock_classes_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_rwlock_classes_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_rwlock_instances_lost": {
+            "name": "Performance_schema_rwlock_instances_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_rwlock_instances_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_session_connect_attrs_lost": {
+            "name": "Performance_schema_session_connect_attrs_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_session_connect_attrs_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_socket_classes_lost": {
+            "name": "Performance_schema_socket_classes_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_socket_classes_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_socket_instances_lost": {
+            "name": "Performance_schema_socket_instances_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_socket_instances_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_stage_classes_lost": {
+            "name": "Performance_schema_stage_classes_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_stage_classes_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_statement_classes_lost": {
+            "name": "Performance_schema_statement_classes_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_statement_classes_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_table_handles_lost": {
+            "name": "Performance_schema_table_handles_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_table_handles_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_table_instances_lost": {
+            "name": "Performance_schema_table_instances_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_table_instances_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_table_lock_stat_lost": {
+            "name": "Performance_schema_table_lock_stat_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_table_lock_stat_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_thread_classes_lost": {
+            "name": "Performance_schema_thread_classes_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_thread_classes_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_thread_instances_lost": {
+            "name": "Performance_schema_thread_instances_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_thread_instances_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
+                }
+            ]
+        },
+        "Performance_schema_users_lost": {
+            "name": "Performance_schema_users_lost",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "performance_schema_users_lost",
+                    "url": "https://mariadb.com/kb/en/library/documentation/performance-schema-status-variables/"
                 }
             ]
         },
@@ -7749,6 +12085,130 @@
                 {
                     "anchor": "sysvar_performance_schema_users_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/performance-schema-system-variables.html"
+                }
+            ]
+        },
+        "query_cache_info": {
+            "cli": "--query-cache-info=value",
+            "default": "ON",
+            "name": "query_cache_info",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "query_cache_info",
+                    "url": "https://mariadb.com/kb/en/library/documentation/query-cache-information-plugin/"
+                }
+            ]
+        },
+        "query_response_time_flush": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "query_response_time_flush",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "query_response_time_flush",
+                    "url": "https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/"
+                }
+            ]
+        },
+        "query_response_time_range_base": {
+            "cli": "--query-response-time-range-base=#",
+            "default": "10",
+            "dynamic": true,
+            "name": "query_response_time_range_base",
+            "range": {
+                "from": 2,
+                "to": 1000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "query_response_time_range_base",
+                    "url": "https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/"
+                }
+            ]
+        },
+        "query_response_time_exec_time_debug": {
+            "default": "0",
+            "dynamic": true,
+            "name": "query_response_time_exec_time_debug",
+            "range": {
+                "from": 0,
+                "to": 31536000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "query_response_time_exec_time_debug",
+                    "url": "https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/"
+                }
+            ]
+        },
+        "query_response_time_stats": {
+            "cli": "query-response-time-stats[={0|1}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "query_response_time_stats",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "query_response_time_stats",
+                    "url": "https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/"
+                }
+            ]
+        },
+        "query_response_time": {
+            "cli": "--query-response-time=value",
+            "default": "ON",
+            "name": "query_response_time",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "query_response_time",
+                    "url": "https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/"
+                }
+            ]
+        },
+        "query_response_time_audit": {
+            "cli": "--query-response-time-audit=value",
+            "default": "ON",
+            "name": "query_response_time_audit",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "query_response_time_audit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/query-response-time-plugin/"
                 }
             ]
         },
@@ -20528,6 +24988,104 @@
                 }
             ]
         },
+        "simple_password_check_digits": {
+            "cli": "--simple-password-check-digits=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "simple_password_check_digits",
+            "range": {
+                "from": 0,
+                "to": 1000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "simple_password_check_digits",
+                    "url": "https://mariadb.com/kb/en/library/documentation/simple-password-check-plugin/"
+                }
+            ]
+        },
+        "simple_password_check_letters_same_case": {
+            "cli": "--simple-password-check-letters-same-case=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "simple_password_check_letters_same_case",
+            "range": {
+                "from": 0,
+                "to": 1000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "simple_password_check_letters_same_case",
+                    "url": "https://mariadb.com/kb/en/library/documentation/simple-password-check-plugin/"
+                }
+            ]
+        },
+        "simple_password_check_minimal_length": {
+            "cli": "--simple-password-check-minimal-length=#",
+            "default": "8",
+            "dynamic": true,
+            "name": "simple_password_check_minimal_length",
+            "range": {
+                "from": 0,
+                "to": 1000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "simple_password_check_minimal_length",
+                    "url": "https://mariadb.com/kb/en/library/documentation/simple-password-check-plugin/"
+                }
+            ]
+        },
+        "simple_password_check_other_characters": {
+            "cli": "--simple-password-check-other-characters=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "simple_password_check_other_characters",
+            "range": {
+                "from": 0,
+                "to": 1000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "simple_password_check_other_characters",
+                    "url": "https://mariadb.com/kb/en/library/documentation/simple-password-check-plugin/"
+                }
+            ]
+        },
+        "simple_password_check": {
+            "cli": "--simple-password-check=value",
+            "default": "ON",
+            "name": "simple_password_check",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "simple_password_check",
+                    "url": "https://mariadb.com/kb/en/library/documentation/simple-password-check-plugin/"
+                }
+            ]
+        },
         "Sphinx_error": {
             "name": "Sphinx_error",
             "scope": [
@@ -22892,6 +27450,112 @@
                 }
             ]
         },
+        "sql_error_log_filename": {
+            "cli": "--sql-error-log-filename=value",
+            "default": "sql_errors.log",
+            "dynamic": false,
+            "name": "sql_error_log_filename",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sql_error_log_filename",
+                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
+                }
+            ]
+        },
+        "sql_error_log_rate": {
+            "cli": "--sql-error-log-rate=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "sql_error_log_rate",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sql_error_log_rate",
+                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
+                }
+            ]
+        },
+        "sql_error_log_rotate": {
+            "cli": "--sql-error-log-rotate={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "sql_error_log_rotate",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sql_error_log_rotate",
+                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
+                }
+            ]
+        },
+        "sql_error_log_rotations": {
+            "cli": "--sql-error-log-rotations",
+            "default": "9",
+            "dynamic": false,
+            "name": "sql_error_log_rotations",
+            "range": {
+                "from": 1,
+                "to": 999
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sql_error_log_rotations",
+                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
+                }
+            ]
+        },
+        "sql_error_log_size_limit": {
+            "cli": "--sql-error-log-size-limit=#",
+            "default": "1000000",
+            "dynamic": false,
+            "name": "sql_error_log_size_limit",
+            "range": {
+                "from": 100,
+                "to": 9.223372036854776e+18
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sql_error_log_size_limit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
+                }
+            ]
+        },
+        "sql_error_log": {
+            "cli": "--sql-error-log=value",
+            "default": "ON",
+            "name": "sql_error_log",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "sql_error_log",
+                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
+                }
+            ]
+        },
         "Ssl_accept_renegotiates": {
             "name": "Ssl_accept_renegotiates",
             "scope": [
@@ -23416,6 +28080,117 @@
                 {
                     "anchor": "version_ssl_library",
                     "url": "https://mariadb.com/kb/en/library/documentation/ssltls-system-variables/"
+                }
+            ]
+        },
+        "column_compression_threshold": {
+            "cli": "--column-compression-threshold=#",
+            "default": "100",
+            "dynamic": true,
+            "name": "column_compression_threshold",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "column_compression_threshold",
+                    "url": "https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/"
+                }
+            ]
+        },
+        "column_compression_zlib_level": {
+            "cli": "--column-compression-zlib-level=#",
+            "default": "6",
+            "dynamic": true,
+            "name": "column_compression_zlib_level",
+            "range": {
+                "from": 1,
+                "to": 9
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "column_compression_zlib_level",
+                    "url": "https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/"
+                }
+            ]
+        },
+        "column_compression_zlib_strategy": {
+            "cli": "--column-compression-zlib-strategy=#",
+            "default": "DEFAULT_STRATEGY",
+            "dynamic": true,
+            "name": "column_compression_zlib_strategy",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "DEFAULT_STRATEGY",
+                "FILTERED",
+                "HUFFMAN_ONLY",
+                "RLE",
+                "FIXED"
+            ],
+            "ids": [
+                {
+                    "anchor": "column_compression_zlib_strategy",
+                    "url": "https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/"
+                }
+            ]
+        },
+        "column_compression_zlib_wrap": {
+            "cli": "--column-compression-zlib-wrap{=0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "column_compression_zlib_wrap",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "column_compression_zlib_wrap",
+                    "url": "https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/"
+                }
+            ]
+        },
+        "Column_compressions": {
+            "name": "Column_compressions",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "column_compressions",
+                    "url": "https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/"
+                }
+            ]
+        },
+        "Column_decompressions": {
+            "name": "Column_decompressions",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "column_decompressions",
+                    "url": "https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/"
                 }
             ]
         },
@@ -26249,6 +31024,22 @@
                 {
                     "anchor": "tokudb_write_status_frequency",
                     "url": "https://mariadb.com/kb/en/library/documentation/tokudb-system-variables/"
+                }
+            ]
+        },
+        "userstat": {
+            "cli": "--userstat=1",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "userstat",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "userstat",
+                    "url": "https://mariadb.com/kb/en/library/documentation/user-statistics/"
                 }
             ]
         },

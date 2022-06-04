@@ -5666,7 +5666,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`536870912`|
-|Dynamic|`false`|
+|Dynamic|`true`|
 |Range|from: `1024` to: `9.2233720368548E+18`|
 
 ### Documentation(s)

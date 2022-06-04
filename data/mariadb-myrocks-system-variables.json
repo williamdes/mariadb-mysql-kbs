@@ -111,7 +111,7 @@
     {
       "cli": "--rocksdb-block-cache-size=#",
       "default": "536870912",
-      "dynamic": false,
+      "dynamic": true,
       "id": "rocksdb_block_cache_size",
       "name": "rocksdb_block_cache_size",
       "range": {

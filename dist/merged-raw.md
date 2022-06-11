@@ -35740,6 +35740,18 @@
 |------|----|
 |dev.mysql.com|[sysvar_block_encryption_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_block_encryption_mode)|
 
+## build_id
+|name|value|
+|----|-----|
+|Name|`build_id`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_build_id](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_build_id)|
+
 ## caching_sha2_password_digest_rounds
 |name|value|
 |----|-----|

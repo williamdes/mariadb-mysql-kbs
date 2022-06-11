@@ -278,6 +278,14 @@
       "type": "string"
     },
     {
+      "dynamic": false,
+      "id": "sysvar_build_id",
+      "name": "build_id",
+      "scope": [
+        "global"
+      ]
+    },
+    {
       "cli": "--bulk-insert-buffer-size=#",
       "default": "8388608",
       "dynamic": true,

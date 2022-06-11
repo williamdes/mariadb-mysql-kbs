@@ -42343,6 +42343,19 @@
                 }
             ]
         },
+        "build_id": {
+            "dynamic": false,
+            "name": "build_id",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_build_id",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "caching_sha2_password_digest_rounds": {
             "cli": "--caching-sha2-password-digest-rounds=#",
             "default": "5000",

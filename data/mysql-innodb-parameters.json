@@ -717,15 +717,19 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-doublewrite[={OFF|ON}]",
+      "cli": "--innodb-doublewrite=value (≥ 8.0.30)--innodb-doublewrite[={OFF|ON}] (≤ 8.0.29)",
       "default": "ON",
-      "dynamic": false,
       "id": "sysvar_innodb_doublewrite",
       "name": "innodb_doublewrite",
       "scope": [
         "global"
       ],
-      "type": "boolean"
+      "validValues": [
+        "ON",
+        "OFF",
+        "DETECT_AND_RECOVER",
+        "DETECT_ONLY"
+      ]
     },
     {
       "cli": "--innodb-doublewrite-batch-size=#",

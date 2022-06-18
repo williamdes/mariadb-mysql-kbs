@@ -25955,12 +25955,16 @@
         },
         "innodb_doublewrite": {
             "default": "ON",
-            "dynamic": false,
             "name": "innodb_doublewrite",
             "scope": [
                 "global"
             ],
-            "type": "boolean",
+            "validValues": [
+                "ON",
+                "OFF",
+                "DETECT_AND_RECOVER",
+                "DETECT_ONLY"
+            ],
             "ids": [
                 "58#innodb_doublewrite",
                 "59#sysvar_innodb_doublewrite"
@@ -27029,6 +27033,19 @@
             "ids": [
                 "58#innodb_log_compressed_pages",
                 "59#sysvar_innodb_log_compressed_pages"
+            ]
+        },
+        "innodb_log_file_buffering": {
+            "cli": "--innodb-log-file-buffering={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_log_file_buffering",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "58#innodb_log_file_buffering"
             ]
         },
         "innodb_log_file_size": {
@@ -34574,7 +34591,8 @@
             "dynamic": true,
             "name": "xa_detach_on_prepare",
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "boolean",
             "ids": [

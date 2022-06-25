@@ -1886,7 +1886,7 @@
     },
     {
       "cli": "--innodb-log-buffer-size=#",
-      "default": "16777216 (16MB) >= MariaDB 10.1.9, 8388608 (8MB) <= MariaDB 10.1.8",
+      "default": "16777216 (16MB)",
       "dynamic": false,
       "id": "innodb_log_buffer_size",
       "name": "innodb_log_buffer_size",
@@ -1942,6 +1942,17 @@
       "dynamic": true,
       "id": "innodb_log_compressed_pages",
       "name": "innodb_log_compressed_pages",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--innodb-log-file-buffering={0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "innodb_log_file_buffering",
+      "name": "innodb_log_file_buffering",
       "scope": [
         "global"
       ],

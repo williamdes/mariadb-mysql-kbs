@@ -655,13 +655,14 @@
     },
     {
       "cli": "--explicit-defaults-for-timestamp=[={0|1}]",
-      "default": "OFF",
+      "default": "ON (>= MariaDB 10.10), OFF (<= MariaDB 10.9)",
       "dynamic": false,
       "id": "explicit_defaults_for_timestamp",
       "name": "explicit_defaults_for_timestamp",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "default": "NULL",

@@ -16251,6 +16251,7 @@
 |----|-----|
 |Name|`explicit_defaults_for_timestamp`|
 |Type of variable|`boolean`|
+|Default value|`1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28221,10 +28222,9 @@
 |name|value|
 |----|-----|
 |Name|`innodb_doublewrite`|
-|Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON`|
-|Dynamic|`false`|
+|Valid value(s)|`ON`, `OFF`, `DETECT_AND_RECOVER`, `DETECT_ONLY`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29298,6 +29298,21 @@
 |------|----|
 |mariadb.com|[innodb_log_compressed_pages](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_log_compressed_pages)|
 |dev.mysql.com|[sysvar_innodb_log_compressed_pages](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_compressed_pages)|
+
+## innodb_log_file_buffering
+|name|value|
+|----|-----|
+|Name|`innodb_log_file_buffering`|
+|Command line|`--innodb-log-file-buffering={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_log_file_buffering](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_log_file_buffering)|
 
 ## innodb_log_file_size
 |name|value|
@@ -37275,7 +37290,7 @@
 |Name|`xa_detach_on_prepare`|
 |Command line|`--xa-detach-on-prepare[={OFF|ON}]`|
 |Type of variable|`boolean`|
-|Scope|`global`|
+|Scope|`global`, `session`|
 |Default value|`ON`|
 |Dynamic|`true`|
 

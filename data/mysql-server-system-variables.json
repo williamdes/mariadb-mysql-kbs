@@ -4083,7 +4083,8 @@
       "id": "sysvar_xa_detach_on_prepare",
       "name": "xa_detach_on_prepare",
       "scope": [
-        "global"
+        "global",
+        "session"
       ],
       "type": "boolean"
     }

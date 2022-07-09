@@ -28787,7 +28787,7 @@
 |Scope|`global`|
 |Default value|`84`|
 |Dynamic|`false`|
-|Range|from: `10`|
+|Range|from: `10` to: `84`|
 
 ### Documentation(s)
 |source|anchor name|

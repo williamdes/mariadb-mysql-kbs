@@ -1512,7 +1512,7 @@
       "name": "innodb_ft_max_token_size",
       "range": {
         "from": 10,
-        "to": 252
+        "to": 84
       },
       "scope": [
         "global"

@@ -18488,7 +18488,7 @@
             ]
         },
         "character_set_system": {
-            "default": "utf8",
+            "default": "utf8mb3",
             "dynamic": false,
             "name": "character_set_system",
             "scope": [
@@ -19361,11 +19361,12 @@
         },
         "ft_max_word_len": {
             "cli": "--ft-max-word-len=#",
+            "default": "84",
             "dynamic": false,
             "name": "ft_max_word_len",
             "range": {
                 "from": 10,
-                "to": 82
+                "to": 84
             },
             "scope": [
                 "global"
@@ -37772,6 +37773,26 @@
                 }
             ]
         },
+        "innodb_redo_log_capacity": {
+            "cli": "--innodb-redo-log-capacity=#",
+            "default": "104857600",
+            "dynamic": true,
+            "name": "innodb_redo_log_capacity",
+            "range": {
+                "from": 8388608,
+                "to": 137438953472
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_redo_log_capacity",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
         "innodb_redo_log_encrypt": {
             "cli": "--innodb-redo-log-encrypt[={OFF|ON}]",
             "default": "OFF",
@@ -42626,6 +42647,42 @@
             "ids": [
                 {
                     "anchor": "sysvar_dragnet.log_error_filter_rules",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "enterprise_encryption.maximum_rsa_key_size": {
+            "cli": "--enterprise-encryption.maximum-rsa-key-size=#",
+            "default": "4096",
+            "dynamic": true,
+            "name": "enterprise_encryption.maximum_rsa_key_size",
+            "range": {
+                "from": 2048,
+                "to": 16384
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_enterprise_encryption.maximum_rsa_key_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "enterprise_encryption.rsa_support_legacy_padding": {
+            "cli": "--enterprise-encryption.rsa_support_legacy_padding[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "enterprise_encryption.rsa_support_legacy_padding",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_enterprise_encryption.rsa_support_legacy_padding",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

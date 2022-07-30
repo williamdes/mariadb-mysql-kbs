@@ -1797,6 +1797,21 @@
       "type": "string"
     },
     {
+      "cli": "--innodb-redo-log-capacity=#",
+      "default": "104857600",
+      "dynamic": true,
+      "id": "sysvar_innodb_redo_log_capacity",
+      "name": "innodb_redo_log_capacity",
+      "range": {
+        "from": 8388608,
+        "to": 137438953472
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--innodb-redo-log-encrypt[={OFF|ON}]",
       "default": "OFF",
       "dynamic": true,

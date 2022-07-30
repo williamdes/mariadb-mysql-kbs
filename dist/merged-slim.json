@@ -14510,7 +14510,7 @@
             ]
         },
         "character_set_system": {
-            "default": "utf8",
+            "default": "utf8mb3",
             "dynamic": false,
             "name": "character_set_system",
             "scope": [
@@ -15158,11 +15158,12 @@
         },
         "ft_max_word_len": {
             "cli": "--ft-max-word-len=#",
+            "default": "84",
             "dynamic": false,
             "name": "ft_max_word_len",
             "range": {
                 "from": 10,
-                "to": 82
+                "to": 84
             },
             "scope": [
                 "global"
@@ -29405,6 +29406,23 @@
                 "59#sysvar_innodb_redo_log_archive_dirs"
             ]
         },
+        "innodb_redo_log_capacity": {
+            "cli": "--innodb-redo-log-capacity=#",
+            "default": "104857600",
+            "dynamic": true,
+            "name": "innodb_redo_log_capacity",
+            "range": {
+                "from": 8388608,
+                "to": 137438953472
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "59#sysvar_innodb_redo_log_capacity"
+            ]
+        },
         "innodb_redo_log_encrypt": {
             "cli": "--innodb-redo-log-encrypt[={OFF|ON}]",
             "default": "OFF",
@@ -33298,6 +33316,36 @@
             "type": "string",
             "ids": [
                 "23#sysvar_dragnet.log_error_filter_rules"
+            ]
+        },
+        "enterprise_encryption.maximum_rsa_key_size": {
+            "cli": "--enterprise-encryption.maximum-rsa-key-size=#",
+            "default": "4096",
+            "dynamic": true,
+            "name": "enterprise_encryption.maximum_rsa_key_size",
+            "range": {
+                "from": 2048,
+                "to": 16384
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "23#sysvar_enterprise_encryption.maximum_rsa_key_size"
+            ]
+        },
+        "enterprise_encryption.rsa_support_legacy_padding": {
+            "cli": "--enterprise-encryption.rsa_support_legacy_padding[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "enterprise_encryption.rsa_support_legacy_padding",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "23#sysvar_enterprise_encryption.rsa_support_legacy_padding"
             ]
         },
         "end_markers_in_json": {

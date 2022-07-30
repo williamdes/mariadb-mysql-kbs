@@ -15686,7 +15686,7 @@
 |Name|`character_set_system`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`utf8`|
+|Default value|`utf8mb3`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -16345,8 +16345,9 @@
 |Command line|`--ft-max-word-len=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`84`|
 |Dynamic|`false`|
-|Range|from: `10` to: `82`|
+|Range|from: `10` to: `84`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31739,6 +31740,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_redo_log_archive_dirs](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_redo_log_archive_dirs)|
 
+## innodb_redo_log_capacity
+|name|value|
+|----|-----|
+|Name|`innodb_redo_log_capacity`|
+|Command line|`--innodb-redo-log-capacity=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`104857600`|
+|Dynamic|`true`|
+|Range|from: `8388608` to: `137438953472`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_redo_log_capacity](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_redo_log_capacity)|
+
 ## innodb_redo_log_encrypt
 |name|value|
 |----|-----|
@@ -35980,6 +35997,37 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_dragnet.log_error_filter_rules](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_dragnet.log_error_filter_rules)|
+
+## enterprise_encryption.maximum_rsa_key_size
+|name|value|
+|----|-----|
+|Name|`enterprise_encryption.maximum_rsa_key_size`|
+|Command line|`--enterprise-encryption.maximum-rsa-key-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`4096`|
+|Dynamic|`true`|
+|Range|from: `2048` to: `16384`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_enterprise_encryption.maximum_rsa_key_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_enterprise_encryption.maximum_rsa_key_size)|
+
+## enterprise_encryption.rsa_support_legacy_padding
+|name|value|
+|----|-----|
+|Name|`enterprise_encryption.rsa_support_legacy_padding`|
+|Command line|`--enterprise-encryption.rsa_support_legacy_padding[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_enterprise_encryption.rsa_support_legacy_padding](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_enterprise_encryption.rsa_support_legacy_padding)|
 
 ## end_markers_in_json
 |name|value|

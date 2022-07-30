@@ -417,7 +417,7 @@
       "type": "string"
     },
     {
-      "default": "utf8",
+      "default": "utf8mb3",
       "dynamic": false,
       "id": "sysvar_character_set_system",
       "name": "character_set_system",
@@ -839,6 +839,32 @@
       "type": "string"
     },
     {
+      "cli": "--enterprise-encryption.maximum-rsa-key-size=#",
+      "default": "4096",
+      "dynamic": true,
+      "id": "sysvar_enterprise_encryption.maximum_rsa_key_size",
+      "name": "enterprise_encryption.maximum_rsa_key_size",
+      "range": {
+        "from": 2048,
+        "to": 16384
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--enterprise-encryption.rsa_support_legacy_padding[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_enterprise_encryption.rsa_support_legacy_padding",
+      "name": "enterprise_encryption.rsa_support_legacy_padding",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--end-markers-in-json[={OFF|ON}]",
       "default": "OFF",
       "dynamic": true,
@@ -953,13 +979,13 @@
     },
     {
       "cli": "--ft-max-word-len=#",
-      "default": "82",
+      "default": "84",
       "dynamic": false,
       "id": "sysvar_ft_max_word_len",
       "name": "ft_max_word_len",
       "range": {
         "from": 10,
-        "to": 82
+        "to": 84
       },
       "scope": [
         "global"

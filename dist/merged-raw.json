@@ -20627,7 +20627,8 @@
             "dynamic": true,
             "name": "max_connect_errors",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 4294967295
             },
             "scope": [
                 "global"

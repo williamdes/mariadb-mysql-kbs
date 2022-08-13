@@ -1510,6 +1510,10 @@
       "dynamic": true,
       "id": "max_connect_errors",
       "name": "max_connect_errors",
+      "range": {
+        "from": 1,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],

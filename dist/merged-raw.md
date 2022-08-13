@@ -17324,7 +17324,7 @@
 |Scope|`global`|
 |Default value|`100`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|

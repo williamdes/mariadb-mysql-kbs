@@ -19241,6 +19241,10 @@
         "explicit_defaults_for_timestamp": {
             "default": "1",
             "name": "explicit_defaults_for_timestamp",
+            "scope": [
+                "global",
+                "session"
+            ],
             "type": "boolean",
             "ids": [
                 {
@@ -20627,7 +20631,8 @@
             "dynamic": true,
             "name": "max_connect_errors",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 4294967295
             },
             "scope": [
                 "global"

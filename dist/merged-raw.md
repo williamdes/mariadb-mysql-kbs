@@ -16251,6 +16251,7 @@
 |----|-----|
 |Name|`explicit_defaults_for_timestamp`|
 |Type of variable|`boolean`|
+|Scope|`global`, `session`|
 |Default value|`1`|
 
 ### Documentation(s)
@@ -17324,7 +17325,7 @@
 |Scope|`global`|
 |Default value|`100`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|

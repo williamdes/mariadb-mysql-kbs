@@ -17471,7 +17471,7 @@
 |Command line|`--max-long-data-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`16777216 (16M) >= MariaDB 10.2.4, 4194304 (4M) <= MariaDB 10.2.3, >= MariaDB 10.1.7, 1048576 (1M) <= MariaDB 10.1.6`|
+|Default value|`16777216 (16M)`|
 |Dynamic|`false`|
 |Range|from: `1024` to: `4294967295`|
 
@@ -18296,7 +18296,7 @@
 |Command line|`--query-cache-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1M (>= MariaDB 10.1.7), 0 (<= MariaDB 10.1.6) (although frequently given a default value in some setups)`|
+|Default value|`1M (although frequently given a default value in some setups)`|
 |Dynamic|`true`|
 |Valid value(s)|`0`|
 
@@ -18327,7 +18327,7 @@
 |Command line|`--query-cache-type=#`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`OFF (>= MariaDB 10.1.7), ON (<= MariaDB 10.1.6)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 |Valid value(s)|`0`, `OFF`, `1`, `ON`, `2`, `DEMAND`|
 
@@ -18519,7 +18519,7 @@
 |Command line|`--secure-auth`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON (>= MariaDB 10.1.7), OFF (<= MariaDB 10.1.6)`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -19247,7 +19247,6 @@
 |Command line|`--thread-cache-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`(-1 signifies autosizing; do not use -1)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `16384`|
 

@@ -20840,7 +20840,7 @@
         },
         "max_long_data_size": {
             "cli": "--max-long-data-size=#",
-            "default": "16777216 (16M) >= MariaDB 10.2.4, 4194304 (4M) <= MariaDB 10.2.3, >= MariaDB 10.1.7, 1048576 (1M) <= MariaDB 10.1.6",
+            "default": "16777216 (16M)",
             "dynamic": false,
             "name": "max_long_data_size",
             "range": {
@@ -21936,7 +21936,7 @@
         },
         "query_cache_size": {
             "cli": "--query-cache-size=#",
-            "default": "1M (>= MariaDB 10.1.7), 0 (<= MariaDB 10.1.6) (although frequently given a default value in some setups)",
+            "default": "1M (although frequently given a default value in some setups)",
             "dynamic": true,
             "name": "query_cache_size",
             "scope": [
@@ -21972,7 +21972,7 @@
         },
         "query_cache_type": {
             "cli": "--query-cache-type=#",
-            "default": "OFF (>= MariaDB 10.1.7), ON (<= MariaDB 10.1.6)",
+            "default": "OFF",
             "dynamic": true,
             "name": "query_cache_type",
             "scope": [
@@ -22216,7 +22216,7 @@
         },
         "secure_auth": {
             "cli": "--secure-auth",
-            "default": "ON (>= MariaDB 10.1.7), OFF (<= MariaDB 10.1.6)",
+            "default": "ON",
             "dynamic": true,
             "name": "secure_auth",
             "scope": [
@@ -23142,7 +23142,6 @@
         },
         "thread_cache_size": {
             "cli": "--thread-cache-size=#",
-            "default": "(-1 signifies autosizing; do not use -1)",
             "dynamic": true,
             "name": "thread_cache_size",
             "range": {

@@ -19241,10 +19241,6 @@
         "explicit_defaults_for_timestamp": {
             "default": "1",
             "name": "explicit_defaults_for_timestamp",
-            "scope": [
-                "global",
-                "session"
-            ],
             "type": "boolean",
             "ids": [
                 {

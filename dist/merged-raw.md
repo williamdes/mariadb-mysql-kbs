@@ -16251,7 +16251,6 @@
 |----|-----|
 |Name|`explicit_defaults_for_timestamp`|
 |Type of variable|`boolean`|
-|Scope|`global`, `session`|
 |Default value|`1`|
 
 ### Documentation(s)

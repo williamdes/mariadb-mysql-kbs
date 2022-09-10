@@ -661,7 +661,8 @@
       "name": "explicit_defaults_for_timestamp",
       "scope": [
         "global",
-        "session"
+        "session",
+        "global"
       ],
       "type": "boolean"
     },

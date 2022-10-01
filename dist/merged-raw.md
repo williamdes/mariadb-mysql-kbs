@@ -10004,7 +10004,6 @@
 |name|value|
 |----|-----|
 |Name|`replicate_rewrite_db`|
-|Command line|`--replicate-rewrite-db=old_name->new_name`|
 |Type of variable|`string`|
 
 ### Documentation(s)
@@ -17161,6 +17160,22 @@
 |------|----|
 |mariadb.com|[log_slow_filter](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_filter)|
 
+## log_slow_min_examined_row_limit
+|name|value|
+|----|-----|
+|Name|`log_slow_min_examined_row_limit`|
+|Command line|`--log-slow-min-examined-row-limit=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[log_slow_min_examined_row_limit](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_min_examined_row_limit)|
+
 ## log_slow_queries
 |name|value|
 |----|-----|
@@ -17175,6 +17190,52 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[log_slow_queries](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_queries)|
+
+## log_slow_query
+|name|value|
+|----|-----|
+|Name|`log_slow_query`|
+|Command line|`--slow-query-log`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`0`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[log_slow_query](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_query)|
+
+## log_slow_query_file_name
+|name|value|
+|----|-----|
+|Name|`log_slow_query_file_name`|
+|Command line|`--log-slow-query-file-name=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Default value|`host_name-slow.log`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[log_slow_query_file_name](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_query_file_name)|
+
+## log_slow_query_time
+|name|value|
+|----|-----|
+|Name|`log_slow_query_time`|
+|Command line|`--log-slow-query-time=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`10.000000`|
+|Dynamic|`true`|
+|Range|from: `0` to: `31536000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[log_slow_query_time](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_query_time)|
 
 ## log_slow_rate_limit
 |name|value|
@@ -25061,6 +25122,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[system_versioning_innodb_algorithm_simple](https://mariadb.com/kb/en/library/documentation/system-versioned-tables/#system_versioning_innodb_algorithm_simple)|
+
+## system_versioning_insert_history
+|name|value|
+|----|-----|
+|Name|`system_versioning_insert_history`|
+|Command line|`--system-versioning-insert-history[={0|1}]`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[system_versioning_insert_history](https://mariadb.com/kb/en/library/documentation/system-versioned-tables/#system_versioning_insert_history)|
 
 ## Innodb_adaptive_hash_cells
 |name|value|

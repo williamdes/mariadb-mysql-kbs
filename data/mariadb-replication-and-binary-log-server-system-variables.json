@@ -583,8 +583,15 @@
       "type": "string"
     },
     {
+      "cli": "--replicate-rewrite-db=primary_database->replica_database",
+      "default": "'' (empty)",
+      "dynamic": true,
       "id": "replicate_rewrite_db",
-      "name": "replicate_rewrite_db"
+      "name": "replicate_rewrite_db",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
     },
     {
       "cli": "--replicate-wild-do-table=name",

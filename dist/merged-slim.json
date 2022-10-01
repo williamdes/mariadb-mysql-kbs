@@ -9391,7 +9391,6 @@
             ]
         },
         "replicate_rewrite_db": {
-            "cli": "--replicate-rewrite-db=old_name->new_name",
             "name": "replicate_rewrite_db",
             "type": "string",
             "ids": [
@@ -15950,6 +15949,24 @@
                 "43#log_slow_filter"
             ]
         },
+        "log_slow_min_examined_row_limit": {
+            "cli": "--log-slow-min-examined-row-limit=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "log_slow_min_examined_row_limit",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "43#log_slow_min_examined_row_limit"
+            ]
+        },
         "log_slow_queries": {
             "cli": "--log-slow-queries[=name]",
             "default": "OFF",
@@ -15961,6 +15978,51 @@
             "type": "boolean",
             "ids": [
                 "43#log_slow_queries"
+            ]
+        },
+        "log_slow_query": {
+            "cli": "--slow-query-log",
+            "default": "0",
+            "dynamic": true,
+            "name": "log_slow_query",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "43#log_slow_query"
+            ]
+        },
+        "log_slow_query_file_name": {
+            "cli": "--log-slow-query-file-name=file_name",
+            "default": "host_name-slow.log",
+            "dynamic": true,
+            "name": "log_slow_query_file_name",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                "43#log_slow_query_file_name"
+            ]
+        },
+        "log_slow_query_time": {
+            "cli": "--log-slow-query-time=#",
+            "default": "10.000000",
+            "dynamic": true,
+            "name": "log_slow_query_time",
+            "range": {
+                "from": 0,
+                "to": 31536000
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "43#log_slow_query_time"
             ]
         },
         "log_slow_rate_limit": {
@@ -23146,6 +23208,20 @@
             "type": "boolean",
             "ids": [
                 "56#system_versioning_innodb_algorithm_simple"
+            ]
+        },
+        "system_versioning_insert_history": {
+            "cli": "--system-versioning-insert-history[={0|1}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "system_versioning_insert_history",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "56#system_versioning_insert_history"
             ]
         },
         "Innodb_adaptive_hash_cells": {

@@ -37,6 +37,18 @@
         "session"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--system-versioning-insert-history[={0|1}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "system_versioning_insert_history",
+      "name": "system_versioning_insert_history",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
     }
   ],
   "name": "versioned-tables-system-variables",

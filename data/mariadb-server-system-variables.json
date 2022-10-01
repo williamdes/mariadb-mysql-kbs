@@ -1363,6 +1363,22 @@
       ]
     },
     {
+      "cli": "--log-slow-min-examined-row-limit=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "log_slow_min_examined_row_limit",
+      "name": "log_slow_min_examined_row_limit",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--log-slow-queries[=name]",
       "default": "OFF",
       "dynamic": true,
@@ -1372,6 +1388,45 @@
         "global"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--slow-query-log",
+      "default": "0",
+      "dynamic": true,
+      "id": "log_slow_query",
+      "name": "log_slow_query",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--log-slow-query-file-name=file_name",
+      "default": "host_name-slow.log",
+      "dynamic": true,
+      "id": "log_slow_query_file_name",
+      "name": "log_slow_query_file_name",
+      "scope": [
+        "global"
+      ],
+      "type": "file name"
+    },
+    {
+      "cli": "--log-slow-query-time=#",
+      "default": "10.000000",
+      "dynamic": true,
+      "id": "log_slow_query_time",
+      "name": "log_slow_query_time",
+      "range": {
+        "from": 0,
+        "to": 31536000
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
     },
     {
       "cli": "log-slow-rate-limit=#",

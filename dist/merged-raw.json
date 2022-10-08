@@ -20470,18 +20470,18 @@
                 }
             ]
         },
-        "log_slow_query_file_name": {
-            "cli": "--log-slow-query-file-name=file_name",
+        "log_slow_query_file": {
+            "cli": "--log-slow-query-file=file_name",
             "default": "host_name-slow.log",
             "dynamic": true,
-            "name": "log_slow_query_file_name",
+            "name": "log_slow_query_file",
             "scope": [
                 "global"
             ],
             "type": "file name",
             "ids": [
                 {
-                    "anchor": "log_slow_query_file_name",
+                    "anchor": "log_slow_query_file",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 }
             ]

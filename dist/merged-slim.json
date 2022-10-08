@@ -15994,17 +15994,17 @@
                 "43#log_slow_query"
             ]
         },
-        "log_slow_query_file_name": {
-            "cli": "--log-slow-query-file-name=file_name",
+        "log_slow_query_file": {
+            "cli": "--log-slow-query-file=file_name",
             "default": "host_name-slow.log",
             "dynamic": true,
-            "name": "log_slow_query_file_name",
+            "name": "log_slow_query_file",
             "scope": [
                 "global"
             ],
             "type": "file name",
             "ids": [
-                "43#log_slow_query_file_name"
+                "43#log_slow_query_file"
             ]
         },
         "log_slow_query_time": {

@@ -1402,11 +1402,11 @@
       "type": "boolean"
     },
     {
-      "cli": "--log-slow-query-file-name=file_name",
+      "cli": "--log-slow-query-file=file_name",
       "default": "host_name-slow.log",
       "dynamic": true,
-      "id": "log_slow_query_file_name",
-      "name": "log_slow_query_file_name",
+      "id": "log_slow_query_file",
+      "name": "log_slow_query_file",
       "scope": [
         "global"
       ],

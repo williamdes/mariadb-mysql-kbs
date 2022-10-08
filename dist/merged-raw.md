@@ -17206,11 +17206,11 @@
 |------|----|
 |mariadb.com|[log_slow_query](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_query)|
 
-## log_slow_query_file_name
+## log_slow_query_file
 |name|value|
 |----|-----|
-|Name|`log_slow_query_file_name`|
-|Command line|`--log-slow-query-file-name=file_name`|
+|Name|`log_slow_query_file`|
+|Command line|`--log-slow-query-file=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
 |Default value|`host_name-slow.log`|
@@ -17219,7 +17219,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[log_slow_query_file_name](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_query_file_name)|
+|mariadb.com|[log_slow_query_file](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_query_file)|
 
 ## log_slow_query_time
 |name|value|

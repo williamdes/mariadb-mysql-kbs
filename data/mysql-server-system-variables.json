@@ -3766,6 +3766,17 @@
       "type": "integer"
     },
     {
+      "cli": "--thread-pool-dedicated-listeners",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "sysvar_thread_pool_dedicated_listeners",
+      "name": "thread_pool_dedicated_listeners",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--thread-pool-high-priority-connection=#",
       "default": "0",
       "dynamic": true,
@@ -3790,6 +3801,21 @@
       "range": {
         "from": 0,
         "to": 512
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--thread-pool-max-transactions-limit",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_thread_pool_max_transactions_limit",
+      "name": "thread_pool_max_transactions_limit",
+      "range": {
+        "from": 0,
+        "to": 1000000
       },
       "scope": [
         "global"
@@ -3827,6 +3853,21 @@
       "type": "integer"
     },
     {
+      "cli": "--thread-pool-query-threads-per-group",
+      "default": "1",
+      "dynamic": true,
+      "id": "sysvar_thread_pool_query_threads_per_group",
+      "name": "thread_pool_query_threads_per_group",
+      "range": {
+        "from": 1,
+        "to": 4096
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--thread-pool-size=#",
       "default": "16",
       "dynamic": false,
@@ -3849,6 +3890,21 @@
       "range": {
         "from": 4,
         "to": 600
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--thread-pool-transaction-delay",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_thread_pool_transaction_delay",
+      "name": "thread_pool_transaction_delay",
+      "range": {
+        "from": 0,
+        "to": 300000
       },
       "scope": [
         "global"

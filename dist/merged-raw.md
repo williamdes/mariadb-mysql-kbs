@@ -37301,6 +37301,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_thread_pool_algorithm](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_algorithm)|
 
+## thread_pool_dedicated_listeners
+|name|value|
+|----|-----|
+|Name|`thread_pool_dedicated_listeners`|
+|Command line|`--thread-pool-dedicated-listeners`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_thread_pool_dedicated_listeners](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_dedicated_listeners)|
+
 ## thread_pool_high_priority_connection
 |name|value|
 |----|-----|
@@ -37333,6 +37348,22 @@
 |------|----|
 |dev.mysql.com|[sysvar_thread_pool_max_active_query_threads](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_max_active_query_threads)|
 
+## thread_pool_max_transactions_limit
+|name|value|
+|----|-----|
+|Name|`thread_pool_max_transactions_limit`|
+|Command line|`--thread-pool-max-transactions-limit`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1000000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_thread_pool_max_transactions_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_max_transactions_limit)|
+
 ## thread_pool_max_unused_threads
 |name|value|
 |----|-----|
@@ -37348,6 +37379,38 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_thread_pool_max_unused_threads](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_max_unused_threads)|
+
+## thread_pool_query_threads_per_group
+|name|value|
+|----|-----|
+|Name|`thread_pool_query_threads_per_group`|
+|Command line|`--thread-pool-query-threads-per-group`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`true`|
+|Range|from: `1` to: `4096`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_thread_pool_query_threads_per_group](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_query_threads_per_group)|
+
+## thread_pool_transaction_delay
+|name|value|
+|----|-----|
+|Name|`thread_pool_transaction_delay`|
+|Command line|`--thread-pool-transaction-delay`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `300000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_thread_pool_transaction_delay](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_transaction_delay)|
 
 ## tls_ciphersuites
 |name|value|

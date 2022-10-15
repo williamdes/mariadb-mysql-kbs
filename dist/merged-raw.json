@@ -44192,6 +44192,22 @@
                 }
             ]
         },
+        "thread_pool_dedicated_listeners": {
+            "cli": "--thread-pool-dedicated-listeners",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "thread_pool_dedicated_listeners",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_thread_pool_dedicated_listeners",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "thread_pool_high_priority_connection": {
             "cli": "--thread-pool-high-priority-connection=#",
             "default": "0",
@@ -44233,6 +44249,26 @@
                 }
             ]
         },
+        "thread_pool_max_transactions_limit": {
+            "cli": "--thread-pool-max-transactions-limit",
+            "default": "0",
+            "dynamic": true,
+            "name": "thread_pool_max_transactions_limit",
+            "range": {
+                "from": 0,
+                "to": 1000000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_thread_pool_max_transactions_limit",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "thread_pool_max_unused_threads": {
             "cli": "--thread-pool-max-unused-threads=#",
             "default": "0",
@@ -44249,6 +44285,46 @@
             "ids": [
                 {
                     "anchor": "sysvar_thread_pool_max_unused_threads",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "thread_pool_query_threads_per_group": {
+            "cli": "--thread-pool-query-threads-per-group",
+            "default": "1",
+            "dynamic": true,
+            "name": "thread_pool_query_threads_per_group",
+            "range": {
+                "from": 1,
+                "to": 4096
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_thread_pool_query_threads_per_group",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "thread_pool_transaction_delay": {
+            "cli": "--thread-pool-transaction-delay",
+            "default": "0",
+            "dynamic": true,
+            "name": "thread_pool_transaction_delay",
+            "range": {
+                "from": 0,
+                "to": 300000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_thread_pool_transaction_delay",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

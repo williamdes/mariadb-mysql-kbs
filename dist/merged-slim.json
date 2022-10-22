@@ -9311,7 +9311,7 @@
             "name": "relay_log_space_limit",
             "range": {
                 "from": 0,
-                "to": 4294967295
+                "to": 1.8446744073709552e+19
             },
             "scope": [
                 "global"
@@ -25668,7 +25668,7 @@
         },
         "innodb_compression_algorithm": {
             "cli": "--innodb-compression-algorithm=value",
-            "default": "zlib (>= MariaDB 10.2.4, MariaDB 10.1.22), none (<= MariaDB 10.2.3, MariaDB 10.1.21)",
+            "default": "zlib",
             "dynamic": true,
             "name": "innodb_compression_algorithm",
             "scope": [

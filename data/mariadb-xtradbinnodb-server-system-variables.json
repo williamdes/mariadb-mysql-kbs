@@ -685,7 +685,7 @@
     },
     {
       "cli": "--innodb-compression-algorithm=value",
-      "default": "zlib (>= MariaDB 10.2.4, MariaDB 10.1.22), none (<= MariaDB 10.2.3, MariaDB 10.1.21)",
+      "default": "zlib",
       "dynamic": true,
       "id": "innodb_compression_algorithm",
       "name": "innodb_compression_algorithm",

@@ -9908,7 +9908,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
-|Range|from: `0` to: `4294967295`|
+|Range|from: `0` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27941,7 +27941,7 @@
 |Command line|`--innodb-compression-algorithm=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`zlib (>= MariaDB 10.2.4, MariaDB 10.1.22), none (<= MariaDB 10.2.3, MariaDB 10.1.21)`|
+|Default value|`zlib`|
 |Dynamic|`true`|
 |Valid value(s)|`none`, `zlib`, `lz4`, `lzo`, `lzma`, `bzip2`, `snappy`|
 

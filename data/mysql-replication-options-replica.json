@@ -51,7 +51,7 @@
       "name": "relay_log_space_limit",
       "range": {
         "from": 0,
-        "to": 4294967295
+        "to": 18446744073709552000
       },
       "scope": [
         "global"
@@ -329,7 +329,7 @@
       "name": "relay_log_space_limit",
       "range": {
         "from": 0,
-        "to": 4294967295
+        "to": 18446744073709552000
       },
       "scope": [
         "global"

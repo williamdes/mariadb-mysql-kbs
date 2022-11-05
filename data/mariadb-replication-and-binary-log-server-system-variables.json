@@ -17,6 +17,18 @@
       "type": "integer"
     },
     {
+      "cli": "--binlog-alter-two-phase",
+      "default": "false",
+      "dynamic": true,
+      "id": "binlog_alter_two_phase",
+      "name": "binlog_alter_two_phase",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--auto-increment-offset[=#]",
       "default": "1",
       "dynamic": true,

@@ -8705,6 +8705,20 @@
                 "35#sysvar_auto_increment_increment"
             ]
         },
+        "binlog_alter_two_phase": {
+            "cli": "--binlog-alter-two-phase",
+            "default": "false",
+            "dynamic": true,
+            "name": "binlog_alter_two_phase",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "15#binlog_alter_two_phase"
+            ]
+        },
         "auto_increment_offset": {
             "default": "1",
             "dynamic": true,

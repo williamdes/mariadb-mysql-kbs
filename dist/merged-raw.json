@@ -10874,6 +10874,23 @@
                 }
             ]
         },
+        "binlog_alter_two_phase": {
+            "cli": "--binlog-alter-two-phase",
+            "default": "false",
+            "dynamic": true,
+            "name": "binlog_alter_two_phase",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "binlog_alter_two_phase",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
+                }
+            ]
+        },
         "auto_increment_offset": {
             "default": "1",
             "dynamic": true,

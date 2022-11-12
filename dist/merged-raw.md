@@ -9280,21 +9280,6 @@
 |mariadb.com|[auto_increment_increment](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#auto_increment_increment)|
 |dev.mysql.com|[sysvar_auto_increment_increment](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment)|
 
-## binlog_alter_two_phase
-|name|value|
-|----|-----|
-|Name|`binlog_alter_two_phase`|
-|Command line|`--binlog-alter-two-phase`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`false`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[binlog_alter_two_phase](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_alter_two_phase)|
-
 ## auto_increment_offset
 |name|value|
 |----|-----|
@@ -9310,6 +9295,21 @@
 |------|----|
 |mariadb.com|[auto_increment_offset](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#auto_increment_offset)|
 |dev.mysql.com|[sysvar_auto_increment_offset](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset)|
+
+## binlog_alter_two_phase
+|name|value|
+|----|-----|
+|Name|`binlog_alter_two_phase`|
+|Command line|`--binlog-alter-two-phase[={0|1}]`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_alter_two_phase](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_alter_two_phase)|
 
 ## binlog_annotate_row_events
 |name|value|

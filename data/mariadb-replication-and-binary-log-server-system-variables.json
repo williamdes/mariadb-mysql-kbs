@@ -17,18 +17,6 @@
       "type": "integer"
     },
     {
-      "cli": "--binlog-alter-two-phase",
-      "default": "false",
-      "dynamic": true,
-      "id": "binlog_alter_two_phase",
-      "name": "binlog_alter_two_phase",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--auto-increment-offset[=#]",
       "default": "1",
       "dynamic": true,
@@ -43,6 +31,18 @@
         "session"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--binlog-alter-two-phase[={0|1}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "binlog_alter_two_phase",
+      "name": "binlog_alter_two_phase",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--binlog-annotate-row-events[={0|1}]",

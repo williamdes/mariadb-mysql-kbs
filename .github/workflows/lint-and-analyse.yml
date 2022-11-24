@@ -1,6 +1,11 @@
 name: Lint and analyse files
 
-on: [push]
+permissions:
+  contents: read
+
+on:
+  pull_request:
+  push:
 
 jobs:
     lint-node:

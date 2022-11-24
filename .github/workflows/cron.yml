@@ -1,5 +1,8 @@
 name: Run sudo-bot to update files
 
+permissions:
+  contents: read
+
 on:
     repository_dispatch:
         types: run-cron

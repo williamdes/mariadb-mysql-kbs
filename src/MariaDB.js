@@ -260,6 +260,7 @@ storageEngines.forEach((se) => {
     pages.push({
         url: KB_URL + 'columns-storage-engines-and-plugins/storage-engines/' + se + '/' + se + '-system-variables/',
         name: se + '-system-variables',
+        type: 'variables',
     });
 });
 
@@ -267,6 +268,7 @@ custom.forEach((cu) => {
     pages.push({
         url: KB_URL + cu.url,
         name: cu.name,
+        type: 'variables',
     });
 });
 
@@ -274,6 +276,7 @@ status.forEach((statusName) => {
     pages.push({
         url: KB_URL + statusName + '-status-variables/',
         name: statusName + '-status-variables',
+        type: 'variables',
     });
 });
 
@@ -281,6 +284,7 @@ systemVariables.forEach((systemVariableName) => {
     pages.push({
         url: KB_URL + systemVariableName + '-system-variables/',
         name: systemVariableName + '-system-variables',
+        type: 'variables',
     });
 });
 
@@ -288,6 +292,7 @@ plugins.forEach((pluginName) => {
     pages.push({
         url: KB_URL + pluginName + '/',
         name: pluginName + '-variables',
+        type: 'variables',
     });
 });
 
@@ -301,6 +306,6 @@ module.exports = {
                 name: 'gtid-system-variables'
             }
         ]*/
-        return common.processDataExtraction(pages, 'variables/mariadb-', parsePage);
+        return common.processDataExtraction(pages, 'mariadb-', parsePage);
     },
 };

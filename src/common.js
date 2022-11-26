@@ -65,13 +65,13 @@ const listDirectory = function (dirname, callbackSuccess) {
     });
 };
 
-const writePage = function (filePrefix, name, url, data, onWriteSuccess) {
+const writePage = function (type, filePrefix, name, url, data, onWriteSuccess) {
     let pageKB = {
         url: url,
         name: name,
         data: data,
     };
-    writeJSON(path.join(__dirname, '../', 'data', filePrefix + pageKB.name + '.json'), pageKB, onWriteSuccess);
+    writeJSON(path.join(__dirname, '../', 'data', type, filePrefix + pageKB.name + '.json'), pageKB, onWriteSuccess);
 };
 
 const processDataExtraction = function (pages, filePrefix, parsePage) {
@@ -86,7 +86,7 @@ const processDataExtraction = function (pages, filePrefix, parsePage) {
                 } else {
                     console.log('URL : ' + res.options.url);
                     parsePage(res.$, (anchors) => {
-                        writePage(filePrefix, res.options.name, res.options.url, anchors, () => {
+                        writePage(res.options.type, filePrefix, res.options.name, res.options.url, anchors, () => {
                             nbrPagesProcessed++;
                             if (nbrPagesProcessed === pages.length) {
                                 resolve();
@@ -99,7 +99,7 @@ const processDataExtraction = function (pages, filePrefix, parsePage) {
         });
         crawler.queue(
             pages.map((page) => {
-                return { uri: page.url, name: page.name, url: page.url };
+                return { uri: page.url, name: page.name, url: page.url, type: page.type };
             })
         );
     });

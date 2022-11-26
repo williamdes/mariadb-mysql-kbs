@@ -175,62 +175,77 @@ const pages = [
     {
         url: KB_URL + 'server-system-variables.html',
         name: 'server-system-variables',
+        type: 'variables',
     },
     {
         url: KB_URL + 'innodb-parameters.html',
         name: 'innodb-parameters',
+        type: 'variables',
     },
     {
         url: KB_URL + 'performance-schema-system-variables.html',
         name: 'performance-schema-system-variables',
+        type: 'variables',
     },
     {
         url: KB_URL + 'x-plugin-options-system-variables.html',
         name: 'x-plugin-options-system-variables',
+        type: 'variables',
     },
     {
         url: KB_URL + 'replication-options-binary-log.html',
         name: 'replication-options-binary-log',
+        type: 'variables',
     },
     {
         url: KB_URL57 + 'replication-options-binary-log.html',
         name: 'replication-options-binary-log_5.7',
+        type: 'variables',
     },
     {
         url: KB_URL + 'pluggable-authentication-system-variables.html',
         name: 'pluggable-authentication-system-variables',
+        type: 'variables',
     },
     {
         url: KB_URL + 'audit-log-reference.html',
         name: 'audit-log-reference',
+        type: 'variables',
     },
     {
         url: KB_URL + 'replication-options-gtids.html',
         name: 'replication-options-gtids',
+        type: 'variables',
     },
     {
         url: KB_URL + 'replication-options-replica.html',
         name: 'replication-options-replica',
+        type: 'variables',
     },
     {
         url: KB_URL + 'replication-options-source.html',
         name: 'replication-options-source',
+        type: 'variables',
     },
     {
         url: KB_URL + 'replication-options.html',
         name: 'replication-options',
+        type: 'variables',
     },
     {
         url: KB_URL57 + 'mysql-cluster-options-variables.html',
         name: 'mysql-cluster-options-variables',
+        type: 'variables',
     },
     {
         url: KB_URL + 'server-options.html',
         name: 'server-options',
+        type: 'variables',
     },
     {
         url: KB_URL + 'version-tokens-reference.html',
         name: 'version-tokens-reference',
+        type: 'variables',
     },
 ];
 
@@ -239,6 +254,6 @@ module.exports = {
     createDoc: createDoc,
     completeDoc: completeDoc,
     run: () => {
-        return common.processDataExtraction(pages, 'variables/mysql-', parsePage);
+        return common.processDataExtraction(pages, 'mysql-', parsePage);
     },
 };

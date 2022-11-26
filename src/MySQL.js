@@ -239,6 +239,6 @@ module.exports = {
     createDoc: createDoc,
     completeDoc: completeDoc,
     run: () => {
-        return common.processDataExtraction(pages, 'mysql-', parsePage);
+        return common.processDataExtraction(pages, 'variables/mysql-', parsePage);
     },
 };

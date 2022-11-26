@@ -3,7 +3,7 @@
 
 declare(strict_types = 1);
 
-$dataDir = __DIR__ . '/../data/';
+$dataDir = __DIR__ . '/../data/variables/';
 $files   = glob($dataDir . '*.json');
 
 /**

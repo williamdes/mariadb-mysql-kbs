@@ -301,6 +301,6 @@ module.exports = {
                 name: 'gtid-system-variables'
             }
         ]*/
-        return common.processDataExtraction(pages, 'mariadb-', parsePage);
+        return common.processDataExtraction(pages, 'variables/mariadb-', parsePage);
     },
 };

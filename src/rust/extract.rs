@@ -1,7 +1,9 @@
-use crate::data::QueryResponse;
+use crate::data::{DataFile, PageProcess, QueryResponse};
 use crate::{mariadb, mysql};
 use reqwest::blocking::{Client, RequestBuilder};
 use reqwest::header::{FROM, USER_AGENT};
+use serde::Serialize;
+use std::{env, fs};
 
 const UA_FROM: &str = "williamdes+mariadb-mysql-kbs@wdes.fr";
 const UA: &str = "mariadb-mysql-kbs-bot (+https://github.com/williamdes/mariadb-mysql-kbs; williamdes+mariadb-mysql-kbs@wdes.fr)";
@@ -39,10 +41,12 @@ fn extract_mysql() {
     for page in mysql::get_pages() {
         println!("URL : {}", &page.url);
         let response = get_html_from_url(client, &page.url);
-        let data = mysql::extract_mysql_from_text(response);
-
-        let serialized = serde_json::to_string(&data).unwrap();
-        println!("serialized = {}", serialized);
+        let data = DataFile {
+            data: mysql::extract_mysql_from_text(response),
+            url: &page.url,
+            name: &page.name,
+        };
+        write_page(page.data_type, "mysql-", data);
         break;
     }
 }
@@ -51,27 +55,32 @@ fn extract_mariadb() {
     mariadb::get_pages();
 }
 
-/*
-fn write_json(filename: String, data) {
-    fs.writeFile(filename, JSON.stringify(sortObject(data), null, 2) + '\n', function (err) {
-        if (err) {
-            return eprintln!(err);
-        } else {
-            if (cbSuccess !== null) {
-                cbSuccess();
-            }
-        }
-    });
-};
+fn write_json(filename: String, data: DataFile) {
+    let buf = Vec::new();
+    let formatter = serde_json::ser::PrettyFormatter::with_indent(b"  ");
+    let mut ser = serde_json::Serializer::with_formatter(buf, formatter);
+    data.serialize(&mut ser).expect("Unable to serialize data");
 
-fn write_page(page: PageProcess, filePrefix: String, data, onWriteSuccess) {
-    let pageKB = {
-        url: url,
-        name: name,
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', page_type, filePrefix + pageKB.name + '.json'), pageKB, onWriteSuccess);
-};*/
+    // String::from_utf8(ser.into_inner()).unwrap()
+    let mut data = ser.into_inner();
+    data.push(0x0d);// CR
+    data.push(0x0a);// LF
+    fs::write(filename, data).expect("Unable to write file");
+}
+
+fn write_page(data_type: &str, file_prefix: &str, data: DataFile) {
+    let current_dir = env::current_dir().unwrap();
+    write_json(
+        format!(
+            "{}/data/{}/{}{}.json",
+            current_dir.to_str().unwrap().to_owned(),
+            data_type,
+            file_prefix,
+            data.name
+        ),
+        data,
+    );
+}
 
 /*
 /**

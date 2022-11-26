@@ -1,7 +1,5 @@
 use crate::cleaner;
-use crate::data::KbParsedEntry;
-use crate::data::PageProcess;
-use crate::data::QueryResponse;
+use crate::data::{KbParsedEntry, PageProcess, QueryResponse, Range};
 use select::document::Document;
 use select::node::Node;
 use select::predicate::{Attr, Class, Name, Predicate};
@@ -68,10 +66,11 @@ fn find_table_archor(node: Node) -> String {
 
 fn process_row_to_entry(
     row_name: String,
-    row_value: String,
+    row_node: Node,
     mut entry: KbParsedEntry,
     table_node: Node,
 ) -> KbParsedEntry {
+    let row_value = row_node.text();
     match row_name.as_str() {
         "dynamic" => entry.dynamic = Some(row_value.to_lowercase().trim() == "yes"),
         "name" => entry.name = Some(row_value.trim().to_string()),
@@ -94,9 +93,59 @@ fn process_row_to_entry(
         "command-line format" => {
             entry.cli = cleaner::clean_cli(row_value.trim().to_string(), false);
         }
-        ("default value" | "default, range") => {
+        "default value" | "default, range" => {
             entry.default = Some(cleaner::clean_default(row_value.trim().to_string()));
         }
+        "valid values" => {
+            let mut values = vec![];
+            for code_node in row_node.find(Name("code")) {
+                values.push(code_node.text());
+            }
+            entry.valid_values = Some(values);
+        }
+        "type: default, range" => {
+            /*
+            let textValueDefaultRange = value.text().trim();
+            let key = textValueDefaultRange.substring(0, textValueDefaultRange.indexOf(":") + 1);
+            let val = textValueDefaultRange.substring(textValueDefaultRange.indexOf(":") + 1);
+            if (typeof key === "string") {
+                doc.type = cleaner.getCleanTypeFromMixedString(key);
+                if (typeof doc.type !== "string") {
+                    delete doc.type;
+                }
+            }
+            if (typeof val === "string") {
+                doc.default = cleaner.cleanDefault(val);
+                if (typeof doc.default !== "string") {
+                    delete doc.default;
+                }
+            } */
+        }
+        "minimum value" => {
+            if entry.range.is_none() {
+                entry.range = Some(Range {
+                    from: None,
+                    to: None,
+                });
+            }
+            match entry.range {
+                Some(ref mut r) => r.from = Some(row_value.trim().parse::<i64>().unwrap()),
+                None => {}
+            }
+        }
+        "maximum value" => {
+            if entry.range.is_none() {
+                entry.range = Some(Range {
+                    from: None,
+                    to: None,
+                });
+            }
+            match entry.range {
+                Some(ref mut r) => r.to = Some(row_value.trim().parse::<i64>().unwrap()),
+                None => {}
+            }
+        }
+
         "scope" => {
             let scope = row_value.to_lowercase().trim().to_string();
             if scope == "both" {
@@ -163,97 +212,67 @@ fn process_row_to_entry(
     }
 
     entry
+}
+
+fn process_table(table_node: Node) -> KbParsedEntry {
+    let mut entry = KbParsedEntry {
+        cli: None,
+        default: None,
+        dynamic: None,
+        id: find_table_archor(table_node),
+        name: None,
+        scope: None,
+        r#type: None,
+        valid_values: None,
+        range: None,
+    };
+
+    for tbody in table_node.find(Name("tbody")) {
+        for tr in tbody.find(Name("tr")) {
+            let mut tds = tr.find(Name("td"));
+            let row_name: String = tds
+                .next()
+                .expect("Node to exist")
+                .text()
+                .to_lowercase()
+                .trim()
+                .to_owned();
+            let row_value: Node = tds.next().expect("Node to exist");
+            entry = process_row_to_entry(row_name, row_value, entry, table_node);
+        }
+    }
+
     /*
-        case "type: default, range":
-            let textValueDefaultRange = value.text().trim();
-            let key = textValueDefaultRange.substring(0, textValueDefaultRange.indexOf(":") + 1);
-            let val = textValueDefaultRange.substring(textValueDefaultRange.indexOf(":") + 1);
-            if (typeof key === "string") {
-                doc.type = cleaner.getCleanTypeFromMixedString(key);
-                if (typeof doc.type !== "string") {
-                    delete doc.type;
-                }
-            }
-            if (typeof val === "string") {
-                doc.default = cleaner.cleanDefault(val);
-                if (typeof doc.default !== "string") {
-                    delete doc.default;
-                }
-            }
-            break;
-        case "valid values":
-            doc.validValues = $(value)
-                .find("code")
-                .get()
-                .map((el) => $(el).text());
-            break;
-        case "minimum value":
-            if (doc.range == undefined) {
-                doc.range = {};
-            }
-            doc.range.from = parseFloat(value.text().trim());
-            break;
-        case "maximum value":
-            if (doc.range == undefined) {
-                doc.range = {};
-            }
-            doc.range.to = parseFloat(value.text().trim());
-            break;
+    var name = tds.first().text().toLowerCase().trim();
+    var value = tds.last();
+    let ths = $(elem).find("th"); // Fallback if the key is in a th
+    if (ths.length > 0) {
+        name = ths.first().text().toLowerCase().trim();
     }*/
+    entry
+}
+
+fn filter_table(elem: &Node) -> bool {
+    let summary_attr = elem.attr("summary");
+    match summary_attr {
+        Some(attr) => attr.contains("Properties for"),
+        None => match elem.find(Name("th")).next() {
+            Some(e) => e.text() == "Property",
+            None => false,
+        },
+    }
 }
 
 fn extract_mysql_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
     let document = Document::from(qr.body.as_str());
 
-    // TODO: .informaltable
-    document
-        .find(Class("table"))
-        .filter(|elem| {
-            let summary_attr = elem.attr("summary");
-            match summary_attr {
-                Some(attr) => attr.contains("Properties for"),
-                None => match elem.find(Name("th")).next() {
-                    Some(e) => e.text() == "Property",
-                    None => false,
-                },
-            }
-        })
-        .map(|table_node| {
-            let mut entry = KbParsedEntry {
-                cli: None,
-                default: None,
-                dynamic: None,
-                id: find_table_archor(table_node),
-                name: None,
-                scope: None,
-                r#type: None,
-            };
-
-            for tbody in table_node.find(Name("tbody")) {
-                for tr in tbody.find(Name("tr")) {
-                    let mut tds = tr.find(Name("td"));
-                    let row_name: String = tds
-                        .next()
-                        .expect("Node to exist")
-                        .text()
-                        .to_lowercase()
-                        .trim()
-                        .to_owned();
-                    let row_value = tds.next().expect("Node to exist").text();
-                    entry = process_row_to_entry(row_name, row_value, entry, table_node);
-                }
-            }
-
-            /*
-            var name = tds.first().text().toLowerCase().trim();
-            var value = tds.last();
-            let ths = $(elem).find("th"); // Fallback if the key is in a th
-            if (ths.length > 0) {
-                name = ths.first().text().toLowerCase().trim();
-            }*/
-            entry
-        })
-        .collect()
+    match document.find(Class("table")).next() {
+        Some(table) => document.find(Class("table")),
+        None => document.find(Class("informaltable")),
+    }
+    .filter(|elem| filter_table(elem))
+    .map(|table_node| process_table(table_node))
+    .collect()
 }
 
 /*
@@ -377,7 +396,6 @@ mod tests {
 
     #[test]
     fn test_case_1() {
-        //let cli = ;
         let entries = extract_mysql_from_text(QueryResponse {
             body: get_test_data("mysql_test_case_1.html"),
             url: "https://example.com",
@@ -392,6 +410,8 @@ mod tests {
                     name: Some("ndbcluster".to_string()),
                     scope: None,
                     r#type: None,
+                    valid_values: None,
+                    range: None,
                 },
                 KbParsedEntry {
                     cli: Some("--ndb-allow-copying-alter-table=[ON|OFF]".to_string()),
@@ -401,6 +421,125 @@ mod tests {
                     name: Some("ndb-allow-copying-alter-table".to_string()),
                     scope: Some(vec!["global".to_string(), "session".to_string()]),
                     r#type: None,
+                    valid_values: None,
+                    range: None,
+                },
+            ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_2() {
+        let entries = extract_mysql_from_text(QueryResponse {
+            body: get_test_data("mysql_test_case_2.html"),
+            url: "https://example.com",
+        });
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    cli: Some("--binlog-gtid-simple-recovery[={OFF|ON}]".to_string()),
+                    default: Some("ON".to_string()),
+                    dynamic: Some(false),
+                    id: "sysvar_binlog_gtid_simple_recovery".to_string(),
+                    name: Some("binlog_gtid_simple_recovery".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("boolean".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    cli: Some("--enforce-gtid-consistency[=value]".to_string()),
+                    default: Some("OFF".to_string()),
+                    dynamic: Some(true),
+                    id: "sysvar_enforce_gtid_consistency".to_string(),
+                    name: Some("enforce_gtid_consistency".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("enumeration".to_string()),
+                    valid_values: Some(vec![
+                        "OFF".to_string(),
+                        "ON".to_string(),
+                        "WARN".to_string()
+                    ]),
+                    range: None,
+                },
+                KbParsedEntry {
+                    dynamic: Some(false),
+                    id: "sysvar_gtid_executed".to_string(),
+                    name: Some("gtid_executed".to_string()),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("string".to_string()),
+                    valid_values: None,
+                    range: None,
+                    cli: None,
+                    default: None,
+                },
+                KbParsedEntry {
+                    cli: Some("--gtid-executed-compression-period=#".to_string()),
+                    default: Some("1000".to_string()),
+                    dynamic: Some(true),
+                    id: "sysvar_gtid_executed_compression_period".to_string(),
+                    name: Some("gtid_executed_compression_period".to_string()),
+                    range: Some(Range {
+                        from: Some(0),
+                        to: Some(4294967295),
+                    }),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                },
+                KbParsedEntry {
+                    cli: Some("--gtid-mode=MODE".to_string()),
+                    default: Some("OFF".to_string()),
+                    dynamic: Some(true),
+                    id: "sysvar_gtid_mode".to_string(),
+                    name: Some("gtid_mode".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("enumeration".to_string()),
+                    valid_values: Some(vec![
+                        "OFF".to_string(),
+                        "OFF_PERMISSIVE".to_string(),
+                        "ON_PERMISSIVE".to_string(),
+                        "ON".to_string()
+                    ]),
+                    range: None,
+                },
+                KbParsedEntry {
+                    default: Some("AUTOMATIC".to_string()),
+                    dynamic: Some(true),
+                    id: "sysvar_gtid_next".to_string(),
+                    name: Some("gtid_next".to_string()),
+                    scope: Some(vec!["session".to_string()]),
+                    r#type: Some("enumeration".to_string()),
+                    valid_values: Some(vec![
+                        "AUTOMATIC".to_string(),
+                        "ANONYMOUS".to_string(),
+                        "UUID:NUMBER".to_string()
+                    ]),
+                    range: None,
+                    cli: None,
+                },
+                KbParsedEntry {
+                    dynamic: Some(false),
+                    id: "sysvar_gtid_owned".to_string(),
+                    name: Some("gtid_owned".to_string()),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("string".to_string()),
+                    valid_values: None,
+                    range: None,
+                    cli: None,
+                    default: None,
+                },
+                KbParsedEntry {
+                    dynamic: Some(true),
+                    id: "sysvar_gtid_purged".to_string(),
+                    name: Some("gtid_purged".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("string".to_string()),
+                    valid_values: None,
+                    range: None,
+                    cli: None,
+                    default: None,
                 },
             ],
             entries

@@ -16,6 +16,12 @@ pub struct QueryResponse<'a> {
 }
 
 #[derive(Debug, PartialEq)]
+pub struct Range {
+    pub from: Option<i64>,
+    pub to: Option<i64>,
+}
+
+#[derive(Debug, PartialEq)]
 pub struct KbParsedEntry {
     pub cli: Option<String>,
     pub default: Option<String>,
@@ -24,4 +30,6 @@ pub struct KbParsedEntry {
     pub id: String,
     pub name: Option<String>,
     pub scope: Option<Vec<String>>,
+    pub valid_values: Option<Vec<String>>,
+    pub range: Option<Range>,
 }

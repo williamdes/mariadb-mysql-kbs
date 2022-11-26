@@ -1,13 +1,11 @@
-'use strict';
-
-const common = require(__dirname + '/common');
-const cleaner = require(__dirname + '/cleaner');
+use crate::data::{Page, PageProcess};
 
 /**
  * Create a doc element
  * @param {Element} element The root element
  * @returns object The doc object
  */
+/*
 const createDoc = function ($, element) {
     let doc = {
         id: $(element).attr('id'),
@@ -167,134 +165,7 @@ function parsePage($, cbSuccess) {
     cbSuccess(anchors);
 }
 
-const KB_URL = 'https://mariadb.com/kb/en/library/documentation/';
 
-const storageEngines = ['s3-storage-engine', 'aria', 'myrocks', 'cassandra', 'galera-cluster', 'myisam', 'connect'];
-
-const plugins = [
-    'mariadb-audit-plugin',
-    'semisynchronous-replication-plugin',
-    'sql-error-log-plugin',
-    'authentication-plugin-gssapi',
-    'authentication-plugin-pam',
-    'aws-key-management-encryption-plugin',
-    'cracklib-password-check-plugin',
-    'disks-plugin',
-    'feedback-plugin',
-    'file-key-management-encryption-plugin',
-    'query-cache-information-plugin',
-    'query-response-time-plugin',
-    'simple-password-check-plugin',
-];
-
-const systemVariables = [
-    'pbxt',
-    'mroonga',
-    'tokudb',
-    'xtradbinnodb-server',
-    'mariadb-audit-plugin',
-    'ssltls',
-    'performance-schema',
-];
-
-const custom = [
-    {
-        url: 'columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/',
-        name: 'spider-server-system-variables',
-    },
-    {
-        url: 'semisynchronous-replication/',
-        name: 'semisynchronous-replication-system-variables',
-    },
-    {
-        url: 'replication-and-binary-log-server-system-variables/',
-        name: 'replication-and-binary-log-server-system-variables',
-    },
-    {
-        url: 'gtid/',
-        name: 'gtid-system-variables',
-    },
-    {
-        url: 'replication/optimization-and-tuning/system-variables/server-system-variables/',
-        name: 'server-system-variables',
-    },
-    {
-        url: 'system-versioned-tables/',
-        name: 'versioned-tables-system-variables',
-    },
-    {
-        url: 'handlersocket-configuration-options/',
-        name: 'handlersocket-configuration-options-variables',
-    },
-    {
-        url: 'storage-engine-independent-column-compression/',
-        name: 'storage-engine-independent-column-compression-variables',
-    },
-    {
-        url: 'user-statistics/',
-        name: 'user-statistics-variables',
-    },
-];
-
-const status = [
-    'server',
-    'galera-cluster',
-    'aria-server',
-    'cassandra',
-    'mroonga',
-    'spider-server',
-    'sphinx',
-    'tokudb',
-    'xtradbinnodb-server',
-    'replication-and-binary-log',
-    'oqgraph-system-and',
-    'thread-pool-system-and',
-    'ssltls',
-    'performance-schema',
-    'myrocks',
-];
-
-const pages = [];
-
-storageEngines.forEach((se) => {
-    pages.push({
-        url: KB_URL + 'columns-storage-engines-and-plugins/storage-engines/' + se + '/' + se + '-system-variables/',
-        name: se + '-system-variables',
-        type: 'variables',
-    });
-});
-
-custom.forEach((cu) => {
-    pages.push({
-        url: KB_URL + cu.url,
-        name: cu.name,
-        type: 'variables',
-    });
-});
-
-status.forEach((statusName) => {
-    pages.push({
-        url: KB_URL + statusName + '-status-variables/',
-        name: statusName + '-status-variables',
-        type: 'variables',
-    });
-});
-
-systemVariables.forEach((systemVariableName) => {
-    pages.push({
-        url: KB_URL + systemVariableName + '-system-variables/',
-        name: systemVariableName + '-system-variables',
-        type: 'variables',
-    });
-});
-
-plugins.forEach((pluginName) => {
-    pages.push({
-        url: KB_URL + pluginName + '/',
-        name: pluginName + '-variables',
-        type: 'variables',
-    });
-});
 
 module.exports = {
     parsePage: parsePage,
@@ -309,3 +180,148 @@ module.exports = {
         return common.processDataExtraction(pages, 'mariadb-', parsePage);
     },
 };
+*/
+
+const KB_URL: &str = "https://mariadb.com/kb/en/library/documentation/";
+const STORAGE_ENGINES: [&str; 7] = [
+    "s3-storage-engine",
+    "aria",
+    "myrocks",
+    "cassandra",
+    "galera-cluster",
+    "myisam",
+    "connect",
+];
+const PLUGINS: [&str; 13] = [
+    "mariadb-audit-plugin",
+    "semisynchronous-replication-plugin",
+    "sql-error-log-plugin",
+    "authentication-plugin-gssapi",
+    "authentication-plugin-pam",
+    "aws-key-management-encryption-plugin",
+    "cracklib-password-check-plugin",
+    "disks-plugin",
+    "feedback-plugin",
+    "file-key-management-encryption-plugin",
+    "query-cache-information-plugin",
+    "query-response-time-plugin",
+    "simple-password-check-plugin",
+];
+
+const SYSTEM_VARIABLES: [&str; 7] = [
+    "pbxt",
+    "mroonga",
+    "tokudb",
+    "xtradbinnodb-server",
+    "mariadb-audit-plugin",
+    "ssltls",
+    "performance-schema",
+];
+
+const CUSTOM_PAGES: [Page; 9] = [
+    Page {
+        url: "columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/",
+        name: "spider-server-system-variables",
+    },
+    Page {
+        url: "semisynchronous-replication/",
+        name: "semisynchronous-replication-system-variables",
+    },
+    Page {
+        url: "replication-and-binary-log-server-system-variables/",
+        name: "replication-and-binary-log-server-system-variables",
+    },
+    Page {
+        url: "gtid/",
+        name: "gtid-system-variables",
+    },
+    Page {
+        url: "replication/optimization-and-tuning/system-variables/server-system-variables/",
+        name: "server-system-variables",
+    },
+    Page {
+        url: "system-versioned-tables/",
+        name: "versioned-tables-system-variables",
+    },
+    Page {
+        url: "handlersocket-configuration-options/",
+        name: "handlersocket-configuration-options-variables",
+    },
+    Page {
+        url: "storage-engine-independent-column-compression/",
+        name: "storage-engine-independent-column-compression-variables",
+    },
+    Page {
+        url: "user-statistics/",
+        name: "user-statistics-variables",
+    },
+];
+
+const STATUS: [&str; 15] = [
+    "server",
+    "galera-cluster",
+    "aria-server",
+    "cassandra",
+    "mroonga",
+    "spider-server",
+    "sphinx",
+    "tokudb",
+    "xtradbinnodb-server",
+    "replication-and-binary-log",
+    "oqgraph-system-and",
+    "thread-pool-system-and",
+    "ssltls",
+    "performance-schema",
+    "myrocks",
+];
+
+pub fn get_pages() -> Vec<PageProcess<'static>> {
+    let mut pages = vec![];
+
+    for se in &STORAGE_ENGINES {
+        pages.push(PageProcess {
+            url: KB_URL.to_owned()
+                + "columns-storage-engines-and-plugins/storage-engines/"
+                + se
+                + "/"
+                + se
+                + "-system-variables/",
+            name: format!("{}-system-variables", se),
+            data_type: "variables",
+        });
+    }
+
+    for cu in &CUSTOM_PAGES {
+        pages.push(PageProcess {
+            url: KB_URL.to_owned() + cu.url,
+            name: cu.name.to_string(),
+            data_type: "variables",
+        });
+    }
+
+    for status_name in &STATUS {
+        pages.push(PageProcess {
+            url: KB_URL.to_owned() + status_name + "-status-variables/",
+            name: format!("{}-status-variables", status_name),
+            data_type: "variables",
+        });
+    }
+
+    for system_variable_name in &SYSTEM_VARIABLES {
+        pages.push(PageProcess {
+            url: KB_URL.to_owned() + system_variable_name + "-system-variables/",
+            name: format!("{}-system-variables", system_variable_name),
+            data_type: "variables",
+        });
+    }
+
+    for plugin_name in &PLUGINS {
+        pages.push(PageProcess {
+            url: KB_URL.to_owned() + plugin_name + "/",
+            name: format!("{}-variables", plugin_name),
+            data_type: "variables",
+        });
+    }
+
+    pages
+}

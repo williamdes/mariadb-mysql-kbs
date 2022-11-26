@@ -8,29 +8,7 @@ const fs = require('fs');
 
 module.exports = function () {
     suite('MySQL parser', function () {
-        test('test case 1', function (done) {
-            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_1.html'));
-            MySQL.parsePage($, function (resultData) {
-                expect(resultData).to.deep.equal([
-                    {
-                        cli: '--ndbcluster',
-                        default: 'FALSE (Version: NDB 7.5-7.6)',
-                        dynamic: false,
-                        id: 'option_mysqld_ndbcluster',
-                        name: 'ndbcluster',
-                    },
-                    {
-                        cli: '--ndb-allow-copying-alter-table=[ON|OFF]',
-                        default: 'ON (Version: NDB 7.5-7.6)',
-                        dynamic: true,
-                        id: 'option_mysqld_ndb-allow-copying-alter-table',
-                        name: 'ndb-allow-copying-alter-table',
-                        scope: ['global', 'session'],
-                    },
-                ]);
-                done();
-            });
-        });
+
         test('test case 2', function (done) {
             const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_2.html'));
             MySQL.parsePage($, function (resultData) {

@@ -9815,7 +9815,8 @@
             "dynamic": false,
             "name": "performance_schema_digests_size",
             "range": {
-                "from": -1
+                "from": -1,
+                "to": 1048576
             },
             "scope": [
                 "global"

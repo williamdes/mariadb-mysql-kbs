@@ -8525,7 +8525,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
-|Range|from: `-1`|
+|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|

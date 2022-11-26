@@ -2,7 +2,7 @@ use crate::cleaner;
 use crate::data::{KbParsedEntry, PageProcess, QueryResponse, Range};
 use select::document::Document;
 use select::node::Node;
-use select::predicate::{Attr, Class, Name, Predicate};
+use select::predicate::{Class, Name};
 
 /**
  * Complete a doc element with info found in table
@@ -129,7 +129,10 @@ fn process_row_to_entry(
                 });
             }
             match entry.range {
-                Some(ref mut r) => r.from = Some(row_value.trim().parse::<i64>().unwrap()),
+                Some(ref mut r) => match row_value.trim().parse::<i128>() {
+                    Ok(v) => r.from = Some(v),
+                    _ => {}
+                },
                 None => {}
             }
         }
@@ -141,7 +144,10 @@ fn process_row_to_entry(
                 });
             }
             match entry.range {
-                Some(ref mut r) => r.to = Some(row_value.trim().parse::<i64>().unwrap()),
+                Some(ref mut r) => match row_value.trim().parse::<i128>() {
+                    Ok(v) => r.to = Some(v),
+                    _ => {}
+                },
                 None => {}
             }
         }
@@ -205,9 +211,9 @@ fn process_row_to_entry(
                 }
             }
         }
-        key => {
-            println!("tr: {} -> {}", row_name, row_value);
-            println!("missing: {}", key);
+        _key => {
+            //println!("tr: {} -> {}", row_name, row_value);
+            //println!("missing: {}", key);
         }
     }
 
@@ -229,17 +235,40 @@ fn process_table(table_node: Node) -> KbParsedEntry {
 
     for tbody in table_node.find(Name("tbody")) {
         for tr in tbody.find(Name("tr")) {
-            let mut tds = tr.find(Name("td"));
-            let row_name: String = tds
-                .next()
-                .expect("Node to exist")
-                .text()
-                .to_lowercase()
-                .trim()
-                .to_owned();
-            let row_value: Node = tds.next().expect("Node to exist");
-            entry = process_row_to_entry(row_name, row_value, entry, table_node);
+            match tr.find(Name("td")).into_selection().len() == 1
+                && tr.find(Name("th")).into_selection().len() == 1
+            {
+                // It is a mix of a th for the header and a td for the data
+                true => {
+                    let row_name: String = tr
+                        .find(Name("th"))
+                        .next()
+                        .expect("Node to exist")
+                        .text()
+                        .to_lowercase()
+                        .trim()
+                        .to_owned();
+                    let row_value: Node = tr.find(Name("td")).next().expect("Node to exist");
+                    entry = process_row_to_entry(row_name, row_value, entry, table_node);
+                }
+                false => {
+                    let mut tds = tr.find(Name("td"));
+                    let row_name: String = tds
+                        .next()
+                        .expect("Node to exist")
+                        .text()
+                        .to_lowercase()
+                        .trim()
+                        .to_owned();
+                    let row_value: Node = tds.next().expect("Node to exist");
+                    entry = process_row_to_entry(row_name, row_value, entry, table_node);
+                }
+            }
         }
+    }
+
+    if entry.name.is_none() && entry.cli.is_some() {
+        entry.name = cleaner::transform_cli_into_name(entry.cli.as_ref().unwrap().to_string());
     }
 
     /*
@@ -253,26 +282,34 @@ fn process_table(table_node: Node) -> KbParsedEntry {
 }
 
 fn filter_table(elem: &Node) -> bool {
-    let summary_attr = elem.attr("summary");
-    match summary_attr {
-        Some(attr) => attr.contains("Properties for"),
-        None => match elem.find(Name("th")).next() {
-            Some(e) => e.text() == "Property",
-            None => false,
+    let element_attr = elem.attr("class");
+    match element_attr {
+        Some(attr) => match attr == "informaltable" {
+            true => match elem.find(Name("table")).next() {
+                Some(table) => match table.attr("summary") {
+                    Some(attr) => attr.contains("Properties for"),
+                    None => false,
+                },
+                None => false,
+            },
+            false => match elem.find(Name("th")).next() {
+                Some(e) => e.text() == "Property",
+                None => false,
+            },
         },
+        None => false,
     }
 }
 
-fn extract_mysql_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
+pub fn extract_mysql_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
     let document = Document::from(qr.body.as_str());
 
-    match document.find(Class("table")).next() {
-        Some(table) => document.find(Class("table")),
-        None => document.find(Class("informaltable")),
-    }
-    .filter(|elem| filter_table(elem))
-    .map(|table_node| process_table(table_node))
-    .collect()
+    document
+        .find(Class("table"))
+        .chain(document.find(Class("informaltable")))
+        .filter(|elem| filter_table(elem))
+        .map(|table_node| process_table(table_node))
+        .collect()
 }
 
 /*
@@ -285,10 +322,6 @@ fn extract_mysql_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
                 if (doc.cli === "") {
                     delete doc.cli;
                 }
-            }
-            if (!doc.name && doc.cli) {
-                var matches = doc.cli.match(cleaner.regexCli);
-                doc.name = matches[2].replace(/-/g, "_");
             }
             anchors.push(doc);
         });
@@ -384,7 +417,7 @@ pub fn get_pages() -> Vec<PageProcess<'static>> {
 mod tests {
     // Note this useful idiom: importing names from outer (for mod tests) scope.
     use super::*;
-    use pretty_assertions::{assert_eq, assert_ne};
+    use pretty_assertions::assert_eq;
     use std::env;
     use std::fs;
 
@@ -540,6 +573,74 @@ mod tests {
                     range: None,
                     cli: None,
                     default: None,
+                },
+            ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_5() {
+        let entries = extract_mysql_from_text(QueryResponse {
+            body: get_test_data("mysql_test_case_5.html"),
+            url: "https://example.com",
+        });
+        assert_eq!(
+            vec![KbParsedEntry {
+                id: "option_mysqld_mysqlx".to_string(),
+                cli: Some("--mysqlx[=value]".to_string()),
+                r#type: Some("enumeration".to_string()),
+                default: Some("ON".to_string()),
+                valid_values: Some(vec![
+                    "ON".to_string(),
+                    "OFF".to_string(),
+                    "FORCE".to_string(),
+                    "FORCE_PLUS_PERMANENT".to_string(),
+                ]),
+                name: Some("mysqlx".to_string()),
+                scope: None,
+                range: None,
+                dynamic: None,
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_6() {
+        let entries = extract_mysql_from_text(QueryResponse {
+            body: get_test_data("mysql_test_case_6.html"),
+            url: "https://example.com",
+        });
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    cli: Some("--auto-increment-increment=#".to_string()),
+                    default: Some("1".to_string()),
+                    dynamic: Some(true),
+                    id: "sysvar_auto_increment_increment".to_string(),
+                    name: Some("auto_increment_increment".to_string()),
+                    range: Some(Range {
+                        from: Some(1),
+                        to: Some(65535),
+                    }),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                },
+                KbParsedEntry {
+                    cli: Some("--auto-increment-offset=#".to_string()),
+                    default: Some("1".to_string()),
+                    dynamic: Some(true),
+                    id: "sysvar_auto_increment_offset".to_string(),
+                    name: Some("auto_increment_offset".to_string()),
+                    range: Some(Range {
+                        from: Some(1),
+                        to: Some(65535),
+                    }),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
                 },
             ],
             entries

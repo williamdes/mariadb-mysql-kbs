@@ -50,6 +50,18 @@ pub fn get_clean_type_from_mixed_string(mixed_string: String) -> Option<&'static
         .find(|real_type_to_test| mixed_string.contains(real_type_to_test))
 }
 
+const REGEX_CLI: &str = r"(?i)([-]{2})([0-9a-z-_]+)";
+
+pub fn transform_cli_into_name(cli: String) -> Option<String> {
+    let regex_cli = Regex::new(REGEX_CLI).expect("regex should compile");
+
+    let matches = regex_cli.captures(&cli);
+    match matches {
+        Some(cap) => Some(cap.get(2).unwrap().as_str().replace("-", "_")),
+        None => None,
+    }
+}
+
 /**
  * Clean cli argument
  * @param String cli The command line string
@@ -64,7 +76,7 @@ pub fn clean_cli(mut cli: String, skip_regex: bool) -> Option<String> {
         cli = cli.replace("<", "");
     }
 
-    let regex_cli = Regex::new(r"(?i)([-]{2})([0-9a-z-_]+)").expect("regex should compile");
+    let regex_cli = Regex::new(REGEX_CLI).expect("regex should compile");
     if skip_regex == false && regex_cli.is_match(&cli) == false {
         return None;
     }
@@ -158,6 +170,24 @@ pub fn clean_text_valid_values(valid_values_text: String) -> String {
 mod tests {
     // Note this useful idiom: importing names from outer (for mod tests) scope.
     use super::*;
+
+    #[test]
+    fn test_transform_cli_into_name() {
+        let cli = transform_cli_into_name("--test-argument".to_string());
+        assert_eq!(cli, Some("test_argument".to_string()));
+    }
+
+    #[test]
+    fn test_transform_cli_into_name_invalid_1() {
+        let cli = transform_cli_into_name("test-argument".to_string());
+        assert_eq!(cli, None);
+    }
+
+    #[test]
+    fn test_transform_cli_into_name_invalid_2() {
+        let cli = transform_cli_into_name("".to_string());
+        assert_eq!(cli, None);
+    }
 
     #[test]
     fn clean_cli_html_code() {

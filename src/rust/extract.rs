@@ -1,16 +1,15 @@
 use crate::data::QueryResponse;
 use crate::{mariadb, mysql};
-use futures::join;
+use reqwest::blocking::{Client, RequestBuilder};
 use reqwest::header::{FROM, USER_AGENT};
-use reqwest::Client;
-use reqwest::RequestBuilder;
 
 const UA_FROM: &str = "williamdes+mariadb-mysql-kbs@wdes.fr";
 const UA: &str = "mariadb-mysql-kbs-bot (+https://github.com/williamdes/mariadb-mysql-kbs; williamdes+mariadb-mysql-kbs@wdes.fr)";
 
-pub async fn extract() {
+pub fn extract() {
     println!("Run build...");
-    join!(extract_mysql(), extract_mariadb());
+    extract_mysql();
+    extract_mariadb();
     println!("All done.");
     println!("End !");
 }
@@ -19,16 +18,14 @@ fn add_headers(rb: RequestBuilder) -> RequestBuilder {
     rb.header(FROM, UA_FROM).header(USER_AGENT, UA)
 }
 
-async fn get_html_from_url(client: Client, url: &str) -> QueryResponse {
+fn get_html_from_url(client: Client, url: &str) -> QueryResponse {
     let mut request = client.get(url);
     request = add_headers(request);
 
     let response = request
         .send()
-        .await
         .expect("Url should be fetched")
         .text()
-        .await
         .unwrap();
 
     QueryResponse {
@@ -37,22 +34,44 @@ async fn get_html_from_url(client: Client, url: &str) -> QueryResponse {
     }
 }
 
-async fn extract_mysql() {
-    let client = reqwest::Client::new();
+fn extract_mysql() {
+    let client = Client::new();
     for page in mysql::get_pages() {
-        let response = get_html_from_url(
-            client,
-            "https://webhook.site/a2682f4d-b178-444e-81c9-d1eaf4138acd",
-        )
-        .await;
-        println!("{}", response.body);
+        println!("URL : {}", &page.url);
+        let response = get_html_from_url(client, &page.url);
+        let data = mysql::extract_mysql_from_text(response);
+
+        let serialized = serde_json::to_string(&data).unwrap();
+        println!("serialized = {}", serialized);
         break;
     }
 }
 
-async fn extract_mariadb() {
+fn extract_mariadb() {
     mariadb::get_pages();
 }
+
+/*
+fn write_json(filename: String, data) {
+    fs.writeFile(filename, JSON.stringify(sortObject(data), null, 2) + '\n', function (err) {
+        if (err) {
+            return eprintln!(err);
+        } else {
+            if (cbSuccess !== null) {
+                cbSuccess();
+            }
+        }
+    });
+};
+
+fn write_page(page: PageProcess, filePrefix: String, data, onWriteSuccess) {
+    let pageKB = {
+        url: url,
+        name: name,
+        data: data,
+    };
+    writeJSON(path.join(__dirname, '../', 'data', page_type, filePrefix + pageKB.name + '.json'), pageKB, onWriteSuccess);
+};*/
 
 /*
 /**
@@ -86,26 +105,6 @@ const sortObject = function (obj, arraySorter) {
     return temp;
 };
 
-const writeJSON = function (filename, data, cbSuccess = null) {
-    fs.writeFile(filename, JSON.stringify(sortObject(data), null, 2) + '\n', function (err) {
-        if (err) {
-            return console.log(err);
-        } else {
-            if (cbSuccess !== null) {
-                cbSuccess();
-            }
-        }
-    });
-};
-
-const writePage = function (type, filePrefix, name, url, data, onWriteSuccess) {
-    let pageKB = {
-        url: url,
-        name: name,
-        data: data,
-    };
-    writeJSON(path.join(__dirname, '../', 'data', type, filePrefix + pageKB.name + '.json'), pageKB, onWriteSuccess);
-};
 
 const processDataExtraction = function (pages, filePrefix, parsePage) {
     return new Promise((resolve) => {
@@ -117,7 +116,6 @@ const processDataExtraction = function (pages, filePrefix, parsePage) {
                 if (error) {
                     console.log(error);
                 } else {
-                    console.log('URL : ' + res.options.url);
                     parsePage(res.$, (anchors) => {
                         writePage(res.options.type, filePrefix, res.options.name, res.options.url, anchors, () => {
                             nbrPagesProcessed++;

@@ -344,56 +344,6 @@ module.exports = function () {
                 done();
             });
         });
-        test('test case 5', function (done) {
-            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_5.html'));
-            MySQL.parsePage($, function (resultData) {
-                expect(resultData).to.deep.equal([
-                    {
-                        id: 'option_mysqld_mysqlx',
-                        cli: '--mysqlx[=value]',
-                        type: 'enumeration',
-                        default: 'ON',
-                        validValues: ['ON', 'OFF', 'FORCE', 'FORCE_PLUS_PERMANENT'],
-                        name: 'mysqlx',
-                    },
-                ]);
-                done();
-            });
-        });
-        test('test case 6', function (done) {
-            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_6.html'));
-            MySQL.parsePage($, function (resultData) {
-                expect(resultData).to.deep.equal([
-                    {
-                        cli: '--auto-increment-increment=#',
-                        default: '1',
-                        dynamic: true,
-                        id: 'sysvar_auto_increment_increment',
-                        name: 'auto_increment_increment',
-                        range: {
-                            from: 1,
-                            to: 65535,
-                        },
-                        scope: ['global', 'session'],
-                        type: 'integer',
-                    },
-                    {
-                        cli: '--auto-increment-offset=#',
-                        default: '1',
-                        dynamic: true,
-                        id: 'sysvar_auto_increment_offset',
-                        name: 'auto_increment_offset',
-                        range: {
-                            from: 1,
-                            to: 65535,
-                        },
-                        scope: ['global', 'session'],
-                        type: 'integer',
-                    },
-                ]);
-                done();
-            });
-        });
     });
     suite('MariaDB parser', function () {
         test('test case 1', function (done) {

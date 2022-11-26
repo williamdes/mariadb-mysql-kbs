@@ -3,6 +3,7 @@ pub struct Page<'a> {
     pub name: &'a str,
 }
 
+#[derive(Clone)]
 pub struct PageProcess<'a> {
     pub url: String,
     pub name: String,

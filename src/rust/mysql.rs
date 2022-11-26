@@ -1,13 +1,9 @@
-'use strict';
-
-const common = require(__dirname + '/common');
-const cleaner = require(__dirname + '/cleaner');
-
 /**
  * Complete a doc element with info found in table
  * @param {HTMLTableRowElement[]} rows The table rows
  * @param {Object} doc The doc object
  */
+/*
 function completeDoc($, rows, doc) {
     $(rows).each((i, elem) => {
         let tds = $(elem).find('td'); // first is key and last is value
@@ -107,13 +103,14 @@ function completeDoc($, rows, doc) {
                 break;
         }
     });
-}
+}*/
 
 /**
  * Create a doc element
  * @param {Element} element The root element
  * @returns object The doc object
  */
+/*
 function createDoc($, element, doc) {
     completeDoc($, $(element).find('tbody > tr'), doc);
     if (doc.range !== undefined) {
@@ -125,7 +122,7 @@ function createDoc($, element, doc) {
     }
 
     return doc;
-}
+}*/
 
 function parsePage($, cbSuccess) {
     var anchors = [];

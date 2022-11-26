@@ -2,6 +2,7 @@ pub mod cleaner;
 pub mod data;
 pub mod extract;
 pub mod mariadb;
+pub mod mysql;
 
 #[tokio::main]
 async fn main() {

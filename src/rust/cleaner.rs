@@ -1,15 +1,13 @@
-'use strict';
-
-const realTypes = [
-    'string',
-    'boolean',
-    'integer',
-    'numeric',
-    'enumeration',
-    'set',
-    'directory name',
-    'file name',
-    'byte',
+const realTypes: [&str; 7] = [
+    "string",
+    "boolean",
+    "integer",
+    "numeric",
+    "enumeration",
+    "set",
+    "directory name",
+    "file name",
+    "byte",
 ];
 
 /**
@@ -18,26 +16,26 @@ const realTypes = [
  * @return {String|undefined} The cleaned type
  */
 const cleanType = function (type) {
-    if (realTypes.includes(type) === false && typeof type === 'string') {
+    if (realTypes.includes(type) === false && typeof type === "string") {
         if (type.match(/in bytes/i) || type.match(/number of bytes/i) || type.match(/size in mb/i)) {
-            type = 'byte';
+            type = "byte";
         } else if (
             type.match(/number of/i) ||
             type.match(/size of/i) ||
             type.match(/in microseconds/i) ||
             type.match(/in seconds/i)
         ) {
-            type = 'integer';
+            type = "integer";
         } else if (
             type.match(/numeric (64-bit unsigned integer)/i) ||
             type.match(/numeric (32-bit unsigned integer)/i)
         ) {
-            type = 'numeric';
+            type = "numeric";
         } else if (
             //enumerated
             type.match(/enum/i)
         ) {
-            type = 'enumeration';
+            type = "enumeration";
         } else {
             type = undefined;
         }
@@ -62,12 +60,12 @@ const regexCli = /([-]{2})([0-9a-z-_]+)/i;
  * @returns {String} The cleaned cli
  */
 const cleanCli = function (cli, skipRegex = false) {
-    if (typeof cli === 'string') {
+    if (typeof cli === "string") {
         if (cli.match(/<code\>/i) || cli.match(/<\/code\>/i)) {
-            cli = cli.replace(/<code\>/gi, '');
-            cli = cli.replace(/<\/code\>/gi, '');
-            cli = cli.replace(/\>/gi, '');
-            cli = cli.replace(/</gi, '');
+            cli = cli.replace(/<code\>/gi, "");
+            cli = cli.replace(/<\/code\>/gi, "");
+            cli = cli.replace(/\>/gi, "");
+            cli = cli.replace(/</gi, "");
         }
         if (!cli.match(regexCli) && skipRegex === false) {
             cli = undefined;
@@ -84,12 +82,12 @@ const cleanCli = function (cli, skipRegex = false) {
 const cleanRange = function (range) {
     if (range !== undefined) {
         // clean range
-        if (typeof range.from !== 'number' || isNaN(range.from)) {
+        if (typeof range.from !== "number" || isNaN(range.from)) {
             delete range.from;
         }
-        if (typeof range.to === 'string' && range.to.match(/upwards/i)) {
-            range.to = 'upwards';
-        } else if (typeof range.to !== 'number' || isNaN(range.to)) {
+        if (typeof range.to === "string" && range.to.match(/upwards/i)) {
+            range.to = "upwards";
+        } else if (typeof range.to !== "number" || isNaN(range.to)) {
             delete range.to;
         }
     }
@@ -103,9 +101,9 @@ const cleanRange = function (range) {
  */
 const cleanDefault = function (defaultValue) {
     return defaultValue
-        .split('\n')
+        .split("\n")
         .map((el) => cleanTextDefault(el.trim()))
-        .join(', ');
+        .join(", ");
 };
 
 /**
@@ -114,20 +112,20 @@ const cleanDefault = function (defaultValue) {
  * @returns {String} The same or an alternative text
  */
 const cleanTextDefault = function (defaultTextValue) {
-    if (defaultTextValue === 'Autosized (see description)') {
-        defaultTextValue = '(autosized)';
+    if (defaultTextValue === "Autosized (see description)") {
+        defaultTextValue = "(autosized)";
     }
-    if (defaultTextValue.indexOf('Based on the number of processors') !== -1) {
-        defaultTextValue = '(based on the number of processors)';
+    if (defaultTextValue.indexOf("Based on the number of processors") !== -1) {
+        defaultTextValue = "(based on the number of processors)";
     }
-    if (defaultTextValue === 'The MariaDB data directory') {
-        defaultTextValue = '(the MariaDB data directory)';
+    if (defaultTextValue === "The MariaDB data directory") {
+        defaultTextValue = "(the MariaDB data directory)";
     }
     if (defaultTextValue.match(/-1 \(signifies (autoscaling); do not assign this literal value\)/g)) {
-        defaultTextValue = '(-1 signifies autoscaling; do not use -1)';
+        defaultTextValue = "(-1 signifies autoscaling; do not use -1)";
     }
     if (defaultTextValue.match(/-1 \(signifies (autosizing); do not assign this literal value\)/g)) {
-        defaultTextValue = '(-1 signifies autosizing; do not use -1)';
+        defaultTextValue = "(-1 signifies autosizing; do not use -1)";
     }
     return defaultTextValue;
 };
@@ -139,13 +137,13 @@ const cleanTextDefault = function (defaultTextValue) {
  */
 const cleanTextValidValues = function (validValuesText) {
     if (validValuesText.match(/^See .* for the full list\.$/)) {
-        validValuesText = '';
+        validValuesText = "";
     }
     if (validValuesText.match(/^.* or .*$/)) {
-        validValuesText = validValuesText.replace(' or ', ',');
+        validValuesText = validValuesText.replace(" or ", ",");
     }
-    if (validValuesText === 'See description') {
-        validValuesText = '';
+    if (validValuesText === "See description") {
+        validValuesText = "";
     }
     return validValuesText;
 };

@@ -31,7 +31,7 @@ impl MergedUltraSlim {
             var_types: HashMap::new()
         }
     }
-}*/
+}
 pub const data: MergedUltraSlim = MergedUltraSlim {
     version: 1,
     vars: [Variable; 0] = [],
@@ -39,3 +39,4 @@ pub const data: MergedUltraSlim = MergedUltraSlim {
     types: HashMap::new(),
     var_types: HashMap::new()
 };
+*/

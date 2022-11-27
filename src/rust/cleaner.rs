@@ -44,10 +44,14 @@ pub fn clean_type(type_str: String) -> Option<String> {
     Some(type_str)
 }
 
-pub fn get_clean_type_from_mixed_string(mixed_string: String) -> Option<&'static str> {
-    REAL_TYPES
+pub fn get_clean_type_from_mixed_string(mixed_string: String) -> Option<String> {
+    match REAL_TYPES
         .into_iter()
         .find(|real_type_to_test| mixed_string.contains(real_type_to_test))
+    {
+        Some(val) => Some(val.to_string()),
+        None => None,
+    }
 }
 
 const REGEX_CLI: &str = r"(?i)([-]{2})([0-9a-z-_]+)";
@@ -412,13 +416,13 @@ mod tests {
     #[test]
     fn get_clean_type_from_a_mixed_string_dataset_1() {
         let found_type = get_clean_type_from_mixed_string("boolean: ON (Version: 5.7)".to_string());
-        assert_eq!(found_type, Some("boolean"));
+        assert_eq!(found_type, Some("boolean".to_string()));
     }
 
     #[test]
     fn get_clean_type_from_a_mixed_string_dataset_2() {
         let found_type = get_clean_type_from_mixed_string("numeric: 15".to_string());
-        assert_eq!(found_type, Some("numeric"));
+        assert_eq!(found_type, Some("numeric".to_string()));
     }
 
     #[test]

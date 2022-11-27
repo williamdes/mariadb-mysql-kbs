@@ -127,22 +127,22 @@ fn process_row_to_entry(
             entry.valid_values = Some(values);
         }
         "type: default, range" => {
-            /*
-            let textValueDefaultRange = value.text().trim();
-            let key = textValueDefaultRange.substring(0, textValueDefaultRange.indexOf(":") + 1);
-            let val = textValueDefaultRange.substring(textValueDefaultRange.indexOf(":") + 1);
-            if (typeof key === "string") {
-                doc.type = cleaner.getCleanTypeFromMixedString(key);
-                if (typeof doc.type !== "string") {
-                    delete doc.type;
+            let text_value_default_range = row_value.trim().to_string();
+            let key = text_value_default_range.split_once(":");
+            let val = text_value_default_range.split_once(":");
+            if key.is_some() {
+                entry.r#type =
+                    cleaner::get_clean_type_from_mixed_string(key.unwrap().0.trim().to_string());
+                if entry.r#type.is_none() {
+                    entry.r#type = None;
                 }
             }
-            if (typeof val === "string") {
-                doc.default = cleaner.cleanDefault(val);
-                if (typeof doc.default !== "string") {
-                    delete doc.default;
+            if val.is_some() {
+                entry.default = Some(cleaner::clean_default(val.unwrap().1.trim().to_string()));
+                if entry.default.is_none() {
+                    entry.default = None;
                 }
-            } */
+            }
         }
         "minimum value" => {
             if entry.range.is_none() {
@@ -644,6 +644,317 @@ mod tests {
                 valid_values: None,
                 range: None,
             },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_4() {
+        let entries = extract_mysql_from_text(QueryResponse {
+            body: get_test_data("mysql_test_case_4.html"),
+            url: "https://example.com",
+        });
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    id: "option_mysqld_ndbcluster".to_string(),
+                    name: Some("ndbcluster".to_string()),
+                    cli: Some("--ndbcluster".to_string()),
+                    dynamic: Some(false),
+                    r#type: Some("boolean".to_string()),
+                    default: Some("OFF (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                    scope: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-allow-copying-alter-table".to_string(),
+                    name: Some("ndb-allow-copying-alter-table".to_string()),
+                    cli: Some("--ndb-allow-copying-alter-table=[ON|OFF]".to_string()),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("boolean".to_string()),
+                    default: Some("ON (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-batch-size".to_string(),
+                    name: Some("ndb-batch-size".to_string()),
+                    cli: Some("--ndb-batch-size=#".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(false),
+                    r#type: Some("integer".to_string()),
+                    default: Some("32768 / 0 - 31536000 (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-cluster-connection-pool".to_string(),
+                    name: Some("ndb-cluster-connection-pool".to_string()),
+                    cli: Some("--ndb-cluster-connection-pool=#".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(false),
+                    default: Some("1 / 1 - 63 (Version: NDB 7.5-7.6)".to_string()),
+                    valid_values: None,
+                    range: None,
+                    r#type: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-cluster-connection-pool-nodeids".to_string(),
+                    name: Some("ndb-cluster-connection-pool-nodeids".to_string()),
+                    cli: Some("--ndb-cluster-connection-pool-nodeids=list".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(false),
+                    r#type: Some("set".to_string()),
+                    default: Some("/ (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-blob-read-batch-bytes".to_string(),
+                    name: Some("ndb-blob-read-batch-bytes".to_string()),
+                    cli: Some("--ndb-blob-read-batch-bytes=bytes".to_string()),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("integer".to_string()),
+                    default: Some("65536 / 0 - 4294967295 (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-blob-write-batch-bytes".to_string(),
+                    name: Some("ndb-blob-write-batch-bytes".to_string()),
+                    cli: Some("--ndb-blob-write-batch-bytes=bytes".to_string()),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("integer".to_string()),
+                    default: Some("65536 / 0 - 4294967295 (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-connectstring".to_string(),
+                    name: Some("ndb-connectstring".to_string()),
+                    cli: Some("--ndb-connectstring=connection_string".to_string()),
+                    dynamic: Some(false),
+                    r#type: Some("string".to_string()),
+                    default: Some("(Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                    scope: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-default-column-format".to_string(),
+                    name: Some("ndb-default-column-format".to_string()),
+                    cli: Some("--ndb-default-column-format=[FIXED|DYNAMIC]".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("enumeration".to_string()),
+                    default: Some("FIXED / FIXED, DYNAMIC (Version: 7.5.4)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-deferred-constraints".to_string(),
+                    name: Some("ndb-deferred-constraints".to_string()),
+                    cli: Some("--ndb-deferred-constraints=[0|1]".to_string()),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("integer".to_string()),
+                    default: Some("0 / 0 - 1 (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-distribution".to_string(),
+                    name: Some("ndb-distribution".to_string()),
+                    cli: Some("--ndb-distribution=[KEYHASH|LINHASH]".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("enumeration".to_string()),
+                    default: Some("KEYHASH / LINHASH, KEYHASH (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-log-apply-status".to_string(),
+                    name: Some("ndb-log-apply-status".to_string()),
+                    cli: Some("--ndb-log-apply-status".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(false),
+                    r#type: Some("boolean".to_string()),
+                    default: Some("OFF (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-log-empty-epochs".to_string(),
+                    name: Some("ndb-log-empty-epochs".to_string()),
+                    cli: Some("--ndb-log-empty-epochs=[ON|OFF]".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("boolean".to_string()),
+                    default: Some("OFF (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-log-empty-update".to_string(),
+                    name: Some("ndb-log-empty-update".to_string()),
+                    cli: Some("--ndb-log-empty-update=[ON|OFF]".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("boolean".to_string()),
+                    default: Some("OFF (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-log-exclusive-reads".to_string(),
+                    name: Some("ndb-log-exclusive-reads".to_string()),
+                    cli: Some("--ndb-log-exclusive-reads=[0|1]".to_string()),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("boolean".to_string()),
+                    default: Some("0 (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-log-orig".to_string(),
+                    name: Some("ndb-log-orig".to_string()),
+                    cli: Some("--ndb-log-orig".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(false),
+                    r#type: Some("boolean".to_string()),
+                    default: Some("OFF (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-log-transaction-id".to_string(),
+                    name: Some("ndb-log-transaction-id".to_string()),
+                    cli: Some("--ndb-log-transaction-id".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(false),
+                    r#type: Some("boolean".to_string()),
+                    default: Some("OFF (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-log-update-minimal".to_string(),
+                    name: Some("ndb-log-update-minimal".to_string()),
+                    cli: Some("--ndb-log-update-minimal".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("boolean".to_string()),
+                    default: Some("OFF (Version: 7.6.3)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-mgmd-host".to_string(),
+                    name: Some("ndb-mgmd-host".to_string()),
+                    cli: Some("--ndb-mgmd-host=host[:port]".to_string()),
+                    dynamic: Some(false),
+                    r#type: Some("string".to_string()),
+                    default: Some("localhost:1186 (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                    scope: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-nodeid".to_string(),
+                    name: Some("ndb-nodeid".to_string()),
+                    cli: Some("--ndb-nodeid=#".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(false),
+                    default: Some("/ 1 - 255 (Version: 5.1.5)".to_string()),
+                    valid_values: None,
+                    range: None,
+                    r#type: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-optimization-delay".to_string(),
+                    name: Some("ndb-optimization-delay".to_string()),
+                    cli: Some("--ndb-optimization-delay=milliseconds".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(true),
+                    r#type: Some("integer".to_string()),
+                    default: Some("10 / 0 - 100000 (Version: NDB 7.5-7.6)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-recv-thread-activation-threshold".to_string(),
+                    name: Some("ndb-recv-thread-activation-threshold".to_string()),
+                    cli: Some("--ndb-recv-thread-activation-threshold=threshold".to_string()),
+                    dynamic: Some(false),
+                    r#type: Some("integer".to_string()),
+                    default:
+                    Some("8 / 0 (MIN_ACTIVATION_THRESHOLD) - 16, (MAX_ACTIVATION_THRESHOLD) (Version: NDB 7.5-7.6)".to_string()),
+                    valid_values: None,
+                    range: None,
+                    scope: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-recv-thread-cpu-mask".to_string(),
+                    name: Some("ndb-recv-thread-cpu-mask".to_string()),
+                    cli: Some("--ndb-recv-thread-cpu-mask=bitmask".to_string()),
+                    dynamic: Some(false),
+                    default: Some("[empty] (Version: 5.7)".to_string()),
+                    valid_values: None,
+                    range: None,
+                    scope: None,
+                    r#type: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-wait-connected".to_string(),
+                    name: Some("ndb-wait-connected".to_string()),
+                    cli: Some("--ndb-wait-connected=seconds".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(false),
+                    r#type: Some("integer".to_string()),
+                    default: Some("30 / 0 - 31536000 (Version: NDB 7.5-7.6)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_ndb-wait-setup".to_string(),
+                    name: Some("ndb-wait-setup".to_string()),
+                    cli: Some("--ndb-wait-setup=seconds".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    dynamic: Some(false),
+                    r#type: Some("integer".to_string()),
+                    default: Some("30 / 0 - 31536000 (Version: NDB 7.5-7.6)".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    id: "option_mysqld_skip-ndbcluster".to_string(),
+                    name: Some("skip-ndbcluster".to_string()),
+                    cli: Some("--skip-ndbcluster".to_string()),
+                    dynamic: Some(false),
+                    valid_values: None,
+                    range: None,
+                    scope: None,
+                    r#type: None,
+                    default: None,
+                },
+                KbParsedEntry {
+                    cli: Some("--ndb-transid-mysql-connection-map[=state]".to_string()),
+                    default: Some("ON".to_string()),
+                    dynamic: None,
+                    id: "option_mysqld_ndb-transid-mysql-connection-map".to_string(),
+                    name: Some("ndb_transid_mysql_connection_map".to_string()),
+                    r#type: Some("enumeration".to_string()),
+                    valid_values: Some(vec!["ON".to_string(), "OFF".to_string(), "FORCE".to_string()]),
+                    range: None,
+                    scope: None,
+                },
+            ],
             entries
         );
     }

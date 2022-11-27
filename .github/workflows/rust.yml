@@ -26,6 +26,11 @@ jobs:
               with:
                   path: ~/.cargo/git
                   key: ${{ runner.os }}-cargo-index-${{ hashFiles('**/Cargo.lock') }}
+            - name: Cache cargo binaries
+              uses: actions/cache@v3
+              with:
+                  path: ~/.cargo/bin
+                  key: ${{ runner.os }}-cargo-bin-${{ hashFiles('**/Cargo.lock') }}
             - name: Cache cargo build
               uses: actions/cache@v3
               with:
@@ -46,33 +51,24 @@ jobs:
                   command: build
                   args: --release
               env:
-                CARGO_INCREMENTAL: '0'
-                RUSTFLAGS: '-Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cinstrument-coverage'
-                RUSTDOCFLAGS: '-Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cinstrument-coverage'
+                  CARGO_INCREMENTAL: "0"
+                  RUSTFLAGS: "-Cinstrument-coverage"
+                  RUSTDOCFLAGS: "-Cinstrument-coverage"
             - name: Test
               uses: actions-rs/cargo@v1
               with:
                   command: test
                   args: --all-features --no-fail-fast
               env:
-                CARGO_INCREMENTAL: '0'
-                RUSTFLAGS: '-Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cinstrument-coverage'
-                RUSTDOCFLAGS: '-Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cinstrument-coverage'
-            - name: Download grcov
-              run: |
-                set -eux;
-                mkdir -p "${HOME}/.local/bin"
-                curl -sL https://github.com/mozilla/grcov/releases/download/v0.8.13/grcov-x86_64-unknown-linux-gnu.tar.bz2 | tar jxf - -C "${HOME}/.local/bin"
-                echo "$HOME/.local/bin" >> $GITHUB_PATH
-            - name: grcov
-              id: coverage
-              run: |
-                set -eux;
-                grcov . --binary-path ./target/debug/deps/ -s . -t lcov --branch --ignore-not-existing --ignore '../*' --ignore "/*" -o ./lcov.info
-                echo "report=./lcov.info" >> $GITHUB_OUTPUT
-              #uses: actions-rs/grcov@v0.1
+                  CARGO_INCREMENTAL: "0"
+                  RUSTFLAGS: "-Cinstrument-coverage"
+                  RUSTDOCFLAGS: "-Cinstrument-coverage"
+            - name: Install grcov
+              run: if [[ ! -e ~/.cargo/bin/grcov ]]; then cargo install grcov; fi
+            - name: Run grcov
+              run: grcov . --binary-path target/debug/deps/ -s . -t lcov --branch --ignore-not-existing --ignore '../**' --ignore '/*' -o coverage.lcov
             - uses: codecov/codecov-action@v3
               with:
-                files: ${{ steps.coverage.outputs.report }}
-                flags: rust
-                fail_ci_if_error: true # optional (default = false)
+                  files: ./coverage.lcov
+                  flags: rust
+                  fail_ci_if_error: true # optional (default = false)

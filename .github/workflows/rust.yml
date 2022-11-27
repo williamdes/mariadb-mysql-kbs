@@ -76,4 +76,3 @@ jobs:
                 files: ${{ steps.coverage.outputs.report }}
                 flags: rust
                 fail_ci_if_error: true # optional (default = false)
-                verbose: true # optional (default = false)

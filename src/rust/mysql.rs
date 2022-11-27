@@ -126,13 +126,24 @@ fn process_row_to_entry(
                 entry.range = Some(Range {
                     from: None,
                     to: None,
+                    from_f: None,
+                    to_f: None,
                 });
             }
             match entry.range {
-                Some(ref mut r) => match row_value.trim().parse::<i128>() {
-                    Ok(v) => r.from = Some(v),
-                    _ => {}
-                },
+                Some(ref mut r) => {
+                    let val = match row_node.find(Name("code")).next() {
+                        Some(code_node) => code_node.text(),
+                        None => row_value.trim().to_string(),
+                    };
+                    match val.parse::<i128>() {
+                        Ok(v) => r.from = Some(v),
+                        _ => match val.parse::<f64>() {
+                            Ok(v) => r.from_f = Some(v),
+                            _ => {}
+                        },
+                    }
+                }
                 None => {}
             }
         }
@@ -141,13 +152,24 @@ fn process_row_to_entry(
                 entry.range = Some(Range {
                     from: None,
                     to: None,
+                    from_f: None,
+                    to_f: None,
                 });
             }
             match entry.range {
-                Some(ref mut r) => match row_value.trim().parse::<i128>() {
-                    Ok(v) => r.to = Some(v),
-                    _ => {}
-                },
+                Some(ref mut r) => {
+                    let val = match row_node.find(Name("code")).next() {
+                        Some(code_node) => code_node.text(),
+                        None => row_value.trim().to_string(),
+                    };
+                    match val.parse::<i128>() {
+                        Ok(v) => r.to = Some(v),
+                        _ => match val.parse::<f64>() {
+                            Ok(v) => r.to_f = Some(v),
+                            _ => {}
+                        },
+                    }
+                }
                 None => {}
             }
         }
@@ -516,6 +538,8 @@ mod tests {
                     range: Some(Range {
                         from: Some(0),
                         to: Some(4294967295),
+                        from_f: None,
+                        to_f: None,
                     }),
                     scope: Some(vec!["global".to_string()]),
                     r#type: Some("integer".to_string()),
@@ -623,6 +647,8 @@ mod tests {
                     range: Some(Range {
                         from: Some(1),
                         to: Some(65535),
+                        from_f: None,
+                        to_f: None,
                     }),
                     scope: Some(vec!["global".to_string(), "session".to_string()]),
                     r#type: Some("integer".to_string()),
@@ -637,6 +663,8 @@ mod tests {
                     range: Some(Range {
                         from: Some(1),
                         to: Some(65535),
+                        from_f: None,
+                        to_f: None,
                     }),
                     scope: Some(vec!["global".to_string(), "session".to_string()]),
                     r#type: Some("integer".to_string()),

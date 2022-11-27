@@ -37,9 +37,9 @@ fn get_html_from_url(client: Client, url: &str) -> QueryResponse {
 }
 
 fn extract_mysql() {
-    let client = Client::new();
     for page in mysql::get_pages() {
         println!("URL : {}", &page.url);
+        let client = Client::new();
         let response = get_html_from_url(client, &page.url);
         let data = DataFile {
             data: mysql::extract_mysql_from_text(response),
@@ -47,7 +47,6 @@ fn extract_mysql() {
             name: &page.name,
         };
         write_page(page.data_type, "mysql-", data);
-        break;
     }
 }
 
@@ -63,8 +62,7 @@ fn write_json(filename: String, data: DataFile) {
 
     // String::from_utf8(ser.into_inner()).unwrap()
     let mut data = ser.into_inner();
-    data.push(0x0d);// CR
-    data.push(0x0a);// LF
+    data.push(0x0a); // LF
     fs::write(filename, data).expect("Unable to write file");
 }
 

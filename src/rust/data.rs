@@ -21,8 +21,12 @@ pub struct QueryResponse<'a> {
 pub struct Range {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub from: Option<i128>,
+    #[serde(skip_serializing_if = "Option::is_none", rename = "from")]
+    pub from_f: Option<f64>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub to: Option<i128>,
+    #[serde(skip_serializing_if = "Option::is_none", rename = "to")]
+    pub to_f: Option<f64>,
 }
 
 #[derive(Debug, PartialEq, Serialize)]

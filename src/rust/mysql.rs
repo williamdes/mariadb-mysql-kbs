@@ -41,12 +41,35 @@ function createDoc($, element, doc) {
 }*/
 
 fn find_table_archor(node: Node) -> String {
-    let anchor_name_node = node
-        .parent()
-        .expect("Has a parent")
-        .find(Name("a"))
-        .filter(|el| el.attr("name").is_some() && el.attr("class").is_none())
-        .next();
+    let mut collected_p_nodes: Vec<Node> = vec![];
+    let mut node_count = 10;
+    let mut node_cur: Option<Node> = Some(node);
+
+    loop {
+        // Current node is None exit
+        if node_cur.is_none() {
+            break;
+        }
+        // Move cursor to previous and bump count
+        node_cur = node_cur.unwrap().prev();
+        node_count = node_count - 1;
+        // If still is None or count too low exit
+        if node_cur.is_none() || node_count < 1 {
+            break;
+        }
+
+        let n = node_cur.unwrap();
+        if n.is(Name("p")) {
+            collected_p_nodes.push(n);
+        }
+    }
+
+    let anchor_name_node = collected_p_nodes
+        .iter()
+        .filter(|el| el.find(Name("a")).next().is_some())
+        .map(|el| el.find(Name("a")).next().unwrap())
+        .find(|el| el.attr("name").is_some() && el.attr("class").is_none());
+
     match anchor_name_node {
         Some(node) => node.attr("name").unwrap().to_string(),
         None => node
@@ -58,7 +81,7 @@ fn find_table_archor(node: Node) -> String {
             .attr("href")
             .expect("Missing href attr")
             .split("#")
-            .next()
+            .last()
             .expect("Anchor to have #")
             .to_string(),
     }
@@ -668,6 +691,46 @@ mod tests {
                     }),
                     scope: Some(vec!["global".to_string(), "session".to_string()]),
                     r#type: Some("integer".to_string()),
+                    valid_values: None,
+                },
+            ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_7() {
+        let entries = extract_mysql_from_text(QueryResponse {
+            body: get_test_data("mysql_test_case_7.html"),
+            url: "https://example.com",
+        });
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    cli: Some("--server-id=#".to_string()),
+                    default: Some("1".to_string()),
+                    dynamic: Some(true),
+                    id: "sysvar_server_id".to_string(),
+                    name: Some("server_id".to_string()),
+                    range: Some(Range {
+                        from: Some(0),
+                        to: Some(4294967295),
+                        from_f: None,
+                        to_f: None,
+                    }),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: Some(false),
+                    id: "sysvar_server_uuid".to_string(),
+                    name: Some("server_uuid".to_string()),
+                    range: None,
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("string".to_string()),
                     valid_values: None,
                 },
             ],

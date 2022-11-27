@@ -1,0 +1,361 @@
+<div class="section">
+    <div class="titlepage">
+        <div>
+            <div>
+                <h3 class="title">
+                    <a name="replication-options"></a>17.1.6&nbsp;Replication and Binary Logging Options and Variables
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="toc">
+        <dl class="toc">
+            <dt>
+                <span class="section"
+                    ><a href="replication-options-reference.html"
+                        >17.1.6.1 Replication and Binary Logging Option and Variable Reference</a
+                    ></span
+                >
+            </dt>
+            <dt>
+                <span class="section"
+                    ><a href="replication-options-source.html"
+                        >17.1.6.2 Replication Source Options and Variables</a
+                    ></span
+                >
+            </dt>
+            <dt>
+                <span class="section"
+                    ><a href="replication-options-replica.html">17.1.6.3 Replica Server Options and Variables</a></span
+                >
+            </dt>
+            <dt>
+                <span class="section"
+                    ><a href="replication-options-binary-log.html"
+                        >17.1.6.4 Binary Logging Options and Variables</a
+                    ></span
+                >
+            </dt>
+            <dt>
+                <span class="section"
+                    ><a href="replication-options-gtids.html">17.1.6.5 Global Transaction ID System Variables</a></span
+                >
+            </dt>
+        </dl>
+    </div>
+    <p>
+        The following sections contain information about
+        <a class="link" href="mysqld.html" title="4.3.1&nbsp;mysqld — The MySQL Server"
+            ><span class="command"><strong>mysqld</strong></span></a
+        >
+        options and server variables that are used in replication and for controlling the binary log. Options and
+        variables for use on sources and replicas are covered separately, as are options and variables relating to
+        binary logging and global transaction identifiers (GTIDs). A set of quick-reference tables providing basic
+        information about these options and variables is also included.
+    </p>
+    <p>
+        <a name="sysvar_server_id"></a>
+        Of particular importance is the
+        <a class="link" href="replication-options.html#sysvar_server_id"><code class="literal">server_id</code></a>
+        system variable.
+    </p>
+    <a class="indexterm" name="idm46155336090640"></a><a class="indexterm" name="idm46155336089552"></a>
+    <div class="informaltable">
+        <table frame="box" rules="all" summary="Properties for server_id">
+            <colgroup>
+                <col style="width: 30%" />
+                <col style="width: 70%" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>Command-Line Format</th>
+                    <td><code class="literal">--server-id=#</code></td>
+                </tr>
+                <tr>
+                    <th>System Variable</th>
+                    <td>
+                        <code class="literal"
+                            ><a class="link" href="replication-options.html#sysvar_server_id">server_id</a></code
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <th>Scope</th>
+                    <td>Global</td>
+                </tr>
+                <tr>
+                    <th>Dynamic</th>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <th>
+                        <a
+                            class="link"
+                            href="optimizer-hints.html#optimizer-hints-set-var"
+                            title="Variable-Setting Hint Syntax"
+                            ><code class="literal">SET_VAR</code></a
+                        >
+                        Hint Applies
+                    </th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                    <td>Integer</td>
+                </tr>
+                <tr>
+                    <th>Default Value</th>
+                    <td><code class="literal">1</code></td>
+                </tr>
+                <tr>
+                    <th>Minimum Value</th>
+                    <td><code class="literal">0</code></td>
+                </tr>
+                <tr>
+                    <th>Maximum Value</th>
+                    <td><code class="literal">4294967295</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        This variable specifies the server ID.
+        <a class="link" href="replication-options.html#sysvar_server_id"><code class="literal">server_id</code></a> is
+        set to 1 by default. The server can be started with this default ID, but when binary logging is enabled, an
+        informational message is issued if you did not set
+        <a class="link" href="replication-options.html#sysvar_server_id"><code class="literal">server_id</code></a>
+        explicitly to specify a server ID.
+    </p>
+    <p>
+        For servers that are used in a replication topology, you must specify a unique server ID for each replication
+        server, in the range from 1 to 2<sup>32</sup> − 1.
+        <span class="quote">“<span class="quote">Unique</span>”</span> means that each ID must be different from every
+        other ID in use by any other source or replica in the replication topology. For additional information, see
+        <a
+            class="xref"
+            href="replication-options-source.html"
+            title="17.1.6.2&nbsp;Replication Source Options and Variables"
+            >Section&nbsp;17.1.6.2, “Replication Source Options and Variables”</a
+        >, and
+        <a
+            class="xref"
+            href="replication-options-replica.html"
+            title="17.1.6.3&nbsp;Replica Server Options and Variables"
+            >Section&nbsp;17.1.6.3, “Replica Server Options and Variables”</a
+        >.
+    </p>
+    <p>
+        If the server ID is set to 0, binary logging takes place, but a source with a server ID of 0 refuses any
+        connections from replicas, and a replica with a server ID of 0 refuses to connect to a source. Note that
+        although you can change the server ID dynamically to a nonzero value, doing so does not enable replication to
+        start immediately. You must change the server ID and then restart the server to initialize the replica.
+    </p>
+    <p>
+        For more information, see
+        <a
+            class="xref"
+            href="replication-howto-slavebaseconfig.html"
+            title="17.1.2.2&nbsp;Setting the Replica Configuration"
+            >Section&nbsp;17.1.2.2, “Setting the Replica Configuration”</a
+        >.
+    </p>
+    <p>
+        <a name="sysvar_server_uuid"></a>
+        <a class="link" href="replication-options.html#sysvar_server_uuid"><code class="literal">server_uuid</code></a>
+    </p>
+    <a class="indexterm" name="idm46155336052880"></a><a class="indexterm" name="idm46155336051376"></a>
+    <p>
+        The MySQL server generates a true UUID in addition to the default or user-supplied server ID set in the
+        <code class="literal">server_id</code>
+        system variable. This is available as the global, read-only variable
+        <a class="link" href="replication-options.html#sysvar_server_uuid"><code class="literal">server_uuid</code></a
+        >.
+    </p>
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in">
+        <div class="admon-title">Note</div>
+        <p>
+            The presence of the
+            <a class="link" href="replication-options.html#sysvar_server_uuid"
+                ><code class="literal">server_uuid</code></a
+            >
+            system variable does not change the requirement for setting a unique
+            <a class="link" href="replication-options.html#sysvar_server_id"><code class="literal">server_id</code></a>
+            value for each MySQL server as part of preparing and running MySQL replication, as described earlier in this
+            section.
+        </p>
+    </div>
+    <div class="informaltable">
+        <table frame="box" rules="all" summary="Properties for server_uuid">
+            <colgroup>
+                <col style="width: 30%" />
+                <col style="width: 70%" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>System Variable</th>
+                    <td>
+                        <code class="literal"
+                            ><a class="link" href="replication-options.html#sysvar_server_uuid">server_uuid</a></code
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <th>Scope</th>
+                    <td>Global</td>
+                </tr>
+                <tr>
+                    <th>Dynamic</th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th>
+                        <a
+                            class="link"
+                            href="optimizer-hints.html#optimizer-hints-set-var"
+                            title="Variable-Setting Hint Syntax"
+                            ><code class="literal">SET_VAR</code></a
+                        >
+                        Hint Applies
+                    </th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                    <td>String</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>When starting, the MySQL server automatically obtains a UUID as follows:</p>
+    <div class="orderedlist">
+        <ol class="orderedlist" type="1">
+            <li class="listitem">
+                <p>
+                    <a class="indexterm" name="idm46155336026880"></a>
+
+                    Attempt to read and use the UUID written in the file
+                    <code class="filename"
+                        ><em class="replaceable"><code>data_dir</code></em
+                        >/auto.cnf</code
+                    >
+                    (where <em class="replaceable"><code>data_dir</code></em> is the server's data directory).
+                </p>
+            </li>
+            <li class="listitem">
+                <p>
+                    If
+                    <code class="filename"
+                        ><em class="replaceable"><code>data_dir</code></em
+                        >/auto.cnf</code
+                    >
+                    is not found, generate a new UUID and save it to this file, creating the file if necessary.
+                </p>
+            </li>
+        </ol>
+    </div>
+    <p>
+        The <code class="filename">auto.cnf</code> file has a format similar to that used for
+        <code class="filename">my.cnf</code> or <code class="filename">my.ini</code> files.
+        <code class="filename">auto.cnf</code> has only a single <code class="literal">[auto]</code> section containing
+        a single
+        <a class="link" href="replication-options.html#sysvar_server_uuid"><code class="literal">server_uuid</code></a>
+        setting and value; the file's contents appear similar to what is shown here:
+    </p>
+    <div class="copytoclipboard-wrapper" style="position: relative">
+        <pre
+            class="programlisting language-ini"
+        ><div class="docs-select-all right" id="sa27738006"><div class="copy-help left">Press CTRL+C to copy</div> <div class="right"><button class="clipboard-btn" title="Copy to Clipboard"><span class="icon-clipboard"></span></button></div></div><code class=" language-ini"><span class="token selector">[auto]</span>
+<span class="token constant">server_uuid</span><span class="token attr-value"><span class="token punctuation">=</span>8a94f357-aab4-11df-86ab-c80aa9429562</span></code></pre>
+    </div>
+    <div class="important" style="margin-left: 0.5in; margin-right: 0.5in">
+        <div class="admon-title">Important</div>
+        <p>
+            The <code class="filename">auto.cnf</code> file is automatically generated; do not attempt to write or
+            modify this file.
+        </p>
+    </div>
+    <p>
+        When using MySQL replication, sources and replicas know each other's UUIDs. The value of a replica's UUID can be
+        seen in the output of
+        <a class="link" href="show-replicas.html" title="13.7.7.33&nbsp;SHOW REPLICAS Statement"
+            ><code class="literal">SHOW REPLICAS</code></a
+        >
+        (or before MySQL 8.0.22,
+        <a class="link" href="show-slave-hosts.html" title="13.7.7.34&nbsp;SHOW SLAVE HOSTS | SHOW REPLICAS Statement"
+            ><code class="literal">SHOW SLAVE HOSTS</code></a
+        >). Once
+        <a class="link" href="start-replica.html" title="13.4.2.8&nbsp;START REPLICA Statement"
+            ><code class="literal">START REPLICA</code></a
+        >
+        has been executed, the value of the source's UUID is available on the replica in the output of
+        <a class="link" href="show-replica-status.html" title="13.7.7.35&nbsp;SHOW REPLICA STATUS Statement"
+            ><code class="literal">SHOW REPLICA STATUS</code></a
+        >. As of 8.0.22, the keyword SLAVE was replaced by REPLICA.
+    </p>
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in">
+        <div class="admon-title">Note</div>
+        <p>
+            Issuing a
+            <a class="link" href="stop-replica.html" title="13.4.2.10&nbsp;STOP REPLICA Statement"
+                ><code class="literal">STOP REPLICA</code></a
+            >
+            or
+            <a class="link" href="reset-replica.html" title="13.4.2.5&nbsp;RESET REPLICA Statement"
+                ><code class="literal">RESET REPLICA</code></a
+            >
+            statement does <span class="emphasis"><em>not</em></span> reset the source's UUID as used on the replica.
+        </p>
+    </div>
+    <p>
+        A server's <code class="literal">server_uuid</code> is also used in GTIDs for transactions originating on that
+        server. For more information, see
+        <a
+            class="xref"
+            href="replication-gtids.html"
+            title="17.1.3&nbsp;Replication with Global Transaction Identifiers"
+            >Section&nbsp;17.1.3, “Replication with Global Transaction Identifiers”</a
+        >.
+    </p>
+    <p>
+        When starting, the replication I/O (receiver) thread generates an error and aborts if its source's UUID is equal
+        to its own unless the
+        <a class="link" href="replication-options-replica.html#option_mysqld_replicate-same-server-id"
+            ><code class="option">--replicate-same-server-id</code></a
+        >
+        option has been set. In addition, the replication receiver thread generates a warning if either of the following
+        is true:
+    </p>
+    <div class="itemizedlist">
+        <ul class="itemizedlist" style="list-style-type: disc">
+            <li class="listitem">
+                <p>
+                    No source having the expected
+                    <a class="link" href="replication-options.html#sysvar_server_uuid"
+                        ><code class="literal">server_uuid</code></a
+                    >
+                    exists.
+                </p>
+            </li>
+            <li class="listitem">
+                <p>
+                    The source's
+                    <a class="link" href="replication-options.html#sysvar_server_uuid"
+                        ><code class="literal">server_uuid</code></a
+                    >
+                    has changed, although no
+                    <a
+                        class="link"
+                        href="change-replication-source-to.html"
+                        title="13.4.2.3&nbsp;CHANGE REPLICATION SOURCE TO Statement"
+                        ><code class="literal">CHANGE REPLICATION SOURCE TO</code></a
+                    >
+                    |
+                    <a class="link" href="change-master-to.html" title="13.4.2.1&nbsp;CHANGE MASTER TO Statement"
+                        ><code class="literal">CHANGE MASTER TO</code></a
+                    >
+                    statement has ever been executed.
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>

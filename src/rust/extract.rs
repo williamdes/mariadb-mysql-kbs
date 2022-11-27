@@ -59,8 +59,6 @@ fn write_json(filename: String, data: DataFile) {
     let formatter = serde_json::ser::PrettyFormatter::with_indent(b"  ");
     let mut ser = serde_json::Serializer::with_formatter(buf, formatter);
     data.serialize(&mut ser).expect("Unable to serialize data");
-
-    // String::from_utf8(ser.into_inner()).unwrap()
     let mut data = ser.into_inner();
     data.push(0x0a); // LF
     fs::write(filename, data).expect("Unable to write file");
@@ -79,69 +77,3 @@ fn write_page(data_type: &str, file_prefix: &str, data: DataFile) {
         data,
     );
 }
-
-/*
-/**
- * Sort the object keys
- * @see https://stackoverflow.com/a/48112249/5155484
- * @param {Object} obj The object
- * @param {Function} arraySorter The sorter callback
- */
-const sortObject = function (obj, arraySorter) {
-    if (typeof obj !== 'object') {
-        return obj;
-    }
-    if (Array.isArray(obj)) {
-        if (arraySorter) {
-            obj.sort(arraySorter);
-        }
-        for (var i = 0; i < obj.length; i++) {
-            obj[i] = sortObject(obj[i], arraySorter);
-        }
-        return obj;
-    }
-    var temp = {};
-    var keys = [];
-    for (var key in obj) {
-        keys.push(key);
-    }
-    keys.sort();
-    for (var index in keys) {
-        temp[keys[index]] = sortObject(obj[keys[index]], arraySorter);
-    }
-    return temp;
-};
-
-
-const processDataExtraction = function (pages, filePrefix, parsePage) {
-    return new Promise((resolve) => {
-        var nbrPagesProcessed = 0;
-        var crawler = new Crawler({
-            maxConnections: 1,
-            // This will be called for each crawled page
-            callback: function (error, res, done) {
-                if (error) {
-                    console.log(error);
-                } else {
-                    parsePage(res.$, (anchors) => {
-                        writePage(res.options.type, filePrefix, res.options.name, res.options.url, anchors, () => {
-                            nbrPagesProcessed++;
-                            if (nbrPagesProcessed === pages.length) {
-                                resolve();
-                            }
-                        });
-                    });
-                }
-                done();
-            },
-        });
-        crawler.queue(
-            pages.map((page) => {
-                return { uri: page.url, name: page.name, url: page.url, type: page.type };
-            })
-        );
-    });
-};
-
-
-*/

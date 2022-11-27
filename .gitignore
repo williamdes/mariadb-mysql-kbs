@@ -10,3 +10,5 @@ node_modules
 /.php_cs.cache
 /target
 composer.lock
+/*.lcov
+/*.profraw

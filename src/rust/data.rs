@@ -40,7 +40,7 @@ pub struct KbParsedEntry {
     pub id: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
-    #[serde(skip_serializing_if = "Option::is_none")]
+    #[serde(skip_serializing_if = "skip_serialize_range")]
     pub range: Option<Range>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub scope: Option<Vec<String>>,
@@ -48,6 +48,20 @@ pub struct KbParsedEntry {
     pub r#type: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none", rename = "validValues")]
     pub valid_values: Option<Vec<String>>,
+}
+
+pub fn skip_serialize_range(data: &std::option::Option<Range>) -> bool {
+    if data.is_none() {
+        return true;
+    }
+    if data.as_ref().unwrap().from.is_some()
+        || data.as_ref().unwrap().from_f.is_some()
+        || data.as_ref().unwrap().to.is_some()
+        || data.as_ref().unwrap().to_f.is_some()
+    {
+        return false;
+    }
+    return true;
 }
 
 #[derive(Serialize)]

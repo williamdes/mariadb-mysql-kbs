@@ -40,6 +40,10 @@ jobs:
               with:
                   command: build
                   args: --release
+              env:
+                CARGO_INCREMENTAL: '0'
+                RUSTFLAGS: '-Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cinstrument-coverage'
+                RUSTDOCFLAGS: '-Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cinstrument-coverage'
             - name: Test
               uses: actions-rs/cargo@v1
               with:
@@ -47,14 +51,14 @@ jobs:
                   args: --all-features --no-fail-fast
               env:
                 CARGO_INCREMENTAL: '0'
-                RUSTFLAGS: '-C instrument-coverage'
-                RUSTDOCFLAGS: '-C instrument-coverage'
+                RUSTFLAGS: '-Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cinstrument-coverage'
+                RUSTDOCFLAGS: '-Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cinstrument-coverage'
             - name: grcov
               id: coverage
               uses: actions-rs/grcov@v0.1
             - uses: codecov/codecov-action@v3
               with:
-                files: ./lcov.info
+                files: ${{ steps.coverage.outputs.report }}
                 flags: rust
                 fail_ci_if_error: true # optional (default = false)
                 verbose: true # optional (default = false)

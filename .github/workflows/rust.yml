@@ -53,6 +53,8 @@ jobs:
                 CARGO_INCREMENTAL: '0'
                 RUSTFLAGS: '-Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cinstrument-coverage'
                 RUSTDOCFLAGS: '-Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cinstrument-coverage'
+            - name: debug
+              run: ls -lahR
             - name: grcov
               id: coverage
               uses: actions-rs/grcov@v0.1

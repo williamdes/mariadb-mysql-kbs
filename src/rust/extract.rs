@@ -1,4 +1,4 @@
-use crate::data::{DataFile, PageProcess, QueryResponse};
+use crate::data::{DataFile, QueryResponse};
 use crate::{mariadb, mysql};
 use reqwest::blocking::{Client, RequestBuilder};
 use reqwest::header::{FROM, USER_AGENT};

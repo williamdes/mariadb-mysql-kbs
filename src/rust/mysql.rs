@@ -627,6 +627,28 @@ mod tests {
     }
 
     #[test]
+    fn test_case_3() {
+        let entries = extract_mysql_from_text(QueryResponse {
+            body: get_test_data("mysql_test_case_3.html"),
+            url: "https://example.com",
+        });
+        assert_eq!(
+            vec![KbParsedEntry {
+                cli: None,
+                default: Some("TRUE (Version: 5.1.51-ndb-7.2.0)".to_string()),
+                dynamic: Some(true),
+                id: "sysvar_ndb_join_pushdown".to_string(),
+                name: Some("ndb_join_pushdown".to_string()),
+                scope: Some(vec!["global".to_string(), "session".to_string()]),
+                r#type: None,
+                valid_values: None,
+                range: None,
+            },],
+            entries
+        );
+    }
+
+    #[test]
     fn test_case_5() {
         let entries = extract_mysql_from_text(QueryResponse {
             body: get_test_data("mysql_test_case_5.html"),
@@ -734,6 +756,28 @@ mod tests {
                     valid_values: None,
                 },
             ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_8() {
+        let entries = extract_mysql_from_text(QueryResponse {
+            body: get_test_data("mysql_test_case_8.html"),
+            url: "https://example.com",
+        });
+        assert_eq!(
+            vec![KbParsedEntry {
+                cli: Some("--basedir=dir_name".to_string()),
+                default: Some("parent of mysqld installation directory".to_string()),
+                dynamic: Some(false),
+                id: "sysvar_basedir".to_string(),
+                name: Some("basedir".to_string()),
+                scope: Some(vec!["global".to_string()]),
+                r#type: Some("directory name".to_string()),
+                valid_values: None,
+                range: None,
+            }],
             entries
         );
     }

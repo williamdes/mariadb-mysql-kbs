@@ -89,21 +89,6 @@ module.exports = function () {
                 done();
             });
         });
-        test('test case 3', function (done) {
-            const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_3.html'));
-            MySQL.parsePage($, function (resultData) {
-                expect(resultData).to.deep.equal([
-                    {
-                        default: 'TRUE (Version: 5.1.51-ndb-7.2.0)',
-                        dynamic: true,
-                        id: 'sysvar_ndb_join_pushdown',
-                        name: 'ndb_join_pushdown',
-                        scope: ['global', 'session'],
-                    },
-                ]);
-                done();
-            });
-        });
         test('test case 4', function (done) {
             const $ = cheerio.load(fs.readFileSync(__dirname + '/data/mysql_test_case_4.html'));
             MySQL.parsePage($, function (resultData) {

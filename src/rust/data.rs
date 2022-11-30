@@ -1,5 +1,7 @@
 use serde::Serialize;
 
+use crate::cleaner;
+
 pub struct Page<'a> {
     pub url: &'a str,
     pub name: &'a str,
@@ -27,10 +29,13 @@ pub struct Range {
     pub to: Option<i128>,
     #[serde(skip_serializing_if = "Option::is_none", rename = "to")]
     pub to_f: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none", rename = "to")]
+    pub to_upwards: Option<String>,
 }
 
 impl Range {
-    pub fn try_fill_from(&mut self, val: String) {
+    pub fn try_fill_from(&mut self, mut val: String) {
+        val = cleaner::clean_range_from_to(val);
         match val.parse::<i128>() {
             Ok(v) => self.from = Some(v),
             _ => match val.parse::<f64>() {
@@ -40,7 +45,8 @@ impl Range {
         }
     }
 
-    pub fn try_fill_to(&mut self, val: String) {
+    pub fn try_fill_to(&mut self, mut val: String) {
+        val = cleaner::clean_range_from_to(val);
         match val.parse::<i128>() {
             Ok(v) => self.to = Some(v),
             _ => match val.parse::<f64>() {
@@ -80,6 +86,7 @@ impl KbParsedEntry {
                 to: None,
                 from_f: None,
                 to_f: None,
+                to_upwards: None,
             });
         }
     }
@@ -93,6 +100,7 @@ pub fn skip_serialize_range(data: &std::option::Option<Range>) -> bool {
         || data.as_ref().unwrap().from_f.is_some()
         || data.as_ref().unwrap().to.is_some()
         || data.as_ref().unwrap().to_f.is_some()
+        || data.as_ref().unwrap().to_upwards.is_some()
     {
         return false;
     }

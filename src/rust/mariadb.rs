@@ -276,17 +276,17 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                             None => {}
                         }
                     }
-                    if first_value.contains("upwards") {
+                    if li_node.text().contains("upwards") {
                         // try x upwards
-                        println!("{}", first_value);
-                        //entry.range[1] = value;
+                        entry.init_range();
+                        match entry.range {
+                            Some(ref mut r) => {
+                                r.try_fill_from(first_value.to_string());
+                                r.to_upwards = Some("upwards".to_string());
+                            }
+                            None => {}
+                        }
                     }
-                    // Could be oneday a float
-                    /*entry.range = Some(Range {
-                        from: parseFloat(entry.range[0]),
-                        to: entry.range[1],
-                    });
-                    entry.range = Some(cleaner::clean_range(entry.range));*/
                 }
 
                 if values.len() == 2 {
@@ -415,6 +415,7 @@ pub fn extract_mariadb_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
                 && elem.attr("id").unwrap() != "system-variables"
         })
         .map(|header_node| process_block(header_node))
+        .filter(|entry| entry.r#type.is_some())
         .collect()
 }
 
@@ -588,6 +589,7 @@ mod tests {
                     id: "tokudb_write_status_frequency".to_string(),
                     name: Some("tokudb_write_status_frequency".to_string()),
                     range: Some(Range {
+                        to_upwards: None,
                         from: Some(0),
                         to: Some(4294967295),
                         from_f: None,
@@ -619,6 +621,7 @@ mod tests {
                     id: "rpl_semi_sync_slave_trace_level".to_string(),
                     name: Some("rpl_semi_sync_slave_trace_level".to_string()),
                     range: Some(Range {
+                        to_upwards: None,
                         from: Some(0),
                         to: Some(18446744073709551615),
                         from_f: None,
@@ -695,6 +698,35 @@ mod tests {
                     "TLSv1.3".to_string()
                 ]),
                 range: None,
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_9() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_9.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                cli: Some("--connect-work-size=#".to_string()),
+                default: Some("67108864".to_string()),
+                dynamic: Some(true),
+                id: "connect_work_size".to_string(),
+                name: Some("connect_work_size".to_string()),
+                scope: Some(vec!["global".to_string(), "session".to_string()]),
+                r#type: Some("integer".to_string()),
+                valid_values: None,
+                range: Some(Range {
+                    to_upwards: Some("upwards".to_string()),
+                    from: Some(4194304),
+                    from_f: None,
+                    to: None,
+                    to_f: None,
+                }),
             },],
             entries
         );

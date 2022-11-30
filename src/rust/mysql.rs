@@ -433,6 +433,8 @@ pub fn get_pages() -> Vec<PageProcess<'static>> {
 
 #[cfg(test)]
 mod tests {
+    use crate::data::Range;
+
     // Note this useful idiom: importing names from outer (for mod tests) scope.
     use super::*;
     use pretty_assertions::assert_eq;
@@ -532,6 +534,7 @@ mod tests {
                     id: "sysvar_gtid_executed_compression_period".to_string(),
                     name: Some("gtid_executed_compression_period".to_string()),
                     range: Some(Range {
+                        to_upwards: None,
                         from: Some(0),
                         to: Some(4294967295),
                         from_f: None,
@@ -974,6 +977,7 @@ mod tests {
                     id: "sysvar_auto_increment_increment".to_string(),
                     name: Some("auto_increment_increment".to_string()),
                     range: Some(Range {
+                        to_upwards: None,
                         from: Some(1),
                         to: Some(65535),
                         from_f: None,
@@ -990,6 +994,7 @@ mod tests {
                     id: "sysvar_auto_increment_offset".to_string(),
                     name: Some("auto_increment_offset".to_string()),
                     range: Some(Range {
+                        to_upwards: None,
                         from: Some(1),
                         to: Some(65535),
                         from_f: None,
@@ -1019,6 +1024,7 @@ mod tests {
                     id: "sysvar_server_id".to_string(),
                     name: Some("server_id".to_string()),
                     range: Some(Range {
+                        to_upwards: None,
                         from: Some(0),
                         to: Some(4294967295),
                         from_f: None,

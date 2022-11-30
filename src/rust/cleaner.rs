@@ -149,6 +149,34 @@ pub fn clean_text_default(default_text_value: String) -> String {
 }
 
 /**
+ * Clean range to from values
+ */
+pub fn clean_range_from_to(default_text_value: String) -> String {
+    if default_text_value.contains(" (log file block size)") {
+        return default_text_value
+            .replace(" (log file block size)", "")
+            .trim()
+            .to_string();
+    }
+    if default_text_value.contains(" (MIN_ACTIVATION_THRESHOLD)") {
+        return default_text_value
+            .replace(" (MIN_ACTIVATION_THRESHOLD)", "")
+            .trim()
+            .to_string();
+    }
+    if default_text_value.contains(" (MAX_ACTIVATION_THRESHOLD)") {
+        return default_text_value
+            .replace(" (MAX_ACTIVATION_THRESHOLD)", "")
+            .trim()
+            .to_string();
+    }
+    if default_text_value.contains('(') && default_text_value.contains(')') {
+        println!("dtv: {}", default_text_value);
+    }
+    return default_text_value.trim().to_string();
+}
+
+/**
  * Clean text of a valid values list
  */
 pub fn clean_text_valid_values(valid_values_text: String) -> String {
@@ -454,5 +482,29 @@ mod tests {
     fn get_clean_text_vie_valid_values_non_valid_value_dataset_5() {
         let cleaned_value = clean_text_valid_values("\"\" or \"uncompressed\"".to_string());
         assert_eq!(cleaned_value, "\"\",\"uncompressed\"");
+    }
+
+    #[test]
+    fn clean_range_from_to_dataset_1() {
+        let cleaned_value = clean_range_from_to("512 (log file block size)".to_string());
+        assert_eq!(cleaned_value, "512");
+    }
+
+    #[test]
+    fn clean_range_from_to_trim_dataset_2() {
+        let cleaned_value = clean_range_from_to(" 512 (log file block size)".to_string());
+        assert_eq!(cleaned_value, "512");
+    }
+
+    #[test]
+    fn clean_range_from_to_trim_dataset_3() {
+        let cleaned_value = clean_range_from_to("0 (MIN_ACTIVATION_THRESHOLD)".to_string());
+        assert_eq!(cleaned_value, "0");
+    }
+
+    #[test]
+    fn clean_range_from_to_trim_dataset_4() {
+        let cleaned_value = clean_range_from_to("16 (MAX_ACTIVATION_THRESHOLD)".to_string());
+        assert_eq!(cleaned_value, "16");
     }
 }

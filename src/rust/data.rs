@@ -76,6 +76,8 @@ pub struct KbParsedEntry {
     pub r#type: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none", rename = "validValues")]
     pub valid_values: Option<Vec<String>>,
+    #[serde(skip_serializing)]
+    pub has_description: bool,
 }
 
 impl KbParsedEntry {

@@ -301,6 +301,9 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                 }
             }
         }
+        "description" => {
+            entry.has_description = true;
+        }
         /*
 
         case 'description:':
@@ -353,6 +356,7 @@ fn process_ul(mut entry: KbParsedEntry, ul_node: Node) -> KbParsedEntry {
 
 fn process_block(header_node: Node) -> KbParsedEntry {
     let mut entry = KbParsedEntry {
+        has_description: false,
         cli: None,
         default: None,
         dynamic: None,
@@ -415,7 +419,12 @@ pub fn extract_mariadb_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
                 && elem.attr("id").unwrap() != "system-variables"
         })
         .map(|header_node| process_block(header_node))
-        .filter(|entry| entry.r#type.is_some())
+        .filter(|entry| {
+            entry.r#type.is_some()
+                || entry.default.is_some()
+                || entry.dynamic.is_some()
+                || entry.has_description
+        })
         .collect()
 }
 
@@ -444,6 +453,7 @@ mod tests {
         assert_eq!(
             vec![
                 KbParsedEntry {
+                    has_description: true,
                     cli: Some("--query-cache-size=#".to_string()),
                     default: Some("1M (>= MariaDB, 10.1.7), 0 (<= MariaDB 10.1.6), (although frequently given a default value in some setups)".to_string()),
                     dynamic: Some(true),
@@ -468,6 +478,7 @@ mod tests {
 
         assert_eq!(
             vec![KbParsedEntry {
+                has_description: true,
                 cli: Some("query-cache-strip-comments".to_string()),
                 default: Some("OFF".to_string()),
                 dynamic: Some(true),
@@ -491,6 +502,7 @@ mod tests {
 
         assert_eq!(
             vec![KbParsedEntry {
+                has_description: true,
                 cli: None,
                 default: None,
                 dynamic: None,
@@ -515,6 +527,7 @@ mod tests {
         assert_eq!(
             vec![
                 KbParsedEntry {
+                    has_description: true,
                     cli: Some("--server-audit-events=value".to_string()),
                     default: Some("Empty string".to_string()),
                     dynamic: Some(true),
@@ -548,6 +561,7 @@ mod tests {
                     range: None,
                 },
                 KbParsedEntry {
+                    has_description: true,
                     cli: Some("--server-audit-excl-users=value".to_string()),
                     default: Some("Empty string".to_string()),
                     dynamic: Some(true),
@@ -573,6 +587,7 @@ mod tests {
         assert_eq!(
             vec![
                 KbParsedEntry {
+                    has_description: true,
                     dynamic: Some(false),
                     id: "tokudb_version".to_string(),
                     name: Some("tokudb_version".to_string()),
@@ -584,6 +599,7 @@ mod tests {
                     valid_values: None,
                 },
                 KbParsedEntry {
+                    has_description: true,
                     default: Some("1000".to_string()),
                     dynamic: Some(true),
                     id: "tokudb_write_status_frequency".to_string(),
@@ -615,6 +631,7 @@ mod tests {
         assert_eq!(
             vec![
                 KbParsedEntry {
+                    has_description: true,
                     cli: Some("--rpl-semi-sync-slave-trace_level[=#]".to_string()),
                     default: Some("32".to_string()),
                     dynamic: Some(true),
@@ -632,6 +649,7 @@ mod tests {
                     valid_values: None,
                 },
                 KbParsedEntry {
+                    has_description: true,
                     cli: Some("--rpl-semi-sync-master=value".to_string()),
                     default: Some("ON".to_string()),
                     id: "rpl_semi_sync_master".to_string(),
@@ -661,6 +679,7 @@ mod tests {
 
         assert_eq!(
             vec![KbParsedEntry {
+                has_description: true,
                 dynamic: None,
                 cli: Some("--wsrep-provider=value".to_string()),
                 default: Some("None".to_string()),
@@ -684,6 +703,7 @@ mod tests {
 
         assert_eq!(
             vec![KbParsedEntry {
+                has_description: true,
                 cli: Some("--tls-version=value".to_string()),
                 default: Some("TLSv1.1,TLSv1.2,TLSv1.3".to_string()),
                 dynamic: Some(false),
@@ -712,6 +732,7 @@ mod tests {
 
         assert_eq!(
             vec![KbParsedEntry {
+                has_description: true,
                 cli: Some("--connect-work-size=#".to_string()),
                 default: Some("67108864".to_string()),
                 dynamic: Some(true),

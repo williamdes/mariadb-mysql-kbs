@@ -1,186 +1,13 @@
-use crate::data::{Page, PageProcess};
-
-/**
- * Create a doc element
- * @param {Element} element The root element
- * @returns object The doc object
- */
-/*
-const createDoc = function ($, element) {
-    let doc = {
-        id: $(element).attr('id'),
-        name: $(element).text().trim(),
-    };
-    if (doc.id === 'select' && doc.name === 'SELECT') {
-        // Handle an edge case for https://mariadb.com/kb/en/temporal-data-tables/
-        delete doc.id;
-    }
-    try {
-        /* jshint -W083 */
-        // Parse ul > li
-        const ulElementList = $(element).nextUntil('.anchored_heading');
-        if (ulElementList.find('li > strong').length === 0) {
-            return { id: null };
-        }
-        ulElementList.find('li').each((i, elementDescr) => {
-            const valueKey = $(elementDescr);
-            const key = valueKey.find('strong').text().toLowerCase().trim();
-            const value = $(elementDescr).text().replace(valueKey.find('strong').text(), '').trim();
-            switch (key) {
-                case 'dynamic:':
-                    doc.dynamic = value.toLowerCase() === 'yes';
-                    break;
-                case 'scope:':
-                    doc.scope = value
-                        .toLowerCase()
-                        .split(',')
-                        .map((item) => {
-                            if (item.match(/session/)) {
-                                return 'session';
-                            } else if (item.match(/global/)) {
-                                return 'global';
-                            }
-                        });
-                    doc.scope = doc.scope.filter(function (e) {
-                        return e === 0 || e;
-                    });
-                    break;
-                case 'type:':
-                    doc.type = cleaner.cleanType(value.toLowerCase());
-                    break;
-                case 'data type:':
-                    /*
-                     * Default method, <li> has a <code> child
-                     * Example: <li><strong>Data Type:</strong> <code>numeric</code></li>
-                     */
-                    let dataType = valueKey.find('code');
-                    if (dataType.length > 0) {
-                        doc.type = cleaner.cleanType(dataType.first().text().toLowerCase().trim());
-                    } else {
-                        /*
-                         * Fallback method, <li> has text
-                         * Example: <li><strong>Data Type:</strong> boolean</li>
-                         */
-                        let dataType = value.replace(/undefined/gi, '');
-                        dataType = dataType.toLowerCase().trim();
-                        if (dataType !== '') {
-                            doc.type = cleaner.cleanType(dataType);
-                        } else if (dataType === '') {
-                            console.log('Empty datatype found for : ' + doc.id);
-                        } else {
-                            console.log('No datatype found for : ' + doc.id);
-                        }
-                    }
-                    break;
-                case 'description:':
-                    doc.type = cleaner.cleanType(value.toLowerCase());
-                    break;
-                case 'default value:':
-                case 'default:':
-                    doc.default = cleaner.cleanDefault(
-                        valueKey.text().replace(valueKey.find('strong').text(), '').trim()
-                    );
-                    break;
-                case 'valid values:':
-                    if (valueKey.has('code').length > 0) {
-                        doc.validValues = valueKey
-                            .find('code')
-                            .get()
-                            .map((el) => $(el).text());
-                    }
-                    if (valueKey.has('code').length === 0) {
-                        doc.validValues = []; // Default if the value is non detected further
-                        let cleanValue = cleaner.cleanTextValidValues(value.trim());
-                        if (cleanValue !== '') {
-                            doc.validValues = cleanValue.split(',').map((el) => el.trim());
-                        }
-                    }
-                    break;
-                case 'range:':
-                    doc.range = valueKey
-                        .find('code')
-                        .get()
-                        .map((el) => $(el).text());
-                    if (doc.range.length === 1) {
-                        // try x-y
-                        doc.range = doc.range[0].split('-').map((item) => item.trim());
-                    }
-                    if (doc.range.length === 1) {
-                        // try x to y
-                        doc.range = doc.range[0].split('to').map((item) => item.trim());
-                    }
-                    if (doc.range[1] !== undefined) {
-                        doc.range[1] = parseFloat(doc.range[1]);
-                    }
-                    if (doc.range.length === 1) {
-                        // try x upwards
-                        if (value.includes('upwards')) {
-                            doc.range[1] = value;
-                        }
-                    }
-                    // Could be oneday a float
-                    doc.range = {
-                        from: parseFloat(doc.range[0]),
-                        to: doc.range[1],
-                    };
-                    doc.range = cleaner.cleanRange(doc.range);
-
-                    break;
-                case 'commandline:':
-                    if (
-                        typeof value === 'string' &&
-                        value.toLowerCase() !== 'no' &&
-                        value.toLowerCase() !== 'none' &&
-                        value.toLowerCase() !== 'n/a' &&
-                        value.toLowerCase() !== 'no commandline option'
-                    ) {
-                        doc.cli = cleaner.cleanCli(value, true);
-                    }
-                    break;
-                default:
-                    break;
-            }
-        });
-        /* jshint +W083 */
-    } catch (e) {
-        console.error(e);
-        console.log('Error at : #' + doc.id);
-    }
-    if (doc.type !== undefined) {
-        if (doc.type === 'numeric') {
-            doc.type = 'integer';
-        }
-    }
-    return doc;
+use select::{
+    document::Document,
+    node::Node,
+    predicate::{Class, Name},
 };
 
-function parsePage($, cbSuccess) {
-    var anchors = [];
-    $('h4.anchored_heading,h3.anchored_heading').each(function (i, el) {
-        let doc = createDoc($, el);
-        if (doc.id && typeof doc.id === 'string') {
-            anchors.push(doc);
-        }
-    });
-    cbSuccess(anchors);
-}
-
-
-
-module.exports = {
-    parsePage: parsePage,
-    createDoc: createDoc,
-    run: () => {
-        /*var pages = [
-            {
-                url: 'http://7.2.local/Global%20Transaction%20ID%20-%20MariaDB%20Knowledge%20Base.html',
-                name: 'gtid-system-variables'
-            }
-        ]*/
-        return common.processDataExtraction(pages, 'mariadb-', parsePage);
-    },
+use crate::{
+    cleaner,
+    data::{KbParsedEntry, Page, PageProcess, QueryResponse},
 };
-*/
 
 const KB_URL: &str = "https://mariadb.com/kb/en/library/documentation/";
 const STORAGE_ENGINES: [&str; 7] = [
@@ -324,4 +151,552 @@ pub fn get_pages() -> Vec<PageProcess<'static>> {
     }
 
     pages
+}
+
+fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
+    let mut key_name: String = li_node
+        .find(Name("strong"))
+        .next()
+        .expect("li to have strong")
+        .text();
+    let mut row_value: String = li_node.text();
+    row_value = row_value
+        .split_once(key_name.as_str())
+        .expect("It splits")
+        .1
+        .trim()
+        .to_string();
+
+    key_name = key_name.to_lowercase().replace(":", "");
+
+    match key_name.as_str() {
+        "dynamic" => {
+            entry.dynamic = Some(row_value.to_lowercase() == "yes");
+        }
+        "data type" => {
+            entry.r#type = Some(row_value.to_lowercase().trim().to_string());
+
+            if entry.r#type != Some("".to_string()) {
+                entry.r#type = cleaner::clean_type(entry.r#type.unwrap());
+            }
+            if entry.r#type == Some("".to_string()) {
+                entry.r#type = None;
+            }
+            if entry.r#type == Some("numeric".to_string()) {
+                entry.r#type = Some("integer".to_string());
+            }
+        }
+        "default value" | "default" => {
+            entry.default = Some(cleaner::clean_default(row_value));
+        }
+        "commandline" => {
+            if row_value.to_lowercase() != "no"
+                && row_value.to_lowercase() != "none"
+                && row_value.to_lowercase() != "n/a"
+                && row_value.to_lowercase() != "no commandline option"
+            {
+                entry.cli = cleaner::clean_cli(row_value, true);
+            }
+        }
+
+        "scope" => {
+            let scope = row_value.to_lowercase().trim().to_string();
+            if scope != "" {
+                let values: Vec<String> = scope
+                    .split(",")
+                    .map(|item| item.to_lowercase())
+                    .filter(|item| item.contains("session") || item.contains("global"))
+                    .map(|item| {
+                        if item.contains("session") {
+                            return "session".to_string();
+                        } else if item.contains("global") {
+                            return "global".to_string();
+                        }
+
+                        return "".to_string();
+                    })
+                    .collect();
+                entry.scope = Some(values);
+            }
+            if entry.scope.is_some() {
+                // TODO: cleanup scope
+                //entry.scope = entry.scope.filter(|e| e == "0" || e.is_some());
+            }
+        }
+        "valid values" => {
+            if li_node.find(Name("code")).next().is_some() {
+                let mut values = vec![];
+                for code_node in li_node.find(Name("code")) {
+                    values.push(code_node.text());
+                }
+                entry.valid_values = Some(values);
+            } else {
+                let clean_value = cleaner::clean_text_valid_values(row_value.trim().to_string());
+                if clean_value != "" {
+                    entry.valid_values = Some(
+                        clean_value
+                            .split(',')
+                            .map(|el| el.trim().to_string())
+                            .collect(),
+                    );
+                }
+            }
+        }
+        "range" => {
+            if li_node.find(Name("code")).next().is_some() {
+                let mut values = vec![];
+                for code_node in li_node.find(Name("code")) {
+                    values.push(code_node.text());
+                }
+                if values.len() == 1 {
+                    let first_value = values.first().expect("Should have a first value");
+                    if first_value.contains('-') {
+                        // try x-y
+                        entry.init_range();
+                        match entry.range {
+                            Some(ref mut r) => {
+                                let range = first_value.split_once('-').unwrap();
+
+                                r.try_fill_from(range.0.to_string());
+                                r.try_fill_to(range.1.to_string());
+                            }
+                            None => {}
+                        }
+                    }
+                    if first_value.contains("to") {
+                        // try x to y
+                        entry.init_range();
+                        match entry.range {
+                            Some(ref mut r) => {
+                                let range = first_value.split_once("to").unwrap();
+
+                                r.try_fill_from(range.0.to_string());
+                                r.try_fill_to(range.1.to_string());
+                            }
+                            None => {}
+                        }
+                    }
+                    if first_value.contains("upwards") {
+                        // try x upwards
+                        println!("{}", first_value);
+                        //entry.range[1] = value;
+                    }
+                    // Could be oneday a float
+                    /*entry.range = Some(Range {
+                        from: parseFloat(entry.range[0]),
+                        to: entry.range[1],
+                    });
+                    entry.range = Some(cleaner::clean_range(entry.range));*/
+                }
+
+                if values.len() == 2 {
+                    entry.init_range();
+                    match entry.range {
+                        Some(ref mut r) => {
+                            r.try_fill_from(values.first().unwrap().to_string());
+                            r.try_fill_to(values.last().unwrap().to_string());
+                        }
+                        None => {}
+                    }
+                }
+            }
+        }
+        /*
+
+        case 'description:':
+            doc.type = cleaner.cleanType(value.toLowerCase());
+            break;
+            break;
+            case 'data type:':
+                /*
+                    * Default method, <li> has a <code> child
+                    * Example: <li><strong>Data Type:</strong> <code>numeric</code></li>
+                    */
+                let dataType = valueKey.find('code');
+                if (dataType.length > 0) {
+                    doc.type = cleaner.cleanType(dataType.first().text().toLowerCase().trim());
+                } else {
+                    /*
+                        * Fallback method, <li> has text
+                        * Example: <li><strong>Data Type:</strong> boolean</li>
+                        */
+                    let dataType = value.replace(/undefined/gi, '');
+                    dataType = dataType.toLowerCase().trim();
+                    if (dataType !== '') {
+                        doc.type = cleaner.cleanType(dataType);
+                    } else if (dataType === '') {
+                        console.log('Empty datatype found for : ' + doc.id);
+                    } else {
+                        console.log('No datatype found for : ' + doc.id);
+                    }
+                }
+                break; */
+        _key => {
+            //println!("{} '{}' -> '{}'", li_node.html(), key_name, row_value);
+            //println!("tr: {} -> {}", row_name, row_value);
+            //println!("missing: {}", key);
+        }
+    }
+
+    entry
+}
+
+fn process_ul(mut entry: KbParsedEntry, ul_node: Node) -> KbParsedEntry {
+    for li in ul_node.find(Name("li")) {
+        if li.find(Name("strong")).next().is_some() {
+            entry = process_li(entry, li)
+        }
+    }
+
+    entry
+}
+
+fn process_block(header_node: Node) -> KbParsedEntry {
+    let mut entry = KbParsedEntry {
+        cli: None,
+        default: None,
+        dynamic: None,
+        id: header_node.attr("id").unwrap().to_string(),
+        name: Some(header_node.text().trim().to_string()),
+        scope: None,
+        r#type: None,
+        valid_values: None,
+        range: None,
+    };
+
+    let mut node_count = 30;
+    let mut node_cur: Option<Node> = Some(header_node);
+
+    loop {
+        // Current node is None exit
+        if node_cur.is_none() {
+            break;
+        }
+        // Move cursor to previous and bump count
+        node_cur = node_cur.unwrap().next();
+        node_count = node_count - 1;
+        // If still is None or count too low exit
+        if node_cur.is_none() || node_count < 1 {
+            break;
+        }
+
+        let n = node_cur.unwrap();
+
+        // We hit the next header
+        if n.is(Class("anchored_heading")) {
+            break;
+        }
+
+        if n.is(Name("ul")) && n.find(Name("li")).next().is_some() {
+            entry = process_ul(entry, n);
+        }
+    }
+
+    /*
+    const ulElementList = $(element).nextUntil('.anchored_heading');
+    if (ulElementList.find('li > strong').length === 0) {
+        return { id: null };
+    }*/
+
+    entry
+}
+
+pub fn extract_mariadb_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
+    let document = Document::from(qr.body.as_str());
+
+    document
+        .find(Class("anchored_heading"))
+        .filter(|elem| elem.is(Name("h3")) || elem.is(Name("h4")))
+        .filter(|elem| elem.attr("id").is_some())
+        // Handle an edge case for https://mariadb.com/kb/en/temporal-data-tables/
+        .filter(|elem| elem.text().trim() != "SELECT" && elem.attr("id").unwrap() != "select")
+        .filter(|elem| {
+            elem.text().trim() != "system-variables"
+                && elem.attr("id").unwrap() != "system-variables"
+        })
+        .map(|header_node| process_block(header_node))
+        .collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::data::Range;
+
+    // Note this useful idiom: importing names from outer (for mod tests) scope.
+    use super::*;
+    use pretty_assertions::assert_eq;
+    use std::env;
+    use std::fs;
+
+    fn get_test_data(file_name: &str) -> String {
+        let test_dir = env::current_dir().unwrap();
+        fs::read_to_string(test_dir.to_str().unwrap().to_owned() + "/src/rust/data/" + file_name)
+            .expect("Should have been able to read the test data file")
+    }
+
+    #[test]
+    fn test_case_1() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_1.html"),
+            url: "https://example.com",
+        });
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    cli: Some("--query-cache-size=#".to_string()),
+                    default: Some("1M (>= MariaDB, 10.1.7), 0 (<= MariaDB 10.1.6), (although frequently given a default value in some setups)".to_string()),
+                    dynamic: Some(true),
+                    id: "query_cache_size".to_string(),
+                    name: Some("query_cache_size".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: Some(vec!["0".to_string()]),
+                    range: None,
+                },
+            ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_2() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_2.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                cli: Some("query-cache-strip-comments".to_string()),
+                default: Some("OFF".to_string()),
+                dynamic: Some(true),
+                id: "query_cache_strip_comments".to_string(),
+                name: Some("query_cache_strip_comments".to_string()),
+                scope: Some(vec!["session".to_string(), "global".to_string()]),
+                r#type: Some("boolean".to_string()),
+                valid_values: None,
+                range: None,
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_3() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_3.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                cli: None,
+                default: None,
+                dynamic: None,
+                id: "ssl_accept_renegotiates".to_string(),
+                name: Some("Ssl_accept_renegotiates".to_string()),
+                scope: Some(vec!["global".to_string()]),
+                r#type: Some("integer".to_string()),
+                valid_values: None,
+                range: None,
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_4() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_4.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    cli: Some("--server-audit-events=value".to_string()),
+                    default: Some("Empty string".to_string()),
+                    dynamic: Some(true),
+                    id: "server_audit_events".to_string(),
+                    name: Some("server_audit_events".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("string".to_string()),
+                    valid_values: Some(vec![
+                        "CONNECT".to_string(),
+                        "QUERY".to_string(),
+                        "TABLE".to_string(),
+                        "CONNECT".to_string(),
+                        "QUERY".to_string(),
+                        "TABLE".to_string(),
+                        "QUERY_DDL".to_string(),
+                        "QUERY_DML".to_string(),
+                        "CONNECT".to_string(),
+                        "QUERY".to_string(),
+                        "TABLE".to_string(),
+                        "QUERY_DDL".to_string(),
+                        "QUERY_DML".to_string(),
+                        "QUERY_DCL".to_string(),
+                        "CONNECT".to_string(),
+                        "QUERY".to_string(),
+                        "TABLE".to_string(),
+                        "QUERY_DDL".to_string(),
+                        "QUERY_DML".to_string(),
+                        "QUERY_DCL".to_string(),
+                        "QUERY_DML_NO_SELECT".to_string(),
+                    ]),
+                    range: None,
+                },
+                KbParsedEntry {
+                    cli: Some("--server-audit-excl-users=value".to_string()),
+                    default: Some("Empty string".to_string()),
+                    dynamic: Some(true),
+                    id: "server_audit_excl_users".to_string(),
+                    name: Some("server_audit_excl_users".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("string".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+            ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_5() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_5.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    dynamic: Some(false),
+                    id: "tokudb_version".to_string(),
+                    name: Some("tokudb_version".to_string()),
+                    r#type: Some("string".to_string()),
+                    cli: None,
+                    default: None,
+                    range: None,
+                    scope: None,
+                    valid_values: None,
+                },
+                KbParsedEntry {
+                    default: Some("1000".to_string()),
+                    dynamic: Some(true),
+                    id: "tokudb_write_status_frequency".to_string(),
+                    name: Some("tokudb_write_status_frequency".to_string()),
+                    range: Some(Range {
+                        from: Some(0),
+                        to: Some(4294967295),
+                        from_f: None,
+                        to_f: None,
+                    }),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    cli: None,
+                    valid_values: None,
+                },
+            ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_6() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_6.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    cli: Some("--rpl-semi-sync-slave-trace_level[=#]".to_string()),
+                    default: Some("32".to_string()),
+                    dynamic: Some(true),
+                    id: "rpl_semi_sync_slave_trace_level".to_string(),
+                    name: Some("rpl_semi_sync_slave_trace_level".to_string()),
+                    range: Some(Range {
+                        from: Some(0),
+                        to: Some(18446744073709551615),
+                        from_f: None,
+                        to_f: None,
+                    }),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                },
+                KbParsedEntry {
+                    cli: Some("--rpl-semi-sync-master=value".to_string()),
+                    default: Some("ON".to_string()),
+                    id: "rpl_semi_sync_master".to_string(),
+                    name: Some("rpl_semi_sync_master".to_string()),
+                    r#type: Some("enumeration".to_string()),
+                    valid_values: Some(vec![
+                        "OFF".to_string(),
+                        "ON".to_string(),
+                        "FORCE".to_string(),
+                        "FORCE_PLUS_PERMANENT".to_string()
+                    ]),
+                    range: None,
+                    scope: None,
+                    dynamic: None,
+                },
+            ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_7() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_7.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                dynamic: None,
+                cli: Some("--wsrep-provider=value".to_string()),
+                default: Some("None".to_string()),
+                id: "wsrep_provider".to_string(),
+                name: Some("wsrep_provider".to_string()),
+                scope: Some(vec!["global".to_string()]),
+                r#type: Some("string".to_string()),
+                valid_values: None,
+                range: None,
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_8() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_8.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                cli: Some("--tls-version=value".to_string()),
+                default: Some("TLSv1.1,TLSv1.2,TLSv1.3".to_string()),
+                dynamic: Some(false),
+                id: "tls_version".to_string(),
+                name: Some("tls_version".to_string()),
+                scope: Some(vec!["global".to_string()]),
+                r#type: Some("enumeration".to_string()),
+                valid_values: Some(vec![
+                    "TLSv1.0".to_string(),
+                    "TLSv1.1".to_string(),
+                    "TLSv1.2".to_string(),
+                    "TLSv1.3".to_string()
+                ]),
+                range: None,
+            },],
+            entries
+        );
+    }
 }

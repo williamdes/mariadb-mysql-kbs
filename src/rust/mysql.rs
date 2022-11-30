@@ -1,5 +1,5 @@
 use crate::cleaner;
-use crate::data::{KbParsedEntry, PageProcess, QueryResponse, Range};
+use crate::data::{KbParsedEntry, PageProcess, QueryResponse};
 use select::document::Document;
 use select::node::Node;
 use select::predicate::{Class, Name};
@@ -145,58 +145,31 @@ fn process_row_to_entry(
             }
         }
         "minimum value" => {
-            if entry.range.is_none() {
-                entry.range = Some(Range {
-                    from: None,
-                    to: None,
-                    from_f: None,
-                    to_f: None,
-                });
-            }
+            entry.init_range();
             match entry.range {
                 Some(ref mut r) => {
                     let val = match row_node.find(Name("code")).next() {
                         Some(code_node) => code_node.text(),
                         None => row_value.trim().to_string(),
                     };
-                    match val.parse::<i128>() {
-                        Ok(v) => r.from = Some(v),
-                        _ => match val.parse::<f64>() {
-                            Ok(v) => r.from_f = Some(v),
-                            _ => {}
-                        },
-                    }
+                    r.try_fill_from(val);
                 }
                 None => {}
             }
         }
         "maximum value" => {
-            if entry.range.is_none() {
-                entry.range = Some(Range {
-                    from: None,
-                    to: None,
-                    from_f: None,
-                    to_f: None,
-                });
-            }
+            entry.init_range();
             match entry.range {
                 Some(ref mut r) => {
                     let val = match row_node.find(Name("code")).next() {
                         Some(code_node) => code_node.text(),
                         None => row_value.trim().to_string(),
                     };
-                    match val.parse::<i128>() {
-                        Ok(v) => r.to = Some(v),
-                        _ => match val.parse::<f64>() {
-                            Ok(v) => r.to_f = Some(v),
-                            _ => {}
-                        },
-                    }
+                    r.try_fill_to(val);
                 }
                 None => {}
             }
         }
-
         "scope" => {
             let scope = row_value.to_lowercase().trim().to_string();
             if scope == "both" {

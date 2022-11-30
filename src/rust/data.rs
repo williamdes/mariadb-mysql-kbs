@@ -29,6 +29,28 @@ pub struct Range {
     pub to_f: Option<f64>,
 }
 
+impl Range {
+    pub fn try_fill_from(&mut self, val: String) {
+        match val.parse::<i128>() {
+            Ok(v) => self.from = Some(v),
+            _ => match val.parse::<f64>() {
+                Ok(v) => self.from_f = Some(v),
+                _ => {}
+            },
+        }
+    }
+
+    pub fn try_fill_to(&mut self, val: String) {
+        match val.parse::<i128>() {
+            Ok(v) => self.to = Some(v),
+            _ => match val.parse::<f64>() {
+                Ok(v) => self.to_f = Some(v),
+                _ => {}
+            },
+        }
+    }
+}
+
 #[derive(Debug, PartialEq, Serialize)]
 pub struct KbParsedEntry {
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -48,6 +70,19 @@ pub struct KbParsedEntry {
     pub r#type: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none", rename = "validValues")]
     pub valid_values: Option<Vec<String>>,
+}
+
+impl KbParsedEntry {
+    pub fn init_range(&mut self) {
+        if self.range.is_none() {
+            self.range = Some(Range {
+                from: None,
+                to: None,
+                from_f: None,
+                to_f: None,
+            });
+        }
+    }
 }
 
 pub fn skip_serialize_range(data: &std::option::Option<Range>) -> bool {

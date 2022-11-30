@@ -51,7 +51,17 @@ fn extract_mysql() {
 }
 
 fn extract_mariadb() {
-    mariadb::get_pages();
+    for page in mariadb::get_pages() {
+        println!("URL : {}", &page.url);
+        let client = Client::new();
+        let response = get_html_from_url(client, &page.url);
+        let data = DataFile {
+            data: mariadb::extract_mariadb_from_text(response),
+            url: &page.url,
+            name: &page.name,
+        };
+        write_page(page.data_type, "mariadb-", data);
+    }
 }
 
 fn write_json(filename: String, data: DataFile) {

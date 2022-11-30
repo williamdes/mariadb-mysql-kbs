@@ -313,7 +313,6 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
 
                     // "to" values are equal
                     if values.last() == values.get(1) {
-                        println!("range-case-2: {}", li_node.html());
                         entry.init_range();
                         match entry.range {
                             Some(ref mut r) => {
@@ -329,6 +328,10 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
         }
         "description" => {
             entry.has_description = true;
+
+            if entry.r#type.is_none() {
+                entry.r#type = cleaner::clean_type(row_value.to_lowercase());
+            }
         }
         /*
 
@@ -837,6 +840,30 @@ mod tests {
                     to: Some(31536000),
                     to_f: None,
                 }),
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_12() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_12.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                has_description: true,
+                cli: None,
+                default: None,
+                dynamic: None,
+                id: "wsrep_cert_index_size".to_string(),
+                name: Some("wsrep_cert_index_size".to_string()),
+                scope: None,
+                r#type: Some("integer".to_string()),
+                valid_values: None,
+                range: None,
             },],
             entries
         );

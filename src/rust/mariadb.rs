@@ -287,9 +287,7 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                             None => {}
                         }
                     }
-                }
-
-                if values.len() == 2 {
+                } else if values.len() == 2 {
                     entry.init_range();
                     match entry.range {
                         Some(ref mut r) => {
@@ -298,6 +296,34 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                         }
                         None => {}
                     }
+                } else if values.len() == 4 {
+                    // from <code>0</code> to <code>16</code> (version x.y.z)
+                    // from <code>0</code> to <code>10</code> (version a.b.c)
+
+                    // "from" values are equal
+                    if values.first() == values.get(2) {
+                        entry.init_range();
+                        match entry.range {
+                            Some(ref mut r) => {
+                                r.try_fill_from(values.first().unwrap().to_string());
+                            }
+                            None => {}
+                        }
+                    }
+
+                    // "to" values are equal
+                    if values.last() == values.get(1) {
+                        println!("range-case-2: {}", li_node.html());
+                        entry.init_range();
+                        match entry.range {
+                            Some(ref mut r) => {
+                                r.try_fill_to(values.last().unwrap().to_string());
+                            }
+                            None => {}
+                        }
+                    }
+                } else {
+                    println!("range: {}", values.len());
                 }
             }
         }
@@ -746,6 +772,69 @@ mod tests {
                     from: Some(4194304),
                     from_f: None,
                     to: None,
+                    to_f: None,
+                }),
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_10() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_10.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                has_description: true,
+                cli: Some("--wsrep-sync-wait=#".to_string()),
+                default: Some("0".to_string()),
+                dynamic: Some(true),
+                id: "wsrep_sync_wait".to_string(),
+                name: Some("wsrep_sync_wait".to_string()),
+                scope: Some(vec!["global".to_string(), "session".to_string()]),
+                r#type: Some("integer".to_string()),
+                valid_values: None,
+                range: Some(Range {
+                    to_upwards: None,
+                    from: Some(0),
+                    from_f: None,
+                    to: None,
+                    to_f: None,
+                }),
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_11() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_11.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                has_description: true,
+                cli: Some("--lock-wait-timeout=#".to_string()),
+                default: Some(
+                    "86400 (1 day) >= MariaDB 10.2.4, , 31536000 (1 year) <= MariaDB 10.2.3"
+                        .to_string()
+                ),
+                dynamic: Some(true),
+                id: "lock_wait_timeout".to_string(),
+                name: Some("lock_wait_timeout".to_string()),
+                scope: Some(vec!["global".to_string(), "session".to_string()]),
+                r#type: Some("integer".to_string()),
+                valid_values: None,
+                range: Some(Range {
+                    to_upwards: None,
+                    from: None,
+                    from_f: None,
+                    to: Some(31536000),
                     to_f: None,
                 }),
             },],

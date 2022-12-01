@@ -173,7 +173,7 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
         "dynamic" => {
             entry.dynamic = Some(row_value.to_lowercase() == "yes");
         }
-        "data type" => {
+        "data type" | "type" => {
             entry.r#type = Some(row_value.to_lowercase().trim().to_string());
 
             if entry.r#type != Some("".to_string()) {
@@ -862,6 +862,30 @@ mod tests {
                 name: Some("wsrep_cert_index_size".to_string()),
                 scope: None,
                 r#type: Some("integer".to_string()),
+                valid_values: None,
+                range: None,
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_13() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_13.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                has_description: true,
+                cli: Some("--system-versioning-insert-history[={0|1}]".to_string()),
+                default: Some("OFF".to_string()),
+                dynamic: Some(true),
+                id: "system_versioning_insert_history".to_string(),
+                name: Some("system_versioning_insert_history".to_string()),
+                scope: Some(vec!["global".to_string(), "session".to_string()]),
+                r#type: Some("boolean".to_string()),
                 valid_values: None,
                 range: None,
             },],

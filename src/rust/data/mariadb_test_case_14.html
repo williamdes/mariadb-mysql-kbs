@@ -1,0 +1,35 @@
+<h4 class="anchored_heading" id="gtid_pos_auto_engines"><code>gtid_pos_auto_engines</code></h4>
+<p>This variable is used to enable multiple versions of the <a
+        href="/kb/en/mysqlgtid_slave_pos-table/">mysql.gtid_slave_pos</a> table, one for each transactional storage
+    engine in use. This can improve replication performance if a server is using multiple different storage engines in
+    different transactions.</p>
+<p>The value is a list of engine names, separated by commas (','). Replication
+    of transactions using these engines will automatically create new versions
+    of the mysql.gtid_slave_pos table in the same engine and use that for future
+    transactions (table creation takes place in a background thread). This avoids introducing a cross-engine transaction
+    to update the GTID position. Only transactional storage engines are supported for
+    gtid_pos_auto_engines (this currently means <a href="/kb/en/innodb/">InnoDB</a>, <a
+        href="/kb/en/tokudb/">TokuDB</a>, or <a href="/kb/en/myrocks/">MyRocks</a>).</p>
+<p>The variable can be changed dynamically, but replica SQL threads should be stopped when changing it, and it will take
+    effect when the replicas are running again.</p>
+<p>When setting the variable on the command line or in a configuration file, it is
+    possible to specify engines that are not enabled in the server. The server will then still start if, for example,
+    that engine is no longer used. Attempting to set a non-enabled engine dynamically in a running server (with SET
+    GLOBAL gtid_pos_auto_engines) will still result in an error.</p>
+<p>Removing a storage engine from the variable will have no effect once the new tables have been created - as long as
+    these tables are detected, they will be used.</p>
+<ul start="1">
+    <li><strong>Commandline:</strong> <code class="fixed"
+            style="white-space:pre-wrap">--gtid-pos-auto-engines=value</code>
+    </li>
+    <li><strong>Scope:</strong> Global
+    </li>
+    <li><strong>Dynamic:</strong> Yes
+    </li>
+    <li><strong>Data Type:</strong> <code>string</code> (comma-separated list of engine names)
+    </li>
+    <li><strong>Default:</strong> empty
+    </li>
+    <li><strong>Introduced:</strong> <a href="/kb/en/mariadb-1031-release-notes/">MariaDB 10.3.1</a>
+    </li>
+</ul>

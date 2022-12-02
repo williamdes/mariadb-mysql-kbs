@@ -174,7 +174,20 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
             entry.dynamic = Some(row_value.to_lowercase() == "yes");
         }
         "data type" | "type" => {
-            entry.r#type = Some(row_value.to_lowercase().trim().to_string());
+            if li_node.find(Name("code")).count() == 1 {
+                entry.r#type = Some(
+                    li_node
+                        .find(Name("code"))
+                        .next()
+                        .unwrap()
+                        .text()
+                        .to_lowercase()
+                        .trim()
+                        .to_string(),
+                );
+            } else {
+                entry.r#type = Some(row_value.to_lowercase().trim().to_string());
+            }
 
             if entry.r#type != Some("".to_string()) {
                 entry.r#type = cleaner::clean_type(entry.r#type.unwrap());
@@ -333,36 +346,6 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                 entry.r#type = cleaner::clean_type(row_value.to_lowercase());
             }
         }
-        /*
-
-        case 'description:':
-            doc.type = cleaner.cleanType(value.toLowerCase());
-            break;
-            break;
-            case 'data type:':
-                /*
-                    * Default method, <li> has a <code> child
-                    * Example: <li><strong>Data Type:</strong> <code>numeric</code></li>
-                    */
-                let dataType = valueKey.find('code');
-                if (dataType.length > 0) {
-                    doc.type = cleaner.cleanType(dataType.first().text().toLowerCase().trim());
-                } else {
-                    /*
-                        * Fallback method, <li> has text
-                        * Example: <li><strong>Data Type:</strong> boolean</li>
-                        */
-                    let dataType = value.replace(/undefined/gi, '');
-                    dataType = dataType.toLowerCase().trim();
-                    if (dataType !== '') {
-                        doc.type = cleaner.cleanType(dataType);
-                    } else if (dataType === '') {
-                        console.log('Empty datatype found for : ' + doc.id);
-                    } else {
-                        console.log('No datatype found for : ' + doc.id);
-                    }
-                }
-                break; */
         _key => {
             //println!("{} '{}' -> '{}'", li_node.html(), key_name, row_value);
             //println!("tr: {} -> {}", row_name, row_value);
@@ -886,6 +869,30 @@ mod tests {
                 name: Some("system_versioning_insert_history".to_string()),
                 scope: Some(vec!["global".to_string(), "session".to_string()]),
                 r#type: Some("boolean".to_string()),
+                valid_values: None,
+                range: None,
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_14() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_14.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                has_description: false,
+                cli: Some("--gtid-pos-auto-engines=value".to_string()),
+                default: Some("empty".to_string()),
+                dynamic: Some(true),
+                id: "gtid_pos_auto_engines".to_string(),
+                name: Some("gtid_pos_auto_engines".to_string()),
+                scope: Some(vec!["global".to_string()]),
+                r#type: Some("string".to_string()),
                 valid_values: None,
                 range: None,
             },],

@@ -204,7 +204,9 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
             }
         }
         "default value" | "default" => {
-            if li_node.find(Name("code")).count() == 1 {
+            if li_node.find(Name("code")).count() == 1
+                && cleaner::is_valid_default(row_value.as_ref())
+            {
                 entry.default = Some(cleaner::clean_default(
                     li_node
                         .find(Name("code"))

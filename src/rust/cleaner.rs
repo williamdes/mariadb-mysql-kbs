@@ -177,6 +177,15 @@ pub fn clean_range_from_to(default_text_value: String) -> String {
 }
 
 /**
+ * Determine if the default value should be extracted from code
+ */
+pub fn is_valid_default(text_value: &str) -> bool {
+    let regex_with_comment = Regex::new(r".^* \([a-z0-9A-Z -]+\)$").expect("regex should compile");
+    let regex_space = Regex::new(r": [0-9]+$").expect("regex should compile");
+    return regex_with_comment.is_match(&text_value) || regex_space.is_match(&text_value);
+}
+
+/**
  * Clean text of a valid values list
  */
 pub fn clean_text_valid_values(valid_values_text: String) -> String {
@@ -506,5 +515,53 @@ mod tests {
     fn clean_range_from_to_trim_dataset_4() {
         let cleaned_value = clean_range_from_to("16 (MAX_ACTIVATION_THRESHOLD)".to_string());
         assert_eq!(cleaned_value, "16");
+    }
+
+    #[test]
+    fn is_valid_default_dataset_1() {
+        let is_valid = is_valid_default("512 (log file block size)");
+        assert_eq!(is_valid, true);
+    }
+
+    #[test]
+    fn is_valid_default_dataset_2() {
+        let is_valid = is_valid_default(": 100");
+        assert_eq!(is_valid, true);
+    }
+
+    #[test]
+    fn is_valid_default_dataset_3() {
+        let is_valid = is_valid_default("Depends on the system. Often /usr/share/cracklib/pw_dict");
+        assert_eq!(is_valid, false);
+    }
+
+    #[test]
+    fn is_valid_default_dataset_4() {
+        let is_valid = is_valid_default("Empty, previously 0.0.0.0");
+        assert_eq!(is_valid, false);
+    }
+
+    #[test]
+    fn is_valid_default_dataset_5() {
+        let is_valid = is_valid_default("NULL (>= MariaDB 10.2.2), . (<= MariaDB 10.2.1)");
+        assert_eq!(is_valid, false);
+    }
+
+    #[test]
+    fn is_valid_default_dataset_6() {
+        let is_valid = is_valid_default("134217728 (128M)");
+        assert_eq!(is_valid, true);
+    }
+
+    #[test]
+    fn is_valid_default_dataset_7() {
+        let is_valid = is_valid_default("The lower of 900 and (50 + max_connections/5)");
+        assert_eq!(is_valid, false);
+    }
+
+    #[test]
+    fn is_valid_default_dataset_8() {
+        let is_valid = is_valid_default("0 (non-segmented)");
+        assert_eq!(is_valid, true);
     }
 }

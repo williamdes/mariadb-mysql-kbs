@@ -1,11 +1,17 @@
 name: Lint and analyse files
 
 permissions:
-  contents: read
+    contents: read
 
 on:
-  pull_request:
-  push:
+    pull_request:
+        paths:
+            - "**/*.js"
+            - "**/*.php"
+    push:
+        paths:
+            - "**/*.js"
+            - "**/*.php"
 
 jobs:
     lint-node:

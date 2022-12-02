@@ -2,9 +2,11 @@ name: Build and test rust code
 
 on:
     pull_request:
+        paths:
+            - "src/rust/**"
     push:
         paths:
-        - 'src/rust/**'
+            - "src/rust/**"
 
 permissions:
     contents: read

@@ -19,8 +19,10 @@ dist/merged-ultraslim.* linguist-vendored
 /.jshintignore export-ignore
 /.editorconfig export-ignore
 /SECURITY.md export-ignore
-/src/*.js export-ignore
+/src/rust/ export-ignore
 /src/merge.php export-ignore
 /data export-ignore
 /yarn.lock export-ignore
 /package.json export-ignore
+/Cargo.toml export-ignore
+/Cargo.lock export-ignore

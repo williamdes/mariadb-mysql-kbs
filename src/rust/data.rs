@@ -78,6 +78,8 @@ pub struct KbParsedEntry {
     pub valid_values: Option<Vec<String>>,
     #[serde(skip_serializing)]
     pub has_description: bool,
+    #[serde(skip_serializing)]
+    pub is_removed: bool,
 }
 
 impl KbParsedEntry {

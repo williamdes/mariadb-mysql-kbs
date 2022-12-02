@@ -362,6 +362,9 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                 entry.r#type = cleaner::clean_type(row_value.to_lowercase());
             }
         }
+        "removed" => {
+            entry.is_removed = true;
+        }
         _key => {
             //println!("{} '{}' -> '{}'", li_node.html(), key_name, row_value);
             //println!("tr: {} -> {}", row_name, row_value);
@@ -384,6 +387,7 @@ fn process_ul(mut entry: KbParsedEntry, ul_node: Node) -> KbParsedEntry {
 
 fn process_block(header_node: Node) -> KbParsedEntry {
     let mut entry = KbParsedEntry {
+        is_removed: false,
         has_description: false,
         cli: None,
         default: None,
@@ -452,6 +456,7 @@ pub fn extract_mariadb_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
                 || entry.default.is_some()
                 || entry.dynamic.is_some()
                 || entry.has_description
+                || entry.is_removed
         })
         .collect()
 }
@@ -482,6 +487,7 @@ mod tests {
             vec![
                 KbParsedEntry {
                     has_description: true,
+                    is_removed: false,
                     cli: Some("--query-cache-size=#".to_string()),
                     default: Some("1M (>= MariaDB, 10.1.7), 0 (<= MariaDB 10.1.6), (although frequently given a default value in some setups)".to_string()),
                     dynamic: Some(true),
@@ -507,6 +513,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: Some("query-cache-strip-comments".to_string()),
                 default: Some("OFF".to_string()),
                 dynamic: Some(true),
@@ -531,6 +538,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: None,
                 default: None,
                 dynamic: None,
@@ -556,6 +564,7 @@ mod tests {
             vec![
                 KbParsedEntry {
                     has_description: true,
+                    is_removed: false,
                     cli: Some("--server-audit-events=value".to_string()),
                     default: Some("Empty string".to_string()),
                     dynamic: Some(true),
@@ -590,6 +599,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: true,
+                    is_removed: false,
                     cli: Some("--server-audit-excl-users=value".to_string()),
                     default: Some("Empty string".to_string()),
                     dynamic: Some(true),
@@ -616,6 +626,7 @@ mod tests {
             vec![
                 KbParsedEntry {
                     has_description: true,
+                    is_removed: false,
                     dynamic: Some(false),
                     id: "tokudb_version".to_string(),
                     name: Some("tokudb_version".to_string()),
@@ -628,6 +639,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: true,
+                    is_removed: false,
                     default: Some("1000".to_string()),
                     dynamic: Some(true),
                     id: "tokudb_write_status_frequency".to_string(),
@@ -660,6 +672,7 @@ mod tests {
             vec![
                 KbParsedEntry {
                     has_description: true,
+                    is_removed: false,
                     cli: Some("--rpl-semi-sync-slave-trace_level[=#]".to_string()),
                     default: Some("32".to_string()),
                     dynamic: Some(true),
@@ -678,6 +691,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: true,
+                    is_removed: true,
                     cli: Some("--rpl-semi-sync-master=value".to_string()),
                     default: Some("ON".to_string()),
                     id: "rpl_semi_sync_master".to_string(),
@@ -708,6 +722,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 dynamic: None,
                 cli: Some("--wsrep-provider=value".to_string()),
                 default: Some("None".to_string()),
@@ -732,6 +747,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: Some("--tls-version=value".to_string()),
                 default: Some("TLSv1.1,TLSv1.2,TLSv1.3".to_string()),
                 dynamic: Some(false),
@@ -761,6 +777,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: Some("--connect-work-size=#".to_string()),
                 default: Some("67108864".to_string()),
                 dynamic: Some(true),
@@ -791,6 +808,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: Some("--wsrep-sync-wait=#".to_string()),
                 default: Some("0".to_string()),
                 dynamic: Some(true),
@@ -821,6 +839,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: Some("--lock-wait-timeout=#".to_string()),
                 default: Some(
                     "86400 (1 day) >= MariaDB 10.2.4, , 31536000 (1 year) <= MariaDB 10.2.3"
@@ -854,6 +873,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: None,
                 default: None,
                 dynamic: None,
@@ -878,6 +898,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: Some("--system-versioning-insert-history[={0|1}]".to_string()),
                 default: Some("OFF".to_string()),
                 dynamic: Some(true),
@@ -902,6 +923,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: false,
+                is_removed: false,
                 cli: Some("--gtid-pos-auto-engines=value".to_string()),
                 default: Some("empty".to_string()),
                 dynamic: Some(true),
@@ -926,6 +948,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: Some("--handlersocket-wrlock-timeout=\"value\"".to_string()),
                 default: None,
                 dynamic: Some(false),
@@ -956,6 +979,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: Some("--innodb-fast-shutdown[=#]".to_string()),
                 default: Some("1".to_string()),
                 dynamic: Some(true),
@@ -986,6 +1010,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: true,
+                is_removed: false,
                 cli: Some("--innodb-fill-factor=#".to_string()),
                 default: Some("100".to_string()),
                 dynamic: Some(true),

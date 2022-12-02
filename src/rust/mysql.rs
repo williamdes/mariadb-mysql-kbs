@@ -241,6 +241,7 @@ fn process_row_to_entry(
 fn process_table(table_node: Node) -> KbParsedEntry {
     let mut entry = KbParsedEntry {
         has_description: false,
+        is_removed: false,
         cli: None,
         default: None,
         dynamic: None,
@@ -458,6 +459,7 @@ mod tests {
             vec![
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: Some("--ndbcluster".to_string()),
                     default: Some("FALSE (Version: NDB 7.5-7.6)".to_string()),
                     dynamic: Some(false),
@@ -470,6 +472,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: Some("--ndb-allow-copying-alter-table=[ON|OFF]".to_string()),
                     default: Some("ON (Version: NDB 7.5-7.6)".to_string()),
                     dynamic: Some(true),
@@ -495,6 +498,7 @@ mod tests {
             vec![
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: Some("--binlog-gtid-simple-recovery[={OFF|ON}]".to_string()),
                     default: Some("ON".to_string()),
                     dynamic: Some(false),
@@ -507,6 +511,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: Some("--enforce-gtid-consistency[=value]".to_string()),
                     default: Some("OFF".to_string()),
                     dynamic: Some(true),
@@ -523,6 +528,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     dynamic: Some(false),
                     id: "sysvar_gtid_executed".to_string(),
                     name: Some("gtid_executed".to_string()),
@@ -535,6 +541,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: Some("--gtid-executed-compression-period=#".to_string()),
                     default: Some("1000".to_string()),
                     dynamic: Some(true),
@@ -553,6 +560,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: Some("--gtid-mode=MODE".to_string()),
                     default: Some("OFF".to_string()),
                     dynamic: Some(true),
@@ -570,6 +578,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     default: Some("AUTOMATIC".to_string()),
                     dynamic: Some(true),
                     id: "sysvar_gtid_next".to_string(),
@@ -586,6 +595,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     dynamic: Some(false),
                     id: "sysvar_gtid_owned".to_string(),
                     name: Some("gtid_owned".to_string()),
@@ -598,6 +608,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     dynamic: Some(true),
                     id: "sysvar_gtid_purged".to_string(),
                     name: Some("gtid_purged".to_string()),
@@ -622,6 +633,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: false,
+                is_removed: false,
                 cli: None,
                 default: Some("TRUE (Version: 5.1.51-ndb-7.2.0)".to_string()),
                 dynamic: Some(true),
@@ -646,6 +658,7 @@ mod tests {
             vec![
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndbcluster".to_string(),
                     name: Some("ndbcluster".to_string()),
                     cli: Some("--ndbcluster".to_string()),
@@ -658,6 +671,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-allow-copying-alter-table".to_string(),
                     name: Some("ndb-allow-copying-alter-table".to_string()),
                     cli: Some("--ndb-allow-copying-alter-table=[ON|OFF]".to_string()),
@@ -670,6 +684,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-batch-size".to_string(),
                     name: Some("ndb-batch-size".to_string()),
                     cli: Some("--ndb-batch-size=#".to_string()),
@@ -682,6 +697,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-cluster-connection-pool".to_string(),
                     name: Some("ndb-cluster-connection-pool".to_string()),
                     cli: Some("--ndb-cluster-connection-pool=#".to_string()),
@@ -694,6 +710,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-cluster-connection-pool-nodeids".to_string(),
                     name: Some("ndb-cluster-connection-pool-nodeids".to_string()),
                     cli: Some("--ndb-cluster-connection-pool-nodeids=list".to_string()),
@@ -706,6 +723,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-blob-read-batch-bytes".to_string(),
                     name: Some("ndb-blob-read-batch-bytes".to_string()),
                     cli: Some("--ndb-blob-read-batch-bytes=bytes".to_string()),
@@ -718,6 +736,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-blob-write-batch-bytes".to_string(),
                     name: Some("ndb-blob-write-batch-bytes".to_string()),
                     cli: Some("--ndb-blob-write-batch-bytes=bytes".to_string()),
@@ -730,6 +749,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-connectstring".to_string(),
                     name: Some("ndb-connectstring".to_string()),
                     cli: Some("--ndb-connectstring=connection_string".to_string()),
@@ -742,6 +762,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-default-column-format".to_string(),
                     name: Some("ndb-default-column-format".to_string()),
                     cli: Some("--ndb-default-column-format=[FIXED|DYNAMIC]".to_string()),
@@ -754,6 +775,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-deferred-constraints".to_string(),
                     name: Some("ndb-deferred-constraints".to_string()),
                     cli: Some("--ndb-deferred-constraints=[0|1]".to_string()),
@@ -766,6 +788,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-distribution".to_string(),
                     name: Some("ndb-distribution".to_string()),
                     cli: Some("--ndb-distribution=[KEYHASH|LINHASH]".to_string()),
@@ -778,6 +801,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-log-apply-status".to_string(),
                     name: Some("ndb-log-apply-status".to_string()),
                     cli: Some("--ndb-log-apply-status".to_string()),
@@ -790,6 +814,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-log-empty-epochs".to_string(),
                     name: Some("ndb-log-empty-epochs".to_string()),
                     cli: Some("--ndb-log-empty-epochs=[ON|OFF]".to_string()),
@@ -802,6 +827,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-log-empty-update".to_string(),
                     name: Some("ndb-log-empty-update".to_string()),
                     cli: Some("--ndb-log-empty-update=[ON|OFF]".to_string()),
@@ -814,6 +840,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-log-exclusive-reads".to_string(),
                     name: Some("ndb-log-exclusive-reads".to_string()),
                     cli: Some("--ndb-log-exclusive-reads=[0|1]".to_string()),
@@ -826,6 +853,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-log-orig".to_string(),
                     name: Some("ndb-log-orig".to_string()),
                     cli: Some("--ndb-log-orig".to_string()),
@@ -838,6 +866,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-log-transaction-id".to_string(),
                     name: Some("ndb-log-transaction-id".to_string()),
                     cli: Some("--ndb-log-transaction-id".to_string()),
@@ -850,6 +879,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-log-update-minimal".to_string(),
                     name: Some("ndb-log-update-minimal".to_string()),
                     cli: Some("--ndb-log-update-minimal".to_string()),
@@ -862,6 +892,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-mgmd-host".to_string(),
                     name: Some("ndb-mgmd-host".to_string()),
                     cli: Some("--ndb-mgmd-host=host[:port]".to_string()),
@@ -874,6 +905,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-nodeid".to_string(),
                     name: Some("ndb-nodeid".to_string()),
                     cli: Some("--ndb-nodeid=#".to_string()),
@@ -886,6 +918,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-optimization-delay".to_string(),
                     name: Some("ndb-optimization-delay".to_string()),
                     cli: Some("--ndb-optimization-delay=milliseconds".to_string()),
@@ -898,6 +931,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-recv-thread-activation-threshold".to_string(),
                     name: Some("ndb-recv-thread-activation-threshold".to_string()),
                     cli: Some("--ndb-recv-thread-activation-threshold=threshold".to_string()),
@@ -911,6 +945,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-recv-thread-cpu-mask".to_string(),
                     name: Some("ndb-recv-thread-cpu-mask".to_string()),
                     cli: Some("--ndb-recv-thread-cpu-mask=bitmask".to_string()),
@@ -923,6 +958,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-wait-connected".to_string(),
                     name: Some("ndb-wait-connected".to_string()),
                     cli: Some("--ndb-wait-connected=seconds".to_string()),
@@ -935,6 +971,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_ndb-wait-setup".to_string(),
                     name: Some("ndb-wait-setup".to_string()),
                     cli: Some("--ndb-wait-setup=seconds".to_string()),
@@ -947,6 +984,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     id: "option_mysqld_skip-ndbcluster".to_string(),
                     name: Some("skip-ndbcluster".to_string()),
                     cli: Some("--skip-ndbcluster".to_string()),
@@ -959,6 +997,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: Some("--ndb-transid-mysql-connection-map[=state]".to_string()),
                     default: Some("ON".to_string()),
                     dynamic: None,
@@ -983,6 +1022,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: false,
+                is_removed: false,
                 id: "option_mysqld_mysqlx".to_string(),
                 cli: Some("--mysqlx[=value]".to_string()),
                 r#type: Some("enumeration".to_string()),
@@ -1012,6 +1052,7 @@ mod tests {
             vec![
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: Some("--auto-increment-increment=#".to_string()),
                     default: Some("1".to_string()),
                     dynamic: Some(true),
@@ -1030,6 +1071,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: Some("--auto-increment-offset=#".to_string()),
                     default: Some("1".to_string()),
                     dynamic: Some(true),
@@ -1061,6 +1103,7 @@ mod tests {
             vec![
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: Some("--server-id=#".to_string()),
                     default: Some("1".to_string()),
                     dynamic: Some(true),
@@ -1079,6 +1122,7 @@ mod tests {
                 },
                 KbParsedEntry {
                     has_description: false,
+                    is_removed: false,
                     cli: None,
                     default: None,
                     dynamic: Some(false),
@@ -1103,6 +1147,7 @@ mod tests {
         assert_eq!(
             vec![KbParsedEntry {
                 has_description: false,
+                is_removed: false,
                 cli: Some("--basedir=dir_name".to_string()),
                 default: Some("parent of mysqld installation directory".to_string()),
                 dynamic: Some(false),

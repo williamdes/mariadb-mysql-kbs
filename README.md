@@ -26,7 +26,7 @@ Merged data : `/dist/`
 ### Update the data
 
 ```bash
-yarn run build
+cargo run --release extract
 ```
 
 ```bash

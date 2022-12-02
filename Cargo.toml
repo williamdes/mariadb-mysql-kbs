@@ -1,6 +1,6 @@
 [package]
 name = "mariadb-mysql-kbs"
-version = "1.3.0"
+version = "1.3.0-rc1"
 authors = ["William Desportes <williamdes@wdes.fr>"]
 edition = "2021"
 rust-version = "1.64.0"  # MSRV
@@ -13,11 +13,12 @@ keywords = ["mariadb", "mysql", "dataset", "kb", "knowledge-base", "mysql-knowle
 categories = ["command-line-utilities"]
 license = "MPL-2.0"
 include = [
-    "**/*.rs",
-    "dist/*.json",
-    "dist/*.md",
-    "data/*.json",
-    "Cargo.toml",
+    "/src/rust/**/*.rs",
+    "/dist/*.json",
+    "/dist/*.md",
+    "/data/*.json",
+    "/Cargo.toml",
+    "/LICENSE",
 ]
 
 [badges]

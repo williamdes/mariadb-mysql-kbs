@@ -41,7 +41,7 @@ jobs:
                   composer install --no-interaction
             - name: Build
               run: |
-                  yarn run build
+                  TODO -> run binary
                   composer run build
             - name: Install sudo-bot
               run: yarn global add sudo-bot

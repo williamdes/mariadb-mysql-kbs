@@ -189,6 +189,10 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                 entry.r#type = Some(row_value.to_lowercase().trim().to_string());
             }
 
+            if entry.r#type == Some("number".to_string()) {
+                entry.r#type = Some("integer".to_string());
+            }
+
             if entry.r#type != Some("".to_string()) {
                 entry.r#type = cleaner::clean_type(entry.r#type.unwrap());
             }
@@ -258,7 +262,7 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
         "range" => {
             if li_node.find(Name("code")).next().is_some() {
                 let mut values = vec![];
-                for code_node in li_node.find(Name("code")) {
+                for code_node in li_node.find(Name("code")).filter(|e| e.text().trim() != "") {
                     values.push(code_node.text());
                 }
                 if values.len() == 1 {
@@ -895,6 +899,36 @@ mod tests {
                 r#type: Some("string".to_string()),
                 valid_values: None,
                 range: None,
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_15() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_15.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                has_description: true,
+                cli: Some("--handlersocket-wrlock-timeout=\"value\"".to_string()),
+                default: None,
+                dynamic: Some(false),
+                id: "handlersocket_wrlock_timeout".to_string(),
+                name: Some("handlersocket_wrlock_timeout".to_string()),
+                scope: Some(vec!["global".to_string()]),
+                r#type: Some("integer".to_string()),
+                valid_values: None,
+                range: Some(Range {
+                    to_upwards: None,
+                    from: Some(0),
+                    to: Some(3600),
+                    from_f: None,
+                    to_f: None,
+                }),
             },],
             entries
         );

@@ -1,11 +1,11 @@
 name: Run tests
 
 permissions:
-  contents: read
+    contents: read
 
 on:
-  pull_request:
-  push:
+    pull_request:
+    push:
 
 jobs:
     test-node:
@@ -40,7 +40,10 @@ jobs:
                   yarn run test
                   yarn run report-coverage
             - name: Send coverage
-              uses: codecov/codecov-action@v1
+              uses: codecov/codecov-action@v3
+              with:
+                  flags: node
+                  fail_ci_if_error: true # optional (default = false)
 
     test-php:
         name: Test on php ${{ matrix.php-version }} and ${{ matrix.os }}
@@ -51,9 +54,14 @@ jobs:
                 php-version: ["7.1", "7.2", "7.3", "7.4", "8.0", "8.1"]
                 os: [ubuntu-latest]
                 experimental: [false]
-                composer-options: ['']
+                composer-options: [""]
                 include:
-                    - { php-version: 'nightly', composer-options: '--ignore-platform-req=php', experimental: true, os: ubuntu-latest }
+                    - {
+                          php-version: "nightly",
+                          composer-options: "--ignore-platform-req=php",
+                          experimental: true,
+                          os: ubuntu-latest,
+                      }
         steps:
             - uses: actions/checkout@v3
             - name: Use php ${{ matrix.php-version }}
@@ -71,7 +79,8 @@ jobs:
             - name: Run php tests
               run: composer run test
             - name: Send coverage
-              uses: codecov/codecov-action@v1
+              uses: codecov/codecov-action@v3
               with:
-                flags: unit-${{ matrix.php-version }}-${{ matrix.os }}
-                name: phpunit-${{ matrix.php-version }}-${{ matrix.os }}
+                  flags: php
+                  fail_ci_if_error: true # optional (default = false)
+                  name: phpunit-${{ matrix.php-version }}-${{ matrix.os }}

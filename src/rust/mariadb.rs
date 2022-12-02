@@ -167,7 +167,7 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
         .trim()
         .to_string();
 
-    key_name = key_name.to_lowercase().replace(":", "");
+    key_name = key_name.to_lowercase().replace(":", "").trim().to_string();
 
     match key_name.as_str() {
         "dynamic" => {
@@ -204,7 +204,19 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
             }
         }
         "default value" | "default" => {
-            entry.default = Some(cleaner::clean_default(row_value));
+            if li_node.find(Name("code")).count() == 1 {
+                entry.default = Some(cleaner::clean_default(
+                    li_node
+                        .find(Name("code"))
+                        .next()
+                        .unwrap()
+                        .text()
+                        .trim()
+                        .to_string(),
+                ));
+            } else {
+                entry.default = Some(cleaner::clean_default(row_value));
+            }
         }
         "commandline" => {
             if row_value.to_lowercase() != "no"
@@ -926,6 +938,66 @@ mod tests {
                     to_upwards: None,
                     from: Some(0),
                     to: Some(3600),
+                    from_f: None,
+                    to_f: None,
+                }),
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_16() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_16.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                has_description: true,
+                cli: Some("--innodb-fast-shutdown[=#]".to_string()),
+                default: Some("1".to_string()),
+                dynamic: Some(true),
+                id: "innodb_fast_shutdown".to_string(),
+                name: Some("innodb_fast_shutdown".to_string()),
+                scope: Some(vec!["global".to_string()]),
+                r#type: Some("integer".to_string()),
+                valid_values: None,
+                range: Some(Range {
+                    to_upwards: None,
+                    from: Some(0),
+                    to: None,
+                    from_f: None,
+                    to_f: None,
+                }),
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_17() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_17.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                has_description: true,
+                cli: Some("--innodb-fill-factor=#".to_string()),
+                default: Some("100".to_string()),
+                dynamic: Some(true),
+                id: "innodb_fill_factor".to_string(),
+                name: Some("innodb_fill_factor".to_string()),
+                scope: Some(vec!["global".to_string()]),
+                r#type: Some("integer".to_string()),
+                valid_values: None,
+                range: Some(Range {
+                    to_upwards: None,
+                    from: Some(10),
+                    to: Some(100),
                     from_f: None,
                     to_f: None,
                 }),

@@ -1,0 +1,21 @@
+<h4 class="anchored_heading" id="innodb_fill_factor"><code>innodb_fill_factor</code></h4>
+<ul start="1">
+    <li><strong>Description:</strong> Percentage of B-tree page filled during bulk insert (sorted index build). Used as
+        a hint rather than an absolute value. Setting to <code>70</code>, for example, reserves 30% of the space on each
+        B-tree page for the index to grow in future.
+    </li>
+    <li><strong>Commandline:</strong> <code class="fixed" style="white-space:pre-wrap">--innodb-fill-factor=#</code>
+    </li>
+    <li><strong>Scope:</strong> Global
+    </li>
+    <li><strong>Dynamic:</strong> Yes
+    </li>
+    <li><strong>Data Type:</strong> <code>numeric</code>
+    </li>
+    <li><strong>Default Value</strong>: <code>100</code>
+    </li>
+    <li><strong>Range:</strong> <code>10</code> to <code>100</code>
+    </li>
+    <li><strong>Introduced:</strong> <a href="/kb/en/mariadb-1022-release-notes/">MariaDB 10.2.2</a>
+    </li>
+</ul>

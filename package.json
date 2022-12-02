@@ -45,7 +45,6 @@
         "changelog-file-next": "npm run --silent changelog -- --headName $NEXT_VERSION --lastTagName $NEXT_VERSION > CHANGELOG.md",
         "test": "nyc --all mocha --ui tdd",
         "jshint": "jshint ./",
-        "build": "node ./src/index.js",
         "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov",
         "sudo-bot-pr": "sudo-bot --env scripts/sudo-bot/.env --verbose"
     },

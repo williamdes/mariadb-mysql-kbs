@@ -2145,91 +2145,56 @@
         <li class="listitem">
             <p><a name="option_mysqld_ndb-transid-mysql-connection-map"></a>
                 <code
-                    class="option">ndb-transid-mysql-connection-map=<em class="replaceable"><code>state</code></em></code>
-            </p>
-            <div class="table">
-                <a name="ndb-transid-mysql-connection-map-detailtable"></a>
-                <p class="title"><b>Table&nbsp;21.230&nbsp;Type and value information for
-                        ndb-transid-mysql-connection-map</b></p>
-                <div class="table-contents">
-                    <table>
-                        <colgroup>
-                            <col width="35%">
-                            <col width="65%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">Property</th>
-                                <th scope="col">Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="row">Name</td>
-                                <td><code
-                                        class="literal"><a class="link" href="mysql-cluster-options-variables.html#option_mysqld_ndb-transid-mysql-connection-map">ndb-transid-mysql-connection-map</a></code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Command Line</td>
-                                <td>Yes</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">System Variable</td>
-                                <td>No</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Option File</td>
-                                <td>No</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Scope</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Dynamic</td>
-                                <td>No</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Type: Default, Range</td>
-                                <td>enumeration: ON / ON, OFF, FORCE (Version: 5.7)</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Notes</td>
-                                <td>
-                                    <p>
-                                        DESCRIPTION: Enable or disable the
-                                        ndb_transid_mysql_connection_map plugin; that is,
-                                        enable or disable the INFORMATION_SCHEMA table
-                                        having that name
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
+                    class="option">--ndb-transid-mysql-connection-map=<em class="replaceable"><code>state</code></em></code>
+            </p><a class="indexterm" name="idm46347529545216"></a><a class="indexterm" name="idm46347529543712"></a>
+            <div class="informaltable">
+                <table frame="box" rules="all" summary="Properties for ndb-transid-mysql-connection-map">
+                    <colgroup>
+                        <col style="width: 30%">
+                        <col style="width: 70%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>Command-Line Format</th>
+                            <td><code class="literal">--ndb-transid-mysql-connection-map[=state]</code></td>
+                        </tr>
+                        <tr>
+                            <th>Type</th>
+                            <td>Enumeration</td>
+                        </tr>
+                        <tr>
+                            <th>Default Value</th>
+                            <td><code class="literal">ON</code></td>
+                        </tr>
+                        <tr>
+                            <th>Valid Values</th>
+                            <td>
+                                <p class="valid-value"><code class="literal">ON</code></p>
+                                <p class="valid-value"><code class="literal">OFF</code></p>
+                                <p class="valid-value"><code class="literal">FORCE</code></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <br class="table-break">
             <p>
                 Enables or disables the plugin that handles the
-                <a class="link" href="ndb-transid-mysql-connection-map-table.html"
-                    title="24.13&nbsp;The INFORMATION_SCHEMA ndb_transid_mysql_connection_map Table"><code
+                <a class="link" href="information-schema-ndb-transid-mysql-connection-map-table.html"
+                    title="24.3.13&nbsp;The INFORMATION_SCHEMA ndb_transid_mysql_connection_map Table"><code
                         class="literal">ndb_transid_mysql_connection_map</code></a>
-                table in the <code class="literal">INFORMATION_SCHEMA</code>
-                database. Takes one of the values <code class="literal">ON</code>,
+                table in the <code class="literal">INFORMATION_SCHEMA</code> database.
+                Takes one of the values <code class="literal">ON</code>,
                 <code class="literal">OFF</code>, or <code class="literal">FORCE</code>.
                 <code class="literal">ON</code> (the default) enables the plugin.
                 <code class="literal">OFF</code> disables the plugin, which makes
                 <code class="literal">ndb_transid_mysql_connection_map</code>
-                inaccessible. <code class="literal">FORCE</code> keeps the MySQL
-                Server from starting if the plugin fails to load and
-                start.
+                inaccessible. <code class="literal">FORCE</code> keeps the MySQL Server
+                from starting if the plugin fails to load and start.
             </p>
             <p>
                 You can see whether the
-                <a class="link" href="ndb-transid-mysql-connection-map-table.html"
-                    title="24.13&nbsp;The INFORMATION_SCHEMA ndb_transid_mysql_connection_map Table"><code
+                <a class="link" href="information-schema-ndb-transid-mysql-connection-map-table.html"
+                    title="24.3.13&nbsp;The INFORMATION_SCHEMA ndb_transid_mysql_connection_map Table"><code
                         class="literal">ndb_transid_mysql_connection_map</code></a>
                 table plugin is running by checking the output of
                 <a class="link" href="show-plugins.html" title="13.7.5.25&nbsp;SHOW PLUGINS Statement"><code

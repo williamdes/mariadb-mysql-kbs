@@ -1,0 +1,39 @@
+<h4 class="anchored_heading" id="innodb_fast_shutdown"><code>innodb_fast_shutdown</code></h4>
+<ul start="1">
+    <li><strong>Description:</strong> The shutdown mode.
+        <ul start="1">
+            <li><code>0</code> - InnoDB performs a slow shutdown, including full purge (before <a
+                    href="/kb/en/mariadb-1036-release-notes/">MariaDB 10.3.6</a>, not always, due to <a
+                    href="https://jira.mariadb.org/browse/MDEV-13603">MDEV-13603</a>) and change buffer merge. Can be
+                very slow, even taking hours in extreme cases.
+            </li>
+            <li><code>1</code> - the default, <a href="/kb/en/innodb/">InnoDB</a> performs a fast shutdown, not
+                performing a full purge or an insert buffer merge.
+            </li>
+            <li><code>2</code>, the <a href="/kb/en/xtradbinnodb-redo-log/">InnoDB redo log</a> is flushed and a cold
+                shutdown takes place, similar to a crash. The resulting startup then performs crash recovery. Extremely
+                fast, in cases of emergency, but risks corruption. Not suitable for upgrades between major versions!
+            </li>
+            <li><code>3</code> (from <a href="/kb/en/mariadb-1036-release-notes/">MariaDB 10.3.6</a>) - active
+                transactions will not be rolled back, but all changed pages will be written to data files. The active
+                transactions will be rolled back by a background thread on a subsequent startup. The fastest option that
+                will not involve <a href="/kb/en/xtradbinnodb-redo-log/">InnoDB redo log</a> apply on subsequent
+                startup. See <a href="https://jira.mariadb.org/browse/MDEV-15832">MDEV-15832</a>.
+            </li>
+        </ul>
+    </li>
+    <li><strong>Commandline:</strong> <code class="fixed" style="white-space:pre-wrap">--innodb-fast-shutdown[=#]</code>
+    </li>
+    <li><strong>Scope:</strong> Global
+    </li>
+    <li><strong>Dynamic:</strong> Yes
+    </li>
+    <li><strong>Data Type:</strong> <code>numeric</code>
+    </li>
+    <li><strong>Default Value:</strong> <code>1</code>
+    </li>
+    <li><strong>Range: </strong> <code>0</code> to <code>3</code> (&gt;= <a
+            href="/kb/en/mariadb-1036-release-notes/">MariaDB 10.3.6</a>), <code>0</code> to <code>2</code> (&lt;= <a
+            href="/kb/en/mariadb-1035-release-notes/">MariaDB 10.3.5</a>)
+    </li>
+</ul>

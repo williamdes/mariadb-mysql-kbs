@@ -35,13 +35,29 @@ jobs:
               with:
                   path: ~/.composer/cache/
                   key: composer-cache
+            - name: Cache cargo binaries
+              uses: actions/cache@v3
+              id: cache-mariadb-mysql-kbs
+              with:
+                  path: ~/.cargo/bin/mariadb-mysql-kbs
+                  key: ${{ runner.os }}-cargo-bin-kbs-1.3.0-rc1
+            - name: Set up toolchain
+              if: steps.cache-mariadb-mysql-kbs.outputs.cache-hit != 'true'
+              uses: actions-rs/toolchain@v1
+              with:
+                  profile: minimal
+                  toolchain: 1.64.0
+                  override: true
+            - name: Install mariadb-mysql-kbs
+              if: steps.cache-mariadb-mysql-kbs.outputs.cache-hit != 'true'
+              run: cargo install mariadb-mysql-kbs@1.3.0-rc1
             - name: Install
               run: |
                   yarn install
                   composer install --no-interaction
             - name: Build
               run: |
-                  yarn run build
+                  mariadb-mysql-kbs extract
                   composer run build
             - name: Install sudo-bot
               run: yarn global add sudo-bot

@@ -69,7 +69,7 @@
       "name": "s3_pagecache_age_threshold",
       "range": {
         "from": 100,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -78,13 +78,13 @@
     },
     {
       "cli": "--s3-pagecache-buffer-size=val",
-      "default": "134217728 (128M)",
+      "default": "134217728",
       "dynamic": false,
       "id": "s3_pagecache_buffer_size",
       "name": "s3_pagecache_buffer_size",
       "range": {
         "from": 33554432,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"

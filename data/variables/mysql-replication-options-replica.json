@@ -51,7 +51,7 @@
       "name": "relay_log_space_limit",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -329,7 +329,7 @@
       "name": "relay_log_space_limit",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -468,8 +468,7 @@
       "id": "sysvar_replica_pending_jobs_size_max",
       "name": "replica_pending_jobs_size_max",
       "range": {
-        "from": 1024,
-        "to": 16
+        "from": 1024
       },
       "scope": [
         "global"
@@ -505,7 +504,7 @@
       "name": "replica_transaction_retries",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -846,8 +845,7 @@
       "id": "sysvar_slave_pending_jobs_size_max",
       "name": "slave_pending_jobs_size_max",
       "range": {
-        "from": 1024,
-        "to": 16
+        "from": 1024
       },
       "scope": [
         "global"

@@ -104,7 +104,6 @@
 |Scope|`global`|
 |Default value|`8192`|
 |Dynamic|`false`|
-|Range|from: `4096` to: `32768`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -136,6 +135,7 @@
 |Scope|`global`|
 |Default value|`1048576`|
 |Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -195,8 +195,9 @@
 |Command line|`--aria_group_commit_interval=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0 (no waiting)`|
+|Default value|`0`|
 |Dynamic|`false`|
+|Valid value(s)|`0`, `0-4294967295`|
 |Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
@@ -244,7 +245,7 @@
 |Scope|`global`|
 |Default value|`9223372036853727232`|
 |Dynamic|`true`|
-|Range|from: `0` to: `9.2233720368548E+18`|
+|Range|from: `0` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -289,7 +290,7 @@
 |Command line|`--aria-pagecache-buffer-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`134217720 (128MB)`|
+|Default value|`134217720`|
 |Dynamic|`false`|
 |Range|from: `131072` to: `upwards`|
 
@@ -1257,7 +1258,7 @@
 |Name|`feedback_http_proxy`|
 |Command line|`--feedback-http=proxy=value`|
 |Type of variable|`string`|
-|Default value|`'' (empty)`|
+|Default value|`''`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2072,6 +2073,21 @@
 |------|----|
 |mariadb.com|[wsrep_thread_count](https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/#wsrep_thread_count)|
 
+## wsrep_allowlist
+|name|value|
+|----|-----|
+|Name|`wsrep_allowlist`|
+|Command line|`--wsrep-allowlist=value1[,value2...]`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`None`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_allowlist](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_allowlist)|
+
 ## wsrep_auto_increment_control
 |name|value|
 |----|-----|
@@ -2215,6 +2231,7 @@
 |Scope|`global`|
 |Default value|`NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)`|
 |Dynamic|`true`|
+|Valid value(s)|`NONE`, `SERVER`, `TRANSACTION`, `STREAMING`, `CLIENT`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2804,6 +2821,21 @@
 |------|----|
 |mariadb.com|[wsrep_start_position](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_start_position)|
 
+## wsrep_status_file
+|name|value|
+|----|-----|
+|Name|`wsrep_status_file`|
+|Command line|`--wsrep-status-file=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`None`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_status_file](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/galera-cluster/galera-cluster-system-variables/#wsrep_status_file)|
+
 ## wsrep_strict_ddl
 |name|value|
 |----|-----|
@@ -2828,7 +2860,7 @@
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `15`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2943,6 +2975,7 @@
 |----|-----|
 |Name|`gtid_domain_id`|
 |Command line|`--gtid-domain-id=#`|
+|Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
@@ -2985,6 +3018,7 @@
 |name|value|
 |----|-----|
 |Name|`gtid_seq_no`|
+|Type of variable|`integer`|
 |Scope|`session`|
 |Default value|`Null`|
 |Dynamic|`true`|
@@ -3045,6 +3079,7 @@
 |----|-----|
 |Name|`handlersocket_accept_balance`|
 |Command line|`--handlersocket-accept-balance="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
@@ -3074,6 +3109,7 @@
 |----|-----|
 |Name|`handlersocket_backlog`|
 |Command line|`--handlersocket-backlog="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`32768`|
 |Dynamic|`false`|
@@ -3089,9 +3125,11 @@
 |----|-----|
 |Name|`handlersocket_epoll`|
 |Command line|`--handlersocket-epoll="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`1`|
 |Dynamic|`false`|
+|Valid value(s)|`0`, `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -3131,6 +3169,7 @@
 |----|-----|
 |Name|`handlersocket_port`|
 |Command line|`--handlersocket-port="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`Empty, previously 9998`|
 |Dynamic|`false`|
@@ -3145,6 +3184,7 @@
 |----|-----|
 |Name|`handlersocket_port_wr`|
 |Command line|`--handlersocket-port-wr="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`Empty, previously 9999`|
 |Dynamic|`false`|
@@ -3159,6 +3199,7 @@
 |----|-----|
 |Name|`handlersocket_rcvbuf`|
 |Command line|`--handlersocket-rcvbuf="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
@@ -3174,6 +3215,7 @@
 |----|-----|
 |Name|`handlersocket_readsize`|
 |Command line|`--handlersocket-readsize="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`0 (possibly 4096)`|
 |Dynamic|`false`|
@@ -3189,6 +3231,7 @@
 |----|-----|
 |Name|`handlersocket_sndbuf`|
 |Command line|`--handlersocket-sndbuf="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
@@ -3204,6 +3247,7 @@
 |----|-----|
 |Name|`handlersocket_threads`|
 |Command line|`--handlersocket-threads="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`16`|
 |Dynamic|`false`|
@@ -3219,6 +3263,7 @@
 |----|-----|
 |Name|`handlersocket_threads_wr`|
 |Command line|`--handlersocket-threads-wr="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`1`|
 |Dynamic|`false`|
@@ -3234,6 +3279,7 @@
 |----|-----|
 |Name|`handlersocket_timeout`|
 |Command line|`--handlersocket-timeout="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`300`|
 |Dynamic|`false`|
@@ -3249,9 +3295,11 @@
 |----|-----|
 |Name|`handlersocket_verbose`|
 |Command line|`--handlersocket-verbose="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`10`|
 |Dynamic|`false`|
+|Valid value(s)|`0`, `10000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -3263,6 +3311,7 @@
 |----|-----|
 |Name|`handlersocket_wrlock_timeout`|
 |Command line|`--handlersocket-wrlock-timeout="value"`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
 |Range|from: `0` to: `3600`|
@@ -3387,7 +3436,7 @@
 |Scope|`global`|
 |Default value|`1000000`|
 |Dynamic|`true`|
-|Range|from: `100` to: `9.2233720368548E+18`|
+|Range|from: `100` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -3859,7 +3908,7 @@
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -4014,7 +4063,7 @@
 |Command line|`--key-cache-segments=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0 (non-segmented)`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `0` to: `64`|
 
@@ -5667,7 +5716,7 @@
 |Scope|`global`|
 |Default value|`536870912`|
 |Dynamic|`true`|
-|Range|from: `1024` to: `9.2233720368548E+18`|
+|Range|from: `1024` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -5991,7 +6040,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6285,7 +6334,7 @@
 |Scope|`global`|
 |Default value|`21600000000`|
 |Dynamic|`false`|
-|Range|from: `0` to: `9.2233720368548E+18`|
+|Range|from: `0` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6935,7 +6984,7 @@
 |Scope|`global`, `session`|
 |Default value|`1048576`|
 |Dynamic|`true`|
-|Range|from: `1` to: `1073741824`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -6967,7 +7016,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
-|Range|from: `0` to: `9.2233720368548E+18`|
+|Range|from: `0` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7183,7 +7232,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `9.2233720368548E+18`|
+|Range|from: `0` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7306,7 +7355,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
-|Range|from: `0` to: `9.2233720368548E+18`|
+|Range|from: `0` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7765,7 +7814,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
-|Range|from: `0` to: `9.2233720368548E+18`|
+|Range|from: `0` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -7781,7 +7830,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`false`|
-|Range|from: `0` to: `9.2233720368548E+18`|
+|Range|from: `0` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -8508,6 +8557,7 @@
 |Command line|`--performance-schema-accounts-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8524,6 +8574,7 @@
 |Command line|`--performance-schema-digests-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8540,6 +8591,7 @@
 |Command line|`--performance-schema-events-stages-history-long-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8556,6 +8608,7 @@
 |Command line|`--performance-schema-events-stages-history-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1024`|
 
@@ -8572,6 +8625,7 @@
 |Command line|`--performance-schema-events-statements-history-long-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8588,6 +8642,7 @@
 |Command line|`--performance-schema-events-statements-history-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1024`|
 
@@ -8604,6 +8659,7 @@
 |Command line|`--performance-schema-events-transactions-history-long-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8620,6 +8676,7 @@
 |Command line|`--performance-schema-events-transactions-history-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1024`|
 
@@ -8636,6 +8693,7 @@
 |Command line|`--performance-schema-events-waits-history-long-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8652,6 +8710,7 @@
 |Command line|`--performance-schema-events-waits-history-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1024`|
 
@@ -8668,6 +8727,7 @@
 |Command line|`--performance-schema-hosts-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8700,6 +8760,7 @@
 |Command line|`--performance-schema-max-cond-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8766,6 +8827,7 @@
 |Command line|`--performance-schema-max-file-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8782,6 +8844,7 @@
 |Command line|`--performance-schema-max-index-stat=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8814,6 +8877,7 @@
 |Command line|`--performance-schema-max-metadata-locks=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1`|
 
@@ -8846,6 +8910,7 @@
 |Command line|`--performance-schema-max-mutex-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `104857600`|
 
@@ -8878,6 +8943,7 @@
 |Command line|`--performance-schema-max-program-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -8910,6 +8976,7 @@
 |Command line|`--performance-schema-max-rwlock-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `104857600`|
 
@@ -8943,6 +9010,7 @@
 |Command line|`--performance-schema-max-socket-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -9025,6 +9093,7 @@
 |Command line|`--performance-schema-max-table-handles=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -9041,6 +9110,7 @@
 |Command line|`--performance-schema-max-table-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -9057,6 +9127,7 @@
 |Command line|`--performance-schema-max-table-lock-stat=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -9089,6 +9160,7 @@
 |Command line|`--performance-schema-max-thread-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -9105,6 +9177,7 @@
 |Command line|`--performance-schema-session-connect-attrs-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -9121,8 +9194,8 @@
 |Command line|`--performance-schema-setup-actors-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
-|Range|from: `-1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -9137,8 +9210,8 @@
 |Command line|`--performance-schema-setup-objects-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
-|Range|from: `-1` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -9153,6 +9226,7 @@
 |Command line|`--performance-schema-users-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `1048576`|
 
@@ -9534,7 +9608,7 @@
 |Name|`default_master_connection`|
 |Type of variable|`string`|
 |Scope|`session`|
-|Default value|`'' (empty string)`|
+|Default value|`''`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -9815,7 +9889,7 @@
 |Command line|`--read-binlog-speed-limit=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0 (no limit)`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.844674407371E+19`|
 
@@ -11114,7 +11188,7 @@
 |Command line|`--s3-pagecache-buffer-size=val`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`134217728 (128M)`|
+|Default value|`134217728`|
 |Dynamic|`false`|
 |Range|from: `33554432` to: `1.844674407371E+19`|
 
@@ -15294,7 +15368,6 @@
 |----|-----|
 |Name|`Table_open_cache_active_instances`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15306,7 +15379,6 @@
 |----|-----|
 |Name|`Table_open_cache_hits`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15318,7 +15390,6 @@
 |----|-----|
 |Name|`Table_open_cache_misses`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15330,7 +15401,6 @@
 |----|-----|
 |Name|`Table_open_cache_overflows`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15526,7 +15596,6 @@
 |Command line|`--back-log=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`(-1 signifies autosizing; do not use -1)`|
 |Dynamic|`false`|
 |Range|from: `1` to: `65535`|
 
@@ -17482,7 +17551,7 @@
 |Scope|`global`, `session`|
 |Default value|`16777216`|
 |Dynamic|`true`|
-|Range|from: `16384`|
+|Range|from: `16384` to: `4294966272`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17546,7 +17615,7 @@
 |Command line|`--max-long-data-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`16777216 (16M)`|
+|Default value|`16777216`|
 |Dynamic|`false`|
 |Range|from: `1024` to: `4294967295`|
 
@@ -17580,7 +17649,7 @@
 |Scope|`global`|
 |Default value|`16382`|
 |Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17643,7 +17712,7 @@
 |Command line|`--max-session-mem-used=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`9223372036854775807 (8192 PB)`|
+|Default value|`9223372036854775807`|
 |Dynamic|`true`|
 |Range|from: `8192` to: `1.844674407371E+19`|
 
@@ -17661,7 +17730,6 @@
 |Scope|`global`, `session`|
 |Default value|`1024`|
 |Dynamic|`true`|
-|Range|from: `4` to: `8388608`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17801,6 +17869,7 @@
 |Scope|`global`, `session`|
 |Default value|`262144`|
 |Dynamic|`true`|
+|Range|from: `8192` to: `2147483648`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17992,6 +18061,22 @@
 |mariadb.com|[open_files_limit](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#open_files_limit)|
 |dev.mysql.com|[sysvar_open_files_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_open_files_limit)|
 
+## optimizer_extra_pruning_depth
+|name|value|
+|----|-----|
+|Name|`optimizer_extra_pruning_depth`|
+|Command line|`--optimizer-extra-pruning-depthl[=#]`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`8`|
+|Dynamic|`true`|
+|Range|from: `0` to: `62`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[optimizer_extra_pruning_depth](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_extra_pruning_depth)|
+
 ## optimizer_max_sel_arg_weight
 |name|value|
 |----|-----|
@@ -18012,8 +18097,8 @@
 |name|value|
 |----|-----|
 |Name|`optimizer_prune_level`|
+|Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`1`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1`|
 
@@ -18340,7 +18425,7 @@
 |Command line|`--query-cache-limit=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1048576 (1MB)`|
+|Default value|`1048576`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -18356,7 +18441,7 @@
 |Command line|`--query-cache-min-res-unit=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`4096 (4KB)`|
+|Default value|`4096`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -18371,7 +18456,7 @@
 |Command line|`--query-cache-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1M (although frequently given a default value in some setups)`|
+|Default value|`1M`|
 |Dynamic|`true`|
 |Valid value(s)|`0`|
 
@@ -18745,6 +18830,20 @@
 |mariadb.com|[skip_external_locking](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#skip_external_locking)|
 |dev.mysql.com|[sysvar_skip_external_locking](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_skip_external_locking)|
 
+## skip_grant_tables
+|name|value|
+|----|-----|
+|Name|`skip_grant_tables`|
+|Command line|`--skip-grant-tables[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Default value|`0`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[skip_grant_tables](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#skip_grant_tables)|
+|dev.mysql.com|[option_mysqld_skip-grant-tables](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_skip-grant-tables)|
+
 ## skip_name_resolve
 |name|value|
 |----|-----|
@@ -19009,6 +19108,7 @@
 |Scope|`global`, `session`|
 |Default value|`ONLY_FULL_GROUP_BY STRICT_TRANS_TABLES NO_ZERO_IN_DATE NO_ZERO_DATE ERROR_FOR_DIVISION_BY_ZERO NO_ENGINE_SUBSTITUTION`|
 |Dynamic|`true`|
+|Valid value(s)|`ALLOW_INVALID_DATES`, `ANSI_QUOTES`, `ERROR_FOR_DIVISION_BY_ZERO`, `HIGH_NOT_PRECEDENCE`, `IGNORE_SPACE`, `NO_AUTO_VALUE_ON_ZERO`, `NO_BACKSLASH_ESCAPES`, `NO_DIR_IN_CREATE`, `NO_ENGINE_SUBSTITUTION`, `NO_UNSIGNED_SUBTRACTION`, `NO_ZERO_DATE`, `NO_ZERO_IN_DATE`, `ONLY_FULL_GROUP_BY`, `PAD_CHAR_TO_FULL_LENGTH`, `PIPES_AS_CONCAT`, `REAL_AS_FLOAT`, `STRICT_ALL_TABLES`, `STRICT_TRANS_TABLES`, `TIME_TRUNCATE_FRACTIONAL`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -19186,7 +19286,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
-|Range|from: `400`|
+|Range|from: `400` to: `524288`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -19455,7 +19555,6 @@
 |Scope|`global`, `session`|
 |Default value|`16777216`|
 |Dynamic|`true`|
-|Range|from: `1024`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -19956,7 +20055,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -19984,7 +20083,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -20207,7 +20306,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -20347,7 +20446,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -20403,7 +20502,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -20471,7 +20570,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -20485,7 +20584,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -20521,7 +20620,6 @@
 |name|value|
 |----|-----|
 |Name|`spider_internal_sql_log_off`|
-|Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `1`|
@@ -20790,7 +20888,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -20804,7 +20902,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -20955,7 +21053,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -21011,7 +21109,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -21124,7 +21222,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -21368,7 +21466,7 @@
 |Scope|`global`|
 |Default value|`-1`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -21383,7 +21481,7 @@
 |Scope|`global`, `session`|
 |Default value|`-1`|
 |Dynamic|`true`|
-|Range|from: `-1` to: `9.2233720368548E+18`|
+|Range|from: `-1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -21693,7 +21791,7 @@
 |Scope|`global`|
 |Default value|`1000000`|
 |Dynamic|`false`|
-|Range|from: `100` to: `9.2233720368548E+18`|
+|Range|from: `100` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -22307,7 +22405,6 @@
 |Name|`thread_pool_dedicated_listener`|
 |Command line|`thread-pool-dedicated-listener={0|1}`|
 |Type of variable|`boolean`|
-|Scope|``|
 |Default value|`0`|
 |Dynamic|`false`|
 
@@ -22322,7 +22419,6 @@
 |Name|`thread_pool_exact_stats`|
 |Command line|`thread-pool-exact-stats={0|1}`|
 |Type of variable|`boolean`|
-|Scope|``|
 |Default value|`0`|
 |Dynamic|`false`|
 
@@ -22428,7 +22524,7 @@
 |Command line|`--thread-pool-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Range|from: `1` to: `128`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -24416,7 +24512,7 @@
 |Name|`tokudb_block_size`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`4194304 (4MB)`|
+|Default value|`4194304`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.844674407371E+19`|
 
@@ -24757,7 +24853,7 @@
 |Name|`tokudb_loader_memory_size`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`100000000 (100M)`|
+|Default value|`100000000`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.844674407371E+19`|
 
@@ -24772,7 +24868,7 @@
 |Name|`tokudb_lock_timeout`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`4000 (4 seconds)`|
+|Default value|`4000`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.844674407371E+19`|
 
@@ -24901,7 +24997,7 @@
 |Name|`tokudb_read_block_size`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`65536 (64KB)`|
+|Default value|`65536`|
 |Dynamic|`true`|
 |Range|from: `4096` to: `4294967295`|
 
@@ -24916,7 +25012,7 @@
 |Name|`tokudb_read_buf_size`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`131072 (128KB)`|
+|Default value|`131072`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1048576`|
 
@@ -26370,7 +26466,6 @@
 |----|-----|
 |Name|`Innodb_num_index_pages_written`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26382,7 +26477,6 @@
 |----|-----|
 |Name|`Innodb_num_non_index_pages_written`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26597,8 +26691,6 @@
 |name|value|
 |----|-----|
 |Name|`Innodb_page_compression_saved`|
-|Type of variable|`byte`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26610,7 +26702,6 @@
 |----|-----|
 |Name|`Innodb_page_compression_trim_sect512`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26622,7 +26713,6 @@
 |----|-----|
 |Name|`Innodb_page_compression_trim_sect1024`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26634,7 +26724,6 @@
 |----|-----|
 |Name|`Innodb_page_compression_trim_sect2048`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26646,7 +26735,6 @@
 |----|-----|
 |Name|`Innodb_page_compression_trim_sect4096`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26658,7 +26746,6 @@
 |----|-----|
 |Name|`Innodb_page_compression_trim_sect8192`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26670,7 +26757,6 @@
 |----|-----|
 |Name|`Innodb_page_compression_trim_sect16384`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26682,7 +26768,6 @@
 |----|-----|
 |Name|`Innodb_page_compression_trim_sect32768`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27054,7 +27139,6 @@
 |----|-----|
 |Name|`Innodb_system_rows_deleted`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27066,7 +27150,6 @@
 |----|-----|
 |Name|`Innodb_system_rows_inserted`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27078,7 +27161,6 @@
 |----|-----|
 |Name|`Innodb_system_rows_read`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27090,7 +27172,6 @@
 |----|-----|
 |Name|`Innodb_system_rows_updated`|
 |Type of variable|`integer`|
-|Scope|``|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27705,7 +27786,7 @@
 |Scope|`global`|
 |Default value|`9223372036854775807`|
 |Dynamic|`true`|
-|Range|from: `1` to: `9.2233720368548E+18`|
+|Range|from: `1` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27780,7 +27861,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`134217728`|
-|Range|from: `5242880` to: `25165824`|
+|Range|from: `5242880`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28457,7 +28538,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28720,7 +28801,6 @@
 |Name|`innodb_flush_sync`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28929,7 +29009,7 @@
 |Scope|`global`|
 |Default value|`2000000000`|
 |Dynamic|`true`|
-|Range|from: `1000000`|
+|Range|from: `1000000` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29043,7 +29123,6 @@
 |Scope|`global`|
 |Default value|`1/2 the size of the InnoDB buffer pool`|
 |Dynamic|`false`|
-|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29154,7 +29233,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
-|Range|from: `100`|
+|Range|from: `100` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29170,7 +29249,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `9.2233720368548E+18`|
+|Range|from: `0` to: `9223372036854775807`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29232,6 +29311,7 @@
 |Scope|`global`, `session`|
 |Default value|`50`|
 |Dynamic|`true`|
+|Range|from: `1` to: `1073741824`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29413,7 +29493,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`false`|
-|Range|from: `4194304` to: `512`|
+|Range|from: `4194304`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29522,7 +29602,7 @@
 |Command line|`innodb-max-bitmap-file-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`4096 (4KB)`|
+|Default value|`4096`|
 |Dynamic|`true`|
 |Range|from: `4096` to: `1.844674407371E+19`|
 
@@ -29638,7 +29718,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
-|Range|from: `10485760`|
+|Range|from: `10485760` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29653,7 +29733,7 @@
 |Command line|`innodb-merge-sort-block-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1048576 (1M)`|
+|Default value|`1048576`|
 |Dynamic|`true`|
 |Range|from: `1048576` to: `1073741824`|
 
@@ -29819,7 +29899,6 @@
 |Command line|`--innodb-open-files=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`(-1 signifies autosizing; do not use -1)`|
 |Range|from: `10`|
 
 ### Documentation(s)
@@ -30052,7 +30131,6 @@
 |Name|`innodb_read_only_compressed`|
 |Command line|`--innodb-read-only-compressed, --skip-innodb-read-only-compressed`|
 |Type of variable|`boolean`|
-|Scope|``|
 |Default value|`OFF (>= MariaDB 10.6.6), ON (<= MariaDB 10.6.5)`|
 |Dynamic|`false`|
 
@@ -30432,7 +30510,7 @@
 |Scope|`global`|
 |Default value|`8`|
 |Dynamic|`true`|
-|Range|from: `1` to: `264`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -30463,7 +30541,7 @@
 |Scope|`global`|
 |Default value|`8`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31636,7 +31714,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `2`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31652,7 +31730,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `2`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31668,7 +31746,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `2`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -31870,7 +31948,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0` to: `2`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -33077,7 +33155,7 @@
 |Command line|`--performance-schema-max-prepared-statements-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`(-1 signifies autoscaling; do not use -1)`|
+|Default value|`-1 (signifies autoscaling; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `-1` to: `4194304`|
 
@@ -34430,7 +34508,7 @@
 |Scope|`global`|
 |Default value|`128M`|
 |Dynamic|`true`|
-|Range|from: `1024` to: `16`|
+|Range|from: `1024`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -34662,7 +34740,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
-|Range|from: `1024` to: `16`|
+|Range|from: `1024`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -35370,19 +35448,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_safe-user-create](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_safe-user-create)|
-
-## skip_grant_tables
-|name|value|
-|----|-----|
-|Name|`skip_grant_tables`|
-|Command line|`--skip-grant-tables[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Default value|`OFF`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_skip-grant-tables](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_skip-grant-tables)|
 
 ## skip_host_cache
 |name|value|
@@ -37262,7 +37327,7 @@
 |Scope|`global`|
 |Default value|`1073741824`|
 |Dynamic|`true`|
-|Range|from: `0` to: `2`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -37278,7 +37343,7 @@
 |Scope|`global`|
 |Default value|`1073741824`|
 |Dynamic|`true`|
-|Range|from: `2097152` to: `2`|
+|Range|from: `2097152`|
 
 ### Documentation(s)
 |source|anchor name|

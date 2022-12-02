@@ -819,8 +819,7 @@
       "id": "sysvar_innodb_fil_make_page_dirty_debug",
       "name": "innodb_fil_make_page_dirty_debug",
       "range": {
-        "from": 0,
-        "to": 2
+        "from": 0
       },
       "scope": [
         "global"
@@ -969,8 +968,7 @@
       "id": "sysvar_innodb_fsync_threshold",
       "name": "innodb_fsync_threshold",
       "range": {
-        "from": 0,
-        "to": 2
+        "from": 0
       },
       "scope": [
         "global"
@@ -1076,8 +1074,7 @@
       "id": "sysvar_innodb_ft_result_cache_limit",
       "name": "innodb_ft_result_cache_limit",
       "range": {
-        "from": 1000000,
-        "to": 2
+        "from": 1000000
       },
       "scope": [
         "global"
@@ -1187,8 +1184,7 @@
       "id": "sysvar_innodb_limit_optimistic_insert_debug",
       "name": "innodb_limit_optimistic_insert_debug",
       "range": {
-        "from": 0,
-        "to": 2
+        "from": 0
       },
       "scope": [
         "global"
@@ -1277,8 +1273,7 @@
       "id": "sysvar_innodb_log_file_size",
       "name": "innodb_log_file_size",
       "range": {
-        "from": 4194304,
-        "to": 512
+        "from": 4194304
       },
       "scope": [
         "global"
@@ -1460,8 +1455,7 @@
       "id": "sysvar_innodb_max_undo_log_size",
       "name": "innodb_max_undo_log_size",
       "range": {
-        "from": 10485760,
-        "to": 2
+        "from": 10485760
       },
       "scope": [
         "global"
@@ -1570,8 +1564,7 @@
       "id": "sysvar_innodb_old_blocks_time",
       "name": "innodb_old_blocks_time",
       "range": {
-        "from": 0,
-        "to": 2
+        "from": 0
       },
       "scope": [
         "global"
@@ -1585,8 +1578,7 @@
       "id": "sysvar_innodb_online_alter_log_max_size",
       "name": "innodb_online_alter_log_max_size",
       "range": {
-        "from": 65536,
-        "to": 2
+        "from": 65536
       },
       "scope": [
         "global"
@@ -1595,7 +1587,7 @@
     },
     {
       "cli": "--innodb-open-files=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "id": "sysvar_innodb_open_files",
       "name": "innodb_open_files",
       "range": {
@@ -1870,8 +1862,7 @@
       "id": "sysvar_innodb_saved_page_number_debug",
       "name": "innodb_saved_page_number_debug",
       "range": {
-        "from": 0,
-        "to": 2
+        "from": 0
       },
       "scope": [
         "global"
@@ -2005,7 +1996,7 @@
       "name": "innodb_stats_persistent_sample_pages",
       "range": {
         "from": 1,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -2020,7 +2011,7 @@
       "name": "innodb_stats_transient_sample_pages",
       "range": {
         "from": 1,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"

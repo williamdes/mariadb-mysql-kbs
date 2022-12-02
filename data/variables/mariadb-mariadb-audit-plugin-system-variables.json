@@ -75,7 +75,7 @@
       "name": "server_audit_file_rotate_size",
       "range": {
         "from": 100,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"

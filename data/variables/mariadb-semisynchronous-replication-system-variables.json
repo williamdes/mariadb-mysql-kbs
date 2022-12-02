@@ -13,13 +13,13 @@
     },
     {
       "cli": "--rpl-semi-sync-master-timeout[=#]",
-      "default": "10000 (10 seconds)",
+      "default": "10000",
       "dynamic": true,
       "id": "rpl_semi_sync_master_timeout",
       "name": "rpl_semi_sync_master_timeout",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -34,7 +34,7 @@
       "name": "rpl_semi_sync_master_trace_level",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -112,7 +112,7 @@
       "name": "rpl_semi_sync_slave_trace_level",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"

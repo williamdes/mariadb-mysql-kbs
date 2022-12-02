@@ -2705,25 +2705,21 @@
     {
       "id": "table_open_cache_active_instances",
       "name": "Table_open_cache_active_instances",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "table_open_cache_hits",
       "name": "Table_open_cache_hits",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "table_open_cache_misses",
       "name": "Table_open_cache_misses",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "table_open_cache_overflows",
       "name": "Table_open_cache_overflows",
-      "scope": [],
       "type": "integer"
     },
     {

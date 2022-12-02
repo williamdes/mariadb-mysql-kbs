@@ -2,7 +2,7 @@
   "data": [
     {
       "cli": "--feedback-http=proxy=value",
-      "default": "'' (empty)",
+      "default": "''",
       "id": "feedback_http_proxy",
       "name": "feedback_http_proxy",
       "type": "string"

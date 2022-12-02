@@ -257,7 +257,7 @@
       "name": "audit_log_rotate_on_size",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"

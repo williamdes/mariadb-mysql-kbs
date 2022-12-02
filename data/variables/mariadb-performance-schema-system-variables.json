@@ -588,7 +588,6 @@
       "id": "performance_schema_setup_actors_size",
       "name": "performance_schema_setup_actors_size",
       "range": {
-        "from": -1,
         "to": 1024
       },
       "scope": [
@@ -603,7 +602,6 @@
       "id": "performance_schema_setup_objects_size",
       "name": "performance_schema_setup_objects_size",
       "range": {
-        "from": -1,
         "to": 1048576
       },
       "scope": [

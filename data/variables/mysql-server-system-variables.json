@@ -218,7 +218,7 @@
     },
     {
       "cli": "--back-log=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_back_log",
       "name": "back_log",
@@ -558,7 +558,7 @@
       "name": "connection_memory_limit",
       "range": {
         "from": 2097152,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -1078,7 +1078,7 @@
       "name": "global_connection_memory_limit",
       "range": {
         "from": 16777216,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1151,7 +1151,7 @@
     },
     {
       "cli": "--host-cache-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": true,
       "id": "sysvar_host_cache_size",
       "name": "host_cache_size",
@@ -1840,7 +1840,7 @@
       "name": "max_join_size",
       "range": {
         "from": 1,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -2733,7 +2733,7 @@
       "name": "range_optimizer_max_mem_size",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -3389,7 +3389,7 @@
       "name": "sql_select_limit",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -3609,7 +3609,7 @@
     },
     {
       "cli": "--table-definition-cache=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": true,
       "id": "sysvar_table_definition_cache",
       "name": "table_definition_cache",
@@ -3685,8 +3685,7 @@
       "id": "sysvar_temptable_max_mmap",
       "name": "temptable_max_mmap",
       "range": {
-        "from": 0,
-        "to": 2
+        "from": 0
       },
       "scope": [
         "global"
@@ -3700,8 +3699,7 @@
       "id": "sysvar_temptable_max_ram",
       "name": "temptable_max_ram",
       "range": {
-        "from": 2097152,
-        "to": 2
+        "from": 2097152
       },
       "scope": [
         "global"
@@ -3721,7 +3719,7 @@
     },
     {
       "cli": "--thread-cache-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": true,
       "id": "sysvar_thread_cache_size",
       "name": "thread_cache_size",
@@ -3977,7 +3975,7 @@
       "name": "tmp_table_size",
       "range": {
         "from": 1024,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",

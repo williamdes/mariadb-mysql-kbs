@@ -235,8 +235,7 @@
       "scope": [
         "global"
       ],
-      "type": "set",
-      "validValues": []
+      "type": "set"
     }
   ],
   "name": "connect-system-variables",

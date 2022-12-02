@@ -27,13 +27,13 @@
       "type": "integer"
     },
     {
-      "default": "4194304 (4MB)",
+      "default": "4194304",
       "dynamic": true,
       "id": "tokudb_block_size",
       "name": "tokudb_block_size",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -115,7 +115,7 @@
       "name": "tokudb_cleaner_iterations",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -129,7 +129,7 @@
       "name": "tokudb_cleaner_period",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -172,7 +172,7 @@
       "name": "tokudb_debug",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -252,7 +252,7 @@
       "name": "tokudb_fsync_log_period",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -278,7 +278,7 @@
       "name": "tokudb_killed_time",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -308,13 +308,13 @@
       "type": "boolean"
     },
     {
-      "default": "100000000 (100M)",
+      "default": "100000000",
       "dynamic": true,
       "id": "tokudb_loader_memory_size",
       "name": "tokudb_loader_memory_size",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -323,13 +323,13 @@
       "type": "integer"
     },
     {
-      "default": "4000 (4 seconds)",
+      "default": "4000",
       "dynamic": true,
       "id": "tokudb_lock_timeout",
       "name": "tokudb_lock_timeout",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -372,8 +372,8 @@
       "id": "tokudb_optimize_index_fraction",
       "name": "tokudb_optimize_index_fraction",
       "range": {
-        "from": 0,
-        "to": 1
+        "from": 0.0,
+        "to": 1.0
       },
       "scope": [
         "global",
@@ -399,7 +399,7 @@
       "name": "tokudb_optimize_throttle",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -435,7 +435,7 @@
       "type": "boolean"
     },
     {
-      "default": "65536 (64KB)",
+      "default": "65536",
       "dynamic": true,
       "id": "tokudb_read_block_size",
       "name": "tokudb_read_block_size",
@@ -450,7 +450,7 @@
       "type": "integer"
     },
     {
-      "default": "131072 (128KB)",
+      "default": "131072",
       "dynamic": true,
       "id": "tokudb_read_buf_size",
       "name": "tokudb_read_buf_size",

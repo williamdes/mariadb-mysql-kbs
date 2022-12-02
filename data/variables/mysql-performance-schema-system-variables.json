@@ -13,7 +13,7 @@
     },
     {
       "cli": "--performance-schema-accounts-size=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_accounts_size",
       "name": "performance_schema_accounts_size",
@@ -28,7 +28,7 @@
     },
     {
       "cli": "--performance-schema-digests-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_digests_size",
       "name": "performance_schema_digests_size",
@@ -58,7 +58,7 @@
     },
     {
       "cli": "--performance-schema-events-stages-history-long-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_events_stages_history_long_size",
       "name": "performance_schema_events_stages_history_long_size",
@@ -73,7 +73,7 @@
     },
     {
       "cli": "--performance-schema-events-stages-history-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_events_stages_history_size",
       "name": "performance_schema_events_stages_history_size",
@@ -88,7 +88,7 @@
     },
     {
       "cli": "--performance-schema-events-statements-history-long-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_events_statements_history_long_size",
       "name": "performance_schema_events_statements_history_long_size",
@@ -103,7 +103,7 @@
     },
     {
       "cli": "--performance-schema-events-statements-history-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_events_statements_history_size",
       "name": "performance_schema_events_statements_history_size",
@@ -118,7 +118,7 @@
     },
     {
       "cli": "--performance-schema-events-transactions-history-long-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_events_transactions_history_long_size",
       "name": "performance_schema_events_transactions_history_long_size",
@@ -133,7 +133,7 @@
     },
     {
       "cli": "--performance-schema-events-transactions-history-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_events_transactions_history_size",
       "name": "performance_schema_events_transactions_history_size",
@@ -148,7 +148,7 @@
     },
     {
       "cli": "--performance-schema-events-waits-history-long-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_events_waits_history_long_size",
       "name": "performance_schema_events_waits_history_long_size",
@@ -163,7 +163,7 @@
     },
     {
       "cli": "--performance-schema-events-waits-history-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_events_waits_history_size",
       "name": "performance_schema_events_waits_history_size",
@@ -178,7 +178,7 @@
     },
     {
       "cli": "--performance-schema-hosts-size=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_hosts_size",
       "name": "performance_schema_hosts_size",
@@ -206,7 +206,7 @@
     },
     {
       "cli": "--performance-schema-max-cond-instances=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_cond_instances",
       "name": "performance_schema_max_cond_instances",
@@ -280,7 +280,7 @@
     },
     {
       "cli": "--performance-schema-max-file-instances=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_file_instances",
       "name": "performance_schema_max_file_instances",
@@ -295,7 +295,7 @@
     },
     {
       "cli": "--performance-schema-max-index-stat=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_index_stat",
       "name": "performance_schema_max_index_stat",
@@ -325,7 +325,7 @@
     },
     {
       "cli": "--performance-schema-max-metadata-locks=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_metadata_locks",
       "name": "performance_schema_max_metadata_locks",
@@ -353,7 +353,7 @@
     },
     {
       "cli": "--performance-schema-max-mutex-instances=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_mutex_instances",
       "name": "performance_schema_max_mutex_instances",
@@ -368,7 +368,7 @@
     },
     {
       "cli": "--performance-schema-max-prepared-statements-instances=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_prepared_statements_instances",
       "name": "performance_schema_max_prepared_statements_instances",
@@ -397,7 +397,7 @@
     },
     {
       "cli": "--performance-schema-max-program-instances=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_program_instances",
       "name": "performance_schema_max_program_instances",
@@ -412,7 +412,7 @@
     },
     {
       "cli": "--performance-schema-max-rwlock-instances=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_rwlock_instances",
       "name": "performance_schema_max_rwlock_instances",
@@ -441,7 +441,7 @@
     },
     {
       "cli": "--performance-schema-max-socket-instances=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_socket_instances",
       "name": "performance_schema_max_socket_instances",
@@ -513,7 +513,7 @@
     },
     {
       "cli": "--performance-schema-max-table-handles=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_table_handles",
       "name": "performance_schema_max_table_handles",
@@ -528,7 +528,7 @@
     },
     {
       "cli": "--performance-schema-max-table-instances=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_table_instances",
       "name": "performance_schema_max_table_instances",
@@ -543,7 +543,7 @@
     },
     {
       "cli": "--performance-schema-max-table-lock-stat=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_table_lock_stat",
       "name": "performance_schema_max_table_lock_stat",
@@ -572,7 +572,7 @@
     },
     {
       "cli": "--performance-schema-max-thread-instances=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_thread_instances",
       "name": "performance_schema_max_thread_instances",
@@ -587,7 +587,7 @@
     },
     {
       "cli": "--performance-schema-session-connect-attrs-size=#",
-      "default": "(-1 signifies autosizing; do not use -1)",
+      "default": "-1 (signifies autosizing; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_session_connect_attrs_size",
       "name": "performance_schema_session_connect_attrs_size",
@@ -602,7 +602,7 @@
     },
     {
       "cli": "--performance-schema-setup-actors-size=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_setup_actors_size",
       "name": "performance_schema_setup_actors_size",
@@ -617,7 +617,7 @@
     },
     {
       "cli": "--performance-schema-setup-objects-size=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_setup_objects_size",
       "name": "performance_schema_setup_objects_size",
@@ -643,7 +643,7 @@
     },
     {
       "cli": "--performance-schema-users-size=#",
-      "default": "(-1 signifies autoscaling; do not use -1)",
+      "default": "-1 (signifies autoscaling; do not assign this literal value)",
       "dynamic": false,
       "id": "sysvar_performance_schema_users_size",
       "name": "performance_schema_users_size",

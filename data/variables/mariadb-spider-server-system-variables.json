@@ -20,7 +20,7 @@
       "name": "spider_bgs_first_read",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -48,7 +48,7 @@
       "name": "spider_bgs_second_read",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -263,7 +263,7 @@
       "name": "spider_connect_retry_interval",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -403,7 +403,7 @@
       "name": "spider_direct_order_limit",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -455,7 +455,7 @@
       "name": "spider_first_read",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -517,7 +517,7 @@
       "name": "spider_internal_limit",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -531,7 +531,7 @@
       "name": "spider_internal_offset",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -572,8 +572,7 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "integer"
+      ]
     },
     {
       "id": "spider_internal_unlock",
@@ -810,7 +809,7 @@
       "name": "spider_quick_page_byte",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -824,7 +823,7 @@
       "name": "spider_quick_page_size",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -959,7 +958,7 @@
       "name": "spider_second_read",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -1015,7 +1014,7 @@
       "name": "spider_semi_split_read_limit",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -1124,7 +1123,7 @@
       "name": "spider_split_read",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",
@@ -1345,7 +1344,7 @@
       "name": "spider_udf_ct_bulk_insert_rows",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -1359,7 +1358,7 @@
       "name": "spider_udf_ds_bulk_insert_rows",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",

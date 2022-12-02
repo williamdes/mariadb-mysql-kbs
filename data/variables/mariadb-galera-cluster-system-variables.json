@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "cli": "--wsrep-allowlist=value1[,value2...]",
+      "default": "None",
+      "dynamic": false,
+      "id": "wsrep_allowlist",
+      "name": "wsrep_allowlist",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--wsrep-auto-increment-control[={0|1}]",
       "default": "ON",
       "dynamic": true,
@@ -111,7 +122,14 @@
       "scope": [
         "global"
       ],
-      "type": "enumeration"
+      "type": "enumeration",
+      "validValues": [
+        "NONE",
+        "SERVER",
+        "TRANSACTION",
+        "STREAMING",
+        "CLIENT"
+      ]
     },
     {
       "cli": "--wsrep-desync[={0|1}]",
@@ -200,7 +218,7 @@
       "name": "wsrep_gtid_seq_no",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "session"
@@ -609,6 +627,17 @@
       "type": "string"
     },
     {
+      "cli": "--wsrep-status-file=value",
+      "default": "None",
+      "dynamic": false,
+      "id": "wsrep_status_file",
+      "name": "wsrep_status_file",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--wsrep-strict-ddl[={0|1}",
       "default": "OFF",
       "dynamic": true,
@@ -626,8 +655,7 @@
       "id": "wsrep_sync_wait",
       "name": "wsrep_sync_wait",
       "range": {
-        "from": 0,
-        "to": 15
+        "from": 0
       },
       "scope": [
         "global",

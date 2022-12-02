@@ -12,7 +12,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--handlersocket-address=\"value\"",
@@ -36,7 +37,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--handlersocket-epoll=\"value\"",
@@ -46,6 +48,11 @@
       "name": "handlersocket_epoll",
       "scope": [
         "global"
+      ],
+      "type": "integer",
+      "validValues": [
+        "0",
+        "1"
       ]
     },
     {
@@ -72,7 +79,8 @@
       "name": "handlersocket_port",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--handlersocket-port-wr=\"value\"",
@@ -82,7 +90,8 @@
       "name": "handlersocket_port_wr",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--handlersocket-rcvbuf=\"value\"",
@@ -96,7 +105,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--handlersocket-readsize=\"value\"",
@@ -110,7 +120,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--handlersocket-sndbuf=\"value\"",
@@ -124,7 +135,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--handlersocket-threads=\"value\"",
@@ -138,7 +150,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--handlersocket-threads-wr=\"value\"",
@@ -152,7 +165,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--handlersocket-timeout=\"value\"",
@@ -166,7 +180,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--handlersocket-verbose=\"value\"",
@@ -176,6 +191,11 @@
       "name": "handlersocket_verbose",
       "scope": [
         "global"
+      ],
+      "type": "integer",
+      "validValues": [
+        "0",
+        "10000"
       ]
     },
     {
@@ -189,7 +209,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     }
   ],
   "name": "handlersocket-configuration-options-variables",

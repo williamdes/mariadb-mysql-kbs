@@ -334,7 +334,6 @@
       "id": "innodb_buffer_pool_chunk_size",
       "name": "innodb_buffer_pool_chunk_size",
       "range": {
-        "from": 0,
         "to": 1048576
       },
       "scope": [
@@ -457,7 +456,7 @@
       "name": "innodb_buffer_pool_load_pages_abort",
       "range": {
         "from": 1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -510,14 +509,10 @@
     },
     {
       "cli": "--innodb-buffer-pool-size=#",
-      "default": "134217728 (128iMB)",
+      "default": "134217728",
       "dynamic": false,
       "id": "innodb_buffer_pool_size",
       "name": "innodb_buffer_pool_size",
-      "range": {
-        "from": 5242880,
-        "to": 25165824
-      },
       "scope": [
         "global"
       ],
@@ -768,7 +763,7 @@
       "name": "innodb_concurrency_tickets",
       "range": {
         "from": 1,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1141,8 +1136,7 @@
       "id": "innodb_encryption_threads",
       "name": "innodb_encryption_threads",
       "range": {
-        "from": 0,
-        "to": 4294967295
+        "from": 0
       },
       "scope": [
         "global"
@@ -1205,8 +1199,7 @@
       "id": "innodb_fast_shutdown",
       "name": "innodb_fast_shutdown",
       "range": {
-        "from": 0,
-        "to": 3
+        "from": 0
       },
       "scope": [
         "global"
@@ -1282,6 +1275,7 @@
     },
     {
       "cli": "--innodb-fill-factor=#",
+      "default": "100",
       "dynamic": true,
       "id": "innodb_fill_factor",
       "name": "innodb_fill_factor",
@@ -1383,6 +1377,7 @@
     },
     {
       "cli": "--innodb-flush-sync={0|1}",
+      "default": ": ON",
       "dynamic": true,
       "id": "innodb_flush_sync",
       "name": "innodb_flush_sync",
@@ -1553,7 +1548,7 @@
       "name": "innodb_ft_result_cache_limit",
       "range": {
         "from": 1000000,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1648,9 +1643,6 @@
       "dynamic": false,
       "id": "innodb_ibuf_max_size",
       "name": "innodb_ibuf_max_size",
-      "range": {
-        "from": 0
-      },
       "scope": [
         "global"
       ],
@@ -1734,7 +1726,7 @@
       "name": "innodb_io_capacity",
       "range": {
         "from": 100,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1747,6 +1739,10 @@
       "dynamic": true,
       "id": "innodb_io_capacity_max",
       "name": "innodb_io_capacity_max",
+      "range": {
+        "from": 100,
+        "to": 18446744073709551615
+      },
       "scope": [
         "global"
       ],
@@ -1759,7 +1755,7 @@
       "name": "innodb_kill_idle_transaction",
       "range": {
         "from": 0,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -1809,10 +1805,6 @@
       "dynamic": true,
       "id": "innodb_lock_wait_timeout",
       "name": "innodb_lock_wait_timeout",
-      "range": {
-        "from": 0,
-        "to": 100000000
-      },
       "scope": [
         "global",
         "session"
@@ -1886,7 +1878,7 @@
     },
     {
       "cli": "--innodb-log-buffer-size=#",
-      "default": "16777216 (16MB)",
+      "default": "16777216",
       "dynamic": false,
       "id": "innodb_log_buffer_size",
       "name": "innodb_log_buffer_size",
@@ -1964,10 +1956,6 @@
       "dynamic": false,
       "id": "innodb_log_file_size",
       "name": "innodb_log_file_size",
-      "range": {
-        "from": 4194304,
-        "to": 512
-      },
       "scope": [
         "global"
       ],
@@ -1980,7 +1968,6 @@
       "id": "innodb_log_files_in_group",
       "name": "innodb_log_files_in_group",
       "range": {
-        "from": 1,
         "to": 100
       },
       "scope": [
@@ -2015,9 +2002,6 @@
       "dynamic": true,
       "id": "innodb_log_write_ahead_size",
       "name": "innodb_log_write_ahead_size",
-      "range": {
-        "from": 512
-      },
       "scope": [
         "global"
       ],
@@ -2031,7 +2015,7 @@
       "name": "innodb_lru_flush_size",
       "range": {
         "from": 1,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -2051,13 +2035,13 @@
     },
     {
       "cli": "innodb-max-bitmap-file-size=#",
-      "default": "4096 (4KB)",
+      "default": "4096",
       "dynamic": true,
       "id": "innodb_max_bitmap_file_size",
       "name": "innodb_max_bitmap_file_size",
       "range": {
         "from": 4096,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -2072,7 +2056,7 @@
       "name": "innodb_max_changed_pages",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -2158,7 +2142,7 @@
       "name": "innodb_max_undo_log_size",
       "range": {
         "from": 10485760,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -2167,7 +2151,7 @@
     },
     {
       "cli": "innodb-merge-sort-block-size=#",
-      "default": "1048576 (1M)",
+      "default": "1048576",
       "dynamic": true,
       "id": "innodb_merge_sort_block_size",
       "name": "innodb_merge_sort_block_size",
@@ -2272,8 +2256,7 @@
       "id": "innodb_old_blocks_time",
       "name": "innodb_old_blocks_time",
       "range": {
-        "from": 0,
-        "to": 232
+        "from": 0
       },
       "scope": [
         "global"
@@ -2287,8 +2270,7 @@
       "id": "innodb_online_alter_log_max_size",
       "name": "innodb_online_alter_log_max_size",
       "range": {
-        "from": 65536,
-        "to": 264
+        "from": 65536
       },
       "scope": [
         "global"
@@ -2503,7 +2485,6 @@
       "dynamic": false,
       "id": "innodb_read_only_compressed",
       "name": "innodb_read_only_compressed",
-      "scope": [],
       "type": "boolean"
     },
     {
@@ -2681,7 +2662,7 @@
     },
     {
       "cli": "--innodb-sort-buffer-size=#",
-      "default": "1048576 (1M)",
+      "default": "1048576",
       "dynamic": false,
       "id": "innodb_sort_buffer_size",
       "name": "innodb_sort_buffer_size",
@@ -2764,7 +2745,7 @@
       "name": "innodb_stats_modified_counter",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -2811,8 +2792,7 @@
       "id": "innodb_stats_sample_pages",
       "name": "innodb_stats_sample_pages",
       "range": {
-        "from": 1,
-        "to": 264
+        "from": 1
       },
       "scope": [
         "global"
@@ -2837,8 +2817,7 @@
       "id": "innodb_stats_transient_sample_pages",
       "name": "innodb_stats_transient_sample_pages",
       "range": {
-        "from": 1,
-        "to": 264
+        "from": 1
       },
       "scope": [
         "global"
@@ -3072,8 +3051,7 @@
       "id": "innodb_undo_tablespaces",
       "name": "innodb_undo_tablespaces",
       "range": {
-        "from": 0,
-        "to": 95
+        "from": 0
       },
       "scope": [
         "global"

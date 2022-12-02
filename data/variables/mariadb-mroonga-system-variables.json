@@ -198,7 +198,7 @@
       "name": "mroonga_match_escalation_threshold",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global",

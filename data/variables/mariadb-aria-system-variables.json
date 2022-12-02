@@ -6,10 +6,6 @@
       "dynamic": false,
       "id": "aria_block_size",
       "name": "aria_block_size",
-      "range": {
-        "from": 4096,
-        "to": 32768
-      },
       "scope": [
         "global"
       ],
@@ -36,6 +32,10 @@
       "dynamic": true,
       "id": "aria_checkpoint_log_activity",
       "name": "aria_checkpoint_log_activity",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],
@@ -81,7 +81,7 @@
     },
     {
       "cli": "--aria_group_commit_interval=#",
-      "default": "0 (no waiting)",
+      "default": "0",
       "dynamic": false,
       "id": "aria_group_commit_interval",
       "name": "aria_group_commit_interval",
@@ -92,7 +92,11 @@
       "scope": [
         "global"
       ],
-      "type": "integer"
+      "type": "integer",
+      "validValues": [
+        "0",
+        "0-4294967295"
+      ]
     },
     {
       "cli": "--aria-log-file-size=#",
@@ -129,7 +133,7 @@
       "name": "aria_max_sort_file_size",
       "range": {
         "from": 0,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -164,7 +168,7 @@
     },
     {
       "cli": "--aria-pagecache-buffer-size=#",
-      "default": "134217720 (128MB)",
+      "default": "134217720",
       "dynamic": false,
       "id": "aria_pagecache_buffer_size",
       "name": "aria_pagecache_buffer_size",

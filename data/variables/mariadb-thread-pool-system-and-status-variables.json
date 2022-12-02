@@ -48,7 +48,6 @@
       "dynamic": false,
       "id": "thread_pool_dedicated_listener",
       "name": "thread_pool_dedicated_listener",
-      "scope": [],
       "type": "boolean"
     },
     {
@@ -57,7 +56,6 @@
       "dynamic": false,
       "id": "thread_pool_exact_stats",
       "name": "thread_pool_exact_stats",
-      "scope": [],
       "type": "boolean"
     },
     {
@@ -144,8 +142,7 @@
       "id": "thread_pool_size",
       "name": "thread_pool_size",
       "range": {
-        "from": 1,
-        "to": 128
+        "from": 1
       },
       "scope": [
         "global"
@@ -159,7 +156,6 @@
       "id": "thread_pool_stall_limit",
       "name": "thread_pool_stall_limit",
       "range": {
-        "from": 10,
         "to": 4294967295
       },
       "scope": [

@@ -811,13 +811,11 @@
     {
       "id": "innodb_num_index_pages_written",
       "name": "Innodb_num_index_pages_written",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "innodb_num_non_index_pages_written",
       "name": "Innodb_num_non_index_pages_written",
-      "scope": [],
       "type": "integer"
     },
     {
@@ -958,50 +956,41 @@
     },
     {
       "id": "innodb_page_compression_saved",
-      "name": "Innodb_page_compression_saved",
-      "scope": [],
-      "type": "byte"
+      "name": "Innodb_page_compression_saved"
     },
     {
       "id": "innodb_page_compression_trim_sect512",
       "name": "Innodb_page_compression_trim_sect512",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "innodb_page_compression_trim_sect1024",
       "name": "Innodb_page_compression_trim_sect1024",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "innodb_page_compression_trim_sect2048",
       "name": "Innodb_page_compression_trim_sect2048",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "innodb_page_compression_trim_sect4096",
       "name": "Innodb_page_compression_trim_sect4096",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "innodb_page_compression_trim_sect8192",
       "name": "Innodb_page_compression_trim_sect8192",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "innodb_page_compression_trim_sect16384",
       "name": "Innodb_page_compression_trim_sect16384",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "innodb_page_compression_trim_sect32768",
       "name": "Innodb_page_compression_trim_sect32768",
-      "scope": [],
       "type": "integer"
     },
     {
@@ -1247,25 +1236,21 @@
     {
       "id": "innodb_system_rows_deleted",
       "name": "Innodb_system_rows_deleted",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "innodb_system_rows_inserted",
       "name": "Innodb_system_rows_inserted",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "innodb_system_rows_read",
       "name": "Innodb_system_rows_read",
-      "scope": [],
       "type": "integer"
     },
     {
       "id": "innodb_system_rows_updated",
       "name": "Innodb_system_rows_updated",
-      "scope": [],
       "type": "integer"
     },
     {

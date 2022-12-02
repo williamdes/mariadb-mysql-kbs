@@ -92,7 +92,7 @@
       "name": "binlog_commit_wait_count",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -107,7 +107,7 @@
       "name": "binlog_commit_wait_usec",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -150,7 +150,7 @@
       "name": "binlog_file_cache_size",
       "range": {
         "from": 8192,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -232,7 +232,7 @@
       "type": "integer"
     },
     {
-      "default": "'' (empty string)",
+      "default": "''",
       "dynamic": true,
       "id": "default_master_connection",
       "name": "default_master_connection",
@@ -381,7 +381,7 @@
       "name": "max_binlog_cache_size",
       "range": {
         "from": 4096,
-        "to": 18446744073709548000
+        "to": 18446744073709547520
       },
       "scope": [
         "global"
@@ -390,7 +390,7 @@
     },
     {
       "cli": "--max-binlog-size=#",
-      "default": "1073741824 (1GB)",
+      "default": "1073741824",
       "dynamic": true,
       "id": "max_binlog_size",
       "name": "max_binlog_size",
@@ -411,7 +411,7 @@
       "name": "max_binlog_stmt_cache_size",
       "range": {
         "from": 4096,
-        "to": 18446744073709548000
+        "to": 18446744073709547520
       },
       "scope": [
         "global"
@@ -425,8 +425,7 @@
       "id": "max_relay_log_size",
       "name": "max_relay_log_size",
       "range": {
-        "from": 0,
-        "to": 4096
+        "from": 0
       },
       "scope": [
         "global",
@@ -436,13 +435,13 @@
     },
     {
       "cli": "--read-binlog-speed-limit=#",
-      "default": "0 (no limit)",
+      "default": "0",
       "dynamic": true,
       "id": "read_binlog_speed_limit",
       "name": "read_binlog_speed_limit",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -451,7 +450,7 @@
     },
     {
       "cli": "--relay-log=file_name",
-      "default": "'' (none)",
+      "default": "''",
       "dynamic": false,
       "id": "relay_log",
       "name": "relay_log",
@@ -536,7 +535,7 @@
     },
     {
       "cli": "--replicate-do-db=name",
-      "default": "'' (empty)",
+      "default": "''",
       "dynamic": true,
       "id": "replicate_do_db",
       "name": "replicate_do_db",
@@ -547,7 +546,7 @@
     },
     {
       "cli": "--replicate-do-table=name",
-      "default": "'' (empty)",
+      "default": "''",
       "dynamic": true,
       "id": "replicate_do_table",
       "name": "replicate_do_table",
@@ -574,7 +573,7 @@
     },
     {
       "cli": "--replicate-ignore-db=name",
-      "default": "'' (empty)",
+      "default": "''",
       "dynamic": true,
       "id": "replicate_ignore_db",
       "name": "replicate_ignore_db",
@@ -585,7 +584,7 @@
     },
     {
       "cli": "--replicate-ignore-table=name",
-      "default": "'' (empty)",
+      "default": "''",
       "dynamic": true,
       "id": "replicate_ignore_table",
       "name": "replicate_ignore_table",
@@ -596,7 +595,7 @@
     },
     {
       "cli": "--replicate-rewrite-db=primary_database->replica_database",
-      "default": "'' (empty)",
+      "default": "''",
       "dynamic": true,
       "id": "replicate_rewrite_db",
       "name": "replicate_rewrite_db",
@@ -607,7 +606,7 @@
     },
     {
       "cli": "--replicate-wild-do-table=name",
-      "default": "'' (empty)",
+      "default": "''",
       "dynamic": true,
       "id": "replicate_wild_do_table",
       "name": "replicate_wild_do_table",
@@ -618,7 +617,7 @@
     },
     {
       "cli": "--replicate-wild-ignore-table=name",
-      "default": "'' (empty)",
+      "default": "''",
       "dynamic": true,
       "id": "replicate_wild_ignore_table",
       "name": "replicate_wild_ignore_table",
@@ -679,7 +678,6 @@
       "id": "server_id",
       "name": "server_id",
       "range": {
-        "from": 1,
         "to": 4294967295
       },
       "scope": [

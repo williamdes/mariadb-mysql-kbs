@@ -116,7 +116,7 @@
       "name": "rocksdb_block_cache_size",
       "range": {
         "from": 1024,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -146,7 +146,7 @@
       "name": "rocksdb_block_size",
       "range": {
         "from": 1,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -228,7 +228,7 @@
       "name": "rocksdb_bytes_per_sync",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -352,7 +352,7 @@
       "name": "rocksdb_compaction_readahead_size",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -393,7 +393,7 @@
       "name": "rocksdb_compaction_sequential_deletes_file_size",
       "range": {
         "from": -1,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -478,7 +478,7 @@
       "name": "rocksdb_db_write_buffer_size",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -505,7 +505,7 @@
       "name": "rocksdb_deadlock_detect_depth",
       "range": {
         "from": 2,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -614,7 +614,7 @@
       "name": "rocksdb_delayed_write_rate",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -640,7 +640,7 @@
       "name": "rocksdb_delete_obsolete_files_period_micros",
       "range": {
         "from": 0,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -937,7 +937,7 @@
       "name": "rocksdb_keep_log_file_num",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1002,7 +1002,7 @@
       "name": "rocksdb_log_file_time_to_roll",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1017,7 +1017,7 @@
       "name": "rocksdb_manifest_preallocation_size",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1131,7 +1131,7 @@
       "name": "rocksdb_max_log_file_size",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1146,7 +1146,7 @@
       "name": "rocksdb_max_manifest_file_size",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1190,8 +1190,7 @@
       "id": "rocksdb_max_row_locks",
       "name": "rocksdb_max_row_locks",
       "range": {
-        "from": 1,
-        "to": 1073741824
+        "from": 1
       },
       "scope": [
         "global",
@@ -1222,7 +1221,7 @@
       "name": "rocksdb_max_total_wal_size",
       "range": {
         "from": 0,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -1237,7 +1236,7 @@
       "name": "rocksdb_merge_buf_size",
       "range": {
         "from": 100,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -1253,7 +1252,7 @@
       "name": "rocksdb_merge_combine_read_size",
       "range": {
         "from": 100,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -1269,7 +1268,7 @@
       "name": "rocksdb_merge_tmp_file_removal_delay_ms",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -1367,7 +1366,7 @@
       "name": "rocksdb_persistent_cache_size_mb",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1404,7 +1403,7 @@
       "name": "rocksdb_rate_limiter_bytes_per_sec",
       "range": {
         "from": 0,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -1506,7 +1505,7 @@
       "name": "rocksdb_sim_cache_size",
       "range": {
         "from": 0,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -1557,7 +1556,7 @@
       "name": "rocksdb_sst_mgr_rate_bytes_per_sec",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1842,7 +1841,7 @@
       "name": "rocksdb_wal_bytes_per_sync",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -1883,7 +1882,7 @@
       "name": "rocksdb_wal_size_limit_mb",
       "range": {
         "from": 0,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -1898,7 +1897,7 @@
       "name": "rocksdb_wal_ttl_seconds",
       "range": {
         "from": 0,
-        "to": 9223372036854776000
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -1924,7 +1923,7 @@
       "name": "rocksdb_write_batch_max_bytes",
       "range": {
         "from": 0,
-        "to": 18446744073709552000
+        "to": 18446744073709551615
       },
       "scope": [
         "global",

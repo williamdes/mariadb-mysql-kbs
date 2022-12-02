@@ -253,9 +253,6 @@
       "default": "6 * page size",
       "id": "option_mysqld_log-tc-size",
       "name": "log_tc_size",
-      "range": {
-        "from": 6
-      },
       "type": "integer"
     },
     {

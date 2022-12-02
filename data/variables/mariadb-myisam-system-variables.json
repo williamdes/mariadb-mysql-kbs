@@ -77,7 +77,7 @@
     },
     {
       "cli": "--key-cache-segments=#",
-      "default": "0 (non-segmented)",
+      "default": "0",
       "dynamic": true,
       "id": "key_cache_segments",
       "name": "key_cache_segments",
@@ -174,13 +174,13 @@
     },
     {
       "cli": "--myisam-sort-buffer-size=#",
-      "default": "134217720 (128MB)",
+      "default": "134217720",
       "dynamic": true,
       "id": "myisam_sort_buffer_size",
       "name": "myisam_sort_buffer_size",
       "range": {
         "from": 4096,
-        "to": 18446744073709548000
+        "to": 18446744073709547520
       },
       "scope": [
         "global",

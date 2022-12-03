@@ -2,3 +2,20 @@ comment:
     layout: "reach, diff, flags, files, uncovered"
     require_changes: true # if true: only post the comment if coverage changes
     show_carryforward_flags: true
+coverage:
+    status:
+        project:
+            default:
+                target: 70% # the required coverage value
+                threshold: 1% # the leniency in hitting the target
+flags:
+    php:
+        paths:
+            - src/*.php
+    node:
+        paths:
+            - scripts/sudo-bot/*.js
+    rust:
+        paths:
+            - src/rust/
+

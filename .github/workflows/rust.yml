@@ -4,9 +4,13 @@ on:
     pull_request:
         paths:
             - "src/rust/**"
+            - "Cargo.toml"
+            - "Cargo.lock"
     push:
         paths:
             - "src/rust/**"
+            - "Cargo.toml"
+            - "Cargo.lock"
 
 permissions:
     contents: read

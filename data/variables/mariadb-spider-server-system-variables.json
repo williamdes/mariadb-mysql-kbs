@@ -706,6 +706,7 @@
       "type": "integer"
     },
     {
+      "cli": "--spider-max-connections",
       "dynamic": true,
       "id": "spider_max_connections",
       "name": "spider_max_connections",
@@ -1567,6 +1568,7 @@
       "type": "integer"
     },
     {
+      "cli": "--spider-xa-register-mode=#",
       "default": "1",
       "dynamic": true,
       "id": "spider_xa_register_mode",

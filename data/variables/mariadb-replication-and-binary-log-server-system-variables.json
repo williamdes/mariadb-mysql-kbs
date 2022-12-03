@@ -62,6 +62,10 @@
       "dynamic": true,
       "id": "binlog_cache_size",
       "name": "binlog_cache_size",
+      "range": {
+        "from": 4096,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global"
       ],
@@ -226,6 +230,10 @@
       "dynamic": true,
       "id": "binlog_stmt_cache_size",
       "name": "binlog_stmt_cache_size",
+      "range": {
+        "from": 4096,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global"
       ],
@@ -367,11 +375,13 @@
     {
       "cli": "--master-verify-checksum=[0|1]",
       "default": "OFF (0)",
+      "dynamic": true,
       "id": "master_verify_checksum",
       "name": "master_verify_checksum",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--max-binlog-cache-size=#",
@@ -456,7 +466,8 @@
       "name": "relay_log",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "file name"
     },
     {
       "default": "None",
@@ -517,6 +528,10 @@
       "dynamic": false,
       "id": "relay_log_space_limit",
       "name": "relay_log_space_limit",
+      "range": {
+        "from": 0,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global"
       ],
@@ -889,11 +904,13 @@
     {
       "cli": "--slave-sql-verify-checksum=[0|1]",
       "default": "ON (1)",
+      "dynamic": true,
       "id": "slave_sql_verify_checksum",
       "name": "slave_sql_verify_checksum",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--slave-transaction-retries=#",
@@ -901,6 +918,10 @@
       "dynamic": true,
       "id": "slave_transaction_retries",
       "name": "slave_transaction_retries",
+      "range": {
+        "from": 0,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global"
       ],

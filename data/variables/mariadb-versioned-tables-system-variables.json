@@ -24,7 +24,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--system-versioning-innodb-algorithm-simple[={0|1}]",

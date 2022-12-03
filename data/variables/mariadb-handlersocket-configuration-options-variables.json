@@ -23,7 +23,8 @@
       "name": "handlersocket_address",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "cli": "--handlersocket-backlog=\"value\"",

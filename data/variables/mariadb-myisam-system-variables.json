@@ -122,6 +122,7 @@
     },
     {
       "cli": "--myisam-max-sort-file-size=#",
+      "default": "9223372036854775807",
       "dynamic": true,
       "id": "myisam_max_sort_file_size",
       "name": "myisam_max_sort_file_size",
@@ -132,9 +133,14 @@
     },
     {
       "cli": "--myisam-mmap-size=#",
+      "default": "18446744073709547520",
       "dynamic": true,
       "id": "myisam_mmap_size",
       "name": "myisam_mmap_size",
+      "range": {
+        "from": 7,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global",
         "session"
@@ -166,6 +172,10 @@
       "dynamic": true,
       "id": "myisam_repair_threads",
       "name": "myisam_repair_threads",
+      "range": {
+        "from": 1,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global",
         "session"

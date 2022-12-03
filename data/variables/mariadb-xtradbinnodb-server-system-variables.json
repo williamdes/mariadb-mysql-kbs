@@ -63,7 +63,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "innodb-adaptive-flushing-method=value",
@@ -480,6 +481,10 @@
       "dynamic": true,
       "id": "innodb_buffer_pool_restore_at_startup",
       "name": "innodb_buffer_pool_restore_at_startup",
+      "range": {
+        "from": 0,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global"
       ],
@@ -909,7 +914,8 @@
       },
       "scope": [
         "global"
-      ]
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-defragment-fill-factor-n-recs=#",
@@ -973,7 +979,7 @@
     },
     {
       "cli": "innodb-dict-size-limit=#",
-      "default": "0",
+      "default": "9223372036854775807",
       "dynamic": true,
       "id": "innodb_dict_size_limit",
       "name": "innodb_dict_size_limit",
@@ -1022,7 +1028,8 @@
       "name": "innodb_doublewrite_file",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "file name"
     },
     {
       "cli": "innodb-empty-free-list-algorithm=value",
@@ -2028,6 +2035,9 @@
       "dynamic": true,
       "id": "innodb_lru_scan_depth",
       "name": "innodb_lru_scan_depth",
+      "range": {
+        "from": 100
+      },
       "scope": [
         "global"
       ],

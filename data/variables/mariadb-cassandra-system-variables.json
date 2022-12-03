@@ -82,6 +82,7 @@
         "global",
         "session"
       ],
+      "type": "integer",
       "validValues": [
         "1",
         "1073741824"

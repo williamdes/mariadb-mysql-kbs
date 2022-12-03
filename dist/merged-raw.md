@@ -910,6 +910,7 @@
 |name|value|
 |----|-----|
 |Name|`cassandra_rnd_batch_size`|
+|Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Default value|`10000`|
 |Valid value(s)|`1`, `1073741824`|
@@ -3095,6 +3096,7 @@
 |----|-----|
 |Name|`handlersocket_address`|
 |Command line|`--handlersocket-address="value"`|
+|Type of variable|`string`|
 |Scope|`global`|
 |Default value|`Empty, previously 0.0.0.0`|
 |Dynamic|`false`|
@@ -4136,7 +4138,7 @@
 |Name|`myisam_mmap_size`|
 |Command line|`--myisam-mmap-size=#`|
 |Type of variable|`integer`|
-|Range|from: `7`|
+|Range|from: `7` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -4169,7 +4171,7 @@
 |Scope|`global`, `session`|
 |Default value|`1`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -5868,6 +5870,7 @@
 |----|-----|
 |Name|`rocksdb_cache_high_pri_pool_ratio`|
 |Command line|`--rocksdb-cache-high-pri-pool-ratio=#`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`0.000000`|
 |Dynamic|`true`|
@@ -7628,6 +7631,7 @@
 |----|-----|
 |Name|`rocksdb_update_cf_options`|
 |Command line|`--rocksdb-update-cf-options=value`|
+|Type of variable|`string`|
 |Scope|`global`|
 |Default value|`(Empty)`|
 |Dynamic|`true`|
@@ -9409,7 +9413,7 @@
 |Scope|`global`|
 |Default value|`32768`|
 |Dynamic|`true`|
-|Range|from: `4096`|
+|Range|from: `4096` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -9593,7 +9597,7 @@
 |Scope|`global`|
 |Default value|`32768`|
 |Dynamic|`true`|
-|Range|from: `4096`|
+|Range|from: `4096` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -10452,7 +10456,7 @@
 |Scope|`global`|
 |Default value|`10`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -15663,7 +15667,7 @@
 |Scope|`global`, `session`|
 |Default value|`8388608`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -16527,7 +16531,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `4`|
+|Range|from: `4` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -16897,7 +16901,6 @@
 |Scope|`global`, `session`|
 |Default value|`262144`|
 |Dynamic|`true`|
-|Range|from: `128`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17222,6 +17225,7 @@
 |Scope|`global`, `session`|
 |Default value|`sp`|
 |Dynamic|`false`|
+|Valid value(s)|`admin`, `call`, `slave`, `sp`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18410,7 +18414,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `1024` to: `4294966272`|
+|Range|from: `1024`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18443,6 +18447,7 @@
 |Scope|`global`|
 |Default value|`4096`|
 |Dynamic|`true`|
+|Range|from: `1024` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18561,7 +18566,7 @@
 |Scope|`global`, `session`|
 |Default value|`4096`|
 |Dynamic|`true`|
-|Range|from: `4096` to: `4294966272`|
+|Range|from: `4096`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18692,7 +18697,6 @@
 |----|-----|
 |Name|`secure_file_priv`|
 |Command line|`--secure-path-priv=path`|
-|Type of variable|`string`|
 |Scope|`global`|
 |Default value|`platform specific`|
 |Dynamic|`false`|
@@ -20786,6 +20790,7 @@
 |name|value|
 |----|-----|
 |Name|`spider_max_connections`|
+|Command line|`--spider-max-connections`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Dynamic|`true`|
@@ -21710,6 +21715,7 @@
 |name|value|
 |----|-----|
 |Name|`spider_xa_register_mode`|
+|Command line|`--spider-xa-register-mode=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Default value|`1`|
@@ -24824,6 +24830,7 @@
 |name|value|
 |----|-----|
 |Name|`tokudb_last_lock_timeout`|
+|Type of variable|`string`|
 |Scope|`global`, `session`|
 |Default value|`Empty`|
 |Dynamic|`true`|
@@ -25210,6 +25217,7 @@
 |name|value|
 |----|-----|
 |Name|`system_versioning_asof`|
+|Type of variable|`string`|
 |Scope|`global`, `session`|
 |Default value|`DEFAULT`|
 |Dynamic|`true`|
@@ -27817,6 +27825,7 @@
 |Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28272,6 +28281,7 @@
 |----|-----|
 |Name|`innodb_defragment_fill_factor`|
 |Command line|`--innodb-defragment-fill-factor=#`|
+|Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`0.9`|
 |Dynamic|`true`|
@@ -28353,7 +28363,7 @@
 |Command line|`innodb-dict-size-limit=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0`|
+|Default value|`9223372036854775807`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28409,6 +28419,7 @@
 |----|-----|
 |Name|`innodb_doublewrite_file`|
 |Command line|`innodb-doublewrite-file=filename`|
+|Type of variable|`file name`|
 |Scope|`global`|
 |Default value|`NULL`|
 |Dynamic|`false`|

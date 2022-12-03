@@ -115,6 +115,10 @@
       "dynamic": true,
       "id": "bulk_insert_buffer_size",
       "name": "bulk_insert_buffer_size",
+      "range": {
+        "from": 0,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global",
         "session"
@@ -727,6 +731,9 @@
       "dynamic": false,
       "id": "ft_max_word_len",
       "name": "ft_max_word_len",
+      "range": {
+        "from": 10
+      },
       "scope": [
         "global"
       ],
@@ -738,6 +745,9 @@
       "dynamic": false,
       "id": "ft_min_word_len",
       "name": "ft_min_word_len",
+      "range": {
+        "from": 1
+      },
       "scope": [
         "global"
       ],
@@ -797,6 +807,10 @@
       "dynamic": true,
       "id": "group_concat_max_len",
       "name": "group_concat_max_len",
+      "range": {
+        "from": 4,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global",
         "session"
@@ -1082,6 +1096,10 @@
       "dynamic": true,
       "id": "join_buffer_size",
       "name": "join_buffer_size",
+      "range": {
+        "from": 8228,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global",
         "session"
@@ -1336,7 +1354,13 @@
         "global",
         "session"
       ],
-      "type": "set"
+      "type": "set",
+      "validValues": [
+        "admin",
+        "call",
+        "slave",
+        "sp"
+      ]
     },
     {
       "cli": "log-slow-filter=value1[,value2...]",
@@ -2441,6 +2465,10 @@
       "dynamic": true,
       "id": "query_alloc_block_size",
       "name": "query_alloc_block_size",
+      "range": {
+        "from": 1024,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global",
         "session"
@@ -2468,6 +2496,10 @@
       "dynamic": true,
       "id": "query_cache_min_res_unit",
       "name": "query_cache_min_res_unit",
+      "range": {
+        "from": 1024,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global"
       ],
@@ -2571,6 +2603,10 @@
       "dynamic": true,
       "id": "range_alloc_block_size",
       "name": "range_alloc_block_size",
+      "range": {
+        "from": 4096,
+        "to": 18446744073709547520
+      },
       "scope": [
         "global",
         "session"
@@ -2680,7 +2716,8 @@
       "name": "secure_file_priv",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "directory name"
     },
     {
       "cli": "--secure-timestamp=value",
@@ -3340,7 +3377,8 @@
       "name": "tmpdir",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "directory name"
     },
     {
       "cli": "--transaction-alloc-block-size=#",

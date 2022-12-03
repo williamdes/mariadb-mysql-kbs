@@ -294,7 +294,8 @@
       "scope": [
         "global",
         "session"
-      ]
+      ],
+      "type": "string"
     },
     {
       "default": "ON",

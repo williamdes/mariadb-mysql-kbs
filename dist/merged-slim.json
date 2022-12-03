@@ -909,6 +909,7 @@
                 "global",
                 "session"
             ],
+            "type": "integer",
             "validValues": [
                 "1",
                 "1073741824"
@@ -2800,6 +2801,7 @@
             "scope": [
                 "global"
             ],
+            "type": "string",
             "ids": [
                 "17#handlersocket_address"
             ]
@@ -3808,7 +3810,8 @@
             "cli": "--myisam-mmap-size=#",
             "name": "myisam_mmap_size",
             "range": {
-                "from": 7
+                "from": 7,
+                "to": 1.8446744073709548e+19
             },
             "type": "integer",
             "ids": [
@@ -3843,7 +3846,8 @@
             "dynamic": true,
             "name": "myisam_repair_threads",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 1.8446744073709548e+19
             },
             "scope": [
                 "global",
@@ -5435,6 +5439,7 @@
             "scope": [
                 "global"
             ],
+            "type": "integer",
             "ids": [
                 "26#rocksdb_cache_high_pri_pool_ratio"
             ]
@@ -7143,6 +7148,7 @@
             "scope": [
                 "global"
             ],
+            "type": "string",
             "ids": [
                 "26#rocksdb_update_cf_options"
             ]
@@ -8835,7 +8841,8 @@
             "dynamic": true,
             "name": "binlog_cache_size",
             "range": {
-                "from": 4096
+                "from": 4096,
+                "to": 1.8446744073709548e+19
             },
             "scope": [
                 "global"
@@ -9028,7 +9035,8 @@
             "dynamic": true,
             "name": "binlog_stmt_cache_size",
             "range": {
-                "from": 4096
+                "from": 4096,
+                "to": 1.8446744073709548e+19
             },
             "scope": [
                 "global"
@@ -9832,7 +9840,8 @@
             "dynamic": true,
             "name": "slave_transaction_retries",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 1.8446744073709548e+19
             },
             "scope": [
                 "global"
@@ -14497,7 +14506,8 @@
             "dynamic": true,
             "name": "bulk_insert_buffer_size",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 1.8446744073709548e+19
             },
             "scope": [
                 "global",
@@ -15342,7 +15352,8 @@
             "dynamic": true,
             "name": "group_concat_max_len",
             "range": {
-                "from": 4
+                "from": 4,
+                "to": 1.8446744073709548e+19
             },
             "scope": [
                 "global",
@@ -15692,9 +15703,6 @@
             "default": "262144",
             "dynamic": true,
             "name": "join_buffer_size",
-            "range": {
-                "from": 128
-            },
             "scope": [
                 "global",
                 "session"
@@ -16006,6 +16014,12 @@
                 "session"
             ],
             "type": "set",
+            "validValues": [
+                "admin",
+                "call",
+                "slave",
+                "sp"
+            ],
             "ids": [
                 "43#log_slow_disabled_statements"
             ]
@@ -17229,8 +17243,7 @@
             "dynamic": true,
             "name": "query_alloc_block_size",
             "range": {
-                "from": 1024,
-                "to": 4294966272
+                "from": 1024
             },
             "scope": [
                 "global",
@@ -17264,6 +17277,10 @@
             "default": "4096",
             "dynamic": true,
             "name": "query_cache_min_res_unit",
+            "range": {
+                "from": 1024,
+                "to": 1.8446744073709548e+19
+            },
             "scope": [
                 "global"
             ],
@@ -17380,8 +17397,7 @@
             "dynamic": true,
             "name": "range_alloc_block_size",
             "range": {
-                "from": 4096,
-                "to": 4294966272
+                "from": 4096
             },
             "scope": [
                 "global",
@@ -17507,7 +17523,6 @@
             "scope": [
                 "global"
             ],
-            "type": "string",
             "validValues": [
                 "empty string",
                 "dirname",
@@ -19603,6 +19618,7 @@
             ]
         },
         "spider_max_connections": {
+            "cli": "--spider-max-connections",
             "dynamic": true,
             "name": "spider_max_connections",
             "range": {
@@ -20594,6 +20610,7 @@
             ]
         },
         "spider_xa_register_mode": {
+            "cli": "--spider-xa-register-mode=#",
             "default": "1",
             "dynamic": true,
             "name": "spider_xa_register_mode",
@@ -22934,6 +22951,7 @@
                 "global",
                 "session"
             ],
+            "type": "string",
             "ids": [
                 "54#tokudb_last_lock_timeout"
             ]
@@ -23320,6 +23338,7 @@
                 "global",
                 "session"
             ],
+            "type": "string",
             "ids": [
                 "56#system_versioning_asof"
             ]
@@ -25543,6 +25562,10 @@
             "default": "0",
             "dynamic": true,
             "name": "innodb_buffer_pool_restore_at_startup",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709548e+19
+            },
             "scope": [
                 "global"
             ],
@@ -26033,6 +26056,7 @@
             "scope": [
                 "global"
             ],
+            "type": "integer",
             "ids": [
                 "58#innodb_defragment_fill_factor"
             ]
@@ -26107,7 +26131,7 @@
         },
         "innodb_dict_size_limit": {
             "cli": "innodb-dict-size-limit=#",
-            "default": "0",
+            "default": "9223372036854775807",
             "dynamic": true,
             "name": "innodb_dict_size_limit",
             "scope": [
@@ -26168,6 +26192,7 @@
             "scope": [
                 "global"
             ],
+            "type": "file name",
             "ids": [
                 "58#innodb_doublewrite_file"
             ]

@@ -1,0 +1,82 @@
+<h4 class="anchored_heading" id="spider_max_connections"><code>spider_max_connections</code></h4>
+<ul start="1">
+    <li><strong>Description:</strong> Maximum number of connections from Spider to a remote MariaDB servers. Defaults to
+        <code>0</code>, which is no limit.
+    </li>
+    <li><strong>Command-line:</strong> <code>--spider-max-connections</code>
+    </li>
+    <li><strong>Scope:</strong> Global
+    </li>
+    <li><strong>Dynamic:</strong> Yes
+    </li>
+    <li><strong>Data Type:</strong> <code>numeric</code>
+    </li>
+    <li><strong>Default Session Value:</strong> <code>0</code>
+    </li>
+    <li><strong>Range:</strong> <code>0</code> to <code>99999</code>
+    </li>
+    <li><strong>Introduced:</strong> <a href="/kb/en/mariadb-1033-release-notes/">MariaDB 10.3.3</a>
+    </li>
+</ul>
+<h4 class="anchored_heading" id="master_verify_checksum"><code>master_verify_checksum</code></h4>
+<ul start="1">
+    <li><strong>Description:</strong> Verify <a href="/kb/en/binlog-event-checksums/">binlog checksums</a> when reading
+        events from the binlog on the master.
+    </li>
+    <li><strong>Commandline:</strong> <code class="fixed"
+            style="white-space:pre-wrap">--master-verify-checksum=[0|1]</code>
+    </li>
+    <li><strong>Scope:</strong> Global
+    </li>
+    <li><strong>Access Type:</strong> Can be changed dynamically
+    </li>
+    <li><strong>Data Type:</strong> <code>bool</code>
+    </li>
+    <li><strong>Default Value:</strong> <code>OFF (0)</code>
+    </li>
+</ul>
+<h4 class="anchored_heading" id="ft_min_word_len"><code>ft_min_word_len</code></h4>
+<ul start="1">
+    <li><strong>Description:</strong> Minimum length for a word to be included in the <a
+            href="/kb/en/myisam/">MyISAM</a> <a href="/kb/en/full-text-indexes/">full-text index</a>. If this variable
+        is changed, the full-text index must be rebuilt in order for the new value to take effect. The quickest way to
+        do this is by issuing a <code class="fixed" style="white-space:pre-wrap">REPAIR TABLE table_name QUICK</code>
+        statement. See <a href="/kb/en/innodb-system-variables/#innodb_ft_min_token_size">innodb_ft_min_token_size</a>
+        for the <a href="/kb/en/innodb/">InnoDB</a> equivalent.
+    </li>
+    <li><strong>Commandline:</strong> <code class="fixed" style="white-space:pre-wrap">--ft-min-word-len=#</code>
+    </li>
+    <li><strong>Scope:</strong> Global
+    </li>
+    <li><strong>Dynamic:</strong> No
+    </li>
+    <li><strong>Data Type:</strong> <code>numeric</code>
+    </li>
+    <li><strong>Default Value:</strong> <code>4</code>
+    </li>
+    <li><strong>Minimum Value:</strong> <code>1</code>
+    </li>
+</ul>
+<h3 class="anchored_heading" id="handlersocket_epoll"><code>handlersocket_epoll</code></h3>
+<ul start="1">
+    <li><strong>Description:</strong> Specify whether to use epoll for I/O multiplexing.
+    </li>
+    <li><strong>Commandline:</strong> <code>--handlersocket-epoll="value"</code>
+    </li>
+    <li><strong>Scope:</strong> Global
+    </li>
+    <li><strong>Dynamic:</strong> No
+    </li>
+    <li><strong>Type:</strong> number
+    </li>
+    <li><strong>Valid values:</strong>
+        <ul start="1">
+            <li><strong>Min:</strong> <code>0</code>
+            </li>
+            <li><strong>Max:</strong> <code>1</code>
+            </li>
+        </ul>
+    </li>
+    <li><strong>Default Value:</strong> <code>1</code>
+    </li>
+</ul>

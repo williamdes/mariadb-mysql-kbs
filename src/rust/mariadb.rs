@@ -1,7 +1,7 @@
 use select::{
     document::Document,
     node::Node,
-    predicate::{Class, Name},
+    predicate::{Attr, Class, Name},
 };
 
 use crate::{
@@ -170,8 +170,11 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
     key_name = key_name.to_lowercase().replace(":", "").trim().to_string();
 
     match key_name.as_str() {
-        "dynamic" => {
-            entry.dynamic = Some(row_value.to_lowercase() == "yes");
+        "dynamic" | "access type" => {
+            entry.dynamic = Some(
+                row_value.to_lowercase() == "yes"
+                    || row_value.to_lowercase() == "can be changed dynamically",
+            );
         }
         "data type" | "type" => {
             if li_node.find(Name("code")).count() == 1 {
@@ -220,7 +223,7 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                 entry.default = Some(cleaner::clean_default(row_value));
             }
         }
-        "commandline" => {
+        "commandline" | "command-line" => {
             if row_value.to_lowercase() != "no"
                 && row_value.to_lowercase() != "none"
                 && row_value.to_lowercase() != "n/a"
@@ -254,7 +257,8 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                 //entry.scope = entry.scope.filter(|e| e == "0" || e.is_some());
             }
         }
-        "valid values" => {
+        "valid values" | "valid vales" => {
+            // Handle typo on log_slow_disabled_statements
             if li_node.find(Name("code")).next().is_some() {
                 let mut values = vec![];
                 for code_node in li_node.find(Name("code")) {
@@ -273,7 +277,16 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                 }
             }
         }
-        "range" | "range - 64 bit" | "range - 64-bit" => {
+        "minimum value" => {
+            entry.init_range();
+            match entry.range {
+                Some(ref mut r) => {
+                    r.try_fill_from(row_value);
+                }
+                None => {}
+            }
+        }
+        "range" | "range - 64 bit" | "range - 64-bit" | "range - 64bit" | "range (windows)" => {
             if li_node.find(Name("code")).next().is_some() {
                 let mut values = vec![];
                 for code_node in li_node.find(Name("code")).filter(|e| e.text().trim() != "") {
@@ -367,10 +380,28 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
         "removed" => {
             entry.is_removed = true;
         }
+        "introduced"
+        | "range - 32 bit"
+        | "range - 32-bit"
+        | "range - 32bit"
+        | "size limit"
+        | "see also"
+        | "deprecated"
+        | "re-introduced"
+        | "default value - 32 bit"
+        | "default table value"
+        | "default session value"
+        | "dsn parameter name"
+        | "related variables"
+        | "documentation"
+        | "read only"
+        | "read-only"
+        | "alias"
+        | "unix"
+        | "windows"
+        | "notes" => {}
         _key => {
-            //println!("{} '{}' -> '{}'", li_node.html(), key_name, row_value);
-            //println!("tr: {} -> {}", key_name, row_value);
-            //println!("missing: {}", key_name);
+            println!("missing: {} -> {}", key_name, row_value);
         }
     }
 
@@ -378,10 +409,13 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
 }
 
 fn process_ul(mut entry: KbParsedEntry, ul_node: Node) -> KbParsedEntry {
-    for li in ul_node.find(Name("li")) {
-        if li.find(Name("strong")).next().is_some() {
-            entry = process_li(entry, li)
-        }
+    let li_nodes = ul_node
+        .find(Name("li"))
+        .filter(|li| li.find(Name("strong")).next().is_some())
+        .filter(|li| li.parent().unwrap().is(Attr("start", "1")));
+
+    for li in li_nodes {
+        entry = process_li(entry, li)
     }
 
     entry
@@ -1079,6 +1113,84 @@ mod tests {
                     valid_values: None,
                     has_description: true,
                     is_removed: false,
+                },
+            ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_19() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_19.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    has_description: true,
+                    is_removed: false,
+                    cli: Some("--spider-max-connections".to_string()),
+                    default: None,
+                    dynamic: Some(true),
+                    id: "spider_max_connections".to_string(),
+                    name: Some("spider_max_connections".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    range: Some(Range {
+                        to_upwards: None,
+                        from: Some(0),
+                        to: Some(99999),
+                        from_f: None,
+                        to_f: None,
+                    }),
+                },
+                KbParsedEntry {
+                    has_description: true,
+                    is_removed: false,
+                    cli: Some("--master-verify-checksum=[0|1]".to_string()),
+                    default: Some("OFF (0)".to_string()),
+                    dynamic: Some(true),
+                    id: "master_verify_checksum".to_string(),
+                    name: Some("master_verify_checksum".to_string()),
+                    range: None,
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("boolean".to_string()),
+                    valid_values: None,
+                },
+                KbParsedEntry {
+                    has_description: true,
+                    is_removed: false,
+                    cli: Some("--ft-min-word-len=#".to_string()),
+                    default: Some("4".to_string()),
+                    dynamic: Some(false),
+                    id: "ft_min_word_len".to_string(),
+                    name: Some("ft_min_word_len".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    range: Some(Range {
+                        to_upwards: None,
+                        from: Some(1),
+                        to: None,
+                        from_f: None,
+                        to_f: None,
+                    }),
+                },
+                KbParsedEntry {
+                    has_description: true,
+                    is_removed: false,
+                    cli: Some("--handlersocket-epoll=\"value\"".to_string()),
+                    default: Some("1".to_string()),
+                    dynamic: Some(false),
+                    id: "handlersocket_epoll".to_string(),
+                    name: Some("handlersocket_epoll".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: Some(vec!["0".to_string(), "1".to_string()]),
+                    range: None,
                 },
             ],
             entries

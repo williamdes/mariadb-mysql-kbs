@@ -17,14 +17,29 @@ const REAL_TYPES: [&str; 9] = [
  * @return Option<String> The cleaned type
  */
 pub fn clean_type(type_str: String) -> Option<String> {
+    if type_str == "bool" {
+        return Some("boolean".to_string());
+    } else if type_str == "varchar" || type_str == "text" {
+        return Some("string".to_string());
+    } else if type_str == "filename" {
+        return Some("file name".to_string());
+    } else if type_str == "double" {
+        return Some("numeric".to_string());
+    } else if type_str == "ip address" {
+        return Some("string".to_string());
+    }
+
     if REAL_TYPES.into_iter().find(|t| t.to_string() == type_str) == None {
         if type_str.contains("in bytes")
             || type_str.contains("number of bytes")
             || type_str.contains("size in mb")
+            || type_str.contains("bytes read from")
+            || type_str.contains("bytes written to")
         {
             return Some("byte".to_string());
         } else if type_str.contains("number of")
             || type_str.contains("size of")
+            || type_str.contains("batch size")
             || type_str.contains("in microseconds")
             || type_str.contains("in seconds")
         {
@@ -33,10 +48,17 @@ pub fn clean_type(type_str: String) -> Option<String> {
             || type_str.contains("numeric (32-bit unsigned integer)")
         {
             return Some("numeric".to_string());
-        } else if
-        //enumerated
-        type_str.contains("enum") {
+        } else if type_str.contains("enum") {
+            //enumerated
             return Some("enumeration".to_string());
+        } else if type_str.contains("directory name") || type_str.contains("path name") {
+            return Some("directory name".to_string());
+        } else if type_str.contains("filename") {
+            return Some("file name".to_string());
+        }
+
+        if type_str.len() < 30 && type_str.len() > 0 {
+            println!("not known type: {}", type_str);
         }
 
         return None;
@@ -442,6 +464,70 @@ mod tests {
     fn clean_undefined_type() {
         let type_str = clean_type("undefined".to_string());
         assert_eq!(type_str, None);
+    }
+
+    #[test]
+    fn clean_type_bool() {
+        let type_str = clean_type("bool".to_string());
+        assert_eq!(type_str, Some("boolean".to_string()));
+    }
+
+    #[test]
+    fn clean_type_varchar() {
+        let type_str = clean_type("varchar".to_string());
+        assert_eq!(type_str, Some("string".to_string()));
+    }
+
+    #[test]
+    fn clean_type_text() {
+        let type_str = clean_type("text".to_string());
+        assert_eq!(type_str, Some("string".to_string()));
+    }
+
+    #[test]
+    fn clean_type_filename() {
+        let type_str = clean_type("filename".to_string());
+        assert_eq!(type_str, Some("file name".to_string()));
+        let type_str = clean_type("wsrep status output filename".to_string());
+        assert_eq!(type_str, Some("file name".to_string()));
+    }
+
+    #[test]
+    fn clean_type_directory_name_s() {
+        let type_str = clean_type("directory name/s".to_string());
+        assert_eq!(type_str, Some("directory name".to_string()));
+    }
+
+    #[test]
+    fn clean_type_path_name() {
+        let type_str = clean_type("path name".to_string());
+        assert_eq!(type_str, Some("directory name".to_string()));
+    }
+
+    #[test]
+    fn clean_type_batch_size() {
+        let type_str = clean_type("insert batch size.".to_string());
+        assert_eq!(type_str, Some("integer".to_string()));
+    }
+
+    #[test]
+    fn clean_type_double() {
+        let type_str = clean_type("double".to_string());
+        assert_eq!(type_str, Some("numeric".to_string()));
+    }
+
+    #[test]
+    fn clean_type_ip_address() {
+        let type_str = clean_type("ip address".to_string());
+        assert_eq!(type_str, Some("string".to_string()));
+    }
+
+    #[test]
+    fn clean_type_bytes_from_to() {
+        let type_str = clean_type("bytes read from block cache.".to_string());
+        assert_eq!(type_str, Some("byte".to_string()));
+        let type_str = clean_type("bytes written to block cache.".to_string());
+        assert_eq!(type_str, Some("byte".to_string()));
     }
 
     #[test]

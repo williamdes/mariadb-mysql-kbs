@@ -1,0 +1,51 @@
+<h4 class="anchored_heading" id="innodb_buffer_pool_restore_at_startup">
+    <code>innodb_buffer_pool_restore_at_startup</code>
+</h4>
+<ul start="1">
+    <li><strong>Description:</strong> Time in seconds between automatic buffer pool dumps. If set to a non-zero value,
+        XtraDB will also perform an automatic restore of the <a href="/kb/en/innodb-buffer-pool/">buffer pool</a> at
+        startup. If set to <code>0</code>, automatic dumps are not performed, nor automatic restores on startup.
+        Replaced by <a href="#innodb_buffer_pool_load_at_startup">innodb_buffer_pool_load_at_startup</a> in <a
+            href="/kb/en/what-is-mariadb-100/">MariaDB 10.0</a>.
+    </li>
+    <li><strong>Commandline:</strong> <code class="fixed"
+            style="white-space:pre-wrap">innodb-buffer-pool-restore-at-startup</code>
+    </li>
+    <li><strong>Scope:</strong> Global
+    </li>
+    <li><strong>Dynamic:</strong> Yes
+    </li>
+    <li><strong>Data Type:</strong> <code>numeric</code>
+    </li>
+    <li><strong>Default Value:</strong> <code>0</code>
+    </li>
+    <li><strong>Range - 32 bit:</strong> <code>0</code> to <code>4294967295</code>
+    </li>
+    <li><strong>Range - 64 bit:</strong> <code>0</code> to <code>18446744073709547520</code>
+    </li>
+    <li><strong>Removed:</strong> <a href="/kb/en/what-is-mariadb-100/">MariaDB 10.0</a> - replaced by <a
+            href="#innodb_buffer_pool_load_at_startup">innodb_buffer_pool_load_at_startup</a>
+    </li>
+</ul>
+<h4 class="anchored_heading" id="myisam_mmap_size"><code>myisam_mmap_size</code></h4>
+<ul start="1">
+    <li><strong>Description:</strong> Maximum memory in bytes that can be used for memory mapping compressed MyISAM
+        files. Too high a value may result in swapping if there are many compressed MyISAM tables.
+    </li>
+    <li><strong>Commandline:</strong> <code class="fixed" style="white-space:pre-wrap">--myisam-mmap-size=#</code>
+    </li>
+    <li><strong>Scope:</strong> Global, Session
+    </li>
+    <li><strong>Dynamic:</strong> Yes
+    </li>
+    <li><strong>Data Type:</strong> <code>numeric</code>
+    </li>
+    <li><strong>Default Value - 32 bit:</strong> <code>4294967295</code>
+    </li>
+    <li><strong>Default Value - 64 bit:</strong> <code>18446744073709547520</code>
+    </li>
+    <li><strong>Range - 32-bit:</strong> <code>7</code> to <code>4294967295</code>
+    </li>
+    <li><strong>Range - 64-bit:</strong> <code>7</code> to <code>18446744073709547520</code>
+    </li>
+</ul>

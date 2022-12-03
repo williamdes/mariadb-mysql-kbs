@@ -203,7 +203,7 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                 entry.r#type = Some("integer".to_string());
             }
         }
-        "default value" | "default" => {
+        "default value" | "default" | "default value - 64 bit" => {
             if li_node.find(Name("code")).count() == 1
                 && cleaner::is_valid_default(row_value.as_ref())
             {
@@ -273,7 +273,7 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                 }
             }
         }
-        "range" => {
+        "range" | "range - 64 bit" | "range - 64-bit" => {
             if li_node.find(Name("code")).next().is_some() {
                 let mut values = vec![];
                 for code_node in li_node.find(Name("code")).filter(|e| e.text().trim() != "") {
@@ -369,8 +369,8 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
         }
         _key => {
             //println!("{} '{}' -> '{}'", li_node.html(), key_name, row_value);
-            //println!("tr: {} -> {}", row_name, row_value);
-            //println!("missing: {}", key);
+            //println!("tr: {} -> {}", key_name, row_value);
+            //println!("missing: {}", key_name);
         }
     }
 
@@ -1029,6 +1029,58 @@ mod tests {
                     to_f: None,
                 }),
             },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_18() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_18.html"),
+            url: "https://example.com",
+        });
+
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    has_description: true,
+                    is_removed: true,
+                    cli: Some("innodb-buffer-pool-restore-at-startup".to_string()),
+                    default: Some("0".to_string()),
+                    dynamic: Some(true),
+                    id: "innodb_buffer_pool_restore_at_startup".to_string(),
+                    name: Some("innodb_buffer_pool_restore_at_startup".to_string()),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    range: Some(Range {
+                        to_upwards: None,
+                        from: Some(0),
+                        to: Some(18446744073709547520),
+                        from_f: None,
+                        to_f: None,
+                    }),
+                },
+                KbParsedEntry {
+                    cli: Some("--myisam-mmap-size=#".to_string()),
+                    default: Some("18446744073709547520".to_string()),
+                    dynamic: Some(true),
+                    id: "myisam_mmap_size".to_string(),
+                    name: Some("myisam_mmap_size".to_string()),
+                    range: Some(Range {
+                        from: Some(7,),
+                        from_f: None,
+                        to: Some(18446744073709547520),
+                        to_f: None,
+                        to_upwards: None,
+                    },),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    has_description: true,
+                    is_removed: false,
+                },
+            ],
             entries
         );
     }

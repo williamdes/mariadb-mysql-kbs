@@ -14,6 +14,18 @@ pub struct PageProcess<'a> {
     pub data_type: &'a str,
 }
 
+impl PageProcess<'_> {
+    pub fn is_mariadb_page(&self) -> bool {
+        self.url.contains("mariadb")
+    }
+    pub fn get_data_prefix(&self) -> &str {
+        if self.is_mariadb_page() {
+            return "mariadb-";
+        }
+        return "mysql-";
+    }
+}
+
 pub struct QueryResponse<'a> {
     pub url: &'a str,
     pub body: String,

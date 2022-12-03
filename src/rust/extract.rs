@@ -1,4 +1,4 @@
-use crate::data::{DataFile, QueryResponse};
+use crate::data::{DataFile, PageProcess, QueryResponse};
 use crate::{mariadb, mysql};
 use reqwest::blocking::{Client, RequestBuilder};
 use reqwest::header::{FROM, USER_AGENT};
@@ -8,10 +8,23 @@ use std::{env, fs};
 const UA_FROM: &str = "williamdes+mariadb-mysql-kbs@wdes.fr";
 const UA: &str = "mariadb-mysql-kbs-bot (+https://github.com/williamdes/mariadb-mysql-kbs; williamdes+mariadb-mysql-kbs@wdes.fr)";
 
-pub fn extract() {
+pub enum ExtractionPreference {
+    All,
+    MariaDB,
+    MySQL,
+}
+
+pub fn extract(only: ExtractionPreference) {
     println!("Run build...");
-    extract_mysql();
-    extract_mariadb();
+    let pages: Vec<PageProcess> = match only {
+        ExtractionPreference::All => [mysql::get_pages(), mariadb::get_pages()].concat(),
+        ExtractionPreference::MySQL => mysql::get_pages(),
+        ExtractionPreference::MariaDB => mariadb::get_pages(),
+    };
+
+    for page in pages {
+        extract_page(page);
+    }
     println!("All done.");
     println!("End !");
 }
@@ -36,32 +49,19 @@ fn get_html_from_url(client: Client, url: &str) -> QueryResponse {
     }
 }
 
-fn extract_mysql() {
-    for page in mysql::get_pages() {
-        println!("URL : {}", &page.url);
-        let client = Client::new();
-        let response = get_html_from_url(client, &page.url);
-        let data = DataFile {
-            data: mysql::extract_mysql_from_text(response),
-            url: &page.url,
-            name: &page.name,
-        };
-        write_page(page.data_type, "mysql-", data);
-    }
-}
-
-fn extract_mariadb() {
-    for page in mariadb::get_pages() {
-        println!("URL : {}", &page.url);
-        let client = Client::new();
-        let response = get_html_from_url(client, &page.url);
-        let data = DataFile {
-            data: mariadb::extract_mariadb_from_text(response),
-            url: &page.url,
-            name: &page.name,
-        };
-        write_page(page.data_type, "mariadb-", data);
-    }
+fn extract_page(page: PageProcess) {
+    println!("URL : {}", &page.url);
+    let client = Client::new();
+    let response = get_html_from_url(client, &page.url);
+    let data = DataFile {
+        data: match page.is_mariadb_page() {
+            true => mariadb::extract_mariadb_from_text(response),
+            false => mysql::extract_mysql_from_text(response),
+        },
+        url: &page.url,
+        name: &page.name,
+    };
+    write_page(page.data_type, page.get_data_prefix(), data);
 }
 
 fn write_json(filename: String, data: DataFile) {

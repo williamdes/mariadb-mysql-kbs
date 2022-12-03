@@ -5,7 +5,6 @@ authors = ["William Desportes <williamdes@wdes.fr>"]
 edition = "2021"
 rust-version = "1.64.0"  # MSRV
 description = "An index of the MariaDB and MySQL Knowledge bases"
-documentation = "https://github.com/williamdes/mariadb-mysql-kbs/blob/v1.3.0/README.md"
 homepage = "https://github.com/williamdes/mariadb-mysql-kbs/tree/v1.3.0#readme"
 repository = "https://github.com/williamdes/mariadb-mysql-kbs"
 readme = "README.md"
@@ -41,7 +40,7 @@ name = "mariadb-mysql-kbs"
 path = "src/rust/mariadb-mysql-kbs.rs"
 
 [dependencies]
-clap = { version = "4.0.27", features = ["cargo"] }
+clap = { version = "4.0.27", features = ["cargo", "derive"] }
 futures = "0.3.25"
 tokio = { version = "1.22.0", features = ["macros", "rt-multi-thread"] }
 regex = "1.7.0"

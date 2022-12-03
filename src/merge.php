@@ -176,30 +176,7 @@ foreach ($files as $file) {
                                     }
                                 }
                             } elseif ($key === 'ids') {
-                                /*if (isset($newData->ids) === false) {
-                                    $newData->ids = array();
-                                }*/
                                 $newData->ids = array_merge($cacheValue, $docValue);
-                                /*$source = array("_", "option-mysqld-", "sysvar-", );
-                                $destination = array("-", "","");
-                                if (// Replace prefix to see if same id
-                                    str_replace($source, $destination, $docValue)
-                                    ===
-                                    str_replace($source, $destination, $cacheValue)
-                                ) {
-                                    $newData->$key = str_replace($source, $destination, $docValue);
-                                    $nbrConflictsSolved++;// TODO: check if good idea
-                                } else {
-                                    echo '[ERROR] conflict id : '
-                                    .json_encode($cacheValue)
-                                    .' - '
-                                    .json_encode($docValue)
-                                    .' - '
-                                    .str_replace($source, $destination, $docValue)
-                                    .' - '
-                                    .str_replace($source, $destination, $cacheValue)
-                                    .PHP_EOL;
-                                }*/
                             } elseif ($key === 'default') {
                                 $originalValues    = ['on', 'off', 'ON', 'OFF', 'true', 'false', 'TRUE', 'FALSE'];
                                 $destinationValues = ['1', '0', '1', '0', '1', '0', '1', '0'];

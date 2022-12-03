@@ -11,6 +11,7 @@ dist/merged-ultraslim.* linguist-vendored
 /CODEOWNERS export-ignore
 /phpcs.xml export-ignore
 /phpstan.neon export-ignore
+/codecov.yml export-ignore
 /.gitignore export-ignore
 /.gitmodules export-ignore
 /.gitattributes export-ignore

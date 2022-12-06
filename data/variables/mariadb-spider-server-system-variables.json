@@ -618,7 +618,6 @@
       "type": "integer"
     },
     {
-      "default": "-1",
       "dynamic": true,
       "id": "spider_load_crd_at_startup",
       "name": "spider_load_crd_at_startup",
@@ -632,7 +631,6 @@
       "type": "integer"
     },
     {
-      "default": "-1",
       "dynamic": true,
       "id": "spider_load_sts_at_startup",
       "name": "spider_load_sts_at_startup",
@@ -696,7 +694,6 @@
       "type": "integer"
     },
     {
-      "default": "-1",
       "id": "spider_low_mem_read",
       "name": "spider_low_mem_read",
       "range": {

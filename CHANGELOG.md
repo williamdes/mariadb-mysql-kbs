@@ -45,6 +45,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- [42567a2](https://github.com/williamdes/mariadb-mysql-kbs/commit/42567a2ca369a00cc282fca21a42311827744b40) fix: --allow-empty for commits that are already made (maybe)
 - [eda616e](https://github.com/williamdes/mariadb-mysql-kbs/commit/eda616ee84768fdc07abd2eb014fcae67b763b5c) fix: broken data links
 - [e6e8f99](https://github.com/williamdes/mariadb-mysql-kbs/commit/e6e8f99a56e329d0fff051f58a498089284e0bcd) fix: remove keywords
 - [3d0a42f](https://github.com/williamdes/mariadb-mysql-kbs/commit/3d0a42f89937c342f975a90f7a15f30796cea840) fix: do not allow all default values to use the first <code> tag

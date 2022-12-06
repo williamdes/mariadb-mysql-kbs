@@ -3753,6 +3753,415 @@
                 }
             ]
         },
+        "server_audit_events": {
+            "cli": "--server-audit-events=value",
+            "default": "Empty string",
+            "dynamic": true,
+            "name": "server_audit_events",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "validValues": [
+                "CONNECT",
+                "QUERY",
+                "TABLE",
+                "CONNECT",
+                "QUERY",
+                "TABLE",
+                "QUERY_DDL",
+                "QUERY_DML",
+                "CONNECT",
+                "QUERY",
+                "TABLE",
+                "QUERY_DDL",
+                "QUERY_DML",
+                "QUERY_DCL",
+                "CONNECT",
+                "QUERY",
+                "TABLE",
+                "QUERY_DDL",
+                "QUERY_DML",
+                "QUERY_DCL",
+                "QUERY_DML_NO_SELECT"
+            ],
+            "ids": [
+                {
+                    "anchor": "server_audit_events",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_events",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_excl_users": {
+            "cli": "--server-audit-excl-users=value",
+            "default": "Empty string",
+            "dynamic": true,
+            "name": "server_audit_excl_users",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "server_audit_excl_users",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_excl_users",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_file_path": {
+            "cli": "--server-audit-file-path=value",
+            "default": "server_audit.log",
+            "dynamic": true,
+            "name": "server_audit_file_path",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "server_audit_file_path",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_file_path",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_file_rotate_now": {
+            "cli": "--server-audit-rotate-now[={0|1}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "server_audit_file_rotate_now",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "server_audit_file_rotate_now",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_file_rotate_now",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_file_rotate_size": {
+            "cli": "--server-audit-rotate-size=#",
+            "default": "1000000",
+            "dynamic": true,
+            "name": "server_audit_file_rotate_size",
+            "range": {
+                "from": 100,
+                "to": 9223372036854775807
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "server_audit_file_rotate_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_file_rotate_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_file_rotations": {
+            "cli": "--server-audit-rotations=#",
+            "default": "9",
+            "dynamic": true,
+            "name": "server_audit_file_rotations",
+            "range": {
+                "from": 0,
+                "to": 999
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "server_audit_file_rotations",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_file_rotations",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_incl_users": {
+            "cli": "--server-audit-incl-users=value",
+            "default": "Empty string",
+            "dynamic": true,
+            "name": "server_audit_incl_users",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "server_audit_incl_users",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_incl_users",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_loc_info": {
+            "default": "Empty string",
+            "dynamic": false,
+            "name": "server_audit_loc_info",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "server_audit_loc_info",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_loc_info",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_logging": {
+            "cli": "--server-audit-logging[={0|1}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "server_audit_logging",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "server_audit_logging",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_logging",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_mode": {
+            "cli": "--server-audit-mode[=#]",
+            "default": "0",
+            "dynamic": true,
+            "name": "server_audit_mode",
+            "range": {
+                "from": 0,
+                "to": 1
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "server_audit_mode",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_mode",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_output_type": {
+            "cli": "--server-audit-output-type=value",
+            "default": "file",
+            "dynamic": true,
+            "name": "server_audit_output_type",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "SYSLOG",
+                "FILE"
+            ],
+            "ids": [
+                {
+                    "anchor": "server_audit_output_type",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_output_type",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_query_log_limit": {
+            "cli": "--server-audit-query-log-limit=#",
+            "default": "1024",
+            "dynamic": true,
+            "name": "server_audit_query_log_limit",
+            "range": {
+                "from": 0,
+                "to": 2147483647
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "server_audit_query_log_limit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_query_log_limit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_syslog_facility": {
+            "cli": "--server-audit-syslog-facility=value",
+            "default": "LOG_USER",
+            "dynamic": true,
+            "name": "server_audit_syslog_facility",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "LOG_USER",
+                "LOG_MAIL",
+                "LOG_DAEMON",
+                "LOG_AUTH",
+                "LOG_SYSLOG",
+                "LOG_LPR",
+                "LOG_NEWS",
+                "LOG_UUCP",
+                "LOG_CRON",
+                "LOG_AUTHPRIV",
+                "LOG_FTP",
+                "LOG_LOCAL0",
+                "LOG_LOCAL7"
+            ],
+            "ids": [
+                {
+                    "anchor": "server_audit_syslog_facility",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_syslog_facility",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_syslog_ident": {
+            "cli": "--server-audit-syslog-ident=value",
+            "default": "mysql-server_auditing",
+            "dynamic": true,
+            "name": "server_audit_syslog_ident",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "server_audit_syslog_ident",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_syslog_ident",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_syslog_info": {
+            "cli": "--server-audit-syslog-info=value",
+            "default": "Empty string",
+            "dynamic": true,
+            "name": "server_audit_syslog_info",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "server_audit_syslog_info",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_syslog_info",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit_syslog_priority": {
+            "cli": "--server-audit-syslog-priority=value",
+            "default": "LOG_INFO",
+            "dynamic": true,
+            "name": "server_audit_syslog_priority",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "LOG_EMERG",
+                "LOG_ALERT",
+                "LOG_CRIT",
+                "LOG_ERR",
+                "LOG_WARNING",
+                "LOG_NOTICE",
+                "LOG_INFO",
+                "LOG_DEBUG"
+            ],
+            "ids": [
+                {
+                    "anchor": "server_audit_syslog_priority",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit_syslog_priority",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
+        "server_audit": {
+            "cli": "--server-audit=val",
+            "default": "ON",
+            "name": "server_audit",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "server_audit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/"
+                },
+                {
+                    "anchor": "server_audit",
+                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
+                }
+            ]
+        },
         "Server_audit_active": {
             "name": "Server_audit_active",
             "type": "boolean",
@@ -3791,347 +4200,6 @@
                 {
                     "anchor": "server_audit_writes_failed",
                     "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-status-variables/"
-                }
-            ]
-        },
-        "server_audit_events": {
-            "cli": "--server-audit-events=value",
-            "default": "Empty string",
-            "dynamic": true,
-            "name": "server_audit_events",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "validValues": [
-                "CONNECT",
-                "QUERY",
-                "TABLE",
-                "CONNECT",
-                "QUERY",
-                "TABLE",
-                "QUERY_DDL",
-                "QUERY_DML",
-                "CONNECT",
-                "QUERY",
-                "TABLE",
-                "QUERY_DDL",
-                "QUERY_DML",
-                "QUERY_DCL",
-                "CONNECT",
-                "QUERY",
-                "TABLE",
-                "QUERY_DDL",
-                "QUERY_DML",
-                "QUERY_DCL",
-                "QUERY_DML_NO_SELECT"
-            ],
-            "ids": [
-                {
-                    "anchor": "server_audit_events",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_excl_users": {
-            "cli": "--server-audit-excl-users=value",
-            "default": "Empty string",
-            "dynamic": true,
-            "name": "server_audit_excl_users",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "server_audit_excl_users",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_file_path": {
-            "cli": "--server-audit-file-path=value",
-            "default": "server_audit.log",
-            "dynamic": true,
-            "name": "server_audit_file_path",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "server_audit_file_path",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_file_rotate_now": {
-            "cli": "--server-audit-rotate-now[={0|1}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "server_audit_file_rotate_now",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "server_audit_file_rotate_now",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_file_rotate_size": {
-            "cli": "--server-audit-rotate-size=#",
-            "default": "1000000",
-            "dynamic": true,
-            "name": "server_audit_file_rotate_size",
-            "range": {
-                "from": 100,
-                "to": 9223372036854775807
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "server_audit_file_rotate_size",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_file_rotations": {
-            "cli": "--server-audit-rotations=#",
-            "default": "9",
-            "dynamic": true,
-            "name": "server_audit_file_rotations",
-            "range": {
-                "from": 0,
-                "to": 999
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "server_audit_file_rotations",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_incl_users": {
-            "cli": "--server-audit-incl-users=value",
-            "default": "Empty string",
-            "dynamic": true,
-            "name": "server_audit_incl_users",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "server_audit_incl_users",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_loc_info": {
-            "default": "Empty string",
-            "dynamic": false,
-            "name": "server_audit_loc_info",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "server_audit_loc_info",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_logging": {
-            "cli": "--server-audit-logging[={0|1}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "server_audit_logging",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "server_audit_logging",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_mode": {
-            "cli": "--server-audit-mode[=#]",
-            "default": "0",
-            "dynamic": true,
-            "name": "server_audit_mode",
-            "range": {
-                "from": 0,
-                "to": 1
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "server_audit_mode",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_output_type": {
-            "cli": "--server-audit-output-type=value",
-            "default": "file",
-            "dynamic": true,
-            "name": "server_audit_output_type",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "SYSLOG",
-                "FILE"
-            ],
-            "ids": [
-                {
-                    "anchor": "server_audit_output_type",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_query_log_limit": {
-            "cli": "--server-audit-query-log-limit=#",
-            "default": "1024",
-            "dynamic": true,
-            "name": "server_audit_query_log_limit",
-            "range": {
-                "from": 0,
-                "to": 2147483647
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "server_audit_query_log_limit",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_syslog_facility": {
-            "cli": "--server-audit-syslog-facility=value",
-            "default": "LOG_USER",
-            "dynamic": true,
-            "name": "server_audit_syslog_facility",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "LOG_USER",
-                "LOG_MAIL",
-                "LOG_DAEMON",
-                "LOG_AUTH",
-                "LOG_SYSLOG",
-                "LOG_LPR",
-                "LOG_NEWS",
-                "LOG_UUCP",
-                "LOG_CRON",
-                "LOG_AUTHPRIV",
-                "LOG_FTP",
-                "LOG_LOCAL0",
-                "LOG_LOCAL7"
-            ],
-            "ids": [
-                {
-                    "anchor": "server_audit_syslog_facility",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_syslog_ident": {
-            "cli": "--server-audit-syslog-ident=value",
-            "default": "mysql-server_auditing",
-            "dynamic": true,
-            "name": "server_audit_syslog_ident",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "server_audit_syslog_ident",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_syslog_info": {
-            "cli": "--server-audit-syslog-info=value",
-            "default": "Empty string",
-            "dynamic": true,
-            "name": "server_audit_syslog_info",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "server_audit_syslog_info",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit_syslog_priority": {
-            "cli": "--server-audit-syslog-priority=value",
-            "default": "LOG_INFO",
-            "dynamic": true,
-            "name": "server_audit_syslog_priority",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "LOG_EMERG",
-                "LOG_ALERT",
-                "LOG_CRIT",
-                "LOG_ERR",
-                "LOG_WARNING",
-                "LOG_NOTICE",
-                "LOG_INFO",
-                "LOG_DEBUG"
-            ],
-            "ids": [
-                {
-                    "anchor": "server_audit_syslog_priority",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
-                }
-            ]
-        },
-        "server_audit": {
-            "cli": "--server-audit=val",
-            "default": "ON",
-            "name": "server_audit",
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "ON",
-                "FORCE",
-                "FORCE_PLUS_PERMANENT"
-            ],
-            "ids": [
-                {
-                    "anchor": "server_audit",
-                    "url": "https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/"
                 }
             ]
         },
@@ -25000,7 +25068,6 @@
             ]
         },
         "spider_load_crd_at_startup": {
-            "default": "-1",
             "dynamic": true,
             "name": "spider_load_crd_at_startup",
             "range": {
@@ -25019,7 +25086,6 @@
             ]
         },
         "spider_load_sts_at_startup": {
-            "default": "-1",
             "dynamic": true,
             "name": "spider_load_sts_at_startup",
             "range": {
@@ -25108,7 +25174,6 @@
             ]
         },
         "spider_low_mem_read": {
-            "default": "-1",
             "name": "spider_low_mem_read",
             "range": {
                 "from": -1,

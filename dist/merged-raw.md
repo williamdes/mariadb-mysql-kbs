@@ -3323,6 +3323,284 @@
 |------|----|
 |mariadb.com|[handlersocket_wrlock_timeout](https://mariadb.com/kb/en/library/documentation/handlersocket-configuration-options/#handlersocket_wrlock_timeout)|
 
+## server_audit_events
+|name|value|
+|----|-----|
+|Name|`server_audit_events`|
+|Command line|`--server-audit-events=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Empty string`|
+|Dynamic|`true`|
+|Valid value(s)|`CONNECT`, `QUERY`, `TABLE`, `CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `QUERY_DCL`, `CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `QUERY_DCL`, `QUERY_DML_NO_SELECT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_events](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_events)|
+|mariadb.com|[server_audit_events](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_events)|
+
+## server_audit_excl_users
+|name|value|
+|----|-----|
+|Name|`server_audit_excl_users`|
+|Command line|`--server-audit-excl-users=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Empty string`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_excl_users](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_excl_users)|
+|mariadb.com|[server_audit_excl_users](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_excl_users)|
+
+## server_audit_file_path
+|name|value|
+|----|-----|
+|Name|`server_audit_file_path`|
+|Command line|`--server-audit-file-path=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`server_audit.log`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_file_path](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_file_path)|
+|mariadb.com|[server_audit_file_path](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_file_path)|
+
+## server_audit_file_rotate_now
+|name|value|
+|----|-----|
+|Name|`server_audit_file_rotate_now`|
+|Command line|`--server-audit-rotate-now[={0|1}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_file_rotate_now](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_file_rotate_now)|
+|mariadb.com|[server_audit_file_rotate_now](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_file_rotate_now)|
+
+## server_audit_file_rotate_size
+|name|value|
+|----|-----|
+|Name|`server_audit_file_rotate_size`|
+|Command line|`--server-audit-rotate-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1000000`|
+|Dynamic|`true`|
+|Range|from: `100` to: `9223372036854775807`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_file_rotate_size](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_file_rotate_size)|
+|mariadb.com|[server_audit_file_rotate_size](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_file_rotate_size)|
+
+## server_audit_file_rotations
+|name|value|
+|----|-----|
+|Name|`server_audit_file_rotations`|
+|Command line|`--server-audit-rotations=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`9`|
+|Dynamic|`true`|
+|Range|from: `0` to: `999`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_file_rotations](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_file_rotations)|
+|mariadb.com|[server_audit_file_rotations](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_file_rotations)|
+
+## server_audit_incl_users
+|name|value|
+|----|-----|
+|Name|`server_audit_incl_users`|
+|Command line|`--server-audit-incl-users=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Empty string`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_incl_users](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_incl_users)|
+|mariadb.com|[server_audit_incl_users](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_incl_users)|
+
+## server_audit_loc_info
+|name|value|
+|----|-----|
+|Name|`server_audit_loc_info`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Empty string`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_loc_info](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_loc_info)|
+|mariadb.com|[server_audit_loc_info](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_loc_info)|
+
+## server_audit_logging
+|name|value|
+|----|-----|
+|Name|`server_audit_logging`|
+|Command line|`--server-audit-logging[={0|1}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_logging](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_logging)|
+|mariadb.com|[server_audit_logging](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_logging)|
+
+## server_audit_mode
+|name|value|
+|----|-----|
+|Name|`server_audit_mode`|
+|Command line|`--server-audit-mode[=#]`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_mode](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_mode)|
+|mariadb.com|[server_audit_mode](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_mode)|
+
+## server_audit_output_type
+|name|value|
+|----|-----|
+|Name|`server_audit_output_type`|
+|Command line|`--server-audit-output-type=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`file`|
+|Dynamic|`true`|
+|Valid value(s)|`SYSLOG`, `FILE`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_output_type](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_output_type)|
+|mariadb.com|[server_audit_output_type](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_output_type)|
+
+## server_audit_query_log_limit
+|name|value|
+|----|-----|
+|Name|`server_audit_query_log_limit`|
+|Command line|`--server-audit-query-log-limit=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1024`|
+|Dynamic|`true`|
+|Range|from: `0` to: `2147483647`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_query_log_limit](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_query_log_limit)|
+|mariadb.com|[server_audit_query_log_limit](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_query_log_limit)|
+
+## server_audit_syslog_facility
+|name|value|
+|----|-----|
+|Name|`server_audit_syslog_facility`|
+|Command line|`--server-audit-syslog-facility=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`LOG_USER`|
+|Dynamic|`true`|
+|Valid value(s)|`LOG_USER`, `LOG_MAIL`, `LOG_DAEMON`, `LOG_AUTH`, `LOG_SYSLOG`, `LOG_LPR`, `LOG_NEWS`, `LOG_UUCP`, `LOG_CRON`, `LOG_AUTHPRIV`, `LOG_FTP`, `LOG_LOCAL0`, `LOG_LOCAL7`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_syslog_facility](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_syslog_facility)|
+|mariadb.com|[server_audit_syslog_facility](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_syslog_facility)|
+
+## server_audit_syslog_ident
+|name|value|
+|----|-----|
+|Name|`server_audit_syslog_ident`|
+|Command line|`--server-audit-syslog-ident=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`mysql-server_auditing`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_syslog_ident](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_syslog_ident)|
+|mariadb.com|[server_audit_syslog_ident](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_syslog_ident)|
+
+## server_audit_syslog_info
+|name|value|
+|----|-----|
+|Name|`server_audit_syslog_info`|
+|Command line|`--server-audit-syslog-info=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`Empty string`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_syslog_info](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_syslog_info)|
+|mariadb.com|[server_audit_syslog_info](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_syslog_info)|
+
+## server_audit_syslog_priority
+|name|value|
+|----|-----|
+|Name|`server_audit_syslog_priority`|
+|Command line|`--server-audit-syslog-priority=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`LOG_INFO`|
+|Dynamic|`true`|
+|Valid value(s)|`LOG_EMERG`, `LOG_ALERT`, `LOG_CRIT`, `LOG_ERR`, `LOG_WARNING`, `LOG_NOTICE`, `LOG_INFO`, `LOG_DEBUG`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit_syslog_priority](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit_syslog_priority)|
+|mariadb.com|[server_audit_syslog_priority](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_syslog_priority)|
+
+## server_audit
+|name|value|
+|----|-----|
+|Name|`server_audit`|
+|Command line|`--server-audit=val`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[server_audit](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-options-and-system-variables/#server_audit)|
+|mariadb.com|[server_audit](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit)|
+
 ## Server_audit_active
 |name|value|
 |----|-----|
@@ -3367,267 +3645,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[server_audit_writes_failed](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-status-variables/#server_audit_writes_failed)|
-
-## server_audit_events
-|name|value|
-|----|-----|
-|Name|`server_audit_events`|
-|Command line|`--server-audit-events=value`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`Empty string`|
-|Dynamic|`true`|
-|Valid value(s)|`CONNECT`, `QUERY`, `TABLE`, `CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `QUERY_DCL`, `CONNECT`, `QUERY`, `TABLE`, `QUERY_DDL`, `QUERY_DML`, `QUERY_DCL`, `QUERY_DML_NO_SELECT`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_events](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_events)|
-
-## server_audit_excl_users
-|name|value|
-|----|-----|
-|Name|`server_audit_excl_users`|
-|Command line|`--server-audit-excl-users=value`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`Empty string`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_excl_users](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_excl_users)|
-
-## server_audit_file_path
-|name|value|
-|----|-----|
-|Name|`server_audit_file_path`|
-|Command line|`--server-audit-file-path=value`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`server_audit.log`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_file_path](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_file_path)|
-
-## server_audit_file_rotate_now
-|name|value|
-|----|-----|
-|Name|`server_audit_file_rotate_now`|
-|Command line|`--server-audit-rotate-now[={0|1}]`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_file_rotate_now](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_file_rotate_now)|
-
-## server_audit_file_rotate_size
-|name|value|
-|----|-----|
-|Name|`server_audit_file_rotate_size`|
-|Command line|`--server-audit-rotate-size=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1000000`|
-|Dynamic|`true`|
-|Range|from: `100` to: `9223372036854775807`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_file_rotate_size](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_file_rotate_size)|
-
-## server_audit_file_rotations
-|name|value|
-|----|-----|
-|Name|`server_audit_file_rotations`|
-|Command line|`--server-audit-rotations=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`9`|
-|Dynamic|`true`|
-|Range|from: `0` to: `999`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_file_rotations](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_file_rotations)|
-
-## server_audit_incl_users
-|name|value|
-|----|-----|
-|Name|`server_audit_incl_users`|
-|Command line|`--server-audit-incl-users=value`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`Empty string`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_incl_users](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_incl_users)|
-
-## server_audit_loc_info
-|name|value|
-|----|-----|
-|Name|`server_audit_loc_info`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`Empty string`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_loc_info](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_loc_info)|
-
-## server_audit_logging
-|name|value|
-|----|-----|
-|Name|`server_audit_logging`|
-|Command line|`--server-audit-logging[={0|1}]`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_logging](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_logging)|
-
-## server_audit_mode
-|name|value|
-|----|-----|
-|Name|`server_audit_mode`|
-|Command line|`--server-audit-mode[=#]`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`0`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_mode](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_mode)|
-
-## server_audit_output_type
-|name|value|
-|----|-----|
-|Name|`server_audit_output_type`|
-|Command line|`--server-audit-output-type=value`|
-|Type of variable|`enumeration`|
-|Scope|`global`|
-|Default value|`file`|
-|Dynamic|`true`|
-|Valid value(s)|`SYSLOG`, `FILE`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_output_type](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_output_type)|
-
-## server_audit_query_log_limit
-|name|value|
-|----|-----|
-|Name|`server_audit_query_log_limit`|
-|Command line|`--server-audit-query-log-limit=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1024`|
-|Dynamic|`true`|
-|Range|from: `0` to: `2147483647`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_query_log_limit](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_query_log_limit)|
-
-## server_audit_syslog_facility
-|name|value|
-|----|-----|
-|Name|`server_audit_syslog_facility`|
-|Command line|`--server-audit-syslog-facility=value`|
-|Type of variable|`enumeration`|
-|Scope|`global`|
-|Default value|`LOG_USER`|
-|Dynamic|`true`|
-|Valid value(s)|`LOG_USER`, `LOG_MAIL`, `LOG_DAEMON`, `LOG_AUTH`, `LOG_SYSLOG`, `LOG_LPR`, `LOG_NEWS`, `LOG_UUCP`, `LOG_CRON`, `LOG_AUTHPRIV`, `LOG_FTP`, `LOG_LOCAL0`, `LOG_LOCAL7`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_syslog_facility](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_syslog_facility)|
-
-## server_audit_syslog_ident
-|name|value|
-|----|-----|
-|Name|`server_audit_syslog_ident`|
-|Command line|`--server-audit-syslog-ident=value`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`mysql-server_auditing`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_syslog_ident](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_syslog_ident)|
-
-## server_audit_syslog_info
-|name|value|
-|----|-----|
-|Name|`server_audit_syslog_info`|
-|Command line|`--server-audit-syslog-info=value`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`Empty string`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_syslog_info](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_syslog_info)|
-
-## server_audit_syslog_priority
-|name|value|
-|----|-----|
-|Name|`server_audit_syslog_priority`|
-|Command line|`--server-audit-syslog-priority=value`|
-|Type of variable|`enumeration`|
-|Scope|`global`|
-|Default value|`LOG_INFO`|
-|Dynamic|`true`|
-|Valid value(s)|`LOG_EMERG`, `LOG_ALERT`, `LOG_CRIT`, `LOG_ERR`, `LOG_WARNING`, `LOG_NOTICE`, `LOG_INFO`, `LOG_DEBUG`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit_syslog_priority](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit_syslog_priority)|
-
-## server_audit
-|name|value|
-|----|-----|
-|Name|`server_audit`|
-|Command line|`--server-audit=val`|
-|Type of variable|`enumeration`|
-|Default value|`ON`|
-|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[server_audit](https://mariadb.com/kb/en/library/documentation/mariadb-audit-plugin-system-variables/#server_audit)|
 
 ## Mroonga_count_skip
 |name|value|
@@ -20691,7 +20708,6 @@
 |Name|`spider_load_crd_at_startup`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`-1`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `1`|
 
@@ -20706,7 +20722,6 @@
 |Name|`spider_load_sts_at_startup`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`-1`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `1`|
 
@@ -20778,7 +20793,6 @@
 |----|-----|
 |Name|`spider_low_mem_read`|
 |Type of variable|`integer`|
-|Default value|`-1`|
 |Range|from: `-1` to: `1`|
 
 ### Documentation(s)

@@ -4,10 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.2.14]
 
 ### Changed
 
+- [4e0db1e](https://github.com/williamdes/mariadb-mysql-kbs/commit/4e0db1e4fbfed4db6d7fee042f0127c8c6fe49f4) update: 🤖 Some updates 🤖
 - [1a00fee](https://github.com/williamdes/mariadb-mysql-kbs/commit/1a00fee805173cdd16529890c5e1750acb18ec2f) update: [MariaDB] updates
 - [61dabb8](https://github.com/williamdes/mariadb-mysql-kbs/commit/61dabb8615870f257df510aa776847143015161e) update: [MariaDB] updates
 - [4191cc3](https://github.com/williamdes/mariadb-mysql-kbs/commit/4191cc3f6dca9c0b45f7fe9edb6546a5cb9c5fc3) update: [MariaDB] && [MySQL] updates
@@ -85,6 +86,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Documentation
 
+- [2c6d0cf](https://github.com/williamdes/mariadb-mysql-kbs/commit/2c6d0cf808d361f5458f47479e136b689c5547a0) docs: update CHANGELOG.md
 - [9a5f284](https://github.com/williamdes/mariadb-mysql-kbs/commit/9a5f2848a9c3655fdfe9b9476a35704d0b2ae9cb) docs: replace LGTM.com that will shut-down in december by rust-reportcard.xuri.me
 - [0160852](https://github.com/williamdes/mariadb-mysql-kbs/commit/01608529cecd8094d84fa2131028b271e046fe89) docs: fix some phpdocs that are nullable
 - [833ab62](https://github.com/williamdes/mariadb-mysql-kbs/commit/833ab62e7315ad2da9eb9e6a9fe8118a120efffd) docs: update my website link
@@ -856,7 +858,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [d9cd2a8](https://github.com/williamdes/mariadb-mysql-kbs/commit/d9cd2a8123a67d6adfddf0414988b98fcac9f082) fixed: bug in MariaDB script
 
 
-[Unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.13...HEAD
+[1.2.14]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.13...1.2.14
 [v1.2.13]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.12...v1.2.13
 [v1.2.12]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.11...v1.2.12
 [v1.2.11]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.10...v1.2.11

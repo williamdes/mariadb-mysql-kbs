@@ -88,7 +88,7 @@ read -r -p "Are you sure to commit the diff? [Y/n]" response
 response=${response,,} # tolower
 if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
     git add CHANGELOG.md
-    git commit --message "update: changelog" --message "[changelog skip]"
+    git commit --allow-empty --message "update: changelog" --message "[changelog skip]"
 fi
 
 echo "Change package versions"
@@ -107,7 +107,7 @@ if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
     if [ -f package-lock.json ]; then
         git add package-lock.json
     fi
-    git commit --message "update: package version to $version" --message "[changelog skip]"
+    git commit --allow-empty --message "update: package version to $version" --message "[changelog skip]"
 fi
 
 echo "Make tag"

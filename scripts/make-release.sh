@@ -53,6 +53,18 @@ if [[ $url =~ $re ]]; then
     repo=${BASH_REMATCH[5]}
 fi
 
+check_token() {
+    RELEASES="$(curl -s -H "Authorization: token $token" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/$user/$repo/releases")"
+
+    if [ "$(echo "${RELEASES}" | jq -r 'if type=="object" then has("message") else "false" end')" != "false" ]; then
+        echo "Your token is invalid !" > /dev/stderr
+        echo "invalid: $RELEASES" > /dev/stderr
+        echo 'Please run: git config --add github.token "new_token"';
+        exit 1
+    fi
+
+    echo 'Token is valid.'
+}
 
 function generate_post_data {
   cat <<EOF
@@ -77,6 +89,8 @@ function uploadArtifact {
         "https://uploads.github.com/repos/$user/$repo/releases/$releaseId/assets?name=${FILE_NAME}")
     echo "Uploaded: $(echo $ARTIFACT_OUT | jq -r '.name')."
 }
+
+check_token
 
 tmp=$(mktemp)
 
@@ -133,7 +147,7 @@ echo "Create release $version for repo: $user/$repo branch: $branch"
 read -r -p "Are you sure to publish the draft? [Y/n]" response
 response=${response,,} # tolower
 if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
-    RELEASE_OUT="$(curl -H "Authorization: token $token" --data "$(generate_post_data)" "https://api.github.com/repos/$user/$repo/releases")"
+    RELEASE_OUT="$(curl -H "Authorization: token $token" -H "Accept: application/vnd.github+json" --data "$(generate_post_data)" "https://api.github.com/repos/$user/$repo/releases")"
 fi
 
 GPG_KEY=${GPG_KEY:-C4D91FDFCEF6B4A3C653FD7890A0EF1B8251A889}

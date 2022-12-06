@@ -83,7 +83,7 @@ function uploadArtifact {
     FILE_NAME="$1"
     MIME_TYPE="$2"
     ARTIFACT_OUT=$(curl -# -S -s -L \
-        -H "Authorization: token ${GITHUB_TOKEN}" \
+        -H "Authorization: token ${token}" \
         -H "Content-Type: ${MIME_TYPE}" \
         --data-binary @${FILE_NAME} \
         "https://uploads.github.com/repos/$user/$repo/releases/$releaseId/assets?name=${FILE_NAME}")
@@ -159,7 +159,7 @@ if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
     curl -L https://github.com/$user/$repo/archive/v$version.tar.gz -O
     gpg --detach-sign --armor --local-user "${GPG_KEY}" v$version.tar.gz
     releaseId=$(echo $RELEASE_OUT | jq -r '.id')
-    echo "Created release: $(echo $RELEASE_OUT | jq -r '.html_url')"
+    echo "Created release ($releaseId): $(echo $RELEASE_OUT | jq -r '.html_url')"
     uploadArtifact "v$version.tar.gz.asc" 'application/pgp-signature'
 fi
 

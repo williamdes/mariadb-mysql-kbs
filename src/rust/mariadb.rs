@@ -19,9 +19,9 @@ const STORAGE_ENGINES: [&str; 7] = [
     "myisam",
     "connect",
 ];
-const PLUGINS: [&str; 13] = [
-    "mariadb-audit-plugin",
-    "semisynchronous-replication-plugin",
+
+// {url}  + plugin_name + "/"
+const PLUGINS: [&str; 11] = [
     "sql-error-log-plugin",
     "authentication-plugin-gssapi",
     "authentication-plugin-pam",
@@ -35,7 +35,8 @@ const PLUGINS: [&str; 13] = [
     "simple-password-check-plugin",
 ];
 
-const SYSTEM_VARIABLES: [&str; 7] = [
+// {url}  + system_name + "-system-variables/"
+const SYSTEM_VARIABLES: [&str; 9] = [
     "pbxt",
     "mroonga",
     "tokudb",
@@ -43,9 +44,11 @@ const SYSTEM_VARIABLES: [&str; 7] = [
     "mariadb-audit-plugin",
     "ssltls",
     "performance-schema",
+    "mariadb-audit-plugin-options-and",
+    "replication-and-binary-log-server",
 ];
 
-const CUSTOM_PAGES: [Page; 9] = [
+const CUSTOM_PAGES: [Page; 8] = [
     Page {
         url: "columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/",
         name: "spider-server-system-variables",
@@ -53,10 +56,6 @@ const CUSTOM_PAGES: [Page; 9] = [
     Page {
         url: "semisynchronous-replication/",
         name: "semisynchronous-replication-system-variables",
-    },
-    Page {
-        url: "replication-and-binary-log-server-system-variables/",
-        name: "replication-and-binary-log-server-system-variables",
     },
     Page {
         url: "gtid/",
@@ -84,7 +83,8 @@ const CUSTOM_PAGES: [Page; 9] = [
     },
 ];
 
-const STATUS: [&str; 15] = [
+// {url}  + status_name + "-status-variables/"
+const STATUS_VARIABLES: [&str; 17] = [
     "server",
     "galera-cluster",
     "aria-server",
@@ -100,6 +100,8 @@ const STATUS: [&str; 15] = [
     "ssltls",
     "performance-schema",
     "myrocks",
+    "semisynchronous-replication-plugin",
+    "mariadb-audit-plugin",
 ];
 
 pub fn get_pages() -> Vec<PageProcess<'static>> {
@@ -126,7 +128,7 @@ pub fn get_pages() -> Vec<PageProcess<'static>> {
         });
     }
 
-    for status_name in &STATUS {
+    for status_name in &STATUS_VARIABLES {
         pages.push(PageProcess {
             url: KB_URL.to_owned() + status_name + "-status-variables/",
             name: format!("{}-status-variables", status_name),

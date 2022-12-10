@@ -1158,7 +1158,6 @@
       "type": "integer"
     },
     {
-      "default": "-1",
       "dynamic": true,
       "id": "spider_strict_group_by",
       "name": "spider_strict_group_by",

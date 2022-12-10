@@ -21284,7 +21284,6 @@
 |Name|`spider_strict_group_by`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`-1`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `1`|
 
@@ -36223,6 +36222,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_end_markers_in_json](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_end_markers_in_json)|
+
+## explain_format
+|name|value|
+|----|-----|
+|Name|`explain_format`|
+|Command line|`--explain-format=format`|
+|Type of variable|`enumeration`|
+|Scope|`global`, `session`|
+|Default value|`TRADITIONAL`|
+|Dynamic|`true`|
+|Valid value(s)|`JSON`, `TREE`, `DEFAULT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_explain_format](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_explain_format)|
 
 ## generated_random_password_length
 |name|value|

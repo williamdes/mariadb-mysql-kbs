@@ -25813,7 +25813,6 @@
             ]
         },
         "spider_strict_group_by": {
-            "default": "-1",
             "dynamic": true,
             "name": "spider_strict_group_by",
             "range": {
@@ -42992,6 +42991,28 @@
             "ids": [
                 {
                     "anchor": "sysvar_end_markers_in_json",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "explain_format": {
+            "cli": "--explain-format=format",
+            "default": "TRADITIONAL",
+            "dynamic": true,
+            "name": "explain_format",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "JSON",
+                "TREE",
+                "DEFAULT"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_explain_format",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

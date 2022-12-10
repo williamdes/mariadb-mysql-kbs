@@ -20155,7 +20155,6 @@
             ]
         },
         "spider_strict_group_by": {
-            "default": "-1",
             "dynamic": true,
             "name": "spider_strict_group_by",
             "range": {
@@ -33571,6 +33570,25 @@
             "type": "boolean",
             "ids": [
                 "24#sysvar_end_markers_in_json"
+            ]
+        },
+        "explain_format": {
+            "cli": "--explain-format=format",
+            "default": "TRADITIONAL",
+            "dynamic": true,
+            "name": "explain_format",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "JSON",
+                "TREE",
+                "DEFAULT"
+            ],
+            "ids": [
+                "24#sysvar_explain_format"
             ]
         },
         "generated_random_password_length": {

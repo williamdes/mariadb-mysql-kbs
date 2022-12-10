@@ -909,6 +909,23 @@
       ]
     },
     {
+      "cli": "--explain-format=format",
+      "default": "TRADITIONAL",
+      "dynamic": true,
+      "id": "sysvar_explain_format",
+      "name": "explain_format",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "JSON",
+        "TREE",
+        "DEFAULT"
+      ]
+    },
+    {
       "cli": "--explicit-defaults-for-timestamp[={OFF|ON}]",
       "default": "ON",
       "dynamic": true,

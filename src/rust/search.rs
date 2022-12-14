@@ -1,28 +1,15 @@
 use std::env;
 use std::fs;
-use std::sync::Mutex;
 
 use crate::merged_ultraslim::MergedUltraSlim;
 
-static DATA: Mutex<Option<MergedUltraSlim>> = Mutex::new(None);
-
-pub fn load_data() {
-    let mut lock = DATA.try_lock();
-    if let Ok(ref mut data_mutex) = lock {
-        if data_mutex.is_some() {
-            return;
-        }
-        let source_dir = env::current_dir().unwrap();
-        const FILE_NAME: &str = "merged-ultraslim.json";
-        let file_contents =
-            fs::read_to_string(source_dir.to_str().unwrap().to_owned() + "/dist/" + FILE_NAME)
-                .expect("Should have been able to read the data file");
-        data_mutex.replace(
-            serde_json::from_str(&file_contents).expect("JSON data could not be decoded !"),
-        );
-    } else {
-        eprintln!("Could not lock the mutex");
-    }
+pub fn load_data() -> MergedUltraSlim {
+    let source_dir = env::current_dir().unwrap();
+    const FILE_NAME: &str = "merged-ultraslim.json";
+    let file_contents =
+        fs::read_to_string(source_dir.to_str().unwrap().to_owned() + "/dist/" + FILE_NAME)
+            .expect("Should have been able to read the data file");
+    serde_json::from_str(&file_contents).expect("JSON data could not be decoded !")
 }
 
 #[cfg(test)]
@@ -34,8 +21,7 @@ mod tests {
 
     #[test]
     fn test_load_data() {
-        load_data();
-        let data = DATA.lock().unwrap().take().unwrap();
+        let data = load_data();
 
         assert_eq!(
             true,

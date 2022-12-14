@@ -1,6 +1,7 @@
 pub mod cleaner;
 pub mod data;
 pub mod extract;
+pub mod find_missing_data;
 pub mod mariadb;
 pub mod mysql;
 
@@ -20,7 +21,6 @@ struct Cli {
 
 #[derive(Debug, Subcommand)]
 enum Commands {
-    /// Clones repos
     #[command(args_conflicts_with_subcommands = true, about = "Extract the data")]
     Extract {
         #[arg(
@@ -34,6 +34,20 @@ enum Commands {
             value_enum
         )]
         dataset: ExtractCommands,
+    },
+    #[command(args_conflicts_with_subcommands = true, about = "Find missing data")]
+    FindMissingData {
+        #[arg(
+            long,
+            require_equals = true,
+            num_args = 1,
+            value_name = "source",
+            default_value_t = ExtractCommands::All,
+            default_missing_value = "all",
+            help = "The source to check",
+            value_enum
+        )]
+        source: ExtractCommands,
     },
 }
 
@@ -57,6 +71,17 @@ fn main() {
             }
             ExtractCommands::Mariadb => {
                 extract::extract(extract::ExtractionPreference::MariaDB);
+            }
+        },
+        Commands::FindMissingData { source } => match source {
+            ExtractCommands::All => {
+                find_missing_data::run(extract::ExtractionPreference::All);
+            }
+            ExtractCommands::Mysql => {
+                find_missing_data::run(extract::ExtractionPreference::MySQL);
+            }
+            ExtractCommands::Mariadb => {
+                find_missing_data::run(extract::ExtractionPreference::MariaDB);
             }
         },
     }

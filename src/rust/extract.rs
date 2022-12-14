@@ -33,7 +33,7 @@ fn add_headers(rb: RequestBuilder) -> RequestBuilder {
     rb.header(FROM, UA_FROM).header(USER_AGENT, UA)
 }
 
-fn get_html_from_url(client: Client, url: &str) -> QueryResponse {
+pub fn get_html_from_url(client: Client, url: &str) -> QueryResponse {
     let mut request = client.get(url);
     request = add_headers(request);
 

@@ -4,42 +4,6 @@ use select::document::Document;
 use select::node::Node;
 use select::predicate::{Class, Name};
 
-/**
- * Complete a doc element with info found in table
- * @param {HTMLTableRowElement[]} rows The table rows
- * @param {Object} doc The doc object
- *
-function completeDoc($, rows, doc) {
-    $(rows).each((i, elem) => {
-        let tds = $(elem).find("td"); // first is key and last is value
-        var name = tds.first().text().toLowerCase().trim();
-        var value = tds.last();
-        let ths = $(elem).find("th"); // Fallback if the key is in a th
-        if (ths.length > 0) {
-            name = ths.first().text().toLowerCase().trim();
-        }
-    });
-}*/
-
-/**
- * Create a doc element
- * @param {Element} element The root element
- * @returns object The doc object
- */
-/*
-function createDoc($, element, doc) {
-    completeDoc($, $(element).find("tbody > tr"), doc);
-    if (doc.range !== undefined) {
-        doc.range = cleaner.cleanRange(doc.range);
-    }
-
-    if (doc.name && doc.name.match(cleaner.regexCli)) {
-        delete doc.name;
-    }
-
-    return doc;
-}*/
-
 fn find_table_archor(node: Node) -> String {
     let mut collected_p_nodes: Vec<Node> = vec![];
     let mut node_count = 10;

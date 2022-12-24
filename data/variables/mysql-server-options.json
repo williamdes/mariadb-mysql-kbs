@@ -296,22 +296,14 @@
     },
     {
       "cli": "--plugin-load=plugin_list",
-      "dynamic": false,
       "id": "option_mysqld_plugin-load",
       "name": "plugin_load",
-      "scope": [
-        "global"
-      ],
       "type": "string"
     },
     {
       "cli": "--plugin-load-add=plugin_list",
-      "dynamic": false,
       "id": "option_mysqld_plugin-load-add",
       "name": "plugin_load_add",
-      "scope": [
-        "global"
-      ],
       "type": "string"
     },
     {

@@ -32856,11 +32856,7 @@
         },
         "plugin_load": {
             "cli": "--plugin-load=plugin_list",
-            "dynamic": false,
             "name": "plugin_load",
-            "scope": [
-                "global"
-            ],
             "type": "string",
             "ids": [
                 "25#option_mysqld_plugin-load"
@@ -32868,11 +32864,7 @@
         },
         "plugin_load_add": {
             "cli": "--plugin-load-add=plugin_list",
-            "dynamic": false,
             "name": "plugin_load_add",
-            "scope": [
-                "global"
-            ],
             "type": "string",
             "ids": [
                 "25#option_mysqld_plugin-load-add"

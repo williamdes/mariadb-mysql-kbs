@@ -35414,8 +35414,6 @@
 |Name|`plugin_load`|
 |Command line|`--plugin-load=plugin_list`|
 |Type of variable|`string`|
-|Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -35428,8 +35426,6 @@
 |Name|`plugin_load_add`|
 |Command line|`--plugin-load-add=plugin_list`|
 |Type of variable|`string`|
-|Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|

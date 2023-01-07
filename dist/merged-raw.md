@@ -30855,6 +30855,7 @@
 |Command line|`--innodb-undo-tablespaces=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Range|from: `2` to: `127`|
 
 ### Documentation(s)
 |source|anchor name|

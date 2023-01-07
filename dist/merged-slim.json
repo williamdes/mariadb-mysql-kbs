@@ -28588,6 +28588,10 @@
         "innodb_undo_tablespaces": {
             "cli": "--innodb-undo-tablespaces=#",
             "name": "innodb_undo_tablespaces",
+            "range": {
+                "from": 2,
+                "to": 127
+            },
             "scope": [
                 "global"
             ],

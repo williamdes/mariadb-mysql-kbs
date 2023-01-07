@@ -3060,9 +3060,6 @@
       "dynamic": false,
       "id": "innodb_undo_tablespaces",
       "name": "innodb_undo_tablespaces",
-      "range": {
-        "from": 0
-      },
       "scope": [
         "global"
       ],

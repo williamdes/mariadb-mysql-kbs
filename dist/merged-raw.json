@@ -37078,22 +37078,6 @@
                 }
             ]
         },
-        "audit_log_disable": {
-            "cli": "--audit-log-disable[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "audit_log_disable",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_audit_log_disable",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html"
-                }
-            ]
-        },
         "audit_log_compression": {
             "cli": "--audit-log-compression=value",
             "default": "NONE",
@@ -37147,6 +37131,22 @@
             "ids": [
                 {
                     "anchor": "sysvar_audit_log_current_session",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html"
+                }
+            ]
+        },
+        "audit_log_disable": {
+            "cli": "--audit-log-disable[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "audit_log_disable",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_audit_log_disable",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html"
                 }
             ]

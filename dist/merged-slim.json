@@ -28795,19 +28795,6 @@
                 "61#sysvar_audit_log_buffer_size"
             ]
         },
-        "audit_log_disable": {
-            "cli": "--audit-log-disable[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "audit_log_disable",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "61#sysvar_audit_log_disable"
-            ]
-        },
         "audit_log_compression": {
             "cli": "--audit-log-compression=value",
             "default": "NONE",
@@ -28854,6 +28841,19 @@
             "type": "boolean",
             "ids": [
                 "61#sysvar_audit_log_current_session"
+            ]
+        },
+        "audit_log_disable": {
+            "cli": "--audit-log-disable[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "audit_log_disable",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "61#sysvar_audit_log_disable"
             ]
         },
         "audit_log_encryption": {

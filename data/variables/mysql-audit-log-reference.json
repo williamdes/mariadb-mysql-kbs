@@ -28,17 +28,6 @@
       "type": "integer"
     },
     {
-      "cli": "--audit-log-disable[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "sysvar_audit_log_disable",
-      "name": "audit_log_disable",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--audit-log-compression=value",
       "default": "NONE",
       "dynamic": false,
@@ -77,6 +66,17 @@
       "scope": [
         "global",
         "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--audit-log-disable[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_audit_log_disable",
+      "name": "audit_log_disable",
+      "scope": [
+        "global"
       ],
       "type": "boolean"
     },

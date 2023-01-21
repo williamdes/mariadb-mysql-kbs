@@ -31074,21 +31074,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_audit_log_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_buffer_size)|
 
-## audit_log_disable
-|name|value|
-|----|-----|
-|Name|`audit_log_disable`|
-|Command line|`--audit-log-disable[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_audit_log_disable](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_disable)|
-
 ## audit_log_compression
 |name|value|
 |----|-----|
@@ -31134,6 +31119,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_audit_log_current_session](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_current_session)|
+
+## audit_log_disable
+|name|value|
+|----|-----|
+|Name|`audit_log_disable`|
+|Command line|`--audit-log-disable[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_audit_log_disable](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_disable)|
 
 ## audit_log_encryption
 |name|value|

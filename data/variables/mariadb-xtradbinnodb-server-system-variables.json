@@ -3056,7 +3056,7 @@
     },
     {
       "cli": "--innodb-undo-tablespaces=#",
-      "default": "0",
+      "default": "3 (>= MariaDB 11.0), 0 (<= MariaDB 10.11)",
       "dynamic": false,
       "id": "innodb_undo_tablespaces",
       "name": "innodb_undo_tablespaces",

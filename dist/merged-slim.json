@@ -21245,7 +21245,7 @@
         },
         "thread_handling": {
             "cli": "--thread-handling=name",
-            "default": "one-thread-per-connection",
+            "default": "1e-thread-per-c1necti1",
             "dynamic": false,
             "name": "thread_handling",
             "scope": [

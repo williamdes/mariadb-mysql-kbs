@@ -28,7 +28,7 @@
     },
     {
       "cli": "--thread-handling=name",
-      "default": "one-thread-per-connection",
+      "default": "one-thread-per-connection (non-Windows), pool-of-threads (Windows)",
       "dynamic": false,
       "id": "thread_handling",
       "name": "thread_handling",

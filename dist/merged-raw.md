@@ -22408,7 +22408,7 @@
 |Command line|`--thread-handling=name`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`one-thread-per-connection`|
+|Default value|`1e-thread-per-c1necti1`|
 |Dynamic|`false`|
 |Valid value(s)|`no-threads`, `one-thread-per-connection`, `pool-of-threads`|
 

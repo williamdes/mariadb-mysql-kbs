@@ -21245,7 +21245,7 @@
         },
         "thread_handling": {
             "cli": "--thread-handling=name",
-            "default": "one-thread-per-connection",
+            "default": "1e-thread-per-c1necti1",
             "dynamic": false,
             "name": "thread_handling",
             "scope": [
@@ -25936,6 +25936,19 @@
             ],
             "ids": [
                 "59#innodb_corrupt_table_action"
+            ]
+        },
+        "innodb_data_file_buffering": {
+            "cli": "--innodb-data-file-buffering={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_data_file_buffering",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "59#innodb_data_file_buffering"
             ]
         },
         "innodb_data_file_path": {

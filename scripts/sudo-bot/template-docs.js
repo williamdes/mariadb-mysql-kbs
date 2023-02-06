@@ -22,7 +22,7 @@ const prMessage = function (modifiedFiles) {
  */
 const prContent = function (modifiedFiles) {
     let message =
-        'Dear human 🌻, after running my task the following file' +
+        'Dear human 🌻🐓🦃🦎🦙🐂🐏🐐🐎🦉, after running my task the following file' +
         (modifiedFiles.length > 1 ? 's where updated:' : ' was updated:') +
         '\n';
     message += modifiedFiles

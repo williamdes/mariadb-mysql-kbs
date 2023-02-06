@@ -198,35 +198,35 @@ module.exports = function () {
                 'README.md',
             ]);
             expect(prContent).to.equal(
-                'Dear human 🌻, after running my task the following files where updated:\n- `a.json` 👽\n- `ab/cd/ef.json` 👽\n- `data/mariadb-aria-server-status-variables.json` 🐳\n- `dist/merged-raw.json` 📦\n- `dist/merged-raw.md` 📦\n- `dist/merged-slim.json` 📦\n- `dist/merged-ultraslim.json` 📦\n- `dist/merged-ultraslim.php` 📦\n- `data/mysql-server-options.json` 🐬\n- `README.md` 👽\n'
+                'Dear human 🌻🐓🦃🦎🦙🐂🐏🐐🐎🦉, after running my task the following files where updated:\n- `a.json` 👽\n- `ab/cd/ef.json` 👽\n- `data/mariadb-aria-server-status-variables.json` 🐳\n- `dist/merged-raw.json` 📦\n- `dist/merged-raw.md` 📦\n- `dist/merged-slim.json` 📦\n- `dist/merged-ultraslim.json` 📦\n- `dist/merged-ultraslim.php` 📦\n- `data/mysql-server-options.json` 🐬\n- `README.md` 👽\n'
             );
             done();
         });
         test('prContent one file', function (done) {
             const prContent = templates.prContent(['README.md']);
             expect(prContent).to.equal(
-                'Dear human 🌻, after running my task the following file was updated:\n- `README.md` 👽\n'
+                'Dear human 🌻🐓🦃🦎🦙🐂🐏🐐🐎🦉, after running my task the following file was updated:\n- `README.md` 👽\n'
             );
             done();
         });
         test('prContent one special file', function (done) {
             const prContent = templates.prContent(['renderer.index']);
             expect(prContent).to.equal(
-                'Dear human 🌻, after running my task the following file was updated:\n- `renderer.index` 👁️\n'
+                'Dear human 🌻🐓🦃🦎🦙🐂🐏🐐🐎🦉, after running my task the following file was updated:\n- `renderer.index` 👁️\n'
             );
             done();
         });
         test('prContent one html file', function (done) {
             const prContent = templates.prContent(['index.html']);
             expect(prContent).to.equal(
-                'Dear human 🌻, after running my task the following file was updated:\n- `index.html` 👁️\n'
+                'Dear human 🌻🐓🦃🦎🦙🐂🐏🐐🐎🦉, after running my task the following file was updated:\n- `index.html` 👁️\n'
             );
             done();
         });
         test('prContent one complex file name', function (done) {
             const prContent = templates.prContent(['mysql-replication-options-binary-log_5.7.json']);
             expect(prContent).to.equal(
-                'Dear human 🌻, after running my task the following file was updated:\n- `mysql-replication-options-binary-log_5.7.json` 🐬\n'
+                'Dear human 🌻🐓🦃🦎🦙🐂🐏🐐🐎🦉, after running my task the following file was updated:\n- `mysql-replication-options-binary-log_5.7.json` 🐬\n'
             );
             done();
         });

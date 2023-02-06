@@ -22,14 +22,14 @@ module.exports = function () {
         test('prContent renderer.index', function (done) {
             const prContent = template.prContent(['renderer.index']);
             expect(prContent).to.equal(
-                'Dear human 🌻, after running my task the following file was updated:\n- `renderer.index` 👁️\n'
+                'Dear human 🌻🐓🦃🦎🦙🐂🐏🐐🐎🦉, after running my task the following file was updated:\n- `renderer.index` 👁️\n'
             );
             done();
         });
         test('prContent index.html', function (done) {
             const prContent = template.prContent(['index.html']);
             expect(prContent).to.equal(
-                'Dear human 🌻, after running my task the following file was updated:\n- `index.html` 👁️\n'
+                'Dear human 🌻🐓🦃🦎🦙🐂🐏🐐🐎🦉, after running my task the following file was updated:\n- `index.html` 👁️\n'
             );
             done();
         });

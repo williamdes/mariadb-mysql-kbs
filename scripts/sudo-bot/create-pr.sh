@@ -82,7 +82,6 @@ printf 'Running...\n'
 
 # Manually expand ~ because NodeJs seems not understanding it
 $SUDO_BOT --verbose \
-    --target-branch='gh-pages' \
     --jwt-file="${HOME}/.secret_jwt.pem" \
     --gh-app-id='17453' \
     --installation-id="${INSTALLATION_ID}" \

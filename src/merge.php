@@ -180,8 +180,10 @@ foreach ($files as $file) {
                             } elseif ($key === 'default') {
                                 $originalValues    = ['on', 'off', 'ON', 'OFF', 'true', 'false', 'TRUE', 'FALSE'];
                                 $destinationValues = ['1', '0', '1', '0', '1', '0', '1', '0'];
-                                $docValue          = str_replace($originalValues, $destinationValues, $docValue);
-                                $cacheValue        = str_replace($originalValues, $destinationValues, $cacheValue);
+                                if ($docValue !== 'one-thread-per-connection') {// Or it will do: 1e-thread-per-c1necti1
+                                    $docValue   = str_replace($originalValues, $destinationValues, $docValue);
+                                    $cacheValue = str_replace($originalValues, $destinationValues, $cacheValue);
+                                }
                                 if ($docValue === $cacheValue) {
                                     $newData->$key = $docValue;
                                     $nbrConflictsSolved++;

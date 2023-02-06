@@ -25938,6 +25938,19 @@
                 "59#innodb_corrupt_table_action"
             ]
         },
+        "innodb_data_file_buffering": {
+            "cli": "--innodb-data-file-buffering={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_data_file_buffering",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "59#innodb_data_file_buffering"
+            ]
+        },
         "innodb_data_file_path": {
             "default": "ibdata1:12M:autoextend",
             "dynamic": false,

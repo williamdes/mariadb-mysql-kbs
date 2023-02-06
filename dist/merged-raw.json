@@ -33381,6 +33381,22 @@
                 }
             ]
         },
+        "innodb_data_file_buffering": {
+            "cli": "--innodb-data-file-buffering={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_data_file_buffering",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "innodb_data_file_buffering",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
+                }
+            ]
+        },
         "innodb_data_file_path": {
             "default": "ibdata1:12M:autoextend",
             "dynamic": false,

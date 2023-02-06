@@ -28165,6 +28165,21 @@
 |------|----|
 |mariadb.com|[innodb_corrupt_table_action](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_corrupt_table_action)|
 
+## innodb_data_file_buffering
+|name|value|
+|----|-----|
+|Name|`innodb_data_file_buffering`|
+|Command line|`--innodb-data-file-buffering={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_data_file_buffering](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_data_file_buffering)|
+
 ## innodb_data_file_path
 |name|value|
 |----|-----|

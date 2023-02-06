@@ -796,6 +796,17 @@
       ]
     },
     {
+      "cli": "--innodb-data-file-buffering={0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "innodb_data_file_buffering",
+      "name": "innodb_data_file_buffering",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-data-file-path=name",
       "default": "ibdata1:12M:autoextend (from MariaDB 10.0), ibdata1:10M:autoextend (before MariaDB 10.0)",
       "dynamic": false,

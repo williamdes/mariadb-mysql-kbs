@@ -10422,6 +10422,7 @@
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`NO`|
+|Dynamic|`true`|
 |Valid value(s)|`NO`, `YES`, `LOGGING`, `ENFORCE`|
 
 ### Documentation(s)
@@ -16548,7 +16549,7 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
-|Range|from: `4` to: `1.844674407371E+19`|
+|Range|from: `4` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17394,7 +17395,7 @@
 |Command line|`-W [level] or --log-warnings[=level]`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`2 (>= MariaDB 10.2.4), 1 (<= MariaDB 10.2.3)`|
+|Default value|`2`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
@@ -18857,7 +18858,7 @@
 |Name|`skip_grant_tables`|
 |Command line|`--skip-grant-tables[={OFF|ON}]`|
 |Type of variable|`boolean`|
-|Default value|`0`|
+|Default value|`OFF`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27666,7 +27667,7 @@
 |Name|`innodb_buffer_pool_dump_at_shutdown`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`1`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -27774,7 +27775,7 @@
 |Name|`innodb_buffer_pool_load_at_startup`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`1`|
+|Default value|`ON`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -27883,6 +27884,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`134217728`|
+|Dynamic|`true`|
 |Range|from: `5242880`|
 
 ### Documentation(s)
@@ -28011,9 +28013,9 @@
 |Command line|`--innodb-cleaner-lsn-age-factor=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`deprecated (>= MariaDB 10.2.6), high_checkpoint (<= MariaDB 10.1)`|
+|Default value|`deprecated`|
 |Dynamic|`true`|
-|Valid value(s)|`high_checkpoint`, `legacy`, `deprecated`, `high_checkpoint`, `legacy`|
+|Valid value(s)|`deprecated`, `high_checkpoint`, `legacy`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28158,7 +28160,7 @@
 |Scope|`global`|
 |Default value|`assert (<= MariaDB 10.1), deprecated (<= MariaDB 10.2.6)`|
 |Dynamic|`true`|
-|Valid value(s)|`deprecated`, `assert`, `warn`, `salvage`, `assert`, `warn`, `salvage`|
+|Valid value(s)|`deprecated`, `assert`, `warn`, `salvage`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28193,6 +28195,21 @@
 |------|----|
 |mariadb.com|[innodb_data_file_path](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_data_file_path)|
 |dev.mysql.com|[sysvar_innodb_data_file_path](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_data_file_path)|
+
+## innodb_data_file_write_through
+|name|value|
+|----|-----|
+|Name|`innodb_data_file_write_through`|
+|Command line|`--innodb-data-file-write-through={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_data_file_write_through](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_data_file_write_through)|
 
 ## innodb_data_home_dir
 |name|value|
@@ -28280,7 +28297,6 @@
 |Command line|`--innodb-default-row-format=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`DYNAMIC`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -28464,9 +28480,9 @@
 |Command line|`innodb-empty-free-list-algorithm=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`deprecated (>= MariaDB 10.2.6), legacy (>= MariaDB 10.1.24), backoff (<= MariaDB 10.1.23)`|
+|Default value|`deprecated`|
 |Dynamic|`true`|
-|Valid value(s)|`deprecated`, `backoff`, `legacy`, `backoff`, `legacy`|
+|Valid value(s)|`deprecated`, `backoff`, `legacy`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -28684,7 +28700,7 @@
 |Command line|`--innodb-file-format=value`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`Barracuda (>= MariaDB 10.2.2), Antelope (<= MariaDB 10.2.1)`|
+|Default value|`Barracuda`|
 |Dynamic|`true`|
 |Valid value(s)|`Antelope`, `Barracuda`|
 
@@ -28919,9 +28935,9 @@
 |Command line|`innodb-foreground-preflush=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`deprecated (>= MariaDB 10.2.6), exponential_backoff (<= MariaDB 10.1)`|
+|Default value|`deprecated`|
 |Dynamic|`true`|
-|Valid value(s)|`deprecated`, `exponential_backoff`, `sync_preflush`, `exponential_backoff`, `sync_preflush`|
+|Valid value(s)|`deprecated`, `exponential_backoff`, `sync_preflush`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29302,7 +29318,7 @@
 |Command line|`--innodb-large-prefix`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON (>= MariaDB 10.2.2), OFF (<= MariaDB 10.2.1)`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -29350,7 +29366,6 @@
 |Scope|`global`, `session`|
 |Default value|`50`|
 |Dynamic|`true`|
-|Range|from: `1` to: `1073741824`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29500,7 +29515,7 @@
 |Name|`innodb_log_compressed_pages`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`1`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -29539,6 +29554,21 @@
 |------|----|
 |mariadb.com|[innodb_log_file_size](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_log_file_size)|
 |dev.mysql.com|[sysvar_innodb_log_file_size](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size)|
+
+## innodb_log_file_write_through
+|name|value|
+|----|-----|
+|Name|`innodb_log_file_write_through`|
+|Command line|`--innodb-log-file-write-through={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_log_file_write_through](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_log_file_write_through)|
 
 ## innodb_log_files_in_group
 |name|value|
@@ -30638,7 +30668,7 @@
 |Name|`innodb_strict_mode`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`1`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -30885,7 +30915,7 @@
 |Command line|`innodb-use-atomic-writes={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)`|
+|Default value|`ON`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -31021,7 +31051,7 @@
 |Command line|`--innodb-use-trim={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)`|
+|Default value|`ON`|
 |Dynamic|`false`|
 
 ### Documentation(s)

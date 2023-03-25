@@ -9801,6 +9801,7 @@
         "slave_run_triggers_for_rbr": {
             "cli": "--slave-run-triggers-for-rbr=value",
             "default": "NO",
+            "dynamic": true,
             "name": "slave_run_triggers_for_rbr",
             "scope": [
                 "global"
@@ -15370,7 +15371,7 @@
             "name": "group_concat_max_len",
             "range": {
                 "from": 4,
-                "to": 1.8446744073709548e+19
+                "to": 4294967295
             },
             "scope": [
                 "global",
@@ -16191,7 +16192,7 @@
         },
         "log_warnings": {
             "cli": "-W [level] or --log-warnings[=level]",
-            "default": "2 (>= MariaDB 10.2.4), 1 (<= MariaDB 10.2.3)",
+            "default": "2",
             "dynamic": true,
             "name": "log_warnings",
             "range": {
@@ -17670,7 +17671,7 @@
         },
         "skip_grant_tables": {
             "cli": "--skip-grant-tables[={OFF|ON}]",
-            "default": "0",
+            "default": "OFF",
             "name": "skip_grant_tables",
             "type": "boolean",
             "ids": [
@@ -25412,7 +25413,7 @@
             ]
         },
         "innodb_buffer_pool_dump_at_shutdown": {
-            "default": "1",
+            "default": "ON",
             "dynamic": true,
             "name": "innodb_buffer_pool_dump_at_shutdown",
             "scope": [
@@ -25515,7 +25516,7 @@
             ]
         },
         "innodb_buffer_pool_load_at_startup": {
-            "default": "1",
+            "default": "ON",
             "dynamic": false,
             "name": "innodb_buffer_pool_load_at_startup",
             "scope": [
@@ -25616,6 +25617,7 @@
         "innodb_buffer_pool_size": {
             "cli": "--innodb-buffer-pool-size=#",
             "default": "134217728",
+            "dynamic": true,
             "name": "innodb_buffer_pool_size",
             "range": {
                 "from": 5242880
@@ -25765,7 +25767,7 @@
         },
         "innodb_cleaner_lsn_age_factor": {
             "cli": "--innodb-cleaner-lsn-age-factor=value",
-            "default": "deprecated (>= MariaDB 10.2.6), high_checkpoint (<= MariaDB 10.1)",
+            "default": "deprecated",
             "dynamic": true,
             "name": "innodb_cleaner_lsn_age_factor",
             "scope": [
@@ -25773,8 +25775,6 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "high_checkpoint",
-                "legacy",
                 "deprecated",
                 "high_checkpoint",
                 "legacy"
@@ -25929,9 +25929,6 @@
                 "deprecated",
                 "assert",
                 "warn",
-                "salvage",
-                "assert",
-                "warn",
                 "salvage"
             ],
             "ids": [
@@ -25961,6 +25958,19 @@
             "ids": [
                 "59#innodb_data_file_path",
                 "60#sysvar_innodb_data_file_path"
+            ]
+        },
+        "innodb_data_file_write_through": {
+            "cli": "--innodb-data-file-write-through={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_data_file_write_through",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "59#innodb_data_file_write_through"
             ]
         },
         "innodb_data_home_dir": {
@@ -26045,7 +26055,6 @@
         },
         "innodb_default_row_format": {
             "cli": "--innodb-default-row-format=value",
-            "default": "DYNAMIC",
             "dynamic": true,
             "name": "innodb_default_row_format",
             "scope": [
@@ -26225,7 +26234,7 @@
         },
         "innodb_empty_free_list_algorithm": {
             "cli": "innodb-empty-free-list-algorithm=value",
-            "default": "deprecated (>= MariaDB 10.2.6), legacy (>= MariaDB 10.1.24), backoff (<= MariaDB 10.1.23)",
+            "default": "deprecated",
             "dynamic": true,
             "name": "innodb_empty_free_list_algorithm",
             "scope": [
@@ -26234,8 +26243,6 @@
             "type": "enumeration",
             "validValues": [
                 "deprecated",
-                "backoff",
-                "legacy",
                 "backoff",
                 "legacy"
             ],
@@ -26452,7 +26459,7 @@
         },
         "innodb_file_format": {
             "cli": "--innodb-file-format=value",
-            "default": "Barracuda (>= MariaDB 10.2.2), Antelope (<= MariaDB 10.2.1)",
+            "default": "Barracuda",
             "dynamic": true,
             "name": "innodb_file_format",
             "scope": [
@@ -26688,7 +26695,7 @@
         },
         "innodb_foreground_preflush": {
             "cli": "innodb-foreground-preflush=value",
-            "default": "deprecated (>= MariaDB 10.2.6), exponential_backoff (<= MariaDB 10.1)",
+            "default": "deprecated",
             "dynamic": true,
             "name": "innodb_foreground_preflush",
             "scope": [
@@ -26697,8 +26704,6 @@
             "type": "enumeration",
             "validValues": [
                 "deprecated",
-                "exponential_backoff",
-                "sync_preflush",
                 "exponential_backoff",
                 "sync_preflush"
             ],
@@ -27073,7 +27078,7 @@
         },
         "innodb_large_prefix": {
             "cli": "--innodb-large-prefix",
-            "default": "ON (>= MariaDB 10.2.2), OFF (<= MariaDB 10.2.1)",
+            "default": "ON",
             "dynamic": true,
             "name": "innodb_large_prefix",
             "scope": [
@@ -27119,10 +27124,6 @@
             "default": "50",
             "dynamic": true,
             "name": "innodb_lock_wait_timeout",
-            "range": {
-                "from": 1,
-                "to": 1073741824
-            },
             "scope": [
                 "global",
                 "session"
@@ -27266,7 +27267,7 @@
             ]
         },
         "innodb_log_compressed_pages": {
-            "default": "1",
+            "default": "ON",
             "dynamic": true,
             "name": "innodb_log_compressed_pages",
             "scope": [
@@ -27305,6 +27306,19 @@
             "ids": [
                 "59#innodb_log_file_size",
                 "60#sysvar_innodb_log_file_size"
+            ]
+        },
+        "innodb_log_file_write_through": {
+            "cli": "--innodb-log-file-write-through={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_log_file_write_through",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "59#innodb_log_file_write_through"
             ]
         },
         "innodb_log_files_in_group": {
@@ -28382,7 +28396,7 @@
             ]
         },
         "innodb_strict_mode": {
-            "default": "1",
+            "default": "ON",
             "dynamic": true,
             "name": "innodb_strict_mode",
             "scope": [
@@ -28616,7 +28630,7 @@
         },
         "innodb_use_atomic_writes": {
             "cli": "innodb-use-atomic-writes={0|1}",
-            "default": "ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)",
+            "default": "ON",
             "dynamic": false,
             "name": "innodb_use_atomic_writes",
             "scope": [
@@ -28737,7 +28751,7 @@
         },
         "innodb_use_trim": {
             "cli": "--innodb-use-trim={0|1}",
-            "default": "ON (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)",
+            "default": "ON",
             "dynamic": false,
             "name": "innodb_use_trim",
             "scope": [

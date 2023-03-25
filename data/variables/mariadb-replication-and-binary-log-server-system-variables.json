@@ -481,6 +481,7 @@
     },
     {
       "cli": "--relay-log-index=name",
+      "default": "None",
       "dynamic": false,
       "id": "relay_log_index",
       "name": "relay_log_index",
@@ -688,11 +689,12 @@
     },
     {
       "cli": "--server-id =#",
-      "default": "1 (>= MariaDB 10.2.2), 0 (<= MariaDB 10.2.1)",
+      "default": "1",
       "dynamic": true,
       "id": "server_id",
       "name": "server_id",
       "range": {
+        "from": 1,
         "to": 4294967295
       },
       "scope": [
@@ -804,7 +806,7 @@
     },
     {
       "cli": "--slave-net-timeout=#",
-      "default": "60 (1 minute) (>= MariaDB 10.2.4), 3600 (1 hour) (<= MariaDB 10.2.3)",
+      "default": "60 (1 minute)",
       "dynamic": true,
       "id": "slave_net_timeout",
       "name": "slave_net_timeout",
@@ -872,6 +874,7 @@
     {
       "cli": "--slave-run-triggers-for-rbr=value",
       "default": "NO",
+      "dynamic": true,
       "id": "slave_run_triggers_for_rbr",
       "name": "slave_run_triggers_for_rbr",
       "scope": [

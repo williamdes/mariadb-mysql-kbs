@@ -803,13 +803,13 @@
     },
     {
       "cli": "--group-concat-max-len=#",
-      "default": "1048576 (1M) >= MariaDB 10.2.4, 1024 (1K) <= MariaDB 10.2.3",
+      "default": "1048576",
       "dynamic": true,
       "id": "group_concat_max_len",
       "name": "group_concat_max_len",
       "range": {
         "from": 4,
-        "to": 18446744073709547520
+        "to": 4294967295
       },
       "scope": [
         "global",
@@ -1244,11 +1244,12 @@
     },
     {
       "cli": "--lock-wait-timeout=#",
-      "default": "86400 (1 day) >= MariaDB 10.2.4, 31536000 (1 year) <= MariaDB 10.2.3",
+      "default": "86400",
       "dynamic": true,
       "id": "lock_wait_timeout",
       "name": "lock_wait_timeout",
       "range": {
+        "from": 0,
         "to": 31536000
       },
       "scope": [
@@ -1335,7 +1336,7 @@
     },
     {
       "cli": "--log-slow-admin-statements",
-      "default": "ON  (>= MariaDB 10.2.4), OFF (<= MariaDB 10.2.3)",
+      "default": "ON",
       "dynamic": true,
       "id": "log_slow_admin_statements",
       "name": "log_slow_admin_statements",
@@ -1502,7 +1503,7 @@
     },
     {
       "cli": "-W [level] or --log-warnings[=level]",
-      "default": "2 (>= MariaDB 10.2.4), 1 (<= MariaDB 10.2.3)",
+      "default": "2",
       "dynamic": true,
       "id": "log_warnings",
       "name": "log_warnings",
@@ -1607,6 +1608,7 @@
       "id": "max_connections",
       "name": "max_connections",
       "range": {
+        "from": 10,
         "to": 100000
       },
       "scope": [
@@ -2814,7 +2816,7 @@
     },
     {
       "cli": "--skip-grant-tables",
-      "default": "0",
+      "default": "OFF",
       "dynamic": false,
       "id": "skip_grant_tables",
       "name": "skip_grant_tables",

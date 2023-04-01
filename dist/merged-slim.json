@@ -2471,7 +2471,7 @@
         "wsrep_sst_donor": {
             "cli": "--wsrep-sst-donor=value",
             "default": "",
-            "dynamic": true,
+            "dynamic": false,
             "name": "wsrep_sst_donor",
             "scope": [
                 "global"
@@ -2572,7 +2572,8 @@
             "dynamic": true,
             "name": "wsrep_sync_wait",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 15
             },
             "scope": [
                 "global",
@@ -13787,10 +13788,19 @@
                 "43#max_statement_time_exceeded"
             ]
         },
+        "Max_used_connection_time": {
+            "name": "Max_used_connection_time",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "43#max_used_connection_time"
+            ]
+        },
         "Max_used_connections": {
             "name": "Max_used_connections",
             "scope": [
-                "session"
+                "global"
             ],
             "type": "integer",
             "ids": [

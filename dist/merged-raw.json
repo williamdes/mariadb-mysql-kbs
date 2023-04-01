@@ -3083,7 +3083,7 @@
         "wsrep_sst_donor": {
             "cli": "--wsrep-sst-donor=value",
             "default": "",
-            "dynamic": true,
+            "dynamic": false,
             "name": "wsrep_sst_donor",
             "scope": [
                 "global"
@@ -3205,7 +3205,8 @@
             "dynamic": true,
             "name": "wsrep_sync_wait",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 15
             },
             "scope": [
                 "global",
@@ -17561,10 +17562,22 @@
                 }
             ]
         },
+        "Max_used_connection_time": {
+            "name": "Max_used_connection_time",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "max_used_connection_time",
+                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
+                }
+            ]
+        },
         "Max_used_connections": {
             "name": "Max_used_connections",
             "scope": [
-                "session"
+                "global"
             ],
             "type": "integer",
             "ids": [

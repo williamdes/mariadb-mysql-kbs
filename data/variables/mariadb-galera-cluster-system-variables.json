@@ -567,7 +567,7 @@
     {
       "cli": "--wsrep-sst-donor=value",
       "default": "",
-      "dynamic": true,
+      "dynamic": false,
       "id": "wsrep_sst_donor",
       "name": "wsrep_sst_donor",
       "scope": [
@@ -655,7 +655,8 @@
       "id": "wsrep_sync_wait",
       "name": "wsrep_sync_wait",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 15
       },
       "scope": [
         "global",

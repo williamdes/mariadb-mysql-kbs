@@ -2754,7 +2754,7 @@
 |Type of variable|`string`|
 |Scope|`global`|
 |Default value|``|
-|Dynamic|`true`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -2861,7 +2861,7 @@
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `15`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -14845,12 +14845,23 @@
 |------|----|
 |mariadb.com|[max_statement_time_exceeded](https://mariadb.com/kb/en/library/documentation/server-status-variables/#max_statement_time_exceeded)|
 
+## Max_used_connection_time
+|name|value|
+|----|-----|
+|Name|`Max_used_connection_time`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[max_used_connection_time](https://mariadb.com/kb/en/library/documentation/server-status-variables/#max_used_connection_time)|
+
 ## Max_used_connections
 |name|value|
 |----|-----|
 |Name|`Max_used_connections`|
 |Type of variable|`integer`|
-|Scope|`session`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|

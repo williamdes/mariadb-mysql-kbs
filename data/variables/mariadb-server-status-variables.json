@@ -2317,10 +2317,17 @@
       "type": "integer"
     },
     {
+      "id": "max_used_connection_time",
+      "name": "Max_used_connection_time",
+      "scope": [
+        "global"
+      ]
+    },
+    {
       "id": "max_used_connections",
       "name": "Max_used_connections",
       "scope": [
-        "session"
+        "global"
       ],
       "type": "integer"
     },

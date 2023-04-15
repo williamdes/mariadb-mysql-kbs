@@ -3399,6 +3399,24 @@
       "type": "integer"
     },
     {
+      "cli": "--transaction-isolation=name",
+      "default": "REPEATABLE-READ",
+      "dynamic": true,
+      "id": "transaction_isolation",
+      "name": "transaction_isolation",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "READ-UNCOMMITTED",
+        "READ-COMMITTED",
+        "REPEATABLE-READ",
+        "SERIALIZABLE"
+      ]
+    },
+    {
       "cli": "--transaction-prealloc-size=#",
       "default": "4096",
       "dynamic": true,
@@ -3413,6 +3431,18 @@
         "session"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--transaction-read-only=#",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "transaction_read_only",
+      "name": "transaction_read_only",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--transaction-isolation=name",

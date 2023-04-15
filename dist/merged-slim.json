@@ -18413,6 +18413,28 @@
                 "24#sysvar_transaction_alloc_block_size"
             ]
         },
+        "transaction_isolation": {
+            "cli": "--transaction-isolation=name",
+            "default": "REPEATABLE-READ",
+            "dynamic": true,
+            "name": "transaction_isolation",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "READ-UNCOMMITTED",
+                "READ-COMMITTED",
+                "REPEATABLE-READ",
+                "SERIALIZABLE"
+            ],
+            "ids": [
+                "44#transaction_isolation",
+                "25#option_mysqld_transaction-isolation",
+                "24#sysvar_transaction_isolation"
+            ]
+        },
         "transaction_prealloc_size": {
             "cli": "--transaction-prealloc-size=#",
             "default": "4096",
@@ -18429,6 +18451,22 @@
             "ids": [
                 "44#transaction_prealloc_size",
                 "24#sysvar_transaction_prealloc_size"
+            ]
+        },
+        "transaction_read_only": {
+            "cli": "--transaction-read-only[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "transaction_read_only",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "44#transaction_read_only",
+                "25#option_mysqld_transaction-read-only",
+                "24#sysvar_transaction_read_only"
             ]
         },
         "tx_isolation": {
@@ -33021,42 +33059,6 @@
             ],
             "ids": [
                 "25#option_mysqld_tc-heuristic-recover"
-            ]
-        },
-        "transaction_isolation": {
-            "cli": "--transaction-isolation=name",
-            "default": "REPEATABLE-READ",
-            "dynamic": true,
-            "name": "transaction_isolation",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "READ-UNCOMMITTED",
-                "READ-COMMITTED",
-                "REPEATABLE-READ",
-                "SERIALIZABLE"
-            ],
-            "ids": [
-                "25#option_mysqld_transaction-isolation",
-                "24#sysvar_transaction_isolation"
-            ]
-        },
-        "transaction_read_only": {
-            "cli": "--transaction-read-only[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "transaction_read_only",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "boolean",
-            "ids": [
-                "25#option_mysqld_transaction-read-only",
-                "24#sysvar_transaction_read_only"
             ]
         },
         "upgrade": {

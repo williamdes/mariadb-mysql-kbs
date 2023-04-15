@@ -19628,6 +19628,24 @@
 |mariadb.com|[transaction_alloc_block_size](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#transaction_alloc_block_size)|
 |dev.mysql.com|[sysvar_transaction_alloc_block_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_alloc_block_size)|
 
+## transaction_isolation
+|name|value|
+|----|-----|
+|Name|`transaction_isolation`|
+|Command line|`--transaction-isolation=name`|
+|Type of variable|`enumeration`|
+|Scope|`global`, `session`|
+|Default value|`REPEATABLE-READ`|
+|Dynamic|`true`|
+|Valid value(s)|`READ-UNCOMMITTED`, `READ-COMMITTED`, `REPEATABLE-READ`, `SERIALIZABLE`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[transaction_isolation](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#transaction_isolation)|
+|dev.mysql.com|[option_mysqld_transaction-isolation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_transaction-isolation)|
+|dev.mysql.com|[sysvar_transaction_isolation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation)|
+
 ## transaction_prealloc_size
 |name|value|
 |----|-----|
@@ -19644,6 +19662,23 @@
 |------|----|
 |mariadb.com|[transaction_prealloc_size](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#transaction_prealloc_size)|
 |dev.mysql.com|[sysvar_transaction_prealloc_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_prealloc_size)|
+
+## transaction_read_only
+|name|value|
+|----|-----|
+|Name|`transaction_read_only`|
+|Command line|`--transaction-read-only[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[transaction_read_only](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#transaction_read_only)|
+|dev.mysql.com|[option_mysqld_transaction-read-only](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_transaction-read-only)|
+|dev.mysql.com|[sysvar_transaction_read_only](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_read_only)|
 
 ## tx_isolation
 |name|value|
@@ -35648,39 +35683,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_tc-heuristic-recover](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_tc-heuristic-recover)|
-
-## transaction_isolation
-|name|value|
-|----|-----|
-|Name|`transaction_isolation`|
-|Command line|`--transaction-isolation=name`|
-|Type of variable|`enumeration`|
-|Scope|`global`, `session`|
-|Default value|`REPEATABLE-READ`|
-|Dynamic|`true`|
-|Valid value(s)|`READ-UNCOMMITTED`, `READ-COMMITTED`, `REPEATABLE-READ`, `SERIALIZABLE`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_transaction-isolation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_transaction-isolation)|
-|dev.mysql.com|[sysvar_transaction_isolation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation)|
-
-## transaction_read_only
-|name|value|
-|----|-----|
-|Name|`transaction_read_only`|
-|Command line|`--transaction-read-only[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_transaction-read-only](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_transaction-read-only)|
-|dev.mysql.com|[sysvar_transaction_read_only](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_read_only)|
 
 ## upgrade
 |name|value|

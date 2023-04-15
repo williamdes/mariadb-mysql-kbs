@@ -23693,6 +23693,37 @@
                 }
             ]
         },
+        "transaction_isolation": {
+            "cli": "--transaction-isolation=name",
+            "default": "REPEATABLE-READ",
+            "dynamic": true,
+            "name": "transaction_isolation",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "READ-UNCOMMITTED",
+                "READ-COMMITTED",
+                "REPEATABLE-READ",
+                "SERIALIZABLE"
+            ],
+            "ids": [
+                {
+                    "anchor": "transaction_isolation",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "option_mysqld_transaction-isolation",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                },
+                {
+                    "anchor": "sysvar_transaction_isolation",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
         "transaction_prealloc_size": {
             "cli": "--transaction-prealloc-size=#",
             "default": "4096",
@@ -23713,6 +23744,31 @@
                 },
                 {
                     "anchor": "sysvar_transaction_prealloc_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "transaction_read_only": {
+            "cli": "--transaction-read-only[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "transaction_read_only",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "transaction_read_only",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "option_mysqld_transaction-read-only",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                },
+                {
+                    "anchor": "sysvar_transaction_read_only",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
@@ -42323,54 +42379,6 @@
                 {
                     "anchor": "option_mysqld_tc-heuristic-recover",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                }
-            ]
-        },
-        "transaction_isolation": {
-            "cli": "--transaction-isolation=name",
-            "default": "REPEATABLE-READ",
-            "dynamic": true,
-            "name": "transaction_isolation",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "READ-UNCOMMITTED",
-                "READ-COMMITTED",
-                "REPEATABLE-READ",
-                "SERIALIZABLE"
-            ],
-            "ids": [
-                {
-                    "anchor": "option_mysqld_transaction-isolation",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
-                    "anchor": "sysvar_transaction_isolation",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
-        "transaction_read_only": {
-            "cli": "--transaction-read-only[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "transaction_read_only",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_transaction-read-only",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                },
-                {
-                    "anchor": "sysvar_transaction_read_only",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
         },

@@ -37240,6 +37240,22 @@
                 }
             ]
         },
+        "audit_log_database": {
+            "cli": "--audit-log-database=value",
+            "default": "mysql",
+            "dynamic": false,
+            "name": "audit_log_database",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "sysvar_audit_log_database",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html"
+                }
+            ]
+        },
         "audit_log_disable": {
             "cli": "--audit-log-disable[={OFF|ON}]",
             "default": "OFF",
@@ -42829,7 +42845,6 @@
         },
         "connection_memory_chunk_size": {
             "cli": "--connection-memory-chunk-size=#",
-            "default": "8912",
             "dynamic": true,
             "name": "connection_memory_chunk_size",
             "range": {

@@ -31211,6 +31211,21 @@
 |------|----|
 |dev.mysql.com|[sysvar_audit_log_current_session](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_current_session)|
 
+## audit_log_database
+|name|value|
+|----|-----|
+|Name|`audit_log_database`|
+|Command line|`--audit-log-database=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`mysql`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_audit_log_database](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_database)|
+
 ## audit_log_disable
 |name|value|
 |----|-----|
@@ -36101,7 +36116,6 @@
 |Command line|`--connection-memory-chunk-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`8912`|
 |Dynamic|`true`|
 |Range|from: `0` to: `536870912`|
 

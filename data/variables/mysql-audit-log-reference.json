@@ -70,6 +70,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--audit-log-database=value",
+      "default": "mysql",
+      "dynamic": false,
+      "id": "sysvar_audit_log_database",
+      "name": "audit_log_database",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--audit-log-disable[={OFF|ON}]",
       "default": "OFF",
       "dynamic": true,

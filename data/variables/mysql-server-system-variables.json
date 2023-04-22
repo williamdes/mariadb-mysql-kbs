@@ -536,7 +536,6 @@
     },
     {
       "cli": "--connection-memory-chunk-size=#",
-      "default": "8912",
       "dynamic": true,
       "id": "sysvar_connection_memory_chunk_size",
       "name": "connection_memory_chunk_size",

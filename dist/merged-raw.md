@@ -37280,7 +37280,7 @@
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`OFF`|
-|Dynamic|`true`|
+|Dynamic|`false`|
 |Valid value(s)|`OFF`, `ON`, `STRICT`|
 
 ### Documentation(s)

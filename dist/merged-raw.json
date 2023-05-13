@@ -44228,7 +44228,7 @@
         "ssl_fips_mode": {
             "cli": "--ssl-fips-mode={OFF|ON|STRICT}",
             "default": "OFF",
-            "dynamic": true,
+            "dynamic": false,
             "name": "ssl_fips_mode",
             "scope": [
                 "global"

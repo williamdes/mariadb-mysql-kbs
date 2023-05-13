@@ -3487,7 +3487,7 @@
     {
       "cli": "--ssl-fips-mode={OFF|ON|STRICT}",
       "default": "OFF",
-      "dynamic": true,
+      "dynamic": false,
       "id": "sysvar_ssl_fips_mode",
       "name": "ssl_fips_mode",
       "scope": [

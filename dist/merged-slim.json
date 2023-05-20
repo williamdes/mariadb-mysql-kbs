@@ -8873,7 +8873,7 @@
             ]
         },
         "binlog_checksum": {
-            "cli": "--binlog-checksum=name",
+            "cli": "--binlog-checksum=type",
             "default": "CRC32",
             "dynamic": true,
             "name": "binlog_checksum",

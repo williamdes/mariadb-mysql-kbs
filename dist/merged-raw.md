@@ -9443,7 +9443,7 @@
 |name|value|
 |----|-----|
 |Name|`binlog_checksum`|
-|Command line|`--binlog-checksum=name`|
+|Command line|`--binlog-checksum=type`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Default value|`CRC32`|

@@ -78,7 +78,7 @@
       "type": "integer"
     },
     {
-      "cli": "--binlog-checksum=name",
+      "cli": "--binlog-checksum=type",
       "default": "CRC32",
       "dynamic": true,
       "id": "sysvar_binlog_checksum",

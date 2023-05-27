@@ -1170,7 +1170,7 @@
         },
         "connect_conv_size": {
             "cli": "--connect-conv-size=#",
-            "default": ">= MariaDB 10.4.8, MariaDB 10.3.18, MariaDB 10.2.27: 1024, <= MariaDB 10.4.7, MariaDB 10.3.17, MariaDB 10.2.26: 8192",
+            "default": ">= MariaDB 10.4.8: 1024, <= MariaDB 10.4.7: 8192",
             "dynamic": true,
             "name": "connect_conv_size",
             "range": {
@@ -43074,9 +43074,9 @@
             ],
             "type": "enumeration",
             "validValues": [
+                "TRADITIONAL (DEFAULT)",
                 "JSON",
-                "TREE",
-                "DEFAULT"
+                "TREE"
             ],
             "ids": [
                 {

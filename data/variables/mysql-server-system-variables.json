@@ -919,9 +919,9 @@
       ],
       "type": "enumeration",
       "validValues": [
+        "TRADITIONAL (DEFAULT)",
         "JSON",
-        "TREE",
-        "DEFAULT"
+        "TREE"
       ]
     },
     {

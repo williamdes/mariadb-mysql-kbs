@@ -214,7 +214,6 @@
       "type": "directory name"
     },
     {
-      "cli": "--check-constraint-checks=[0|1]",
       "default": "ON",
       "dynamic": true,
       "id": "check_constraint_checks",

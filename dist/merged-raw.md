@@ -15830,7 +15830,6 @@
 |name|value|
 |----|-----|
 |Name|`check_constraint_checks`|
-|Command line|`--check-constraint-checks=[0|1]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`ON`|

@@ -14660,7 +14660,6 @@
             ]
         },
         "check_constraint_checks": {
-            "cli": "--check-constraint-checks=[0|1]",
             "default": "ON",
             "dynamic": true,
             "name": "check_constraint_checks",

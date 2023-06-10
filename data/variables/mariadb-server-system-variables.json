@@ -2217,6 +2217,7 @@
         "exists_to_in={on|off}",
         "extended_keys={on|off}",
         "firstmatch={on|off}",
+        "hash_join_cardinality={on|off}",
         "index_condition_pushdown={on|off}",
         "index_merge={on|off}",
         "index_merge_intersection={on|off}",

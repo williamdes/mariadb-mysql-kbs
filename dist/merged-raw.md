@@ -15942,7 +15942,7 @@
 |Name|`core_file`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`0`|
+|Default value|`OFF`|
 |Dynamic|`false`|
 
 ### Documentation(s)

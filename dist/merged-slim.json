@@ -14778,7 +14778,7 @@
             ]
         },
         "core_file": {
-            "default": "0",
+            "default": "OFF",
             "dynamic": false,
             "name": "core_file",
             "scope": [

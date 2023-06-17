@@ -54,11 +54,9 @@
       "name": "console"
     },
     {
-      "cli": "--core-file[={OFF|ON}]",
-      "default": "OFF",
+      "cli": "--core-file",
       "id": "option_mysqld_core-file",
-      "name": "core_file",
-      "type": "boolean"
+      "name": "core_file"
     },
     {
       "cli": "--daemonize[={OFF|ON}]",

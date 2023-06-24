@@ -110,6 +110,29 @@
       ]
     },
     {
+      "cli": "--block-encryption-mode=val",
+      "default": "aes-128-ecb",
+      "dynamic": true,
+      "id": "block_encryption_mode",
+      "name": "block_encryption_mode",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer",
+      "validValues": [
+        "aes-128-ecb",
+        "aes-192-ecb",
+        "aes-256-ecb",
+        "aes-128-cbc",
+        "aes-192-cbc",
+        "aes-256-cbc",
+        "aes-128-ctr",
+        "aes-192-ctr",
+        "aes-256-ctr"
+      ]
+    },
+    {
       "cli": "--bulk-insert-buffer-size=#",
       "default": "8388608",
       "dynamic": true,

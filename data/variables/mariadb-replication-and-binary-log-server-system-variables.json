@@ -57,6 +57,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--binlog-do-db=#",
+      "default": "NULL",
+      "dynamic": false,
+      "id": "binlog_do_db",
+      "name": "binlog_do_db",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--binlog-cache-size=#",
       "default": "32768",
       "dynamic": true,
@@ -180,6 +191,17 @@
       ]
     },
     {
+      "cli": "--binlog-ignore-db=name",
+      "default": "NULL",
+      "dynamic": false,
+      "id": "binlog_ignore_db",
+      "name": "binlog_ignore_db",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--binlog-optimize-thread-scheduling or --skip-binlog-optimize-thread-scheduling",
       "default": "ON",
       "dynamic": false,
@@ -189,6 +211,22 @@
         "global"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--binlog-row-event-max-size=val",
+      "default": "8192",
+      "dynamic": true,
+      "id": "binlog_row_event_max_size",
+      "name": "binlog_row_event_max_size",
+      "range": {
+        "from": 256,
+        "to": 4294967040
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
     },
     {
       "cli": "--binlog-row-image=value",
@@ -1011,7 +1049,7 @@
     },
     {
       "cli": "--sync-master-info=#",
-      "default": "10000 (>= MariaDB 10.1.7)",
+      "default": "10000",
       "dynamic": true,
       "id": "sync_master_info",
       "name": "sync_master_info",

@@ -8853,6 +8853,16 @@
                 "15#binlog_annotate_row_events"
             ]
         },
+        "binlog_do_db": {
+            "cli": "--binlog-do-db=name",
+            "name": "binlog_do_db",
+            "type": "string",
+            "ids": [
+                "15#binlog_do_db",
+                "37#option_mysqld_binlog-do-db",
+                "38#option_mysqld_binlog-do-db"
+            ]
+        },
         "binlog_cache_size": {
             "cli": "--binlog-cache-size=#",
             "default": "32768",
@@ -8868,8 +8878,8 @@
             "type": "integer",
             "ids": [
                 "15#binlog_cache_size",
-                "37#sysvar_binlog_cache_size",
-                "38#sysvar_binlog_cache_size"
+                "36#sysvar_binlog_cache_size",
+                "37#sysvar_binlog_cache_size"
             ]
         },
         "binlog_checksum": {
@@ -8998,6 +9008,16 @@
                 "37#sysvar_binlog_format"
             ]
         },
+        "binlog_ignore_db": {
+            "cli": "--binlog-ignore-db=name",
+            "name": "binlog_ignore_db",
+            "type": "string",
+            "ids": [
+                "15#binlog_ignore_db",
+                "36#option_mysqld_binlog-ignore-db",
+                "37#option_mysqld_binlog-ignore-db"
+            ]
+        },
         "binlog_optimize_thread_scheduling": {
             "cli": "--binlog-optimize-thread-scheduling or --skip-binlog-optimize-thread-scheduling",
             "default": "ON",
@@ -9009,6 +9029,22 @@
             "type": "boolean",
             "ids": [
                 "15#binlog_optimize_thread_scheduling"
+            ]
+        },
+        "binlog_row_event_max_size": {
+            "cli": "--binlog-row-event-max-size=val",
+            "default": "8192",
+            "name": "binlog_row_event_max_size",
+            "range": {
+                "from": 256,
+                "to": 4294967040
+            },
+            "type": "integer",
+            "ids": [
+                "15#binlog_row_event_max_size",
+                "36#option_mysqld_binlog-row-event-max-size",
+                "36#sysvar_binlog_row_event_max_size",
+                "37#option_mysqld_binlog-row-event-max-size"
             ]
         },
         "binlog_row_image": {
@@ -14526,6 +14562,20 @@
             "ids": [
                 "44#bind_address",
                 "24#sysvar_bind_address"
+            ]
+        },
+        "block_encryption_mode": {
+            "cli": "--block-encryption-mode=val",
+            "default": "aes-128-ecb",
+            "dynamic": true,
+            "name": "block_encryption_mode",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                "44#block_encryption_mode",
+                "24#sysvar_block_encryption_mode"
             ]
         },
         "bulk_insert_buffer_size": {
@@ -31400,38 +31450,6 @@
                 "63#sysvar_authentication_ldap_simple_user_search_attr"
             ]
         },
-        "binlog_row_event_max_size": {
-            "cli": "--binlog-row-event-max-size=#",
-            "default": "8192",
-            "name": "binlog_row_event_max_size",
-            "range": {
-                "from": 256
-            },
-            "type": "integer",
-            "ids": [
-                "36#option_mysqld_binlog-row-event-max-size",
-                "36#sysvar_binlog_row_event_max_size",
-                "37#option_mysqld_binlog-row-event-max-size"
-            ]
-        },
-        "binlog_do_db": {
-            "cli": "--binlog-do-db=name",
-            "name": "binlog_do_db",
-            "type": "string",
-            "ids": [
-                "36#option_mysqld_binlog-do-db",
-                "37#option_mysqld_binlog-do-db"
-            ]
-        },
-        "binlog_ignore_db": {
-            "cli": "--binlog-ignore-db=name",
-            "name": "binlog_ignore_db",
-            "type": "string",
-            "ids": [
-                "36#option_mysqld_binlog-ignore-db",
-                "37#option_mysqld_binlog-ignore-db"
-            ]
-        },
         "max_binlog_dump_events": {
             "cli": "--max-binlog-dump-events=#",
             "default": "0",
@@ -33339,20 +33357,6 @@
             "type": "boolean",
             "ids": [
                 "24#sysvar_avoid_temporal_upgrade"
-            ]
-        },
-        "block_encryption_mode": {
-            "cli": "--block-encryption-mode=#",
-            "default": "aes-128-ecb",
-            "dynamic": true,
-            "name": "block_encryption_mode",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "string",
-            "ids": [
-                "24#sysvar_block_encryption_mode"
             ]
         },
         "build_id": {

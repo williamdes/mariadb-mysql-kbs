@@ -11091,6 +11091,25 @@
                 }
             ]
         },
+        "binlog_do_db": {
+            "cli": "--binlog-do-db=name",
+            "name": "binlog_do_db",
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "binlog_do_db",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
+                },
+                {
+                    "anchor": "option_mysqld_binlog-do-db",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                },
+                {
+                    "anchor": "option_mysqld_binlog-do-db",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
+                }
+            ]
+        },
         "binlog_cache_size": {
             "cli": "--binlog-cache-size=#",
             "default": "32768",
@@ -11293,6 +11312,25 @@
                 }
             ]
         },
+        "binlog_ignore_db": {
+            "cli": "--binlog-ignore-db=name",
+            "name": "binlog_ignore_db",
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "binlog_ignore_db",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
+                },
+                {
+                    "anchor": "option_mysqld_binlog-ignore-db",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                },
+                {
+                    "anchor": "option_mysqld_binlog-ignore-db",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
+                }
+            ]
+        },
         "binlog_optimize_thread_scheduling": {
             "cli": "--binlog-optimize-thread-scheduling or --skip-binlog-optimize-thread-scheduling",
             "default": "ON",
@@ -11306,6 +11344,34 @@
                 {
                     "anchor": "binlog_optimize_thread_scheduling",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
+                }
+            ]
+        },
+        "binlog_row_event_max_size": {
+            "cli": "--binlog-row-event-max-size=val",
+            "default": "8192",
+            "name": "binlog_row_event_max_size",
+            "range": {
+                "from": 256,
+                "to": 4294967040
+            },
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "binlog_row_event_max_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
+                },
+                {
+                    "anchor": "option_mysqld_binlog-row-event-max-size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                },
+                {
+                    "anchor": "sysvar_binlog_row_event_max_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                },
+                {
+                    "anchor": "option_mysqld_binlog-row-event-max-size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
                 }
             ]
         },
@@ -18523,6 +18589,26 @@
                 },
                 {
                     "anchor": "sysvar_bind_address",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "block_encryption_mode": {
+            "cli": "--block-encryption-mode=val",
+            "default": "aes-128-ecb",
+            "dynamic": true,
+            "name": "block_encryption_mode",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "ids": [
+                {
+                    "anchor": "block_encryption_mode",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_block_encryption_mode",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]
@@ -40265,59 +40351,6 @@
                 }
             ]
         },
-        "binlog_row_event_max_size": {
-            "cli": "--binlog-row-event-max-size=#",
-            "default": "8192",
-            "name": "binlog_row_event_max_size",
-            "range": {
-                "from": 256
-            },
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_binlog-row-event-max-size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "sysvar_binlog_row_event_max_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "option_mysqld_binlog-row-event-max-size",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                }
-            ]
-        },
-        "binlog_do_db": {
-            "cli": "--binlog-do-db=name",
-            "name": "binlog_do_db",
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_binlog-do-db",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "option_mysqld_binlog-do-db",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                }
-            ]
-        },
-        "binlog_ignore_db": {
-            "cli": "--binlog-ignore-db=name",
-            "name": "binlog_ignore_db",
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "option_mysqld_binlog-ignore-db",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "option_mysqld_binlog-ignore-db",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                }
-            ]
-        },
         "max_binlog_dump_events": {
             "cli": "--max-binlog-dump-events=#",
             "default": "0",
@@ -42724,23 +42757,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_avoid_temporal_upgrade",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                }
-            ]
-        },
-        "block_encryption_mode": {
-            "cli": "--block-encryption-mode=#",
-            "default": "aes-128-ecb",
-            "dynamic": true,
-            "name": "block_encryption_mode",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "sysvar_block_encryption_mode",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

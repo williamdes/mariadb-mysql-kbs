@@ -9421,6 +9421,20 @@
 |------|----|
 |mariadb.com|[binlog_annotate_row_events](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_annotate_row_events)|
 
+## binlog_do_db
+|name|value|
+|----|-----|
+|Name|`binlog_do_db`|
+|Command line|`--binlog-do-db=name`|
+|Type of variable|`string`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_do_db](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_do_db)|
+|dev.mysql.com|[option_mysqld_binlog-do-db](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-do-db)|
+|dev.mysql.com|[option_mysqld_binlog-do-db](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-do-db)|
+
 ## binlog_cache_size
 |name|value|
 |----|-----|
@@ -9557,6 +9571,20 @@
 |dev.mysql.com|[sysvar_binlog_format](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_format)|
 |dev.mysql.com|[sysvar_binlog_format](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_format)|
 
+## binlog_ignore_db
+|name|value|
+|----|-----|
+|Name|`binlog_ignore_db`|
+|Command line|`--binlog-ignore-db=name`|
+|Type of variable|`string`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_ignore_db](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_ignore_db)|
+|dev.mysql.com|[option_mysqld_binlog-ignore-db](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-ignore-db)|
+|dev.mysql.com|[option_mysqld_binlog-ignore-db](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-ignore-db)|
+
 ## binlog_optimize_thread_scheduling
 |name|value|
 |----|-----|
@@ -9571,6 +9599,23 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[binlog_optimize_thread_scheduling](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_optimize_thread_scheduling)|
+
+## binlog_row_event_max_size
+|name|value|
+|----|-----|
+|Name|`binlog_row_event_max_size`|
+|Command line|`--binlog-row-event-max-size=val`|
+|Type of variable|`integer`|
+|Default value|`8192`|
+|Range|from: `256` to: `4294967040`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_row_event_max_size](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#binlog_row_event_max_size)|
+|dev.mysql.com|[option_mysqld_binlog-row-event-max-size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-row-event-max-size)|
+|dev.mysql.com|[sysvar_binlog_row_event_max_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_event_max_size)|
+|dev.mysql.com|[option_mysqld_binlog-row-event-max-size](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-row-event-max-size)|
 
 ## binlog_row_image
 |name|value|
@@ -15686,6 +15731,21 @@
 |------|----|
 |mariadb.com|[bind_address](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#bind_address)|
 |dev.mysql.com|[sysvar_bind_address](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_bind_address)|
+
+## block_encryption_mode
+|name|value|
+|----|-----|
+|Name|`block_encryption_mode`|
+|Command line|`--block-encryption-mode=val`|
+|Scope|`global`, `session`|
+|Default value|`aes-128-ecb`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[block_encryption_mode](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#block_encryption_mode)|
+|dev.mysql.com|[sysvar_block_encryption_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_block_encryption_mode)|
 
 ## bulk_insert_buffer_size
 |name|value|
@@ -33811,48 +33871,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_authentication_ldap_simple_user_search_attr](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html#sysvar_authentication_ldap_simple_user_search_attr)|
 
-## binlog_row_event_max_size
-|name|value|
-|----|-----|
-|Name|`binlog_row_event_max_size`|
-|Command line|`--binlog-row-event-max-size=#`|
-|Type of variable|`integer`|
-|Default value|`8192`|
-|Range|from: `256`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_binlog-row-event-max-size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-row-event-max-size)|
-|dev.mysql.com|[sysvar_binlog_row_event_max_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_event_max_size)|
-|dev.mysql.com|[option_mysqld_binlog-row-event-max-size](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-row-event-max-size)|
-
-## binlog_do_db
-|name|value|
-|----|-----|
-|Name|`binlog_do_db`|
-|Command line|`--binlog-do-db=name`|
-|Type of variable|`string`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_binlog-do-db](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-do-db)|
-|dev.mysql.com|[option_mysqld_binlog-do-db](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-do-db)|
-
-## binlog_ignore_db
-|name|value|
-|----|-----|
-|Name|`binlog_ignore_db`|
-|Command line|`--binlog-ignore-db=name`|
-|Type of variable|`string`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_binlog-ignore-db](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-ignore-db)|
-|dev.mysql.com|[option_mysqld_binlog-ignore-db](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-ignore-db)|
-
 ## max_binlog_dump_events
 |name|value|
 |----|-----|
@@ -36004,21 +36022,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_avoid_temporal_upgrade](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_avoid_temporal_upgrade)|
-
-## block_encryption_mode
-|name|value|
-|----|-----|
-|Name|`block_encryption_mode`|
-|Command line|`--block-encryption-mode=#`|
-|Type of variable|`string`|
-|Scope|`global`, `session`|
-|Default value|`aes-128-ecb`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_block_encryption_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_block_encryption_mode)|
 
 ## build_id
 |name|value|

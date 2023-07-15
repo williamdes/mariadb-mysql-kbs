@@ -18595,7 +18595,7 @@
             ]
         },
         "version": {
-            "cli": "-V, --version[=name] (>= MariaDB 10.2.1), --version (<= MariaDB 10.2.0)",
+            "cli": "-V, --version[=name]",
             "dynamic": false,
             "name": "version",
             "scope": [

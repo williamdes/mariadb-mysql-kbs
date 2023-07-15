@@ -19819,7 +19819,7 @@
 |name|value|
 |----|-----|
 |Name|`version`|
-|Command line|`-V, --version[=name] (>= MariaDB 10.2.1), --version (<= MariaDB 10.2.0)`|
+|Command line|`-V, --version[=name]`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|

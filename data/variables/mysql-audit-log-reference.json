@@ -154,6 +154,16 @@
       "type": "boolean"
     },
     {
+      "cli": "--audit-log-flush-interval-seconds[=value]",
+      "default": "0",
+      "dynamic": false,
+      "id": "sysvar_audit_log_flush_interval_seconds",
+      "name": "audit_log_flush_interval_seconds",
+      "scope": [
+        "global"
+      ]
+    },
+    {
       "cli": "--audit-log-format=value",
       "default": "NEW",
       "dynamic": false,

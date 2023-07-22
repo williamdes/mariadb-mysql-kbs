@@ -31375,6 +31375,20 @@
 |------|----|
 |dev.mysql.com|[sysvar_audit_log_flush](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_flush)|
 
+## audit_log_flush_interval_seconds
+|name|value|
+|----|-----|
+|Name|`audit_log_flush_interval_seconds`|
+|Command line|`--audit-log-flush-interval-seconds[=value]`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_audit_log_flush_interval_seconds](https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#sysvar_audit_log_flush_interval_seconds)|
+
 ## audit_log_format
 |name|value|
 |----|-----|
@@ -36110,6 +36124,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_check_proxy_users](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_check_proxy_users)|
+
+## component_scheduler.enabled
+|name|value|
+|----|-----|
+|Name|`component_scheduler.enabled`|
+|Command line|`--component-scheduler.enabled[=value]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_component_scheduler.enabled](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_component_scheduler.enabled)|
 
 ## connection_memory_chunk_size
 |name|value|

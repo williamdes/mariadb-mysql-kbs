@@ -37444,6 +37444,21 @@
                 }
             ]
         },
+        "audit_log_flush_interval_seconds": {
+            "cli": "--audit-log-flush-interval-seconds[=value]",
+            "default": "0",
+            "dynamic": false,
+            "name": "audit_log_flush_interval_seconds",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_audit_log_flush_interval_seconds",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html"
+                }
+            ]
+        },
         "audit_log_format": {
             "cli": "--audit-log-format=value",
             "default": "NEW",
@@ -42854,6 +42869,22 @@
             "ids": [
                 {
                     "anchor": "sysvar_check_proxy_users",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "component_scheduler.enabled": {
+            "cli": "--component-scheduler.enabled[=value]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "component_scheduler.enabled",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_component_scheduler.enabled",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
                 }
             ]

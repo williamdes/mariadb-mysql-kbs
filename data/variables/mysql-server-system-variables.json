@@ -501,6 +501,17 @@
       ]
     },
     {
+      "cli": "--component-scheduler.enabled[=value]",
+      "default": "ON",
+      "dynamic": true,
+      "id": "sysvar_component_scheduler.enabled",
+      "name": "component_scheduler.enabled",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--concurrent-insert[=value]",
       "default": "AUTO",
       "dynamic": true,

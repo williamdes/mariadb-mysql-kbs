@@ -29065,6 +29065,18 @@
                 "61#sysvar_audit_log_flush"
             ]
         },
+        "audit_log_flush_interval_seconds": {
+            "cli": "--audit-log-flush-interval-seconds[=value]",
+            "default": "0",
+            "dynamic": false,
+            "name": "audit_log_flush_interval_seconds",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "61#sysvar_audit_log_flush_interval_seconds"
+            ]
+        },
         "audit_log_format": {
             "cli": "--audit-log-format=value",
             "default": "NEW",
@@ -33436,6 +33448,19 @@
             "type": "boolean",
             "ids": [
                 "24#sysvar_check_proxy_users"
+            ]
+        },
+        "component_scheduler.enabled": {
+            "cli": "--component-scheduler.enabled[=value]",
+            "default": "ON",
+            "dynamic": true,
+            "name": "component_scheduler.enabled",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "24#sysvar_component_scheduler.enabled"
             ]
         },
         "connection_memory_chunk_size": {

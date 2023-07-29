@@ -25033,6 +25033,9 @@
         },
         "Innodb_system_rows_deleted": {
             "name": "Innodb_system_rows_deleted",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 "58#innodb_system_rows_deleted"
@@ -25040,6 +25043,9 @@
         },
         "Innodb_system_rows_inserted": {
             "name": "Innodb_system_rows_inserted",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 "58#innodb_system_rows_inserted"
@@ -25047,6 +25053,9 @@
         },
         "Innodb_system_rows_read": {
             "name": "Innodb_system_rows_read",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 "58#innodb_system_rows_read"
@@ -25054,6 +25063,9 @@
         },
         "Innodb_system_rows_updated": {
             "name": "Innodb_system_rows_updated",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 "58#innodb_system_rows_updated"

@@ -27266,6 +27266,7 @@
 |----|-----|
 |Name|`Innodb_system_rows_deleted`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27277,6 +27278,7 @@
 |----|-----|
 |Name|`Innodb_system_rows_inserted`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27288,6 +27290,7 @@
 |----|-----|
 |Name|`Innodb_system_rows_read`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -27299,6 +27302,7 @@
 |----|-----|
 |Name|`Innodb_system_rows_updated`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|

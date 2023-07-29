@@ -32236,6 +32236,9 @@
         },
         "Innodb_system_rows_deleted": {
             "name": "Innodb_system_rows_deleted",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32246,6 +32249,9 @@
         },
         "Innodb_system_rows_inserted": {
             "name": "Innodb_system_rows_inserted",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32256,6 +32262,9 @@
         },
         "Innodb_system_rows_read": {
             "name": "Innodb_system_rows_read",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32266,6 +32275,9 @@
         },
         "Innodb_system_rows_updated": {
             "name": "Innodb_system_rows_updated",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {

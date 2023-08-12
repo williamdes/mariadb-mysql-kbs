@@ -1480,7 +1480,7 @@
       "type": "boolean"
     },
     {
-      "default": "-1",
+      "default": "0 (>=MariaDB 10.7), -1 (<= MariaDB 10.6)",
       "dynamic": true,
       "id": "spider_use_handler",
       "name": "spider_use_handler",
@@ -1525,7 +1525,7 @@
       "type": "integer"
     },
     {
-      "default": "-1",
+      "default": "1 (>=MariaDB 10.7), -1 (<= MariaDB 10.6)",
       "dynamic": true,
       "id": "spider_use_table_charset",
       "name": "spider_use_table_charset",

@@ -21748,7 +21748,7 @@
 |Name|`spider_use_handler`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`-1`|
+|Default value|`0 (>=MariaDB 10.7), -1 (<= MariaDB 10.6)`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `3`|
 
@@ -21793,7 +21793,7 @@
 |Name|`spider_use_table_charset`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`-1`|
+|Default value|`1 (>=MariaDB 10.7), -1 (<= MariaDB 10.6)`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `1`|
 
@@ -32335,9 +32335,9 @@
 |Name|`ndb_batch_size`|
 |Command line|`--ndb-batch-size`|
 |Type of variable|`integer`|
-|Scope|`global`|
+|Scope|`global`, `session`|
 |Default value|`32768`|
-|Dynamic|`false`|
+|Dynamic|`true`|
 |Range|from: `0` to: `31536000`|
 
 ### Documentation(s)

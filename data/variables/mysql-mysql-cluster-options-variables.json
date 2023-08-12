@@ -22,7 +22,7 @@
     {
       "cli": "--ndb-batch-size",
       "default": "32768",
-      "dynamic": false,
+      "dynamic": true,
       "id": "option_mysqld_ndb-batch-size",
       "name": "ndb_batch_size",
       "range": {
@@ -30,7 +30,8 @@
         "to": 31536000
       },
       "scope": [
-        "global"
+        "global",
+        "session"
       ],
       "type": "integer"
     },

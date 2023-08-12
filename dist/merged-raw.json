@@ -26415,7 +26415,7 @@
             ]
         },
         "spider_use_handler": {
-            "default": "-1",
+            "default": "0 (>=MariaDB 10.7), -1 (<= MariaDB 10.6)",
             "dynamic": true,
             "name": "spider_use_handler",
             "range": {
@@ -26475,7 +26475,7 @@
             ]
         },
         "spider_use_table_charset": {
-            "default": "-1",
+            "default": "1 (>=MariaDB 10.7), -1 (<= MariaDB 10.6)",
             "dynamic": true,
             "name": "spider_use_table_charset",
             "range": {
@@ -38559,14 +38559,15 @@
         "ndb_batch_size": {
             "cli": "--ndb-batch-size",
             "default": "32768",
-            "dynamic": false,
+            "dynamic": true,
             "name": "ndb_batch_size",
             "range": {
                 "from": 0,
                 "to": 31536000
             },
             "scope": [
-                "global"
+                "global",
+                "session"
             ],
             "type": "integer",
             "ids": [

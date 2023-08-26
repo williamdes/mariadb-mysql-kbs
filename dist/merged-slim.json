@@ -9747,6 +9747,23 @@
                 "38#sysvar_slave_max_allowed_packet"
             ]
         },
+        "slave_max_statement_time": {
+            "cli": "--slave-max-statement-time=#",
+            "default": "0.000000",
+            "dynamic": true,
+            "name": "slave_max_statement_time",
+            "range": {
+                "from": 0,
+                "to": 31536000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "15#slave_max_statement_time"
+            ]
+        },
         "slave_net_timeout": {
             "cli": "--slave-net-timeout=#",
             "default": "60",
@@ -14437,6 +14454,16 @@
                 "43#uptime_since_flush_status"
             ]
         },
+        "allow_suspicious_udfs": {
+            "cli": "--allow-suspicious-udfs[={OFF|ON}]",
+            "default": "OFF",
+            "name": "allow_suspicious_udfs",
+            "type": "boolean",
+            "ids": [
+                "45#allow_suspicious_udfs",
+                "25#option_mysqld_allow-suspicious-udfs"
+            ]
+        },
         "alter_algorithm": {
             "cli": "--alter-algorithm=default",
             "default": "DEFAULT",
@@ -14455,7 +14482,7 @@
                 "INSTANT"
             ],
             "ids": [
-                "45#alter_algorithm"
+                "44#alter_algorithm"
             ]
         },
         "analyze_sample_percentage": {
@@ -15572,7 +15599,7 @@
         },
         "histogram_type": {
             "cli": "--histogram-type=value",
-            "default": "DOUBLE_PREC_HB (>= MariaDB 10.4.3), SINGLE_PREC_HB(<= MariaDB 10.4.2)",
+            "default": "JSON_HB (>= MariaDB 11.0), DOUBLE_PREC_HB (<= MariaDB 10.11, >= MariaDB 10.4.3), SINGLE_PREC_HB(<= MariaDB 10.4.2)",
             "dynamic": true,
             "name": "histogram_type",
             "scope": [
@@ -16670,7 +16697,7 @@
             "name": "max_statement_time",
             "range": {
                 "from": 0,
-                "to": "upwards"
+                "to": 31536000
             },
             "scope": [
                 "global",
@@ -28056,8 +28083,11 @@
         "innodb_read_only_compressed": {
             "cli": "--innodb-read-only-compressed, --skip-innodb-read-only-compressed",
             "default": "OFF (>= MariaDB 10.6.6), ON (<= MariaDB 10.6.5)",
-            "dynamic": false,
+            "dynamic": true,
             "name": "innodb_read_only_compressed",
+            "scope": [
+                "global"
+            ],
             "type": "boolean",
             "ids": [
                 "59#innodb_read_only_compressed"
@@ -32748,15 +32778,6 @@
             "type": "boolean",
             "ids": [
                 "25#option_mysqld_admin-ssl"
-            ]
-        },
-        "allow_suspicious_udfs": {
-            "cli": "--allow-suspicious-udfs[={OFF|ON}]",
-            "default": "OFF",
-            "name": "allow_suspicious_udfs",
-            "type": "boolean",
-            "ids": [
-                "25#option_mysqld_allow-suspicious-udfs"
             ]
         },
         "ansi": {

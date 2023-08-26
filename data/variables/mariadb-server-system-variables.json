@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "cli": "--allow-suspicious-udfs",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "allow_suspicious_udfs",
+      "name": "allow_suspicious_udfs",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--alter-algorithm=default",
       "default": "DEFAULT",
       "dynamic": true,
@@ -945,7 +956,7 @@
     },
     {
       "cli": "--histogram-type=value",
-      "default": "DOUBLE_PREC_HB (>= MariaDB 10.4.3), SINGLE_PREC_HB(<= MariaDB 10.4.2)",
+      "default": "JSON_HB (>= MariaDB 11.0), DOUBLE_PREC_HB (<= MariaDB 10.11, >= MariaDB 10.4.3), SINGLE_PREC_HB(<= MariaDB 10.4.2)",
       "dynamic": true,
       "id": "histogram_type",
       "name": "histogram_type",
@@ -1884,7 +1895,7 @@
       "name": "max_statement_time",
       "range": {
         "from": 0,
-        "to": "upwards"
+        "to": 31536000
       },
       "scope": [
         "global",

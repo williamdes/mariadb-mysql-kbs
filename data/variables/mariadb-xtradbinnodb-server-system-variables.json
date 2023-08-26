@@ -2521,9 +2521,12 @@
     {
       "cli": "--innodb-read-only-compressed, --skip-innodb-read-only-compressed",
       "default": "OFF (>= MariaDB 10.6.6), ON (<= MariaDB 10.6.5)",
-      "dynamic": false,
+      "dynamic": true,
       "id": "innodb_read_only_compressed",
       "name": "innodb_read_only_compressed",
+      "scope": [
+        "global"
+      ],
       "type": "boolean"
     },
     {

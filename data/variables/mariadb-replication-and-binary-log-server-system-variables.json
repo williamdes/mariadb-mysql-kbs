@@ -843,6 +843,21 @@
       "type": "integer"
     },
     {
+      "cli": "--slave-max-statement-time=#",
+      "default": "0.000000",
+      "dynamic": true,
+      "id": "slave_max_statement_time",
+      "name": "slave_max_statement_time",
+      "range": {
+        "from": 0,
+        "to": 31536000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--slave-net-timeout=#",
       "default": "60 (1 minute)",
       "dynamic": true,

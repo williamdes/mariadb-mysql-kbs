@@ -10379,6 +10379,22 @@
 |mariadb.com|[slave_max_allowed_packet](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#slave_max_allowed_packet)|
 |dev.mysql.com|[sysvar_slave_max_allowed_packet](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_slave_max_allowed_packet)|
 
+## slave_max_statement_time
+|name|value|
+|----|-----|
+|Name|`slave_max_statement_time`|
+|Command line|`--slave-max-statement-time=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0.000000`|
+|Dynamic|`true`|
+|Range|from: `0` to: `31536000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[slave_max_statement_time](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#slave_max_statement_time)|
+
 ## slave_net_timeout
 |name|value|
 |----|-----|
@@ -15605,6 +15621,20 @@
 |------|----|
 |mariadb.com|[uptime_since_flush_status](https://mariadb.com/kb/en/library/documentation/server-status-variables/#uptime_since_flush_status)|
 
+## allow_suspicious_udfs
+|name|value|
+|----|-----|
+|Name|`allow_suspicious_udfs`|
+|Command line|`--allow-suspicious-udfs[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Default value|`OFF`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[allow_suspicious_udfs](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#allow_suspicious_udfs)|
+|dev.mysql.com|[option_mysqld_allow-suspicious-udfs](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_allow-suspicious-udfs)|
+
 ## alter_algorithm
 |name|value|
 |----|-----|
@@ -16782,7 +16812,7 @@
 |Command line|`--histogram-type=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`DOUBLE_PREC_HB (>= MariaDB 10.4.3), SINGLE_PREC_HB(<= MariaDB 10.4.2)`|
+|Default value|`JSON_HB (>= MariaDB 11.0), DOUBLE_PREC_HB (<= MariaDB 10.11, >= MariaDB 10.4.3), SINGLE_PREC_HB(<= MariaDB 10.4.2)`|
 |Dynamic|`true`|
 |Valid value(s)|`SINGLE_PREC_HB`, `DOUBLE_PREC_HB`, `SINGLE_PREC_HB`, `DOUBLE_PREC_HB`, `JSON_HB`|
 
@@ -17855,7 +17885,7 @@
 |Scope|`global`, `session`|
 |Default value|`0.000000`|
 |Dynamic|`true`|
-|Range|from: `0` to: `upwards`|
+|Range|from: `0` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -30309,8 +30339,9 @@
 |Name|`innodb_read_only_compressed`|
 |Command line|`--innodb-read-only-compressed, --skip-innodb-read-only-compressed`|
 |Type of variable|`boolean`|
+|Scope|`global`|
 |Default value|`OFF (>= MariaDB 10.6.6), ON (<= MariaDB 10.6.5)`|
-|Dynamic|`false`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -35208,19 +35239,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_admin-ssl](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_admin-ssl)|
-
-## allow_suspicious_udfs
-|name|value|
-|----|-----|
-|Name|`allow_suspicious_udfs`|
-|Command line|`--allow-suspicious-udfs[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Default value|`OFF`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[option_mysqld_allow-suspicious-udfs](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_allow-suspicious-udfs)|
 
 ## ansi
 |name|value|

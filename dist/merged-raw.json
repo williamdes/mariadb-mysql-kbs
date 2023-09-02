@@ -17648,18 +17648,6 @@
                 }
             ]
         },
-        "Max_used_connection_time": {
-            "name": "Max_used_connection_time",
-            "scope": [
-                "global"
-            ],
-            "ids": [
-                {
-                    "anchor": "max_used_connection_time",
-                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
-                }
-            ]
-        },
         "Max_used_connections": {
             "name": "Max_used_connections",
             "scope": [
@@ -17669,6 +17657,18 @@
             "ids": [
                 {
                     "anchor": "max_used_connections",
+                    "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
+                }
+            ]
+        },
+        "Max_used_connections_time": {
+            "name": "Max_used_connections_time",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "max_used_connections_time",
                     "url": "https://mariadb.com/kb/en/library/documentation/server-status-variables/"
                 }
             ]
@@ -18691,6 +18691,22 @@
                 {
                     "anchor": "sysvar_character_set_client",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "character_set_collations": {
+            "default": "Empty",
+            "dynamic": true,
+            "name": "character_set_collations",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "character_set_collations",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 }
             ]
         },
@@ -21080,6 +21096,7 @@
         "max_digest_length": {
             "cli": "--max-digest-length=#",
             "default": "1024",
+            "dynamic": false,
             "name": "max_digest_length",
             "range": {
                 "from": 0,

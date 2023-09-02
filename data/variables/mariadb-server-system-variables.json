@@ -171,6 +171,17 @@
       "type": "string"
     },
     {
+      "default": "Empty",
+      "dynamic": true,
+      "id": "character_set_collations",
+      "name": "character_set_collations",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "string"
+    },
+    {
       "default": "utf8mb3 (>= MariaDB 10.6), utf8 (<= MariaDB 10.5)",
       "dynamic": true,
       "id": "character_set_connection",
@@ -1668,7 +1679,7 @@
     {
       "cli": "--max-digest-length=#",
       "default": "1024",
-      "dynamic": true,
+      "dynamic": false,
       "id": "max_digest_length",
       "name": "max_digest_length",
       "range": {

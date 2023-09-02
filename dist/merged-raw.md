@@ -14906,17 +14906,6 @@
 |------|----|
 |mariadb.com|[max_statement_time_exceeded](https://mariadb.com/kb/en/library/documentation/server-status-variables/#max_statement_time_exceeded)|
 
-## Max_used_connection_time
-|name|value|
-|----|-----|
-|Name|`Max_used_connection_time`|
-|Scope|`global`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[max_used_connection_time](https://mariadb.com/kb/en/library/documentation/server-status-variables/#max_used_connection_time)|
-
 ## Max_used_connections
 |name|value|
 |----|-----|
@@ -14928,6 +14917,17 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[max_used_connections](https://mariadb.com/kb/en/library/documentation/server-status-variables/#max_used_connections)|
+
+## Max_used_connections_time
+|name|value|
+|----|-----|
+|Name|`Max_used_connections_time`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[max_used_connections_time](https://mariadb.com/kb/en/library/documentation/server-status-variables/#max_used_connections_time)|
 
 ## Memory_used
 |name|value|
@@ -15808,6 +15808,20 @@
 |------|----|
 |mariadb.com|[character_set_client](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#character_set_client)|
 |dev.mysql.com|[sysvar_character_set_client](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_client)|
+
+## character_set_collations
+|name|value|
+|----|-----|
+|Name|`character_set_collations`|
+|Type of variable|`string`|
+|Scope|`global`, `session`|
+|Default value|`Empty`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[character_set_collations](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#character_set_collations)|
 
 ## character_set_connection
 |name|value|
@@ -17640,6 +17654,7 @@
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`1024`|
+|Dynamic|`false`|
 |Range|from: `0` to: `1048576`|
 
 ### Documentation(s)

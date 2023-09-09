@@ -26249,7 +26249,7 @@
             ]
         },
         "spider_udf_ct_bulk_insert_interval": {
-            "default": "-1",
+            "default": "10",
             "dynamic": true,
             "name": "spider_udf_ct_bulk_insert_interval",
             "range": {
@@ -26268,7 +26268,7 @@
             ]
         },
         "spider_udf_ct_bulk_insert_rows": {
-            "default": "-1",
+            "default": "100",
             "dynamic": true,
             "name": "spider_udf_ct_bulk_insert_rows",
             "range": {
@@ -26287,7 +26287,7 @@
             ]
         },
         "spider_udf_ds_bulk_insert_rows": {
-            "default": "-1",
+            "default": "3000",
             "dynamic": true,
             "name": "spider_udf_ds_bulk_insert_rows",
             "range": {
@@ -26307,7 +26307,7 @@
             ]
         },
         "spider_udf_ds_table_loop_mode": {
-            "default": "-1",
+            "default": "0",
             "dynamic": true,
             "name": "spider_udf_ds_table_loop_mode",
             "range": {
@@ -26327,7 +26327,7 @@
             ]
         },
         "spider_udf_ds_use_real_table": {
-            "default": "-1",
+            "default": "0",
             "dynamic": true,
             "name": "spider_udf_ds_use_real_table",
             "range": {
@@ -26468,7 +26468,7 @@
             ]
         },
         "spider_use_handler": {
-            "default": "0 (>=MariaDB 10.7), -1 (<= MariaDB 10.6)",
+            "default": "0",
             "dynamic": true,
             "name": "spider_use_handler",
             "range": {
@@ -26528,7 +26528,7 @@
             ]
         },
         "spider_use_table_charset": {
-            "default": "1 (>=MariaDB 10.7), -1 (<= MariaDB 10.6)",
+            "default": "1",
             "dynamic": true,
             "name": "spider_use_table_charset",
             "range": {

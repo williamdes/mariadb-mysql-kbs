@@ -21618,7 +21618,7 @@
 |Name|`spider_udf_ct_bulk_insert_interval`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`-1`|
+|Default value|`10`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `2147483647`|
 
@@ -21633,7 +21633,7 @@
 |Name|`spider_udf_ct_bulk_insert_rows`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`-1`|
+|Default value|`100`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `9223372036854775807`|
 
@@ -21648,7 +21648,7 @@
 |Name|`spider_udf_ds_bulk_insert_rows`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`-1`|
+|Default value|`3000`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `9223372036854775807`|
 
@@ -21663,7 +21663,7 @@
 |Name|`spider_udf_ds_table_loop_mode`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`-1`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `2`|
 
@@ -21678,7 +21678,7 @@
 |Name|`spider_udf_ds_use_real_table`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`-1`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `1`|
 
@@ -21793,7 +21793,7 @@
 |Name|`spider_use_handler`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`0 (>=MariaDB 10.7), -1 (<= MariaDB 10.6)`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `3`|
 
@@ -21838,7 +21838,7 @@
 |Name|`spider_use_table_charset`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`1 (>=MariaDB 10.7), -1 (<= MariaDB 10.6)`|
+|Default value|`1`|
 |Dynamic|`true`|
 |Range|from: `-1` to: `1`|
 

@@ -448,7 +448,7 @@
     },
     {
       "cli": "--performance-schema-max-stage-classes=#",
-      "default": "160 (>= MariaDB 10.3.3), 150 (<= MariaDB 10.3.2)",
+      "default": "160",
       "dynamic": false,
       "id": "performance_schema_max_stage_classes",
       "name": "performance_schema_max_stage_classes",

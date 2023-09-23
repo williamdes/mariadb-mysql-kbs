@@ -3050,6 +3050,17 @@
       "type": "boolean"
     },
     {
+      "cli": "innodb-truncate-temporary-tablespace-now={0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "innodb_truncate_temporary_tablespace_now",
+      "name": "innodb_truncate_temporary_tablespace_now",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-undo-directory=name",
       "default": "NULL",
       "dynamic": false,

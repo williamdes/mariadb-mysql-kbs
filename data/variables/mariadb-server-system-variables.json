@@ -1158,7 +1158,7 @@
       "name": "join_buffer_space_limit",
       "range": {
         "from": 2048,
-        "to": 99999999997952
+        "to": 18446744073709551615
       },
       "scope": [
         "global",
@@ -1525,6 +1525,11 @@
       ],
       "type": "enumeration",
       "validValues": [
+        "query_plan",
+        "innodb",
+        "explain",
+        "engine",
+        "full",
         "query_plan",
         "innodb",
         "explain"
@@ -2285,6 +2290,7 @@
         "partial_match_rowid_merge={on|off}",
         "partial_match_table_scan={on|off}",
         "rowid_filter={on|off}",
+        "sargable_casefold={on|off}",
         "semijoin={on|off}",
         "semijoin_with_cache={on|off}",
         "split_materialized={on|off}",
@@ -2704,6 +2710,18 @@
       "type": "integer"
     },
     {
+      "cli": "--redirect_url=val",
+      "default": "Empty",
+      "dynamic": true,
+      "id": "redirect_url",
+      "name": "redirect_url",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "string"
+    },
+    {
       "cli": "--require-secure-transport[={0|1}]",
       "default": "OFF",
       "dynamic": true,
@@ -2803,7 +2821,7 @@
     },
     {
       "cli": "--session-track-system-variables=value",
-      "default": "autocommit, character_set_client, character_set_connection, character_set_results, time_zone (>= MariaDB 10.3.1), empty string (<= MariaDB 10.3.0)",
+      "default": ">= MariaDB 11.3: autocommit,character_set_client,character_set_connection,character_set_results,redirect_url,time_zone, <= MariaDB 11.2: autocommit, character_set_client, character_set_connection, character_set_results, time_zone",
       "dynamic": true,
       "id": "session_track_system_variables",
       "name": "session_track_system_variables",

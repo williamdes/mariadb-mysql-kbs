@@ -1,6 +1,19 @@
 {
   "data": [
     {
+      "cli": "--sql-error-log=value",
+      "default": "ON",
+      "id": "sql_error_log",
+      "name": "sql_error_log",
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "ON",
+        "FORCE",
+        "FORCE_PLUS_PERMANENT"
+      ]
+    },
+    {
       "cli": "--sql-error-log-filename=value",
       "default": "sql_errors.log",
       "dynamic": false,
@@ -64,17 +77,15 @@
       "type": "integer"
     },
     {
-      "cli": "--sql-error-log=value",
-      "default": "ON",
-      "id": "sql_error_log",
-      "name": "sql_error_log",
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "ON",
-        "FORCE",
-        "FORCE_PLUS_PERMANENT"
-      ]
+      "cli": "--sql-error-log-warnings={0,1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sql_error_log_warnings",
+      "name": "sql_error_log_warnings",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     }
   ],
   "name": "sql-error-log-plugin-variables",

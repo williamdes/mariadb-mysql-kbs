@@ -488,6 +488,17 @@
       "type": "boolean"
     },
     {
+      "default": "OFF",
+      "dynamic": true,
+      "id": "spider_ignore_comments",
+      "name": "spider_ignore_comments",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
       "dynamic": true,
       "id": "spider_index_hint_pushdown",
       "name": "spider_index_hint_pushdown",
@@ -1233,6 +1244,17 @@
       "name": "spider_support_xa",
       "scope": [
         "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "default": "OFF",
+      "dynamic": true,
+      "id": "spider_suppress_comment_ignored_warning",
+      "name": "spider_suppress_comment_ignored_warning",
+      "scope": [
+        "global",
+        "session"
       ],
       "type": "boolean"
     },

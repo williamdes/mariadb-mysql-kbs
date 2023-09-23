@@ -17049,7 +17049,7 @@
 |Scope|`global`, `session`|
 |Default value|`2097152`|
 |Dynamic|`true`|
-|Range|from: `2048` to: `99999999997952`|
+|Range|from: `2048` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -17482,7 +17482,7 @@
 |Scope|`global`, `session`|
 |Default value|`(Empty)`|
 |Dynamic|`true`|
-|Valid value(s)|`query_plan`, `innodb`, `explain`|
+|Valid value(s)|`query_plan`, `innodb`, `explain`, `engine`, `full`, `query_plan`, `innodb`, `explain`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18754,6 +18754,21 @@
 |------|----|
 |mariadb.com|[read_rnd_buffer_size](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#read_rnd_buffer_size)|
 |dev.mysql.com|[sysvar_read_rnd_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_read_rnd_buffer_size)|
+
+## redirect_url
+|name|value|
+|----|-----|
+|Name|`redirect_url`|
+|Command line|`--redirect_url=val`|
+|Type of variable|`string`|
+|Scope|`global`, `session`|
+|Default value|`Empty`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[redirect_url](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#redirect_url)|
 
 ## require_secure_transport
 |name|value|
@@ -20708,6 +20723,20 @@
 |------|----|
 |mariadb.com|[spider_general_log](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/#spider_general_log)|
 
+## spider_ignore_comments
+|name|value|
+|----|-----|
+|Name|`spider_ignore_comments`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[spider_ignore_comments](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/#spider_ignore_comments)|
+
 ## spider_index_hint_pushdown
 |name|value|
 |----|-----|
@@ -21512,6 +21541,20 @@
 |------|----|
 |mariadb.com|[spider_support_xa](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/#spider_support_xa)|
 
+## spider_suppress_comment_ignored_warning
+|name|value|
+|----|-----|
+|Name|`spider_suppress_comment_ignored_warning`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[spider_suppress_comment_ignored_warning](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/#spider_suppress_comment_ignored_warning)|
+
 ## spider_sync_autocommit
 |name|value|
 |----|-----|
@@ -21891,6 +21934,20 @@
 |------|----|
 |mariadb.com|[spider_xa_register_mode](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/#spider_xa_register_mode)|
 
+## sql_error_log
+|name|value|
+|----|-----|
+|Name|`sql_error_log`|
+|Command line|`--sql-error-log=value`|
+|Type of variable|`enumeration`|
+|Default value|`ON`|
+|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[sql_error_log](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log)|
+
 ## sql_error_log_filename
 |name|value|
 |----|-----|
@@ -21968,19 +22025,20 @@
 |------|----|
 |mariadb.com|[sql_error_log_size_limit](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_size_limit)|
 
-## sql_error_log
+## sql_error_log_warnings
 |name|value|
 |----|-----|
-|Name|`sql_error_log`|
-|Command line|`--sql-error-log=value`|
-|Type of variable|`enumeration`|
-|Default value|`ON`|
-|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
+|Name|`sql_error_log_warnings`|
+|Command line|`--sql-error-log-warnings={0,1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[sql_error_log](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log)|
+|mariadb.com|[sql_error_log_warnings](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_warnings)|
 
 ## Ssl_accept_renegotiates
 |name|value|
@@ -31004,6 +31062,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[innodb_track_redo_log_now](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_track_redo_log_now)|
+
+## innodb_truncate_temporary_tablespace_now
+|name|value|
+|----|-----|
+|Name|`innodb_truncate_temporary_tablespace_now`|
+|Command line|`innodb-truncate-temporary-tablespace-now={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_truncate_temporary_tablespace_now](https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/#innodb_truncate_temporary_tablespace_now)|
 
 ## innodb_undo_directory
 |name|value|

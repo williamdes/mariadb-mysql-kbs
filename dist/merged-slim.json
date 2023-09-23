@@ -15837,7 +15837,7 @@
             "name": "join_buffer_space_limit",
             "range": {
                 "from": 2048,
-                "to": 99999999997952
+                "to": 1.8446744073709552e+19
             },
             "scope": [
                 "global",
@@ -16272,6 +16272,11 @@
             ],
             "type": "enumeration",
             "validValues": [
+                "query_plan",
+                "innodb",
+                "explain",
+                "engine",
+                "full",
                 "query_plan",
                 "innodb",
                 "explain"
@@ -17569,6 +17574,20 @@
             "ids": [
                 "44#read_rnd_buffer_size",
                 "24#sysvar_read_rnd_buffer_size"
+            ]
+        },
+        "redirect_url": {
+            "cli": "--redirect_url=val",
+            "default": "Empty",
+            "dynamic": true,
+            "name": "redirect_url",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "string",
+            "ids": [
+                "44#redirect_url"
             ]
         },
         "require_secure_transport": {
@@ -19519,6 +19538,19 @@
                 "48#spider_general_log"
             ]
         },
+        "spider_ignore_comments": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "spider_ignore_comments",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "48#spider_ignore_comments"
+            ]
+        },
         "spider_index_hint_pushdown": {
             "dynamic": true,
             "name": "spider_index_hint_pushdown",
@@ -20384,6 +20416,19 @@
                 "48#spider_support_xa"
             ]
         },
+        "spider_suppress_comment_ignored_warning": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "spider_suppress_comment_ignored_warning",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "48#spider_suppress_comment_ignored_warning"
+            ]
+        },
         "spider_sync_autocommit": {
             "dynamic": true,
             "name": "spider_sync_autocommit",
@@ -20779,6 +20824,21 @@
                 "48#spider_xa_register_mode"
             ]
         },
+        "sql_error_log": {
+            "cli": "--sql-error-log=value",
+            "default": "ON",
+            "name": "sql_error_log",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                "50#sql_error_log"
+            ]
+        },
         "sql_error_log_filename": {
             "cli": "--sql-error-log-filename=value",
             "default": "sql_errors.log",
@@ -20789,7 +20849,7 @@
             ],
             "type": "string",
             "ids": [
-                "50#sql_error_log_filename"
+                "49#sql_error_log_filename"
             ]
         },
         "sql_error_log_rate": {
@@ -20852,19 +20912,17 @@
                 "49#sql_error_log_size_limit"
             ]
         },
-        "sql_error_log": {
-            "cli": "--sql-error-log=value",
-            "default": "ON",
-            "name": "sql_error_log",
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "ON",
-                "FORCE",
-                "FORCE_PLUS_PERMANENT"
+        "sql_error_log_warnings": {
+            "cli": "--sql-error-log-warnings={0,1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "sql_error_log_warnings",
+            "scope": [
+                "global"
             ],
+            "type": "boolean",
             "ids": [
-                "49#sql_error_log"
+                "49#sql_error_log_warnings"
             ]
         },
         "Ssl_accept_renegotiates": {
@@ -28723,6 +28781,19 @@
             "type": "boolean",
             "ids": [
                 "59#innodb_track_redo_log_now"
+            ]
+        },
+        "innodb_truncate_temporary_tablespace_now": {
+            "cli": "innodb-truncate-temporary-tablespace-now={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_truncate_temporary_tablespace_now",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "59#innodb_truncate_temporary_tablespace_now"
             ]
         },
         "innodb_undo_directory": {

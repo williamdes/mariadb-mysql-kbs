@@ -20292,7 +20292,7 @@
             "name": "join_buffer_space_limit",
             "range": {
                 "from": 2048,
-                "to": 99999999997952
+                "to": 1.8446744073709552e+19
             },
             "scope": [
                 "global",
@@ -20868,6 +20868,11 @@
             ],
             "type": "enumeration",
             "validValues": [
+                "query_plan",
+                "innodb",
+                "explain",
+                "engine",
+                "full",
                 "query_plan",
                 "innodb",
                 "explain"
@@ -22569,6 +22574,23 @@
                 {
                     "anchor": "sysvar_read_rnd_buffer_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "redirect_url": {
+            "cli": "--redirect_url=val",
+            "default": "Empty",
+            "dynamic": true,
+            "name": "redirect_url",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "redirect_url",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 }
             ]
         },
@@ -25090,6 +25112,22 @@
                 }
             ]
         },
+        "spider_ignore_comments": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "spider_ignore_comments",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "spider_ignore_comments",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/"
+                }
+            ]
+        },
         "spider_index_hint_pushdown": {
             "dynamic": true,
             "name": "spider_index_hint_pushdown",
@@ -26129,6 +26167,22 @@
                 }
             ]
         },
+        "spider_suppress_comment_ignored_warning": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "spider_suppress_comment_ignored_warning",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "spider_suppress_comment_ignored_warning",
+                    "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/"
+                }
+            ]
+        },
         "spider_sync_autocommit": {
             "dynamic": true,
             "name": "spider_sync_autocommit",
@@ -26602,6 +26656,24 @@
                 }
             ]
         },
+        "sql_error_log": {
+            "cli": "--sql-error-log=value",
+            "default": "ON",
+            "name": "sql_error_log",
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "ON",
+                "FORCE",
+                "FORCE_PLUS_PERMANENT"
+            ],
+            "ids": [
+                {
+                    "anchor": "sql_error_log",
+                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
+                }
+            ]
+        },
         "sql_error_log_filename": {
             "cli": "--sql-error-log-filename=value",
             "default": "sql_errors.log",
@@ -26690,20 +26762,18 @@
                 }
             ]
         },
-        "sql_error_log": {
-            "cli": "--sql-error-log=value",
-            "default": "ON",
-            "name": "sql_error_log",
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "ON",
-                "FORCE",
-                "FORCE_PLUS_PERMANENT"
+        "sql_error_log_warnings": {
+            "cli": "--sql-error-log-warnings={0,1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "sql_error_log_warnings",
+            "scope": [
+                "global"
             ],
+            "type": "boolean",
             "ids": [
                 {
-                    "anchor": "sql_error_log",
+                    "anchor": "sql_error_log_warnings",
                     "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
                 }
             ]
@@ -37013,6 +37083,22 @@
             "ids": [
                 {
                     "anchor": "innodb_track_redo_log_now",
+                    "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
+                }
+            ]
+        },
+        "innodb_truncate_temporary_tablespace_now": {
+            "cli": "innodb-truncate-temporary-tablespace-now={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_truncate_temporary_tablespace_now",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "innodb_truncate_temporary_tablespace_now",
                     "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
                 }
             ]

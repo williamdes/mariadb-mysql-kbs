@@ -1529,11 +1529,34 @@
         "innodb",
         "explain",
         "engine",
+        "warnings",
+        "all",
+        "full",
+        "query_plan",
+        "innodb",
+        "explain",
+        "engine",
         "full",
         "query_plan",
         "innodb",
         "explain"
       ]
+    },
+    {
+      "cli": "log-slow-max-warnings=#",
+      "default": "10",
+      "dynamic": true,
+      "id": "log_slow_max_warnings",
+      "name": "log_slow_max_warnings",
+      "range": {
+        "from": 0,
+        "to": 1000
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
     },
     {
       "cli": "log-tc-size=#",
@@ -2109,6 +2132,22 @@
       "type": "integer"
     },
     {
+      "cli": "note-verbosity=value1[,value2...]",
+      "default": "basic,explain",
+      "dynamic": true,
+      "id": "note_verbosity",
+      "name": "note_verbosity",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "basic,explain,unusable_keys",
+        "all"
+      ]
+    },
+    {
       "cli": "--old",
       "default": "OFF",
       "dynamic": true,
@@ -2179,6 +2218,22 @@
       "range": {
         "from": 0,
         "to": 62
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--optimizer-max-sel-args=#",
+      "default": "16000",
+      "dynamic": true,
+      "id": "optimizer_max_sel_args",
+      "name": "optimizer_max_sel_args",
+      "range": {
+        "from": 0,
+        "to": 4294967295
       },
       "scope": [
         "global",

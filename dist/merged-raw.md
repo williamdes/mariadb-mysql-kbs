@@ -17482,12 +17482,28 @@
 |Scope|`global`, `session`|
 |Default value|`(Empty)`|
 |Dynamic|`true`|
-|Valid value(s)|`query_plan`, `innodb`, `explain`, `engine`, `full`, `query_plan`, `innodb`, `explain`|
+|Valid value(s)|`query_plan`, `innodb`, `explain`, `engine`, `warnings`, `all`, `full`, `query_plan`, `innodb`, `explain`, `engine`, `full`, `query_plan`, `innodb`, `explain`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[log_slow_verbosity](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_verbosity)|
+
+## log_slow_max_warnings
+|name|value|
+|----|-----|
+|Name|`log_slow_max_warnings`|
+|Command line|`log-slow-max-warnings=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`10`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[log_slow_max_warnings](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#log_slow_max_warnings)|
 
 ## log_tc_size
 |name|value|
@@ -18124,6 +18140,22 @@
 |mariadb.com|[net_write_timeout](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#net_write_timeout)|
 |dev.mysql.com|[sysvar_net_write_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout)|
 
+## note_verbosity
+|name|value|
+|----|-----|
+|Name|`note_verbosity`|
+|Command line|`note-verbosity=value1[,value2...]`|
+|Type of variable|`enumeration`|
+|Scope|`global`, `session`|
+|Default value|`basic,explain`|
+|Dynamic|`true`|
+|Valid value(s)|`basic,explain,unusable_keys`, `all`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[note_verbosity](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#note_verbosity)|
+
 ## old
 |name|value|
 |----|-----|
@@ -18213,6 +18245,22 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[optimizer_extra_pruning_depth](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_extra_pruning_depth)|
+
+## optimizer_max_sel_args
+|name|value|
+|----|-----|
+|Name|`optimizer_max_sel_args`|
+|Command line|`--optimizer-max-sel-args=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`16000`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[optimizer_max_sel_args](https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/#optimizer_max_sel_args)|
 
 ## optimizer_max_sel_arg_weight
 |name|value|

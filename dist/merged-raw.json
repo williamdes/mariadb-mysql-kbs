@@ -20872,6 +20872,13 @@
                 "innodb",
                 "explain",
                 "engine",
+                "warnings",
+                "all",
+                "full",
+                "query_plan",
+                "innodb",
+                "explain",
+                "engine",
                 "full",
                 "query_plan",
                 "innodb",
@@ -20880,6 +20887,27 @@
             "ids": [
                 {
                     "anchor": "log_slow_verbosity",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                }
+            ]
+        },
+        "log_slow_max_warnings": {
+            "cli": "log-slow-max-warnings=#",
+            "default": "10",
+            "dynamic": true,
+            "name": "log_slow_max_warnings",
+            "range": {
+                "from": 0,
+                "to": 1000
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "log_slow_max_warnings",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 }
             ]
@@ -21747,6 +21775,27 @@
                 }
             ]
         },
+        "note_verbosity": {
+            "cli": "note-verbosity=value1[,value2...]",
+            "default": "basic,explain",
+            "dynamic": true,
+            "name": "note_verbosity",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "basic,explain,unusable_keys",
+                "all"
+            ],
+            "ids": [
+                {
+                    "anchor": "note_verbosity",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                }
+            ]
+        },
         "old": {
             "cli": "--old[={OFF|ON}]",
             "default": "OFF",
@@ -21856,6 +21905,27 @@
             "ids": [
                 {
                     "anchor": "optimizer_extra_pruning_depth",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
+                }
+            ]
+        },
+        "optimizer_max_sel_args": {
+            "cli": "--optimizer-max-sel-args=#",
+            "default": "16000",
+            "dynamic": true,
+            "name": "optimizer_max_sel_args",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "optimizer_max_sel_args",
                     "url": "https://mariadb.com/kb/en/library/documentation/replication/optimization-and-tuning/system-variables/server-system-variables/"
                 }
             ]

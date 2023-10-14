@@ -16276,6 +16276,13 @@
                 "innodb",
                 "explain",
                 "engine",
+                "warnings",
+                "all",
+                "full",
+                "query_plan",
+                "innodb",
+                "explain",
+                "engine",
                 "full",
                 "query_plan",
                 "innodb",
@@ -16283,6 +16290,24 @@
             ],
             "ids": [
                 "44#log_slow_verbosity"
+            ]
+        },
+        "log_slow_max_warnings": {
+            "cli": "log-slow-max-warnings=#",
+            "default": "10",
+            "dynamic": true,
+            "name": "log_slow_max_warnings",
+            "range": {
+                "from": 0,
+                "to": 1000
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "44#log_slow_max_warnings"
             ]
         },
         "log_tc_size": {
@@ -16941,6 +16966,24 @@
                 "24#sysvar_net_write_timeout"
             ]
         },
+        "note_verbosity": {
+            "cli": "note-verbosity=value1[,value2...]",
+            "default": "basic,explain",
+            "dynamic": true,
+            "name": "note_verbosity",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "basic,explain,unusable_keys",
+                "all"
+            ],
+            "ids": [
+                "44#note_verbosity"
+            ]
+        },
         "old": {
             "cli": "--old[={OFF|ON}]",
             "default": "OFF",
@@ -17025,6 +17068,24 @@
             "type": "integer",
             "ids": [
                 "44#optimizer_extra_pruning_depth"
+            ]
+        },
+        "optimizer_max_sel_args": {
+            "cli": "--optimizer-max-sel-args=#",
+            "default": "16000",
+            "dynamic": true,
+            "name": "optimizer_max_sel_args",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "44#optimizer_max_sel_args"
             ]
         },
         "optimizer_max_sel_arg_weight": {

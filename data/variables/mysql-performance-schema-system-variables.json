@@ -383,7 +383,6 @@
     },
     {
       "cli": "--performance-schema-max-rwlock-classes=#",
-      "default": "60",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_rwlock_classes",
       "name": "performance_schema_max_rwlock_classes",

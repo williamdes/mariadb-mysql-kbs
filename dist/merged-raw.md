@@ -34499,7 +34499,7 @@
 |Scope|`session`|
 |Default value|`AUTOMATIC`|
 |Dynamic|`true`|
-|Valid value(s)|`AUTOMATIC`, `ANONYMOUS`, `UUID:NUMBER`|
+|Valid value(s)|`AUTOMATIC`, `ANONYMOUS`, `<UUID>:<NUMBER>`|
 
 ### Documentation(s)
 |source|anchor name|

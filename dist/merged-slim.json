@@ -32078,7 +32078,7 @@
             "validValues": [
                 "AUTOMATIC",
                 "ANONYMOUS",
-                "UUID:NUMBER"
+                "<UUID>:<NUMBER>"
             ],
             "ids": [
                 "64#sysvar_gtid_next"

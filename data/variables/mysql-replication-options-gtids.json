@@ -79,7 +79,7 @@
       "validValues": [
         "AUTOMATIC",
         "ANONYMOUS",
-        "UUID:NUMBER"
+        "<UUID>:<NUMBER>"
       ]
     },
     {

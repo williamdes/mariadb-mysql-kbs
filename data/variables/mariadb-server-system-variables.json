@@ -2315,6 +2315,7 @@
         "condition_pushdown_for_derived={on|off}",
         "condition_pushdown_for_subquery={on|off}",
         "condition_pushdown_from_having={on|off}",
+        "cset_narrowing={on|off}",
         "default",
         "derived_merge={on|off}",
         "derived_with_keys={on|off}",

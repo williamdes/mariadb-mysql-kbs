@@ -9289,7 +9289,6 @@
         },
         "max_binlog_cache_size": {
             "cli": "--max-binlog-cache-size=#",
-            "default": "18446744073709547520",
             "dynamic": true,
             "name": "max_binlog_cache_size",
             "range": {

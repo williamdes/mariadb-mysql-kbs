@@ -493,13 +493,11 @@
     },
     {
       "cli": "--max-binlog-cache-size=#",
-      "default": "18446744073709547520",
       "dynamic": true,
       "id": "sysvar_max_binlog_cache_size",
       "name": "max_binlog_cache_size",
       "range": {
-        "from": 4096,
-        "to": 18446744073709547520
+        "from": 4096
       },
       "scope": [
         "global"

@@ -9883,7 +9883,6 @@
 |Command line|`--max-binlog-cache-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`18446744073709547520`|
 |Dynamic|`true`|
 |Range|from: `4096` to: `1.844674407371E+19`|
 

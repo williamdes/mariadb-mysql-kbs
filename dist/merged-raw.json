@@ -734,152 +734,6 @@
                 }
             ]
         },
-        "aws_key_management_key_spec": {
-            "cli": "--aws-key-management-key-spec=value",
-            "default": "AES_128",
-            "dynamic": false,
-            "name": "aws_key_management_key_spec",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "AES_128",
-                "AES_256"
-            ],
-            "ids": [
-                {
-                    "anchor": "aws_key_management_key_spec",
-                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
-                }
-            ]
-        },
-        "aws_key_management_log_level": {
-            "cli": "--aws-key-management-log-level=value",
-            "default": "Off",
-            "dynamic": false,
-            "name": "aws_key_management_log_level",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "Off",
-                "Fatal",
-                "Warn",
-                "Info",
-                "Debug",
-                "Trace"
-            ],
-            "ids": [
-                {
-                    "anchor": "aws_key_management_log_level",
-                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
-                }
-            ]
-        },
-        "aws_key_management_master_key_id": {
-            "cli": "--aws-key-management-master-key-id=value",
-            "default": "",
-            "dynamic": false,
-            "name": "aws_key_management_master_key_id",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "aws_key_management_master_key_id",
-                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
-                }
-            ]
-        },
-        "aws_key_management_mock": {
-            "cli": "--aws-key-management-mock",
-            "default": "OFF",
-            "dynamic": false,
-            "name": "aws_key_management_mock",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "validValues": [
-                "OFF",
-                "ON"
-            ],
-            "ids": [
-                {
-                    "anchor": "aws_key_management_mock",
-                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
-                }
-            ]
-        },
-        "aws_key_management_region": {
-            "cli": "--aws-key-management-region=value",
-            "default": "'us-east-1'",
-            "dynamic": false,
-            "name": "aws_key_management_region",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "aws_key_management_region",
-                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
-                }
-            ]
-        },
-        "aws_key_management_request_timeout": {
-            "cli": "--aws-key-management-request-timeout=value",
-            "default": "0",
-            "dynamic": false,
-            "name": "aws_key_management_request_timeout",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "aws_key_management_request_timeout",
-                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
-                }
-            ]
-        },
-        "aws_key_management_rotate_key": {
-            "cli": "--aws-key-management-rotate-key=value",
-            "default": "",
-            "dynamic": true,
-            "name": "aws_key_management_rotate_key",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "aws_key_management_rotate_key",
-                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
-                }
-            ]
-        },
-        "aws_key_management": {
-            "cli": "--aws-key-management=value",
-            "default": "ON",
-            "name": "aws_key_management",
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "ON",
-                "FORCE",
-                "FORCE_PLUS_PERMANENT"
-            ],
-            "ids": [
-                {
-                    "anchor": "aws_key_management",
-                    "url": "https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/"
-                }
-            ]
-        },
         "Cassandra_multiget_keys_scanned": {
             "name": "Cassandra_multiget_keys_scanned",
             "scope": [
@@ -11388,7 +11242,11 @@
             "validValues": [
                 "FULL",
                 "NOBLOB",
-                "MINIMAL"
+                "MINIMAL",
+                "FULL",
+                "NOBLOB",
+                "MINIMAL",
+                "FULL_NODUP"
             ],
             "ids": [
                 {
@@ -11818,6 +11676,26 @@
                 {
                     "anchor": "sysvar_max_binlog_stmt_cache_size",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "max_binlog_total_size": {
+            "cli": "--max-binlog-size=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "max_binlog_total_size",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "max_binlog_total_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 }
             ]
         },
@@ -12282,6 +12160,26 @@
                 {
                     "anchor": "sysvar_slave_compressed_protocol",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html"
+                }
+            ]
+        },
+        "slave_connections_needed_for_purge": {
+            "cli": "--max-binlog-size=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "slave_connections_needed_for_purge",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "slave_connections_needed_for_purge",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 }
             ]
         },

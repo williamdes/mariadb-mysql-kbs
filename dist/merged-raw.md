@@ -616,128 +616,6 @@
 |------|----|
 |mariadb.com|[pam](https://mariadb.com/kb/en/library/documentation/authentication-plugin-pam/#pam)|
 
-## aws_key_management_key_spec
-|name|value|
-|----|-----|
-|Name|`aws_key_management_key_spec`|
-|Command line|`--aws-key-management-key-spec=value`|
-|Type of variable|`enumeration`|
-|Scope|`global`|
-|Default value|`AES_128`|
-|Dynamic|`false`|
-|Valid value(s)|`AES_128`, `AES_256`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[aws_key_management_key_spec](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_key_spec)|
-
-## aws_key_management_log_level
-|name|value|
-|----|-----|
-|Name|`aws_key_management_log_level`|
-|Command line|`--aws-key-management-log-level=value`|
-|Type of variable|`enumeration`|
-|Scope|`global`|
-|Default value|`Off`|
-|Dynamic|`false`|
-|Valid value(s)|`Off`, `Fatal`, `Warn`, `Info`, `Debug`, `Trace`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[aws_key_management_log_level](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_log_level)|
-
-## aws_key_management_master_key_id
-|name|value|
-|----|-----|
-|Name|`aws_key_management_master_key_id`|
-|Command line|`--aws-key-management-master-key-id=value`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|``|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[aws_key_management_master_key_id](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_master_key_id)|
-
-## aws_key_management_mock
-|name|value|
-|----|-----|
-|Name|`aws_key_management_mock`|
-|Command line|`--aws-key-management-mock`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`false`|
-|Valid value(s)|`OFF`, `ON`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[aws_key_management_mock](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_mock)|
-
-## aws_key_management_region
-|name|value|
-|----|-----|
-|Name|`aws_key_management_region`|
-|Command line|`--aws-key-management-region=value`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`'us-east-1'`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[aws_key_management_region](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_region)|
-
-## aws_key_management_request_timeout
-|name|value|
-|----|-----|
-|Name|`aws_key_management_request_timeout`|
-|Command line|`--aws-key-management-request-timeout=value`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`0`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[aws_key_management_request_timeout](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_request_timeout)|
-
-## aws_key_management_rotate_key
-|name|value|
-|----|-----|
-|Name|`aws_key_management_rotate_key`|
-|Command line|`--aws-key-management-rotate-key=value`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|``|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[aws_key_management_rotate_key](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management_rotate_key)|
-
-## aws_key_management
-|name|value|
-|----|-----|
-|Name|`aws_key_management`|
-|Command line|`--aws-key-management=value`|
-|Type of variable|`enumeration`|
-|Default value|`ON`|
-|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[aws_key_management](https://mariadb.com/kb/en/library/documentation/aws-key-management-encryption-plugin/#aws_key_management)|
-
 ## Cassandra_multiget_keys_scanned
 |name|value|
 |----|-----|
@@ -9626,7 +9504,7 @@
 |Scope|`global`, `session`|
 |Default value|`full`|
 |Dynamic|`true`|
-|Valid value(s)|`FULL`, `NOBLOB`, `MINIMAL`|
+|Valid value(s)|`FULL`, `NOBLOB`, `MINIMAL`, `FULL`, `NOBLOB`, `MINIMAL`, `FULL_NODUP`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -9928,6 +9806,22 @@
 |mariadb.com|[max_binlog_stmt_cache_size](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#max_binlog_stmt_cache_size)|
 |dev.mysql.com|[sysvar_max_binlog_stmt_cache_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_max_binlog_stmt_cache_size)|
 |dev.mysql.com|[sysvar_max_binlog_stmt_cache_size](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_max_binlog_stmt_cache_size)|
+
+## max_binlog_total_size
+|name|value|
+|----|-----|
+|Name|`max_binlog_total_size`|
+|Command line|`--max-binlog-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[max_binlog_total_size](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#max_binlog_total_size)|
 
 ## max_relay_log_size
 |name|value|
@@ -10296,6 +10190,22 @@
 |------|----|
 |mariadb.com|[slave_compressed_protocol](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#slave_compressed_protocol)|
 |dev.mysql.com|[sysvar_slave_compressed_protocol](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_slave_compressed_protocol)|
+
+## slave_connections_needed_for_purge
+|name|value|
+|----|-----|
+|Name|`slave_connections_needed_for_purge`|
+|Command line|`--max-binlog-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[slave_connections_needed_for_purge](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#slave_connections_needed_for_purge)|
 
 ## slave_ddl_exec_mode
 |name|value|

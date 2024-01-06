@@ -13,14 +13,14 @@ jobs:
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
-                # Source: https://nodejs.org/en/about/releases/#releases
-                node_version: ["14", "16", "18", "lts/*", "latest"]
+                # Source: https://endoflife.date/nodejs
+                node_version: ["18", "20", "lts/*", "latest"]
                 os: [ubuntu-latest]
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - name: Use Node.js ${{ matrix.node_version }}
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node_version }}
             - name: Get yarn cache directory path
@@ -51,7 +51,7 @@ jobs:
         continue-on-error: ${{ matrix.experimental }}
         strategy:
             matrix:
-                php-version: ["7.1", "7.2", "7.3", "7.4", "8.0", "8.1"]
+                php-version: ["7.1", "7.2", "7.3", "7.4", "8.0", "8.1", "8.2", "8.3"]
                 os: [ubuntu-latest]
                 experimental: [false]
                 composer-options: [""]
@@ -63,7 +63,7 @@ jobs:
                           os: ubuntu-latest,
                       }
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - name: Use php ${{ matrix.php-version }}
               uses: shivammathur/setup-php@v2
               with:

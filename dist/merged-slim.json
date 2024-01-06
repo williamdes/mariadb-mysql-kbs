@@ -9060,7 +9060,11 @@
             "validValues": [
                 "FULL",
                 "NOBLOB",
-                "MINIMAL"
+                "MINIMAL",
+                "FULL",
+                "NOBLOB",
+                "MINIMAL",
+                "FULL_NODUP"
             ],
             "ids": [
                 "15#binlog_row_image",
@@ -9341,6 +9345,23 @@
                 "15#max_binlog_stmt_cache_size",
                 "36#sysvar_max_binlog_stmt_cache_size",
                 "37#sysvar_max_binlog_stmt_cache_size"
+            ]
+        },
+        "max_binlog_total_size": {
+            "cli": "--max-binlog-size=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "max_binlog_total_size",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "15#max_binlog_total_size"
             ]
         },
         "max_relay_log_size": {
@@ -9661,6 +9682,23 @@
             "ids": [
                 "15#slave_compressed_protocol",
                 "38#sysvar_slave_compressed_protocol"
+            ]
+        },
+        "slave_connections_needed_for_purge": {
+            "cli": "--max-binlog-size=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "slave_connections_needed_for_purge",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "15#slave_connections_needed_for_purge"
             ]
         },
         "slave_ddl_exec_mode": {

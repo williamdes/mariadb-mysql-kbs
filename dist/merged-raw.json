@@ -11388,7 +11388,11 @@
             "validValues": [
                 "FULL",
                 "NOBLOB",
-                "MINIMAL"
+                "MINIMAL",
+                "FULL",
+                "NOBLOB",
+                "MINIMAL",
+                "FULL_NODUP"
             ],
             "ids": [
                 {
@@ -11818,6 +11822,26 @@
                 {
                     "anchor": "sysvar_max_binlog_stmt_cache_size",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "max_binlog_total_size": {
+            "cli": "--max-binlog-size=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "max_binlog_total_size",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "max_binlog_total_size",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 }
             ]
         },
@@ -12282,6 +12306,26 @@
                 {
                     "anchor": "sysvar_slave_compressed_protocol",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html"
+                }
+            ]
+        },
+        "slave_connections_needed_for_purge": {
+            "cli": "--max-binlog-size=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "slave_connections_needed_for_purge",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "slave_connections_needed_for_purge",
+                    "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
                 }
             ]
         },

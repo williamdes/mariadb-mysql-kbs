@@ -9626,7 +9626,7 @@
 |Scope|`global`, `session`|
 |Default value|`full`|
 |Dynamic|`true`|
-|Valid value(s)|`FULL`, `NOBLOB`, `MINIMAL`|
+|Valid value(s)|`FULL`, `NOBLOB`, `MINIMAL`, `FULL`, `NOBLOB`, `MINIMAL`, `FULL_NODUP`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -9928,6 +9928,22 @@
 |mariadb.com|[max_binlog_stmt_cache_size](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#max_binlog_stmt_cache_size)|
 |dev.mysql.com|[sysvar_max_binlog_stmt_cache_size](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_max_binlog_stmt_cache_size)|
 |dev.mysql.com|[sysvar_max_binlog_stmt_cache_size](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_max_binlog_stmt_cache_size)|
+
+## max_binlog_total_size
+|name|value|
+|----|-----|
+|Name|`max_binlog_total_size`|
+|Command line|`--max-binlog-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[max_binlog_total_size](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#max_binlog_total_size)|
 
 ## max_relay_log_size
 |name|value|
@@ -10296,6 +10312,22 @@
 |------|----|
 |mariadb.com|[slave_compressed_protocol](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#slave_compressed_protocol)|
 |dev.mysql.com|[sysvar_slave_compressed_protocol](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_slave_compressed_protocol)|
+
+## slave_connections_needed_for_purge
+|name|value|
+|----|-----|
+|Name|`slave_connections_needed_for_purge`|
+|Command line|`--max-binlog-size=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`1`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[slave_connections_needed_for_purge](https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/#slave_connections_needed_for_purge)|
 
 ## slave_ddl_exec_mode
 |name|value|

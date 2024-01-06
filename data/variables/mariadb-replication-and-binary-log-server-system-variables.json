@@ -242,7 +242,11 @@
       "validValues": [
         "FULL",
         "NOBLOB",
-        "MINIMAL"
+        "MINIMAL",
+        "FULL",
+        "NOBLOB",
+        "MINIMAL",
+        "FULL_NODUP"
       ]
     },
     {
@@ -460,6 +464,21 @@
       "range": {
         "from": 4096,
         "to": 18446744073709547520
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--max-binlog-size=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "max_binlog_total_size",
+      "name": "max_binlog_total_size",
+      "range": {
+        "from": 0,
+        "to": 18446744073709551615
       },
       "scope": [
         "global"
@@ -771,6 +790,21 @@
         "global"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--max-binlog-size=#",
+      "default": "1",
+      "dynamic": true,
+      "id": "slave_connections_needed_for_purge",
+      "name": "slave_connections_needed_for_purge",
+      "range": {
+        "from": 0,
+        "to": 18446744073709551615
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     },
     {
       "cli": "--slave-ddl-exec-mode=name",

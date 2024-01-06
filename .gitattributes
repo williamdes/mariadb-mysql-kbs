@@ -4,7 +4,8 @@ dist/merged-ultraslim.* linguist-vendored -diff linguist-generated=true
 dist/* linguist-vendored linguist-detectable=false
 dist/merged-ultraslim.* linguist-vendored
 /scripts export-ignore
-/test/*.js export-ignore
+/test export-ignore
+/phpunit.xml export-ignore
 /test/data/*.html linguist-vendored export-ignore linguist-detectable=false
 /.github export-ignore
 /.prettierignore export-ignore

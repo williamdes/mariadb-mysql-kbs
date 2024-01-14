@@ -89,5 +89,5 @@
     }
   ],
   "name": "sql-error-log-plugin-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
+  "url": "https://mariadb.com/kb/en/sql-error-log-system-variables-and-options/"
 }

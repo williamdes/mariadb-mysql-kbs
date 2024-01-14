@@ -21,8 +21,7 @@ const STORAGE_ENGINES: [&str; 7] = [
 ];
 
 // {url}  + plugin_name + "/"
-const PLUGINS: [&str; 11] = [
-    "sql-error-log-plugin",
+const PLUGINS: [&str; 10] = [
     "authentication-plugin-gssapi",
     "authentication-plugin-pam",
     "aws-key-management-encryption-plugin",
@@ -48,7 +47,7 @@ const SYSTEM_VARIABLES: [&str; 9] = [
     "replication-and-binary-log-server",
 ];
 
-const CUSTOM_PAGES: [Page; 8] = [
+const CUSTOM_PAGES: [Page; 9] = [
     Page {
         url: "columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/",
         name: "spider-server-system-variables",
@@ -80,6 +79,10 @@ const CUSTOM_PAGES: [Page; 8] = [
     Page {
         url: "user-statistics/",
         name: "user-statistics-variables",
+    },
+    Page {
+        url: "sql-error-log-system-variables-and-options/",
+        name: "sql-error-log-plugin-variables",
     },
 ];
 

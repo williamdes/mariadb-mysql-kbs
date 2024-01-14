@@ -519,7 +519,7 @@ mod tests {
     fn test_case_1() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_1.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
         assert_eq!(
             vec![
@@ -545,7 +545,7 @@ mod tests {
     fn test_case_2() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_2.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -570,7 +570,7 @@ mod tests {
     fn test_case_3() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_3.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -595,7 +595,7 @@ mod tests {
     fn test_case_4() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_4.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -657,7 +657,7 @@ mod tests {
     fn test_case_5() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_5.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -703,7 +703,7 @@ mod tests {
     fn test_case_6() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_6.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -754,7 +754,7 @@ mod tests {
     fn test_case_7() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_7.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -779,7 +779,7 @@ mod tests {
     fn test_case_8() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_8.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -809,7 +809,7 @@ mod tests {
     fn test_case_9() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_9.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -840,7 +840,7 @@ mod tests {
     fn test_case_10() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_10.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -871,7 +871,7 @@ mod tests {
     fn test_case_11() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_11.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -905,7 +905,7 @@ mod tests {
     fn test_case_12() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_12.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -930,7 +930,7 @@ mod tests {
     fn test_case_13() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_13.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -955,7 +955,7 @@ mod tests {
     fn test_case_14() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_14.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -980,7 +980,7 @@ mod tests {
     fn test_case_15() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_15.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -1011,7 +1011,7 @@ mod tests {
     fn test_case_16() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_16.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -1042,7 +1042,7 @@ mod tests {
     fn test_case_17() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_17.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -1073,7 +1073,7 @@ mod tests {
     fn test_case_18() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_18.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(
@@ -1125,7 +1125,7 @@ mod tests {
     fn test_case_19() {
         let entries = extract_mariadb_from_text(QueryResponse {
             body: get_test_data("mariadb_test_case_19.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
 
         assert_eq!(

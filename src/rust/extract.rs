@@ -1,9 +1,9 @@
-use crate::data::{DataFile, PageProcess, QueryResponse};
+use crate::data::{DataFile, PageProcess, QueryErrorResponse, QueryResponse};
 use crate::{mariadb, mysql};
-use reqwest::blocking::{Client, RequestBuilder};
-use reqwest::header::{FROM, USER_AGENT};
 use serde::Serialize;
+use std::time::Duration;
 use std::{env, fs};
+use ureq::{Agent, AgentBuilder, Error};
 
 const UA_FROM: &str = "williamdes+mariadb-mysql-kbs@wdes.fr";
 const UA: &str = "mariadb-mysql-kbs-bot (+https://github.com/williamdes/mariadb-mysql-kbs; williamdes+mariadb-mysql-kbs@wdes.fr)";
@@ -29,39 +29,58 @@ pub fn extract(only: ExtractionPreference) {
     println!("End !");
 }
 
-fn add_headers(rb: RequestBuilder) -> RequestBuilder {
-    rb.header(FROM, UA_FROM).header(USER_AGENT, UA)
-}
-
-pub fn get_html_from_url(client: Client, url: &str) -> QueryResponse {
-    let mut request = client.get(url);
-    request = add_headers(request);
-
-    let response = request
-        .send()
-        .expect("Url should be fetched")
-        .text()
-        .unwrap();
-
-    QueryResponse {
-        body: response,
-        url: url,
+pub fn get_html_from_url(agent: Agent, url: &str) -> Result<QueryResponse, QueryErrorResponse> {
+    match agent
+        .get(url)
+        .set("From", UA_FROM)
+        .set("User-Agent", UA)
+        .call()
+    {
+        Ok(response) => Ok(QueryResponse {
+            url: response.get_url().to_owned(),
+            body: response.into_string().expect("Should have text"),
+        }),
+        Err(Error::Status(code, response)) => Err(QueryErrorResponse {
+            url: Some(response.get_url().to_owned()),
+            code: Some(code),
+            message: response.into_string().expect("Should have text"),
+        }),
+        Err(err) => Err(QueryErrorResponse {
+            url: None,
+            code: None,
+            message: err.to_string(),
+        }),
     }
 }
 
 fn extract_page(page: PageProcess) {
-    println!("URL : {}", &page.url);
-    let client = Client::new();
-    let response = get_html_from_url(client, &page.url);
-    let data = DataFile {
-        data: match page.is_mariadb_page() {
-            true => mariadb::extract_mariadb_from_text(response),
-            false => mysql::extract_mysql_from_text(response),
-        },
-        url: &page.url,
-        name: &page.name,
-    };
-    write_page(page.data_type, page.get_data_prefix(), data);
+    let agent: Agent = AgentBuilder::new()
+        .timeout_read(Duration::from_secs(5))
+        .timeout_write(Duration::from_secs(5))
+        .build();
+    match get_html_from_url(agent, &page.url) {
+        Ok(response) => {
+            let final_url = response.url.clone();
+            println!("URL : {} -> {}", &page.url, final_url);
+            let data = DataFile {
+                data: match page.is_mariadb_page() {
+                    true => mariadb::extract_mariadb_from_text(response),
+                    false => mysql::extract_mysql_from_text(response),
+                },
+                url: final_url.as_str(),
+                name: &page.name,
+            };
+            write_page(page.data_type, page.get_data_prefix(), data);
+        }
+        Err(err) => {
+            eprintln!(
+                "URL : {} ended in {} ({})",
+                &page.url,
+                err.code.unwrap_or(0),
+                err.url.unwrap_or("".to_string())
+            );
+        }
+    }
 }
 
 fn write_json(filename: String, data: DataFile) {

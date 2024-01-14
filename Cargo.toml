@@ -44,7 +44,7 @@ clap = { version = "4.0.27", features = ["cargo", "derive"] }
 futures = "0.3.25"
 tokio = { version = "1.22.0", features = ["macros", "rt-multi-thread"] }
 regex = "1.7.0"
-reqwest = {version = "0.11.13", features = ["blocking"]}
+ureq = { version = "2.9.1" }
 select = "0.5.0"
 serde_json = "1.0.89"
 serde = { version = "1.0.147", features = ["derive"] }

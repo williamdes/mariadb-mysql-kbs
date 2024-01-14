@@ -26,8 +26,14 @@ impl PageProcess<'_> {
     }
 }
 
-pub struct QueryResponse<'a> {
-    pub url: &'a str,
+pub struct QueryErrorResponse {
+    pub url: Option<String>,
+    pub code: Option<u16>,
+    pub message: String,
+}
+
+pub struct QueryResponse {
+    pub url: String,
     pub body: String,
 }
 

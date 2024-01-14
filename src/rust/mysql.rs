@@ -417,7 +417,7 @@ mod tests {
     fn test_case_1() {
         let entries = extract_mysql_from_text(QueryResponse {
             body: get_test_data("mysql_test_case_1.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
         assert_eq!(
             vec![
@@ -456,7 +456,7 @@ mod tests {
     fn test_case_2() {
         let entries = extract_mysql_from_text(QueryResponse {
             body: get_test_data("mysql_test_case_2.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
         assert_eq!(
             vec![
@@ -592,7 +592,7 @@ mod tests {
     fn test_case_3() {
         let entries = extract_mysql_from_text(QueryResponse {
             body: get_test_data("mysql_test_case_3.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
         assert_eq!(
             vec![KbParsedEntry {
@@ -616,7 +616,7 @@ mod tests {
     fn test_case_4() {
         let entries = extract_mysql_from_text(QueryResponse {
             body: get_test_data("mysql_test_case_4.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
         assert_eq!(
             vec![
@@ -981,7 +981,7 @@ mod tests {
     fn test_case_5() {
         let entries = extract_mysql_from_text(QueryResponse {
             body: get_test_data("mysql_test_case_5.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
         assert_eq!(
             vec![KbParsedEntry {
@@ -1010,7 +1010,7 @@ mod tests {
     fn test_case_6() {
         let entries = extract_mysql_from_text(QueryResponse {
             body: get_test_data("mysql_test_case_6.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
         assert_eq!(
             vec![
@@ -1061,7 +1061,7 @@ mod tests {
     fn test_case_7() {
         let entries = extract_mysql_from_text(QueryResponse {
             body: get_test_data("mysql_test_case_7.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
         assert_eq!(
             vec![
@@ -1106,7 +1106,7 @@ mod tests {
     fn test_case_8() {
         let entries = extract_mysql_from_text(QueryResponse {
             body: get_test_data("mysql_test_case_8.html"),
-            url: "https://example.com",
+            url: "https://example.com".to_string(),
         });
         assert_eq!(
             vec![KbParsedEntry {

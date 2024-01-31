@@ -3,7 +3,7 @@ name = "mariadb-mysql-kbs"
 version = "1.3.0-rc2"
 authors = ["William Desportes <williamdes@wdes.fr>"]
 edition = "2021"
-rust-version = "1.64.0"  # MSRV
+rust-version = "1.73.0"  # MSRV
 description = "An index of the MariaDB and MySQL Knowledge bases"
 homepage = "https://github.com/williamdes/mariadb-mysql-kbs/tree/v1.3.0#readme"
 repository = "https://github.com/williamdes/mariadb-mysql-kbs"
@@ -21,8 +21,8 @@ include = [
 ]
 
 [badges]
-github = { repository = "mariadb-mysql-kbs", branch = "master" }
-codecov = { repository = "mariadb-mysql-kbs", branch = "master", service = "github" }
+github = { repository = "mariadb-mysql-kbs", branch = "main" }
+codecov = { repository = "mariadb-mysql-kbs", branch = "main", service = "github" }
 is-it-maintained-issue-resolution = { repository = "mariadb-mysql-kbs" }
 is-it-maintained-open-issues = { repository = "mariadb-mysql-kbs" }
 maintenance = { status = "passively-maintained" }

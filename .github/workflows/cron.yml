@@ -46,7 +46,7 @@ jobs:
               uses: actions-rs/toolchain@v1
               with:
                   profile: minimal
-                  toolchain: 1.64.0
+                  toolchain: 1.73.0
                   override: true
             - name: Install mariadb-mysql-kbs
               if: steps.cache-mariadb-mysql-kbs.outputs.cache-hit != 'true'

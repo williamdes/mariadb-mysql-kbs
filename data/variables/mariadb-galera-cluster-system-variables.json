@@ -29,7 +29,6 @@
       "id": "wsrep_causal_reads",
       "name": "wsrep_causal_reads",
       "scope": [
-        "global",
         "session"
       ],
       "type": "boolean"
@@ -659,7 +658,6 @@
         "to": 15
       },
       "scope": [
-        "global",
         "session"
       ],
       "type": "integer"
@@ -675,7 +673,6 @@
         "to": 2147483647
       },
       "scope": [
-        "global",
         "session"
       ],
       "type": "integer"
@@ -687,7 +684,6 @@
       "id": "wsrep_trx_fragment_unit",
       "name": "wsrep_trx_fragment_unit",
       "scope": [
-        "global",
         "session"
       ],
       "type": "enumeration",

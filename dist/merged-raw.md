@@ -2110,7 +2110,7 @@
 |Name|`wsrep_causal_reads`|
 |Command line|`--wsrep-causal-reads[={0|1}]`|
 |Type of variable|`boolean`|
-|Scope|`global`, `session`|
+|Scope|`session`|
 |Default value|`OFF`|
 |Dynamic|`true`|
 
@@ -2858,7 +2858,7 @@
 |Name|`wsrep_sync_wait`|
 |Command line|`--wsrep-sync-wait=#`|
 |Type of variable|`integer`|
-|Scope|`global`, `session`|
+|Scope|`session`|
 |Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `0` to: `15`|
@@ -2874,7 +2874,7 @@
 |Name|`wsrep_trx_fragment_size`|
 |Command line|`--wsrep-trx-fragment-size=#`|
 |Type of variable|`integer`|
-|Scope|`global`, `session`|
+|Scope|`session`|
 |Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `0` to: `2147483647`|
@@ -2890,7 +2890,7 @@
 |Name|`wsrep_trx_fragment_unit`|
 |Command line|`--wsrep-trx-fragment-unit=value`|
 |Type of variable|`enumeration`|
-|Scope|`global`, `session`|
+|Scope|`session`|
 |Default value|`bytes`|
 |Dynamic|`true`|
 |Valid value(s)|`bytes`, `rows`, `statements`|
@@ -9640,6 +9640,7 @@
 |----|-----|
 |Name|`binlog_row_metadata`|
 |Type of variable|`enumeration`|
+|Scope|`global`|
 |Default value|`MINIMAL`|
 |Dynamic|`true`|
 |Valid value(s)|`NO_LOG`, `MINIMAL`, `FULL`|
@@ -17402,9 +17403,9 @@
 |Command line|`log-slow-filter=value1[,value2...]`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`admin, filesort, filesort_on_disk, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk (<= MariaDB 10.3.0), admin, filesort, filesort_on_disk, filesort_priority_queue, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk (>= MariaDB 10.3.1)`|
+|Default value|`admin, filesort, filesort_on_disk, filesort_priority_queue, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk`|
 |Dynamic|`true`|
-|Valid value(s)|`admin`, `filesort`, `filesort_on_disk`, `filesort_priority_queue`, `full_join`, `full_scan`, `query_cache`, `query_cache_miss`, `tmp_table`, `tmp_table_on_disk`|
+|Valid value(s)|`admin`, `filesort`, `filesort_on_disk`, `filesort_priority_queue`, `full_join`, `full_scan`, `not_using_index`, `query_cache`, `query_cache_miss`, `tmp_table`, `tmp_table_on_disk`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -22012,112 +22013,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[spider_xa_register_mode](https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/#spider_xa_register_mode)|
-
-## sql_error_log
-|name|value|
-|----|-----|
-|Name|`sql_error_log`|
-|Command line|`--sql-error-log=value`|
-|Type of variable|`enumeration`|
-|Default value|`ON`|
-|Valid value(s)|`OFF`, `ON`, `FORCE`, `FORCE_PLUS_PERMANENT`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[sql_error_log](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log)|
-
-## sql_error_log_filename
-|name|value|
-|----|-----|
-|Name|`sql_error_log_filename`|
-|Command line|`--sql-error-log-filename=value`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Default value|`sql_errors.log`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[sql_error_log_filename](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_filename)|
-
-## sql_error_log_rate
-|name|value|
-|----|-----|
-|Name|`sql_error_log_rate`|
-|Command line|`--sql-error-log-rate=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[sql_error_log_rate](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_rate)|
-
-## sql_error_log_rotate
-|name|value|
-|----|-----|
-|Name|`sql_error_log_rotate`|
-|Command line|`--sql-error-log-rotate={0|1}`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[sql_error_log_rotate](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_rotate)|
-
-## sql_error_log_rotations
-|name|value|
-|----|-----|
-|Name|`sql_error_log_rotations`|
-|Command line|`--sql-error-log-rotations`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`9`|
-|Dynamic|`false`|
-|Range|from: `1` to: `999`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[sql_error_log_rotations](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_rotations)|
-
-## sql_error_log_size_limit
-|name|value|
-|----|-----|
-|Name|`sql_error_log_size_limit`|
-|Command line|`--sql-error-log-size-limit=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1000000`|
-|Dynamic|`false`|
-|Range|from: `100` to: `9223372036854775807`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[sql_error_log_size_limit](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_size_limit)|
-
-## sql_error_log_warnings
-|name|value|
-|----|-----|
-|Name|`sql_error_log_warnings`|
-|Command line|`--sql-error-log-warnings={0,1}`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[sql_error_log_warnings](https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/#sql_error_log_warnings)|
 
 ## Ssl_accept_renegotiates
 |name|value|

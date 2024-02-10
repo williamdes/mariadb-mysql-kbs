@@ -1409,7 +1409,7 @@
     },
     {
       "cli": "log-slow-filter=value1[,value2...]",
-      "default": "admin, filesort, filesort_on_disk, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk (<= MariaDB 10.3.0), admin, filesort, filesort_on_disk, filesort_priority_queue, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk (>= MariaDB 10.3.1)",
+      "default": "admin, filesort, filesort_on_disk, filesort_priority_queue, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk",
       "dynamic": true,
       "id": "log_slow_filter",
       "name": "log_slow_filter",
@@ -1425,6 +1425,7 @@
         "filesort_priority_queue",
         "full_join",
         "full_scan",
+        "not_using_index",
         "query_cache",
         "query_cache_miss",
         "tmp_table",

@@ -2334,7 +2334,6 @@
             "dynamic": true,
             "name": "wsrep_causal_reads",
             "scope": [
-                "global",
                 "session"
             ],
             "type": "boolean",
@@ -3209,7 +3208,6 @@
                 "to": 15
             },
             "scope": [
-                "global",
                 "session"
             ],
             "type": "integer",
@@ -3230,7 +3228,6 @@
                 "to": 2147483647
             },
             "scope": [
-                "global",
                 "session"
             ],
             "type": "integer",
@@ -3247,7 +3244,6 @@
             "dynamic": true,
             "name": "wsrep_trx_fragment_unit",
             "scope": [
-                "global",
                 "session"
             ],
             "type": "enumeration",
@@ -11413,6 +11409,9 @@
             "default": "MINIMAL",
             "dynamic": true,
             "name": "binlog_row_metadata",
+            "scope": [
+                "global"
+            ],
             "type": "enumeration",
             "validValues": [
                 "NO_LOG",
@@ -20761,7 +20760,7 @@
         },
         "log_slow_filter": {
             "cli": "log-slow-filter=value1[,value2...]",
-            "default": "admin, filesort, filesort_on_disk, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk (<= MariaDB 10.3.0), admin, filesort, filesort_on_disk, filesort_priority_queue, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk (>= MariaDB 10.3.1)",
+            "default": "admin, filesort, filesort_on_disk, filesort_priority_queue, full_join, full_scan, query_cache, query_cache_miss, tmp_table, tmp_table_on_disk",
             "dynamic": true,
             "name": "log_slow_filter",
             "scope": [
@@ -20776,6 +20775,7 @@
                 "filesort_priority_queue",
                 "full_join",
                 "full_scan",
+                "not_using_index",
                 "query_cache",
                 "query_cache_miss",
                 "tmp_table",
@@ -26766,128 +26766,6 @@
                 {
                     "anchor": "spider_xa_register_mode",
                     "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/"
-                }
-            ]
-        },
-        "sql_error_log": {
-            "cli": "--sql-error-log=value",
-            "default": "ON",
-            "name": "sql_error_log",
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "ON",
-                "FORCE",
-                "FORCE_PLUS_PERMANENT"
-            ],
-            "ids": [
-                {
-                    "anchor": "sql_error_log",
-                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
-                }
-            ]
-        },
-        "sql_error_log_filename": {
-            "cli": "--sql-error-log-filename=value",
-            "default": "sql_errors.log",
-            "dynamic": false,
-            "name": "sql_error_log_filename",
-            "scope": [
-                "global"
-            ],
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "sql_error_log_filename",
-                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
-                }
-            ]
-        },
-        "sql_error_log_rate": {
-            "cli": "--sql-error-log-rate=#",
-            "default": "1",
-            "dynamic": true,
-            "name": "sql_error_log_rate",
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sql_error_log_rate",
-                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
-                }
-            ]
-        },
-        "sql_error_log_rotate": {
-            "cli": "--sql-error-log-rotate={0|1}",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "sql_error_log_rotate",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sql_error_log_rotate",
-                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
-                }
-            ]
-        },
-        "sql_error_log_rotations": {
-            "cli": "--sql-error-log-rotations",
-            "default": "9",
-            "dynamic": false,
-            "name": "sql_error_log_rotations",
-            "range": {
-                "from": 1,
-                "to": 999
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sql_error_log_rotations",
-                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
-                }
-            ]
-        },
-        "sql_error_log_size_limit": {
-            "cli": "--sql-error-log-size-limit=#",
-            "default": "1000000",
-            "dynamic": false,
-            "name": "sql_error_log_size_limit",
-            "range": {
-                "from": 100,
-                "to": 9223372036854775807
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "sql_error_log_size_limit",
-                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
-                }
-            ]
-        },
-        "sql_error_log_warnings": {
-            "cli": "--sql-error-log-warnings={0,1}",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "sql_error_log_warnings",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sql_error_log_warnings",
-                    "url": "https://mariadb.com/kb/en/library/documentation/sql-error-log-plugin/"
                 }
             ]
         },

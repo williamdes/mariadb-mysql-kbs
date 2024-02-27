@@ -1,3 +1,4 @@
+pub mod aurora_mysql;
 pub mod cleaner;
 pub mod data;
 pub mod extract;
@@ -55,6 +56,7 @@ enum Commands {
 enum ExtractCommands {
     All,
     Mysql,
+    AuroraMysql,
     Mariadb,
 }
 
@@ -69,6 +71,9 @@ fn main() {
             ExtractCommands::Mysql => {
                 extract::extract(extract::ExtractionPreference::MySQL);
             }
+            ExtractCommands::AuroraMysql => {
+                extract::extract(extract::ExtractionPreference::AuroraMySQL);
+            }
             ExtractCommands::Mariadb => {
                 extract::extract(extract::ExtractionPreference::MariaDB);
             }
@@ -79,6 +84,9 @@ fn main() {
             }
             ExtractCommands::Mysql => {
                 find_missing_data::run(extract::ExtractionPreference::MySQL);
+            }
+            ExtractCommands::AuroraMysql => {
+                find_missing_data::run(extract::ExtractionPreference::AuroraMySQL);
             }
             ExtractCommands::Mariadb => {
                 find_missing_data::run(extract::ExtractionPreference::MariaDB);

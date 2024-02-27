@@ -13,6 +13,7 @@ pub fn run(only: ExtractionPreference) {
             check_mariadb();
         }
         ExtractionPreference::MySQL => {}
+        ExtractionPreference::AuroraMySQL => {}
         ExtractionPreference::MariaDB => {
             check_mariadb();
         }

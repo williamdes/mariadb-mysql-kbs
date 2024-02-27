@@ -1,5 +1,5 @@
 use crate::data::{DataFile, PageProcess, QueryErrorResponse, QueryResponse};
-use crate::{mariadb, mysql};
+use crate::{aurora_mysql, mariadb, mysql};
 use serde::Serialize;
 use std::time::Duration;
 use std::{env, fs};
@@ -8,17 +8,30 @@ use ureq::{Agent, AgentBuilder, Error};
 const UA_FROM: &str = "williamdes+mariadb-mysql-kbs@wdes.fr";
 const UA: &str = "mariadb-mysql-kbs-bot (+https://github.com/williamdes/mariadb-mysql-kbs; williamdes+mariadb-mysql-kbs@wdes.fr)";
 
+pub enum ExtractionType {
+    MariaDB,
+    MySQL,
+    AuroraMySQL,
+}
+
 pub enum ExtractionPreference {
     All,
     MariaDB,
     MySQL,
+    AuroraMySQL,
 }
 
 pub fn extract(only: ExtractionPreference) {
     println!("Run build...");
     let pages: Vec<PageProcess> = match only {
-        ExtractionPreference::All => [mysql::get_pages(), mariadb::get_pages()].concat(),
+        ExtractionPreference::All => [
+            mysql::get_pages(),
+            aurora_mysql::get_pages(),
+            mariadb::get_pages(),
+        ]
+        .concat(),
         ExtractionPreference::MySQL => mysql::get_pages(),
+        ExtractionPreference::AuroraMySQL => aurora_mysql::get_pages(),
         ExtractionPreference::MariaDB => mariadb::get_pages(),
     };
 
@@ -63,9 +76,12 @@ fn extract_page(page: PageProcess) {
             let final_url = response.url.clone();
             println!("URL : {} -> {}", &page.url, final_url);
             let data = DataFile {
-                data: match page.is_mariadb_page() {
-                    true => mariadb::extract_mariadb_from_text(response),
-                    false => mysql::extract_mysql_from_text(response),
+                data: match page.get_data_type() {
+                    ExtractionType::MariaDB => mariadb::extract_mariadb_from_text(response),
+                    ExtractionType::MySQL => mysql::extract_mysql_from_text(response),
+                    ExtractionType::AuroraMySQL => {
+                        aurora_mysql::extract_aurora_mysql_from_text(response)
+                    }
                 },
                 url: final_url.as_str(),
                 name: &page.name,

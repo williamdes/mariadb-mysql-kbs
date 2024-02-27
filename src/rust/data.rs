@@ -1,6 +1,7 @@
 use serde::Serialize;
 
 use crate::cleaner;
+use crate::extract::ExtractionType;
 
 pub struct Page<'a> {
     pub url: &'a str,
@@ -16,13 +17,29 @@ pub struct PageProcess<'a> {
 
 impl PageProcess<'_> {
     pub fn is_mariadb_page(&self) -> bool {
-        self.url.contains("mariadb")
+        self.url.contains("mariadb.com")
+    }
+    pub fn is_mysql_aurora_page(&self) -> bool {
+        self.url.contains("docs.aws.amazon.com")
     }
     pub fn get_data_prefix(&self) -> &str {
         if self.is_mariadb_page() {
             return "mariadb-";
         }
+        if self.is_mysql_aurora_page() {
+            return "mysql-aurora-";
+        }
         return "mysql-";
+    }
+
+    pub fn get_data_type(&self) -> ExtractionType {
+        if self.is_mariadb_page() {
+            return ExtractionType::MariaDB;
+        }
+        if self.is_mysql_aurora_page() {
+            return ExtractionType::AuroraMySQL;
+        }
+        return ExtractionType::MySQL;
     }
 }
 

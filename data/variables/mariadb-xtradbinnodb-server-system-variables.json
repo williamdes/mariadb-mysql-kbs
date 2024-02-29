@@ -3252,5 +3252,5 @@
     }
   ],
   "name": "xtradbinnodb-server-system-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-system-variables/"
+  "url": "https://mariadb.com/kb/en/innodb-system-variables/"
 }

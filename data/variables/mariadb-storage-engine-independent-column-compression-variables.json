@@ -83,5 +83,5 @@
     }
   ],
   "name": "storage-engine-independent-column-compression-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/storage-engine-independent-column-compression/"
+  "url": "https://mariadb.com/kb/en/storage-engine-independent-column-compression/"
 }

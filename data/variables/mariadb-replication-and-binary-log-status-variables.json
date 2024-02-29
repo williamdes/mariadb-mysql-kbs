@@ -333,5 +333,5 @@
     }
   ],
   "name": "replication-and-binary-log-status-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-status-variables/"
+  "url": "https://mariadb.com/kb/en/replication-and-binary-log-status-variables/"
 }

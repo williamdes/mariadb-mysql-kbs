@@ -147,5 +147,5 @@
     }
   ],
   "name": "semisynchronous-replication-system-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/semisynchronous-replication/"
+  "url": "https://mariadb.com/kb/en/semisynchronous-replication/"
 }

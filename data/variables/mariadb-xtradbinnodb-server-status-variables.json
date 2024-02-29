@@ -1307,5 +1307,5 @@
     }
   ],
   "name": "xtradbinnodb-server-status-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/xtradbinnodb-server-status-variables/"
+  "url": "https://mariadb.com/kb/en/innodb-status-variables/"
 }

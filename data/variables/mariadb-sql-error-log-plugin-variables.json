@@ -36,7 +36,7 @@
       "type": "integer"
     },
     {
-      "cli": "--sql-error-log-rotate={0|1}",
+      "cli": "--sql-error-log-rate[={0|1}]",
       "default": "OFF",
       "dynamic": true,
       "id": "sql_error_log_rotate",
@@ -47,9 +47,9 @@
       "type": "boolean"
     },
     {
-      "cli": "--sql-error-log-rotations",
+      "cli": "--sql-error-log-rotations=#",
       "default": "9",
-      "dynamic": false,
+      "dynamic": true,
       "id": "sql_error_log_rotations",
       "name": "sql_error_log_rotations",
       "range": {
@@ -82,6 +82,17 @@
       "dynamic": true,
       "id": "sql_error_log_warnings",
       "name": "sql_error_log_warnings",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--sql-error-log-with-db-and-thread-info=value",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "sql_error_log_with_db_and_thread_info",
+      "name": "sql_error_log_with_db_and_thread_info",
       "scope": [
         "global"
       ],

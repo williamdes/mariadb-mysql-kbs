@@ -283,5 +283,5 @@
     }
   ],
   "name": "galera-cluster-status-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/galera-cluster-status-variables/"
+  "url": "https://mariadb.com/kb/en/galera-cluster-status-variables/"
 }

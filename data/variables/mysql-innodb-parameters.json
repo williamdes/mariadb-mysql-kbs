@@ -1396,7 +1396,7 @@
       "name": "innodb_max_dirty_pages_pct",
       "range": {
         "from": 0,
-        "to": 99.99
+        "to": 99.999
       },
       "scope": [
         "global"
@@ -1411,7 +1411,7 @@
       "name": "innodb_max_dirty_pages_pct_lwm",
       "range": {
         "from": 0,
-        "to": 99.99
+        "to": 99.999
       },
       "scope": [
         "global"
@@ -1795,8 +1795,7 @@
       "id": "sysvar_innodb_redo_log_capacity",
       "name": "innodb_redo_log_capacity",
       "range": {
-        "from": 8388608,
-        "to": 137438953472
+        "from": 8388608
       },
       "scope": [
         "global"
@@ -1920,7 +1919,7 @@
       "id": "sysvar_innodb_spin_wait_pause_multiplier",
       "name": "innodb_spin_wait_pause_multiplier",
       "range": {
-        "from": 1,
+        "from": 0,
         "to": 100
       },
       "scope": [

@@ -110,5 +110,5 @@
     }
   ],
   "name": "cassandra-system-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/cassandra/cassandra-system-variables/"
+  "url": "https://mariadb.com/kb/en/cassandra-system-variables/"
 }

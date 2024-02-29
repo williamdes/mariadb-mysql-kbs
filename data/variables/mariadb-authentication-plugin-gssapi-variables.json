@@ -52,5 +52,5 @@
     }
   ],
   "name": "authentication-plugin-gssapi-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-gssapi/"
+  "url": "https://mariadb.com/kb/en/authentication-plugin-gssapi/"
 }

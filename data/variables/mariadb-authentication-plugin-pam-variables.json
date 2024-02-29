@@ -48,5 +48,5 @@
     }
   ],
   "name": "authentication-plugin-pam-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/authentication-plugin-pam/"
+  "url": "https://mariadb.com/kb/en/authentication-plugin-pam/"
 }

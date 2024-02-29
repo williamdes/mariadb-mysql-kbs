@@ -52,13 +52,22 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                php-version: ["7.2", "7.3", "7.4", "8.0", "8.1", "8.2", "8.3"]
+                php-version: ["7.3", "7.4", "8.0", "8.1", "8.2", "8.3"]
                 os: [ubuntu-latest]
                 experimental: [false]
                 composer-options: [""]
+                phpunit-options: ["--coverage-clover=build/logs/clover.xml --coverage-filter=src"]
                 include:
                     - {
+                          php-version: "7.2",
+                          phpunit-options: "",
+                          composer-options: "",
+                          experimental: false,
+                          os: ubuntu-latest,
+                      }
+                    - {
                           php-version: "nightly",
+                          phpunit-options: "--coverage-clover=build/logs/clover.xml --coverage-filter=src",
                           composer-options: "--ignore-platform-req=php",
                           experimental: true,
                           os: ubuntu-latest,
@@ -78,7 +87,7 @@ jobs:
             - name: Install dependencies
               run: composer install --no-interaction ${{ matrix.composer-options }}
             - name: Run php tests
-              run: composer run test -- --coverage-clover=build/logs/clover.xml --coverage-filter=src
+              run: composer run test -- ${{ matrix.phpunit-options }}
             - name: Send coverage
               uses: codecov/codecov-action@v3
               with:

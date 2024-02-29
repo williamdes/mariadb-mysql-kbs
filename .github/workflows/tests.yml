@@ -68,7 +68,7 @@ jobs:
               uses: shivammathur/setup-php@v2
               with:
                   php-version: ${{ matrix.php-version }}
-                  coverage: xdebug
+                  coverage: pcov
             - name: Cache module
               uses: actions/cache@v3
               with:
@@ -77,10 +77,11 @@ jobs:
             - name: Install dependencies
               run: composer install --no-interaction ${{ matrix.composer-options }}
             - name: Run php tests
-              run: composer run test
+              run: composer run test -- --coverage-clover=build/logs/clover.xml
             - name: Send coverage
               uses: codecov/codecov-action@v3
               with:
+                  files: ./build/logs/clover.xml
                   flags: php
                   fail_ci_if_error: true # optional (default = false)
                   name: phpunit-${{ matrix.php-version }}-${{ matrix.os }}

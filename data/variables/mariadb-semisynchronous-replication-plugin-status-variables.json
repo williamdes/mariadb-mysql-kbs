@@ -77,5 +77,5 @@
     }
   ],
   "name": "semisynchronous-replication-plugin-status-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/semisynchronous-replication-plugin-status-variables/"
+  "url": "https://mariadb.com/kb/en/semisynchronous-replication-plugin-status-variables/"
 }

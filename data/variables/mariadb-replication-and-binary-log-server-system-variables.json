@@ -191,6 +191,47 @@
       ]
     },
     {
+      "cli": "--binlog-gtid-index{=0|1}",
+      "default": "ON",
+      "dynamic": true,
+      "id": "binlog_gtid_index",
+      "name": "binlog_gtid_index",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--binlog-gtid-index-page-size=#",
+      "default": "4096",
+      "dynamic": true,
+      "id": "binlog_gtid_index_page_size",
+      "name": "binlog_gtid_index_page_size",
+      "range": {
+        "from": 64,
+        "to": 16777216
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--binlog-gtid-index-span-min=#",
+      "default": "65536",
+      "dynamic": true,
+      "id": "binlog_gtid_index_span_min",
+      "name": "binlog_gtid_index_span_min",
+      "range": {
+        "from": 1,
+        "to": 1073741824
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--binlog-ignore-db=name",
       "default": "NULL",
       "dynamic": false,
@@ -256,8 +297,7 @@
       "id": "binlog_row_metadata",
       "name": "binlog_row_metadata",
       "scope": [
-        "global",
-        "session"
+        "global"
       ],
       "type": "enumeration",
       "validValues": [
@@ -1135,5 +1175,5 @@
     }
   ],
   "name": "replication-and-binary-log-server-system-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/replication-and-binary-log-server-system-variables/"
+  "url": "https://mariadb.com/kb/en/replication-and-binary-log-system-variables/"
 }

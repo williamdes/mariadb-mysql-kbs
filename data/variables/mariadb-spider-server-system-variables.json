@@ -1603,5 +1603,5 @@
     }
   ],
   "name": "spider-server-system-variables",
-  "url": "https://mariadb.com/kb/en/library/documentation/columns-storage-engines-and-plugins/storage-engines/spider/spider-server-system-variables/"
+  "url": "https://mariadb.com/kb/en/spider-system-variables/"
 }

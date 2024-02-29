@@ -50,6 +50,7 @@ jobs:
         runs-on: ${{ matrix.os }}
         continue-on-error: ${{ matrix.experimental }}
         strategy:
+            fail-fast: false
             matrix:
                 php-version: ["7.2", "7.3", "7.4", "8.0", "8.1", "8.2", "8.3"]
                 os: [ubuntu-latest]
@@ -77,7 +78,7 @@ jobs:
             - name: Install dependencies
               run: composer install --no-interaction ${{ matrix.composer-options }}
             - name: Run php tests
-              run: composer run test -- --coverage-clover=build/logs/clover.xml
+              run: composer run test -- --coverage-clover=build/logs/clover.xml --coverage-filter=src
             - name: Send coverage
               uses: codecov/codecov-action@v3
               with:

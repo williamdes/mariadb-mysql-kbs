@@ -23,8 +23,8 @@ moveBuildToTempFolder() {
 cleanGhPages() {
     git checkout gh-pages
     git ls-files ./ | xargs -r -n 1 rm -v
-    find ./ -print
-    rm -rfdv ./*
+    # Delete remaining files
+    find ./ -not -path '*/.git/*' -not -path '*/.github/*' -print -delete
 }
 
 moveBuildFilesToCurrentDir() {

@@ -12964,6 +12964,32 @@
                 }
             ]
         },
+        "Binlog_gtid_index_hit": {
+            "name": "Binlog_gtid_index_hit",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "binlog_gtid_index_hit",
+                    "url": "https://mariadb.com/kb/en/replication-and-binary-log-status-variables/"
+                }
+            ]
+        },
+        "Binlog_gtid_index_miss": {
+            "name": "Binlog_gtid_index_miss",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "binlog_gtid_index_miss",
+                    "url": "https://mariadb.com/kb/en/replication-and-binary-log-status-variables/"
+                }
+            ]
+        },
         "Binlog_snapshot_file": {
             "name": "Binlog_snapshot_file",
             "scope": [
@@ -13588,8 +13614,14 @@
             "type": "enumeration",
             "validValues": [
                 "Auto",
+                "Original",
                 "Amazon",
-                "Original"
+                "Legacy",
+                "Path",
+                "Domain",
+                "Auto",
+                "Original",
+                "Amazon"
             ],
             "ids": [
                 {
@@ -38238,6 +38270,15 @@
             "ids": [
                 {
                     "anchor": "Aurora_fwd_writer_select_stmt_duration",
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.Parameters.Inapplicable"
+                }
+            ]
+        },
+        "Aurora_lockmgr_buffer_pool_memory_used": {
+            "name": "Aurora_lockmgr_buffer_pool_memory_used",
+            "ids": [
+                {
+                    "anchor": "Aurora_lockmgr_buffer_pool_memory_used",
                     "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.Parameters.Inapplicable"
                 }
             ]

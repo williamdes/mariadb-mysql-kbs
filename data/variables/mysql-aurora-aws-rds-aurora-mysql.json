@@ -151,6 +151,10 @@
       "type": "integer"
     },
     {
+      "id": "Aurora_lockmgr_buffer_pool_memory_used",
+      "name": "Aurora_lockmgr_buffer_pool_memory_used"
+    },
+    {
       "id": "Aurora_lockmgr_memory_used",
       "name": "Aurora_lockmgr_memory_used",
       "type": "byte"

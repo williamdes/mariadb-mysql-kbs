@@ -148,8 +148,14 @@
       "type": "enumeration",
       "validValues": [
         "Auto",
+        "Original",
         "Amazon",
-        "Original"
+        "Legacy",
+        "Path",
+        "Domain",
+        "Auto",
+        "Original",
+        "Amazon"
       ]
     },
     {

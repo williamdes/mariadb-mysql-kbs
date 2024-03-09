@@ -10851,6 +10851,30 @@
 |------|----|
 |mariadb.com|[binlog_group_commits](https://mariadb.com/kb/en/replication-and-binary-log-status-variables/#binlog_group_commits)|
 
+## Binlog_gtid_index_hit
+|name|value|
+|----|-----|
+|Name|`Binlog_gtid_index_hit`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_gtid_index_hit](https://mariadb.com/kb/en/replication-and-binary-log-status-variables/#binlog_gtid_index_hit)|
+
+## Binlog_gtid_index_miss
+|name|value|
+|----|-----|
+|Name|`Binlog_gtid_index_miss`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_gtid_index_miss](https://mariadb.com/kb/en/replication-and-binary-log-status-variables/#binlog_gtid_index_miss)|
+
 ## Binlog_snapshot_file
 |name|value|
 |----|-----|
@@ -11399,7 +11423,7 @@
 |Scope|`global`|
 |Default value|`Auto`|
 |Dynamic|`true`|
-|Valid value(s)|`Auto`, `Amazon`, `Original`|
+|Valid value(s)|`Auto`, `Original`, `Amazon`, `Legacy`, `Path`, `Domain`, `Auto`, `Original`, `Amazon`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -32137,6 +32161,16 @@
 |source|anchor name|
 |------|----|
 |docs.aws.amazon.com|[Aurora_fwd_writer_select_stmt_duration](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.Parameters.Inapplicable#Aurora_fwd_writer_select_stmt_duration)|
+
+## Aurora_lockmgr_buffer_pool_memory_used
+|name|value|
+|----|-----|
+|Name|`Aurora_lockmgr_buffer_pool_memory_used`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[Aurora_lockmgr_buffer_pool_memory_used](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.Parameters.Inapplicable#Aurora_lockmgr_buffer_pool_memory_used)|
 
 ## Aurora_lockmgr_memory_used
 |name|value|

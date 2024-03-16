@@ -93,7 +93,7 @@
     },
     {
       "cli": "--tls-version=value",
-      "default": "TLSv1.1,TLSv1.2,TLSv1.3",
+      "default": "TLSv1.1,TLSv1.2,TLSv1.3 (<= MariaDB 10.4.31, MariaDB 10.5.22, MariaDB 10.6.15, MariaDB 10.11.5, MariaDB 11.0.3), TLSv1.2,TLSv1.3 (>= MariaDB 10.4.32, MariaDB 10.5.23, MariaDB 10.6.16, MariaDB 10.11.6, MariaDB 11.0.4 and all later versions)",
       "dynamic": false,
       "id": "tls_version",
       "name": "tls_version",

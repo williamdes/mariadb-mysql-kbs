@@ -13,9 +13,11 @@
                     "type": "object",
                     "properties": {
                         "t": {
+                            "description": "The variable type",
                             "type": "integer"
                         },
                         "d": {
+                            "description": "The variable is dynamic or not",
                             "type": "boolean"
                         },
                         "a": {
@@ -26,12 +28,15 @@
                                 "required": ["u", "t"],
                                 "properties": {
                                     "a": {
+                                        "description": "The link anchor",
                                         "type": "string"
                                     },
                                     "u": {
+                                        "description": "The URL id in the urls attribute",
                                         "type": "integer"
                                     },
                                     "t": {
+                                        "description": "The link type",
                                         "type": "integer",
                                         "enum": [1, 2, 3]
                                     }
@@ -49,6 +54,7 @@
             "$ref": "doc-version.json"
         },
         "urls": {
+            "description": "List of documentation URLs",
             "type": "array",
             "additionalItems": false,
             "items": {
@@ -56,10 +62,10 @@
             }
         },
         "types": {
-            "$ref": "linked-key-var.json"
+            "$ref": "url-types.json"
         },
         "varTypes": {
-            "$ref": "linked-key-var.json"
+            "$ref": "data-types.json"
         }
     },
     "additionalProperties": false

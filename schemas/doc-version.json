@@ -5,7 +5,11 @@
     "type": "number",
     "title": "The Version Schema ",
     "description": "Version of file",
-    "default": 1,
+    "default": 2,
+    "enum": [
+        1,
+        2
+    ],
     "examples": [
         1,
         1.1,

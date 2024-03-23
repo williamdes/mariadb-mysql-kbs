@@ -1,0 +1,26 @@
+{
+    "definitions": {},
+    "$id": "url-types.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "1",
+        "2",
+        "3"
+    ],
+    "properties": {
+        "1": {
+            "type": "string",
+            "enum": ["MYSQL"]
+        },
+        "2": {
+            "type": "string",
+            "enum": ["MARIADB"]
+        },
+        "3": {
+            "type": "string",
+            "enum": ["AURORA-MYSQL"]
+        }
+    }
+}

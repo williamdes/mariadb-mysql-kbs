@@ -1,0 +1,56 @@
+{
+    "definitions": {},
+    "$id": "data-types.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+    ],
+    "properties": {
+        "1": {
+            "type": "string",
+            "enum": ["string"]
+        },
+        "2": {
+            "type": "string",
+            "enum": ["boolean"]
+        },
+        "3": {
+            "type": "string",
+            "enum": ["integer"]
+        },
+        "4": {
+            "type": "string",
+            "enum": ["numeric"]
+        },
+        "5": {
+            "type": "string",
+            "enum": ["enumeration"]
+        },
+        "6": {
+            "type": "string",
+            "enum": ["set"]
+        },
+        "7": {
+            "type": "string",
+            "enum": ["directory name"]
+        },
+        "8": {
+            "type": "string",
+            "enum": ["file name"]
+        },
+        "9": {
+            "type": "string",
+            "enum": ["byte"]
+        }
+    }
+}

@@ -35,7 +35,9 @@
                             "type": "array",
                             "additionalItems": false,
                             "items": {
-                                "$ref": "linked-key-var-url.json"
+                                "type": "string",
+                                "pattern": "^[0-9]+#[A-Za-z0-9]+",
+                                "minLength": 5
                             }
                         },
                         "cli": {

@@ -105,10 +105,10 @@
             }
         },
         "types": {
-            "$ref": "linked-key-var.json"
+            "$ref": "url-types.json"
         },
         "varTypes": {
-            "$ref": "linked-key-var.json"
+            "$ref": "data-types.json"
         }
     },
     "additionalProperties": false

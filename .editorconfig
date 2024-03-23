@@ -9,3 +9,6 @@ insert_final_newline = true
 
 [data/**/*.json]
 indent_size = 2
+
+[test/data/*.json]
+insert_final_newline = false

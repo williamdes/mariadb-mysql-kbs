@@ -306,7 +306,7 @@ fn filter_link(elem: &Node) -> bool {
         Some(link) => {
             let element_attr = link.attr("href");
             match element_attr {
-                Some(attr) => attr.contains("#sysvar_"),
+                Some(attr) => attr.contains("#sysvar_") || attr.contains("#statvar_"),
                 None => false,
             }
         }
@@ -674,19 +674,38 @@ mod tests {
             url: "https://example.com".to_string(),
         });
         assert_eq!(
-            vec![KbParsedEntry {
-                has_description: false,
-                is_removed: false,
-                cli: None,
-                default: Some("TRUE (Version: 5.1.51-ndb-7.2.0)".to_string()),
-                dynamic: Some(true),
-                id: Some("sysvar_ndb_join_pushdown".to_string()),
-                name: Some("ndb_join_pushdown".to_string()),
-                scope: Some(vec!["global".to_string(), "session".to_string()]),
-                r#type: None,
-                valid_values: None,
-                range: None,
-            },],
+            vec![
+                KbParsedEntry {
+                    has_description: false,
+                    is_removed: false,
+                    cli: None,
+                    default: Some("TRUE (Version: 5.1.51-ndb-7.2.0)".to_string()),
+                    dynamic: Some(true),
+                    id: Some("sysvar_ndb_join_pushdown".to_string()),
+                    name: Some("ndb_join_pushdown".to_string()),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: None,
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                        cli: None,
+                        default: None,
+                        dynamic: None,
+                        id: Some(
+                            "statvar_Ndb_pushed_queries_defined".to_string(),
+                        ),
+                        name: Some(
+                            "Ndb_pushed_queries_defined".to_string(),
+                        ),
+                        range: None,
+                        scope: None,
+                        r#type: None,
+                        valid_values: None,
+                        has_description: false,
+                        is_removed: false,
+                },
+            ],
             entries
         );
     }

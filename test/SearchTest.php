@@ -26,6 +26,9 @@ class SearchTest extends TestCase
         $variable4 = $sd->addVariable('variable-4', null, false);
         $variable4->addDocumentation('https://mariadb.com/testurl/for/variable/4', 'myanchor');
         $variable4->addDocumentation('https://dev.mysql.com/testurl_for-variable/4', 'my_anchor');
+        $variable5 = $sd->addVariable('variable-5', null, false);
+        $variable5->addDocumentation('https://docs.aws.amazon.com/testurl/for/variable/5#myanchor', null);
+
         Search::loadTestData($sd);
     }
 
@@ -49,6 +52,24 @@ class SearchTest extends TestCase
     {
         $found = Search::getByName('variable-4', Search::MYSQL);
         $this->assertEquals('https://dev.mysql.com/testurl_for-variable/4#my_anchor', $found);
+    }
+
+    /**
+     * test get by name for Aurora MySQL
+     */
+    public function testGetByNameMYSQLAurora(): void
+    {
+        $found = Search::getByName('variable-5', Search::AURORA_MYSQL);
+        $this->assertEquals('https://docs.aws.amazon.com/testurl/for/variable/5#myanchor', $found);
+    }
+
+    /**
+     * test get by name for Aurora MySQL but the engine is MYSQL
+     */
+    public function testGetByNameMYSQLAuroraEngineMySQL(): void
+    {
+        $found = Search::getByName('variable-5', Search::MYSQL);
+        $this->assertEquals('https://docs.aws.amazon.com/testurl/for/variable/5#myanchor', $found);
     }
 
     /**
@@ -151,7 +172,7 @@ class SearchTest extends TestCase
         $static = Search::getVariablesWithDynamic(false);
         $this->assertEquals($static, Search::getStaticVariables());
         $this->assertEquals(2, count($dynamic));
-        $this->assertEquals(1, count($static));
+        $this->assertEquals(2, count($static));
         $common = \array_intersect($dynamic, $static);
         $this->assertEquals(0, count($common));// Impossible to be dynamic and not
     }

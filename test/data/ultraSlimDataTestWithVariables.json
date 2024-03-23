@@ -28,10 +28,11 @@
             ]
         }
     },
-    "version": 1,
+    "version": 2,
     "types": {
         "1": "MYSQL",
-        "2": "MARIADB"
+        "2": "MARIADB",
+        "3": "AURORA-MYSQL"
     },
     "varTypes": {
         "1": "string",

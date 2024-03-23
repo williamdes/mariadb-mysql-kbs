@@ -31,7 +31,7 @@ class SlimDataTest extends TestCase
      */
     public function testToJsonEmpty(SlimData $slimData): void
     {
-        $this->assertEquals('{"version":1}', json_encode($slimData));
+        $this->assertEquals('{"version":2}', json_encode($slimData));
     }
 
     /**

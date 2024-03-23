@@ -9,7 +9,7 @@ use crate::data::{KbParsedEntry, PageProcess, QueryResponse};
 pub fn get_pages() -> Vec<PageProcess<'static>> {
     vec![
         PageProcess {
-            url: "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.Parameters.Inapplicable".to_string(),
+            url: "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars".to_string(),
             name: "aws-rds-aurora-mysql".to_string(),
             data_type: "variables",
         }

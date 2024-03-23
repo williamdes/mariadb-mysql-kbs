@@ -14992,6 +14992,18 @@
 |------|----|
 |mariadb.com|[max_statement_time_exceeded](https://mariadb.com/kb/en/server-status-variables/#max_statement_time_exceeded)|
 
+## Max_tmp_space_used
+|name|value|
+|----|-----|
+|Name|`Max_tmp_space_used`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[max_tmp_space_used](https://mariadb.com/kb/en/server-status-variables/#max_tmp_space_used)|
+
 ## Max_used_connections
 |name|value|
 |----|-----|
@@ -15670,6 +15682,18 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[threads_running](https://mariadb.com/kb/en/server-status-variables/#threads_running)|
+
+## Tmp_space_used
+|name|value|
+|----|-----|
+|Name|`Tmp_space_used`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[tmp_space_used](https://mariadb.com/kb/en/server-status-variables/#tmp_space_used)|
 
 ## Update_scan
 |name|value|
@@ -20773,6 +20797,20 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[spider_direct_order_limit](https://mariadb.com/kb/en/spider-system-variables/#spider_direct_order_limit)|
+
+## spider_disable_group_by_handler
+|name|value|
+|----|-----|
+|Name|`spider_disable_group_by_handler`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[spider_disable_group_by_handler](https://mariadb.com/kb/en/spider-system-variables/#spider_disable_group_by_handler)|
 
 ## spider_dry_access
 |name|value|
@@ -29458,7 +29496,7 @@
 |Scope|`global`|
 |Default value|`2`|
 |Dynamic|`false`|
-|Range|from: `1` to: `32`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|

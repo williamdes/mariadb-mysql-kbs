@@ -413,6 +413,17 @@
     },
     {
       "default": "OFF",
+      "dynamic": true,
+      "id": "spider_disable_group_by_handler",
+      "name": "spider_disable_group_by_handler",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "boolean"
+    },
+    {
+      "default": "OFF",
       "dynamic": false,
       "id": "spider_dry_access",
       "name": "spider_dry_access",

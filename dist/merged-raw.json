@@ -17710,6 +17710,20 @@
                 }
             ]
         },
+        "Max_tmp_space_used": {
+            "name": "Max_tmp_space_used",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "max_tmp_space_used",
+                    "url": "https://mariadb.com/kb/en/server-status-variables/"
+                }
+            ]
+        },
         "Max_used_connections": {
             "name": "Max_used_connections",
             "scope": [
@@ -18460,6 +18474,20 @@
             "ids": [
                 {
                     "anchor": "threads_running",
+                    "url": "https://mariadb.com/kb/en/server-status-variables/"
+                }
+            ]
+        },
+        "Tmp_space_used": {
+            "name": "Tmp_space_used",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "tmp_space_used",
                     "url": "https://mariadb.com/kb/en/server-status-variables/"
                 }
             ]
@@ -25135,6 +25163,22 @@
             "ids": [
                 {
                     "anchor": "spider_direct_order_limit",
+                    "url": "https://mariadb.com/kb/en/spider-system-variables/"
+                }
+            ]
+        },
+        "spider_disable_group_by_handler": {
+            "default": "OFF",
+            "dynamic": true,
+            "name": "spider_disable_group_by_handler",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "spider_disable_group_by_handler",
                     "url": "https://mariadb.com/kb/en/spider-system-variables/"
                 }
             ]
@@ -34992,8 +35036,7 @@
             "dynamic": false,
             "name": "innodb_ft_sort_pll_degree",
             "range": {
-                "from": 1,
-                "to": 32
+                "from": 1
             },
             "scope": [
                 "global"

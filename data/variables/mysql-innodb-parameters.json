@@ -1100,7 +1100,7 @@
       "name": "innodb_ft_sort_pll_degree",
       "range": {
         "from": 1,
-        "to": 32
+        "to": 16
       },
       "scope": [
         "global"

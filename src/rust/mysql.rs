@@ -393,6 +393,16 @@ pub fn get_pages() -> Vec<PageProcess<'static>> {
             data_type: "variables",
         },
         PageProcess {
+            url: KB_URL.to_owned() + "server-status-variables.html",
+            name: "server-status-variables".to_string(),
+            data_type: "variables",
+        },
+        PageProcess {
+            url: KB_URL57.to_owned() + "server-status-variables.html",
+            name: "server-status-variables_5.7".to_string(),
+            data_type: "variables",
+        },
+        PageProcess {
             url: KB_URL.to_owned() + "innodb-parameters.html",
             name: "innodb-parameters".to_string(),
             data_type: "variables",

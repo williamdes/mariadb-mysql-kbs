@@ -8,6 +8,7 @@ use serde_repr::Deserialize_repr;
 pub enum DataType {
     MySQL = 1,
     MariaDB = 2,
+    AuroraMySQL = 3,
 }
 
 #[derive(Deserialize)]
@@ -40,6 +41,7 @@ pub enum SearchType {
     Any = -1,
     MySQL = 1,
     MariaDB = 2,
+    AuroraMySQL = 3,
 }
 
 #[derive(Debug)]

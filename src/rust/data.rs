@@ -100,7 +100,8 @@ pub struct KbParsedEntry {
     pub default: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub dynamic: Option<bool>,
-    pub id: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub id: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
     #[serde(skip_serializing_if = "skip_serialize_range")]

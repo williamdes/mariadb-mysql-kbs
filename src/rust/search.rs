@@ -57,13 +57,13 @@ mod tests {
                 .as_str()
         );
         assert_eq!(
-            "https://mariadb.com/kb/en/library/documentation/gtid/#server_id",
+            "https://mariadb.com/kb/en/gtid/#server_id",
             data.get_by_name("server_id", SearchType::MariaDB)
                 .unwrap()
                 .as_str()
         );
         assert_eq!(
-            "https://mariadb.com/kb/en/library/documentation/gtid/#server_id",
+            "https://mariadb.com/kb/en/gtid/#server_id",
             data.get_by_name("server_id", SearchType::Any)
                 .unwrap()
                 .as_str()

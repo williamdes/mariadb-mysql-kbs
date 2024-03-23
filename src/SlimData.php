@@ -21,7 +21,7 @@ class SlimData extends stdClass implements JsonSerializable
      *
      * @var float
      */
-    private $version = 1;
+    private $version = 2;
 
     /**
      * Urls
@@ -35,7 +35,7 @@ class SlimData extends stdClass implements JsonSerializable
      *
      * @var array<string,int>
      */
-    private $types = ['MYSQL' => 1, 'MARIADB' => 2];
+    private $types = ['MYSQL' => 1, 'MARIADB' => 2, 'AURORA-MYSQL' => 3];
 
     /**
      * Types of variables

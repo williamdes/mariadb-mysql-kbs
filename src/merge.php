@@ -419,7 +419,7 @@ $fileOut->version = 1.0;
 file_put_contents(__DIR__ . '/../dist/merged-slim.json', json_encode($fileOut, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . PHP_EOL);
 
 $fileOut->vars     = json_decode(json_encode($variables));
-$fileOut->types    = [ 'MYSQL' => 1, 'MARIADB' => 2 ];
+$fileOut->types    = [ 'MYSQL' => 1, 'MARIADB' => 2 , 'AURORA-MYSQL' => 3 ];
 $fileOut->varTypes = [
     'string' => 1,
     'boolean' => 2,
@@ -453,6 +453,8 @@ foreach ($fileOut->vars as $id => &$doc) {
             $kbEntryMin->t = $fileOut->types['MYSQL'];
         } elseif (preg_match('/mariadb\.com/', $kbEntry->url)) {
             $kbEntryMin->t = $fileOut->types['MARIADB'];
+        } elseif (preg_match('/docs\.aws\.amazon\.com/', $kbEntry->url)) {
+            $kbEntryMin->t = $fileOut->types['AURORA-MYSQL'];
         }
         $data->a[] = $kbEntryMin;
     }
@@ -460,7 +462,7 @@ foreach ($fileOut->vars as $id => &$doc) {
 }
 $fileOut->types    = array_flip($fileOut->types);
 $fileOut->varTypes = array_flip($fileOut->varTypes);
-$fileOut->version  = 1.0;
+$fileOut->version  = 2.0;
 file_put_contents(__DIR__ . '/../dist/merged-ultraslim.json', json_encode($fileOut, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . PHP_EOL);
 
 $content = '<?php' . PHP_EOL . '$data = ' . json_encode($fileOut, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . ';' . PHP_EOL;

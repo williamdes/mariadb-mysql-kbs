@@ -3,12 +3,14 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "definitions": {},
+    "required": ["vars", "version", "urls"],
     "properties": {
         "vars": {
             "type": "object",
             "patternProperties": {
                 "^([a-zA-Z_]+)": {
                     "type": "object",
+                    "required": ["name", "ids"],
                     "properties": {
                         "name": {
                             "type": "string",
@@ -50,6 +52,7 @@
                         "range": {
                             "type": "object",
                             "additionalProperties": false,
+                            "required": [],
                             "properties": {
                                 "from": {
                                     "type": "number"
@@ -70,6 +73,7 @@
                         "validValues": {
                             "type": "array",
                             "additionalItems": false,
+                            "minItems": 1,
                             "items": {
                                 "type": [ "string", "number"]
                             }
@@ -89,12 +93,6 @@
             "items": {
                 "$ref": "doc-url.json"
             }
-        },
-        "types": {
-            "$ref": "linked-key-var.json"
-        },
-        "varTypes": {
-            "$ref": "linked-key-var.json"
         }
     },
     "additionalProperties": false

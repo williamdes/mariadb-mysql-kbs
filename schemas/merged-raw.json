@@ -9,6 +9,7 @@
             "patternProperties": {
                 "^([a-zA-Z_]+)": {
                     "type": "object",
+                    "required": ["name", "ids"],
                     "properties": {
                         "name": {
                             "type": "string",
@@ -35,6 +36,7 @@
                             "items": {
                                 "type": "object",
                                 "additionalProperties": false,
+                                "required": ["anchor", "url"],
                                 "properties": {
                                     "anchor": {
                                         "type": "string",
@@ -61,6 +63,7 @@
                         "range": {
                             "type": "object",
                             "additionalProperties": false,
+                            "required": [],
                             "properties": {
                                 "from": {
                                     "type": "number"

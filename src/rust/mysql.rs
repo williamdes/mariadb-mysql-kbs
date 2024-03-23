@@ -3,6 +3,7 @@ use crate::data::{KbParsedEntry, PageProcess, QueryResponse};
 use select::document::Document;
 use select::node::Node;
 use select::predicate::{Class, Name};
+use std::collections::HashSet;
 
 fn find_table_archor(node: Node) -> String {
     let mut collected_p_nodes: Vec<Node> = vec![];
@@ -36,19 +37,23 @@ fn find_table_archor(node: Node) -> String {
 
     match anchor_name_node {
         Some(node) => node.attr("name").unwrap().to_string(),
-        None => node
-            .parent()
-            .expect("Has a parent")
-            .find(Class("link"))
-            .next()
-            .unwrap()
-            .attr("href")
-            .expect("Missing href attr")
-            .split("#")
-            .last()
-            .expect("Anchor to have #")
-            .to_string(),
+        None => link_to_archor(
+            node.parent()
+                .expect("Has a parent")
+                .find(Class("link"))
+                .next()
+                .unwrap(),
+        ),
     }
+}
+
+fn link_to_archor(node: Node) -> String {
+    node.attr("href")
+        .expect("Missing href attr")
+        .split("#")
+        .last()
+        .expect("Anchor to have #")
+        .to_string()
 }
 
 fn process_row_to_entry(
@@ -202,6 +207,31 @@ fn process_row_to_entry(
     entry
 }
 
+fn process_link(li_node: Node) -> KbParsedEntry {
+    KbParsedEntry {
+        has_description: false,
+        is_removed: false,
+        cli: None,
+        default: None,
+        dynamic: None,
+        id: match li_node.find(Class("link")).next() {
+            Some(node) => Some(link_to_archor(node)),
+            None => None,
+        },
+        name: match li_node.find(Class("link")).next() {
+            Some(node) => Some(match node.text().split("=").next() {
+                Some(data) => data.to_string(),
+                None => node.text(),
+            }),
+            None => None,
+        },
+        scope: None,
+        r#type: None,
+        valid_values: None,
+        range: None,
+    }
+}
+
 fn process_table(table_node: Node) -> KbParsedEntry {
     let mut entry = KbParsedEntry {
         has_description: false,
@@ -265,6 +295,25 @@ fn process_table(table_node: Node) -> KbParsedEntry {
     entry
 }
 
+fn filter_link(elem: &Node) -> bool {
+    if elem.find(Class("table")).count() > 0 {
+        return false;
+    }
+    if elem.find(Class("informaltable")).count() > 0 {
+        return false;
+    }
+    match elem.find(Class("link")).next() {
+        Some(link) => {
+            let element_attr = link.attr("href");
+            match element_attr {
+                Some(attr) => attr.contains("#sysvar_"),
+                None => false,
+            }
+        }
+        None => false,
+    }
+}
+
 fn filter_table(elem: &Node) -> bool {
     let element_attr = elem.attr("class");
     match element_attr {
@@ -285,15 +334,35 @@ fn filter_table(elem: &Node) -> bool {
     }
 }
 
+fn dedup_entries(v: &mut Vec<KbParsedEntry>) {
+    let mut set: HashSet<String> = HashSet::new();
+
+    // Will retain when it returns true
+    // HashSet.insert returns false when the value already exists
+    v.retain(|e| match &e.id {
+        Some(data) => set.insert(data.to_string()),
+        None => false,
+    });
+}
+
 pub fn extract_mysql_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
     let document = Document::from(qr.body.as_str());
 
-    document
+    let mut final_data = document
         .find(Class("table"))
         .chain(document.find(Class("informaltable")))
         .filter(|elem| filter_table(elem))
         .map(|table_node| process_table(table_node))
-        .collect()
+        .chain(
+            &mut document
+                .find(Class("listitem"))
+                .filter(|li_node| filter_link(li_node))
+                .map(|li_node| process_link(li_node)),
+        )
+        .collect::<Vec<KbParsedEntry>>();
+
+    dedup_entries(&mut final_data);
+    final_data
 }
 
 /*
@@ -1122,6 +1191,103 @@ mod tests {
                 valid_values: None,
                 range: None,
             }],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_9() {
+        let entries = extract_mysql_from_text(QueryResponse {
+            body: get_test_data("mysql_test_case_9.html"),
+            url: "https://example.com".to_string(),
+        });
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    has_description: false,
+                    is_removed: false,
+                    cli: Some("--group-concat-max-len=#".to_string()),
+                    default: Some("1024".to_string()),
+                    dynamic: Some(true),
+                    id: Some("sysvar_group_concat_max_len".to_string()),
+                    name: Some("group_concat_max_len".to_string()),
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    range: Some(Range {
+                        from: Some(4),
+                        from_f: None,
+                        to: None,
+                        to_f: None,
+                        to_upwards: None,
+                    }),
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("sysvar_have_compress".to_string()),
+                    name: Some("have_compress".to_string()),
+                    range: None,
+                    scope: None,
+                    r#type: None,
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("sysvar_have_dynamic_loading".to_string()),
+                    name: Some("have_dynamic_loading".to_string()),
+                    range: None,
+                    scope: None,
+                    r#type: None,
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("sysvar_have_geometry".to_string()),
+                    name: Some("have_geometry".to_string()),
+                    range: None,
+                    scope: None,
+                    r#type: None,
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("sysvar_have_openssl".to_string()),
+                    name: Some("have_openssl".to_string()),
+                    range: None,
+                    scope: None,
+                    r#type: None,
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("sysvar_innodb_flush_log_at_trx_commit".to_string()),
+                    name: Some("innodb_flush_log_at_trx_commit".to_string()),
+                    range: None,
+                    scope: None,
+                    r#type: None,
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+            ],
             entries
         );
     }

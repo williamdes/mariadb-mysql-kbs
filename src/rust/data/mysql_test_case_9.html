@@ -1,0 +1,136 @@
+<li class="listitem">
+    <p><a name="sysvar_group_concat_max_len"></a>
+        <a class="link" href="server-system-variables.html#sysvar_group_concat_max_len"><code
+                class="literal">group_concat_max_len</code></a>
+    </p><a class="indexterm" name="idm45428599657216"></a><a class="indexterm" name="idm45428599656176"></a>
+    <div class="informaltable">
+        <table frame="box" rules="all" summary="Properties for group_concat_max_len">
+            <colgroup>
+                <col style="width: 30%">
+                <col style="width: 70%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>Command-Line Format</th>
+                    <td><code class="literal">--group-concat-max-len=#</code></td>
+                </tr>
+                <tr>
+                    <th>System Variable</th>
+                    <td><code
+                            class="literal"><a class="link" href="server-system-variables.html#sysvar_group_concat_max_len">group_concat_max_len</a></code>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Scope</th>
+                    <td>Global, Session</td>
+                </tr>
+                <tr>
+                    <th>Dynamic</th>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <th><a class="link" href="optimizer-hints.html#optimizer-hints-set-var"
+                            title="Variable-Setting Hint Syntax"><code class="literal">SET_VAR</code></a> Hint Applies
+                    </th>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                    <td>Integer</td>
+                </tr>
+                <tr>
+                    <th>Default Value</th>
+                    <td><code class="literal">1024</code></td>
+                </tr>
+                <tr>
+                    <th>Minimum Value</th>
+                    <td><code class="literal">4</code></td>
+                </tr>
+                <tr>
+                    <th>Maximum Value (64-bit platforms)</th>
+                    <td><code class="literal">18446744073709551615</code></td>
+                </tr>
+                <tr>
+                    <th>Maximum Value (32-bit platforms)</th>
+                    <td><code class="literal">4294967295</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        The maximum permitted result length in bytes for the
+        <a class="link" href="aggregate-functions.html#function_group-concat"><code
+                class="literal">GROUP_CONCAT()</code></a> function. The
+        default is 1024.
+    </p>
+</li>
+<li class="listitem">
+    <p><a name="sysvar_have_compress"></a>
+        <a class="link" href="server-system-variables.html#sysvar_have_compress"><code
+                class="literal">have_compress</code></a>
+    </p><a class="indexterm" name="idm45428599623024"></a><a class="indexterm" name="idm45428599621936"></a>
+    <p>
+        <code class="literal">YES</code> if the <code class="literal">zlib</code>
+        compression library is available to the server,
+        <code class="literal">NO</code> if not. If not, the
+        <a class="link" href="encryption-functions.html#function_compress"><code class="literal">COMPRESS()</code></a>
+        and
+        <a class="link" href="encryption-functions.html#function_uncompress"><code
+                class="literal">UNCOMPRESS()</code></a> functions cannot
+        be used.
+    </p>
+</li>
+<li class="listitem">
+    <p><a name="sysvar_have_dynamic_loading"></a>
+        <a class="link" href="server-system-variables.html#sysvar_have_dynamic_loading"><code
+                class="literal">have_dynamic_loading</code></a>
+    </p><a class="indexterm" name="idm45428599612960"></a><a class="indexterm" name="idm45428599611920"></a>
+    <p>
+        <code class="literal">YES</code> if <a class="link" href="mysqld.html"
+            title="6.3.1&nbsp;mysqld — The MySQL Server"><span class="command"><strong>mysqld</strong></span></a>
+        supports
+        dynamic loading of plugins, <code class="literal">NO</code> if not. If
+        the value is <code class="literal">NO</code>, you cannot use options
+        such as <code class="literal">--plugin-load</code> to load
+        plugins at server startup, or the <a class="link" href="install-plugin.html"
+            title="15.7.4.4&nbsp;INSTALL PLUGIN Statement"><code class="literal">INSTALL
+    PLUGIN</code></a> statement to load plugins at runtime.
+    </p>
+</li>
+<li class="listitem">
+    <p><a name="sysvar_have_geometry"></a>
+        <a class="link" href="server-system-variables.html#sysvar_have_geometry"><code
+                class="literal">have_geometry</code></a>
+    </p><a class="indexterm" name="idm45428599602032"></a><a class="indexterm" name="idm45428599600944"></a>
+    <p>
+        <code class="literal">YES</code> if the server supports spatial data
+        types, <code class="literal">NO</code> if not.
+    </p>
+</li>
+<li class="listitem">
+    <p><a name="sysvar_have_openssl"></a>
+        <a class="link" href="server-system-variables.html#sysvar_have_openssl"><code
+                class="literal">have_openssl</code></a>
+    </p><a class="indexterm" name="idm45428599595264"></a><a class="indexterm" name="idm45428599594176"></a>
+    <p>
+        This variable is a synonym for
+        <a class="link" href="server-system-variables.html#sysvar_have_ssl"><code class="literal">have_ssl</code></a>.
+    </p>
+    <p>
+        As of MySQL 8.0.26,
+        <a class="link" href="server-system-variables.html#sysvar_have_openssl"><code
+                class="literal">have_openssl</code></a> is deprecated
+        and subject to removal in a future MySQL version. For
+        information about TLS properties of MySQL connection
+        interfaces, use the
+        <a class="link" href="performance-schema-tls-channel-status-table.html"
+            title="29.12.21.9&nbsp;The tls_channel_status Table"><code class="literal">tls_channel_status</code></a>
+        table.
+    </p>
+</li>
+<li class="listitem">
+    <p>
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit"><code
+                class="literal">innodb_flush_log_at_trx_commit=1</code></a>.
+    </p>
+</li>

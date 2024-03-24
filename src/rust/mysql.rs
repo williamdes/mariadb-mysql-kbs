@@ -417,6 +417,11 @@ pub fn extract_mysql_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
                     Some(tbody) => tbody
                         .find(Name("tr"))
                         .map(|tr| process_summary_table_row(tr))
+                        .filter(|e| e.name.is_some())
+                        .filter(|e| match &e.name {
+                            Some(name) => name.starts_with("--") == false,
+                            None => false,
+                        })
                         .collect::<Vec<KbParsedEntry>>(),
                     None => vec![],
                 },

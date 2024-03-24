@@ -13,7 +13,7 @@ pub enum DataType {
 
 #[derive(Deserialize)]
 pub struct Link {
-    pub a: String,
+    pub a: Option<String>,
     pub u: usize,
     pub t: DataType,
 }
@@ -62,11 +62,16 @@ impl MergedUltraSlim {
                         | (search_type == SearchType::MariaDB && link.t == DataType::MariaDB)
                 });
                 match found {
-                    Some(link) => Ok(format!(
-                        "{}#{}",
-                        self.urls.get(link.u).expect("Url to exist in table"),
-                        link.a,
-                    )),
+                    Some(link) => Ok(match &link.a {
+                        Some(anchor) => format!(
+                            "{}#{}",
+                            self.urls.get(link.u).expect("Url to exist in table"),
+                            anchor,
+                        ),
+                        None => {
+                            format!("{}", self.urls.get(link.u).expect("Url to exist in table"),)
+                        }
+                    }),
                     None => Err(SearchError {}),
                 }
             }

@@ -7,7 +7,7 @@
         "vars": {
             "type": "object",
             "patternProperties": {
-                "^([a-zA-Z_]+)": {
+                "^([a-zA-Z_-]+)": {
                     "type": "object",
                     "required": ["name", "ids"],
                     "properties": {
@@ -39,7 +39,7 @@
                                 "required": ["anchor", "url"],
                                 "properties": {
                                     "anchor": {
-                                        "type": "string",
+                                        "type": ["string", "null"],
                                         "minLength": 1
                                     },
                                     "url": {

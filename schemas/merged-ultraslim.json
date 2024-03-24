@@ -9,7 +9,7 @@
             "$id": "/properties/vars",
             "type": "object",
             "patternProperties": {
-                "^([a-zA-Z_]+)": {
+                "^([a-zA-Z_-]+)": {
                     "type": "object",
                     "properties": {
                         "t": {
@@ -29,7 +29,7 @@
                                 "properties": {
                                     "a": {
                                         "description": "The link anchor",
-                                        "type": "string"
+                                        "type": ["string", "null"]
                                     },
                                     "u": {
                                         "description": "The URL id in the urls attribute",

@@ -3983,13 +3983,16 @@
 |Command line|`--key-buffer-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`8388608`|
 |Dynamic|`true`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[key_buffer_size](https://mariadb.com/kb/en/myisam-system-variables/#key_buffer_size)|
 |dev.mysql.com|[sysvar_key_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_key_buffer_size)|
+|dev.mysql.com|[sysvar_key_buffer_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_key_buffer_size)|
 
 ## key_cache_age_threshold
 |name|value|
@@ -4007,6 +4010,7 @@
 |------|----|
 |mariadb.com|[key_cache_age_threshold](https://mariadb.com/kb/en/myisam-system-variables/#key_cache_age_threshold)|
 |dev.mysql.com|[sysvar_key_cache_age_threshold](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_key_cache_age_threshold)|
+|dev.mysql.com|[sysvar_key_cache_age_threshold](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_key_cache_age_threshold)|
 
 ## key_cache_block_size
 |name|value|
@@ -4024,6 +4028,7 @@
 |------|----|
 |mariadb.com|[key_cache_block_size](https://mariadb.com/kb/en/myisam-system-variables/#key_cache_block_size)|
 |dev.mysql.com|[sysvar_key_cache_block_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_key_cache_block_size)|
+|dev.mysql.com|[sysvar_key_cache_block_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_key_cache_block_size)|
 
 ## key_cache_division_limit
 |name|value|
@@ -4041,6 +4046,7 @@
 |------|----|
 |mariadb.com|[key_cache_division_limit](https://mariadb.com/kb/en/myisam-system-variables/#key_cache_division_limit)|
 |dev.mysql.com|[sysvar_key_cache_division_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_key_cache_division_limit)|
+|dev.mysql.com|[sysvar_key_cache_division_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_key_cache_division_limit)|
 
 ## key_cache_file_hash_size
 |name|value|
@@ -4105,6 +4111,7 @@
 |------|----|
 |mariadb.com|[myisam_data_pointer_size](https://mariadb.com/kb/en/myisam-system-variables/#myisam_data_pointer_size)|
 |dev.mysql.com|[sysvar_myisam_data_pointer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_myisam_data_pointer_size)|
+|dev.mysql.com|[sysvar_myisam_data_pointer_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_myisam_data_pointer_size)|
 
 ## myisam_max_extra_sort_file_size
 |name|value|
@@ -4131,6 +4138,7 @@
 |------|----|
 |mariadb.com|[myisam_max_sort_file_size](https://mariadb.com/kb/en/myisam-system-variables/#myisam_max_sort_file_size)|
 |dev.mysql.com|[sysvar_myisam_max_sort_file_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_myisam_max_sort_file_size)|
+|dev.mysql.com|[sysvar_myisam_max_sort_file_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_myisam_max_sort_file_size)|
 
 ## myisam_mmap_size
 |name|value|
@@ -4138,6 +4146,8 @@
 |Name|`myisam_mmap_size`|
 |Command line|`--myisam-mmap-size=#`|
 |Type of variable|`integer`|
+|Scope|`global`|
+|Dynamic|`false`|
 |Range|from: `7` to: `1.844674407371E+19`|
 
 ### Documentation(s)
@@ -4145,11 +4155,13 @@
 |------|----|
 |mariadb.com|[myisam_mmap_size](https://mariadb.com/kb/en/myisam-system-variables/#myisam_mmap_size)|
 |dev.mysql.com|[sysvar_myisam_mmap_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_myisam_mmap_size)|
+|dev.mysql.com|[sysvar_myisam_mmap_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_myisam_mmap_size)|
 
 ## myisam_recover_options
 |name|value|
 |----|-----|
 |Name|`myisam_recover_options`|
+|Command line|`--myisam-recover-options[=list]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`0`|
@@ -4161,6 +4173,7 @@
 |------|----|
 |mariadb.com|[myisam_recover_options](https://mariadb.com/kb/en/myisam-system-variables/#myisam_recover_options)|
 |dev.mysql.com|[sysvar_myisam_recover_options](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_myisam_recover_options)|
+|dev.mysql.com|[sysvar_myisam_recover_options](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_myisam_recover_options)|
 
 ## myisam_repair_threads
 |name|value|
@@ -4178,6 +4191,7 @@
 |------|----|
 |mariadb.com|[myisam_repair_threads](https://mariadb.com/kb/en/myisam-system-variables/#myisam_repair_threads)|
 |dev.mysql.com|[sysvar_myisam_repair_threads](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_myisam_repair_threads)|
+|dev.mysql.com|[sysvar_myisam_repair_threads](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_myisam_repair_threads)|
 
 ## myisam_sort_buffer_size
 |name|value|
@@ -4186,6 +4200,7 @@
 |Command line|`--myisam-sort-buffer-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`8388608`|
 |Dynamic|`true`|
 |Range|from: `4096` to: `1.844674407371E+19`|
 
@@ -4194,6 +4209,7 @@
 |------|----|
 |mariadb.com|[myisam_sort_buffer_size](https://mariadb.com/kb/en/myisam-system-variables/#myisam_sort_buffer_size)|
 |dev.mysql.com|[sysvar_myisam_sort_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_myisam_sort_buffer_size)|
+|dev.mysql.com|[sysvar_myisam_sort_buffer_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_myisam_sort_buffer_size)|
 
 ## myisam_stats_method
 |name|value|
@@ -4211,6 +4227,7 @@
 |------|----|
 |mariadb.com|[myisam_stats_method](https://mariadb.com/kb/en/myisam-system-variables/#myisam_stats_method)|
 |dev.mysql.com|[sysvar_myisam_stats_method](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_myisam_stats_method)|
+|dev.mysql.com|[sysvar_myisam_stats_method](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_myisam_stats_method)|
 
 ## myisam_use_mmap
 |name|value|
@@ -4227,6 +4244,7 @@
 |------|----|
 |mariadb.com|[myisam_use_mmap](https://mariadb.com/kb/en/myisam-system-variables/#myisam_use_mmap)|
 |dev.mysql.com|[sysvar_myisam_use_mmap](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_myisam_use_mmap)|
+|dev.mysql.com|[sysvar_myisam_use_mmap](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_myisam_use_mmap)|
 
 ## Rocksdb_block_cache_add
 |name|value|
@@ -15004,6 +15022,7 @@
 |mariadb.com|[max_used_connections](https://mariadb.com/kb/en/server-status-variables/#max_used_connections)|
 |dev.mysql.com|[statvar_Max_used_connections](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Max_used_connections)|
 |dev.mysql.com|[statvar_Max_used_connections](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Max_used_connections)|
+|dev.mysql.com|[statvar_Max_used_connections](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#statvar_Max_used_connections)|
 
 ## Max_used_connections_time
 |name|value|
@@ -15766,6 +15785,7 @@
 |name|value|
 |----|-----|
 |Name|`autocommit`|
+|Command line|`--autocommit[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`1`|
@@ -15776,11 +15796,13 @@
 |------|----|
 |mariadb.com|[autocommit](https://mariadb.com/kb/en/server-system-variables/#autocommit)|
 |dev.mysql.com|[sysvar_autocommit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_autocommit)|
+|dev.mysql.com|[sysvar_autocommit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_autocommit)|
 
 ## automatic_sp_privileges
 |name|value|
 |----|-----|
 |Name|`automatic_sp_privileges`|
+|Command line|`--automatic-sp-privileges[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`1`|
@@ -15791,6 +15813,7 @@
 |------|----|
 |mariadb.com|[automatic_sp_privileges](https://mariadb.com/kb/en/server-system-variables/#automatic_sp_privileges)|
 |dev.mysql.com|[sysvar_automatic_sp_privileges](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_automatic_sp_privileges)|
+|dev.mysql.com|[sysvar_automatic_sp_privileges](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_automatic_sp_privileges)|
 
 ## back_log
 |name|value|
@@ -15799,6 +15822,7 @@
 |Command line|`--back-log=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`false`|
 |Range|from: `1` to: `65535`|
 
@@ -15807,6 +15831,7 @@
 |------|----|
 |mariadb.com|[back_log](https://mariadb.com/kb/en/server-system-variables/#back_log)|
 |dev.mysql.com|[sysvar_back_log](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_back_log)|
+|dev.mysql.com|[sysvar_back_log](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_back_log)|
 
 ## basedir
 |name|value|
@@ -15815,7 +15840,7 @@
 |Command line|`--basedir=path or -b path`|
 |Type of variable|`directory name`|
 |Scope|`global`|
-|Default value|`parent of mysqld installation directory`|
+|Default value|`c1figurati1-dependent default`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -15824,6 +15849,7 @@
 |mariadb.com|[basedir](https://mariadb.com/kb/en/server-system-variables/#basedir)|
 |dev.mysql.com|[sysvar_basedir](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#sysvar_basedir)|
 |dev.mysql.com|[sysvar_basedir](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_basedir)|
+|dev.mysql.com|[sysvar_basedir](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_basedir)|
 
 ## big_tables
 |name|value|
@@ -15840,6 +15866,7 @@
 |------|----|
 |mariadb.com|[big_tables](https://mariadb.com/kb/en/server-system-variables/#big_tables)|
 |dev.mysql.com|[sysvar_big_tables](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_big_tables)|
+|dev.mysql.com|[sysvar_big_tables](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_big_tables)|
 
 ## bind_address
 |name|value|
@@ -15856,12 +15883,14 @@
 |------|----|
 |mariadb.com|[bind_address](https://mariadb.com/kb/en/server-system-variables/#bind_address)|
 |dev.mysql.com|[sysvar_bind_address](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_bind_address)|
+|dev.mysql.com|[sysvar_bind_address](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_bind_address)|
 
 ## block_encryption_mode
 |name|value|
 |----|-----|
 |Name|`block_encryption_mode`|
 |Command line|`--block-encryption-mode=val`|
+|Type of variable|`string`|
 |Scope|`global`, `session`|
 |Default value|`aes-128-ecb`|
 |Dynamic|`true`|
@@ -15871,6 +15900,7 @@
 |------|----|
 |mariadb.com|[block_encryption_mode](https://mariadb.com/kb/en/server-system-variables/#block_encryption_mode)|
 |dev.mysql.com|[sysvar_block_encryption_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_block_encryption_mode)|
+|dev.mysql.com|[sysvar_block_encryption_mode](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_block_encryption_mode)|
 
 ## bulk_insert_buffer_size
 |name|value|
@@ -15888,6 +15918,7 @@
 |------|----|
 |mariadb.com|[bulk_insert_buffer_size](https://mariadb.com/kb/en/server-system-variables/#bulk_insert_buffer_size)|
 |dev.mysql.com|[sysvar_bulk_insert_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_bulk_insert_buffer_size)|
+|dev.mysql.com|[sysvar_bulk_insert_buffer_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_bulk_insert_buffer_size)|
 
 ## character_set_client
 |name|value|
@@ -15895,7 +15926,7 @@
 |Name|`character_set_client`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`utf8mb4`|
+|Default value|`utf8`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -15903,6 +15934,7 @@
 |------|----|
 |mariadb.com|[character_set_client](https://mariadb.com/kb/en/server-system-variables/#character_set_client)|
 |dev.mysql.com|[sysvar_character_set_client](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_client)|
+|dev.mysql.com|[sysvar_character_set_client](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_character_set_client)|
 
 ## character_set_collations
 |name|value|
@@ -15924,7 +15956,7 @@
 |Name|`character_set_connection`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`utf8mb4`|
+|Default value|`utf8`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -15932,6 +15964,7 @@
 |------|----|
 |mariadb.com|[character_set_connection](https://mariadb.com/kb/en/server-system-variables/#character_set_connection)|
 |dev.mysql.com|[sysvar_character_set_connection](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_connection)|
+|dev.mysql.com|[sysvar_character_set_connection](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_character_set_connection)|
 
 ## character_set_database
 |name|value|
@@ -15939,7 +15972,7 @@
 |Name|`character_set_database`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`utf8mb4`|
+|Default value|`latin1`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -15947,6 +15980,7 @@
 |------|----|
 |mariadb.com|[character_set_database](https://mariadb.com/kb/en/server-system-variables/#character_set_database)|
 |dev.mysql.com|[sysvar_character_set_database](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_database)|
+|dev.mysql.com|[sysvar_character_set_database](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_character_set_database)|
 
 ## character_set_filesystem
 |name|value|
@@ -15963,6 +15997,7 @@
 |------|----|
 |mariadb.com|[character_set_filesystem](https://mariadb.com/kb/en/server-system-variables/#character_set_filesystem)|
 |dev.mysql.com|[sysvar_character_set_filesystem](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_filesystem)|
+|dev.mysql.com|[sysvar_character_set_filesystem](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_character_set_filesystem)|
 
 ## character_set_results
 |name|value|
@@ -15970,7 +16005,7 @@
 |Name|`character_set_results`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`utf8mb4`|
+|Default value|`utf8`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -15978,6 +16013,7 @@
 |------|----|
 |mariadb.com|[character_set_results](https://mariadb.com/kb/en/server-system-variables/#character_set_results)|
 |dev.mysql.com|[sysvar_character_set_results](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_results)|
+|dev.mysql.com|[sysvar_character_set_results](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_character_set_results)|
 
 ## character_set_server
 |name|value|
@@ -15986,7 +16022,7 @@
 |Command line|`--character-set-server=name`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`utf8mb4`|
+|Default value|`latin1`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -15994,6 +16030,7 @@
 |------|----|
 |mariadb.com|[character_set_server](https://mariadb.com/kb/en/server-system-variables/#character_set_server)|
 |dev.mysql.com|[sysvar_character_set_server](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server)|
+|dev.mysql.com|[sysvar_character_set_server](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_character_set_server)|
 
 ## character_set_system
 |name|value|
@@ -16001,7 +16038,7 @@
 |Name|`character_set_system`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`utf8mb3`|
+|Default value|`utf8`|
 |Dynamic|`false`|
 
 ### Documentation(s)
@@ -16009,6 +16046,7 @@
 |------|----|
 |mariadb.com|[character_set_system](https://mariadb.com/kb/en/server-system-variables/#character_set_system)|
 |dev.mysql.com|[sysvar_character_set_system](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_system)|
+|dev.mysql.com|[sysvar_character_set_system](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_character_set_system)|
 
 ## character_sets_dir
 |name|value|
@@ -16024,6 +16062,7 @@
 |------|----|
 |mariadb.com|[character_sets_dir](https://mariadb.com/kb/en/server-system-variables/#character_sets_dir)|
 |dev.mysql.com|[sysvar_character_sets_dir](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_sets_dir)|
+|dev.mysql.com|[sysvar_character_sets_dir](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_character_sets_dir)|
 
 ## check_constraint_checks
 |name|value|
@@ -16052,6 +16091,7 @@
 |------|----|
 |mariadb.com|[collation_connection](https://mariadb.com/kb/en/server-system-variables/#collation_connection)|
 |dev.mysql.com|[sysvar_collation_connection](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_connection)|
+|dev.mysql.com|[sysvar_collation_connection](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_collation_connection)|
 
 ## collation_database
 |name|value|
@@ -16059,7 +16099,7 @@
 |Name|`collation_database`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`utf8mb4_0900_ai_ci`|
+|Default value|`latin1_swedish_ci`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -16067,6 +16107,7 @@
 |------|----|
 |mariadb.com|[collation_database](https://mariadb.com/kb/en/server-system-variables/#collation_database)|
 |dev.mysql.com|[sysvar_collation_database](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_database)|
+|dev.mysql.com|[sysvar_collation_database](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_collation_database)|
 
 ## collation_server
 |name|value|
@@ -16075,7 +16116,7 @@
 |Command line|`--collation-server=name`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`utf8mb4_0900_ai_ci`|
+|Default value|`latin1_swedish_ci`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -16083,6 +16124,7 @@
 |------|----|
 |mariadb.com|[collation_server](https://mariadb.com/kb/en/server-system-variables/#collation_server)|
 |dev.mysql.com|[sysvar_collation_server](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server)|
+|dev.mysql.com|[sysvar_collation_server](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_collation_server)|
 
 ## completion_type
 |name|value|
@@ -16100,6 +16142,7 @@
 |------|----|
 |mariadb.com|[completion_type](https://mariadb.com/kb/en/server-system-variables/#completion_type)|
 |dev.mysql.com|[sysvar_completion_type](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_completion_type)|
+|dev.mysql.com|[sysvar_completion_type](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_completion_type)|
 
 ## concurrent_insert
 |name|value|
@@ -16117,6 +16160,7 @@
 |------|----|
 |mariadb.com|[concurrent_insert](https://mariadb.com/kb/en/server-system-variables/#concurrent_insert)|
 |dev.mysql.com|[sysvar_concurrent_insert](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_concurrent_insert)|
+|dev.mysql.com|[sysvar_concurrent_insert](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_concurrent_insert)|
 
 ## connect_timeout
 |name|value|
@@ -16134,6 +16178,7 @@
 |------|----|
 |mariadb.com|[connect_timeout](https://mariadb.com/kb/en/server-system-variables/#connect_timeout)|
 |dev.mysql.com|[sysvar_connect_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_connect_timeout)|
+|dev.mysql.com|[sysvar_connect_timeout](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_connect_timeout)|
 
 ## core_file
 |name|value|
@@ -16150,6 +16195,7 @@
 |mariadb.com|[core_file](https://mariadb.com/kb/en/server-system-variables/#core_file)|
 |dev.mysql.com|[option_mysqld_core-file](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_core-file)|
 |dev.mysql.com|[sysvar_core_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_core_file)|
+|dev.mysql.com|[sysvar_core_file](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_core_file)|
 
 ## datadir
 |name|value|
@@ -16166,6 +16212,7 @@
 |mariadb.com|[datadir](https://mariadb.com/kb/en/server-system-variables/#datadir)|
 |dev.mysql.com|[sysvar_datadir](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#sysvar_datadir)|
 |dev.mysql.com|[sysvar_datadir](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_datadir)|
+|dev.mysql.com|[sysvar_datadir](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_datadir)|
 
 ## date_format
 |name|value|
@@ -16176,6 +16223,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[date_format](https://mariadb.com/kb/en/server-system-variables/#date_format)|
+|dev.mysql.com|[sysvar_date_format](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_date_format)|
 
 ## datetime_format
 |name|value|
@@ -16186,6 +16234,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[datetime_format](https://mariadb.com/kb/en/server-system-variables/#datetime_format)|
+|dev.mysql.com|[sysvar_datetime_format](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_datetime_format)|
 
 ## debug/debug_dbug
 |name|value|
@@ -16230,6 +16279,7 @@
 |------|----|
 |mariadb.com|[debug_sync](https://mariadb.com/kb/en/server-system-variables/#debug_sync)|
 |dev.mysql.com|[sysvar_debug_sync](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_debug_sync)|
+|dev.mysql.com|[sysvar_debug_sync](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_debug_sync)|
 
 ## default_password_lifetime
 |name|value|
@@ -16238,15 +16288,15 @@
 |Command line|`--default-password-lifetime=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `65535`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[default_password_lifetime](https://mariadb.com/kb/en/server-system-variables/#default_password_lifetime)|
 |dev.mysql.com|[sysvar_default_password_lifetime](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_password_lifetime)|
+|dev.mysql.com|[sysvar_default_password_lifetime](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_default_password_lifetime)|
 
 ## default_regex_flags
 |name|value|
@@ -16279,6 +16329,7 @@
 |------|----|
 |mariadb.com|[default_storage_engine](https://mariadb.com/kb/en/server-system-variables/#default_storage_engine)|
 |dev.mysql.com|[sysvar_default_storage_engine](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_storage_engine)|
+|dev.mysql.com|[sysvar_default_storage_engine](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_default_storage_engine)|
 
 ## default_table_type
 |name|value|
@@ -16308,6 +16359,7 @@
 |------|----|
 |mariadb.com|[default_tmp_storage_engine](https://mariadb.com/kb/en/server-system-variables/#default_tmp_storage_engine)|
 |dev.mysql.com|[sysvar_default_tmp_storage_engine](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_tmp_storage_engine)|
+|dev.mysql.com|[sysvar_default_tmp_storage_engine](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_default_tmp_storage_engine)|
 
 ## default_week_format
 |name|value|
@@ -16325,11 +16377,13 @@
 |------|----|
 |mariadb.com|[default_week_format](https://mariadb.com/kb/en/server-system-variables/#default_week_format)|
 |dev.mysql.com|[sysvar_default_week_format](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_week_format)|
+|dev.mysql.com|[sysvar_default_week_format](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_default_week_format)|
 
 ## delay_key_write
 |name|value|
 |----|-----|
 |Name|`delay_key_write`|
+|Command line|`--delay-key-write[={OFF|ON|ALL}]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`ON`|
@@ -16341,6 +16395,7 @@
 |------|----|
 |mariadb.com|[delay_key_write](https://mariadb.com/kb/en/server-system-variables/#delay_key_write)|
 |dev.mysql.com|[sysvar_delay_key_write](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_delay_key_write)|
+|dev.mysql.com|[sysvar_delay_key_write](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_delay_key_write)|
 
 ## delayed_insert_limit
 |name|value|
@@ -16358,6 +16413,7 @@
 |------|----|
 |mariadb.com|[delayed_insert_limit](https://mariadb.com/kb/en/server-system-variables/#delayed_insert_limit)|
 |dev.mysql.com|[sysvar_delayed_insert_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_delayed_insert_limit)|
+|dev.mysql.com|[sysvar_delayed_insert_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_delayed_insert_limit)|
 
 ## delayed_insert_timeout
 |name|value|
@@ -16375,6 +16431,7 @@
 |------|----|
 |mariadb.com|[delayed_insert_timeout](https://mariadb.com/kb/en/server-system-variables/#delayed_insert_timeout)|
 |dev.mysql.com|[sysvar_delayed_insert_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_delayed_insert_timeout)|
+|dev.mysql.com|[sysvar_delayed_insert_timeout](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_delayed_insert_timeout)|
 
 ## delayed_queue_size
 |name|value|
@@ -16392,19 +16449,24 @@
 |------|----|
 |mariadb.com|[delayed_queue_size](https://mariadb.com/kb/en/server-system-variables/#delayed_queue_size)|
 |dev.mysql.com|[sysvar_delayed_queue_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_delayed_queue_size)|
+|dev.mysql.com|[sysvar_delayed_queue_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_delayed_queue_size)|
 
 ## disconnect_on_expired_password
 |name|value|
 |----|-----|
 |Name|`disconnect_on_expired_password`|
+|Command line|`--disconnect-on-expired-password[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[disconnect_on_expired_password](https://mariadb.com/kb/en/server-system-variables/#disconnect_on_expired_password)|
 |dev.mysql.com|[sysvar_disconnect_on_expired_password](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_disconnect_on_expired_password)|
+|dev.mysql.com|[sysvar_disconnect_on_expired_password](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_disconnect_on_expired_password)|
 
 ## div_precision_increment
 |name|value|
@@ -16422,6 +16484,7 @@
 |------|----|
 |mariadb.com|[div_precision_increment](https://mariadb.com/kb/en/server-system-variables/#div_precision_increment)|
 |dev.mysql.com|[sysvar_div_precision_increment](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_div_precision_increment)|
+|dev.mysql.com|[sysvar_div_precision_increment](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_div_precision_increment)|
 
 ## encrypt_tmp_disk_tables
 |name|value|
@@ -16514,6 +16577,7 @@
 |------|----|
 |mariadb.com|[eq_range_index_dive_limit](https://mariadb.com/kb/en/server-system-variables/#eq_range_index_dive_limit)|
 |dev.mysql.com|[sysvar_eq_range_index_dive_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_eq_range_index_dive_limit)|
+|dev.mysql.com|[sysvar_eq_range_index_dive_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_eq_range_index_dive_limit)|
 
 ## error_count
 |name|value|
@@ -16525,6 +16589,7 @@
 |------|----|
 |mariadb.com|[error_count](https://mariadb.com/kb/en/server-system-variables/#error_count)|
 |dev.mysql.com|[sysvar_error_count](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_error_count)|
+|dev.mysql.com|[sysvar_error_count](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_error_count)|
 
 ## event_scheduler
 |name|value|
@@ -16533,6 +16598,7 @@
 |Command line|`--event-scheduler[=value]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 |Valid value(s)|`ON`, `1`, `OFF`, `0`, `DISABLED`|
 
@@ -16541,6 +16607,7 @@
 |------|----|
 |mariadb.com|[event_scheduler](https://mariadb.com/kb/en/server-system-variables/#event_scheduler)|
 |dev.mysql.com|[sysvar_event_scheduler](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_event_scheduler)|
+|dev.mysql.com|[sysvar_event_scheduler](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_event_scheduler)|
 
 ## expensive_subquery_limit
 |name|value|
@@ -16562,14 +16629,17 @@
 |name|value|
 |----|-----|
 |Name|`explicit_defaults_for_timestamp`|
+|Command line|`--explicit-defaults-for-timestamp[={OFF|ON}]`|
 |Type of variable|`boolean`|
-|Default value|`1`|
+|Scope|`global`, `session`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[explicit_defaults_for_timestamp](https://mariadb.com/kb/en/server-system-variables/#explicit_defaults_for_timestamp)|
 |dev.mysql.com|[sysvar_explicit_defaults_for_timestamp](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp)|
+|dev.mysql.com|[sysvar_explicit_defaults_for_timestamp](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp)|
 
 ## external_user
 |name|value|
@@ -16584,6 +16654,7 @@
 |------|----|
 |mariadb.com|[external_user](https://mariadb.com/kb/en/server-system-variables/#external_user)|
 |dev.mysql.com|[sysvar_external_user](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_external_user)|
+|dev.mysql.com|[sysvar_external_user](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_external_user)|
 
 ## flush
 |name|value|
@@ -16601,6 +16672,7 @@
 |mariadb.com|[flush](https://mariadb.com/kb/en/server-system-variables/#flush)|
 |dev.mysql.com|[option_mysqld_flush](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_flush)|
 |dev.mysql.com|[sysvar_flush](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_flush)|
+|dev.mysql.com|[sysvar_flush](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_flush)|
 
 ## flush_time
 |name|value|
@@ -16618,6 +16690,7 @@
 |------|----|
 |mariadb.com|[flush_time](https://mariadb.com/kb/en/server-system-variables/#flush_time)|
 |dev.mysql.com|[sysvar_flush_time](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_flush_time)|
+|dev.mysql.com|[sysvar_flush_time](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_flush_time)|
 
 ## foreign_key_checks
 |name|value|
@@ -16633,6 +16706,7 @@
 |------|----|
 |mariadb.com|[foreign_key_checks](https://mariadb.com/kb/en/server-system-variables/#foreign_key_checks)|
 |dev.mysql.com|[sysvar_foreign_key_checks](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_foreign_key_checks)|
+|dev.mysql.com|[sysvar_foreign_key_checks](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_foreign_key_checks)|
 
 ## ft_boolean_syntax
 |name|value|
@@ -16649,6 +16723,7 @@
 |------|----|
 |mariadb.com|[ft_boolean_syntax](https://mariadb.com/kb/en/server-system-variables/#ft_boolean_syntax)|
 |dev.mysql.com|[sysvar_ft_boolean_syntax](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ft_boolean_syntax)|
+|dev.mysql.com|[sysvar_ft_boolean_syntax](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ft_boolean_syntax)|
 
 ## ft_max_word_len
 |name|value|
@@ -16666,6 +16741,7 @@
 |------|----|
 |mariadb.com|[ft_max_word_len](https://mariadb.com/kb/en/server-system-variables/#ft_max_word_len)|
 |dev.mysql.com|[sysvar_ft_max_word_len](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ft_max_word_len)|
+|dev.mysql.com|[sysvar_ft_max_word_len](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ft_max_word_len)|
 
 ## ft_min_word_len
 |name|value|
@@ -16683,6 +16759,7 @@
 |------|----|
 |mariadb.com|[ft_min_word_len](https://mariadb.com/kb/en/server-system-variables/#ft_min_word_len)|
 |dev.mysql.com|[sysvar_ft_min_word_len](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ft_min_word_len)|
+|dev.mysql.com|[sysvar_ft_min_word_len](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ft_min_word_len)|
 
 ## ft_query_expansion_limit
 |name|value|
@@ -16700,6 +16777,7 @@
 |------|----|
 |mariadb.com|[ft_query_expansion_limit](https://mariadb.com/kb/en/server-system-variables/#ft_query_expansion_limit)|
 |dev.mysql.com|[sysvar_ft_query_expansion_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ft_query_expansion_limit)|
+|dev.mysql.com|[sysvar_ft_query_expansion_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ft_query_expansion_limit)|
 
 ## ft_stopword_file
 |name|value|
@@ -16715,6 +16793,7 @@
 |------|----|
 |mariadb.com|[ft_stopword_file](https://mariadb.com/kb/en/server-system-variables/#ft_stopword_file)|
 |dev.mysql.com|[sysvar_ft_stopword_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ft_stopword_file)|
+|dev.mysql.com|[sysvar_ft_stopword_file](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ft_stopword_file)|
 
 ## general_log
 |name|value|
@@ -16731,6 +16810,7 @@
 |------|----|
 |mariadb.com|[general_log](https://mariadb.com/kb/en/server-system-variables/#general_log)|
 |dev.mysql.com|[sysvar_general_log](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_general_log)|
+|dev.mysql.com|[sysvar_general_log](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_general_log)|
 
 ## general_log_file
 |name|value|
@@ -16747,6 +16827,7 @@
 |------|----|
 |mariadb.com|[general_log_file](https://mariadb.com/kb/en/server-system-variables/#general_log_file)|
 |dev.mysql.com|[sysvar_general_log_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_general_log_file)|
+|dev.mysql.com|[sysvar_general_log_file](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_general_log_file)|
 
 ## group_concat_max_len
 |name|value|
@@ -16755,6 +16836,7 @@
 |Command line|`--group-concat-max-len=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`1024`|
 |Dynamic|`true`|
 |Range|from: `4` to: `4294967295`|
 
@@ -16763,6 +16845,7 @@
 |------|----|
 |mariadb.com|[group_concat_max_len](https://mariadb.com/kb/en/server-system-variables/#group_concat_max_len)|
 |dev.mysql.com|[sysvar_group_concat_max_len](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len)|
+|dev.mysql.com|[sysvar_group_concat_max_len](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_group_concat_max_len)|
 
 ## have_compress
 |name|value|
@@ -16774,18 +16857,18 @@
 |------|----|
 |mariadb.com|[have_compress](https://mariadb.com/kb/en/server-system-variables/#have_compress)|
 |dev.mysql.com|[sysvar_have_compress](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_compress)|
+|dev.mysql.com|[sysvar_have_compress](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_compress)|
 
 ## have_crypt
 |name|value|
 |----|-----|
 |Name|`have_crypt`|
-|Scope|`global`|
-|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[have_crypt](https://mariadb.com/kb/en/server-system-variables/#have_crypt)|
+|dev.mysql.com|[sysvar_have_crypt](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_crypt)|
 
 ## have_csv
 |name|value|
@@ -16809,6 +16892,7 @@
 |------|----|
 |mariadb.com|[have_dynamic_loading](https://mariadb.com/kb/en/server-system-variables/#have_dynamic_loading)|
 |dev.mysql.com|[sysvar_have_dynamic_loading](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_dynamic_loading)|
+|dev.mysql.com|[sysvar_have_dynamic_loading](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_dynamic_loading)|
 
 ## have_geometry
 |name|value|
@@ -16820,6 +16904,7 @@
 |------|----|
 |mariadb.com|[have_geometry](https://mariadb.com/kb/en/server-system-variables/#have_geometry)|
 |dev.mysql.com|[sysvar_have_geometry](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_geometry)|
+|dev.mysql.com|[sysvar_have_geometry](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_geometry)|
 
 ## have_ndbcluster
 |name|value|
@@ -16855,6 +16940,7 @@
 |------|----|
 |mariadb.com|[have_profiling](https://mariadb.com/kb/en/server-system-variables/#have_profiling)|
 |dev.mysql.com|[sysvar_have_profiling](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_profiling)|
+|dev.mysql.com|[sysvar_have_profiling](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_profiling)|
 
 ## have_query_cache
 |name|value|
@@ -16866,6 +16952,7 @@
 |------|----|
 |mariadb.com|[have_query_cache](https://mariadb.com/kb/en/server-system-variables/#have_query_cache)|
 |dev.mysql.com|[sysvar_have_query_cache](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_query_cache)|
+|dev.mysql.com|[sysvar_have_query_cache](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_query_cache)|
 
 ## have_rtree_keys
 |name|value|
@@ -16877,6 +16964,7 @@
 |------|----|
 |mariadb.com|[have_rtree_keys](https://mariadb.com/kb/en/server-system-variables/#have_rtree_keys)|
 |dev.mysql.com|[sysvar_have_rtree_keys](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_rtree_keys)|
+|dev.mysql.com|[sysvar_have_rtree_keys](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_rtree_keys)|
 
 ## have_symlink
 |name|value|
@@ -16888,6 +16976,7 @@
 |------|----|
 |mariadb.com|[have_symlink](https://mariadb.com/kb/en/server-system-variables/#have_symlink)|
 |dev.mysql.com|[sysvar_have_symlink](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_symlink)|
+|dev.mysql.com|[sysvar_have_symlink](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_symlink)|
 
 ## histogram_size
 |name|value|
@@ -16928,6 +17017,7 @@
 |Command line|`--host-cache-size=#.`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `65536`|
 
@@ -16936,6 +17026,7 @@
 |------|----|
 |mariadb.com|[host_cache_size](https://mariadb.com/kb/en/server-system-variables/#host_cache_size)|
 |dev.mysql.com|[sysvar_host_cache_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_host_cache_size)|
+|dev.mysql.com|[sysvar_host_cache_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_host_cache_size)|
 
 ## hostname
 |name|value|
@@ -16950,6 +17041,7 @@
 |------|----|
 |mariadb.com|[hostname](https://mariadb.com/kb/en/server-system-variables/#hostname)|
 |dev.mysql.com|[sysvar_hostname](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_hostname)|
+|dev.mysql.com|[sysvar_hostname](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_hostname)|
 
 ## identity
 |name|value|
@@ -16961,6 +17053,7 @@
 |------|----|
 |mariadb.com|[identity](https://mariadb.com/kb/en/server-system-variables/#identity)|
 |dev.mysql.com|[sysvar_identity](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_identity)|
+|dev.mysql.com|[sysvar_identity](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_identity)|
 
 ## idle_readonly_transaction_timeout
 |name|value|
@@ -17011,7 +17104,6 @@
 |name|value|
 |----|-----|
 |Name|`ignore_db_dirs`|
-|Command line|`--ignore-db-dirs=dir.`|
 |Type of variable|`string`|
 |Scope|`global`|
 |Dynamic|`false`|
@@ -17020,6 +17112,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[ignore_db_dirs](https://mariadb.com/kb/en/server-system-variables/#ignore_db_dirs)|
+|dev.mysql.com|[sysvar_ignore_db_dirs](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ignore_db_dirs)|
 
 ## in_predicate_conversion_threshold
 |name|value|
@@ -17065,6 +17158,7 @@
 |------|----|
 |mariadb.com|[init_connect](https://mariadb.com/kb/en/server-system-variables/#init_connect)|
 |dev.mysql.com|[sysvar_init_connect](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_init_connect)|
+|dev.mysql.com|[sysvar_init_connect](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_init_connect)|
 
 ## init_file
 |name|value|
@@ -17081,6 +17175,7 @@
 |mariadb.com|[init_file](https://mariadb.com/kb/en/server-system-variables/#init_file)|
 |dev.mysql.com|[sysvar_init_file](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#sysvar_init_file)|
 |dev.mysql.com|[sysvar_init_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_init_file)|
+|dev.mysql.com|[sysvar_init_file](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_init_file)|
 
 ## insert_id
 |name|value|
@@ -17092,6 +17187,7 @@
 |------|----|
 |mariadb.com|[insert_id](https://mariadb.com/kb/en/server-system-variables/#insert_id)|
 |dev.mysql.com|[sysvar_insert_id](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_insert_id)|
+|dev.mysql.com|[sysvar_insert_id](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_insert_id)|
 
 ## interactive_timeout
 |name|value|
@@ -17109,6 +17205,7 @@
 |------|----|
 |mariadb.com|[interactive_timeout](https://mariadb.com/kb/en/server-system-variables/#interactive_timeout)|
 |dev.mysql.com|[sysvar_interactive_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout)|
+|dev.mysql.com|[sysvar_interactive_timeout](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_interactive_timeout)|
 
 ## join_buffer_size
 |name|value|
@@ -17119,12 +17216,14 @@
 |Scope|`global`, `session`|
 |Default value|`262144`|
 |Dynamic|`true`|
+|Range|from: `128`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[join_buffer_size](https://mariadb.com/kb/en/server-system-variables/#join_buffer_size)|
 |dev.mysql.com|[sysvar_join_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_join_buffer_size)|
+|dev.mysql.com|[sysvar_join_buffer_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size)|
 
 ## join_buffer_space_limit
 |name|value|
@@ -17162,6 +17261,7 @@
 |name|value|
 |----|-----|
 |Name|`keep_files_on_create`|
+|Command line|`--keep-files-on-create[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`OFF`|
@@ -17172,6 +17272,7 @@
 |------|----|
 |mariadb.com|[keep_files_on_create](https://mariadb.com/kb/en/server-system-variables/#keep_files_on_create)|
 |dev.mysql.com|[sysvar_keep_files_on_create](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_keep_files_on_create)|
+|dev.mysql.com|[sysvar_keep_files_on_create](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_keep_files_on_create)|
 
 ## large_files_support
 |name|value|
@@ -17186,6 +17287,7 @@
 |------|----|
 |mariadb.com|[large_files_support](https://mariadb.com/kb/en/server-system-variables/#large_files_support)|
 |dev.mysql.com|[sysvar_large_files_support](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_large_files_support)|
+|dev.mysql.com|[sysvar_large_files_support](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_large_files_support)|
 
 ## large_page_size
 |name|value|
@@ -17202,6 +17304,7 @@
 |------|----|
 |mariadb.com|[large_page_size](https://mariadb.com/kb/en/server-system-variables/#large_page_size)|
 |dev.mysql.com|[sysvar_large_page_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_large_page_size)|
+|dev.mysql.com|[sysvar_large_page_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_large_page_size)|
 
 ## large_pages
 |name|value|
@@ -17219,6 +17322,7 @@
 |mariadb.com|[large_pages](https://mariadb.com/kb/en/server-system-variables/#large_pages)|
 |dev.mysql.com|[option_mysqld_large-pages](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_large-pages)|
 |dev.mysql.com|[sysvar_large_pages](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_large_pages)|
+|dev.mysql.com|[sysvar_large_pages](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_large_pages)|
 
 ## last_insert_id
 |name|value|
@@ -17230,6 +17334,7 @@
 |------|----|
 |mariadb.com|[last_insert_id](https://mariadb.com/kb/en/server-system-variables/#last_insert_id)|
 |dev.mysql.com|[sysvar_last_insert_id](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_last_insert_id)|
+|dev.mysql.com|[sysvar_last_insert_id](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_last_insert_id)|
 
 ## lc_messages
 |name|value|
@@ -17247,6 +17352,7 @@
 |mariadb.com|[lc_messages](https://mariadb.com/kb/en/server-system-variables/#lc_messages)|
 |dev.mysql.com|[option_mysqld_lc-messages](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_lc-messages)|
 |dev.mysql.com|[sysvar_lc_messages](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lc_messages)|
+|dev.mysql.com|[sysvar_lc_messages](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_lc_messages)|
 
 ## lc_messages_dir
 |name|value|
@@ -17263,11 +17369,13 @@
 |mariadb.com|[lc_messages_dir](https://mariadb.com/kb/en/server-system-variables/#lc_messages_dir)|
 |dev.mysql.com|[option_mysqld_lc-messages-dir](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_lc-messages-dir)|
 |dev.mysql.com|[sysvar_lc_messages_dir](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lc_messages_dir)|
+|dev.mysql.com|[sysvar_lc_messages_dir](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_lc_messages_dir)|
 
 ## lc_time_names
 |name|value|
 |----|-----|
 |Name|`lc_time_names`|
+|Command line|`--lc-time-names=value`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
@@ -17277,6 +17385,7 @@
 |------|----|
 |mariadb.com|[lc_time_names](https://mariadb.com/kb/en/server-system-variables/#lc_time_names)|
 |dev.mysql.com|[sysvar_lc_time_names](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lc_time_names)|
+|dev.mysql.com|[sysvar_lc_time_names](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_lc_time_names)|
 
 ## license
 |name|value|
@@ -17292,13 +17401,16 @@
 |------|----|
 |mariadb.com|[license](https://mariadb.com/kb/en/server-system-variables/#license)|
 |dev.mysql.com|[sysvar_license](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_license)|
+|dev.mysql.com|[sysvar_license](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_license)|
 
 ## local_infile
 |name|value|
 |----|-----|
 |Name|`local_infile`|
+|Command line|`--local-infile[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`ON`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -17306,6 +17418,7 @@
 |------|----|
 |mariadb.com|[local_infile](https://mariadb.com/kb/en/server-system-variables/#local_infile)|
 |dev.mysql.com|[sysvar_local_infile](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_local_infile)|
+|dev.mysql.com|[sysvar_local_infile](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_local_infile)|
 
 ## lock_wait_timeout
 |name|value|
@@ -17314,13 +17427,16 @@
 |Command line|`--lock-wait-timeout=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`31536000`|
 |Dynamic|`true`|
+|Range|from: `1` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[lock_wait_timeout](https://mariadb.com/kb/en/server-system-variables/#lock_wait_timeout)|
 |dev.mysql.com|[sysvar_lock_wait_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lock_wait_timeout)|
+|dev.mysql.com|[sysvar_lock_wait_timeout](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_lock_wait_timeout)|
 
 ## locked_in_memory
 |name|value|
@@ -17336,6 +17452,7 @@
 |------|----|
 |mariadb.com|[locked_in_memory](https://mariadb.com/kb/en/server-system-variables/#locked_in_memory)|
 |dev.mysql.com|[sysvar_locked_in_memory](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_locked_in_memory)|
+|dev.mysql.com|[sysvar_locked_in_memory](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_locked_in_memory)|
 
 ## log
 |name|value|
@@ -17383,6 +17500,7 @@
 |mariadb.com|[log_error](https://mariadb.com/kb/en/server-system-variables/#log_error)|
 |dev.mysql.com|[option_mysqld_log-error](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_log-error)|
 |dev.mysql.com|[sysvar_log_error](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error)|
+|dev.mysql.com|[sysvar_log_error](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_error)|
 
 ## log_output
 |name|value|
@@ -17400,6 +17518,7 @@
 |------|----|
 |mariadb.com|[log_output](https://mariadb.com/kb/en/server-system-variables/#log_output)|
 |dev.mysql.com|[sysvar_log_output](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_output)|
+|dev.mysql.com|[sysvar_log_output](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_output)|
 
 ## log_queries_not_using_indexes
 |name|value|
@@ -17416,6 +17535,7 @@
 |------|----|
 |mariadb.com|[log_queries_not_using_indexes](https://mariadb.com/kb/en/server-system-variables/#log_queries_not_using_indexes)|
 |dev.mysql.com|[sysvar_log_queries_not_using_indexes](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_queries_not_using_indexes)|
+|dev.mysql.com|[sysvar_log_queries_not_using_indexes](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_queries_not_using_indexes)|
 
 ## log_slow_admin_statements
 |name|value|
@@ -17424,6 +17544,7 @@
 |Command line|`--log-slow-admin-statements[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -17431,6 +17552,7 @@
 |------|----|
 |mariadb.com|[log_slow_admin_statements](https://mariadb.com/kb/en/server-system-variables/#log_slow_admin_statements)|
 |dev.mysql.com|[sysvar_log_slow_admin_statements](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_slow_admin_statements)|
+|dev.mysql.com|[sysvar_log_slow_admin_statements](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_slow_admin_statements)|
 
 ## log_slow_disabled_statements
 |name|value|
@@ -17606,9 +17728,7 @@
 |name|value|
 |----|-----|
 |Name|`log_warnings`|
-|Command line|`-W [level] or --log-warnings[=level]`|
 |Type of variable|`integer`|
-|Scope|`global`, `session`|
 |Default value|`2`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
@@ -17617,6 +17737,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[log_warnings](https://mariadb.com/kb/en/server-system-variables/#log_warnings)|
+|dev.mysql.com|[sysvar_log_warnings](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_warnings)|
 
 ## long_query_time
 |name|value|
@@ -17627,13 +17748,14 @@
 |Scope|`global`, `session`|
 |Default value|`10`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[long_query_time](https://mariadb.com/kb/en/server-system-variables/#long_query_time)|
 |dev.mysql.com|[sysvar_long_query_time](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_long_query_time)|
+|dev.mysql.com|[sysvar_long_query_time](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_long_query_time)|
 
 ## low_priority_updates
 |name|value|
@@ -17650,6 +17772,7 @@
 |------|----|
 |mariadb.com|[low_priority_updates](https://mariadb.com/kb/en/server-system-variables/#low_priority_updates)|
 |dev.mysql.com|[sysvar_low_priority_updates](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_low_priority_updates)|
+|dev.mysql.com|[sysvar_low_priority_updates](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_low_priority_updates)|
 
 ## lower_case_file_system
 |name|value|
@@ -17664,6 +17787,7 @@
 |------|----|
 |mariadb.com|[lower_case_file_system](https://mariadb.com/kb/en/server-system-variables/#lower_case_file_system)|
 |dev.mysql.com|[sysvar_lower_case_file_system](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_file_system)|
+|dev.mysql.com|[sysvar_lower_case_file_system](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_lower_case_file_system)|
 
 ## lower_case_table_names
 |name|value|
@@ -17680,6 +17804,7 @@
 |------|----|
 |mariadb.com|[lower_case_table_names](https://mariadb.com/kb/en/server-system-variables/#lower_case_table_names)|
 |dev.mysql.com|[sysvar_lower_case_table_names](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names)|
+|dev.mysql.com|[sysvar_lower_case_table_names](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_lower_case_table_names)|
 
 ## max_allowed_packet
 |name|value|
@@ -17688,6 +17813,8 @@
 |Command line|`--max-allowed-packet=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`4194304`|
+|Dynamic|`true`|
 |Range|from: `1024` to: `1073741824`|
 
 ### Documentation(s)
@@ -17695,6 +17822,7 @@
 |------|----|
 |mariadb.com|[max_allowed_packet](https://mariadb.com/kb/en/server-system-variables/#max_allowed_packet)|
 |dev.mysql.com|[sysvar_max_allowed_packet](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet)|
+|dev.mysql.com|[sysvar_max_allowed_packet](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_allowed_packet)|
 
 ## max_connect_errors
 |name|value|
@@ -17712,6 +17840,7 @@
 |------|----|
 |mariadb.com|[max_connect_errors](https://mariadb.com/kb/en/server-system-variables/#max_connect_errors)|
 |dev.mysql.com|[sysvar_max_connect_errors](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_connect_errors)|
+|dev.mysql.com|[sysvar_max_connect_errors](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connect_errors)|
 
 ## max_connections
 |name|value|
@@ -17731,6 +17860,7 @@
 |dev.mysql.com|[sysvar_max_connections](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_max_connections)|
 |dev.mysql.com|[sysvar_max_connections](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_max_connections)|
 |dev.mysql.com|[sysvar_max_connections](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_connections)|
+|dev.mysql.com|[sysvar_max_connections](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections)|
 
 ## max_delayed_threads
 |name|value|
@@ -17748,6 +17878,7 @@
 |------|----|
 |mariadb.com|[max_delayed_threads](https://mariadb.com/kb/en/server-system-variables/#max_delayed_threads)|
 |dev.mysql.com|[sysvar_max_delayed_threads](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_delayed_threads)|
+|dev.mysql.com|[sysvar_max_delayed_threads](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_delayed_threads)|
 
 ## max_digest_length
 |name|value|
@@ -17765,6 +17896,7 @@
 |------|----|
 |mariadb.com|[max_digest_length](https://mariadb.com/kb/en/server-system-variables/#max_digest_length)|
 |dev.mysql.com|[sysvar_max_digest_length](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_digest_length)|
+|dev.mysql.com|[sysvar_max_digest_length](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_digest_length)|
 
 ## max_error_count
 |name|value|
@@ -17773,6 +17905,7 @@
 |Command line|`--max-error-count=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`64`|
 |Dynamic|`true`|
 |Range|from: `0` to: `65535`|
 
@@ -17781,6 +17914,7 @@
 |------|----|
 |mariadb.com|[max_error_count](https://mariadb.com/kb/en/server-system-variables/#max_error_count)|
 |dev.mysql.com|[sysvar_max_error_count](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_error_count)|
+|dev.mysql.com|[sysvar_max_error_count](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_error_count)|
 
 ## max_heap_table_size
 |name|value|
@@ -17798,6 +17932,7 @@
 |------|----|
 |mariadb.com|[max_heap_table_size](https://mariadb.com/kb/en/server-system-variables/#max_heap_table_size)|
 |dev.mysql.com|[sysvar_max_heap_table_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)|
+|dev.mysql.com|[sysvar_max_heap_table_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)|
 
 ## max_insert_delayed_threads
 |name|value|
@@ -17814,6 +17949,7 @@
 |------|----|
 |mariadb.com|[max_insert_delayed_threads](https://mariadb.com/kb/en/server-system-variables/#max_insert_delayed_threads)|
 |dev.mysql.com|[sysvar_max_insert_delayed_threads](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_insert_delayed_threads)|
+|dev.mysql.com|[sysvar_max_insert_delayed_threads](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_insert_delayed_threads)|
 
 ## max_join_size
 |name|value|
@@ -17831,6 +17967,7 @@
 |------|----|
 |mariadb.com|[max_join_size](https://mariadb.com/kb/en/server-system-variables/#max_join_size)|
 |dev.mysql.com|[sysvar_max_join_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_join_size)|
+|dev.mysql.com|[sysvar_max_join_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_join_size)|
 
 ## max_length_for_sort_data
 |name|value|
@@ -17839,6 +17976,7 @@
 |Command line|`--max-length-for-sort-data=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`1024`|
 |Dynamic|`true`|
 |Range|from: `4` to: `8388608`|
 
@@ -17847,6 +17985,7 @@
 |------|----|
 |mariadb.com|[max_length_for_sort_data](https://mariadb.com/kb/en/server-system-variables/#max_length_for_sort_data)|
 |dev.mysql.com|[sysvar_max_length_for_sort_data](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_length_for_sort_data)|
+|dev.mysql.com|[sysvar_max_length_for_sort_data](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_length_for_sort_data)|
 
 ## max_long_data_size
 |name|value|
@@ -17889,13 +18028,14 @@
 |Scope|`global`|
 |Default value|`16382`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `1048576`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[max_prepared_stmt_count](https://mariadb.com/kb/en/server-system-variables/#max_prepared_stmt_count)|
 |dev.mysql.com|[sysvar_max_prepared_stmt_count](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_prepared_stmt_count)|
+|dev.mysql.com|[sysvar_max_prepared_stmt_count](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_prepared_stmt_count)|
 
 ## max_recursive_iterations
 |name|value|
@@ -17944,6 +18084,7 @@
 |------|----|
 |mariadb.com|[max_seeks_for_key](https://mariadb.com/kb/en/server-system-variables/#max_seeks_for_key)|
 |dev.mysql.com|[sysvar_max_seeks_for_key](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_seeks_for_key)|
+|dev.mysql.com|[sysvar_max_seeks_for_key](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_seeks_for_key)|
 
 ## max_session_mem_used
 |name|value|
@@ -17970,12 +18111,14 @@
 |Scope|`global`, `session`|
 |Default value|`1024`|
 |Dynamic|`true`|
+|Range|from: `4` to: `8388608`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[max_sort_length](https://mariadb.com/kb/en/server-system-variables/#max_sort_length)|
 |dev.mysql.com|[sysvar_max_sort_length](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_sort_length)|
+|dev.mysql.com|[sysvar_max_sort_length](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_sort_length)|
 
 ## max_sp_recursion_depth
 |name|value|
@@ -17993,6 +18136,7 @@
 |------|----|
 |mariadb.com|[max_sp_recursion_depth](https://mariadb.com/kb/en/server-system-variables/#max_sp_recursion_depth)|
 |dev.mysql.com|[sysvar_max_sp_recursion_depth](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_sp_recursion_depth)|
+|dev.mysql.com|[sysvar_max_sp_recursion_depth](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_sp_recursion_depth)|
 
 ## max_statement_time
 |name|value|
@@ -18019,6 +18163,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[max_tmp_tables](https://mariadb.com/kb/en/server-system-variables/#max_tmp_tables)|
+|dev.mysql.com|[sysvar_max_tmp_tables](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_tmp_tables)|
 
 ## max_user_connections
 |name|value|
@@ -18028,12 +18173,15 @@
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Default value|`0`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[max_user_connections](https://mariadb.com/kb/en/server-system-variables/#max_user_connections)|
 |dev.mysql.com|[sysvar_max_user_connections](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_user_connections)|
+|dev.mysql.com|[sysvar_max_user_connections](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_user_connections)|
 
 ## max_write_lock_count
 |name|value|
@@ -18042,12 +18190,15 @@
 |Command line|`--max-write-lock-count=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Dynamic|`true`|
+|Range|from: `1`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[max_write_lock_count](https://mariadb.com/kb/en/server-system-variables/#max_write_lock_count)|
 |dev.mysql.com|[sysvar_max_write_lock_count](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_write_lock_count)|
+|dev.mysql.com|[sysvar_max_write_lock_count](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_write_lock_count)|
 
 ## metadata_locks_cache_size
 |name|value|
@@ -18065,6 +18216,7 @@
 |------|----|
 |mariadb.com|[metadata_locks_cache_size](https://mariadb.com/kb/en/server-system-variables/#metadata_locks_cache_size)|
 |dev.mysql.com|[sysvar_metadata_locks_cache_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_metadata_locks_cache_size)|
+|dev.mysql.com|[sysvar_metadata_locks_cache_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_metadata_locks_cache_size)|
 
 ## metadata_locks_hash_instances
 |name|value|
@@ -18082,6 +18234,7 @@
 |------|----|
 |mariadb.com|[metadata_locks_hash_instances](https://mariadb.com/kb/en/server-system-variables/#metadata_locks_hash_instances)|
 |dev.mysql.com|[sysvar_metadata_locks_hash_instances](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_metadata_locks_hash_instances)|
+|dev.mysql.com|[sysvar_metadata_locks_hash_instances](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_metadata_locks_hash_instances)|
 
 ## min_examined_row_limit
 |name|value|
@@ -18099,6 +18252,7 @@
 |------|----|
 |mariadb.com|[min_examined_row_limit](https://mariadb.com/kb/en/server-system-variables/#min_examined_row_limit)|
 |dev.mysql.com|[sysvar_min_examined_row_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_min_examined_row_limit)|
+|dev.mysql.com|[sysvar_min_examined_row_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_min_examined_row_limit)|
 
 ## mrr_buffer_size
 |name|value|
@@ -18121,12 +18275,17 @@
 |----|-----|
 |Name|`multi_range_count`|
 |Command line|`--multi-range-count=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
 |Default value|`256`|
+|Dynamic|`true`|
+|Range|from: `1` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[multi_range_count](https://mariadb.com/kb/en/server-system-variables/#multi_range_count)|
+|dev.mysql.com|[sysvar_multi_range_count](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_multi_range_count)|
 
 ## mysql56_temporal_format
 |name|value|
@@ -18158,6 +18317,7 @@
 |------|----|
 |mariadb.com|[named_pipe](https://mariadb.com/kb/en/server-system-variables/#named_pipe)|
 |dev.mysql.com|[sysvar_named_pipe](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_named_pipe)|
+|dev.mysql.com|[sysvar_named_pipe](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_named_pipe)|
 
 ## net_buffer_length
 |name|value|
@@ -18175,6 +18335,7 @@
 |------|----|
 |mariadb.com|[net_buffer_length](https://mariadb.com/kb/en/server-system-variables/#net_buffer_length)|
 |dev.mysql.com|[sysvar_net_buffer_length](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_buffer_length)|
+|dev.mysql.com|[sysvar_net_buffer_length](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_net_buffer_length)|
 
 ## net_read_timeout
 |name|value|
@@ -18185,13 +18346,14 @@
 |Scope|`global`, `session`|
 |Default value|`30`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[net_read_timeout](https://mariadb.com/kb/en/server-system-variables/#net_read_timeout)|
 |dev.mysql.com|[sysvar_net_read_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout)|
+|dev.mysql.com|[sysvar_net_read_timeout](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_net_read_timeout)|
 
 ## net_retry_count
 |name|value|
@@ -18209,6 +18371,7 @@
 |------|----|
 |mariadb.com|[net_retry_count](https://mariadb.com/kb/en/server-system-variables/#net_retry_count)|
 |dev.mysql.com|[sysvar_net_retry_count](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_retry_count)|
+|dev.mysql.com|[sysvar_net_retry_count](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_net_retry_count)|
 
 ## net_write_timeout
 |name|value|
@@ -18219,13 +18382,14 @@
 |Scope|`global`, `session`|
 |Default value|`60`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `31536000`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[net_write_timeout](https://mariadb.com/kb/en/server-system-variables/#net_write_timeout)|
 |dev.mysql.com|[sysvar_net_write_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout)|
+|dev.mysql.com|[sysvar_net_write_timeout](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_net_write_timeout)|
 
 ## note_verbosity
 |name|value|
@@ -18249,19 +18413,23 @@
 |Name|`old`|
 |Command line|`--old[={OFF|ON}]`|
 |Type of variable|`boolean`|
+|Scope|`global`|
 |Default value|`OFF`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[old](https://mariadb.com/kb/en/server-system-variables/#old)|
 |dev.mysql.com|[sysvar_old](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_old)|
+|dev.mysql.com|[sysvar_old](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_old)|
 
 ## old_alter_table
 |name|value|
 |----|-----|
 |Name|`old_alter_table`|
 |Command line|`--old-alter-table[={OFF|ON}]`|
+|Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
@@ -18271,6 +18439,7 @@
 |------|----|
 |mariadb.com|[old_alter_table](https://mariadb.com/kb/en/server-system-variables/#old_alter_table)|
 |dev.mysql.com|[sysvar_old_alter_table](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_old_alter_table)|
+|dev.mysql.com|[sysvar_old_alter_table](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_old_alter_table)|
 
 ## old_mode
 |name|value|
@@ -18291,15 +18460,17 @@
 |name|value|
 |----|-----|
 |Name|`old_passwords`|
-|Type of variable|`boolean`|
+|Command line|`--old-passwords=value`|
 |Scope|`global`, `session`|
-|Default value|`OFF`|
+|Default value|`0`|
 |Dynamic|`true`|
+|Valid value(s)|`0`, `2`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[old_passwords](https://mariadb.com/kb/en/server-system-variables/#old_passwords)|
+|dev.mysql.com|[sysvar_old_passwords](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_old_passwords)|
 
 ## open_files_limit
 |name|value|
@@ -18308,6 +18479,7 @@
 |Command line|`--open-files-limit=count`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`5000, with possible adjustment`|
 |Dynamic|`false`|
 |Range|from: `0` to: `4294967295`|
 
@@ -18316,6 +18488,7 @@
 |------|----|
 |mariadb.com|[open_files_limit](https://mariadb.com/kb/en/server-system-variables/#open_files_limit)|
 |dev.mysql.com|[sysvar_open_files_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_open_files_limit)|
+|dev.mysql.com|[sysvar_open_files_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_open_files_limit)|
 
 ## optimizer_extra_pruning_depth
 |name|value|
@@ -18369,8 +18542,10 @@
 |name|value|
 |----|-----|
 |Name|`optimizer_prune_level`|
+|Command line|`--optimizer-prune-level=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`1`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1`|
 
@@ -18379,22 +18554,25 @@
 |------|----|
 |mariadb.com|[optimizer_prune_level](https://mariadb.com/kb/en/server-system-variables/#optimizer_prune_level)|
 |dev.mysql.com|[sysvar_optimizer_prune_level](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_prune_level)|
+|dev.mysql.com|[sysvar_optimizer_prune_level](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_optimizer_prune_level)|
 
 ## optimizer_search_depth
 |name|value|
 |----|-----|
 |Name|`optimizer_search_depth`|
+|Command line|`--optimizer-search-depth=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Default value|`62`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `62`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[optimizer_search_depth](https://mariadb.com/kb/en/server-system-variables/#optimizer_search_depth)|
 |dev.mysql.com|[sysvar_optimizer_search_depth](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_search_depth)|
+|dev.mysql.com|[sysvar_optimizer_search_depth](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_optimizer_search_depth)|
 
 ## optimizer_selectivity_sampling_limit
 |name|value|
@@ -18417,6 +18595,7 @@
 |----|-----|
 |Name|`optimizer_switch`|
 |Command line|`--optimizer-switch=value`|
+|Type of variable|`set`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
 
@@ -18425,12 +18604,14 @@
 |------|----|
 |mariadb.com|[optimizer_switch](https://mariadb.com/kb/en/server-system-variables/#optimizer_switch)|
 |dev.mysql.com|[sysvar_optimizer_switch](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)|
+|dev.mysql.com|[sysvar_optimizer_switch](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_optimizer_switch)|
 
 ## optimizer_trace
 |name|value|
 |----|-----|
 |Name|`optimizer_trace`|
 |Command line|`--optimizer-trace=value`|
+|Type of variable|`string`|
 |Scope|`global`, `session`|
 |Dynamic|`true`|
 
@@ -18439,6 +18620,7 @@
 |------|----|
 |mariadb.com|[optimizer_trace](https://mariadb.com/kb/en/server-system-variables/#optimizer_trace)|
 |dev.mysql.com|[sysvar_optimizer_trace](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace)|
+|dev.mysql.com|[sysvar_optimizer_trace](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_optimizer_trace)|
 
 ## optimizer_trace_max_mem_size
 |name|value|
@@ -18447,14 +18629,15 @@
 |Command line|`--optimizer-trace-max-mem-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`1048576`|
 |Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[optimizer_trace_max_mem_size](https://mariadb.com/kb/en/server-system-variables/#optimizer_trace_max_mem_size)|
 |dev.mysql.com|[sysvar_optimizer_trace_max_mem_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace_max_mem_size)|
+|dev.mysql.com|[sysvar_optimizer_trace_max_mem_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_optimizer_trace_max_mem_size)|
 
 ## optimizer_use_condition_selectivity
 |name|value|
@@ -18486,6 +18669,7 @@
 |------|----|
 |mariadb.com|[pid_file](https://mariadb.com/kb/en/server-system-variables/#pid_file)|
 |dev.mysql.com|[sysvar_pid_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_pid_file)|
+|dev.mysql.com|[sysvar_pid_file](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_pid_file)|
 
 ## plugin_dir
 |name|value|
@@ -18502,6 +18686,7 @@
 |------|----|
 |mariadb.com|[plugin_dir](https://mariadb.com/kb/en/server-system-variables/#plugin_dir)|
 |dev.mysql.com|[sysvar_plugin_dir](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_plugin_dir)|
+|dev.mysql.com|[sysvar_plugin_dir](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_plugin_dir)|
 
 ## plugin_maturity
 |name|value|
@@ -18536,6 +18721,7 @@
 |mariadb.com|[port](https://mariadb.com/kb/en/server-system-variables/#port)|
 |dev.mysql.com|[option_mysqld_port](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_port)|
 |dev.mysql.com|[sysvar_port](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_port)|
+|dev.mysql.com|[sysvar_port](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_port)|
 
 ## preload_buffer_size
 |name|value|
@@ -18553,6 +18739,7 @@
 |------|----|
 |mariadb.com|[preload_buffer_size](https://mariadb.com/kb/en/server-system-variables/#preload_buffer_size)|
 |dev.mysql.com|[sysvar_preload_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_preload_buffer_size)|
+|dev.mysql.com|[sysvar_preload_buffer_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_preload_buffer_size)|
 
 ## profiling
 |name|value|
@@ -18564,6 +18751,7 @@
 |------|----|
 |mariadb.com|[profiling](https://mariadb.com/kb/en/server-system-variables/#profiling)|
 |dev.mysql.com|[sysvar_profiling](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_profiling)|
+|dev.mysql.com|[sysvar_profiling](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_profiling)|
 
 ## profiling_history_size
 |name|value|
@@ -18575,6 +18763,7 @@
 |------|----|
 |mariadb.com|[profiling_history_size](https://mariadb.com/kb/en/server-system-variables/#profiling_history_size)|
 |dev.mysql.com|[sysvar_profiling_history_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_profiling_history_size)|
+|dev.mysql.com|[sysvar_profiling_history_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_profiling_history_size)|
 
 ## progress_report_time
 |name|value|
@@ -18607,6 +18796,7 @@
 |------|----|
 |mariadb.com|[protocol_version](https://mariadb.com/kb/en/server-system-variables/#protocol_version)|
 |dev.mysql.com|[sysvar_protocol_version](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_protocol_version)|
+|dev.mysql.com|[sysvar_protocol_version](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_protocol_version)|
 
 ## proxy_protocol_networks
 |name|value|
@@ -18636,11 +18826,13 @@
 |------|----|
 |mariadb.com|[proxy_user](https://mariadb.com/kb/en/server-system-variables/#proxy_user)|
 |dev.mysql.com|[sysvar_proxy_user](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_proxy_user)|
+|dev.mysql.com|[sysvar_proxy_user](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_proxy_user)|
 
 ## pseudo_slave_mode
 |name|value|
 |----|-----|
 |Name|`pseudo_slave_mode`|
+|Type of variable|`boolean`|
 |Scope|`session`|
 |Dynamic|`true`|
 
@@ -18649,6 +18841,7 @@
 |------|----|
 |mariadb.com|[pseudo_slave_mode](https://mariadb.com/kb/en/server-system-variables/#pseudo_slave_mode)|
 |dev.mysql.com|[sysvar_pseudo_slave_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_pseudo_slave_mode)|
+|dev.mysql.com|[sysvar_pseudo_slave_mode](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_pseudo_slave_mode)|
 
 ## pseudo_thread_id
 |name|value|
@@ -18665,6 +18858,7 @@
 |------|----|
 |mariadb.com|[pseudo_thread_id](https://mariadb.com/kb/en/server-system-variables/#pseudo_thread_id)|
 |dev.mysql.com|[sysvar_pseudo_thread_id](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_pseudo_thread_id)|
+|dev.mysql.com|[sysvar_pseudo_thread_id](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_pseudo_thread_id)|
 
 ## query_alloc_block_size
 |name|value|
@@ -18673,14 +18867,16 @@
 |Command line|`--query-alloc-block-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`8192`|
 |Dynamic|`true`|
-|Range|from: `1024`|
+|Range|from: `1024` to: `4294966272`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[query_alloc_block_size](https://mariadb.com/kb/en/server-system-variables/#query_alloc_block_size)|
 |dev.mysql.com|[sysvar_query_alloc_block_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_query_alloc_block_size)|
+|dev.mysql.com|[sysvar_query_alloc_block_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_query_alloc_block_size)|
 
 ## query_cache_limit
 |name|value|
@@ -18697,6 +18893,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[query_cache_limit](https://mariadb.com/kb/en/server-system-variables/#query_cache_limit)|
+|dev.mysql.com|[sysvar_query_cache_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_query_cache_limit)|
 
 ## query_cache_min_res_unit
 |name|value|
@@ -18707,12 +18904,12 @@
 |Scope|`global`|
 |Default value|`4096`|
 |Dynamic|`true`|
-|Range|from: `1024` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[query_cache_min_res_unit](https://mariadb.com/kb/en/server-system-variables/#query_cache_min_res_unit)|
+|dev.mysql.com|[sysvar_query_cache_min_res_unit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_query_cache_min_res_unit)|
 
 ## query_cache_size
 |name|value|
@@ -18721,14 +18918,14 @@
 |Command line|`--query-cache-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1M`|
 |Dynamic|`true`|
-|Valid value(s)|`0`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[query_cache_size](https://mariadb.com/kb/en/server-system-variables/#query_cache_size)|
+|dev.mysql.com|[sysvar_query_cache_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_query_cache_size)|
 
 ## query_cache_strip_comments
 |name|value|
@@ -18752,7 +18949,7 @@
 |Command line|`--query-cache-type=#`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`OFF`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Valid value(s)|`0`, `OFF`, `1`, `ON`, `2`, `DEMAND`|
 
@@ -18760,12 +18957,13 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[query_cache_type](https://mariadb.com/kb/en/server-system-variables/#query_cache_type)|
+|dev.mysql.com|[sysvar_query_cache_type](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_query_cache_type)|
 
 ## query_cache_wlock_invalidate
 |name|value|
 |----|-----|
 |Name|`query_cache_wlock_invalidate`|
-|Command line|`--query-cache-wlock-invalidate`|
+|Command line|`--query-cache-wlock-invalidate[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`OFF`|
@@ -18775,6 +18973,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[query_cache_wlock_invalidate](https://mariadb.com/kb/en/server-system-variables/#query_cache_wlock_invalidate)|
+|dev.mysql.com|[sysvar_query_cache_wlock_invalidate](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_query_cache_wlock_invalidate)|
 
 ## query_prealloc_size
 |name|value|
@@ -18783,13 +18982,16 @@
 |Command line|`--query-prealloc-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`8192`|
 |Dynamic|`true`|
+|Range|from: `8192`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[query_prealloc_size](https://mariadb.com/kb/en/server-system-variables/#query_prealloc_size)|
 |dev.mysql.com|[sysvar_query_prealloc_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_query_prealloc_size)|
+|dev.mysql.com|[sysvar_query_prealloc_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_query_prealloc_size)|
 
 ## rand_seed1
 |name|value|
@@ -18799,13 +19001,14 @@
 |Scope|`session`|
 |Default value|`N/A`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[rand_seed1](https://mariadb.com/kb/en/server-system-variables/#rand_seed1)|
 |dev.mysql.com|[sysvar_rand_seed1](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_rand_seed1)|
+|dev.mysql.com|[sysvar_rand_seed1](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_rand_seed1)|
 
 ## rand_seed2
 |name|value|
@@ -18817,6 +19020,7 @@
 |------|----|
 |mariadb.com|[rand_seed2](https://mariadb.com/kb/en/server-system-variables/#rand_seed2)|
 |dev.mysql.com|[sysvar_rand_seed2](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_rand_seed2)|
+|dev.mysql.com|[sysvar_rand_seed2](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_rand_seed2)|
 
 ## range_alloc_block_size
 |name|value|
@@ -18827,13 +19031,14 @@
 |Scope|`global`, `session`|
 |Default value|`4096`|
 |Dynamic|`true`|
-|Range|from: `4096`|
+|Range|from: `4096` to: `4294966272`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[range_alloc_block_size](https://mariadb.com/kb/en/server-system-variables/#range_alloc_block_size)|
 |dev.mysql.com|[sysvar_range_alloc_block_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_alloc_block_size)|
+|dev.mysql.com|[sysvar_range_alloc_block_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_range_alloc_block_size)|
 
 ## read_buffer_size
 |name|value|
@@ -18844,12 +19049,14 @@
 |Scope|`global`, `session`|
 |Default value|`131072`|
 |Dynamic|`true`|
+|Range|from: `8192` to: `2147479552`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[read_buffer_size](https://mariadb.com/kb/en/server-system-variables/#read_buffer_size)|
 |dev.mysql.com|[sysvar_read_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_read_buffer_size)|
+|dev.mysql.com|[sysvar_read_buffer_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_read_buffer_size)|
 
 ## read_only
 |name|value|
@@ -18866,6 +19073,7 @@
 |------|----|
 |mariadb.com|[read_only](https://mariadb.com/kb/en/server-system-variables/#read_only)|
 |dev.mysql.com|[sysvar_read_only](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_read_only)|
+|dev.mysql.com|[sysvar_read_only](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_read_only)|
 
 ## read_rnd_buffer_size
 |name|value|
@@ -18876,12 +19084,14 @@
 |Scope|`global`, `session`|
 |Default value|`262144`|
 |Dynamic|`true`|
+|Range|from: `1` to: `2147483647`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[read_rnd_buffer_size](https://mariadb.com/kb/en/server-system-variables/#read_rnd_buffer_size)|
 |dev.mysql.com|[sysvar_read_rnd_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_read_rnd_buffer_size)|
+|dev.mysql.com|[sysvar_read_rnd_buffer_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_read_rnd_buffer_size)|
 
 ## redirect_url
 |name|value|
@@ -18902,6 +19112,7 @@
 |name|value|
 |----|-----|
 |Name|`require_secure_transport`|
+|Command line|`--require-secure-transport[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`OFF`|
@@ -18912,6 +19123,7 @@
 |------|----|
 |mariadb.com|[require_secure_transport](https://mariadb.com/kb/en/server-system-variables/#require_secure_transport)|
 |dev.mysql.com|[sysvar_require_secure_transport](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_require_secure_transport)|
+|dev.mysql.com|[sysvar_require_secure_transport](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_require_secure_transport)|
 
 ## rowid_merge_buff_size
 |name|value|
@@ -18957,22 +19169,25 @@
 |name|value|
 |----|-----|
 |Name|`secure_auth`|
-|Command line|`--secure-auth`|
+|Command line|`--secure-auth[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`ON`|
 |Dynamic|`true`|
+|Valid value(s)|`ON`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[secure_auth](https://mariadb.com/kb/en/server-system-variables/#secure_auth)|
+|dev.mysql.com|[sysvar_secure_auth](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_secure_auth)|
 
 ## secure_file_priv
 |name|value|
 |----|-----|
 |Name|`secure_file_priv`|
 |Command line|`--secure-path-priv=path`|
+|Type of variable|`string`|
 |Scope|`global`|
 |Default value|`platform specific`|
 |Dynamic|`false`|
@@ -18983,6 +19198,7 @@
 |------|----|
 |mariadb.com|[secure_file_priv](https://mariadb.com/kb/en/server-system-variables/#secure_file_priv)|
 |dev.mysql.com|[sysvar_secure_file_priv](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_secure_file_priv)|
+|dev.mysql.com|[sysvar_secure_file_priv](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_secure_file_priv)|
 
 ## secure_timestamp
 |name|value|
@@ -19003,6 +19219,7 @@
 |name|value|
 |----|-----|
 |Name|`session_track_schema`|
+|Command line|`--session-track-schema[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`ON`|
@@ -19013,11 +19230,13 @@
 |------|----|
 |mariadb.com|[session_track_schema](https://mariadb.com/kb/en/server-system-variables/#session_track_schema)|
 |dev.mysql.com|[sysvar_session_track_schema](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_session_track_schema)|
+|dev.mysql.com|[sysvar_session_track_schema](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_session_track_schema)|
 
 ## session_track_state_change
 |name|value|
 |----|-----|
 |Name|`session_track_state_change`|
+|Command line|`--session-track-state-change[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`OFF`|
@@ -19028,6 +19247,7 @@
 |------|----|
 |mariadb.com|[session_track_state_change](https://mariadb.com/kb/en/server-system-variables/#session_track_state_change)|
 |dev.mysql.com|[sysvar_session_track_state_change](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_session_track_state_change)|
+|dev.mysql.com|[sysvar_session_track_state_change](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_session_track_state_change)|
 
 ## session_track_system_variables
 |name|value|
@@ -19044,6 +19264,7 @@
 |------|----|
 |mariadb.com|[session_track_system_variables](https://mariadb.com/kb/en/server-system-variables/#session_track_system_variables)|
 |dev.mysql.com|[sysvar_session_track_system_variables](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_session_track_system_variables)|
+|dev.mysql.com|[sysvar_session_track_system_variables](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_session_track_system_variables)|
 
 ## session_track_transaction_info
 |name|value|
@@ -19061,6 +19282,7 @@
 |------|----|
 |mariadb.com|[session_track_transaction_info](https://mariadb.com/kb/en/server-system-variables/#session_track_transaction_info)|
 |dev.mysql.com|[sysvar_session_track_transaction_info](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_session_track_transaction_info)|
+|dev.mysql.com|[sysvar_session_track_transaction_info](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_session_track_transaction_info)|
 
 ## shared_memory
 |name|value|
@@ -19077,6 +19299,7 @@
 |------|----|
 |mariadb.com|[shared_memory](https://mariadb.com/kb/en/server-system-variables/#shared_memory)|
 |dev.mysql.com|[sysvar_shared_memory](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_shared_memory)|
+|dev.mysql.com|[sysvar_shared_memory](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_shared_memory)|
 
 ## shared_memory_base_name
 |name|value|
@@ -19093,6 +19316,7 @@
 |------|----|
 |mariadb.com|[shared_memory_base_name](https://mariadb.com/kb/en/server-system-variables/#shared_memory_base_name)|
 |dev.mysql.com|[sysvar_shared_memory_base_name](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_shared_memory_base_name)|
+|dev.mysql.com|[sysvar_shared_memory_base_name](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_shared_memory_base_name)|
 
 ## skip_external_locking
 |name|value|
@@ -19109,6 +19333,7 @@
 |------|----|
 |mariadb.com|[skip_external_locking](https://mariadb.com/kb/en/server-system-variables/#skip_external_locking)|
 |dev.mysql.com|[sysvar_skip_external_locking](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_skip_external_locking)|
+|dev.mysql.com|[sysvar_skip_external_locking](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_skip_external_locking)|
 
 ## skip_grant_tables
 |name|value|
@@ -19139,6 +19364,7 @@
 |------|----|
 |mariadb.com|[skip_name_resolve](https://mariadb.com/kb/en/server-system-variables/#skip_name_resolve)|
 |dev.mysql.com|[sysvar_skip_name_resolve](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_skip_name_resolve)|
+|dev.mysql.com|[sysvar_skip_name_resolve](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_skip_name_resolve)|
 
 ## skip_networking
 |name|value|
@@ -19155,6 +19381,7 @@
 |------|----|
 |mariadb.com|[skip_networking](https://mariadb.com/kb/en/server-system-variables/#skip_networking)|
 |dev.mysql.com|[sysvar_skip_networking](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_skip_networking)|
+|dev.mysql.com|[sysvar_skip_networking](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_skip_networking)|
 
 ## skip_show_database
 |name|value|
@@ -19172,6 +19399,7 @@
 |mariadb.com|[skip_show_database](https://mariadb.com/kb/en/server-system-variables/#skip_show_database)|
 |dev.mysql.com|[option_mysqld_skip-show-database](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_skip-show-database)|
 |dev.mysql.com|[sysvar_skip_show_database](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_skip_show_database)|
+|dev.mysql.com|[sysvar_skip_show_database](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_skip_show_database)|
 
 ## slow_launch_time
 |name|value|
@@ -19189,6 +19417,7 @@
 |------|----|
 |mariadb.com|[slow_launch_time](https://mariadb.com/kb/en/server-system-variables/#slow_launch_time)|
 |dev.mysql.com|[sysvar_slow_launch_time](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_launch_time)|
+|dev.mysql.com|[sysvar_slow_launch_time](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_slow_launch_time)|
 
 ## slow_query_log
 |name|value|
@@ -19196,6 +19425,7 @@
 |Name|`slow_query_log`|
 |Command line|`--slow-query-log[={OFF|ON}]`|
 |Type of variable|`boolean`|
+|Scope|`global`|
 |Default value|`0`|
 |Dynamic|`true`|
 
@@ -19204,6 +19434,7 @@
 |------|----|
 |mariadb.com|[slow_query_log](https://mariadb.com/kb/en/server-system-variables/#slow_query_log)|
 |dev.mysql.com|[sysvar_slow_query_log](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log)|
+|dev.mysql.com|[sysvar_slow_query_log](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_slow_query_log)|
 
 ## slow_query_log_file
 |name|value|
@@ -19220,6 +19451,7 @@
 |------|----|
 |mariadb.com|[slow_query_log_file](https://mariadb.com/kb/en/server-system-variables/#slow_query_log_file)|
 |dev.mysql.com|[sysvar_slow_query_log_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_slow_query_log_file)|
+|dev.mysql.com|[sysvar_slow_query_log_file](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_slow_query_log_file)|
 
 ## socket
 |name|value|
@@ -19236,6 +19468,7 @@
 |mariadb.com|[socket](https://mariadb.com/kb/en/server-system-variables/#socket)|
 |dev.mysql.com|[option_mysqld_socket](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_socket)|
 |dev.mysql.com|[sysvar_socket](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_socket)|
+|dev.mysql.com|[sysvar_socket](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_socket)|
 
 ## sort_buffer_size
 |name|value|
@@ -19244,6 +19477,7 @@
 |Command line|`--sort-buffer-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
+|Default value|`262144`|
 |Dynamic|`true`|
 |Range|from: `32768`|
 
@@ -19252,6 +19486,7 @@
 |------|----|
 |mariadb.com|[sort_buffer_size](https://mariadb.com/kb/en/server-system-variables/#sort_buffer_size)|
 |dev.mysql.com|[sysvar_sort_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sort_buffer_size)|
+|dev.mysql.com|[sysvar_sort_buffer_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size)|
 
 ## sql_auto_is_null
 |name|value|
@@ -19267,6 +19502,7 @@
 |------|----|
 |mariadb.com|[sql_auto_is_null](https://mariadb.com/kb/en/server-system-variables/#sql_auto_is_null)|
 |dev.mysql.com|[sysvar_sql_auto_is_null](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_auto_is_null)|
+|dev.mysql.com|[sysvar_sql_auto_is_null](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_auto_is_null)|
 
 ## sql_big_selects
 |name|value|
@@ -19282,6 +19518,7 @@
 |------|----|
 |mariadb.com|[sql_big_selects](https://mariadb.com/kb/en/server-system-variables/#sql_big_selects)|
 |dev.mysql.com|[sysvar_sql_big_selects](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_big_selects)|
+|dev.mysql.com|[sysvar_sql_big_selects](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_big_selects)|
 
 ## sql_big_tables
 |name|value|
@@ -19312,6 +19549,7 @@
 |------|----|
 |mariadb.com|[sql_buffer_result](https://mariadb.com/kb/en/server-system-variables/#sql_buffer_result)|
 |dev.mysql.com|[sysvar_sql_buffer_result](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_buffer_result)|
+|dev.mysql.com|[sysvar_sql_buffer_result](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_buffer_result)|
 
 ## sql_if_exists
 |name|value|
@@ -19343,6 +19581,7 @@
 |------|----|
 |mariadb.com|[sql_log_off](https://mariadb.com/kb/en/server-system-variables/#sql_log_off)|
 |dev.mysql.com|[sysvar_sql_log_off](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_log_off)|
+|dev.mysql.com|[sysvar_sql_log_off](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_log_off)|
 
 ## sql_log_update
 |name|value|
@@ -19386,7 +19625,7 @@
 |Command line|`--sql-mode=name`|
 |Type of variable|`set`|
 |Scope|`global`, `session`|
-|Default value|`ONLY_FULL_GROUP_BY STRICT_TRANS_TABLES NO_ZERO_IN_DATE NO_ZERO_DATE ERROR_FOR_DIVISION_BY_ZERO NO_ENGINE_SUBSTITUTION`|
+|Default value|`1LY_FULL_GROUP_BY STRICT_TRANS_TABLES NO_ZERO_IN_DATE NO_ZERO_DATE ERROR_FOR_DIVISI1_BY_ZERO NO_AUTO_CREATE_USER NO_ENGINE_SUBSTITUTI1`|
 |Dynamic|`true`|
 |Valid value(s)|`ALLOW_INVALID_DATES`, `ANSI_QUOTES`, `ERROR_FOR_DIVISION_BY_ZERO`, `HIGH_NOT_PRECEDENCE`, `IGNORE_SPACE`, `NO_AUTO_VALUE_ON_ZERO`, `NO_BACKSLASH_ESCAPES`, `NO_DIR_IN_CREATE`, `NO_ENGINE_SUBSTITUTION`, `NO_UNSIGNED_SUBTRACTION`, `NO_ZERO_DATE`, `NO_ZERO_IN_DATE`, `ONLY_FULL_GROUP_BY`, `PAD_CHAR_TO_FULL_LENGTH`, `PIPES_AS_CONCAT`, `REAL_AS_FLOAT`, `STRICT_ALL_TABLES`, `STRICT_TRANS_TABLES`, `TIME_TRUNCATE_FRACTIONAL`|
 
@@ -19396,6 +19635,7 @@
 |mariadb.com|[sql_mode](https://mariadb.com/kb/en/server-system-variables/#sql_mode)|
 |dev.mysql.com|[option_mysqld_sql-mode](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_sql-mode)|
 |dev.mysql.com|[sysvar_sql_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_mode)|
+|dev.mysql.com|[sysvar_sql_mode](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_mode)|
 
 ## sql_notes
 |name|value|
@@ -19411,6 +19651,7 @@
 |------|----|
 |mariadb.com|[sql_notes](https://mariadb.com/kb/en/server-system-variables/#sql_notes)|
 |dev.mysql.com|[sysvar_sql_notes](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_notes)|
+|dev.mysql.com|[sysvar_sql_notes](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_notes)|
 
 ## sql_quote_show_create
 |name|value|
@@ -19426,6 +19667,7 @@
 |------|----|
 |mariadb.com|[sql_quote_show_create](https://mariadb.com/kb/en/server-system-variables/#sql_quote_show_create)|
 |dev.mysql.com|[sysvar_sql_quote_show_create](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_quote_show_create)|
+|dev.mysql.com|[sysvar_sql_quote_show_create](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_quote_show_create)|
 
 ## sql_safe_updates
 |name|value|
@@ -19441,6 +19683,7 @@
 |------|----|
 |mariadb.com|[sql_safe_updates](https://mariadb.com/kb/en/server-system-variables/#sql_safe_updates)|
 |dev.mysql.com|[sysvar_sql_safe_updates](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_safe_updates)|
+|dev.mysql.com|[sysvar_sql_safe_updates](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_safe_updates)|
 
 ## sql_select_limit
 |name|value|
@@ -19457,6 +19700,7 @@
 |------|----|
 |mariadb.com|[sql_select_limit](https://mariadb.com/kb/en/server-system-variables/#sql_select_limit)|
 |dev.mysql.com|[sysvar_sql_select_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_select_limit)|
+|dev.mysql.com|[sysvar_sql_select_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_select_limit)|
 
 ## sql_warnings
 |name|value|
@@ -19472,6 +19716,7 @@
 |------|----|
 |mariadb.com|[sql_warnings](https://mariadb.com/kb/en/server-system-variables/#sql_warnings)|
 |dev.mysql.com|[sysvar_sql_warnings](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sql_warnings)|
+|dev.mysql.com|[sysvar_sql_warnings](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sql_warnings)|
 
 ## storage_engine
 |name|value|
@@ -19507,12 +19752,14 @@
 |Scope|`global`|
 |Default value|`256`|
 |Dynamic|`true`|
+|Range|from: `16` to: `524288`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[stored_program_cache](https://mariadb.com/kb/en/server-system-variables/#stored_program_cache)|
 |dev.mysql.com|[sysvar_stored_program_cache](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_stored_program_cache)|
+|dev.mysql.com|[sysvar_stored_program_cache](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_stored_program_cache)|
 
 ## strict_password_validation
 |name|value|
@@ -19533,16 +19780,17 @@
 |name|value|
 |----|-----|
 |Name|`sync_frm`|
-|Command line|`--sync-frm`|
+|Command line|`--sync-frm[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`TRUE`|
+|Default value|`1`|
 |Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[sync_frm](https://mariadb.com/kb/en/server-system-variables/#sync_frm)|
+|dev.mysql.com|[sysvar_sync_frm](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sync_frm)|
 
 ## system_time_zone
 |name|value|
@@ -19557,6 +19805,7 @@
 |------|----|
 |mariadb.com|[system_time_zone](https://mariadb.com/kb/en/server-system-variables/#system_time_zone)|
 |dev.mysql.com|[sysvar_system_time_zone](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_system_time_zone)|
+|dev.mysql.com|[sysvar_system_time_zone](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_system_time_zone)|
 
 ## table_definition_cache
 |name|value|
@@ -19565,6 +19814,7 @@
 |Command line|`--table-definition-cache=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`true`|
 |Range|from: `400` to: `524288`|
 
@@ -19573,6 +19823,7 @@
 |------|----|
 |mariadb.com|[table_definition_cache](https://mariadb.com/kb/en/server-system-variables/#table_definition_cache)|
 |dev.mysql.com|[sysvar_table_definition_cache](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_table_definition_cache)|
+|dev.mysql.com|[sysvar_table_definition_cache](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache)|
 
 ## table_lock_wait_timeout
 |name|value|
@@ -19597,14 +19848,16 @@
 |Command line|`--table-open-cache=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`2000`|
 |Dynamic|`true`|
-|Range|from: `1`|
+|Range|from: `1` to: `524288`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[table_open_cache](https://mariadb.com/kb/en/server-system-variables/#table_open_cache)|
 |dev.mysql.com|[sysvar_table_open_cache](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_table_open_cache)|
+|dev.mysql.com|[sysvar_table_open_cache](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache)|
 
 ## table_open_cache_instances
 |name|value|
@@ -19613,6 +19866,7 @@
 |Command line|`--table-open-cache-instances=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`16`|
 |Dynamic|`false`|
 |Range|from: `1` to: `64`|
 
@@ -19621,6 +19875,7 @@
 |------|----|
 |mariadb.com|[table_open_cache_instances](https://mariadb.com/kb/en/server-system-variables/#table_open_cache_instances)|
 |dev.mysql.com|[sysvar_table_open_cache_instances](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_table_open_cache_instances)|
+|dev.mysql.com|[sysvar_table_open_cache_instances](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances)|
 
 ## table_type
 |name|value|
@@ -19702,6 +19957,7 @@
 |Command line|`--thread-cache-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`-1 (signifies autosizing; do not assign this literal value)`|
 |Dynamic|`true`|
 |Range|from: `0` to: `16384`|
 
@@ -19710,6 +19966,7 @@
 |------|----|
 |mariadb.com|[thread_cache_size](https://mariadb.com/kb/en/server-system-variables/#thread_cache_size)|
 |dev.mysql.com|[sysvar_thread_cache_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_cache_size)|
+|dev.mysql.com|[sysvar_thread_cache_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size)|
 
 ## thread_concurrency
 |name|value|
@@ -19742,6 +19999,7 @@
 |------|----|
 |mariadb.com|[thread_stack](https://mariadb.com/kb/en/server-system-variables/#thread_stack)|
 |dev.mysql.com|[sysvar_thread_stack](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_stack)|
+|dev.mysql.com|[sysvar_thread_stack](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack)|
 
 ## time_format
 |name|value|
@@ -19752,6 +20010,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[time_format](https://mariadb.com/kb/en/server-system-variables/#time_format)|
+|dev.mysql.com|[sysvar_time_format](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_time_format)|
 
 ## time_zone
 |name|value|
@@ -19767,6 +20026,7 @@
 |------|----|
 |mariadb.com|[time_zone](https://mariadb.com/kb/en/server-system-variables/#time_zone)|
 |dev.mysql.com|[sysvar_time_zone](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_time_zone)|
+|dev.mysql.com|[sysvar_time_zone](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_time_zone)|
 
 ## timed_mutexes
 |name|value|
@@ -19798,6 +20058,7 @@
 |------|----|
 |mariadb.com|[timestamp](https://mariadb.com/kb/en/server-system-variables/#timestamp)|
 |dev.mysql.com|[sysvar_timestamp](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_timestamp)|
+|dev.mysql.com|[sysvar_timestamp](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_timestamp)|
 
 ## tmp_disk_table_size
 |name|value|
@@ -19835,12 +20096,14 @@
 |Scope|`global`, `session`|
 |Default value|`16777216`|
 |Dynamic|`true`|
+|Range|from: `1024` to: `1.844674407371E+19`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[tmp_table_size](https://mariadb.com/kb/en/server-system-variables/#tmp_table_size)|
 |dev.mysql.com|[sysvar_tmp_table_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size)|
+|dev.mysql.com|[sysvar_tmp_table_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)|
 
 ## tmpdir
 |name|value|
@@ -19857,6 +20120,7 @@
 |mariadb.com|[tmpdir](https://mariadb.com/kb/en/server-system-variables/#tmpdir)|
 |dev.mysql.com|[option_mysqld_tmpdir](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_tmpdir)|
 |dev.mysql.com|[sysvar_tmpdir](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmpdir)|
+|dev.mysql.com|[sysvar_tmpdir](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmpdir)|
 
 ## transaction_alloc_block_size
 |name|value|
@@ -19867,13 +20131,14 @@
 |Scope|`global`, `session`|
 |Default value|`8192`|
 |Dynamic|`true`|
-|Range|from: `1024`|
+|Range|from: `1024` to: `131072`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[transaction_alloc_block_size](https://mariadb.com/kb/en/server-system-variables/#transaction_alloc_block_size)|
 |dev.mysql.com|[sysvar_transaction_alloc_block_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_alloc_block_size)|
+|dev.mysql.com|[sysvar_transaction_alloc_block_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_transaction_alloc_block_size)|
 
 ## transaction_isolation
 |name|value|
@@ -19881,9 +20146,7 @@
 |Name|`transaction_isolation`|
 |Command line|`--transaction-isolation=name`|
 |Type of variable|`enumeration`|
-|Scope|`global`, `session`|
 |Default value|`REPEATABLE-READ`|
-|Dynamic|`true`|
 |Valid value(s)|`READ-UNCOMMITTED`, `READ-COMMITTED`, `REPEATABLE-READ`, `SERIALIZABLE`|
 
 ### Documentation(s)
@@ -19892,6 +20155,7 @@
 |mariadb.com|[transaction_isolation](https://mariadb.com/kb/en/server-system-variables/#transaction_isolation)|
 |dev.mysql.com|[option_mysqld_transaction-isolation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_transaction-isolation)|
 |dev.mysql.com|[sysvar_transaction_isolation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation)|
+|dev.mysql.com|[sysvar_transaction_isolation](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_transaction_isolation)|
 
 ## transaction_prealloc_size
 |name|value|
@@ -19902,13 +20166,14 @@
 |Scope|`global`, `session`|
 |Default value|`4096`|
 |Dynamic|`true`|
-|Range|from: `1024`|
+|Range|from: `1024` to: `131072`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[transaction_prealloc_size](https://mariadb.com/kb/en/server-system-variables/#transaction_prealloc_size)|
 |dev.mysql.com|[sysvar_transaction_prealloc_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_prealloc_size)|
+|dev.mysql.com|[sysvar_transaction_prealloc_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_transaction_prealloc_size)|
 
 ## transaction_read_only
 |name|value|
@@ -19916,9 +20181,7 @@
 |Name|`transaction_read_only`|
 |Command line|`--transaction-read-only[={OFF|ON}]`|
 |Type of variable|`boolean`|
-|Scope|`global`, `session`|
 |Default value|`OFF`|
-|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -19926,12 +20189,12 @@
 |mariadb.com|[transaction_read_only](https://mariadb.com/kb/en/server-system-variables/#transaction_read_only)|
 |dev.mysql.com|[option_mysqld_transaction-read-only](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_transaction-read-only)|
 |dev.mysql.com|[sysvar_transaction_read_only](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_read_only)|
+|dev.mysql.com|[sysvar_transaction_read_only](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_transaction_read_only)|
 
 ## tx_isolation
 |name|value|
 |----|-----|
 |Name|`tx_isolation`|
-|Command line|`--transaction-isolation=name`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
 |Default value|`REPEATABLE-READ`|
@@ -19942,12 +20205,12 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[tx_isolation](https://mariadb.com/kb/en/server-system-variables/#tx_isolation)|
+|dev.mysql.com|[sysvar_tx_isolation](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tx_isolation)|
 
 ## tx_read_only
 |name|value|
 |----|-----|
 |Name|`tx_read_only`|
-|Command line|`--transaction-read-only=#`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`OFF`|
@@ -19957,6 +20220,7 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[tx_read_only](https://mariadb.com/kb/en/server-system-variables/#tx_read_only)|
+|dev.mysql.com|[sysvar_tx_read_only](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tx_read_only)|
 
 ## unique_checks
 |name|value|
@@ -19972,11 +20236,13 @@
 |------|----|
 |mariadb.com|[unique_checks](https://mariadb.com/kb/en/server-system-variables/#unique_checks)|
 |dev.mysql.com|[sysvar_unique_checks](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_unique_checks)|
+|dev.mysql.com|[sysvar_unique_checks](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_unique_checks)|
 
 ## updatable_views_with_limit
 |name|value|
 |----|-----|
 |Name|`updatable_views_with_limit`|
+|Command line|`--updatable-views-with-limit[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
 |Default value|`1`|
@@ -19987,6 +20253,7 @@
 |------|----|
 |mariadb.com|[updatable_views_with_limit](https://mariadb.com/kb/en/server-system-variables/#updatable_views_with_limit)|
 |dev.mysql.com|[sysvar_updatable_views_with_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_updatable_views_with_limit)|
+|dev.mysql.com|[sysvar_updatable_views_with_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_updatable_views_with_limit)|
 
 ## use_stat_tables
 |name|value|
@@ -20013,6 +20280,7 @@
 |------|----|
 |mariadb.com|[version](https://mariadb.com/kb/en/server-system-variables/#version)|
 |dev.mysql.com|[sysvar_version](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_version)|
+|dev.mysql.com|[sysvar_version](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_version)|
 
 ## version_comment
 |name|value|
@@ -20027,6 +20295,7 @@
 |------|----|
 |mariadb.com|[version_comment](https://mariadb.com/kb/en/server-system-variables/#version_comment)|
 |dev.mysql.com|[sysvar_version_comment](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_version_comment)|
+|dev.mysql.com|[sysvar_version_comment](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_version_comment)|
 
 ## version_compile_machine
 |name|value|
@@ -20041,6 +20310,7 @@
 |------|----|
 |mariadb.com|[version_compile_machine](https://mariadb.com/kb/en/server-system-variables/#version_compile_machine)|
 |dev.mysql.com|[sysvar_version_compile_machine](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_version_compile_machine)|
+|dev.mysql.com|[sysvar_version_compile_machine](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_version_compile_machine)|
 
 ## version_compile_os
 |name|value|
@@ -20055,6 +20325,7 @@
 |------|----|
 |mariadb.com|[version_compile_os](https://mariadb.com/kb/en/server-system-variables/#version_compile_os)|
 |dev.mysql.com|[sysvar_version_compile_os](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_version_compile_os)|
+|dev.mysql.com|[sysvar_version_compile_os](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_version_compile_os)|
 
 ## version_malloc_library
 |name|value|
@@ -20098,6 +20369,7 @@
 |------|----|
 |mariadb.com|[wait_timeout](https://mariadb.com/kb/en/server-system-variables/#wait_timeout)|
 |dev.mysql.com|[sysvar_wait_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout)|
+|dev.mysql.com|[sysvar_wait_timeout](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_wait_timeout)|
 
 ## warning_count
 |name|value|
@@ -20109,6 +20381,7 @@
 |------|----|
 |mariadb.com|[warning_count](https://mariadb.com/kb/en/server-system-variables/#warning_count)|
 |dev.mysql.com|[sysvar_warning_count](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_warning_count)|
+|dev.mysql.com|[sysvar_warning_count](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_warning_count)|
 
 ## simple_password_check_digits
 |name|value|
@@ -22502,6 +22775,7 @@
 |------|----|
 |mariadb.com|[have_openssl](https://mariadb.com/kb/en/ssltls-system-variables/#have_openssl)|
 |dev.mysql.com|[sysvar_have_openssl](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_openssl)|
+|dev.mysql.com|[sysvar_have_openssl](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_openssl)|
 
 ## have_ssl
 |name|value|
@@ -22517,6 +22791,7 @@
 |------|----|
 |mariadb.com|[have_ssl](https://mariadb.com/kb/en/ssltls-system-variables/#have_ssl)|
 |dev.mysql.com|[sysvar_have_ssl](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_ssl)|
+|dev.mysql.com|[sysvar_have_ssl](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_ssl)|
 
 ## ssl_ca
 |name|value|
@@ -22526,40 +22801,48 @@
 |Type of variable|`file name`|
 |Scope|`global`|
 |Default value|`NULL`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[ssl_ca](https://mariadb.com/kb/en/ssltls-system-variables/#ssl_ca)|
 |dev.mysql.com|[sysvar_ssl_ca](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_ca)|
+|dev.mysql.com|[sysvar_ssl_ca](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ssl_ca)|
 
 ## ssl_capath
 |name|value|
 |----|-----|
 |Name|`ssl_capath`|
+|Command line|`--ssl-capath=dir_name`|
 |Type of variable|`directory name`|
 |Scope|`global`|
 |Default value|`NULL`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[ssl_capath](https://mariadb.com/kb/en/ssltls-system-variables/#ssl_capath)|
 |dev.mysql.com|[sysvar_ssl_capath](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_capath)|
+|dev.mysql.com|[sysvar_ssl_capath](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ssl_capath)|
 
 ## ssl_cert
 |name|value|
 |----|-----|
 |Name|`ssl_cert`|
+|Command line|`--ssl-cert=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
 |Default value|`NULL`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[ssl_cert](https://mariadb.com/kb/en/ssltls-system-variables/#ssl_cert)|
 |dev.mysql.com|[sysvar_ssl_cert](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_cert)|
+|dev.mysql.com|[sysvar_ssl_cert](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ssl_cert)|
 
 ## ssl_cipher
 |name|value|
@@ -22569,65 +22852,81 @@
 |Type of variable|`string`|
 |Scope|`global`|
 |Default value|`NULL`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[ssl_cipher](https://mariadb.com/kb/en/ssltls-system-variables/#ssl_cipher)|
 |dev.mysql.com|[sysvar_ssl_cipher](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_cipher)|
+|dev.mysql.com|[sysvar_ssl_cipher](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ssl_cipher)|
 
 ## ssl_crl
 |name|value|
 |----|-----|
 |Name|`ssl_crl`|
+|Command line|`--ssl-crl=file_name`|
 |Type of variable|`file name`|
 |Scope|`global`|
 |Default value|`NULL`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[ssl_crl](https://mariadb.com/kb/en/ssltls-system-variables/#ssl_crl)|
 |dev.mysql.com|[sysvar_ssl_crl](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_crl)|
+|dev.mysql.com|[sysvar_ssl_crl](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ssl_crl)|
 
 ## ssl_crlpath
 |name|value|
 |----|-----|
 |Name|`ssl_crlpath`|
+|Command line|`--ssl-crlpath=dir_name`|
 |Type of variable|`directory name`|
 |Scope|`global`|
 |Default value|`NULL`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[ssl_crlpath](https://mariadb.com/kb/en/ssltls-system-variables/#ssl_crlpath)|
 |dev.mysql.com|[sysvar_ssl_crlpath](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_crlpath)|
+|dev.mysql.com|[sysvar_ssl_crlpath](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ssl_crlpath)|
 
 ## ssl_key
 |name|value|
 |----|-----|
 |Name|`ssl_key`|
+|Command line|`--ssl-key=file_name`|
+|Type of variable|`file name`|
 |Scope|`global`|
 |Default value|`NULL`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[ssl_key](https://mariadb.com/kb/en/ssltls-system-variables/#ssl_key)|
 |dev.mysql.com|[sysvar_ssl_key](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_key)|
+|dev.mysql.com|[sysvar_ssl_key](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ssl_key)|
 
 ## tls_version
 |name|value|
 |----|-----|
 |Name|`tls_version`|
+|Command line|`--tls-version=protocol_list`|
+|Type of variable|`string`|
 |Scope|`global`|
+|Dynamic|`false`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[tls_version](https://mariadb.com/kb/en/ssltls-system-variables/#tls_version)|
 |dev.mysql.com|[sysvar_tls_version](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tls_version)|
+|dev.mysql.com|[sysvar_tls_version](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tls_version)|
 
 ## version_ssl_library
 |name|value|
@@ -22777,6 +23076,7 @@
 |------|----|
 |mariadb.com|[thread_handling](https://mariadb.com/kb/en/thread-pool-system-status-variables/#thread_handling)|
 |dev.mysql.com|[sysvar_thread_handling](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_handling)|
+|dev.mysql.com|[sysvar_thread_handling](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_handling)|
 
 ## thread_pool_dedicated_listener
 |name|value|
@@ -22869,17 +23169,19 @@
 |name|value|
 |----|-----|
 |Name|`thread_pool_prio_kickup_timer`|
+|Command line|`--thread-pool-prio-kickup-timer=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`1000`|
 |Dynamic|`true`|
-|Range|from: `0`|
+|Range|from: `0` to: `4294967294`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[thread_pool_prio_kickup_timer](https://mariadb.com/kb/en/thread-pool-system-status-variables/#thread_pool_prio_kickup_timer)|
 |dev.mysql.com|[sysvar_thread_pool_prio_kickup_timer](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_prio_kickup_timer)|
+|dev.mysql.com|[sysvar_thread_pool_prio_kickup_timer](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_pool_prio_kickup_timer)|
 
 ## thread_pool_priority
 |name|value|
@@ -22903,13 +23205,16 @@
 |Command line|`--thread-pool-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Range|from: `1`|
+|Default value|`16`|
+|Dynamic|`false`|
+|Range|from: `1` to: `64`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[thread_pool_size](https://mariadb.com/kb/en/thread-pool-system-status-variables/#thread_pool_size)|
 |dev.mysql.com|[sysvar_thread_pool_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_size)|
+|dev.mysql.com|[sysvar_thread_pool_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_pool_size)|
 
 ## thread_pool_stall_limit
 |name|value|
@@ -22918,13 +23223,16 @@
 |Command line|`--thread-pool-stall-limit=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
+|Default value|`6`|
 |Dynamic|`true`|
+|Range|from: `4` to: `600`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[thread_pool_stall_limit](https://mariadb.com/kb/en/thread-pool-system-status-variables/#thread_pool_stall_limit)|
 |dev.mysql.com|[sysvar_thread_pool_stall_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_stall_limit)|
+|dev.mysql.com|[sysvar_thread_pool_stall_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_pool_stall_limit)|
 
 ## Threadpool_idle_threads
 |name|value|
@@ -36455,6 +36763,7 @@
 |------|----|
 |dev.mysql.com|[sysvar_gtid_executed](https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html#sysvar_gtid_executed)|
 |dev.mysql.com|[sysvar_gtid_executed](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_gtid_executed)|
+|dev.mysql.com|[sysvar_gtid_executed](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_gtid_executed)|
 
 ## gtid_executed_compression_period
 |name|value|
@@ -37440,6 +37749,7 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_debug](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_debug)|
 |dev.mysql.com|[sysvar_debug](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_debug)|
+|dev.mysql.com|[sysvar_debug](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_debug)|
 
 ## debug_sync_timeout
 |name|value|
@@ -38882,6 +39192,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_authentication_windows_log_level](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_authentication_windows_log_level)|
+|dev.mysql.com|[sysvar_authentication_windows_log_level](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_authentication_windows_log_level)|
 
 ## authentication_windows_use_principal_name
 |name|value|
@@ -38897,6 +39208,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_authentication_windows_use_principal_name](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_authentication_windows_use_principal_name)|
+|dev.mysql.com|[sysvar_authentication_windows_use_principal_name](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_authentication_windows_use_principal_name)|
 
 ## auto_generate_certs
 |name|value|
@@ -38912,6 +39224,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_auto_generate_certs](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_auto_generate_certs)|
+|dev.mysql.com|[sysvar_auto_generate_certs](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_auto_generate_certs)|
 
 ## avoid_temporal_upgrade
 |name|value|
@@ -38927,6 +39240,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_avoid_temporal_upgrade](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_avoid_temporal_upgrade)|
+|dev.mysql.com|[sysvar_avoid_temporal_upgrade](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_avoid_temporal_upgrade)|
 
 ## build_id
 |name|value|
@@ -39015,6 +39329,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_check_proxy_users](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_check_proxy_users)|
+|dev.mysql.com|[sysvar_check_proxy_users](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_check_proxy_users)|
 
 ## component_scheduler.enabled
 |name|value|
@@ -39100,7 +39415,7 @@
 |Command line|`--default-authentication-plugin=plugin_name`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`caching_sha2_password`|
+|Default value|`mysql_native_password`|
 |Dynamic|`false`|
 |Valid value(s)|`mysql_native_password`, `sha256_password`, `caching_sha2_password`|
 
@@ -39108,6 +39423,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_default_authentication_plugin](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin)|
+|dev.mysql.com|[sysvar_default_authentication_plugin](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_default_authentication_plugin)|
 
 ## default_collation_for_utf8mb4
 |name|value|
@@ -39152,6 +39468,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_disabled_storage_engines](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_disabled_storage_engines)|
+|dev.mysql.com|[sysvar_disabled_storage_engines](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_disabled_storage_engines)|
 
 ## dragnet.log_error_filter_rules
 |name|value|
@@ -39213,6 +39530,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_end_markers_in_json](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_end_markers_in_json)|
+|dev.mysql.com|[sysvar_end_markers_in_json](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_end_markers_in_json)|
 
 ## explain_format
 |name|value|
@@ -39289,6 +39607,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_have_statement_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_have_statement_timeout)|
+|dev.mysql.com|[sysvar_have_statement_timeout](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_have_statement_timeout)|
 
 ## histogram_generation_max_mem_size
 |name|value|
@@ -39337,6 +39656,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_internal_tmp_disk_storage_engine](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_internal_tmp_disk_storage_engine)|
+|dev.mysql.com|[sysvar_internal_tmp_disk_storage_engine](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_internal_tmp_disk_storage_engine)|
 
 ## internal_tmp_mem_storage_engine
 |name|value|
@@ -39391,7 +39711,6 @@
 |Command line|`--log-error-verbosity=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`2`|
 |Dynamic|`true`|
 |Range|from: `1` to: `3`|
 
@@ -39399,6 +39718,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_log_error_verbosity](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error_verbosity)|
+|dev.mysql.com|[sysvar_log_error_verbosity](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_error_verbosity)|
 
 ## log_slow_extra
 |name|value|
@@ -39422,13 +39742,13 @@
 |Command line|`--log-syslog[={OFF|ON}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`ON (when error logging to system log is enabled)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_log_syslog](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_syslog)|
+|dev.mysql.com|[sysvar_log_syslog](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_syslog)|
 
 ## log_syslog_facility
 |name|value|
@@ -39444,6 +39764,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_log_syslog_facility](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_syslog_facility)|
+|dev.mysql.com|[sysvar_log_syslog_facility](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_syslog_facility)|
 
 ## log_syslog_include_pid
 |name|value|
@@ -39459,6 +39780,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_log_syslog_include_pid](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_syslog_include_pid)|
+|dev.mysql.com|[sysvar_log_syslog_include_pid](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_syslog_include_pid)|
 
 ## log_syslog_tag
 |name|value|
@@ -39474,6 +39796,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_log_syslog_tag](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_syslog_tag)|
+|dev.mysql.com|[sysvar_log_syslog_tag](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_syslog_tag)|
 
 ## log_timestamps
 |name|value|
@@ -39490,6 +39813,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_log_timestamps](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_timestamps)|
+|dev.mysql.com|[sysvar_log_timestamps](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_timestamps)|
 
 ## log_throttle_queries_not_using_indexes
 |name|value|
@@ -39506,6 +39830,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_log_throttle_queries_not_using_indexes](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_throttle_queries_not_using_indexes)|
+|dev.mysql.com|[sysvar_log_throttle_queries_not_using_indexes](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_throttle_queries_not_using_indexes)|
 
 ## mandatory_roles
 |name|value|
@@ -39537,6 +39862,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_max_execution_time](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time)|
+|dev.mysql.com|[sysvar_max_execution_time](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)|
 
 ## max_points_in_geometry
 |name|value|
@@ -39553,6 +39879,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_max_points_in_geometry](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_points_in_geometry)|
+|dev.mysql.com|[sysvar_max_points_in_geometry](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_points_in_geometry)|
 
 ## mecab_rc_file
 |name|value|
@@ -39567,6 +39894,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_mecab_rc_file](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_mecab_rc_file)|
+|dev.mysql.com|[sysvar_mecab_rc_file](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_mecab_rc_file)|
 
 ## mysql_native_password_proxy_users
 |name|value|
@@ -39582,6 +39910,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_mysql_native_password_proxy_users](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_mysql_native_password_proxy_users)|
+|dev.mysql.com|[sysvar_mysql_native_password_proxy_users](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_mysql_native_password_proxy_users)|
 
 ## named_pipe_full_access_group
 |name|value|
@@ -39598,6 +39927,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_named_pipe_full_access_group](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_named_pipe_full_access_group)|
+|dev.mysql.com|[sysvar_named_pipe_full_access_group](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_named_pipe_full_access_group)|
 
 ## new
 |name|value|
@@ -39613,6 +39943,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_new](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_new)|
+|dev.mysql.com|[sysvar_new](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_new)|
 
 ## ngram_token_size
 |name|value|
@@ -39629,6 +39960,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_ngram_token_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ngram_token_size)|
+|dev.mysql.com|[sysvar_ngram_token_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_ngram_token_size)|
 
 ## offline_mode
 |name|value|
@@ -39644,6 +39976,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_offline_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_offline_mode)|
+|dev.mysql.com|[sysvar_offline_mode](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_offline_mode)|
 
 ## optimizer_trace_features
 |name|value|
@@ -39658,6 +39991,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_optimizer_trace_features](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace_features)|
+|dev.mysql.com|[sysvar_optimizer_trace_features](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_optimizer_trace_features)|
 
 ## optimizer_trace_limit
 |name|value|
@@ -39674,6 +40008,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_optimizer_trace_limit](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace_limit)|
+|dev.mysql.com|[sysvar_optimizer_trace_limit](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_optimizer_trace_limit)|
 
 ## optimizer_trace_offset
 |name|value|
@@ -39690,6 +40025,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_optimizer_trace_offset](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_trace_offset)|
+|dev.mysql.com|[sysvar_optimizer_trace_offset](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_optimizer_trace_offset)|
 
 ## parser_max_mem_size
 |name|value|
@@ -39705,6 +40041,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_parser_max_mem_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_parser_max_mem_size)|
+|dev.mysql.com|[sysvar_parser_max_mem_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_parser_max_mem_size)|
 
 ## partial_revokes
 |name|value|
@@ -39864,7 +40201,6 @@
 |Command line|`--range-optimizer-max-mem-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`8388608`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.844674407371E+19`|
 
@@ -39872,6 +40208,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_range_optimizer_max_mem_size](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size)|
+|dev.mysql.com|[sysvar_range_optimizer_max_mem_size](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size)|
 
 ## rbr_exec_mode
 |name|value|
@@ -39887,6 +40224,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_rbr_exec_mode](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_rbr_exec_mode)|
+|dev.mysql.com|[sysvar_rbr_exec_mode](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_rbr_exec_mode)|
 
 ## regexp_stack_limit
 |name|value|
@@ -40043,6 +40381,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_session_track_gtids](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_session_track_gtids)|
+|dev.mysql.com|[sysvar_session_track_gtids](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_session_track_gtids)|
 
 ## sha256_password_auto_generate_rsa_keys
 |name|value|
@@ -40058,6 +40397,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_sha256_password_auto_generate_rsa_keys](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sha256_password_auto_generate_rsa_keys)|
+|dev.mysql.com|[sysvar_sha256_password_auto_generate_rsa_keys](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sha256_password_auto_generate_rsa_keys)|
 
 ## sha256_password_private_key_path
 |name|value|
@@ -40073,6 +40413,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_sha256_password_private_key_path](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sha256_password_private_key_path)|
+|dev.mysql.com|[sysvar_sha256_password_private_key_path](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sha256_password_private_key_path)|
 
 ## sha256_password_proxy_users
 |name|value|
@@ -40088,6 +40429,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_sha256_password_proxy_users](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sha256_password_proxy_users)|
+|dev.mysql.com|[sysvar_sha256_password_proxy_users](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sha256_password_proxy_users)|
 
 ## sha256_password_public_key_path
 |name|value|
@@ -40103,6 +40445,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_sha256_password_public_key_path](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_sha256_password_public_key_path)|
+|dev.mysql.com|[sysvar_sha256_password_public_key_path](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sha256_password_public_key_path)|
 
 ## show_create_table_skip_secondary_engine
 |name|value|
@@ -40133,6 +40476,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_show_create_table_verbosity](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_create_table_verbosity)|
+|dev.mysql.com|[sysvar_show_create_table_verbosity](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_show_create_table_verbosity)|
 
 ## show_gipk_in_create_table_and_information_schema
 |name|value|
@@ -40163,6 +40507,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_show_old_temporals](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_show_old_temporals)|
+|dev.mysql.com|[sysvar_show_old_temporals](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_show_old_temporals)|
 
 ## sql_generate_invisible_primary_key
 |name|value|
@@ -40272,6 +40617,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_super_read_only](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_super_read_only)|
+|dev.mysql.com|[sysvar_super_read_only](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_super_read_only)|
 
 ## syseventlog.facility
 |name|value|
@@ -40411,6 +40757,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_thread_pool_algorithm](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_algorithm)|
+|dev.mysql.com|[sysvar_thread_pool_algorithm](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_pool_algorithm)|
 
 ## thread_pool_dedicated_listeners
 |name|value|
@@ -40442,6 +40789,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_thread_pool_high_priority_connection](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_high_priority_connection)|
+|dev.mysql.com|[sysvar_thread_pool_high_priority_connection](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_pool_high_priority_connection)|
 
 ## thread_pool_max_active_query_threads
 |name|value|
@@ -40490,6 +40838,7 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_thread_pool_max_unused_threads](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_thread_pool_max_unused_threads)|
+|dev.mysql.com|[sysvar_thread_pool_max_unused_threads](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_pool_max_unused_threads)|
 
 ## thread_pool_query_threads_per_group
 |name|value|
@@ -40595,6 +40944,21 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_xa_detach_on_prepare](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_xa_detach_on_prepare)|
+
+## show_compatibility_56
+|name|value|
+|----|-----|
+|Name|`show_compatibility_56`|
+|Command line|`--show-compatibility-56[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_show_compatibility_56](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_show_compatibility_56)|
 
 ## version_tokens_session
 |name|value|

@@ -4517,8 +4517,12 @@
         },
         "key_buffer_size": {
             "cli": "--key-buffer-size=#",
+            "default": "8388608",
             "dynamic": true,
             "name": "key_buffer_size",
+            "range": {
+                "from": 0
+            },
             "scope": [
                 "global"
             ],
@@ -4531,6 +4535,10 @@
                 {
                     "anchor": "sysvar_key_buffer_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_key_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -4555,6 +4563,10 @@
                 {
                     "anchor": "sysvar_key_cache_age_threshold",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_key_cache_age_threshold",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -4579,6 +4591,10 @@
                 {
                     "anchor": "sysvar_key_cache_block_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_key_cache_block_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -4603,6 +4619,10 @@
                 {
                     "anchor": "sysvar_key_cache_division_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_key_cache_division_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -4687,6 +4707,10 @@
                 {
                     "anchor": "sysvar_myisam_data_pointer_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_data_pointer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -4718,16 +4742,24 @@
                 {
                     "anchor": "sysvar_myisam_max_sort_file_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_max_sort_file_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "myisam_mmap_size": {
             "cli": "--myisam-mmap-size=#",
+            "dynamic": false,
             "name": "myisam_mmap_size",
             "range": {
                 "from": 7,
                 "to": 1.8446744073709548e+19
             },
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -4737,10 +4769,15 @@
                 {
                     "anchor": "sysvar_myisam_mmap_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_mmap_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "myisam_recover_options": {
+            "cli": "--myisam-recover-options[=list]",
             "default": "0",
             "dynamic": false,
             "name": "myisam_recover_options",
@@ -4764,6 +4801,10 @@
                 {
                     "anchor": "sysvar_myisam_recover_options",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_recover_options",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -4789,11 +4830,16 @@
                 {
                     "anchor": "sysvar_myisam_repair_threads",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_repair_threads",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "myisam_sort_buffer_size": {
             "cli": "--myisam-sort-buffer-size=#",
+            "default": "8388608",
             "dynamic": true,
             "name": "myisam_sort_buffer_size",
             "range": {
@@ -4813,6 +4859,10 @@
                 {
                     "anchor": "sysvar_myisam_sort_buffer_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_sort_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -4839,6 +4889,10 @@
                 {
                     "anchor": "sysvar_myisam_stats_method",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_stats_method",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -4859,6 +4913,10 @@
                 {
                     "anchor": "sysvar_myisam_use_mmap",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_use_mmap",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -17953,6 +18011,10 @@
                 {
                     "anchor": "statvar_Max_used_connections",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Max_used_connections",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -18954,6 +19016,7 @@
             ]
         },
         "autocommit": {
+            "cli": "--autocommit[={OFF|ON}]",
             "default": "1",
             "dynamic": true,
             "name": "autocommit",
@@ -18970,10 +19033,15 @@
                 {
                     "anchor": "sysvar_autocommit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_autocommit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "automatic_sp_privileges": {
+            "cli": "--automatic-sp-privileges[={OFF|ON}]",
             "default": "1",
             "dynamic": true,
             "name": "automatic_sp_privileges",
@@ -18989,11 +19057,16 @@
                 {
                     "anchor": "sysvar_automatic_sp_privileges",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_automatic_sp_privileges",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "back_log": {
             "cli": "--back-log=#",
+            "default": "-1 (signifies autosizing; do not assign this literal value)",
             "dynamic": false,
             "name": "back_log",
             "range": {
@@ -19012,12 +19085,16 @@
                 {
                     "anchor": "sysvar_back_log",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_back_log",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "basedir": {
             "cli": "--basedir=path or -b path",
-            "default": "parent of mysqld installation directory",
+            "default": "c1figurati1-dependent default",
             "dynamic": false,
             "name": "basedir",
             "scope": [
@@ -19036,6 +19113,10 @@
                 {
                     "anchor": "sysvar_basedir",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_basedir",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19057,6 +19138,10 @@
                 {
                     "anchor": "sysvar_big_tables",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_big_tables",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19077,6 +19162,10 @@
                 {
                     "anchor": "sysvar_bind_address",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_bind_address",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19089,6 +19178,7 @@
                 "global",
                 "session"
             ],
+            "type": "string",
             "ids": [
                 {
                     "anchor": "block_encryption_mode",
@@ -19097,6 +19187,10 @@
                 {
                     "anchor": "sysvar_block_encryption_mode",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_block_encryption_mode",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19122,11 +19216,15 @@
                 {
                     "anchor": "sysvar_bulk_insert_buffer_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_bulk_insert_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "character_set_client": {
-            "default": "utf8mb4",
+            "default": "utf8",
             "dynamic": true,
             "name": "character_set_client",
             "scope": [
@@ -19142,6 +19240,10 @@
                 {
                     "anchor": "sysvar_character_set_client",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_character_set_client",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19162,7 +19264,7 @@
             ]
         },
         "character_set_connection": {
-            "default": "utf8mb4",
+            "default": "utf8",
             "dynamic": true,
             "name": "character_set_connection",
             "scope": [
@@ -19178,11 +19280,15 @@
                 {
                     "anchor": "sysvar_character_set_connection",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_character_set_connection",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "character_set_database": {
-            "default": "utf8mb4",
+            "default": "latin1",
             "dynamic": true,
             "name": "character_set_database",
             "scope": [
@@ -19198,6 +19304,10 @@
                 {
                     "anchor": "sysvar_character_set_database",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_character_set_database",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19219,11 +19329,15 @@
                 {
                     "anchor": "sysvar_character_set_filesystem",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_character_set_filesystem",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "character_set_results": {
-            "default": "utf8mb4",
+            "default": "utf8",
             "dynamic": true,
             "name": "character_set_results",
             "scope": [
@@ -19239,12 +19353,16 @@
                 {
                     "anchor": "sysvar_character_set_results",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_character_set_results",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "character_set_server": {
             "cli": "--character-set-server=name",
-            "default": "utf8mb4",
+            "default": "latin1",
             "dynamic": true,
             "name": "character_set_server",
             "scope": [
@@ -19260,11 +19378,15 @@
                 {
                     "anchor": "sysvar_character_set_server",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_character_set_server",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "character_set_system": {
-            "default": "utf8mb3",
+            "default": "utf8",
             "dynamic": false,
             "name": "character_set_system",
             "scope": [
@@ -19279,6 +19401,10 @@
                 {
                     "anchor": "sysvar_character_set_system",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_character_set_system",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19298,6 +19424,10 @@
                 {
                     "anchor": "sysvar_character_sets_dir",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_character_sets_dir",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19333,11 +19463,15 @@
                 {
                     "anchor": "sysvar_collation_connection",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_collation_connection",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "collation_database": {
-            "default": "utf8mb4_0900_ai_ci",
+            "default": "latin1_swedish_ci",
             "dynamic": true,
             "name": "collation_database",
             "scope": [
@@ -19353,12 +19487,16 @@
                 {
                     "anchor": "sysvar_collation_database",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_collation_database",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "collation_server": {
             "cli": "--collation-server=name",
-            "default": "utf8mb4_0900_ai_ci",
+            "default": "latin1_swedish_ci",
             "dynamic": true,
             "name": "collation_server",
             "scope": [
@@ -19374,6 +19512,10 @@
                 {
                     "anchor": "sysvar_collation_server",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_collation_server",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19403,6 +19545,10 @@
                 {
                     "anchor": "sysvar_completion_type",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_completion_type",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19431,6 +19577,10 @@
                 {
                     "anchor": "sysvar_concurrent_insert",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_concurrent_insert",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19455,6 +19605,10 @@
                 {
                     "anchor": "sysvar_connect_timeout",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_connect_timeout",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19478,6 +19632,10 @@
                 {
                     "anchor": "sysvar_core_file",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_core_file",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19501,6 +19659,10 @@
                 {
                     "anchor": "sysvar_datadir",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_datadir",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19510,6 +19672,10 @@
                 {
                     "anchor": "date_format",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_date_format",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19519,6 +19685,10 @@
                 {
                     "anchor": "datetime_format",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_datetime_format",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19570,16 +19740,20 @@
                 {
                     "anchor": "sysvar_debug_sync",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_debug_sync",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "default_password_lifetime": {
             "cli": "--default-password-lifetime=#",
-            "default": "0",
             "dynamic": true,
             "name": "default_password_lifetime",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 65535
             },
             "scope": [
                 "global"
@@ -19593,6 +19767,10 @@
                 {
                     "anchor": "sysvar_default_password_lifetime",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_default_password_lifetime",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19639,6 +19817,10 @@
                 {
                     "anchor": "sysvar_default_storage_engine",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_default_storage_engine",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19675,6 +19857,10 @@
                 {
                     "anchor": "sysvar_default_tmp_storage_engine",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_default_tmp_storage_engine",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19700,10 +19886,15 @@
                 {
                     "anchor": "sysvar_default_week_format",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_default_week_format",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "delay_key_write": {
+            "cli": "--delay-key-write[={OFF|ON|ALL}]",
             "default": "ON",
             "dynamic": true,
             "name": "delay_key_write",
@@ -19724,6 +19915,10 @@
                 {
                     "anchor": "sysvar_delay_key_write",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_delay_key_write",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19748,6 +19943,10 @@
                 {
                     "anchor": "sysvar_delayed_insert_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_delayed_insert_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19772,6 +19971,10 @@
                 {
                     "anchor": "sysvar_delayed_insert_timeout",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_delayed_insert_timeout",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19796,10 +19999,17 @@
                 {
                     "anchor": "sysvar_delayed_queue_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_delayed_queue_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "disconnect_on_expired_password": {
+            "cli": "--disconnect-on-expired-password[={OFF|ON}]",
+            "default": "ON",
+            "dynamic": false,
             "name": "disconnect_on_expired_password",
             "scope": [
                 "global"
@@ -19813,6 +20023,10 @@
                 {
                     "anchor": "sysvar_disconnect_on_expired_password",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_disconnect_on_expired_password",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19838,6 +20052,10 @@
                 {
                     "anchor": "sysvar_div_precision_increment",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_div_precision_increment",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19949,6 +20167,10 @@
                 {
                     "anchor": "sysvar_eq_range_index_dive_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_eq_range_index_dive_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -19962,11 +20184,16 @@
                 {
                     "anchor": "sysvar_error_count",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_error_count",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "event_scheduler": {
             "cli": "--event-scheduler[=value]",
+            "default": "OFF",
             "dynamic": true,
             "name": "event_scheduler",
             "scope": [
@@ -19988,6 +20215,10 @@
                 {
                     "anchor": "sysvar_event_scheduler",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_event_scheduler",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20013,8 +20244,13 @@
             ]
         },
         "explicit_defaults_for_timestamp": {
-            "default": "1",
+            "cli": "--explicit-defaults-for-timestamp[={OFF|ON}]",
+            "dynamic": true,
             "name": "explicit_defaults_for_timestamp",
+            "scope": [
+                "global",
+                "session"
+            ],
             "type": "boolean",
             "ids": [
                 {
@@ -20024,6 +20260,10 @@
                 {
                     "anchor": "sysvar_explicit_defaults_for_timestamp",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_explicit_defaults_for_timestamp",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20042,6 +20282,10 @@
                 {
                     "anchor": "sysvar_external_user",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_external_user",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20066,6 +20310,10 @@
                 {
                     "anchor": "sysvar_flush",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_flush",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20090,6 +20338,10 @@
                 {
                     "anchor": "sysvar_flush_time",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_flush_time",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20110,6 +20362,10 @@
                 {
                     "anchor": "sysvar_foreign_key_checks",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_foreign_key_checks",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20130,6 +20386,10 @@
                 {
                     "anchor": "sysvar_ft_boolean_syntax",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ft_boolean_syntax",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20154,6 +20414,10 @@
                 {
                     "anchor": "sysvar_ft_max_word_len",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ft_max_word_len",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20178,6 +20442,10 @@
                 {
                     "anchor": "sysvar_ft_min_word_len",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ft_min_word_len",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20202,6 +20470,10 @@
                 {
                     "anchor": "sysvar_ft_query_expansion_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ft_query_expansion_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20221,6 +20493,10 @@
                 {
                     "anchor": "sysvar_ft_stopword_file",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ft_stopword_file",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20241,6 +20517,10 @@
                 {
                     "anchor": "sysvar_general_log",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_general_log",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20261,11 +20541,16 @@
                 {
                     "anchor": "sysvar_general_log_file",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_general_log_file",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "group_concat_max_len": {
             "cli": "--group-concat-max-len=#",
+            "default": "1024",
             "dynamic": true,
             "name": "group_concat_max_len",
             "range": {
@@ -20285,6 +20570,10 @@
                 {
                     "anchor": "sysvar_group_concat_max_len",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_group_concat_max_len",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20298,19 +20587,23 @@
                 {
                     "anchor": "sysvar_have_compress",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_have_compress",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "have_crypt": {
-            "dynamic": false,
             "name": "have_crypt",
-            "scope": [
-                "global"
-            ],
             "ids": [
                 {
                     "anchor": "have_crypt",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_have_crypt",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20337,6 +20630,10 @@
                 {
                     "anchor": "sysvar_have_dynamic_loading",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_have_dynamic_loading",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20350,6 +20647,10 @@
                 {
                     "anchor": "sysvar_have_geometry",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_have_geometry",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20389,6 +20690,10 @@
                 {
                     "anchor": "sysvar_have_profiling",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_have_profiling",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20402,6 +20707,10 @@
                 {
                     "anchor": "sysvar_have_query_cache",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_have_query_cache",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20415,6 +20724,10 @@
                 {
                     "anchor": "sysvar_have_rtree_keys",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_have_rtree_keys",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20428,6 +20741,10 @@
                 {
                     "anchor": "sysvar_have_symlink",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_have_symlink",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20478,6 +20795,7 @@
         },
         "host_cache_size": {
             "cli": "--host-cache-size=#.",
+            "default": "-1 (signifies autosizing; do not assign this literal value)",
             "dynamic": true,
             "name": "host_cache_size",
             "range": {
@@ -20496,6 +20814,10 @@
                 {
                     "anchor": "sysvar_host_cache_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_host_cache_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20514,6 +20836,10 @@
                 {
                     "anchor": "sysvar_hostname",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_hostname",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20527,6 +20853,10 @@
                 {
                     "anchor": "sysvar_identity",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_identity",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20591,7 +20921,6 @@
             ]
         },
         "ignore_db_dirs": {
-            "cli": "--ignore-db-dirs=dir.",
             "dynamic": false,
             "name": "ignore_db_dirs",
             "scope": [
@@ -20602,6 +20931,10 @@
                 {
                     "anchor": "ignore_db_dirs",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_ignore_db_dirs",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20657,6 +20990,10 @@
                 {
                     "anchor": "sysvar_init_connect",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_init_connect",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20680,6 +21017,10 @@
                 {
                     "anchor": "sysvar_init_file",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_init_file",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20693,6 +21034,10 @@
                 {
                     "anchor": "sysvar_insert_id",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_insert_id",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20718,6 +21063,10 @@
                 {
                     "anchor": "sysvar_interactive_timeout",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_interactive_timeout",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20726,6 +21075,9 @@
             "default": "262144",
             "dynamic": true,
             "name": "join_buffer_size",
+            "range": {
+                "from": 128
+            },
             "scope": [
                 "global",
                 "session"
@@ -20739,6 +21091,10 @@
                 {
                     "anchor": "sysvar_join_buffer_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_join_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20785,6 +21141,7 @@
             ]
         },
         "keep_files_on_create": {
+            "cli": "--keep-files-on-create[={OFF|ON}]",
             "default": "OFF",
             "dynamic": true,
             "name": "keep_files_on_create",
@@ -20801,6 +21158,10 @@
                 {
                     "anchor": "sysvar_keep_files_on_create",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_keep_files_on_create",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20819,6 +21180,10 @@
                 {
                     "anchor": "sysvar_large_files_support",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_large_files_support",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20842,6 +21207,10 @@
                 {
                     "anchor": "sysvar_large_page_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_large_page_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20866,6 +21235,10 @@
                 {
                     "anchor": "sysvar_large_pages",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_large_pages",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20879,6 +21252,10 @@
                 {
                     "anchor": "sysvar_last_insert_id",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_last_insert_id",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20904,6 +21281,10 @@
                 {
                     "anchor": "sysvar_lc_messages",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_lc_messages",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20927,10 +21308,15 @@
                 {
                     "anchor": "sysvar_lc_messages_dir",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_lc_messages_dir",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "lc_time_names": {
+            "cli": "--lc-time-names=value",
             "dynamic": true,
             "name": "lc_time_names",
             "scope": [
@@ -20946,6 +21332,10 @@
                 {
                     "anchor": "sysvar_lc_time_names",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_lc_time_names",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -20965,10 +21355,16 @@
                 {
                     "anchor": "sysvar_license",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_license",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "local_infile": {
+            "cli": "--local-infile[={OFF|ON}]",
+            "default": "ON",
             "dynamic": true,
             "name": "local_infile",
             "scope": [
@@ -20983,13 +21379,22 @@
                 {
                     "anchor": "sysvar_local_infile",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_local_infile",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "lock_wait_timeout": {
             "cli": "--lock-wait-timeout=#",
+            "default": "31536000",
             "dynamic": true,
             "name": "lock_wait_timeout",
+            "range": {
+                "from": 1,
+                "to": 31536000
+            },
             "scope": [
                 "global",
                 "session"
@@ -21003,6 +21408,10 @@
                 {
                     "anchor": "sysvar_lock_wait_timeout",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_lock_wait_timeout",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21022,6 +21431,10 @@
                 {
                     "anchor": "sysvar_locked_in_memory",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_locked_in_memory",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21082,6 +21495,10 @@
                 {
                     "anchor": "sysvar_log_error",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_error",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21107,6 +21524,10 @@
                 {
                     "anchor": "sysvar_log_output",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_output",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21127,11 +21548,16 @@
                 {
                     "anchor": "sysvar_log_queries_not_using_indexes",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_queries_not_using_indexes",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "log_slow_admin_statements": {
             "cli": "--log-slow-admin-statements[={OFF|ON}]",
+            "default": "OFF",
             "dynamic": true,
             "name": "log_slow_admin_statements",
             "scope": [
@@ -21146,6 +21572,10 @@
                 {
                     "anchor": "sysvar_log_slow_admin_statements",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_slow_admin_statements",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21385,7 +21815,6 @@
             ]
         },
         "log_warnings": {
-            "cli": "-W [level] or --log-warnings[=level]",
             "default": "2",
             "dynamic": true,
             "name": "log_warnings",
@@ -21393,15 +21822,15 @@
                 "from": 0,
                 "to": 4294967295
             },
-            "scope": [
-                "global",
-                "session"
-            ],
             "type": "integer",
             "ids": [
                 {
                     "anchor": "log_warnings",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_log_warnings",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21411,7 +21840,8 @@
             "dynamic": true,
             "name": "long_query_time",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 31536000
             },
             "scope": [
                 "global",
@@ -21426,6 +21856,10 @@
                 {
                     "anchor": "sysvar_long_query_time",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_long_query_time",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21447,6 +21881,10 @@
                 {
                     "anchor": "sysvar_low_priority_updates",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_low_priority_updates",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21465,6 +21903,10 @@
                 {
                     "anchor": "sysvar_lower_case_file_system",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_lower_case_file_system",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21488,11 +21930,17 @@
                 {
                     "anchor": "sysvar_lower_case_table_names",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_lower_case_table_names",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "max_allowed_packet": {
             "cli": "--max-allowed-packet=#",
+            "default": "4194304",
+            "dynamic": true,
             "name": "max_allowed_packet",
             "range": {
                 "from": 1024,
@@ -21511,6 +21959,10 @@
                 {
                     "anchor": "sysvar_max_allowed_packet",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_allowed_packet",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21535,6 +21987,10 @@
                 {
                     "anchor": "sysvar_max_connect_errors",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_connect_errors",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21567,6 +22023,10 @@
                 {
                     "anchor": "sysvar_max_connections",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_connections",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21592,6 +22052,10 @@
                 {
                     "anchor": "sysvar_max_delayed_threads",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_delayed_threads",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21616,11 +22080,16 @@
                 {
                     "anchor": "sysvar_max_digest_length",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_digest_length",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "max_error_count": {
             "cli": "--max-error-count=#",
+            "default": "64",
             "dynamic": true,
             "name": "max_error_count",
             "range": {
@@ -21640,6 +22109,10 @@
                 {
                     "anchor": "sysvar_max_error_count",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_error_count",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21665,6 +22138,10 @@
                 {
                     "anchor": "sysvar_max_heap_table_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_heap_table_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21689,6 +22166,10 @@
                 {
                     "anchor": "sysvar_max_insert_delayed_threads",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_insert_delayed_threads",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21714,11 +22195,16 @@
                 {
                     "anchor": "sysvar_max_join_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_join_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "max_length_for_sort_data": {
             "cli": "--max-length-for-sort-data=#",
+            "default": "1024",
             "dynamic": true,
             "name": "max_length_for_sort_data",
             "range": {
@@ -21738,6 +22224,10 @@
                 {
                     "anchor": "sysvar_max_length_for_sort_data",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_length_for_sort_data",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21787,7 +22277,8 @@
             "dynamic": true,
             "name": "max_prepared_stmt_count",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 1048576
             },
             "scope": [
                 "global"
@@ -21801,6 +22292,10 @@
                 {
                     "anchor": "sysvar_max_prepared_stmt_count",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_prepared_stmt_count",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21867,6 +22362,10 @@
                 {
                     "anchor": "sysvar_max_seeks_for_key",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_seeks_for_key",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21896,6 +22395,10 @@
             "default": "1024",
             "dynamic": true,
             "name": "max_sort_length",
+            "range": {
+                "from": 4,
+                "to": 8388608
+            },
             "scope": [
                 "global",
                 "session"
@@ -21909,6 +22412,10 @@
                 {
                     "anchor": "sysvar_max_sort_length",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_sort_length",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21934,6 +22441,10 @@
                 {
                     "anchor": "sysvar_max_sp_recursion_depth",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_sp_recursion_depth",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -21964,13 +22475,22 @@
                 {
                     "anchor": "max_tmp_tables",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_max_tmp_tables",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "max_user_connections": {
             "cli": "--max-user-connections=#",
             "default": "0",
+            "dynamic": true,
             "name": "max_user_connections",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
             "scope": [
                 "global",
                 "session"
@@ -21984,12 +22504,20 @@
                 {
                     "anchor": "sysvar_max_user_connections",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_user_connections",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "max_write_lock_count": {
             "cli": "--max-write-lock-count=#",
+            "dynamic": true,
             "name": "max_write_lock_count",
+            "range": {
+                "from": 1
+            },
             "scope": [
                 "global"
             ],
@@ -22002,6 +22530,10 @@
                 {
                     "anchor": "sysvar_max_write_lock_count",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_write_lock_count",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22026,6 +22558,10 @@
                 {
                     "anchor": "sysvar_metadata_locks_cache_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_metadata_locks_cache_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22050,6 +22586,10 @@
                 {
                     "anchor": "sysvar_metadata_locks_hash_instances",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_metadata_locks_hash_instances",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22075,6 +22615,10 @@
                 {
                     "anchor": "sysvar_min_examined_row_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_min_examined_row_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22102,11 +22646,25 @@
         "multi_range_count": {
             "cli": "--multi-range-count=#",
             "default": "256",
+            "dynamic": true,
             "name": "multi_range_count",
+            "range": {
+                "from": 1,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
             "ids": [
                 {
                     "anchor": "multi_range_count",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_multi_range_count",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22143,6 +22701,10 @@
                 {
                     "anchor": "sysvar_named_pipe",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_named_pipe",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22168,6 +22730,10 @@
                 {
                     "anchor": "sysvar_net_buffer_length",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_net_buffer_length",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22177,7 +22743,8 @@
             "dynamic": true,
             "name": "net_read_timeout",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 31536000
             },
             "scope": [
                 "global",
@@ -22192,6 +22759,10 @@
                 {
                     "anchor": "sysvar_net_read_timeout",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_net_read_timeout",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22217,6 +22788,10 @@
                 {
                     "anchor": "sysvar_net_retry_count",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_net_retry_count",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22226,7 +22801,8 @@
             "dynamic": true,
             "name": "net_write_timeout",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 31536000
             },
             "scope": [
                 "global",
@@ -22241,6 +22817,10 @@
                 {
                     "anchor": "sysvar_net_write_timeout",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_net_write_timeout",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22268,7 +22848,11 @@
         "old": {
             "cli": "--old[={OFF|ON}]",
             "default": "OFF",
+            "dynamic": false,
             "name": "old",
+            "scope": [
+                "global"
+            ],
             "type": "boolean",
             "ids": [
                 {
@@ -22278,6 +22862,10 @@
                 {
                     "anchor": "sysvar_old",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_old",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22290,6 +22878,7 @@
                 "global",
                 "session"
             ],
+            "type": "boolean",
             "ids": [
                 {
                     "anchor": "old_alter_table",
@@ -22298,6 +22887,10 @@
                 {
                     "anchor": "sysvar_old_alter_table",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_old_alter_table",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22319,23 +22912,32 @@
             ]
         },
         "old_passwords": {
-            "default": "OFF",
+            "cli": "--old-passwords=value",
+            "default": "0",
             "dynamic": true,
             "name": "old_passwords",
             "scope": [
                 "global",
                 "session"
             ],
-            "type": "boolean",
+            "validValues": [
+                "0",
+                "2"
+            ],
             "ids": [
                 {
                     "anchor": "old_passwords",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_old_passwords",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "open_files_limit": {
             "cli": "--open-files-limit=count",
+            "default": "5000, with possible adjustment",
             "dynamic": false,
             "name": "open_files_limit",
             "range": {
@@ -22354,6 +22956,10 @@
                 {
                     "anchor": "sysvar_open_files_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_open_files_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22421,6 +23027,8 @@
             ]
         },
         "optimizer_prune_level": {
+            "cli": "--optimizer-prune-level=#",
+            "default": "1",
             "dynamic": true,
             "name": "optimizer_prune_level",
             "range": {
@@ -22440,15 +23048,21 @@
                 {
                     "anchor": "sysvar_optimizer_prune_level",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_optimizer_prune_level",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "optimizer_search_depth": {
+            "cli": "--optimizer-search-depth=#",
             "default": "62",
             "dynamic": true,
             "name": "optimizer_search_depth",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 62
             },
             "scope": [
                 "global",
@@ -22463,6 +23077,10 @@
                 {
                     "anchor": "sysvar_optimizer_search_depth",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_optimizer_search_depth",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22495,6 +23113,7 @@
                 "global",
                 "session"
             ],
+            "type": "set",
             "ids": [
                 {
                     "anchor": "optimizer_switch",
@@ -22503,6 +23122,10 @@
                 {
                     "anchor": "sysvar_optimizer_switch",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_optimizer_switch",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22514,6 +23137,7 @@
                 "global",
                 "session"
             ],
+            "type": "string",
             "ids": [
                 {
                     "anchor": "optimizer_trace",
@@ -22522,14 +23146,21 @@
                 {
                     "anchor": "sysvar_optimizer_trace",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_optimizer_trace",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "optimizer_trace_max_mem_size": {
             "cli": "--optimizer-trace-max-mem-size=#",
-            "default": "1048576",
             "dynamic": true,
             "name": "optimizer_trace_max_mem_size",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
             "scope": [
                 "global",
                 "session"
@@ -22543,6 +23174,10 @@
                 {
                     "anchor": "sysvar_optimizer_trace_max_mem_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_optimizer_trace_max_mem_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22583,6 +23218,10 @@
                 {
                     "anchor": "sysvar_pid_file",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_pid_file",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22603,6 +23242,10 @@
                 {
                     "anchor": "sysvar_plugin_dir",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_plugin_dir",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22655,6 +23298,10 @@
                 {
                     "anchor": "sysvar_port",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_port",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22680,6 +23327,10 @@
                 {
                     "anchor": "sysvar_preload_buffer_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_preload_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22693,6 +23344,10 @@
                 {
                     "anchor": "sysvar_profiling",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_profiling",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22706,6 +23361,10 @@
                 {
                     "anchor": "sysvar_profiling_history_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_profiling_history_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22750,6 +23409,10 @@
                 {
                     "anchor": "sysvar_protocol_version",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_protocol_version",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22784,6 +23447,10 @@
                 {
                     "anchor": "sysvar_proxy_user",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_proxy_user",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22793,6 +23460,7 @@
             "scope": [
                 "session"
             ],
+            "type": "boolean",
             "ids": [
                 {
                     "anchor": "pseudo_slave_mode",
@@ -22801,6 +23469,10 @@
                 {
                     "anchor": "sysvar_pseudo_slave_mode",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_pseudo_slave_mode",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22824,15 +23496,21 @@
                 {
                     "anchor": "sysvar_pseudo_thread_id",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_pseudo_thread_id",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "query_alloc_block_size": {
             "cli": "--query-alloc-block-size=#",
+            "default": "8192",
             "dynamic": true,
             "name": "query_alloc_block_size",
             "range": {
-                "from": 1024
+                "from": 1024,
+                "to": 4294966272
             },
             "scope": [
                 "global",
@@ -22847,6 +23525,10 @@
                 {
                     "anchor": "sysvar_query_alloc_block_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_query_alloc_block_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22867,6 +23549,10 @@
                 {
                     "anchor": "query_cache_limit",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_query_cache_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22875,10 +23561,6 @@
             "default": "4096",
             "dynamic": true,
             "name": "query_cache_min_res_unit",
-            "range": {
-                "from": 1024,
-                "to": 1.8446744073709548e+19
-            },
             "scope": [
                 "global"
             ],
@@ -22887,25 +23569,32 @@
                 {
                     "anchor": "query_cache_min_res_unit",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_query_cache_min_res_unit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "query_cache_size": {
             "cli": "--query-cache-size=#",
-            "default": "1M",
             "dynamic": true,
             "name": "query_cache_size",
+            "range": {
+                "from": 0
+            },
             "scope": [
                 "global"
             ],
             "type": "integer",
-            "validValues": [
-                "0"
-            ],
             "ids": [
                 {
                     "anchor": "query_cache_size",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_query_cache_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22928,7 +23617,7 @@
         },
         "query_cache_type": {
             "cli": "--query-cache-type=#",
-            "default": "OFF",
+            "default": "0",
             "dynamic": true,
             "name": "query_cache_type",
             "scope": [
@@ -22948,11 +23637,15 @@
                 {
                     "anchor": "query_cache_type",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_query_cache_type",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "query_cache_wlock_invalidate": {
-            "cli": "--query-cache-wlock-invalidate",
+            "cli": "--query-cache-wlock-invalidate[={OFF|ON}]",
             "default": "OFF",
             "dynamic": true,
             "name": "query_cache_wlock_invalidate",
@@ -22965,13 +23658,21 @@
                 {
                     "anchor": "query_cache_wlock_invalidate",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_query_cache_wlock_invalidate",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "query_prealloc_size": {
             "cli": "--query-prealloc-size=#",
+            "default": "8192",
             "dynamic": true,
             "name": "query_prealloc_size",
+            "range": {
+                "from": 8192
+            },
             "scope": [
                 "global",
                 "session"
@@ -22985,6 +23686,10 @@
                 {
                     "anchor": "sysvar_query_prealloc_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_query_prealloc_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -22993,7 +23698,8 @@
             "dynamic": true,
             "name": "rand_seed1",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967295
             },
             "scope": [
                 "session"
@@ -23007,6 +23713,10 @@
                 {
                     "anchor": "sysvar_rand_seed1",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_rand_seed1",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23020,6 +23730,10 @@
                 {
                     "anchor": "sysvar_rand_seed2",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_rand_seed2",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23029,7 +23743,8 @@
             "dynamic": true,
             "name": "range_alloc_block_size",
             "range": {
-                "from": 4096
+                "from": 4096,
+                "to": 4294966272
             },
             "scope": [
                 "global",
@@ -23044,6 +23759,10 @@
                 {
                     "anchor": "sysvar_range_alloc_block_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_range_alloc_block_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23052,6 +23771,10 @@
             "default": "131072",
             "dynamic": true,
             "name": "read_buffer_size",
+            "range": {
+                "from": 8192,
+                "to": 2147479552
+            },
             "scope": [
                 "global",
                 "session"
@@ -23065,6 +23788,10 @@
                 {
                     "anchor": "sysvar_read_buffer_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_read_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23085,6 +23812,10 @@
                 {
                     "anchor": "sysvar_read_only",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_read_only",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23093,6 +23824,10 @@
             "default": "262144",
             "dynamic": true,
             "name": "read_rnd_buffer_size",
+            "range": {
+                "from": 1,
+                "to": 2147483647
+            },
             "scope": [
                 "global",
                 "session"
@@ -23106,6 +23841,10 @@
                 {
                     "anchor": "sysvar_read_rnd_buffer_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_read_rnd_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23127,6 +23866,7 @@
             ]
         },
         "require_secure_transport": {
+            "cli": "--require-secure-transport[={OFF|ON}]",
             "default": "OFF",
             "dynamic": true,
             "name": "require_secure_transport",
@@ -23142,6 +23882,10 @@
                 {
                     "anchor": "sysvar_require_secure_transport",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_require_secure_transport",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23191,7 +23935,7 @@
             ]
         },
         "secure_auth": {
-            "cli": "--secure-auth",
+            "cli": "--secure-auth[={OFF|ON}]",
             "default": "ON",
             "dynamic": true,
             "name": "secure_auth",
@@ -23199,10 +23943,17 @@
                 "global"
             ],
             "type": "boolean",
+            "validValues": [
+                "ON"
+            ],
             "ids": [
                 {
                     "anchor": "secure_auth",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_secure_auth",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23214,6 +23965,7 @@
             "scope": [
                 "global"
             ],
+            "type": "string",
             "validValues": [
                 "empty string",
                 "dirname",
@@ -23227,6 +23979,10 @@
                 {
                     "anchor": "sysvar_secure_file_priv",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_secure_file_priv",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23247,6 +24003,7 @@
             ]
         },
         "session_track_schema": {
+            "cli": "--session-track-schema[={OFF|ON}]",
             "default": "ON",
             "dynamic": true,
             "name": "session_track_schema",
@@ -23263,10 +24020,15 @@
                 {
                     "anchor": "sysvar_session_track_schema",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_session_track_schema",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "session_track_state_change": {
+            "cli": "--session-track-state-change[={OFF|ON}]",
             "default": "OFF",
             "dynamic": true,
             "name": "session_track_state_change",
@@ -23283,6 +24045,10 @@
                 {
                     "anchor": "sysvar_session_track_state_change",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_session_track_state_change",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23304,6 +24070,10 @@
                 {
                     "anchor": "sysvar_session_track_system_variables",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_session_track_system_variables",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23330,6 +24100,10 @@
                 {
                     "anchor": "sysvar_session_track_transaction_info",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_session_track_transaction_info",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23350,6 +24124,10 @@
                 {
                     "anchor": "sysvar_shared_memory",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_shared_memory",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23370,6 +24148,10 @@
                 {
                     "anchor": "sysvar_shared_memory_base_name",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_shared_memory_base_name",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23390,6 +24172,10 @@
                 {
                     "anchor": "sysvar_skip_external_locking",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_skip_external_locking",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23426,6 +24212,10 @@
                 {
                     "anchor": "sysvar_skip_name_resolve",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_skip_name_resolve",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23446,6 +24236,10 @@
                 {
                     "anchor": "sysvar_skip_networking",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_skip_networking",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23470,6 +24264,10 @@
                 {
                     "anchor": "sysvar_skip_show_database",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_skip_show_database",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23494,6 +24292,10 @@
                 {
                     "anchor": "sysvar_slow_launch_time",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_slow_launch_time",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23502,6 +24304,9 @@
             "default": "0",
             "dynamic": true,
             "name": "slow_query_log",
+            "scope": [
+                "global"
+            ],
             "type": "boolean",
             "ids": [
                 {
@@ -23511,6 +24316,10 @@
                 {
                     "anchor": "sysvar_slow_query_log",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_slow_query_log",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23531,6 +24340,10 @@
                 {
                     "anchor": "sysvar_slow_query_log_file",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_slow_query_log_file",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23554,11 +24367,16 @@
                 {
                     "anchor": "sysvar_socket",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_socket",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "sort_buffer_size": {
             "cli": "--sort-buffer-size=#",
+            "default": "262144",
             "dynamic": true,
             "name": "sort_buffer_size",
             "range": {
@@ -23577,6 +24395,10 @@
                 {
                     "anchor": "sysvar_sort_buffer_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sort_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23597,6 +24419,10 @@
                 {
                     "anchor": "sysvar_sql_auto_is_null",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sql_auto_is_null",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23617,6 +24443,10 @@
                 {
                     "anchor": "sysvar_sql_big_selects",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sql_big_selects",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23654,6 +24484,10 @@
                 {
                     "anchor": "sysvar_sql_buffer_result",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sql_buffer_result",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23695,6 +24529,10 @@
                 {
                     "anchor": "sysvar_sql_log_off",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sql_log_off",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23735,7 +24573,7 @@
         },
         "sql_mode": {
             "cli": "--sql-mode=name",
-            "default": "ONLY_FULL_GROUP_BY STRICT_TRANS_TABLES NO_ZERO_IN_DATE NO_ZERO_DATE ERROR_FOR_DIVISION_BY_ZERO NO_ENGINE_SUBSTITUTION",
+            "default": "1LY_FULL_GROUP_BY STRICT_TRANS_TABLES NO_ZERO_IN_DATE NO_ZERO_DATE ERROR_FOR_DIVISI1_BY_ZERO NO_AUTO_CREATE_USER NO_ENGINE_SUBSTITUTI1",
             "dynamic": true,
             "name": "sql_mode",
             "scope": [
@@ -23776,6 +24614,10 @@
                 {
                     "anchor": "sysvar_sql_mode",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sql_mode",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23796,6 +24638,10 @@
                 {
                     "anchor": "sysvar_sql_notes",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sql_notes",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23816,6 +24662,10 @@
                 {
                     "anchor": "sysvar_sql_quote_show_create",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sql_quote_show_create",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23836,6 +24686,10 @@
                 {
                     "anchor": "sysvar_sql_safe_updates",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sql_safe_updates",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23860,6 +24714,10 @@
                 {
                     "anchor": "sysvar_sql_select_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sql_select_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23880,6 +24738,10 @@
                 {
                     "anchor": "sysvar_sql_warnings",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sql_warnings",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23914,6 +24776,10 @@
             "default": "256",
             "dynamic": true,
             "name": "stored_program_cache",
+            "range": {
+                "from": 16,
+                "to": 524288
+            },
             "scope": [
                 "global"
             ],
@@ -23926,6 +24792,10 @@
                 {
                     "anchor": "sysvar_stored_program_cache",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_stored_program_cache",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23946,8 +24816,8 @@
             ]
         },
         "sync_frm": {
-            "cli": "--sync-frm",
-            "default": "TRUE",
+            "cli": "--sync-frm[={OFF|ON}]",
+            "default": "1",
             "dynamic": true,
             "name": "sync_frm",
             "scope": [
@@ -23958,6 +24828,10 @@
                 {
                     "anchor": "sync_frm",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_sync_frm",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -23976,11 +24850,16 @@
                 {
                     "anchor": "sysvar_system_time_zone",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_system_time_zone",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "table_definition_cache": {
             "cli": "--table-definition-cache=#",
+            "default": "-1 (signifies autosizing; do not assign this literal value)",
             "dynamic": true,
             "name": "table_definition_cache",
             "range": {
@@ -23999,6 +24878,10 @@
                 {
                     "anchor": "sysvar_table_definition_cache",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_table_definition_cache",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24024,10 +24907,12 @@
         },
         "table_open_cache": {
             "cli": "--table-open-cache=#",
+            "default": "2000",
             "dynamic": true,
             "name": "table_open_cache",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 524288
             },
             "scope": [
                 "global"
@@ -24041,11 +24926,16 @@
                 {
                     "anchor": "sysvar_table_open_cache",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_table_open_cache",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "table_open_cache_instances": {
             "cli": "--table-open-cache-instances=#",
+            "default": "16",
             "dynamic": false,
             "name": "table_open_cache_instances",
             "range": {
@@ -24064,6 +24954,10 @@
                 {
                     "anchor": "sysvar_table_open_cache_instances",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_table_open_cache_instances",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24154,6 +25048,7 @@
         },
         "thread_cache_size": {
             "cli": "--thread-cache-size=#",
+            "default": "-1 (signifies autosizing; do not assign this literal value)",
             "dynamic": true,
             "name": "thread_cache_size",
             "range": {
@@ -24172,6 +25067,10 @@
                 {
                     "anchor": "sysvar_thread_cache_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_thread_cache_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24215,6 +25114,10 @@
                 {
                     "anchor": "sysvar_thread_stack",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_thread_stack",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24224,6 +25127,10 @@
                 {
                     "anchor": "time_format",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_time_format",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24244,6 +25151,10 @@
                 {
                     "anchor": "sysvar_time_zone",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_time_zone",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24283,6 +25194,10 @@
                 {
                     "anchor": "sysvar_timestamp",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_timestamp",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24322,6 +25237,10 @@
             "default": "16777216",
             "dynamic": true,
             "name": "tmp_table_size",
+            "range": {
+                "from": 1024,
+                "to": 1.8446744073709552e+19
+            },
             "scope": [
                 "global",
                 "session"
@@ -24335,6 +25254,10 @@
                 {
                     "anchor": "sysvar_tmp_table_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_tmp_table_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24358,6 +25281,10 @@
                 {
                     "anchor": "sysvar_tmpdir",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_tmpdir",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24367,7 +25294,8 @@
             "dynamic": true,
             "name": "transaction_alloc_block_size",
             "range": {
-                "from": 1024
+                "from": 1024,
+                "to": 131072
             },
             "scope": [
                 "global",
@@ -24382,18 +25310,17 @@
                 {
                     "anchor": "sysvar_transaction_alloc_block_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_transaction_alloc_block_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "transaction_isolation": {
             "cli": "--transaction-isolation=name",
             "default": "REPEATABLE-READ",
-            "dynamic": true,
             "name": "transaction_isolation",
-            "scope": [
-                "global",
-                "session"
-            ],
             "type": "enumeration",
             "validValues": [
                 "READ-UNCOMMITTED",
@@ -24413,6 +25340,10 @@
                 {
                     "anchor": "sysvar_transaction_isolation",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_transaction_isolation",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24422,7 +25353,8 @@
             "dynamic": true,
             "name": "transaction_prealloc_size",
             "range": {
-                "from": 1024
+                "from": 1024,
+                "to": 131072
             },
             "scope": [
                 "global",
@@ -24437,18 +25369,17 @@
                 {
                     "anchor": "sysvar_transaction_prealloc_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_transaction_prealloc_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "transaction_read_only": {
             "cli": "--transaction-read-only[={OFF|ON}]",
             "default": "OFF",
-            "dynamic": true,
             "name": "transaction_read_only",
-            "scope": [
-                "global",
-                "session"
-            ],
             "type": "boolean",
             "ids": [
                 {
@@ -24462,11 +25393,14 @@
                 {
                     "anchor": "sysvar_transaction_read_only",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_transaction_read_only",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "tx_isolation": {
-            "cli": "--transaction-isolation=name",
             "default": "REPEATABLE-READ",
             "dynamic": true,
             "name": "tx_isolation",
@@ -24485,11 +25419,14 @@
                 {
                     "anchor": "tx_isolation",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_tx_isolation",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "tx_read_only": {
-            "cli": "--transaction-read-only=#",
             "default": "OFF",
             "dynamic": true,
             "name": "tx_read_only",
@@ -24502,6 +25439,10 @@
                 {
                     "anchor": "tx_read_only",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
+                },
+                {
+                    "anchor": "sysvar_tx_read_only",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24522,10 +25463,15 @@
                 {
                     "anchor": "sysvar_unique_checks",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_unique_checks",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "updatable_views_with_limit": {
+            "cli": "--updatable-views-with-limit[={OFF|ON}]",
             "default": "1",
             "dynamic": true,
             "name": "updatable_views_with_limit",
@@ -24542,6 +25488,10 @@
                 {
                     "anchor": "sysvar_updatable_views_with_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_updatable_views_with_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24572,6 +25522,10 @@
                 {
                     "anchor": "sysvar_version",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_version",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24590,6 +25544,10 @@
                 {
                     "anchor": "sysvar_version_comment",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_version_comment",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24608,6 +25566,10 @@
                 {
                     "anchor": "sysvar_version_compile_machine",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_version_compile_machine",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24626,6 +25588,10 @@
                 {
                     "anchor": "sysvar_version_compile_os",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_version_compile_os",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24678,6 +25644,10 @@
                 {
                     "anchor": "sysvar_wait_timeout",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_wait_timeout",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -24691,6 +25661,10 @@
                 {
                     "anchor": "sysvar_warning_count",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_warning_count",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -27774,6 +28748,10 @@
                 {
                     "anchor": "sysvar_have_openssl",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_have_openssl",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -27796,12 +28774,17 @@
                 {
                     "anchor": "sysvar_have_ssl",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_have_ssl",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "ssl_ca": {
             "cli": "--ssl-ca=file_name",
             "default": "NULL",
+            "dynamic": false,
             "name": "ssl_ca",
             "scope": [
                 "global"
@@ -27815,11 +28798,17 @@
                 {
                     "anchor": "sysvar_ssl_ca",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ssl_ca",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "ssl_capath": {
+            "cli": "--ssl-capath=dir_name",
             "default": "NULL",
+            "dynamic": false,
             "name": "ssl_capath",
             "scope": [
                 "global"
@@ -27833,11 +28822,17 @@
                 {
                     "anchor": "sysvar_ssl_capath",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ssl_capath",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "ssl_cert": {
+            "cli": "--ssl-cert=file_name",
             "default": "NULL",
+            "dynamic": false,
             "name": "ssl_cert",
             "scope": [
                 "global"
@@ -27851,12 +28846,17 @@
                 {
                     "anchor": "sysvar_ssl_cert",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ssl_cert",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "ssl_cipher": {
             "cli": "--ssl-cipher=name",
             "default": "NULL",
+            "dynamic": false,
             "name": "ssl_cipher",
             "scope": [
                 "global"
@@ -27870,11 +28870,17 @@
                 {
                     "anchor": "sysvar_ssl_cipher",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ssl_cipher",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "ssl_crl": {
+            "cli": "--ssl-crl=file_name",
             "default": "NULL",
+            "dynamic": false,
             "name": "ssl_crl",
             "scope": [
                 "global"
@@ -27888,11 +28894,17 @@
                 {
                     "anchor": "sysvar_ssl_crl",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ssl_crl",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "ssl_crlpath": {
+            "cli": "--ssl-crlpath=dir_name",
             "default": "NULL",
+            "dynamic": false,
             "name": "ssl_crlpath",
             "scope": [
                 "global"
@@ -27906,15 +28918,22 @@
                 {
                     "anchor": "sysvar_ssl_crlpath",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ssl_crlpath",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "ssl_key": {
+            "cli": "--ssl-key=file_name",
             "default": "NULL",
+            "dynamic": false,
             "name": "ssl_key",
             "scope": [
                 "global"
             ],
+            "type": "file name",
             "ids": [
                 {
                     "anchor": "ssl_key",
@@ -27923,14 +28942,21 @@
                 {
                     "anchor": "sysvar_ssl_key",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ssl_key",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "tls_version": {
+            "cli": "--tls-version=protocol_list",
+            "dynamic": false,
             "name": "tls_version",
             "scope": [
                 "global"
             ],
+            "type": "string",
             "ids": [
                 {
                     "anchor": "tls_version",
@@ -27939,6 +28965,10 @@
                 {
                     "anchor": "sysvar_tls_version",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_tls_version",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -28126,6 +29156,10 @@
                 {
                     "anchor": "sysvar_thread_handling",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_thread_handling",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -28223,11 +29257,13 @@
             ]
         },
         "thread_pool_prio_kickup_timer": {
+            "cli": "--thread-pool-prio-kickup-timer=#",
             "default": "1000",
             "dynamic": true,
             "name": "thread_pool_prio_kickup_timer",
             "range": {
-                "from": 0
+                "from": 0,
+                "to": 4294967294
             },
             "scope": [
                 "global"
@@ -28241,6 +29277,10 @@
                 {
                     "anchor": "sysvar_thread_pool_prio_kickup_timer",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_thread_pool_prio_kickup_timer",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -28266,9 +29306,12 @@
         },
         "thread_pool_size": {
             "cli": "--thread-pool-size=#",
+            "default": "16",
+            "dynamic": false,
             "name": "thread_pool_size",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 64
             },
             "scope": [
                 "global"
@@ -28282,13 +29325,22 @@
                 {
                     "anchor": "sysvar_thread_pool_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_thread_pool_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
         "thread_pool_stall_limit": {
             "cli": "--thread-pool-stall-limit=#",
+            "default": "6",
             "dynamic": true,
             "name": "thread_pool_stall_limit",
+            "range": {
+                "from": 4,
+                "to": 600
+            },
             "scope": [
                 "global"
             ],
@@ -28301,6 +29353,10 @@
                 {
                     "anchor": "sysvar_thread_pool_stall_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_thread_pool_stall_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -43548,6 +44604,10 @@
                 {
                     "anchor": "sysvar_gtid_executed",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_gtid_executed",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -44692,6 +45752,10 @@
                 {
                     "anchor": "sysvar_debug",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_debug",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46095,6 +47159,10 @@
                 {
                     "anchor": "sysvar_authentication_windows_log_level",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_authentication_windows_log_level",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46111,6 +47179,10 @@
                 {
                     "anchor": "sysvar_authentication_windows_use_principal_name",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_authentication_windows_use_principal_name",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46127,6 +47199,10 @@
                 {
                     "anchor": "sysvar_auto_generate_certs",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_auto_generate_certs",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46143,6 +47219,10 @@
                 {
                     "anchor": "sysvar_avoid_temporal_upgrade",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_avoid_temporal_upgrade",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46240,6 +47320,10 @@
                 {
                     "anchor": "sysvar_check_proxy_users",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_check_proxy_users",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46339,7 +47423,7 @@
         },
         "default_authentication_plugin": {
             "cli": "--default-authentication-plugin=plugin_name",
-            "default": "caching_sha2_password",
+            "default": "mysql_native_password",
             "dynamic": false,
             "name": "default_authentication_plugin",
             "scope": [
@@ -46355,6 +47439,10 @@
                 {
                     "anchor": "sysvar_default_authentication_plugin",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_default_authentication_plugin",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46407,6 +47495,10 @@
                 {
                     "anchor": "sysvar_disabled_storage_engines",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_disabled_storage_engines",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46476,6 +47568,10 @@
                 {
                     "anchor": "sysvar_end_markers_in_json",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_end_markers_in_json",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46570,6 +47666,10 @@
                 {
                     "anchor": "sysvar_have_statement_timeout",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_have_statement_timeout",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46631,6 +47731,10 @@
                 {
                     "anchor": "sysvar_internal_tmp_disk_storage_engine",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_internal_tmp_disk_storage_engine",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46689,7 +47793,6 @@
         },
         "log_error_verbosity": {
             "cli": "--log-error-verbosity=#",
-            "default": "2",
             "dynamic": true,
             "name": "log_error_verbosity",
             "range": {
@@ -46704,6 +47807,10 @@
                 {
                     "anchor": "sysvar_log_error_verbosity",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_error_verbosity",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46725,7 +47832,6 @@
         },
         "log_syslog": {
             "cli": "--log-syslog[={OFF|ON}]",
-            "default": "ON (when error logging to system log is enabled)",
             "dynamic": true,
             "name": "log_syslog",
             "scope": [
@@ -46736,6 +47842,10 @@
                 {
                     "anchor": "sysvar_log_syslog",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_syslog",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46752,6 +47862,10 @@
                 {
                     "anchor": "sysvar_log_syslog_facility",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_syslog_facility",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46768,6 +47882,10 @@
                 {
                     "anchor": "sysvar_log_syslog_include_pid",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_syslog_include_pid",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46784,6 +47902,10 @@
                 {
                     "anchor": "sysvar_log_syslog_tag",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_syslog_tag",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46804,6 +47926,10 @@
                 {
                     "anchor": "sysvar_log_timestamps",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_timestamps",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46824,6 +47950,10 @@
                 {
                     "anchor": "sysvar_log_throttle_queries_not_using_indexes",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_log_throttle_queries_not_using_indexes",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46861,6 +47991,10 @@
                 {
                     "anchor": "sysvar_max_execution_time",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_execution_time",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46882,6 +48016,10 @@
                 {
                     "anchor": "sysvar_max_points_in_geometry",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_max_points_in_geometry",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46897,6 +48035,10 @@
                 {
                     "anchor": "sysvar_mecab_rc_file",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_mecab_rc_file",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46913,6 +48055,10 @@
                 {
                     "anchor": "sysvar_mysql_native_password_proxy_users",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_mysql_native_password_proxy_users",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46934,6 +48080,10 @@
                 {
                     "anchor": "sysvar_named_pipe_full_access_group",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_named_pipe_full_access_group",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46951,6 +48101,10 @@
                 {
                     "anchor": "sysvar_new",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_new",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46971,6 +48125,10 @@
                 {
                     "anchor": "sysvar_ngram_token_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_ngram_token_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -46987,6 +48145,10 @@
                 {
                     "anchor": "sysvar_offline_mode",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_offline_mode",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47003,6 +48165,10 @@
                 {
                     "anchor": "sysvar_optimizer_trace_features",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_optimizer_trace_features",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47024,6 +48190,10 @@
                 {
                     "anchor": "sysvar_optimizer_trace_limit",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_optimizer_trace_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47045,6 +48215,10 @@
                 {
                     "anchor": "sysvar_optimizer_trace_offset",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_optimizer_trace_offset",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47064,6 +48238,10 @@
                 {
                     "anchor": "sysvar_parser_max_mem_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_parser_max_mem_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47241,7 +48419,6 @@
         },
         "range_optimizer_max_mem_size": {
             "cli": "--range-optimizer-max-mem-size=#",
-            "default": "8388608",
             "dynamic": true,
             "name": "range_optimizer_max_mem_size",
             "range": {
@@ -47257,6 +48434,10 @@
                 {
                     "anchor": "sysvar_range_optimizer_max_mem_size",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_range_optimizer_max_mem_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47276,6 +48457,10 @@
                 {
                     "anchor": "sysvar_rbr_exec_mode",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_rbr_exec_mode",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47473,6 +48658,10 @@
                 {
                     "anchor": "sysvar_session_track_gtids",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_session_track_gtids",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47489,6 +48678,10 @@
                 {
                     "anchor": "sysvar_sha256_password_auto_generate_rsa_keys",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sha256_password_auto_generate_rsa_keys",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47505,6 +48698,10 @@
                 {
                     "anchor": "sysvar_sha256_password_private_key_path",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sha256_password_private_key_path",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47521,6 +48718,10 @@
                 {
                     "anchor": "sysvar_sha256_password_proxy_users",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sha256_password_proxy_users",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47537,6 +48738,10 @@
                 {
                     "anchor": "sysvar_sha256_password_public_key_path",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_sha256_password_public_key_path",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47570,6 +48775,10 @@
                 {
                     "anchor": "sysvar_show_create_table_verbosity",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_show_create_table_verbosity",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47604,6 +48813,10 @@
                 {
                     "anchor": "sysvar_show_old_temporals",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_show_old_temporals",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47735,6 +48948,10 @@
                 {
                     "anchor": "sysvar_super_read_only",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_super_read_only",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47893,6 +49110,10 @@
                 {
                     "anchor": "sysvar_thread_pool_algorithm",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_thread_pool_algorithm",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47930,6 +49151,10 @@
                 {
                     "anchor": "sysvar_thread_pool_high_priority_connection",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_thread_pool_high_priority_connection",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -47990,6 +49215,10 @@
                 {
                     "anchor": "sysvar_thread_pool_max_unused_threads",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_thread_pool_max_unused_threads",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },
@@ -48114,6 +49343,22 @@
                 {
                     "anchor": "sysvar_xa_detach_on_prepare",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                }
+            ]
+        },
+        "show_compatibility_56": {
+            "cli": "--show-compatibility-56[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "show_compatibility_56",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_show_compatibility_56",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]
         },

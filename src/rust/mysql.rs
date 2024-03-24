@@ -225,8 +225,8 @@ fn process_link(li_node: Node) -> KbParsedEntry {
         },
         name: match li_node.find(Class("link")).next() {
             Some(node) => Some(match node.text().split("=").next() {
-                Some(data) => data.to_string(),
-                None => node.text(),
+                Some(data) => data.trim().to_string(),
+                None => node.text().trim().to_string(),
             }),
             None => None,
         },
@@ -405,7 +405,12 @@ pub fn extract_mysql_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
             &mut document
                 .find(Class("listitem"))
                 .filter(|li_node| filter_link(li_node))
-                .map(|li_node| process_link(li_node)),
+                .map(|li_node| process_link(li_node))
+                .filter(|e| e.name.is_some())
+                .filter(|e| match &e.name {
+                    Some(name) => name.starts_with("--") == false,
+                    None => false,
+                }),
         )
         .chain(
             match &mut document
@@ -417,11 +422,6 @@ pub fn extract_mysql_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
                     Some(tbody) => tbody
                         .find(Name("tr"))
                         .map(|tr| process_summary_table_row(tr))
-                        .filter(|e| e.name.is_some())
-                        .filter(|e| match &e.name {
-                            Some(name) => name.starts_with("--") == false,
-                            None => false,
-                        })
                         .collect::<Vec<KbParsedEntry>>(),
                     None => vec![],
                 },
@@ -1317,6 +1317,25 @@ mod tests {
                         to_f: None,
                         to_upwards: None,
                     }),
+                },
+                KbParsedEntry {
+                    cli: Some("--innodb-buffer-pool-chunk-size=#".to_string(),),
+                    default: Some("134217728".to_string(),),
+                    dynamic: Some(false,),
+                    id: Some("sysvar_innodb_buffer_pool_chunk_size".to_string(),),
+                    name: Some("innodb_buffer_pool_chunk_size".to_string(),),
+                    range: Some(Range {
+                        from: Some(1048576,),
+                        from_f: None,
+                        to: None,
+                        to_f: None,
+                        to_upwards: None,
+                    }),
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
                 },
                 KbParsedEntry {
                     cli: None,

@@ -134,3 +134,375 @@
                 class="literal">innodb_flush_log_at_trx_commit=1</code></a>.
     </p>
 </li>
+<li class="listitem">
+    <p>
+        System variables that are true or false can be enabled at
+        server startup by naming them, or disabled by using a
+        <code class="literal">--skip-</code> prefix. For example, to enable or
+        disable the <code class="literal">InnoDB</code> adaptive hash index, you
+        can use
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_adaptive_hash_index"><code
+                class="option">--innodb-adaptive-hash-index</code></a> or
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_adaptive_hash_index"><code
+                class="option">--skip-innodb-adaptive-hash-index</code></a>
+        on the command line, or
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_adaptive_hash_index"><code
+                class="literal">innodb_adaptive_hash_index</code></a> or
+        <code class="literal">skip_innodb_adaptive_hash_index</code> in an
+        option file.
+    </p>
+</li>
+<li class="listitem">
+    <p><a name="sysvar_innodb_buffer_pool_chunk_size"></a>
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+    </p><a class="indexterm" name="idm45428477171104"></a><a class="indexterm" name="idm45428477170000"></a>
+    <div class="informaltable">
+        <table frame="box" rules="all" summary="Properties for innodb_buffer_pool_chunk_size">
+            <colgroup>
+                <col style="width: 30%">
+                <col style="width: 70%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>Command-Line Format</th>
+                    <td><code class="literal">--innodb-buffer-pool-chunk-size=#</code></td>
+                </tr>
+                <tr>
+                    <th>System Variable</th>
+                    <td><code
+                            class="literal"><a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size">innodb_buffer_pool_chunk_size</a></code>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Scope</th>
+                    <td>Global</td>
+                </tr>
+                <tr>
+                    <th>Dynamic</th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th><a class="link" href="optimizer-hints.html#optimizer-hints-set-var"
+                            title="Variable-Setting Hint Syntax"><code class="literal">SET_VAR</code></a> Hint Applies
+                    </th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                    <td>Integer</td>
+                </tr>
+                <tr>
+                    <th>Default Value</th>
+                    <td><code class="literal">134217728</code></td>
+                </tr>
+                <tr>
+                    <th>Minimum Value</th>
+                    <td><code class="literal">1048576</code></td>
+                </tr>
+                <tr>
+                    <th>Maximum Value</th>
+                    <td><code class="literal">innodb_buffer_pool_size / innodb_buffer_pool_instances</code></td>
+                </tr>
+                <tr>
+                    <th>Unit</th>
+                    <td>bytes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+        defines the chunk size for <code class="literal">InnoDB</code> buffer
+        pool resizing operations.
+    </p>
+    <p>
+        To avoid copying all buffer pool pages during resizing
+        operations, the operation is performed in
+        <span class="quote">“<span class="quote">chunks</span>”</span>. By default,
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+        is 128MB (134217728 bytes). The number of pages contained in a
+        chunk depends on the value of
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_page_size"><code
+                class="literal">innodb_page_size</code></a>.
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+        can be increased or decreased in units of 1MB (1048576 bytes).
+    </p>
+    <p>
+        The following conditions apply when altering the
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+        value:
+    </p>
+    <div class="itemizedlist">
+        <ul class="itemizedlist" style="list-style-type: circle; ">
+            <li class="listitem">
+                <p>
+                    If <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                            class="literal">
+        innodb_buffer_pool_chunk_size</code></a> *
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_instances"><code
+                            class="literal">innodb_buffer_pool_instances</code></a>
+                    is larger than the current buffer pool size when the
+                    buffer pool is initialized,
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                            class="literal">innodb_buffer_pool_chunk_size</code></a>
+                    is truncated to
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_size"><code
+                            class="literal">innodb_buffer_pool_size</code></a> /
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_instances"><code
+                            class="literal">innodb_buffer_pool_instances</code></a>.
+                </p>
+            </li>
+            <li class="listitem">
+                <p>
+                    Buffer pool size must always be equal to or a multiple of
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                            class="literal">innodb_buffer_pool_chunk_size</code></a>
+                    *
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_instances"><code
+                            class="literal">innodb_buffer_pool_instances</code></a>.
+                    If you alter
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                            class="literal">innodb_buffer_pool_chunk_size</code></a>,
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_size"><code
+                            class="literal">innodb_buffer_pool_size</code></a>
+                    is automatically rounded to a value that is equal to or a
+                    multiple of
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                            class="literal">innodb_buffer_pool_chunk_size</code></a>
+                    *
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_instances"><code
+                            class="literal">innodb_buffer_pool_instances</code></a>.
+                    The adjustment occurs when the buffer pool is initialized.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="important" style="margin-left: 0.5in; margin-right: 0.5in;">
+        <div class="admon-title">
+            Important
+        </div>
+        <p>
+            Care should be taken when changing
+            <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                    class="literal">innodb_buffer_pool_chunk_size</code></a>,
+            as changing this value can automatically increase the size
+            of the buffer pool. Before changing
+            <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                    class="literal">innodb_buffer_pool_chunk_size</code></a>,
+            calculate its effect on
+            <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_size"><code
+                    class="literal">innodb_buffer_pool_size</code></a> to
+            ensure that the resulting buffer pool size is acceptable.
+        </p>
+    </div>
+    <p>
+        To avoid potential performance issues, the number of chunks
+        (<a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_size"><code
+                class="literal">innodb_buffer_pool_size</code></a> /
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>)
+        should not exceed 1000.
+    </p>
+    <p>
+        The <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_size"><code
+                class="literal">innodb_buffer_pool_size</code></a>
+        variable is dynamic, which permits resizing the buffer pool
+        while the server is online. However, the buffer pool size must
+        be equal to or a multiple of
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+        *
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_instances"><code
+                class="literal">innodb_buffer_pool_instances</code></a>,
+        and changing either of those variable settings requires
+        restarting the server.
+    </p>
+    <p>
+        See <a class="xref" href="innodb-buffer-pool-resize.html"
+            title="17.8.3.1&nbsp;Configuring InnoDB Buffer Pool Size">Section&nbsp;17.8.3.1, “Configuring InnoDB Buffer
+            Pool Size”</a> for more
+        information.
+    </p>
+</li>
+<li class="listitem">
+    <p><a name="sysvar_innodb_buffer_pool_chunk_size"></a>
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+    </p><a class="indexterm" name="idm45428477171104"></a><a class="indexterm" name="idm45428477170000"></a>
+    <div class="informaltable">
+        <table frame="box" rules="all" summary="Properties for innodb_buffer_pool_chunk_size">
+            <colgroup>
+                <col style="width: 30%">
+                <col style="width: 70%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>Command-Line Format</th>
+                    <td><code class="literal">--innodb-buffer-pool-chunk-size=#</code></td>
+                </tr>
+                <tr>
+                    <th>System Variable</th>
+                    <td><code
+                            class="literal"><a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size">innodb_buffer_pool_chunk_size</a></code>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Scope</th>
+                    <td>Global</td>
+                </tr>
+                <tr>
+                    <th>Dynamic</th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th><a class="link" href="optimizer-hints.html#optimizer-hints-set-var"
+                            title="Variable-Setting Hint Syntax"><code class="literal">SET_VAR</code></a> Hint Applies
+                    </th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                    <td>Integer</td>
+                </tr>
+                <tr>
+                    <th>Default Value</th>
+                    <td><code class="literal">134217728</code></td>
+                </tr>
+                <tr>
+                    <th>Minimum Value</th>
+                    <td><code class="literal">1048576</code></td>
+                </tr>
+                <tr>
+                    <th>Maximum Value</th>
+                    <td><code class="literal">innodb_buffer_pool_size / innodb_buffer_pool_instances</code></td>
+                </tr>
+                <tr>
+                    <th>Unit</th>
+                    <td>bytes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+        defines the chunk size for <code class="literal">InnoDB</code> buffer
+        pool resizing operations.
+    </p>
+    <p>
+        To avoid copying all buffer pool pages during resizing
+        operations, the operation is performed in
+        <span class="quote">“<span class="quote">chunks</span>”</span>. By default,
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+        is 128MB (134217728 bytes). The number of pages contained in a
+        chunk depends on the value of
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_page_size"><code
+                class="literal">innodb_page_size</code></a>.
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+        can be increased or decreased in units of 1MB (1048576 bytes).
+    </p>
+    <p>
+        The following conditions apply when altering the
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+        value:
+    </p>
+    <div class="itemizedlist">
+        <ul class="itemizedlist" style="list-style-type: circle; ">
+            <li class="listitem">
+                <p>
+                    If <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                            class="literal">
+        innodb_buffer_pool_chunk_size</code></a> *
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_instances"><code
+                            class="literal">innodb_buffer_pool_instances</code></a>
+                    is larger than the current buffer pool size when the
+                    buffer pool is initialized,
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                            class="literal">innodb_buffer_pool_chunk_size</code></a>
+                    is truncated to
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_size"><code
+                            class="literal">innodb_buffer_pool_size</code></a> /
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_instances"><code
+                            class="literal">innodb_buffer_pool_instances</code></a>.
+                </p>
+            </li>
+            <li class="listitem">
+                <p>
+                    Buffer pool size must always be equal to or a multiple of
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                            class="literal">innodb_buffer_pool_chunk_size</code></a>
+                    *
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_instances"><code
+                            class="literal">innodb_buffer_pool_instances</code></a>.
+                    If you alter
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                            class="literal">innodb_buffer_pool_chunk_size</code></a>,
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_size"><code
+                            class="literal">innodb_buffer_pool_size</code></a>
+                    is automatically rounded to a value that is equal to or a
+                    multiple of
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                            class="literal">innodb_buffer_pool_chunk_size</code></a>
+                    *
+                    <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_instances"><code
+                            class="literal">innodb_buffer_pool_instances</code></a>.
+                    The adjustment occurs when the buffer pool is initialized.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="important" style="margin-left: 0.5in; margin-right: 0.5in;">
+        <div class="admon-title">
+            Important
+        </div>
+        <p>
+            Care should be taken when changing
+            <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                    class="literal">innodb_buffer_pool_chunk_size</code></a>,
+            as changing this value can automatically increase the size
+            of the buffer pool. Before changing
+            <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                    class="literal">innodb_buffer_pool_chunk_size</code></a>,
+            calculate its effect on
+            <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_size"><code
+                    class="literal">innodb_buffer_pool_size</code></a> to
+            ensure that the resulting buffer pool size is acceptable.
+        </p>
+    </div>
+    <p>
+        To avoid potential performance issues, the number of chunks
+        (<a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_size"><code
+                class="literal">innodb_buffer_pool_size</code></a> /
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>)
+        should not exceed 1000.
+    </p>
+    <p>
+        The <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_size"><code
+                class="literal">innodb_buffer_pool_size</code></a>
+        variable is dynamic, which permits resizing the buffer pool
+        while the server is online. However, the buffer pool size must
+        be equal to or a multiple of
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size"><code
+                class="literal">innodb_buffer_pool_chunk_size</code></a>
+        *
+        <a class="link" href="innodb-parameters.html#sysvar_innodb_buffer_pool_instances"><code
+                class="literal">innodb_buffer_pool_instances</code></a>,
+        and changing either of those variable settings requires
+        restarting the server.
+    </p>
+    <p>
+        See <a class="xref" href="innodb-buffer-pool-resize.html"
+            title="17.8.3.1&nbsp;Configuring InnoDB Buffer Pool Size">Section&nbsp;17.8.3.1, “Configuring InnoDB Buffer
+            Pool Size”</a> for more
+        information.
+    </p>
+</li>

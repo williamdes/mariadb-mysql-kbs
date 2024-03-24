@@ -2290,14 +2290,6 @@
       "type": "integer"
     },
     {
-      "id": "sysvar_innodb_adaptive_hash_index",
-      "name": "--innodb-adaptive-hash-index"
-    },
-    {
-      "id": "sysvar_innodb_buffer_pool_chunk_size",
-      "name": "\n              innodb_buffer_pool_chunk_size"
-    },
-    {
       "id": "sysvar_innodb_version",
       "name": "innodb_version"
     }

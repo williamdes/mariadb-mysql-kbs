@@ -540,10 +540,6 @@
       "type": "boolean"
     },
     {
-      "id": "sysvar_datadir",
-      "name": "--datadir"
-    },
-    {
       "id": "sysvar_init_file",
       "name": "init_file"
     }

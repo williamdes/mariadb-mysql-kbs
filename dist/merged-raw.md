@@ -33465,28 +33465,6 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_validate_tablespace_paths](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_validate_tablespace_paths)|
 
-## --innodb-adaptive-hash-index
-|name|value|
-|----|-----|
-|Name|`--innodb-adaptive-hash-index`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_innodb_adaptive_hash_index](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)|
-
-## 
-              innodb_buffer_pool_chunk_size
-|name|value|
-|----|-----|
-|Name|`
-              innodb_buffer_pool_chunk_size`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_innodb_buffer_pool_chunk_size](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_buffer_pool_chunk_size)|
-
 ## ndbcluster
 |name|value|
 |----|-----|
@@ -37951,16 +37929,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[option_mysqld_validate-user-plugins](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_validate-user-plugins)|
-
-## --datadir
-|name|value|
-|----|-----|
-|Name|`--datadir`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_datadir](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#sysvar_datadir)|
 
 ## Authentication_ldap_sasl_supported_methods
 |name|value|

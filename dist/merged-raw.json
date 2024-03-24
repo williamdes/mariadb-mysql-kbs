@@ -40341,24 +40341,6 @@
                 }
             ]
         },
-        "--innodb-adaptive-hash-index": {
-            "name": "--innodb-adaptive-hash-index",
-            "ids": [
-                {
-                    "anchor": "sysvar_innodb_adaptive_hash_index",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
-                }
-            ]
-        },
-        "\n              innodb_buffer_pool_chunk_size": {
-            "name": "\n              innodb_buffer_pool_chunk_size",
-            "ids": [
-                {
-                    "anchor": "sysvar_innodb_buffer_pool_chunk_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
-                }
-            ]
-        },
         "ndbcluster": {
             "cli": "--ndbcluster[=value]",
             "default": "OFF",
@@ -45173,15 +45155,6 @@
             "ids": [
                 {
                     "anchor": "option_mysqld_validate-user-plugins",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                }
-            ]
-        },
-        "--datadir": {
-            "name": "--datadir",
-            "ids": [
-                {
-                    "anchor": "sysvar_datadir",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
                 }
             ]

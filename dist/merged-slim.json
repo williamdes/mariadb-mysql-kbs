@@ -30360,18 +30360,6 @@
                 "62#sysvar_innodb_validate_tablespace_paths"
             ]
         },
-        "--innodb-adaptive-hash-index": {
-            "name": "--innodb-adaptive-hash-index",
-            "ids": [
-                "62#sysvar_innodb_adaptive_hash_index"
-            ]
-        },
-        "\n              innodb_buffer_pool_chunk_size": {
-            "name": "\n              innodb_buffer_pool_chunk_size",
-            "ids": [
-                "62#sysvar_innodb_buffer_pool_chunk_size"
-            ]
-        },
         "ndbcluster": {
             "cli": "--ndbcluster[=value]",
             "default": "OFF",
@@ -34117,12 +34105,6 @@
             "type": "boolean",
             "ids": [
                 "24#option_mysqld_validate-user-plugins"
-            ]
-        },
-        "--datadir": {
-            "name": "--datadir",
-            "ids": [
-                "24#sysvar_datadir"
             ]
         },
         "Authentication_ldap_sasl_supported_methods": {

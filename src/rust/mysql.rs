@@ -351,19 +351,13 @@ fn filter_link(elem: &Node) -> bool {
 }
 
 fn filter_summary_table(elem: &Node) -> bool {
-    let element_attr = elem.attr("class");
-    match element_attr {
-        Some(attr) => {
-            let mut th_elements = elem.find(Name("th"));
+    let mut th_elements = elem.find(Name("th"));
 
-            match th_elements.next() {
-                Some(e) => match th_elements.next() {
-                    Some(ee) => ee.text() == "Variable Type" && e.text() == "Variable Name",
-                    None => false,
-                },
-                None => false,
-            }
-        }
+    match th_elements.next() {
+        Some(e) => match th_elements.next() {
+            Some(ee) => ee.text() == "Variable Type" && e.text() == "Variable Name",
+            None => false,
+        },
         None => false,
     }
 }

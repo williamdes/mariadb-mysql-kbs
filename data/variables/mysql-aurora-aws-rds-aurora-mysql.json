@@ -1,380 +1,305 @@
 {
   "data": [
     {
-      "id": "AuroraDb_commits",
       "name": "AuroraDb_commits",
       "type": "integer"
     },
     {
-      "id": "AuroraDb_commit_latency",
       "name": "AuroraDb_commit_latency",
       "type": "integer"
     },
     {
-      "id": "AuroraDb_ddl_stmt_duration",
       "name": "AuroraDb_ddl_stmt_duration",
       "type": "integer"
     },
     {
-      "id": "AuroraDb_select_stmt_duration",
       "name": "AuroraDb_select_stmt_duration",
       "type": "integer"
     },
     {
-      "id": "AuroraDb_insert_stmt_duration",
       "name": "AuroraDb_insert_stmt_duration",
       "type": "integer"
     },
     {
-      "id": "AuroraDb_update_stmt_duration",
       "name": "AuroraDb_update_stmt_duration",
       "type": "integer"
     },
     {
-      "id": "AuroraDb_delete_stmt_duration",
       "name": "AuroraDb_delete_stmt_duration",
       "type": "integer"
     },
     {
-      "id": "Aurora_binlog_io_cache_allocated",
       "name": "Aurora_binlog_io_cache_allocated",
       "type": "byte"
     },
     {
-      "id": "Aurora_binlog_io_cache_read_requests",
       "name": "Aurora_binlog_io_cache_read_requests",
       "type": "integer"
     },
     {
-      "id": "Aurora_binlog_io_cache_reads",
       "name": "Aurora_binlog_io_cache_reads",
       "type": "integer"
     },
     {
-      "id": "Aurora_enhanced_binlog",
       "name": "Aurora_enhanced_binlog",
       "type": "boolean"
     },
     {
-      "id": "Aurora_external_connection_count",
       "name": "Aurora_external_connection_count",
       "type": "integer"
     },
     {
-      "id": "Aurora_fast_insert_cache_hits",
       "name": "Aurora_fast_insert_cache_hits",
       "type": "integer"
     },
     {
-      "id": "Aurora_fast_insert_cache_misses",
       "name": "Aurora_fast_insert_cache_misses",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_master_dml_stmt_count",
       "name": "Aurora_fwd_master_dml_stmt_count",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_master_dml_stmt_duration",
       "name": "Aurora_fwd_master_dml_stmt_duration",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_master_errors_rpc_timeout",
       "name": "Aurora_fwd_master_errors_rpc_timeout",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_master_errors_session_limit",
       "name": "Aurora_fwd_master_errors_session_limit",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_master_errors_session_timeout",
       "name": "Aurora_fwd_master_errors_session_timeout",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_master_open_sessions",
       "name": "Aurora_fwd_master_open_sessions",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_master_select_stmt_count",
       "name": "Aurora_fwd_master_select_stmt_count",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_master_select_stmt_duration",
       "name": "Aurora_fwd_master_select_stmt_duration",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_writer_dml_stmt_count",
       "name": "Aurora_fwd_writer_dml_stmt_count",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_writer_dml_stmt_duration",
       "name": "Aurora_fwd_writer_dml_stmt_duration",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_writer_errors_rpc_timeout",
       "name": "Aurora_fwd_writer_errors_rpc_timeout",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_writer_errors_session_limit",
       "name": "Aurora_fwd_writer_errors_session_limit",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_writer_errors_session_timeout",
       "name": "Aurora_fwd_writer_errors_session_timeout",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_writer_open_sessions",
       "name": "Aurora_fwd_writer_open_sessions",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_writer_select_stmt_count",
       "name": "Aurora_fwd_writer_select_stmt_count",
       "type": "integer"
     },
     {
-      "id": "Aurora_fwd_writer_select_stmt_duration",
       "name": "Aurora_fwd_writer_select_stmt_duration",
       "type": "integer"
     },
     {
-      "id": "Aurora_lockmgr_buffer_pool_memory_used",
       "name": "Aurora_lockmgr_buffer_pool_memory_used"
     },
     {
-      "id": "Aurora_lockmgr_memory_used",
       "name": "Aurora_lockmgr_memory_used",
       "type": "byte"
     },
     {
-      "id": "Aurora_ml_actual_request_cnt",
       "name": "Aurora_ml_actual_request_cnt",
       "type": "integer"
     },
     {
-      "id": "Aurora_ml_actual_response_cnt",
       "name": "Aurora_ml_actual_response_cnt",
       "type": "integer"
     },
     {
-      "id": "Aurora_ml_cache_hit_cnt",
       "name": "Aurora_ml_cache_hit_cnt",
       "type": "integer"
     },
     {
-      "id": "Aurora_ml_logical_request_cnt",
       "name": "Aurora_ml_logical_request_cnt",
       "type": "integer"
     },
     {
-      "id": "Aurora_ml_logical_response_cnt",
       "name": "Aurora_ml_logical_response_cnt",
       "type": "integer"
     },
     {
-      "id": "Aurora_ml_retry_request_cnt",
       "name": "Aurora_ml_retry_request_cnt",
       "type": "integer"
     },
     {
-      "id": "Aurora_ml_single_request_cnt",
       "name": "Aurora_ml_single_request_cnt",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_bytes_returned",
       "name": "Aurora_pq_bytes_returned",
       "type": "byte"
     },
     {
-      "id": "Aurora_pq_max_concurrent_requests",
       "name": "Aurora_pq_max_concurrent_requests",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_pages_pushed_down",
       "name": "Aurora_pq_pages_pushed_down",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_attempted",
       "name": "Aurora_pq_request_attempted",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_executed",
       "name": "Aurora_pq_request_executed",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_failed",
       "name": "Aurora_pq_request_failed",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_in_progress",
       "name": "Aurora_pq_request_in_progress",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen",
       "name": "Aurora_pq_request_not_chosen",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_below_min_rows",
       "name": "Aurora_pq_request_not_chosen_below_min_rows",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_column_bit",
       "name": "Aurora_pq_request_not_chosen_column_bit",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_column_geometry",
       "name": "Aurora_pq_request_not_chosen_column_geometry",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_column_lob",
       "name": "Aurora_pq_request_not_chosen_column_lob",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_column_virtual",
       "name": "Aurora_pq_request_not_chosen_column_virtual",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_custom_charset",
       "name": "Aurora_pq_request_not_chosen_custom_charset",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_fast_ddl",
       "name": "Aurora_pq_request_not_chosen_fast_ddl",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_few_pages_outside_buffer_pool",
       "name": "Aurora_pq_request_not_chosen_few_pages_outside_buffer_pool",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_full_text_index",
       "name": "Aurora_pq_request_not_chosen_full_text_index",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_high_buffer_pool_pct",
       "name": "Aurora_pq_request_not_chosen_high_buffer_pool_pct",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_index_hint",
       "name": "Aurora_pq_request_not_chosen_index_hint",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_innodb_table_format",
       "name": "Aurora_pq_request_not_chosen_innodb_table_format",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_long_trx",
       "name": "Aurora_pq_request_not_chosen_long_trx",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_no_where_clause",
       "name": "Aurora_pq_request_not_chosen_no_where_clause",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_range_scan",
       "name": "Aurora_pq_request_not_chosen_range_scan",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_row_length_too_long",
       "name": "Aurora_pq_request_not_chosen_row_length_too_long",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_small_table",
       "name": "Aurora_pq_request_not_chosen_small_table",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_temporary_table",
       "name": "Aurora_pq_request_not_chosen_temporary_table",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_tx_isolation",
       "name": "Aurora_pq_request_not_chosen_tx_isolation",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_update_delete_stmts",
       "name": "Aurora_pq_request_not_chosen_update_delete_stmts",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_unsupported_access",
       "name": "Aurora_pq_request_not_chosen_unsupported_access",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_not_chosen_unsupported_storage_type",
       "name": "Aurora_pq_request_not_chosen_unsupported_storage_type",
       "type": "integer"
     },
     {
-      "id": "Aurora_pq_request_throttled",
       "name": "Aurora_pq_request_throttled",
       "type": "integer"
     },
     {
-      "id": "Aurora_repl_bytes_received",
       "name": "Aurora_repl_bytes_received",
       "type": "byte"
     },
     {
-      "id": "Aurora_reserved_mem_exceeded_incidents",
       "name": "Aurora_reserved_mem_exceeded_incidents",
       "type": "integer"
     },
     {
-      "id": "Aurora_thread_pool_thread_count",
       "name": "Aurora_thread_pool_thread_count",
       "type": "integer"
     },
     {
-      "id": "Aurora_tmz_version",
       "name": "Aurora_tmz_version",
       "type": "string"
     },
     {
-      "id": "server_aurora_das_running",
       "name": "server_aurora_das_running",
       "type": "boolean"
     }
   ],
   "name": "aws-rds-aurora-mysql",
-  "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.Parameters.Inapplicable"
+  "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars"
 }

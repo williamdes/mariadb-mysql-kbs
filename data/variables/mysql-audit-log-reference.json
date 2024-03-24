@@ -317,6 +317,38 @@
         "SEMISYNCHRONOUS",
         "SYNCHRONOUS"
       ]
+    },
+    {
+      "id": "statvar_Audit_log_current_size",
+      "name": "Audit_log_current_size"
+    },
+    {
+      "id": "statvar_Audit_log_event_max_drop_size",
+      "name": "Audit_log_event_max_drop_size"
+    },
+    {
+      "id": "statvar_Audit_log_events",
+      "name": "Audit_log_events"
+    },
+    {
+      "id": "statvar_Audit_log_events_filtered",
+      "name": "Audit_log_events_filtered"
+    },
+    {
+      "id": "statvar_Audit_log_events_lost",
+      "name": "Audit_log_events_lost"
+    },
+    {
+      "id": "statvar_Audit_log_events_written",
+      "name": "Audit_log_events_written"
+    },
+    {
+      "id": "statvar_Audit_log_total_size",
+      "name": "Audit_log_total_size"
+    },
+    {
+      "id": "statvar_Audit_log_write_waits",
+      "name": "Audit_log_write_waits"
     }
   ],
   "name": "audit-log-reference",

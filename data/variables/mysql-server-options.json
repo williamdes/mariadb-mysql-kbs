@@ -538,6 +538,14 @@
       "id": "option_mysqld_validate-user-plugins",
       "name": "validate_user_plugins",
       "type": "boolean"
+    },
+    {
+      "id": "sysvar_datadir",
+      "name": "--datadir"
+    },
+    {
+      "id": "sysvar_init_file",
+      "name": "init_file"
     }
   ],
   "name": "server-options",

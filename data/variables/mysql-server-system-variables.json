@@ -4194,6 +4194,82 @@
         "session"
       ],
       "type": "boolean"
+    },
+    {
+      "id": "sysvar_error_count",
+      "name": "error_count"
+    },
+    {
+      "id": "sysvar_have_compress",
+      "name": "have_compress"
+    },
+    {
+      "id": "sysvar_have_dynamic_loading",
+      "name": "have_dynamic_loading"
+    },
+    {
+      "id": "sysvar_have_geometry",
+      "name": "have_geometry"
+    },
+    {
+      "id": "sysvar_have_openssl",
+      "name": "have_openssl"
+    },
+    {
+      "id": "sysvar_have_profiling",
+      "name": "have_profiling"
+    },
+    {
+      "id": "sysvar_have_query_cache",
+      "name": "have_query_cache"
+    },
+    {
+      "id": "sysvar_have_rtree_keys",
+      "name": "have_rtree_keys"
+    },
+    {
+      "id": "sysvar_have_symlink",
+      "name": "have_symlink"
+    },
+    {
+      "id": "sysvar_identity",
+      "name": "identity"
+    },
+    {
+      "id": "sysvar_insert_id",
+      "name": "insert_id"
+    },
+    {
+      "id": "sysvar_last_insert_id",
+      "name": "last_insert_id"
+    },
+    {
+      "id": "sysvar_profiling",
+      "name": "profiling"
+    },
+    {
+      "id": "sysvar_profiling_history_size",
+      "name": "profiling_history_size"
+    },
+    {
+      "id": "sysvar_original_server_version",
+      "name": "original_server_version"
+    },
+    {
+      "id": "sysvar_rand_seed2",
+      "name": "rand_seed2"
+    },
+    {
+      "id": "sysvar_gtid_executed",
+      "name": "gtid_executed"
+    },
+    {
+      "id": "sysvar_version",
+      "name": "version"
+    },
+    {
+      "id": "sysvar_warning_count",
+      "name": "warning_count"
     }
   ],
   "name": "server-system-variables",

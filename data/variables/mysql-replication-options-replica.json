@@ -228,21 +228,6 @@
       ]
     },
     {
-      "cli": "--max-relay-log-size=#",
-      "default": "0",
-      "dynamic": true,
-      "id": "sysvar_max_relay_log_size",
-      "name": "max_relay_log_size",
-      "range": {
-        "from": 0,
-        "to": 1073741824
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--relay-log=file_name",
       "dynamic": false,
       "id": "sysvar_relay_log",
@@ -300,17 +285,6 @@
       ]
     },
     {
-      "cli": "--relay-log-purge[={OFF|ON}]",
-      "default": "ON",
-      "dynamic": true,
-      "id": "sysvar_relay_log_purge",
-      "name": "relay_log_purge",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--relay-log-recovery[={OFF|ON}]",
       "default": "OFF",
       "dynamic": false,
@@ -320,21 +294,6 @@
         "global"
       ],
       "type": "boolean"
-    },
-    {
-      "cli": "--relay-log-space-limit=#",
-      "default": "0",
-      "dynamic": false,
-      "id": "sysvar_relay_log_space_limit",
-      "name": "relay_log_space_limit",
-      "range": {
-        "from": 0,
-        "to": 18446744073709551615
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
     },
     {
       "cli": "--replica-checkpoint-group=#",
@@ -693,28 +652,6 @@
       "type": "integer"
     },
     {
-      "cli": "--skip-replica-start[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "sysvar_skip_replica_start",
-      "name": "skip_replica_start",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--skip-slave-start[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "sysvar_skip_slave_start",
-      "name": "skip_slave_start",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--slave-checkpoint-group=#",
       "default": "512",
       "dynamic": true,
@@ -880,23 +817,6 @@
       ]
     },
     {
-      "cli": "--slave-skip-errors=name",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "sysvar_slave_skip_errors",
-      "name": "slave_skip_errors",
-      "scope": [
-        "global"
-      ],
-      "type": "string",
-      "validValues": [
-        "OFF",
-        "[list of error codes]",
-        "all",
-        "ddl_exist_errors"
-      ]
-    },
-    {
       "cli": "--replica-skip-errors=name",
       "default": "OFF",
       "dynamic": false,
@@ -912,17 +832,6 @@
         "all",
         "ddl_exist_errors"
       ]
-    },
-    {
-      "cli": "--slave-sql-verify-checksum[={OFF|ON}]",
-      "default": "ON",
-      "dynamic": true,
-      "id": "sysvar_slave_sql_verify_checksum",
-      "name": "slave_sql_verify_checksum",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
     },
     {
       "cli": "--slave-transaction-retries=#",
@@ -1058,6 +967,10 @@
         "NONE",
         "BEFORE_8_0_26"
       ]
+    },
+    {
+      "id": "sysvar_binlog_transaction_dependency_tracking",
+      "name": "binlog_transaction_dependency_tracking"
     }
   ],
   "name": "replication-options-replica",

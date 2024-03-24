@@ -1,0 +1,1018 @@
+{
+  "data": [
+    {
+      "id": "statvar_Aborted_clients",
+      "name": "Aborted_clients"
+    },
+    {
+      "id": "statvar_Aborted_connects",
+      "name": "Aborted_connects"
+    },
+    {
+      "id": "statvar_Authentication_ldap_sasl_supported_methods",
+      "name": "Authentication_ldap_sasl_supported_methods"
+    },
+    {
+      "id": "statvar_Binlog_cache_disk_use",
+      "name": "Binlog_cache_disk_use"
+    },
+    {
+      "id": "statvar_Acl_cache_items_count",
+      "name": "Acl_cache_items_count"
+    },
+    {
+      "id": "statvar_Binlog_cache_use",
+      "name": "Binlog_cache_use"
+    },
+    {
+      "id": "statvar_Binlog_stmt_cache_disk_use",
+      "name": "Binlog_stmt_cache_disk_use"
+    },
+    {
+      "id": "statvar_Binlog_stmt_cache_use",
+      "name": "Binlog_stmt_cache_use"
+    },
+    {
+      "id": "statvar_Bytes_received",
+      "name": "Bytes_received"
+    },
+    {
+      "id": "statvar_Bytes_sent",
+      "name": "Bytes_sent"
+    },
+    {
+      "id": "statvar_Caching_sha2_password_rsa_public_key",
+      "name": "Caching_sha2_password_rsa_public_key"
+    },
+    {
+      "id": "statvar_Compression",
+      "name": "Compression"
+    },
+    {
+      "id": "statvar_Compression_algorithm",
+      "name": "Compression_algorithm"
+    },
+    {
+      "id": "statvar_Compression_level",
+      "name": "Compression_level"
+    },
+    {
+      "id": "statvar_Connection_errors_xxx",
+      "name": "Connection_errors_xxx"
+    },
+    {
+      "id": "statvar_Connection_errors_accept",
+      "name": "Connection_errors_accept"
+    },
+    {
+      "id": "statvar_Connection_errors_internal",
+      "name": "Connection_errors_internal"
+    },
+    {
+      "id": "statvar_Connection_errors_max_connections",
+      "name": "Connection_errors_max_connections"
+    },
+    {
+      "id": "statvar_Connection_errors_peer_address",
+      "name": "Connection_errors_peer_address"
+    },
+    {
+      "id": "statvar_Connection_errors_select",
+      "name": "Connection_errors_select"
+    },
+    {
+      "id": "statvar_Connection_errors_tcpwrap",
+      "name": "Connection_errors_tcpwrap"
+    },
+    {
+      "id": "statvar_Connections",
+      "name": "Connections"
+    },
+    {
+      "id": "statvar_Created_tmp_disk_tables",
+      "name": "Created_tmp_disk_tables"
+    },
+    {
+      "id": "statvar_Created_tmp_files",
+      "name": "Created_tmp_files"
+    },
+    {
+      "id": "statvar_Created_tmp_tables",
+      "name": "Created_tmp_tables"
+    },
+    {
+      "id": "statvar_Current_tls_ca",
+      "name": "Current_tls_ca"
+    },
+    {
+      "id": "statvar_Current_tls_capath",
+      "name": "Current_tls_capath"
+    },
+    {
+      "id": "statvar_Current_tls_cert",
+      "name": "Current_tls_cert"
+    },
+    {
+      "id": "statvar_Current_tls_cipher",
+      "name": "Current_tls_cipher"
+    },
+    {
+      "id": "statvar_Current_tls_ciphersuites",
+      "name": "Current_tls_ciphersuites"
+    },
+    {
+      "id": "statvar_Current_tls_crl",
+      "name": "Current_tls_crl"
+    },
+    {
+      "id": "statvar_Current_tls_crlpath",
+      "name": "Current_tls_crlpath"
+    },
+    {
+      "id": "statvar_Current_tls_key",
+      "name": "Current_tls_key"
+    },
+    {
+      "id": "statvar_Current_tls_version",
+      "name": "Current_tls_version"
+    },
+    {
+      "id": "statvar_Delayed_errors",
+      "name": "Delayed_errors"
+    },
+    {
+      "id": "statvar_Delayed_insert_threads",
+      "name": "Delayed_insert_threads"
+    },
+    {
+      "id": "statvar_Delayed_writes",
+      "name": "Delayed_writes"
+    },
+    {
+      "id": "statvar_dragnet.Status",
+      "name": "dragnet.Status"
+    },
+    {
+      "id": "statvar_Error_log_buffered_bytes",
+      "name": "Error_log_buffered_bytes"
+    },
+    {
+      "id": "statvar_Error_log_buffered_events",
+      "name": "Error_log_buffered_events"
+    },
+    {
+      "id": "statvar_Error_log_expired_events",
+      "name": "Error_log_expired_events"
+    },
+    {
+      "id": "statvar_Error_log_latest_write",
+      "name": "Error_log_latest_write"
+    },
+    {
+      "id": "statvar_Flush_commands",
+      "name": "Flush_commands"
+    },
+    {
+      "id": "statvar_Global_connection_memory",
+      "name": "Global_connection_memory"
+    },
+    {
+      "id": "statvar_Handler_commit",
+      "name": "Handler_commit"
+    },
+    {
+      "id": "statvar_Handler_delete",
+      "name": "Handler_delete"
+    },
+    {
+      "id": "statvar_Handler_external_lock",
+      "name": "Handler_external_lock"
+    },
+    {
+      "id": "statvar_Handler_mrr_init",
+      "name": "Handler_mrr_init"
+    },
+    {
+      "id": "statvar_Handler_prepare",
+      "name": "Handler_prepare"
+    },
+    {
+      "id": "statvar_Handler_read_first",
+      "name": "Handler_read_first"
+    },
+    {
+      "id": "statvar_Handler_read_key",
+      "name": "Handler_read_key"
+    },
+    {
+      "id": "statvar_Handler_read_last",
+      "name": "Handler_read_last"
+    },
+    {
+      "id": "statvar_Handler_read_next",
+      "name": "Handler_read_next"
+    },
+    {
+      "id": "statvar_Handler_read_prev",
+      "name": "Handler_read_prev"
+    },
+    {
+      "id": "statvar_Handler_read_rnd",
+      "name": "Handler_read_rnd"
+    },
+    {
+      "id": "statvar_Handler_read_rnd_next",
+      "name": "Handler_read_rnd_next"
+    },
+    {
+      "id": "statvar_Handler_rollback",
+      "name": "Handler_rollback"
+    },
+    {
+      "id": "statvar_Handler_savepoint",
+      "name": "Handler_savepoint"
+    },
+    {
+      "id": "statvar_Handler_savepoint_rollback",
+      "name": "Handler_savepoint_rollback"
+    },
+    {
+      "id": "statvar_Handler_update",
+      "name": "Handler_update"
+    },
+    {
+      "id": "statvar_Handler_write",
+      "name": "Handler_write"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_dump_status",
+      "name": "Innodb_buffer_pool_dump_status"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_load_status",
+      "name": "Innodb_buffer_pool_load_status"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_bytes_data",
+      "name": "Innodb_buffer_pool_bytes_data"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_pages_data",
+      "name": "Innodb_buffer_pool_pages_data"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_bytes_dirty",
+      "name": "Innodb_buffer_pool_bytes_dirty"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_pages_dirty",
+      "name": "Innodb_buffer_pool_pages_dirty"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_pages_flushed",
+      "name": "Innodb_buffer_pool_pages_flushed"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_pages_free",
+      "name": "Innodb_buffer_pool_pages_free"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_pages_latched",
+      "name": "Innodb_buffer_pool_pages_latched"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_pages_misc",
+      "name": "Innodb_buffer_pool_pages_misc"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_pages_total",
+      "name": "Innodb_buffer_pool_pages_total"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_read_ahead",
+      "name": "Innodb_buffer_pool_read_ahead"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_read_ahead_evicted",
+      "name": "Innodb_buffer_pool_read_ahead_evicted"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_read_ahead_rnd",
+      "name": "Innodb_buffer_pool_read_ahead_rnd"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_read_requests",
+      "name": "Innodb_buffer_pool_read_requests"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_reads",
+      "name": "Innodb_buffer_pool_reads"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_resize_status",
+      "name": "Innodb_buffer_pool_resize_status"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_resize_status_code",
+      "name": "Innodb_buffer_pool_resize_status_code"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_resize_status_progress",
+      "name": "Innodb_buffer_pool_resize_status_progress"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_wait_free",
+      "name": "Innodb_buffer_pool_wait_free"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_write_requests",
+      "name": "Innodb_buffer_pool_write_requests"
+    },
+    {
+      "id": "statvar_Innodb_data_fsyncs",
+      "name": "Innodb_data_fsyncs"
+    },
+    {
+      "id": "statvar_Innodb_data_pending_fsyncs",
+      "name": "Innodb_data_pending_fsyncs"
+    },
+    {
+      "id": "statvar_Innodb_data_pending_reads",
+      "name": "Innodb_data_pending_reads"
+    },
+    {
+      "id": "statvar_Innodb_data_pending_writes",
+      "name": "Innodb_data_pending_writes"
+    },
+    {
+      "id": "statvar_Innodb_data_read",
+      "name": "Innodb_data_read"
+    },
+    {
+      "id": "statvar_Innodb_data_reads",
+      "name": "Innodb_data_reads"
+    },
+    {
+      "id": "statvar_Innodb_data_writes",
+      "name": "Innodb_data_writes"
+    },
+    {
+      "id": "statvar_Innodb_data_written",
+      "name": "Innodb_data_written"
+    },
+    {
+      "id": "statvar_Innodb_dblwr_pages_written",
+      "name": "Innodb_dblwr_pages_written"
+    },
+    {
+      "id": "statvar_Innodb_dblwr_writes",
+      "name": "Innodb_dblwr_writes"
+    },
+    {
+      "id": "statvar_Innodb_have_atomic_builtins",
+      "name": "Innodb_have_atomic_builtins"
+    },
+    {
+      "id": "statvar_Innodb_log_waits",
+      "name": "Innodb_log_waits"
+    },
+    {
+      "id": "statvar_Innodb_log_write_requests",
+      "name": "Innodb_log_write_requests"
+    },
+    {
+      "id": "statvar_Innodb_log_writes",
+      "name": "Innodb_log_writes"
+    },
+    {
+      "id": "statvar_Innodb_num_open_files",
+      "name": "Innodb_num_open_files"
+    },
+    {
+      "id": "statvar_Innodb_os_log_fsyncs",
+      "name": "Innodb_os_log_fsyncs"
+    },
+    {
+      "id": "statvar_Innodb_os_log_pending_fsyncs",
+      "name": "Innodb_os_log_pending_fsyncs"
+    },
+    {
+      "id": "statvar_Innodb_os_log_pending_writes",
+      "name": "Innodb_os_log_pending_writes"
+    },
+    {
+      "id": "statvar_Innodb_os_log_written",
+      "name": "Innodb_os_log_written"
+    },
+    {
+      "id": "statvar_Innodb_page_size",
+      "name": "Innodb_page_size"
+    },
+    {
+      "id": "statvar_Innodb_pages_created",
+      "name": "Innodb_pages_created"
+    },
+    {
+      "id": "statvar_Innodb_pages_read",
+      "name": "Innodb_pages_read"
+    },
+    {
+      "id": "statvar_Innodb_pages_written",
+      "name": "Innodb_pages_written"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_enabled",
+      "name": "Innodb_redo_log_enabled"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_capacity_resized",
+      "name": "Innodb_redo_log_capacity_resized"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_checkpoint_lsn",
+      "name": "Innodb_redo_log_checkpoint_lsn"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_current_lsn",
+      "name": "Innodb_redo_log_current_lsn"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_flushed_to_disk_lsn",
+      "name": "Innodb_redo_log_flushed_to_disk_lsn"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_logical_size",
+      "name": "Innodb_redo_log_logical_size"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_physical_size",
+      "name": "Innodb_redo_log_physical_size"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_read_only",
+      "name": "Innodb_redo_log_read_only"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_resize_status",
+      "name": "Innodb_redo_log_resize_status"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_uuid",
+      "name": "Innodb_redo_log_uuid"
+    },
+    {
+      "id": "statvar_Innodb_row_lock_current_waits",
+      "name": "Innodb_row_lock_current_waits"
+    },
+    {
+      "id": "statvar_Innodb_row_lock_time",
+      "name": "Innodb_row_lock_time"
+    },
+    {
+      "id": "statvar_Innodb_row_lock_time_avg",
+      "name": "Innodb_row_lock_time_avg"
+    },
+    {
+      "id": "statvar_Innodb_row_lock_time_max",
+      "name": "Innodb_row_lock_time_max"
+    },
+    {
+      "id": "statvar_Innodb_row_lock_waits",
+      "name": "Innodb_row_lock_waits"
+    },
+    {
+      "id": "statvar_Innodb_rows_deleted",
+      "name": "Innodb_rows_deleted"
+    },
+    {
+      "id": "statvar_Innodb_rows_inserted",
+      "name": "Innodb_rows_inserted"
+    },
+    {
+      "id": "statvar_Innodb_rows_read",
+      "name": "Innodb_rows_read"
+    },
+    {
+      "id": "statvar_Innodb_rows_updated",
+      "name": "Innodb_rows_updated"
+    },
+    {
+      "id": "statvar_Innodb_system_rows_deleted",
+      "name": "Innodb_system_rows_deleted"
+    },
+    {
+      "id": "statvar_Innodb_system_rows_inserted",
+      "name": "Innodb_system_rows_inserted"
+    },
+    {
+      "id": "statvar_Innodb_system_rows_updated",
+      "name": "Innodb_system_rows_updated"
+    },
+    {
+      "id": "statvar_Innodb_system_rows_read",
+      "name": "Innodb_system_rows_read"
+    },
+    {
+      "id": "statvar_Innodb_truncated_status_writes",
+      "name": "Innodb_truncated_status_writes"
+    },
+    {
+      "id": "statvar_Innodb_undo_tablespaces_active",
+      "name": "Innodb_undo_tablespaces_active"
+    },
+    {
+      "id": "statvar_Innodb_undo_tablespaces_explicit",
+      "name": "Innodb_undo_tablespaces_explicit"
+    },
+    {
+      "id": "statvar_Innodb_undo_tablespaces_implicit",
+      "name": "Innodb_undo_tablespaces_implicit"
+    },
+    {
+      "id": "statvar_Innodb_undo_tablespaces_total",
+      "name": "Innodb_undo_tablespaces_total"
+    },
+    {
+      "id": "statvar_Key_blocks_not_flushed",
+      "name": "Key_blocks_not_flushed"
+    },
+    {
+      "id": "statvar_Key_blocks_unused",
+      "name": "Key_blocks_unused"
+    },
+    {
+      "id": "statvar_Key_blocks_used",
+      "name": "Key_blocks_used"
+    },
+    {
+      "id": "statvar_Key_read_requests",
+      "name": "Key_read_requests"
+    },
+    {
+      "id": "statvar_Key_reads",
+      "name": "Key_reads"
+    },
+    {
+      "id": "statvar_Key_write_requests",
+      "name": "Key_write_requests"
+    },
+    {
+      "id": "statvar_Key_writes",
+      "name": "Key_writes"
+    },
+    {
+      "id": "statvar_Last_query_cost",
+      "name": "Last_query_cost"
+    },
+    {
+      "id": "statvar_Last_query_partial_plans",
+      "name": "Last_query_partial_plans"
+    },
+    {
+      "id": "statvar_Locked_connects",
+      "name": "Locked_connects"
+    },
+    {
+      "id": "statvar_Max_execution_time_exceeded",
+      "name": "Max_execution_time_exceeded"
+    },
+    {
+      "id": "statvar_Max_execution_time_set",
+      "name": "Max_execution_time_set"
+    },
+    {
+      "id": "statvar_Max_execution_time_set_failed",
+      "name": "Max_execution_time_set_failed"
+    },
+    {
+      "id": "statvar_Max_used_connections",
+      "name": "Max_used_connections"
+    },
+    {
+      "id": "statvar_Max_used_connections_time",
+      "name": "Max_used_connections_time"
+    },
+    {
+      "id": "statvar_Not_flushed_delayed_rows",
+      "name": "Not_flushed_delayed_rows"
+    },
+    {
+      "id": "statvar_mecab_charset",
+      "name": "mecab_charset"
+    },
+    {
+      "id": "statvar_Ongoing_anonymous_transaction_count",
+      "name": "Ongoing_anonymous_transaction_count"
+    },
+    {
+      "id": "statvar_Ongoing_anonymous_gtid_violating_transaction_count",
+      "name": "Ongoing_anonymous_gtid_violating_transaction_count"
+    },
+    {
+      "id": "statvar_Ongoing_automatic_gtid_violating_transaction_count",
+      "name": "Ongoing_automatic_gtid_violating_transaction_count"
+    },
+    {
+      "id": "statvar_Open_files",
+      "name": "Open_files"
+    },
+    {
+      "id": "statvar_Open_streams",
+      "name": "Open_streams"
+    },
+    {
+      "id": "statvar_Open_table_definitions",
+      "name": "Open_table_definitions"
+    },
+    {
+      "id": "statvar_Open_tables",
+      "name": "Open_tables"
+    },
+    {
+      "id": "statvar_Opened_files",
+      "name": "Opened_files"
+    },
+    {
+      "id": "statvar_Opened_table_definitions",
+      "name": "Opened_table_definitions"
+    },
+    {
+      "id": "statvar_Opened_tables",
+      "name": "Opened_tables"
+    },
+    {
+      "id": "statvar_Prepared_stmt_count",
+      "name": "Prepared_stmt_count"
+    },
+    {
+      "id": "statvar_Queries",
+      "name": "Queries"
+    },
+    {
+      "id": "statvar_Questions",
+      "name": "Questions"
+    },
+    {
+      "id": "statvar_Replica_open_temp_tables",
+      "name": "Replica_open_temp_tables"
+    },
+    {
+      "id": "statvar_Replica_rows_last_search_algorithm_used",
+      "name": "Replica_rows_last_search_algorithm_used"
+    },
+    {
+      "id": "statvar_Resource_group_supported",
+      "name": "Resource_group_supported"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_clients",
+      "name": "Rpl_semi_sync_master_clients"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_net_avg_wait_time",
+      "name": "Rpl_semi_sync_master_net_avg_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_net_wait_time",
+      "name": "Rpl_semi_sync_master_net_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_net_waits",
+      "name": "Rpl_semi_sync_master_net_waits"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_no_times",
+      "name": "Rpl_semi_sync_master_no_times"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_no_tx",
+      "name": "Rpl_semi_sync_master_no_tx"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_status",
+      "name": "Rpl_semi_sync_master_status"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_timefunc_failures",
+      "name": "Rpl_semi_sync_master_timefunc_failures"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_tx_avg_wait_time",
+      "name": "Rpl_semi_sync_master_tx_avg_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_tx_wait_time",
+      "name": "Rpl_semi_sync_master_tx_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_tx_waits",
+      "name": "Rpl_semi_sync_master_tx_waits"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_wait_pos_backtraverse",
+      "name": "Rpl_semi_sync_master_wait_pos_backtraverse"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_wait_sessions",
+      "name": "Rpl_semi_sync_master_wait_sessions"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_master_yes_tx",
+      "name": "Rpl_semi_sync_master_yes_tx"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_clients",
+      "name": "Rpl_semi_sync_source_clients"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_net_avg_wait_time",
+      "name": "Rpl_semi_sync_source_net_avg_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_net_wait_time",
+      "name": "Rpl_semi_sync_source_net_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_net_waits",
+      "name": "Rpl_semi_sync_source_net_waits"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_no_times",
+      "name": "Rpl_semi_sync_source_no_times"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_no_tx",
+      "name": "Rpl_semi_sync_source_no_tx"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_status",
+      "name": "Rpl_semi_sync_source_status"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_timefunc_failures",
+      "name": "Rpl_semi_sync_source_timefunc_failures"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_tx_avg_wait_time",
+      "name": "Rpl_semi_sync_source_tx_avg_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_tx_wait_time",
+      "name": "Rpl_semi_sync_source_tx_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_tx_waits",
+      "name": "Rpl_semi_sync_source_tx_waits"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_wait_pos_backtraverse",
+      "name": "Rpl_semi_sync_source_wait_pos_backtraverse"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_wait_sessions",
+      "name": "Rpl_semi_sync_source_wait_sessions"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_yes_tx",
+      "name": "Rpl_semi_sync_source_yes_tx"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_replica_status",
+      "name": "Rpl_semi_sync_replica_status"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_slave_status",
+      "name": "Rpl_semi_sync_slave_status"
+    },
+    {
+      "id": "statvar_Rsa_public_key",
+      "name": "Rsa_public_key"
+    },
+    {
+      "id": "statvar_Secondary_engine_execution_count",
+      "name": "Secondary_engine_execution_count"
+    },
+    {
+      "id": "statvar_Select_full_join",
+      "name": "Select_full_join"
+    },
+    {
+      "id": "statvar_Select_full_range_join",
+      "name": "Select_full_range_join"
+    },
+    {
+      "id": "statvar_Select_range",
+      "name": "Select_range"
+    },
+    {
+      "id": "statvar_Select_range_check",
+      "name": "Select_range_check"
+    },
+    {
+      "id": "statvar_Select_scan",
+      "name": "Select_scan"
+    },
+    {
+      "id": "statvar_Slave_open_temp_tables",
+      "name": "Slave_open_temp_tables"
+    },
+    {
+      "id": "statvar_Slave_rows_last_search_algorithm_used",
+      "name": "Slave_rows_last_search_algorithm_used"
+    },
+    {
+      "id": "statvar_Slow_launch_threads",
+      "name": "Slow_launch_threads"
+    },
+    {
+      "id": "statvar_Slow_queries",
+      "name": "Slow_queries"
+    },
+    {
+      "id": "statvar_Sort_merge_passes",
+      "name": "Sort_merge_passes"
+    },
+    {
+      "id": "statvar_Sort_range",
+      "name": "Sort_range"
+    },
+    {
+      "id": "statvar_Sort_rows",
+      "name": "Sort_rows"
+    },
+    {
+      "id": "statvar_Sort_scan",
+      "name": "Sort_scan"
+    },
+    {
+      "id": "statvar_Ssl_accept_renegotiates",
+      "name": "Ssl_accept_renegotiates"
+    },
+    {
+      "id": "statvar_Ssl_accepts",
+      "name": "Ssl_accepts"
+    },
+    {
+      "id": "statvar_Ssl_callback_cache_hits",
+      "name": "Ssl_callback_cache_hits"
+    },
+    {
+      "id": "statvar_Ssl_cipher",
+      "name": "Ssl_cipher"
+    },
+    {
+      "id": "statvar_Ssl_cipher_list",
+      "name": "Ssl_cipher_list"
+    },
+    {
+      "id": "statvar_Ssl_client_connects",
+      "name": "Ssl_client_connects"
+    },
+    {
+      "id": "statvar_Ssl_connect_renegotiates",
+      "name": "Ssl_connect_renegotiates"
+    },
+    {
+      "id": "statvar_Ssl_ctx_verify_depth",
+      "name": "Ssl_ctx_verify_depth"
+    },
+    {
+      "id": "statvar_Ssl_ctx_verify_mode",
+      "name": "Ssl_ctx_verify_mode"
+    },
+    {
+      "id": "statvar_Ssl_default_timeout",
+      "name": "Ssl_default_timeout"
+    },
+    {
+      "id": "statvar_Ssl_finished_accepts",
+      "name": "Ssl_finished_accepts"
+    },
+    {
+      "id": "statvar_Ssl_finished_connects",
+      "name": "Ssl_finished_connects"
+    },
+    {
+      "id": "statvar_Ssl_server_not_after",
+      "name": "Ssl_server_not_after"
+    },
+    {
+      "id": "statvar_Ssl_server_not_before",
+      "name": "Ssl_server_not_before"
+    },
+    {
+      "id": "statvar_Ssl_session_cache_hits",
+      "name": "Ssl_session_cache_hits"
+    },
+    {
+      "id": "statvar_Ssl_session_cache_misses",
+      "name": "Ssl_session_cache_misses"
+    },
+    {
+      "id": "statvar_Ssl_session_cache_mode",
+      "name": "Ssl_session_cache_mode"
+    },
+    {
+      "id": "statvar_Ssl_session_cache_overflows",
+      "name": "Ssl_session_cache_overflows"
+    },
+    {
+      "id": "statvar_Ssl_session_cache_size",
+      "name": "Ssl_session_cache_size"
+    },
+    {
+      "id": "statvar_Ssl_session_cache_timeout",
+      "name": "Ssl_session_cache_timeout"
+    },
+    {
+      "id": "statvar_Ssl_session_cache_timeouts",
+      "name": "Ssl_session_cache_timeouts"
+    },
+    {
+      "id": "statvar_Ssl_sessions_reused",
+      "name": "Ssl_sessions_reused"
+    },
+    {
+      "id": "statvar_Ssl_used_session_cache_entries",
+      "name": "Ssl_used_session_cache_entries"
+    },
+    {
+      "id": "statvar_Ssl_verify_depth",
+      "name": "Ssl_verify_depth"
+    },
+    {
+      "id": "statvar_Ssl_verify_mode",
+      "name": "Ssl_verify_mode"
+    },
+    {
+      "id": "statvar_Ssl_version",
+      "name": "Ssl_version"
+    },
+    {
+      "id": "statvar_Table_locks_immediate",
+      "name": "Table_locks_immediate"
+    },
+    {
+      "id": "statvar_Table_locks_waited",
+      "name": "Table_locks_waited"
+    },
+    {
+      "id": "statvar_Table_open_cache_hits",
+      "name": "Table_open_cache_hits"
+    },
+    {
+      "id": "statvar_Table_open_cache_misses",
+      "name": "Table_open_cache_misses"
+    },
+    {
+      "id": "statvar_Table_open_cache_overflows",
+      "name": "Table_open_cache_overflows"
+    },
+    {
+      "id": "statvar_Tc_log_max_pages_used",
+      "name": "Tc_log_max_pages_used"
+    },
+    {
+      "id": "statvar_Tc_log_page_size",
+      "name": "Tc_log_page_size"
+    },
+    {
+      "id": "statvar_Tc_log_page_waits",
+      "name": "Tc_log_page_waits"
+    },
+    {
+      "id": "statvar_Telemetry_traces_supported",
+      "name": "Telemetry_traces_supported"
+    },
+    {
+      "id": "statvar_Threads_cached",
+      "name": "Threads_cached"
+    },
+    {
+      "id": "statvar_Threads_connected",
+      "name": "Threads_connected"
+    },
+    {
+      "id": "statvar_Threads_created",
+      "name": "Threads_created"
+    },
+    {
+      "id": "statvar_Threads_running",
+      "name": "Threads_running"
+    },
+    {
+      "id": "statvar_Tls_library_version",
+      "name": "Tls_library_version"
+    },
+    {
+      "id": "statvar_Uptime",
+      "name": "Uptime"
+    },
+    {
+      "id": "statvar_Uptime_since_flush_status",
+      "name": "Uptime_since_flush_status"
+    }
+  ],
+  "name": "server-status-variables",
+  "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+}

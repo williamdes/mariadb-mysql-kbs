@@ -398,51 +398,6 @@
       "type": "integer"
     },
     {
-      "cli": "--ndb-default-column-format={FIXED|DYNAMIC}",
-      "dynamic": true,
-      "id": "sysvar_ndb_default_column_format",
-      "name": "ndb_default_column_format",
-      "scope": [
-        "global"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "FIXED",
-        "DYNAMIC"
-      ]
-    },
-    {
-      "cli": "--ndb-deferred-constraints=#",
-      "default": "0",
-      "dynamic": true,
-      "id": "sysvar_ndb_deferred_constraints",
-      "name": "ndb_deferred_constraints",
-      "range": {
-        "from": 0,
-        "to": 1
-      },
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--ndb-distribution={KEYHASH|LINHASH}",
-      "default": "KEYHASH",
-      "dynamic": true,
-      "id": "sysvar_ndb_distribution",
-      "name": "ndb_distribution",
-      "scope": [
-        "global"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "LINHASH",
-        "KEYHASH"
-      ]
-    },
-    {
       "cli": "--ndb-eventbuffer-free-percent=#",
       "default": "20",
       "dynamic": true,
@@ -546,17 +501,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--ndb-log-apply-status[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "sysvar_ndb_log_apply_status",
-      "name": "ndb_log_apply_status",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--ndb-log-bin[={OFF|ON}]",
       "default": "ON",
       "dynamic": false,
@@ -578,76 +522,6 @@
         "global"
       ],
       "type": "boolean"
-    },
-    {
-      "cli": "--ndb-log-empty-epochs[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "sysvar_ndb_log_empty_epochs",
-      "name": "ndb_log_empty_epochs",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--ndb-log-empty-update[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "sysvar_ndb_log_empty_update",
-      "name": "ndb_log_empty_update",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--ndb-log-exclusive-reads[={OFF|ON}]",
-      "default": "0",
-      "dynamic": true,
-      "id": "sysvar_ndb_log_exclusive_reads",
-      "name": "ndb_log_exclusive_reads",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--ndb-log-orig[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "sysvar_ndb_log_orig",
-      "name": "ndb_log_orig",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "default": "OFF",
-      "dynamic": false,
-      "id": "sysvar_ndb_log_transaction_id",
-      "name": "ndb_log_transaction_id",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--ndb-optimized-node-selection=#",
-      "default": "3",
-      "dynamic": false,
-      "id": "sysvar_ndb_optimized_node_selection",
-      "name": "ndb_optimized_node_selection",
-      "range": {
-        "from": 0,
-        "to": 3
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
     },
     {
       "cli": "--ndb-read-backup[={OFF|ON}]",
@@ -952,6 +826,418 @@
         "global"
       ],
       "type": "string"
+    },
+    {
+      "id": "statvar_Ndb_pushed_queries_defined",
+      "name": "Ndb_pushed_queries_defined"
+    },
+    {
+      "id": "statvar_Handler_discover",
+      "name": "Handler_discover"
+    },
+    {
+      "id": "statvar_Ndb_api_adaptive_send_deferred_count",
+      "name": "Ndb_api_adaptive_send_deferred_count"
+    },
+    {
+      "id": "statvar_Ndb_api_adaptive_send_deferred_count_session",
+      "name": "Ndb_api_adaptive_send_deferred_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_adaptive_send_deferred_count_slave",
+      "name": "Ndb_api_adaptive_send_deferred_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_adaptive_send_forced_count",
+      "name": "Ndb_api_adaptive_send_forced_count"
+    },
+    {
+      "id": "statvar_Ndb_api_adaptive_send_forced_count_session",
+      "name": "Ndb_api_adaptive_send_forced_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_adaptive_send_forced_count_slave",
+      "name": "Ndb_api_adaptive_send_forced_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_adaptive_send_unforced_count",
+      "name": "Ndb_api_adaptive_send_unforced_count"
+    },
+    {
+      "id": "statvar_Ndb_api_adaptive_send_unforced_count_session",
+      "name": "Ndb_api_adaptive_send_unforced_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_adaptive_send_unforced_count_slave",
+      "name": "Ndb_api_adaptive_send_unforced_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_bytes_sent_count_session",
+      "name": "Ndb_api_bytes_sent_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_bytes_sent_count_slave",
+      "name": "Ndb_api_bytes_sent_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_bytes_sent_count",
+      "name": "Ndb_api_bytes_sent_count"
+    },
+    {
+      "id": "statvar_Ndb_api_bytes_received_count_session",
+      "name": "Ndb_api_bytes_received_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_bytes_received_count_slave",
+      "name": "Ndb_api_bytes_received_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_bytes_received_count",
+      "name": "Ndb_api_bytes_received_count"
+    },
+    {
+      "id": "statvar_Ndb_api_event_data_count_injector",
+      "name": "Ndb_api_event_data_count_injector"
+    },
+    {
+      "id": "statvar_Ndb_api_event_data_count",
+      "name": "Ndb_api_event_data_count"
+    },
+    {
+      "id": "statvar_Ndb_api_event_nondata_count_injector",
+      "name": "Ndb_api_event_nondata_count_injector"
+    },
+    {
+      "id": "statvar_Ndb_api_event_nondata_count",
+      "name": "Ndb_api_event_nondata_count"
+    },
+    {
+      "id": "statvar_Ndb_api_event_bytes_count_injector",
+      "name": "Ndb_api_event_bytes_count_injector"
+    },
+    {
+      "id": "statvar_Ndb_api_event_bytes_count",
+      "name": "Ndb_api_event_bytes_count"
+    },
+    {
+      "id": "statvar_Ndb_api_pk_op_count_session",
+      "name": "Ndb_api_pk_op_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_pk_op_count_slave",
+      "name": "Ndb_api_pk_op_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_pk_op_count",
+      "name": "Ndb_api_pk_op_count"
+    },
+    {
+      "id": "statvar_Ndb_api_pruned_scan_count_session",
+      "name": "Ndb_api_pruned_scan_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_pruned_scan_count_slave",
+      "name": "Ndb_api_pruned_scan_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_pruned_scan_count",
+      "name": "Ndb_api_pruned_scan_count"
+    },
+    {
+      "id": "statvar_Ndb_api_range_scan_count_session",
+      "name": "Ndb_api_range_scan_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_range_scan_count_slave",
+      "name": "Ndb_api_range_scan_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_range_scan_count",
+      "name": "Ndb_api_range_scan_count"
+    },
+    {
+      "id": "statvar_Ndb_api_read_row_count_session",
+      "name": "Ndb_api_read_row_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_read_row_count_slave",
+      "name": "Ndb_api_read_row_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_read_row_count",
+      "name": "Ndb_api_read_row_count"
+    },
+    {
+      "id": "statvar_Ndb_api_scan_batch_count_session",
+      "name": "Ndb_api_scan_batch_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_scan_batch_count_slave",
+      "name": "Ndb_api_scan_batch_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_scan_batch_count",
+      "name": "Ndb_api_scan_batch_count"
+    },
+    {
+      "id": "statvar_Ndb_api_table_scan_count_session",
+      "name": "Ndb_api_table_scan_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_table_scan_count_slave",
+      "name": "Ndb_api_table_scan_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_table_scan_count",
+      "name": "Ndb_api_table_scan_count"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_abort_count_session",
+      "name": "Ndb_api_trans_abort_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_abort_count_slave",
+      "name": "Ndb_api_trans_abort_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_abort_count",
+      "name": "Ndb_api_trans_abort_count"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_close_count_session",
+      "name": "Ndb_api_trans_close_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_close_count_slave",
+      "name": "Ndb_api_trans_close_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_close_count",
+      "name": "Ndb_api_trans_close_count"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_commit_count_session",
+      "name": "Ndb_api_trans_commit_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_commit_count_slave",
+      "name": "Ndb_api_trans_commit_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_commit_count",
+      "name": "Ndb_api_trans_commit_count"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_local_read_row_count_session",
+      "name": "Ndb_api_trans_local_read_row_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_local_read_row_count_slave",
+      "name": "Ndb_api_trans_local_read_row_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_local_read_row_count",
+      "name": "Ndb_api_trans_local_read_row_count"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_start_count_session",
+      "name": "Ndb_api_trans_start_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_start_count_slave",
+      "name": "Ndb_api_trans_start_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_start_count",
+      "name": "Ndb_api_trans_start_count"
+    },
+    {
+      "id": "statvar_Ndb_api_uk_op_count_session",
+      "name": "Ndb_api_uk_op_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_uk_op_count_slave",
+      "name": "Ndb_api_uk_op_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_uk_op_count",
+      "name": "Ndb_api_uk_op_count"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_exec_complete_count_session",
+      "name": "Ndb_api_wait_exec_complete_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_exec_complete_count_slave",
+      "name": "Ndb_api_wait_exec_complete_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_exec_complete_count",
+      "name": "Ndb_api_wait_exec_complete_count"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_meta_request_count_session",
+      "name": "Ndb_api_wait_meta_request_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_meta_request_count_slave",
+      "name": "Ndb_api_wait_meta_request_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_meta_request_count",
+      "name": "Ndb_api_wait_meta_request_count"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_nanos_count_session",
+      "name": "Ndb_api_wait_nanos_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_nanos_count_slave",
+      "name": "Ndb_api_wait_nanos_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_nanos_count",
+      "name": "Ndb_api_wait_nanos_count"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_scan_result_count_session",
+      "name": "Ndb_api_wait_scan_result_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_scan_result_count_slave",
+      "name": "Ndb_api_wait_scan_result_count_slave"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_scan_result_count",
+      "name": "Ndb_api_wait_scan_result_count"
+    },
+    {
+      "id": "statvar_Ndb_cluster_node_id",
+      "name": "Ndb_cluster_node_id"
+    },
+    {
+      "id": "statvar_Ndb_config_from_host",
+      "name": "Ndb_config_from_host"
+    },
+    {
+      "id": "statvar_Ndb_config_from_port",
+      "name": "Ndb_config_from_port"
+    },
+    {
+      "id": "statvar_Ndb_conflict_fn_epoch",
+      "name": "Ndb_conflict_fn_epoch"
+    },
+    {
+      "id": "statvar_Ndb_conflict_fn_epoch_trans",
+      "name": "Ndb_conflict_fn_epoch_trans"
+    },
+    {
+      "id": "statvar_Ndb_conflict_fn_epoch2",
+      "name": "Ndb_conflict_fn_epoch2"
+    },
+    {
+      "id": "statvar_Ndb_conflict_fn_epoch2_trans",
+      "name": "Ndb_conflict_fn_epoch2_trans"
+    },
+    {
+      "id": "statvar_Ndb_conflict_fn_max",
+      "name": "Ndb_conflict_fn_max"
+    },
+    {
+      "id": "statvar_Ndb_conflict_fn_max_del_win",
+      "name": "Ndb_conflict_fn_max_del_win"
+    },
+    {
+      "id": "statvar_Ndb_conflict_fn_old",
+      "name": "Ndb_conflict_fn_old"
+    },
+    {
+      "id": "statvar_Ndb_conflict_last_conflict_epoch",
+      "name": "Ndb_conflict_last_conflict_epoch"
+    },
+    {
+      "id": "statvar_Ndb_conflict_reflected_op_discard_count",
+      "name": "Ndb_conflict_reflected_op_discard_count"
+    },
+    {
+      "id": "statvar_Ndb_conflict_reflected_op_prepare_count",
+      "name": "Ndb_conflict_reflected_op_prepare_count"
+    },
+    {
+      "id": "statvar_Ndb_conflict_refresh_op_count",
+      "name": "Ndb_conflict_refresh_op_count"
+    },
+    {
+      "id": "statvar_Ndb_conflict_last_stable_epoch",
+      "name": "Ndb_conflict_last_stable_epoch"
+    },
+    {
+      "id": "statvar_Ndb_conflict_trans_row_conflict_count",
+      "name": "Ndb_conflict_trans_row_conflict_count"
+    },
+    {
+      "id": "statvar_Ndb_conflict_trans_row_reject_count",
+      "name": "Ndb_conflict_trans_row_reject_count"
+    },
+    {
+      "id": "statvar_Ndb_conflict_trans_reject_count",
+      "name": "Ndb_conflict_trans_reject_count"
+    },
+    {
+      "id": "statvar_Ndb_conflict_trans_detect_iter_count",
+      "name": "Ndb_conflict_trans_detect_iter_count"
+    },
+    {
+      "id": "statvar_Ndb_conflict_trans_conflict_commit_count",
+      "name": "Ndb_conflict_trans_conflict_commit_count"
+    },
+    {
+      "id": "statvar_Ndb_epoch_delete_delete_count",
+      "name": "Ndb_epoch_delete_delete_count"
+    },
+    {
+      "id": "statvar_Ndb_execute_count",
+      "name": "Ndb_execute_count"
+    },
+    {
+      "id": "statvar_Ndb_last_commit_epoch_server",
+      "name": "Ndb_last_commit_epoch_server"
+    },
+    {
+      "id": "statvar_Ndb_last_commit_epoch_session",
+      "name": "Ndb_last_commit_epoch_session"
+    },
+    {
+      "id": "statvar_Ndb_number_of_data_nodes",
+      "name": "Ndb_number_of_data_nodes"
+    },
+    {
+      "id": "statvar_Ndb_pushed_queries_dropped",
+      "name": "Ndb_pushed_queries_dropped"
+    },
+    {
+      "id": "statvar_Ndb_pushed_queries_executed",
+      "name": "Ndb_pushed_queries_executed"
+    },
+    {
+      "id": "statvar_Ndb_pushed_reads",
+      "name": "Ndb_pushed_reads"
+    },
+    {
+      "id": "statvar_Ndb_pruned_scan_count",
+      "name": "Ndb_pruned_scan_count"
+    },
+    {
+      "id": "statvar_Ndb_scan_count",
+      "name": "Ndb_scan_count"
+    },
+    {
+      "id": "statvar_Ndb_slave_max_replicated_epoch",
+      "name": "Ndb_slave_max_replicated_epoch"
+    },
+    {
+      "id": "statvar_Ndb_system_name",
+      "name": "Ndb_system_name"
     }
   ],
   "name": "mysql-cluster-options-variables",

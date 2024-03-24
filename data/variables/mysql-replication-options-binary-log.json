@@ -78,21 +78,6 @@
       "type": "integer"
     },
     {
-      "cli": "--binlog-checksum=type",
-      "default": "CRC32",
-      "dynamic": true,
-      "id": "sysvar_binlog_checksum",
-      "name": "binlog_checksum",
-      "scope": [
-        "global"
-      ],
-      "type": "string",
-      "validValues": [
-        "NONE",
-        "CRC32"
-      ]
-    },
-    {
       "cli": "--binlog-direct-non-transactional-updates[={OFF|ON}]",
       "default": "OFF",
       "dynamic": true,
@@ -239,16 +224,6 @@
         "global"
       ],
       "type": "boolean"
-    },
-    {
-      "cli": "--binlog-row-event-max-size=#",
-      "default": "8192",
-      "id": "sysvar_binlog_row_event_max_size",
-      "name": "binlog_row_event_max_size",
-      "range": {
-        "from": 256
-      },
-      "type": "integer"
     },
     {
       "cli": "--binlog-row-image=image_type",
@@ -399,27 +374,8 @@
     },
     {
       "dynamic": false,
-      "id": "sysvar_log_bin",
-      "name": "log_bin",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "dynamic": false,
       "id": "sysvar_log_bin_basename",
       "name": "log_bin_basename",
-      "scope": [
-        "global"
-      ],
-      "type": "file name"
-    },
-    {
-      "cli": "--log-bin-index=file_name",
-      "dynamic": false,
-      "id": "sysvar_log_bin_index",
-      "name": "log_bin_index",
       "scope": [
         "global"
       ],
@@ -595,6 +551,14 @@
         "MURMUR32",
         "XXHASH64"
       ]
+    },
+    {
+      "id": "sysvar_max_connections",
+      "name": "max_connections"
+    },
+    {
+      "id": "sysvar_innodb_flush_log_at_trx_commit",
+      "name": "innodb_flush_log_at_trx_commit"
     }
   ],
   "name": "replication-options-binary-log",

@@ -56,6 +56,29 @@ fn link_to_archor(node: Node) -> String {
         .to_string()
 }
 
+fn scope_from_string(row_value: String) -> Option<Vec<String>> {
+    let scope = row_value.to_lowercase().trim().to_string();
+    if scope == "both" {
+        // found on mysql-cluster-options-variables.html
+        return Some(vec!["global".to_string(), "session".to_string()]);
+    } else if scope != "" {
+        let values: Vec<String> = scope
+            .split(",")
+            .map(|item| {
+                if item.contains("session") {
+                    return "session".to_string();
+                } else if item.contains("global") {
+                    return "global".to_string();
+                }
+
+                return item.trim().to_string();
+            })
+            .collect();
+        return Some(values);
+    }
+    return None;
+}
+
 fn process_row_to_entry(
     row_name: String,
     row_node: Node,
@@ -140,25 +163,7 @@ fn process_row_to_entry(
             }
         }
         "scope" => {
-            let scope = row_value.to_lowercase().trim().to_string();
-            if scope == "both" {
-                // found on mysql-cluster-options-variables.html
-                entry.scope = Some(vec!["global".to_string(), "session".to_string()]);
-            } else if scope != "" {
-                let values: Vec<String> = scope
-                    .split(",")
-                    .map(|item| {
-                        if item.contains("session") {
-                            return "session".to_string();
-                        } else if item.contains("global") {
-                            return "global".to_string();
-                        }
-
-                        return item.trim().to_string();
-                    })
-                    .collect();
-                entry.scope = Some(values);
-            }
+            entry.scope = scope_from_string(row_value);
             if entry.scope.is_some() {
                 // TODO: cleanup scope
                 //entry.scope = entry.scope.filter(|e| e == "0" || e.is_some());
@@ -227,6 +232,37 @@ fn process_link(li_node: Node) -> KbParsedEntry {
         },
         scope: None,
         r#type: None,
+        valid_values: None,
+        range: None,
+    }
+}
+
+fn process_summary_table_row(row_node: Node) -> KbParsedEntry {
+    let mut row_data = row_node.find(Name("td"));
+
+    KbParsedEntry {
+        has_description: false,
+        is_removed: false,
+        cli: None,
+        default: None,
+        dynamic: None,
+        // TODO: link is on another page: summary pages
+        id: match row_node.find(Class("link")).next() {
+            Some(node) => Some(link_to_archor(node)),
+            None => None,
+        },
+        name: match row_node.find(Name("th")).next() {
+            Some(th_node) => Some(th_node.text().trim().to_string()),
+            None => None,
+        },
+        r#type: match row_data.next() {
+            Some(th_node) => cleaner::clean_type(th_node.text().trim().to_lowercase().to_string()),
+            None => None,
+        },
+        scope: match row_data.next() {
+            Some(th_node) => scope_from_string(th_node.text()),
+            None => None,
+        },
         valid_values: None,
         range: None,
     }
@@ -314,6 +350,24 @@ fn filter_link(elem: &Node) -> bool {
     }
 }
 
+fn filter_summary_table(elem: &Node) -> bool {
+    let element_attr = elem.attr("class");
+    match element_attr {
+        Some(attr) => {
+            let mut th_elements = elem.find(Name("th"));
+
+            match th_elements.next() {
+                Some(e) => match th_elements.next() {
+                    Some(ee) => ee.text() == "Variable Type" && e.text() == "Variable Name",
+                    None => false,
+                },
+                None => false,
+            }
+        }
+        None => false,
+    }
+}
+
 fn filter_table(elem: &Node) -> bool {
     let element_attr = elem.attr("class");
     match element_attr {
@@ -339,7 +393,7 @@ fn dedup_entries(v: &mut Vec<KbParsedEntry>) {
 
     // Will retain when it returns true
     // HashSet.insert returns false when the value already exists
-    v.retain(|e| match &e.id {
+    v.retain(|e| match &e.name {
         Some(data) => set.insert(data.to_string()),
         None => false,
     });
@@ -358,6 +412,24 @@ pub fn extract_mysql_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
                 .find(Class("listitem"))
                 .filter(|li_node| filter_link(li_node))
                 .map(|li_node| process_link(li_node)),
+        )
+        .chain(
+            match &mut document
+                .find(Class("table-contents"))
+                .filter(|table_node| filter_summary_table(table_node))
+                .next()
+            {
+                Some(table) => match table.find(Name("tbody")).next() {
+                    Some(tbody) => tbody
+                        .find(Name("tr"))
+                        .map(|tr| process_summary_table_row(tr))
+                        .collect::<Vec<KbParsedEntry>>(),
+                    None => vec![],
+                },
+                None => {
+                    vec![]
+                }
+            },
         )
         .collect::<Vec<KbParsedEntry>>();
 
@@ -689,21 +761,17 @@ mod tests {
                     range: None,
                 },
                 KbParsedEntry {
-                        cli: None,
-                        default: None,
-                        dynamic: None,
-                        id: Some(
-                            "statvar_Ndb_pushed_queries_defined".to_string(),
-                        ),
-                        name: Some(
-                            "Ndb_pushed_queries_defined".to_string(),
-                        ),
-                        range: None,
-                        scope: None,
-                        r#type: None,
-                        valid_values: None,
-                        has_description: false,
-                        is_removed: false,
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("statvar_Ndb_pushed_queries_defined".to_string(),),
+                    name: Some("Ndb_pushed_queries_defined".to_string(),),
+                    range: None,
+                    scope: None,
+                    r#type: None,
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
                 },
             ],
             entries
@@ -1316,6 +1384,123 @@ mod tests {
                     has_description: false,
                     is_removed: false,
                 },
+            ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_10() {
+        let entries = extract_mysql_from_text(QueryResponse {
+            body: get_test_data("mysql_test_case_10.html"),
+            url: "https://example.com".to_string(),
+        });
+        assert_eq!(
+            vec![
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("statvar_Com_xxx".to_string()),
+                    name: Some("Com_admin_commands".to_string()),
+                    range: None,
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("statvar_Com_xxx".to_string()),
+                    name: Some("Com_alter_db".to_string()),
+                    range: None,
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("statvar_Com_xxx".to_string()),
+                    name: Some("Com_alter_db_upgrade".to_string()),
+                    range: None,
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("statvar_Com_xxx".to_string()),
+                    name: Some("Com_alter_event".to_string()),
+                    range: None,
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("statvar_Com_xxx".to_string()),
+                    name: Some("Com_alter_function".to_string()),
+                    range: None,
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("statvar_Com_xxx".to_string()),
+                    name: Some("Com_alter_procedure".to_string()),
+                    range: None,
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("statvar_Com_xxx".to_string()),
+                    name: Some("Com_alter_server".to_string()),
+                    range: None,
+                    scope: Some(vec!["global".to_string(), "session".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                },
+                KbParsedEntry {
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    id: Some("statvar_validate_password_dictionary_file_words_count".to_string()),
+                    name: Some("validate_password_dictionary_file_words_count".to_string()),
+                    range: None,
+                    scope: Some(vec!["global".to_string()]),
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    has_description: false,
+                    is_removed: false,
+                }
             ],
             entries
         );

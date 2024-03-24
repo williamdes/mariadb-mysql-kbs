@@ -8,7 +8,7 @@
         "vars": {
             "type": "object",
             "patternProperties": {
-                "^([a-zA-Z_-]+)": {
+                "^([a-zA-Z\\._-]+)": {
                     "type": "object",
                     "required": ["name", "ids"],
                     "properties": {
@@ -36,7 +36,7 @@
                             "additionalItems": false,
                             "items": {
                                 "type": "string",
-                                "pattern": "^[0-9]+#[A-Za-z0-9_-]*$",
+                                "pattern": "^[0-9]+#[A-Za-z0-9\\._-]*$",
                                 "minLength": 2
                             }
                         },

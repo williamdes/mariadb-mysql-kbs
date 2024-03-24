@@ -7,7 +7,7 @@
         "vars": {
             "type": "object",
             "patternProperties": {
-                "^([a-zA-Z_-]+)": {
+                "^([a-zA-Z\\._-]+)": {
                     "type": "object",
                     "required": ["name", "ids"],
                     "properties": {

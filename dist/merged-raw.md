@@ -11510,6 +11510,17 @@
 |dev.mysql.com|[statvar_Rpl_semi_sync_master_clients](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_clients)|
 |dev.mysql.com|[statvar_Rpl_semi_sync_master_clients](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Rpl_semi_sync_master_clients)|
 
+## Rpl_semi_sync_master_get_ack
+|name|value|
+|----|-----|
+|Name|`Rpl_semi_sync_master_get_ack`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rpl_semi_sync_master_get_ack](https://mariadb.com/kb/en/semisynchronous-replication-plugin-status-variables/#rpl_semi_sync_master_get_ack)|
+
 ## Rpl_semi_sync_master_net_avg_wait_time
 |name|value|
 |----|-----|
@@ -11569,6 +11580,17 @@
 |mariadb.com|[rpl_semi_sync_master_no_tx](https://mariadb.com/kb/en/semisynchronous-replication-plugin-status-variables/#rpl_semi_sync_master_no_tx)|
 |dev.mysql.com|[statvar_Rpl_semi_sync_master_no_tx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_master_no_tx)|
 |dev.mysql.com|[statvar_Rpl_semi_sync_master_no_tx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Rpl_semi_sync_master_no_tx)|
+
+## Rpl_semi_sync_master_request_ack
+|name|value|
+|----|-----|
+|Name|`Rpl_semi_sync_master_request_ack`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rpl_semi_sync_master_request_ack](https://mariadb.com/kb/en/semisynchronous-replication-plugin-status-variables/#rpl_semi_sync_master_request_ack)|
 
 ## Rpl_semi_sync_master_status
 |name|value|
@@ -11677,6 +11699,17 @@
 |mariadb.com|[rpl_semi_sync_slave_status](https://mariadb.com/kb/en/semisynchronous-replication-plugin-status-variables/#rpl_semi_sync_slave_status)|
 |dev.mysql.com|[statvar_Rpl_semi_sync_slave_status](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Rpl_semi_sync_slave_status)|
 |dev.mysql.com|[statvar_Rpl_semi_sync_slave_status](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Rpl_semi_sync_slave_status)|
+
+## Rpl_semi_sync_slave_send_ack
+|name|value|
+|----|-----|
+|Name|`Rpl_semi_sync_slave_send_ack`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[rpl_semi_sync_slave_send_ack](https://mariadb.com/kb/en/semisynchronous-replication-plugin-status-variables/#rpl_semi_sync_slave_send_ack)|
 
 ## rpl_semi_sync_master_enabled
 |name|value|

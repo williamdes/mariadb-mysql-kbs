@@ -6,6 +6,11 @@
       "type": "integer"
     },
     {
+      "id": "rpl_semi_sync_master_get_ack",
+      "name": "Rpl_semi_sync_master_get_ack",
+      "type": "integer"
+    },
+    {
       "id": "rpl_semi_sync_master_net_avg_wait_time",
       "name": "Rpl_semi_sync_master_net_avg_wait_time",
       "type": "integer"
@@ -28,6 +33,11 @@
     {
       "id": "rpl_semi_sync_master_no_tx",
       "name": "Rpl_semi_sync_master_no_tx",
+      "type": "integer"
+    },
+    {
+      "id": "rpl_semi_sync_master_request_ack",
+      "name": "Rpl_semi_sync_master_request_ack",
       "type": "integer"
     },
     {
@@ -74,6 +84,11 @@
       "id": "rpl_semi_sync_slave_status",
       "name": "Rpl_semi_sync_slave_status",
       "type": "boolean"
+    },
+    {
+      "id": "rpl_semi_sync_slave_send_ack",
+      "name": "Rpl_semi_sync_slave_send_ack",
+      "type": "integer"
     }
   ],
   "name": "semisynchronous-replication-plugin-status-variables",

@@ -10799,6 +10799,13 @@
                 "41#statvar_Rpl_semi_sync_master_clients"
             ]
         },
+        "Rpl_semi_sync_master_get_ack": {
+            "name": "Rpl_semi_sync_master_get_ack",
+            "type": "integer",
+            "ids": [
+                "43#rpl_semi_sync_master_get_ack"
+            ]
+        },
         "Rpl_semi_sync_master_net_avg_wait_time": {
             "name": "Rpl_semi_sync_master_net_avg_wait_time",
             "ids": [
@@ -10837,6 +10844,13 @@
                 "43#rpl_semi_sync_master_no_tx",
                 "40#statvar_Rpl_semi_sync_master_no_tx",
                 "41#statvar_Rpl_semi_sync_master_no_tx"
+            ]
+        },
+        "Rpl_semi_sync_master_request_ack": {
+            "name": "Rpl_semi_sync_master_request_ack",
+            "type": "integer",
+            "ids": [
+                "43#rpl_semi_sync_master_request_ack"
             ]
         },
         "Rpl_semi_sync_master_status": {
@@ -10909,6 +10923,13 @@
                 "43#rpl_semi_sync_slave_status",
                 "40#statvar_Rpl_semi_sync_slave_status",
                 "41#statvar_Rpl_semi_sync_slave_status"
+            ]
+        },
+        "Rpl_semi_sync_slave_send_ack": {
+            "name": "Rpl_semi_sync_slave_send_ack",
+            "type": "integer",
+            "ids": [
+                "43#rpl_semi_sync_slave_send_ack"
             ]
         },
         "rpl_semi_sync_master_enabled": {

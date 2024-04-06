@@ -13739,6 +13739,16 @@
                 }
             ]
         },
+        "Rpl_semi_sync_master_get_ack": {
+            "name": "Rpl_semi_sync_master_get_ack",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rpl_semi_sync_master_get_ack",
+                    "url": "https://mariadb.com/kb/en/semisynchronous-replication-plugin-status-variables/"
+                }
+            ]
+        },
         "Rpl_semi_sync_master_net_avg_wait_time": {
             "name": "Rpl_semi_sync_master_net_avg_wait_time",
             "ids": [
@@ -13821,6 +13831,16 @@
                 {
                     "anchor": "statvar_Rpl_semi_sync_master_no_tx",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
+                }
+            ]
+        },
+        "Rpl_semi_sync_master_request_ack": {
+            "name": "Rpl_semi_sync_master_request_ack",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rpl_semi_sync_master_request_ack",
+                    "url": "https://mariadb.com/kb/en/semisynchronous-replication-plugin-status-variables/"
                 }
             ]
         },
@@ -13974,6 +13994,16 @@
                 {
                     "anchor": "statvar_Rpl_semi_sync_slave_status",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
+                }
+            ]
+        },
+        "Rpl_semi_sync_slave_send_ack": {
+            "name": "Rpl_semi_sync_slave_send_ack",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "rpl_semi_sync_slave_send_ack",
+                    "url": "https://mariadb.com/kb/en/semisynchronous-replication-plugin-status-variables/"
                 }
             ]
         },

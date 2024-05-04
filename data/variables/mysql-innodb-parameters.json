@@ -763,7 +763,7 @@
       "id": "sysvar_innodb_doublewrite_files",
       "name": "innodb_doublewrite_files",
       "range": {
-        "from": 2,
+        "from": 1,
         "to": 256
       },
       "scope": [

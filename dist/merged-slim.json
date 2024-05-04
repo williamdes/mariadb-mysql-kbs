@@ -30333,7 +30333,7 @@
             "dynamic": false,
             "name": "innodb_doublewrite_files",
             "range": {
-                "from": 2,
+                "from": 1,
                 "to": 256
             },
             "scope": [

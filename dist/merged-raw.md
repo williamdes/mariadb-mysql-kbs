@@ -33380,7 +33380,7 @@
 |Scope|`global`|
 |Default value|`innodb_buffer_pool_instances * 2`|
 |Dynamic|`false`|
-|Range|from: `2` to: `256`|
+|Range|from: `1` to: `256`|
 
 ### Documentation(s)
 |source|anchor name|

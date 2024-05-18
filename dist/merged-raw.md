@@ -33270,7 +33270,7 @@
 |Name|`innodb_ddl_buffer_size`|
 |Command line|`--innodb-ddl-buffer-size=#`|
 |Type of variable|`integer`|
-|Scope|`global`, `session`|
+|Scope|`session`|
 |Default value|`1048576`|
 |Dynamic|`true`|
 |Range|from: `65536` to: `4294967295`|
@@ -33301,7 +33301,7 @@
 |Name|`innodb_ddl_threads`|
 |Command line|`--innodb-ddl-threads=#`|
 |Type of variable|`integer`|
-|Scope|`global`, `session`|
+|Scope|`session`|
 |Default value|`4`|
 |Dynamic|`true`|
 |Range|from: `1` to: `64`|

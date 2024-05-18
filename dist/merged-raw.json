@@ -40811,7 +40811,6 @@
                 "to": 4294967295
             },
             "scope": [
-                "global",
                 "session"
             ],
             "type": "integer",
@@ -40848,7 +40847,6 @@
                 "to": 64
             },
             "scope": [
-                "global",
                 "session"
             ],
             "type": "integer",

@@ -57,6 +57,10 @@
       "type": "integer"
     },
     {
+      "name": "Aurora_fts_cache_memory_used",
+      "type": "byte"
+    },
+    {
       "name": "Aurora_fwd_master_dml_stmt_count",
       "type": "integer"
     },
@@ -154,6 +158,18 @@
     {
       "name": "Aurora_ml_single_request_cnt",
       "type": "integer"
+    },
+    {
+      "name": "aurora_oom_avoidance_recovery_state"
+    },
+    {
+      "name": "aurora_oom_reserved_mem_enter_kb"
+    },
+    {
+      "name": "aurora_oom_reserved_mem_exit_kb"
+    },
+    {
+      "name": "aurora_oom_status"
     },
     {
       "name": "Aurora_pq_bytes_returned",
@@ -294,6 +310,9 @@
     {
       "name": "Aurora_tmz_version",
       "type": "string"
+    },
+    {
+      "name": "Aurora_zdr_oom_threshold"
     },
     {
       "name": "server_aurora_das_running",

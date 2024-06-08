@@ -32399,6 +32399,17 @@
 |------|----|
 |docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
 
+## Aurora_fts_cache_memory_used
+|name|value|
+|----|-----|
+|Name|`Aurora_fts_cache_memory_used`|
+|Type of variable|`byte`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+
 ## Aurora_fwd_master_dml_stmt_count
 |name|value|
 |----|-----|
@@ -32667,6 +32678,46 @@
 |----|-----|
 |Name|`Aurora_ml_single_request_cnt`|
 |Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+
+## aurora_oom_avoidance_recovery_state
+|name|value|
+|----|-----|
+|Name|`aurora_oom_avoidance_recovery_state`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+
+## aurora_oom_reserved_mem_enter_kb
+|name|value|
+|----|-----|
+|Name|`aurora_oom_reserved_mem_enter_kb`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+
+## aurora_oom_reserved_mem_exit_kb
+|name|value|
+|----|-----|
+|Name|`aurora_oom_reserved_mem_exit_kb`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+
+## aurora_oom_status
+|name|value|
+|----|-----|
+|Name|`aurora_oom_status`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -33052,6 +33103,16 @@
 |----|-----|
 |Name|`Aurora_tmz_version`|
 |Type of variable|`string`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+
+## Aurora_zdr_oom_threshold
+|name|value|
+|----|-----|
+|Name|`Aurora_zdr_oom_threshold`|
 
 ### Documentation(s)
 |source|anchor name|

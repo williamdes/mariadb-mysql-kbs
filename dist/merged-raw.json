@@ -39973,6 +39973,16 @@
                 }
             ]
         },
+        "Aurora_fts_cache_memory_used": {
+            "name": "Aurora_fts_cache_memory_used",
+            "type": "byte",
+            "ids": [
+                {
+                    "anchor": null,
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars"
+                }
+            ]
+        },
         "Aurora_fwd_master_dml_stmt_count": {
             "name": "Aurora_fwd_master_dml_stmt_count",
             "type": "integer",
@@ -40215,6 +40225,42 @@
         "Aurora_ml_single_request_cnt": {
             "name": "Aurora_ml_single_request_cnt",
             "type": "integer",
+            "ids": [
+                {
+                    "anchor": null,
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars"
+                }
+            ]
+        },
+        "aurora_oom_avoidance_recovery_state": {
+            "name": "aurora_oom_avoidance_recovery_state",
+            "ids": [
+                {
+                    "anchor": null,
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars"
+                }
+            ]
+        },
+        "aurora_oom_reserved_mem_enter_kb": {
+            "name": "aurora_oom_reserved_mem_enter_kb",
+            "ids": [
+                {
+                    "anchor": null,
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars"
+                }
+            ]
+        },
+        "aurora_oom_reserved_mem_exit_kb": {
+            "name": "aurora_oom_reserved_mem_exit_kb",
+            "ids": [
+                {
+                    "anchor": null,
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars"
+                }
+            ]
+        },
+        "aurora_oom_status": {
+            "name": "aurora_oom_status",
             "ids": [
                 {
                     "anchor": null,
@@ -40565,6 +40611,15 @@
         "Aurora_tmz_version": {
             "name": "Aurora_tmz_version",
             "type": "string",
+            "ids": [
+                {
+                    "anchor": null,
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars"
+                }
+            ]
+        },
+        "Aurora_zdr_oom_threshold": {
+            "name": "Aurora_zdr_oom_threshold",
             "ids": [
                 {
                     "anchor": null,

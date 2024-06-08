@@ -29617,6 +29617,13 @@
                 "65#"
             ]
         },
+        "Aurora_fts_cache_memory_used": {
+            "name": "Aurora_fts_cache_memory_used",
+            "type": "byte",
+            "ids": [
+                "65#"
+            ]
+        },
         "Aurora_fwd_master_dml_stmt_count": {
             "name": "Aurora_fwd_master_dml_stmt_count",
             "type": "integer",
@@ -29787,6 +29794,30 @@
         "Aurora_ml_single_request_cnt": {
             "name": "Aurora_ml_single_request_cnt",
             "type": "integer",
+            "ids": [
+                "65#"
+            ]
+        },
+        "aurora_oom_avoidance_recovery_state": {
+            "name": "aurora_oom_avoidance_recovery_state",
+            "ids": [
+                "65#"
+            ]
+        },
+        "aurora_oom_reserved_mem_enter_kb": {
+            "name": "aurora_oom_reserved_mem_enter_kb",
+            "ids": [
+                "65#"
+            ]
+        },
+        "aurora_oom_reserved_mem_exit_kb": {
+            "name": "aurora_oom_reserved_mem_exit_kb",
+            "ids": [
+                "65#"
+            ]
+        },
+        "aurora_oom_status": {
+            "name": "aurora_oom_status",
             "ids": [
                 "65#"
             ]
@@ -30032,6 +30063,12 @@
         "Aurora_tmz_version": {
             "name": "Aurora_tmz_version",
             "type": "string",
+            "ids": [
+                "65#"
+            ]
+        },
+        "Aurora_zdr_oom_threshold": {
+            "name": "Aurora_zdr_oom_threshold",
             "ids": [
                 "65#"
             ]

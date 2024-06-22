@@ -171,7 +171,7 @@
       "type": "string"
     },
     {
-      "default": "Empty",
+      "default": "utf8mb3=utf8mb3_uca1400_ai_ci, ucs2=ucs2_uca1400_ai_ci, utf8mb4=utf8mb4_uca1400_ai_ci, utf16=utf16_uca1400_ai_ci, utf32=utf32_uca1400_ai_ci (>= MariaDB 11.5), Empty (<= MariaDB 11.4)",
       "dynamic": true,
       "id": "character_set_collations",
       "name": "character_set_collations",
@@ -193,7 +193,7 @@
       "type": "string"
     },
     {
-      "default": "latin1",
+      "default": "utf8mb4 (>= MariaDB 11.6.0), latin1 (<= MariaDB 11.5)",
       "dynamic": true,
       "id": "character_set_database",
       "name": "character_set_database",
@@ -228,7 +228,7 @@
     },
     {
       "cli": "--character-set-server",
-      "default": "latin1",
+      "default": "utf8mb4 (>= MariaDB 11.6.0), latin1 (<= MariaDB 11.5)",
       "dynamic": true,
       "id": "character_set_server",
       "name": "character_set_server",

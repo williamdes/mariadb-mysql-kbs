@@ -40,10 +40,11 @@ jobs:
                   yarn run test
                   yarn run report-coverage
             - name: Send coverage
-              uses: codecov/codecov-action@v3
+              uses: codecov/codecov-action@v4
               with:
                   flags: node
                   fail_ci_if_error: true # optional (default = false)
+                  token: ${{ secrets.CODECOV_TOKEN }}
 
     test-php:
         name: Test on php ${{ matrix.php-version }} and ${{ matrix.os }}
@@ -89,7 +90,7 @@ jobs:
             - name: Run php tests
               run: composer run test -- ${{ matrix.phpunit-options }}
             - name: Send coverage
-              uses: codecov/codecov-action@v3
+              uses: codecov/codecov-action@v4
               with:
                   files: ./build/logs/clover.xml
                   flags: php

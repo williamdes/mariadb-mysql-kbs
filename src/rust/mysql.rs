@@ -454,6 +454,7 @@ pub fn extract_mysql_from_text(qr: QueryResponse) -> Vec<KbParsedEntry> {
 }*/
 
 const KB_URL: &str = "https://dev.mysql.com/doc/refman/8.0/en/";
+const KB_URL84: &str = "https://dev.mysql.com/doc/refman/8.4/en/";
 const KB_URL57: &str = "https://dev.mysql.com/doc/refman/5.7/en/";
 
 pub fn get_pages() -> Vec<PageProcess<'static>> {
@@ -546,6 +547,11 @@ pub fn get_pages() -> Vec<PageProcess<'static>> {
         PageProcess {
             url: KB_URL.to_owned() + "version-tokens-reference.html",
             name: "version-tokens-reference".to_string(),
+            data_type: "variables",
+        },
+        PageProcess {
+            url: KB_URL84.to_owned() + "keyring-system-variables.html",
+            name: "keyring-system-variables".to_string(),
             data_type: "variables",
         },
     ]

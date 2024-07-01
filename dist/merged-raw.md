@@ -33867,6 +33867,278 @@
 |------|----|
 |dev.mysql.com|[sysvar_innodb_validate_tablespace_paths](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_validate_tablespace_paths)|
 
+## keyring_aws_cmk_id
+|name|value|
+|----|-----|
+|Name|`keyring_aws_cmk_id`|
+|Command line|`--keyring-aws-cmk-id=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_aws_cmk_id](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_aws_cmk_id)|
+
+## keyring_aws_conf_file
+|name|value|
+|----|-----|
+|Name|`keyring_aws_conf_file`|
+|Command line|`--keyring-aws-conf-file=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Default value|`platform specific`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_aws_conf_file](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_aws_conf_file)|
+
+## keyring_aws_data_file
+|name|value|
+|----|-----|
+|Name|`keyring_aws_data_file`|
+|Command line|`--keyring-aws-data-file`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Default value|`platform specific`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_aws_data_file](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_aws_data_file)|
+
+## keyring_aws_region
+|name|value|
+|----|-----|
+|Name|`keyring_aws_region`|
+|Command line|`--keyring-aws-region=value`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`us-east-1`|
+|Dynamic|`true`|
+|Valid value(s)|`af-south-1`, `ap-east-1`, `ap-northeast-1`, `ap-northeast-2`, `ap-northeast-3`, `ap-south-1`, `ap-southeast-1`, `ap-southeast-2`, `ca-central-1`, `cn-north-1`, `cn-northwest-1`, `eu-central-1`, `eu-north-1`, `eu-south-1`, `eu-west-1`, `eu-west-2`, `eu-west-3`, `me-south-1`, `sa-east-1`, `us-east-1`, `us-east-2`, `us-gov-east-1`, `us-iso-east-1`, `us-iso-west-1`, `us-isob-east-1`, `us-west-1`, `us-west-2`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_aws_region](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_aws_region)|
+
+## keyring_hashicorp_auth_path
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_auth_path`|
+|Command line|`--keyring-hashicorp-auth-path=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`/v1/auth/approle/login`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_auth_path](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_auth_path)|
+
+## keyring_hashicorp_ca_path
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_ca_path`|
+|Command line|`--keyring-hashicorp-ca-path=file_name`|
+|Type of variable|`file name`|
+|Scope|`global`|
+|Default value|`empty string`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_ca_path](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_ca_path)|
+
+## keyring_hashicorp_caching
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_caching`|
+|Command line|`--keyring-hashicorp-caching[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_caching](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_caching)|
+
+## keyring_hashicorp_commit_auth_path
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_commit_auth_path`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_commit_auth_path](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_commit_auth_path)|
+
+## keyring_hashicorp_commit_ca_path
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_commit_ca_path`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_commit_ca_path](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_commit_ca_path)|
+
+## keyring_hashicorp_commit_caching
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_commit_caching`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_commit_caching](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_commit_caching)|
+
+## keyring_hashicorp_commit_role_id
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_commit_role_id`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_commit_role_id](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_commit_role_id)|
+
+## keyring_hashicorp_commit_server_url
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_commit_server_url`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_commit_server_url](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_commit_server_url)|
+
+## keyring_hashicorp_commit_store_path
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_commit_store_path`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_commit_store_path](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_commit_store_path)|
+
+## keyring_hashicorp_role_id
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_role_id`|
+|Command line|`--keyring-hashicorp-role-id=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`empty string`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_role_id](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_role_id)|
+
+## keyring_hashicorp_secret_id
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_secret_id`|
+|Command line|`--keyring-hashicorp-secret-id=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`empty string`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_secret_id](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_secret_id)|
+
+## keyring_hashicorp_server_url
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_server_url`|
+|Command line|`--keyring-hashicorp-server-url=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`https://127.0.0.1:8200`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_server_url](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_server_url)|
+
+## keyring_hashicorp_store_path
+|name|value|
+|----|-----|
+|Name|`keyring_hashicorp_store_path`|
+|Command line|`--keyring-hashicorp-store-path=value`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`empty string`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_hashicorp_store_path](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_hashicorp_store_path)|
+
+## keyring_okv_conf_dir
+|name|value|
+|----|-----|
+|Name|`keyring_okv_conf_dir`|
+|Command line|`--keyring-okv-conf-dir=dir_name`|
+|Type of variable|`directory name`|
+|Scope|`global`|
+|Default value|`empty string`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_okv_conf_dir](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_okv_conf_dir)|
+
+## keyring_operations
+|name|value|
+|----|-----|
+|Name|`keyring_operations`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_keyring_operations](https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html#sysvar_keyring_operations)|
+
 ## ndbcluster
 |name|value|
 |----|-----|

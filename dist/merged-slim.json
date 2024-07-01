@@ -30779,6 +30779,268 @@
                 "63#sysvar_innodb_validate_tablespace_paths"
             ]
         },
+        "keyring_aws_cmk_id": {
+            "cli": "--keyring-aws-cmk-id=value",
+            "dynamic": true,
+            "name": "keyring_aws_cmk_id",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "67#sysvar_keyring_aws_cmk_id"
+            ]
+        },
+        "keyring_aws_conf_file": {
+            "cli": "--keyring-aws-conf-file=file_name",
+            "default": "platform specific",
+            "dynamic": false,
+            "name": "keyring_aws_conf_file",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                "66#sysvar_keyring_aws_conf_file"
+            ]
+        },
+        "keyring_aws_data_file": {
+            "cli": "--keyring-aws-data-file",
+            "default": "platform specific",
+            "dynamic": false,
+            "name": "keyring_aws_data_file",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                "66#sysvar_keyring_aws_data_file"
+            ]
+        },
+        "keyring_aws_region": {
+            "cli": "--keyring-aws-region=value",
+            "default": "us-east-1",
+            "dynamic": true,
+            "name": "keyring_aws_region",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "af-south-1",
+                "ap-east-1",
+                "ap-northeast-1",
+                "ap-northeast-2",
+                "ap-northeast-3",
+                "ap-south-1",
+                "ap-southeast-1",
+                "ap-southeast-2",
+                "ca-central-1",
+                "cn-north-1",
+                "cn-northwest-1",
+                "eu-central-1",
+                "eu-north-1",
+                "eu-south-1",
+                "eu-west-1",
+                "eu-west-2",
+                "eu-west-3",
+                "me-south-1",
+                "sa-east-1",
+                "us-east-1",
+                "us-east-2",
+                "us-gov-east-1",
+                "us-iso-east-1",
+                "us-iso-west-1",
+                "us-isob-east-1",
+                "us-west-1",
+                "us-west-2"
+            ],
+            "ids": [
+                "66#sysvar_keyring_aws_region"
+            ]
+        },
+        "keyring_hashicorp_auth_path": {
+            "cli": "--keyring-hashicorp-auth-path=value",
+            "default": "/v1/auth/approle/login",
+            "dynamic": true,
+            "name": "keyring_hashicorp_auth_path",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_auth_path"
+            ]
+        },
+        "keyring_hashicorp_ca_path": {
+            "cli": "--keyring-hashicorp-ca-path=file_name",
+            "default": "empty string",
+            "dynamic": true,
+            "name": "keyring_hashicorp_ca_path",
+            "scope": [
+                "global"
+            ],
+            "type": "file name",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_ca_path"
+            ]
+        },
+        "keyring_hashicorp_caching": {
+            "cli": "--keyring-hashicorp-caching[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "keyring_hashicorp_caching",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_caching"
+            ]
+        },
+        "keyring_hashicorp_commit_auth_path": {
+            "dynamic": false,
+            "name": "keyring_hashicorp_commit_auth_path",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_commit_auth_path"
+            ]
+        },
+        "keyring_hashicorp_commit_ca_path": {
+            "dynamic": false,
+            "name": "keyring_hashicorp_commit_ca_path",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_commit_ca_path"
+            ]
+        },
+        "keyring_hashicorp_commit_caching": {
+            "dynamic": false,
+            "name": "keyring_hashicorp_commit_caching",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_commit_caching"
+            ]
+        },
+        "keyring_hashicorp_commit_role_id": {
+            "dynamic": false,
+            "name": "keyring_hashicorp_commit_role_id",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_commit_role_id"
+            ]
+        },
+        "keyring_hashicorp_commit_server_url": {
+            "dynamic": false,
+            "name": "keyring_hashicorp_commit_server_url",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_commit_server_url"
+            ]
+        },
+        "keyring_hashicorp_commit_store_path": {
+            "dynamic": false,
+            "name": "keyring_hashicorp_commit_store_path",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_commit_store_path"
+            ]
+        },
+        "keyring_hashicorp_role_id": {
+            "cli": "--keyring-hashicorp-role-id=value",
+            "default": "empty string",
+            "dynamic": true,
+            "name": "keyring_hashicorp_role_id",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_role_id"
+            ]
+        },
+        "keyring_hashicorp_secret_id": {
+            "cli": "--keyring-hashicorp-secret-id=value",
+            "default": "empty string",
+            "dynamic": true,
+            "name": "keyring_hashicorp_secret_id",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_secret_id"
+            ]
+        },
+        "keyring_hashicorp_server_url": {
+            "cli": "--keyring-hashicorp-server-url=value",
+            "default": "https://127.0.0.1:8200",
+            "dynamic": true,
+            "name": "keyring_hashicorp_server_url",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_server_url"
+            ]
+        },
+        "keyring_hashicorp_store_path": {
+            "cli": "--keyring-hashicorp-store-path=value",
+            "default": "empty string",
+            "dynamic": true,
+            "name": "keyring_hashicorp_store_path",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "66#sysvar_keyring_hashicorp_store_path"
+            ]
+        },
+        "keyring_okv_conf_dir": {
+            "cli": "--keyring-okv-conf-dir=dir_name",
+            "default": "empty string",
+            "dynamic": true,
+            "name": "keyring_okv_conf_dir",
+            "scope": [
+                "global"
+            ],
+            "type": "directory name",
+            "ids": [
+                "66#sysvar_keyring_okv_conf_dir"
+            ]
+        },
+        "keyring_operations": {
+            "default": "ON",
+            "dynamic": true,
+            "name": "keyring_operations",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "66#sysvar_keyring_operations"
+            ]
+        },
         "ndbcluster": {
             "cli": "--ndbcluster[=value]",
             "default": "OFF",
@@ -32428,7 +32690,7 @@
             ],
             "type": "string",
             "ids": [
-                "67#sysvar_authentication_fido_rp_id"
+                "68#sysvar_authentication_fido_rp_id"
             ]
         },
         "authentication_kerberos_service_key_tab": {
@@ -32441,7 +32703,7 @@
             ],
             "type": "file name",
             "ids": [
-                "66#sysvar_authentication_kerberos_service_key_tab"
+                "67#sysvar_authentication_kerberos_service_key_tab"
             ]
         },
         "authentication_kerberos_service_principal": {
@@ -32454,7 +32716,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_kerberos_service_principal"
+                "67#sysvar_authentication_kerberos_service_principal"
             ]
         },
         "authentication_ldap_sasl_auth_method_name": {
@@ -32467,7 +32729,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_auth_method_name"
+                "67#sysvar_authentication_ldap_sasl_auth_method_name"
             ]
         },
         "authentication_ldap_sasl_bind_base_dn": {
@@ -32480,7 +32742,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_bind_base_dn"
+                "67#sysvar_authentication_ldap_sasl_bind_base_dn"
             ]
         },
         "authentication_ldap_sasl_bind_root_dn": {
@@ -32493,7 +32755,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_bind_root_dn"
+                "67#sysvar_authentication_ldap_sasl_bind_root_dn"
             ]
         },
         "authentication_ldap_sasl_bind_root_pwd": {
@@ -32506,7 +32768,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_bind_root_pwd"
+                "67#sysvar_authentication_ldap_sasl_bind_root_pwd"
             ]
         },
         "authentication_ldap_sasl_ca_path": {
@@ -32519,7 +32781,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_ca_path"
+                "67#sysvar_authentication_ldap_sasl_ca_path"
             ]
         },
         "authentication_ldap_sasl_group_search_attr": {
@@ -32532,7 +32794,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_group_search_attr"
+                "67#sysvar_authentication_ldap_sasl_group_search_attr"
             ]
         },
         "authentication_ldap_sasl_group_search_filter": {
@@ -32545,7 +32807,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_group_search_filter"
+                "67#sysvar_authentication_ldap_sasl_group_search_filter"
             ]
         },
         "authentication_ldap_sasl_init_pool_size": {
@@ -32562,7 +32824,7 @@
             ],
             "type": "integer",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_init_pool_size"
+                "67#sysvar_authentication_ldap_sasl_init_pool_size"
             ]
         },
         "authentication_ldap_sasl_log_status": {
@@ -32578,7 +32840,7 @@
             ],
             "type": "integer",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_log_status"
+                "67#sysvar_authentication_ldap_sasl_log_status"
             ]
         },
         "authentication_ldap_sasl_max_pool_size": {
@@ -32595,7 +32857,7 @@
             ],
             "type": "integer",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_max_pool_size"
+                "67#sysvar_authentication_ldap_sasl_max_pool_size"
             ]
         },
         "authentication_ldap_sasl_referral": {
@@ -32608,7 +32870,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_referral"
+                "67#sysvar_authentication_ldap_sasl_referral"
             ]
         },
         "authentication_ldap_sasl_server_host": {
@@ -32620,7 +32882,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_server_host"
+                "67#sysvar_authentication_ldap_sasl_server_host"
             ]
         },
         "authentication_ldap_sasl_server_port": {
@@ -32637,7 +32899,7 @@
             ],
             "type": "integer",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_server_port"
+                "67#sysvar_authentication_ldap_sasl_server_port"
             ]
         },
         "authentication_ldap_sasl_tls": {
@@ -32650,7 +32912,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_tls"
+                "67#sysvar_authentication_ldap_sasl_tls"
             ]
         },
         "authentication_ldap_sasl_user_search_attr": {
@@ -32663,7 +32925,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_sasl_user_search_attr"
+                "67#sysvar_authentication_ldap_sasl_user_search_attr"
             ]
         },
         "authentication_ldap_simple_auth_method_name": {
@@ -32680,7 +32942,7 @@
                 "AD-FOREST"
             ],
             "ids": [
-                "66#sysvar_authentication_ldap_simple_auth_method_name"
+                "67#sysvar_authentication_ldap_simple_auth_method_name"
             ]
         },
         "authentication_ldap_simple_bind_base_dn": {
@@ -32693,7 +32955,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_bind_base_dn"
+                "67#sysvar_authentication_ldap_simple_bind_base_dn"
             ]
         },
         "authentication_ldap_simple_bind_root_dn": {
@@ -32706,7 +32968,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_bind_root_dn"
+                "67#sysvar_authentication_ldap_simple_bind_root_dn"
             ]
         },
         "authentication_ldap_simple_bind_root_pwd": {
@@ -32719,7 +32981,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_bind_root_pwd"
+                "67#sysvar_authentication_ldap_simple_bind_root_pwd"
             ]
         },
         "authentication_ldap_simple_ca_path": {
@@ -32732,7 +32994,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_ca_path"
+                "67#sysvar_authentication_ldap_simple_ca_path"
             ]
         },
         "authentication_ldap_simple_group_search_attr": {
@@ -32745,7 +33007,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_group_search_attr"
+                "67#sysvar_authentication_ldap_simple_group_search_attr"
             ]
         },
         "authentication_ldap_simple_group_search_filter": {
@@ -32758,7 +33020,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_group_search_filter"
+                "67#sysvar_authentication_ldap_simple_group_search_filter"
             ]
         },
         "authentication_ldap_simple_init_pool_size": {
@@ -32775,7 +33037,7 @@
             ],
             "type": "integer",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_init_pool_size"
+                "67#sysvar_authentication_ldap_simple_init_pool_size"
             ]
         },
         "authentication_ldap_simple_log_status": {
@@ -32791,7 +33053,7 @@
             ],
             "type": "integer",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_log_status"
+                "67#sysvar_authentication_ldap_simple_log_status"
             ]
         },
         "authentication_ldap_simple_max_pool_size": {
@@ -32808,7 +33070,7 @@
             ],
             "type": "integer",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_max_pool_size"
+                "67#sysvar_authentication_ldap_simple_max_pool_size"
             ]
         },
         "authentication_ldap_simple_referral": {
@@ -32821,7 +33083,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_referral"
+                "67#sysvar_authentication_ldap_simple_referral"
             ]
         },
         "authentication_ldap_simple_server_host": {
@@ -32833,7 +33095,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_server_host"
+                "67#sysvar_authentication_ldap_simple_server_host"
             ]
         },
         "authentication_ldap_simple_server_port": {
@@ -32850,7 +33112,7 @@
             ],
             "type": "integer",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_server_port"
+                "67#sysvar_authentication_ldap_simple_server_port"
             ]
         },
         "authentication_ldap_simple_tls": {
@@ -32863,7 +33125,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_tls"
+                "67#sysvar_authentication_ldap_simple_tls"
             ]
         },
         "authentication_ldap_simple_user_search_attr": {
@@ -32876,7 +33138,7 @@
             ],
             "type": "string",
             "ids": [
-                "66#sysvar_authentication_ldap_simple_user_search_attr"
+                "67#sysvar_authentication_ldap_simple_user_search_attr"
             ]
         },
         "max_binlog_dump_events": {
@@ -33217,7 +33479,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "68#sysvar_binlog_gtid_simple_recovery"
+                "69#sysvar_binlog_gtid_simple_recovery"
             ]
         },
         "enforce_gtid_consistency": {
@@ -33235,13 +33497,13 @@
                 "WARN"
             ],
             "ids": [
-                "67#sysvar_enforce_gtid_consistency"
+                "68#sysvar_enforce_gtid_consistency"
             ]
         },
         "gtid_executed": {
             "name": "gtid_executed",
             "ids": [
-                "67#sysvar_gtid_executed",
+                "68#sysvar_gtid_executed",
                 "23#sysvar_gtid_executed",
                 "24#sysvar_gtid_executed"
             ]
@@ -33259,7 +33521,7 @@
             ],
             "type": "integer",
             "ids": [
-                "67#sysvar_gtid_executed_compression_period"
+                "68#sysvar_gtid_executed_compression_period"
             ]
         },
         "gtid_mode": {
@@ -33278,7 +33540,7 @@
                 "ON"
             ],
             "ids": [
-                "67#sysvar_gtid_mode"
+                "68#sysvar_gtid_mode"
             ]
         },
         "gtid_next": {
@@ -33295,7 +33557,7 @@
                 "<UUID>:<NUMBER>"
             ],
             "ids": [
-                "67#sysvar_gtid_next"
+                "68#sysvar_gtid_next"
             ]
         },
         "gtid_owned": {
@@ -33307,7 +33569,7 @@
             ],
             "type": "string",
             "ids": [
-                "67#sysvar_gtid_owned"
+                "68#sysvar_gtid_owned"
             ]
         },
         "gtid_purged": {
@@ -33318,7 +33580,7 @@
             ],
             "type": "string",
             "ids": [
-                "67#sysvar_gtid_purged"
+                "68#sysvar_gtid_purged"
             ]
         },
         "master_info_file": {
@@ -36913,7 +37175,7 @@
             ],
             "type": "string",
             "ids": [
-                "69#sysvar_version_tokens_session"
+                "70#sysvar_version_tokens_session"
             ]
         },
         "version_tokens_session_number": {
@@ -36927,7 +37189,7 @@
             ],
             "type": "integer",
             "ids": [
-                "68#sysvar_version_tokens_session_number"
+                "69#sysvar_version_tokens_session_number"
             ]
         },
         "mysqlx": {
@@ -36942,7 +37204,7 @@
                 "FORCE_PLUS_PERMANENT"
             ],
             "ids": [
-                "70#option_mysqld_mysqlx"
+                "71#option_mysqld_mysqlx"
             ]
         },
         "mysqlx_bind_address": {
@@ -36955,7 +37217,7 @@
             ],
             "type": "string",
             "ids": [
-                "69#sysvar_mysqlx_bind_address"
+                "70#sysvar_mysqlx_bind_address"
             ]
         },
         "mysqlx_compression_algorithms": {
@@ -36973,7 +37235,7 @@
                 "zstd_stream"
             ],
             "ids": [
-                "69#sysvar_mysqlx_compression_algorithms"
+                "70#sysvar_mysqlx_compression_algorithms"
             ]
         },
         "mysqlx_connect_timeout": {
@@ -36990,7 +37252,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_connect_timeout"
+                "70#sysvar_mysqlx_connect_timeout"
             ]
         },
         "mysqlx_deflate_default_compression_level": {
@@ -37007,7 +37269,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_deflate_default_compression_level"
+                "70#sysvar_mysqlx_deflate_default_compression_level"
             ]
         },
         "mysqlx_deflate_max_client_compression_level": {
@@ -37024,7 +37286,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_deflate_max_client_compression_level"
+                "70#sysvar_mysqlx_deflate_max_client_compression_level"
             ]
         },
         "mysqlx_document_id_unique_prefix": {
@@ -37041,7 +37303,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_document_id_unique_prefix"
+                "70#sysvar_mysqlx_document_id_unique_prefix"
             ]
         },
         "mysqlx_enable_hello_notice": {
@@ -37054,7 +37316,7 @@
             ],
             "type": "boolean",
             "ids": [
-                "69#sysvar_mysqlx_enable_hello_notice"
+                "70#sysvar_mysqlx_enable_hello_notice"
             ]
         },
         "mysqlx_idle_worker_thread_timeout": {
@@ -37071,7 +37333,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_idle_worker_thread_timeout"
+                "70#sysvar_mysqlx_idle_worker_thread_timeout"
             ]
         },
         "mysqlx_interactive_timeout": {
@@ -37088,7 +37350,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_interactive_timeout"
+                "70#sysvar_mysqlx_interactive_timeout"
             ]
         },
         "mysqlx_lz4_default_compression_level": {
@@ -37105,7 +37367,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_lz4_default_compression_level"
+                "70#sysvar_mysqlx_lz4_default_compression_level"
             ]
         },
         "mysqlx_lz4_max_client_compression_level": {
@@ -37122,7 +37384,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_lz4_max_client_compression_level"
+                "70#sysvar_mysqlx_lz4_max_client_compression_level"
             ]
         },
         "mysqlx_max_allowed_packet": {
@@ -37139,7 +37401,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_max_allowed_packet"
+                "70#sysvar_mysqlx_max_allowed_packet"
             ]
         },
         "mysqlx_max_connections": {
@@ -37156,7 +37418,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_max_connections"
+                "70#sysvar_mysqlx_max_connections"
             ]
         },
         "mysqlx_min_worker_threads": {
@@ -37173,7 +37435,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_min_worker_threads"
+                "70#sysvar_mysqlx_min_worker_threads"
             ]
         },
         "mysqlx_port": {
@@ -37190,7 +37452,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_port"
+                "70#sysvar_mysqlx_port"
             ]
         },
         "mysqlx_port_open_timeout": {
@@ -37207,7 +37469,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_port_open_timeout"
+                "70#sysvar_mysqlx_port_open_timeout"
             ]
         },
         "mysqlx_read_timeout": {
@@ -37224,7 +37486,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_read_timeout"
+                "70#sysvar_mysqlx_read_timeout"
             ]
         },
         "mysqlx_socket": {
@@ -37237,7 +37499,7 @@
             ],
             "type": "string",
             "ids": [
-                "69#sysvar_mysqlx_socket"
+                "70#sysvar_mysqlx_socket"
             ]
         },
         "mysqlx_ssl_ca": {
@@ -37250,7 +37512,7 @@
             ],
             "type": "file name",
             "ids": [
-                "69#sysvar_mysqlx_ssl_ca"
+                "70#sysvar_mysqlx_ssl_ca"
             ]
         },
         "mysqlx_ssl_capath": {
@@ -37263,7 +37525,7 @@
             ],
             "type": "directory name",
             "ids": [
-                "69#sysvar_mysqlx_ssl_capath"
+                "70#sysvar_mysqlx_ssl_capath"
             ]
         },
         "mysqlx_ssl_cert": {
@@ -37276,7 +37538,7 @@
             ],
             "type": "file name",
             "ids": [
-                "69#sysvar_mysqlx_ssl_cert"
+                "70#sysvar_mysqlx_ssl_cert"
             ]
         },
         "mysqlx_ssl_cipher": {
@@ -37289,7 +37551,7 @@
             ],
             "type": "string",
             "ids": [
-                "69#sysvar_mysqlx_ssl_cipher"
+                "70#sysvar_mysqlx_ssl_cipher"
             ]
         },
         "mysqlx_ssl_crl": {
@@ -37302,7 +37564,7 @@
             ],
             "type": "file name",
             "ids": [
-                "69#sysvar_mysqlx_ssl_crl"
+                "70#sysvar_mysqlx_ssl_crl"
             ]
         },
         "mysqlx_ssl_crlpath": {
@@ -37315,7 +37577,7 @@
             ],
             "type": "directory name",
             "ids": [
-                "69#sysvar_mysqlx_ssl_crlpath"
+                "70#sysvar_mysqlx_ssl_crlpath"
             ]
         },
         "mysqlx_ssl_key": {
@@ -37328,7 +37590,7 @@
             ],
             "type": "file name",
             "ids": [
-                "69#sysvar_mysqlx_ssl_key"
+                "70#sysvar_mysqlx_ssl_key"
             ]
         },
         "mysqlx_wait_timeout": {
@@ -37345,7 +37607,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_wait_timeout"
+                "70#sysvar_mysqlx_wait_timeout"
             ]
         },
         "mysqlx_write_timeout": {
@@ -37362,7 +37624,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_write_timeout"
+                "70#sysvar_mysqlx_write_timeout"
             ]
         },
         "mysqlx_zstd_default_compression_level": {
@@ -37379,7 +37641,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_zstd_default_compression_level"
+                "70#sysvar_mysqlx_zstd_default_compression_level"
             ]
         },
         "mysqlx_zstd_max_client_compression_level": {
@@ -37396,7 +37658,7 @@
             ],
             "type": "integer",
             "ids": [
-                "69#sysvar_mysqlx_zstd_max_client_compression_level"
+                "70#sysvar_mysqlx_zstd_max_client_compression_level"
             ]
         }
     },
@@ -37468,6 +37730,7 @@
         "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html",
         "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html",
         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars",
+        "https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html",
         "https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html",
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html",
         "https://dev.mysql.com/doc/refman/8.0/en/version-tokens-reference.html",

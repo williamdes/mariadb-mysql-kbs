@@ -1,0 +1,230 @@
+{
+  "data": [
+    {
+      "cli": "--keyring-aws-cmk-id=value",
+      "dynamic": true,
+      "id": "sysvar_keyring_aws_cmk_id",
+      "name": "keyring_aws_cmk_id",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--keyring-aws-conf-file=file_name",
+      "default": "platform specific",
+      "dynamic": false,
+      "id": "sysvar_keyring_aws_conf_file",
+      "name": "keyring_aws_conf_file",
+      "scope": [
+        "global"
+      ],
+      "type": "file name"
+    },
+    {
+      "cli": "--keyring-aws-data-file",
+      "default": "platform specific",
+      "dynamic": false,
+      "id": "sysvar_keyring_aws_data_file",
+      "name": "keyring_aws_data_file",
+      "scope": [
+        "global"
+      ],
+      "type": "file name"
+    },
+    {
+      "cli": "--keyring-aws-region=value",
+      "default": "us-east-1",
+      "dynamic": true,
+      "id": "sysvar_keyring_aws_region",
+      "name": "keyring_aws_region",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "af-south-1",
+        "ap-east-1",
+        "ap-northeast-1",
+        "ap-northeast-2",
+        "ap-northeast-3",
+        "ap-south-1",
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "ca-central-1",
+        "cn-north-1",
+        "cn-northwest-1",
+        "eu-central-1",
+        "eu-north-1",
+        "eu-south-1",
+        "eu-west-1",
+        "eu-west-2",
+        "eu-west-3",
+        "me-south-1",
+        "sa-east-1",
+        "us-east-1",
+        "us-east-2",
+        "us-gov-east-1",
+        "us-iso-east-1",
+        "us-iso-west-1",
+        "us-isob-east-1",
+        "us-west-1",
+        "us-west-2"
+      ]
+    },
+    {
+      "cli": "--keyring-hashicorp-auth-path=value",
+      "default": "/v1/auth/approle/login",
+      "dynamic": true,
+      "id": "sysvar_keyring_hashicorp_auth_path",
+      "name": "keyring_hashicorp_auth_path",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--keyring-hashicorp-ca-path=file_name",
+      "default": "empty string",
+      "dynamic": true,
+      "id": "sysvar_keyring_hashicorp_ca_path",
+      "name": "keyring_hashicorp_ca_path",
+      "scope": [
+        "global"
+      ],
+      "type": "file name"
+    },
+    {
+      "cli": "--keyring-hashicorp-caching[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_keyring_hashicorp_caching",
+      "name": "keyring_hashicorp_caching",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "dynamic": false,
+      "id": "sysvar_keyring_hashicorp_commit_auth_path",
+      "name": "keyring_hashicorp_commit_auth_path",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "dynamic": false,
+      "id": "sysvar_keyring_hashicorp_commit_ca_path",
+      "name": "keyring_hashicorp_commit_ca_path",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "dynamic": false,
+      "id": "sysvar_keyring_hashicorp_commit_caching",
+      "name": "keyring_hashicorp_commit_caching",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "dynamic": false,
+      "id": "sysvar_keyring_hashicorp_commit_role_id",
+      "name": "keyring_hashicorp_commit_role_id",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "dynamic": false,
+      "id": "sysvar_keyring_hashicorp_commit_server_url",
+      "name": "keyring_hashicorp_commit_server_url",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "dynamic": false,
+      "id": "sysvar_keyring_hashicorp_commit_store_path",
+      "name": "keyring_hashicorp_commit_store_path",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--keyring-hashicorp-role-id=value",
+      "default": "empty string",
+      "dynamic": true,
+      "id": "sysvar_keyring_hashicorp_role_id",
+      "name": "keyring_hashicorp_role_id",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--keyring-hashicorp-secret-id=value",
+      "default": "empty string",
+      "dynamic": true,
+      "id": "sysvar_keyring_hashicorp_secret_id",
+      "name": "keyring_hashicorp_secret_id",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--keyring-hashicorp-server-url=value",
+      "default": "https://127.0.0.1:8200",
+      "dynamic": true,
+      "id": "sysvar_keyring_hashicorp_server_url",
+      "name": "keyring_hashicorp_server_url",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--keyring-hashicorp-store-path=value",
+      "default": "empty string",
+      "dynamic": true,
+      "id": "sysvar_keyring_hashicorp_store_path",
+      "name": "keyring_hashicorp_store_path",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--keyring-okv-conf-dir=dir_name",
+      "default": "empty string",
+      "dynamic": true,
+      "id": "sysvar_keyring_okv_conf_dir",
+      "name": "keyring_okv_conf_dir",
+      "scope": [
+        "global"
+      ],
+      "type": "directory name"
+    },
+    {
+      "default": "ON",
+      "dynamic": true,
+      "id": "sysvar_keyring_operations",
+      "name": "keyring_operations",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    }
+  ],
+  "name": "keyring-system-variables",
+  "url": "https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html"
+}

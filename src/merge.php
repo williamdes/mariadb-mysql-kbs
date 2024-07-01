@@ -108,7 +108,7 @@ foreach ($files as $file) {
                 }
                 $variables[$identifier] = $doc;
                 $kbEntry                = new stdClass();
-                $kbEntry->anchor        = $doc->id;
+                $kbEntry->anchor        = $doc->id ?? null;
                 $kbEntry->url           = $fileData->url;
                 $doc->ids[]             = $kbEntry;
                 unset($doc->id);

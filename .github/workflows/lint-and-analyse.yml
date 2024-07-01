@@ -26,7 +26,7 @@ jobs:
               id: yarn-cache-dir-path
               run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
             - name: yarn cache
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               with:
                   path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
                   key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -58,7 +58,7 @@ jobs:
             - name: Validate composer.json and composer.lock
               run: composer validate
             - name: Cache module
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               with:
                   path: ~/.composer/cache/
                   key: composer-cache
@@ -76,7 +76,7 @@ jobs:
               with:
                   php-version: 7.2
             - name: Cache module
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               with:
                   path: ~/.composer/cache/
                   key: composer-cache

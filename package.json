@@ -1,7 +1,7 @@
 {
     "name": "mariadb-mysql-kbs",
     "repository": "williamdes/mariadb-mysql-kbs",
-    "version": "1.2.14",
+    "version": "1.3.0",
     "description": "An index of the MariaDB and MySQL Knowledge bases",
     "homepage": "https://github.com/williamdes/mariadb-mysql-kbs#readme",
     "readme": "https://github.com/williamdes/mariadb-mysql-kbs/blob/main/README.md",

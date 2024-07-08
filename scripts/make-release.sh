@@ -144,7 +144,7 @@ if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
 fi
 
 echo "Publish on crates.io (dry-run)"
-npm publish --dry-run
+cargo publish --dry-run
 read -r -p "Are you sure to publish on crates.io? [Y/n]" response
 response=${response,,} # tolower
 if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then

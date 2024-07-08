@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [v1.3.0]
 
 ### Changed
 
@@ -91,6 +91,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Others
 
+- [e9c2091](https://github.com/williamdes/mariadb-mysql-kbs/commit/e9c2091418cd9680c5a362570d03582cbcfd73f2) support crates.io
 - [0e73a47](https://github.com/williamdes/mariadb-mysql-kbs/commit/0e73a478c37b3c22e7316c5c9179cea668d0459a) bump dependencies
 - [2cf1ff2](https://github.com/williamdes/mariadb-mysql-kbs/commit/2cf1ff25ddac2ef505fd14ad7779bd665d8051e5) drop changelog-generator-twig
 - [a812ffa](https://github.com/williamdes/mariadb-mysql-kbs/commit/a812ffab3964e8a314735bb1033bb5bb0afbfd0e) use Node 20
@@ -997,7 +998,7 @@ What is wrong ? :/
 
 - [cb6e800](https://github.com/williamdes/mariadb-mysql-kbs/commit/cb6e800fd15eb7e2a582d489a17bf86dec079d58) Added test for common.js
 
-[unreleased]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.14..HEAD
+[1.3.0]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.14..v1.3.0
 [1.2.14]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.13..v1.2.14
 [1.2.13]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.12..v1.2.13
 [1.2.12]: https://github.com/williamdes/mariadb-mysql-kbs/compare/v1.2.11..v1.2.12

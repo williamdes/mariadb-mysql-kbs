@@ -39,10 +39,10 @@
         ]
     },
     "scripts": {
-        "changelog": "changelog-generator-twig --convention conventional+legacy --owner williamdes --repo mariadb-mysql-kbs --repoDir ./ --baseCommit 28e9e010dc027dee17a55f5eedad776dcf983e95",
+        "changelog": "git cliff",
         "changelog-file": "npm run --silent changelog > CHANGELOG.md",
         "prettier": "prettier \"*/**/*.js\" --ignore-path ./.prettierignore --write",
-        "changelog-file-next": "npm run --silent changelog -- --headName $NEXT_VERSION --lastTagName $NEXT_VERSION > CHANGELOG.md",
+        "changelog-file-next": "npm run --silent changelog -- --bump > CHANGELOG.md",
         "test": "nyc --all mocha --ui tdd",
         "jshint": "jshint ./",
         "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov",

@@ -40953,6 +40953,19 @@
 |------|----|
 |dev.mysql.com|[sysvar_ssl_session_cache_timeout](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_ssl_session_cache_timeout)|
 
+## statement_id
+|name|value|
+|----|-----|
+|Name|`statement_id`|
+|Type of variable|`integer`|
+|Scope|`session`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_statement_id](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_statement_id)|
+
 ## stored_program_definition_cache
 |name|value|
 |----|-----|

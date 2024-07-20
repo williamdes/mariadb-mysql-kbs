@@ -36801,6 +36801,17 @@
                 "23#sysvar_ssl_session_cache_timeout"
             ]
         },
+        "statement_id": {
+            "dynamic": false,
+            "name": "statement_id",
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "23#sysvar_statement_id"
+            ]
+        },
         "stored_program_definition_cache": {
             "cli": "--stored-program-definition-cache=#",
             "default": "256",

@@ -3552,6 +3552,15 @@
       "type": "integer"
     },
     {
+      "dynamic": false,
+      "id": "sysvar_statement_id",
+      "name": "statement_id",
+      "scope": [
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--stored-program-cache=#",
       "default": "256",
       "dynamic": true,

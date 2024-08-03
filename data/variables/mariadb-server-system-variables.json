@@ -382,7 +382,7 @@
     },
     {
       "cli": "-#, --debug[=debug_options]",
-      "default": "<= MariaDB 10.4: d:t:i:o,/tmp/mysqld.trace (Unix) or d:t:i:O,\\mysqld.trace (Windows), >= MariaDB 10.5: d:t:i:o,/tmp/mariadbd.trace (Unix) or d:t:i:O,\\mariadbd.trace (Windows)",
+      "default": ">= MariaDB 10.5: d:t:i:o,/tmp/mariadbd.trace (Unix) or d:t:i:O,\\mariadbd.trace (Windows)",
       "dynamic": true,
       "id": "debugdebug_dbug",
       "name": "debug/debug_dbug",
@@ -645,7 +645,7 @@
     },
     {
       "cli": "--eq-range-index-dive-limit=#",
-      "default": "200 (>= MariaDB 10.4.3), 0 (<= MariaDB 10.4.2)",
+      "default": "200",
       "dynamic": true,
       "id": "eq_range_index_dive_limit",
       "name": "eq_range_index_dive_limit",
@@ -951,7 +951,7 @@
     },
     {
       "cli": "--histogram-size=#",
-      "default": "254 (>= MariaDB 10.4.3), 0 (<= MariaDB 10.4.2)",
+      "default": "254",
       "dynamic": true,
       "id": "histogram_size",
       "name": "histogram_size",
@@ -967,7 +967,7 @@
     },
     {
       "cli": "--histogram-type=value",
-      "default": "JSON_HB (>= MariaDB 11.0), DOUBLE_PREC_HB (<= MariaDB 10.11, >= MariaDB 10.4.3), SINGLE_PREC_HB(<= MariaDB 10.4.2)",
+      "default": "JSON_HB (>= MariaDB 11.0), DOUBLE_PREC_HB (<= MariaDB 10.11, >= MariaDB 10.4.3)",
       "dynamic": true,
       "id": "histogram_type",
       "name": "histogram_type",
@@ -1825,7 +1825,8 @@
       "id": "max_prepared_stmt_count",
       "name": "max_prepared_stmt_count",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 4294967295
       },
       "scope": [
         "global"
@@ -2162,7 +2163,7 @@
     },
     {
       "cli": "--old-alter-table",
-      "default": "See alter_algorithm (>= MariaDB 10.3.7), 0 (<= MariaDB 10.3.6)",
+      "default": "See alter_algorithm",
       "dynamic": true,
       "id": "old_alter_table",
       "name": "old_alter_table",
@@ -2388,7 +2389,7 @@
     },
     {
       "cli": "--optimizer-use-condition-selectivity=#",
-      "default": "4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)",
+      "default": "4",
       "dynamic": true,
       "id": "optimizer_use_condition_selectivity",
       "name": "optimizer_use_condition_selectivity",
@@ -2425,7 +2426,7 @@
     },
     {
       "cli": "--plugin-maturity=level",
-      "default": "One less than the server maturity (>= MariaDB 10.3.3), unknown (<= MariaDB 10.3.2)",
+      "default": "One less than the server maturity",
       "dynamic": false,
       "id": "plugin_maturity",
       "name": "plugin_maturity",
@@ -2533,7 +2534,7 @@
     {
       "cli": "--proxy-protocol-networks=value",
       "default": "(empty)",
-      "dynamic": false,
+      "dynamic": true,
       "id": "proxy_protocol_networks",
       "name": "proxy_protocol_networks",
       "scope": [
@@ -3260,7 +3261,8 @@
       "id": "table_definition_cache",
       "name": "table_definition_cache",
       "range": {
-        "from": 400
+        "from": 400,
+        "to": 2097152
       },
       "scope": [
         "global"
@@ -3619,7 +3621,7 @@
     },
     {
       "cli": "--use-stat-tables=mode",
-      "default": "preferably_for_queries (>= MariaDB 10.4.1), never (<= MariaDB 10.4.0)",
+      "default": "preferably_for_queries",
       "dynamic": true,
       "id": "use_stat_tables",
       "name": "use_stat_tables",

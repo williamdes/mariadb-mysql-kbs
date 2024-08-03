@@ -16276,7 +16276,7 @@
 |Command line|`-#, --debug[=debug_options]`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`<= MariaDB 10.4: d:t:i:o,/tmp/mysqld.trace (Unix) or d:t:i:O,\mysqld.trace (Windows), >= MariaDB 10.5: d:t:i:o,/tmp/mariadbd.trace (Unix) or d:t:i:O,\mariadbd.trace (Windows)`|
+|Default value|`>= MariaDB 10.5: d:t:i:o,/tmp/mariadbd.trace (Unix) or d:t:i:O,\mariadbd.trace (Windows)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -17018,7 +17018,7 @@
 |Command line|`--histogram-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`254 (>= MariaDB 10.4.3), 0 (<= MariaDB 10.4.2)`|
+|Default value|`254`|
 |Dynamic|`true`|
 |Range|from: `0` to: `255`|
 
@@ -17034,7 +17034,7 @@
 |Command line|`--histogram-type=value`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`JSON_HB (>= MariaDB 11.0), DOUBLE_PREC_HB (<= MariaDB 10.11, >= MariaDB 10.4.3), SINGLE_PREC_HB(<= MariaDB 10.4.2)`|
+|Default value|`JSON_HB (>= MariaDB 11.0), DOUBLE_PREC_HB (<= MariaDB 10.11, >= MariaDB 10.4.3)`|
 |Dynamic|`true`|
 |Valid value(s)|`SINGLE_PREC_HB`, `DOUBLE_PREC_HB`, `SINGLE_PREC_HB`, `DOUBLE_PREC_HB`, `JSON_HB`|
 
@@ -18061,7 +18061,7 @@
 |Scope|`global`|
 |Default value|`16382`|
 |Dynamic|`true`|
-|Range|from: `0` to: `1048576`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -18679,7 +18679,7 @@
 |Command line|`--optimizer-use-condition-selectivity=#`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`4 (>= MariaDB 10.4.1), 1 (<= MariaDB 10.4.0)`|
+|Default value|`4`|
 |Dynamic|`true`|
 |Range|from: `1` to: `5`|
 
@@ -18728,7 +18728,7 @@
 |Command line|`--plugin-maturity=level`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`One less than the server maturity (>= MariaDB 10.3.3), unknown (<= MariaDB 10.3.2)`|
+|Default value|`One less than the server maturity`|
 |Dynamic|`false`|
 |Valid value(s)|`unknown`, `experimental`, `alpha`, `beta`, `gamma`, `stable`|
 
@@ -18839,7 +18839,7 @@
 |Type of variable|`string`|
 |Scope|`global`|
 |Default value|`(empty)`|
-|Dynamic|`false`|
+|Dynamic|`true`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -20295,7 +20295,7 @@
 |Command line|`--use-stat-tables=mode`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
-|Default value|`preferably_for_queries (>= MariaDB 10.4.1), never (<= MariaDB 10.4.0)`|
+|Default value|`preferably_for_queries`|
 |Dynamic|`true`|
 
 ### Documentation(s)

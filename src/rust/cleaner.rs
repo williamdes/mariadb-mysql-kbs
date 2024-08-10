@@ -27,6 +27,8 @@ pub fn clean_type(type_str: String) -> Option<String> {
         return Some("numeric".to_string());
     } else if type_str == "ip address" {
         return Some("string".to_string());
+    } else if type_str == "datetime" {
+        return Some("string".to_string());
     }
 
     if REAL_TYPES.into_iter().find(|t| t.to_string() == type_str) == None {
@@ -51,10 +53,18 @@ pub fn clean_type(type_str: String) -> Option<String> {
         } else if type_str.contains("enum") {
             //enumerated
             return Some("enumeration".to_string());
-        } else if type_str.contains("directory name") || type_str.contains("path name") {
+        } else if type_str.contains("directory name")
+            || type_str.contains("path name")
+            || type_str.contains("path to")
+            || type_str.ends_with("directory.")
+        {
             return Some("directory name".to_string());
         } else if type_str.contains("filename") {
             return Some("file name".to_string());
+        } else if type_str.ends_with("unused.") || type_str.contains("unused since") {
+            return None;
+        } else if type_str.ends_with("removed.") {
+            return None;
         }
 
         if type_str.len() < 30 && type_str.len() > 0 {
@@ -511,6 +521,12 @@ mod tests {
     }
 
     #[test]
+    fn clean_type_datetime() {
+        let type_str = clean_type("datetime".to_string());
+        assert_eq!(type_str, Some("string".to_string()));
+    }
+
+    #[test]
     fn clean_type_double() {
         let type_str = clean_type("double".to_string());
         assert_eq!(type_str, Some("numeric".to_string()));
@@ -528,6 +544,26 @@ mod tests {
         assert_eq!(type_str, Some("byte".to_string()));
         let type_str = clean_type("bytes written to block cache.".to_string());
         assert_eq!(type_str, Some("byte".to_string()));
+    }
+
+    #[test]
+    fn clean_datetime_type() {
+        let type_str = clean_type("datetime".to_string());
+        assert_eq!(type_str, Some("string".to_string()));
+    }
+
+    #[test]
+    fn clean_removed_type() {
+        let type_str = clean_type("removed.".to_string());
+        assert_eq!(type_str, None);
+    }
+
+    #[test]
+    fn clean_unused_type() {
+        let type_str = clean_type("unused.".to_string());
+        assert_eq!(type_str, None);
+        let type_str = clean_type("unused since 10.1.4".to_string());
+        assert_eq!(type_str, None);
     }
 
     #[test]

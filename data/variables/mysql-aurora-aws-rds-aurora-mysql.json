@@ -320,5 +320,5 @@
     }
   ],
   "name": "aws-rds-aurora-mysql",
-  "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars"
+  "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html"
 }

@@ -37739,7 +37739,7 @@
         "https://mariadb.com/kb/en/innodb-system-variables/",
         "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html",
         "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html",
-        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars",
+        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html",
         "https://dev.mysql.com/doc/refman/8.4/en/keyring-system-variables.html",
         "https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication-system-variables.html",
         "https://dev.mysql.com/doc/refman/8.0/en/replication-options-gtids.html",

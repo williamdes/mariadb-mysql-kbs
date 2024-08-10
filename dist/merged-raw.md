@@ -32254,7 +32254,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## AuroraDb_commit_latency
 |name|value|
@@ -32265,7 +32265,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## AuroraDb_ddl_stmt_duration
 |name|value|
@@ -32276,7 +32276,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## AuroraDb_select_stmt_duration
 |name|value|
@@ -32287,7 +32287,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## AuroraDb_insert_stmt_duration
 |name|value|
@@ -32298,7 +32298,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## AuroraDb_update_stmt_duration
 |name|value|
@@ -32309,7 +32309,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## AuroraDb_delete_stmt_duration
 |name|value|
@@ -32320,7 +32320,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_binlog_io_cache_allocated
 |name|value|
@@ -32331,7 +32331,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_binlog_io_cache_read_requests
 |name|value|
@@ -32342,7 +32342,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_binlog_io_cache_reads
 |name|value|
@@ -32353,7 +32353,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_enhanced_binlog
 |name|value|
@@ -32364,7 +32364,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_external_connection_count
 |name|value|
@@ -32375,7 +32375,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fast_insert_cache_hits
 |name|value|
@@ -32386,7 +32386,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fast_insert_cache_misses
 |name|value|
@@ -32397,7 +32397,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fts_cache_memory_used
 |name|value|
@@ -32408,7 +32408,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_master_dml_stmt_count
 |name|value|
@@ -32419,7 +32419,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_master_dml_stmt_duration
 |name|value|
@@ -32430,7 +32430,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_master_errors_rpc_timeout
 |name|value|
@@ -32441,7 +32441,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_master_errors_session_limit
 |name|value|
@@ -32452,7 +32452,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_master_errors_session_timeout
 |name|value|
@@ -32463,7 +32463,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_master_open_sessions
 |name|value|
@@ -32474,7 +32474,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_master_select_stmt_count
 |name|value|
@@ -32485,7 +32485,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_master_select_stmt_duration
 |name|value|
@@ -32496,7 +32496,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_writer_dml_stmt_count
 |name|value|
@@ -32507,7 +32507,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_writer_dml_stmt_duration
 |name|value|
@@ -32518,7 +32518,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_writer_errors_rpc_timeout
 |name|value|
@@ -32529,7 +32529,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_writer_errors_session_limit
 |name|value|
@@ -32540,7 +32540,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_writer_errors_session_timeout
 |name|value|
@@ -32551,7 +32551,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_writer_open_sessions
 |name|value|
@@ -32562,7 +32562,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_writer_select_stmt_count
 |name|value|
@@ -32573,7 +32573,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_fwd_writer_select_stmt_duration
 |name|value|
@@ -32584,7 +32584,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_lockmgr_buffer_pool_memory_used
 |name|value|
@@ -32594,7 +32594,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_lockmgr_memory_used
 |name|value|
@@ -32605,7 +32605,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_ml_actual_request_cnt
 |name|value|
@@ -32616,7 +32616,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_ml_actual_response_cnt
 |name|value|
@@ -32627,7 +32627,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_ml_cache_hit_cnt
 |name|value|
@@ -32638,7 +32638,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_ml_logical_request_cnt
 |name|value|
@@ -32649,7 +32649,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_ml_logical_response_cnt
 |name|value|
@@ -32660,7 +32660,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_ml_retry_request_cnt
 |name|value|
@@ -32671,7 +32671,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_ml_single_request_cnt
 |name|value|
@@ -32682,7 +32682,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## aurora_oom_avoidance_recovery_state
 |name|value|
@@ -32692,7 +32692,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## aurora_oom_reserved_mem_enter_kb
 |name|value|
@@ -32702,7 +32702,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## aurora_oom_reserved_mem_exit_kb
 |name|value|
@@ -32712,7 +32712,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## aurora_oom_status
 |name|value|
@@ -32722,7 +32722,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_bytes_returned
 |name|value|
@@ -32733,7 +32733,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_max_concurrent_requests
 |name|value|
@@ -32744,7 +32744,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_pages_pushed_down
 |name|value|
@@ -32755,7 +32755,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_attempted
 |name|value|
@@ -32766,7 +32766,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_executed
 |name|value|
@@ -32777,7 +32777,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_failed
 |name|value|
@@ -32788,7 +32788,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_in_progress
 |name|value|
@@ -32799,7 +32799,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen
 |name|value|
@@ -32810,7 +32810,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_below_min_rows
 |name|value|
@@ -32821,7 +32821,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_column_bit
 |name|value|
@@ -32832,7 +32832,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_column_geometry
 |name|value|
@@ -32843,7 +32843,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_column_lob
 |name|value|
@@ -32854,7 +32854,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_column_virtual
 |name|value|
@@ -32865,7 +32865,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_custom_charset
 |name|value|
@@ -32876,7 +32876,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_fast_ddl
 |name|value|
@@ -32887,7 +32887,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_few_pages_outside_buffer_pool
 |name|value|
@@ -32898,7 +32898,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_full_text_index
 |name|value|
@@ -32909,7 +32909,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_high_buffer_pool_pct
 |name|value|
@@ -32920,7 +32920,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_index_hint
 |name|value|
@@ -32931,7 +32931,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_innodb_table_format
 |name|value|
@@ -32942,7 +32942,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_long_trx
 |name|value|
@@ -32953,7 +32953,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_no_where_clause
 |name|value|
@@ -32964,7 +32964,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_range_scan
 |name|value|
@@ -32975,7 +32975,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_row_length_too_long
 |name|value|
@@ -32986,7 +32986,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_small_table
 |name|value|
@@ -32997,7 +32997,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_temporary_table
 |name|value|
@@ -33008,7 +33008,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_tx_isolation
 |name|value|
@@ -33019,7 +33019,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_update_delete_stmts
 |name|value|
@@ -33030,7 +33030,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_unsupported_access
 |name|value|
@@ -33041,7 +33041,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_not_chosen_unsupported_storage_type
 |name|value|
@@ -33052,7 +33052,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_pq_request_throttled
 |name|value|
@@ -33063,7 +33063,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_repl_bytes_received
 |name|value|
@@ -33074,7 +33074,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_reserved_mem_exceeded_incidents
 |name|value|
@@ -33085,7 +33085,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_thread_pool_thread_count
 |name|value|
@@ -33096,7 +33096,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_tmz_version
 |name|value|
@@ -33107,7 +33107,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## Aurora_zdr_oom_threshold
 |name|value|
@@ -33117,7 +33117,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## server_aurora_das_running
 |name|value|
@@ -33128,7 +33128,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.ParameterGroups.html#AuroraMySQL.Reference.GlobalStatusVars#)|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
 ## innodb
 |name|value|

@@ -2338,7 +2338,8 @@
       "name": "Max_used_connections_time",
       "scope": [
         "global"
-      ]
+      ],
+      "type": "string"
     },
     {
       "id": "memory_used",

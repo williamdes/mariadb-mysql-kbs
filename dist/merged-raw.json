@@ -11361,6 +11361,22 @@
                 }
             ]
         },
+        "binlog_legacy_event_pos": {
+            "cli": "--binlog-legacy-event-pos{=0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "binlog_legacy_event_pos",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "binlog_legacy_event_pos",
+                    "url": "https://mariadb.com/kb/en/replication-and-binary-log-system-variables/"
+                }
+            ]
+        },
         "binlog_optimize_thread_scheduling": {
             "cli": "--binlog-optimize-thread-scheduling or --skip-binlog-optimize-thread-scheduling",
             "default": "ON",
@@ -11456,6 +11472,15 @@
                 {
                     "anchor": "sysvar_binlog_row_metadata",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "binlog_space_limit": {
+            "name": "binlog_space_limit",
+            "ids": [
+                {
+                    "anchor": "binlog_space_limit",
+                    "url": "https://mariadb.com/kb/en/replication-and-binary-log-system-variables/"
                 }
             ]
         },
@@ -34642,6 +34667,21 @@
                 }
             ]
         },
+        "innodb_alter_copy_bulk": {
+            "default": "ON",
+            "dynamic": true,
+            "name": "innodb_alter_copy_bulk",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "innodb_alter_copy_bulk",
+                    "url": "https://mariadb.com/kb/en/innodb-system-variables/"
+                }
+            ]
+        },
         "innodb_api_bk_commit_interval": {
             "cli": "--innodb-api-bk-commit-interval=#",
             "default": "5",
@@ -37424,10 +37464,26 @@
                 }
             ]
         },
+        "innodb_log_spin_wait_delay": {
+            "cli": "--innodb-log-spin-wait-delay=#",
+            "dynamic": true,
+            "name": "innodb_log_spin_wait_delay",
+            "range": {
+                "from": 0
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_log_spin_wait_delay",
+                    "url": "https://mariadb.com/kb/en/innodb-system-variables/"
+                }
+            ]
+        },
         "innodb_log_write_ahead_size": {
             "cli": "--innodb-log-write-ahead-size=#",
-            "default": "8192",
-            "dynamic": true,
             "name": "innodb_log_write_ahead_size",
             "range": {
                 "from": 512
@@ -38488,29 +38544,6 @@
                 },
                 {
                     "anchor": "sysvar_innodb_sort_buffer_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
-                }
-            ]
-        },
-        "innodb_spin_wait_delay": {
-            "cli": "--innodb-spin-wait-delay=#",
-            "dynamic": true,
-            "name": "innodb_spin_wait_delay",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "innodb_spin_wait_delay",
-                    "url": "https://mariadb.com/kb/en/innodb-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_innodb_spin_wait_delay",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
                 }
             ]
@@ -40653,6 +40686,22 @@
                 }
             ]
         },
+        "innodb_dedicated_server": {
+            "cli": "--innodb-dedicated-server[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "innodb_dedicated_server",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_innodb-dedicated-server",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
         "innodb_status_file": {
             "cli": "--innodb-status-file[={OFF|ON}]",
             "default": "OFF",
@@ -40907,22 +40956,6 @@
             "ids": [
                 {
                     "anchor": "sysvar_innodb_ddl_threads",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
-                }
-            ]
-        },
-        "innodb_dedicated_server": {
-            "cli": "--innodb-dedicated-server[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": false,
-            "name": "innodb_dedicated_server",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "sysvar_innodb_dedicated_server",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
                 }
             ]
@@ -41339,6 +41372,25 @@
             "ids": [
                 {
                     "anchor": "sysvar_innodb_segment_reserve_factor",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
+        "innodb_spin_wait_delay": {
+            "cli": "--innodb-spin-wait-delay=#",
+            "default": "6",
+            "dynamic": true,
+            "name": "innodb_spin_wait_delay",
+            "range": {
+                "from": 0
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_innodb_spin_wait_delay",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
                 }
             ]

@@ -9629,6 +9629,21 @@
 |dev.mysql.com|[option_mysqld_binlog-ignore-db](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-ignore-db)|
 |dev.mysql.com|[option_mysqld_binlog-ignore-db](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-ignore-db)|
 
+## binlog_legacy_event_pos
+|name|value|
+|----|-----|
+|Name|`binlog_legacy_event_pos`|
+|Command line|`--binlog-legacy-event-pos{=0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_legacy_event_pos](https://mariadb.com/kb/en/replication-and-binary-log-system-variables/#binlog_legacy_event_pos)|
+
 ## binlog_optimize_thread_scheduling
 |name|value|
 |----|-----|
@@ -9693,6 +9708,16 @@
 |------|----|
 |mariadb.com|[binlog_row_metadata](https://mariadb.com/kb/en/replication-and-binary-log-system-variables/#binlog_row_metadata)|
 |dev.mysql.com|[sysvar_binlog_row_metadata](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_metadata)|
+
+## binlog_space_limit
+|name|value|
+|----|-----|
+|Name|`binlog_space_limit`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_space_limit](https://mariadb.com/kb/en/replication-and-binary-log-system-variables/#binlog_space_limit)|
 
 ## binlog_stmt_cache_size
 |name|value|
@@ -28129,6 +28154,20 @@
 |------|----|
 |mariadb.com|[innodb_additional_mem_pool_size](https://mariadb.com/kb/en/innodb-system-variables/#innodb_additional_mem_pool_size)|
 
+## innodb_alter_copy_bulk
+|name|value|
+|----|-----|
+|Name|`innodb_alter_copy_bulk`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_alter_copy_bulk](https://mariadb.com/kb/en/innodb-system-variables/#innodb_alter_copy_bulk)|
+
 ## innodb_api_bk_commit_interval
 |name|value|
 |----|-----|
@@ -30311,6 +30350,21 @@
 |------|----|
 |mariadb.com|[innodb_log_optimize_ddl](https://mariadb.com/kb/en/innodb-system-variables/#innodb_log_optimize_ddl)|
 
+## innodb_log_spin_wait_delay
+|name|value|
+|----|-----|
+|Name|`innodb_log_spin_wait_delay`|
+|Command line|`--innodb-log-spin-wait-delay=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Dynamic|`true`|
+|Range|from: `0`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_log_spin_wait_delay](https://mariadb.com/kb/en/innodb-system-variables/#innodb_log_spin_wait_delay)|
+
 ## innodb_log_write_ahead_size
 |name|value|
 |----|-----|
@@ -30318,8 +30372,6 @@
 |Command line|`--innodb-log-write-ahead-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`8192`|
-|Dynamic|`true`|
 |Range|from: `512`|
 
 ### Documentation(s)
@@ -31125,22 +31177,6 @@
 |------|----|
 |mariadb.com|[innodb_sort_buffer_size](https://mariadb.com/kb/en/innodb-system-variables/#innodb_sort_buffer_size)|
 |dev.mysql.com|[sysvar_innodb_sort_buffer_size](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_sort_buffer_size)|
-
-## innodb_spin_wait_delay
-|name|value|
-|----|-----|
-|Name|`innodb_spin_wait_delay`|
-|Command line|`--innodb-spin-wait-delay=#`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[innodb_spin_wait_delay](https://mariadb.com/kb/en/innodb-system-variables/#innodb_spin_wait_delay)|
-|dev.mysql.com|[sysvar_innodb_spin_wait_delay](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_spin_wait_delay)|
 
 ## innodb_stats_auto_recalc
 |name|value|
@@ -33144,6 +33180,21 @@
 |------|----|
 |dev.mysql.com|[option_mysqld_innodb](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#option_mysqld_innodb)|
 
+## innodb_dedicated_server
+|name|value|
+|----|-----|
+|Name|`innodb_dedicated_server`|
+|Command line|`--innodb-dedicated-server[={OFF|ON}]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`OFF`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[option_mysqld_innodb-dedicated-server](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#option_mysqld_innodb-dedicated-server)|
+
 ## innodb_status_file
 |name|value|
 |----|-----|
@@ -33371,21 +33422,6 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_innodb_ddl_threads](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_ddl_threads)|
-
-## innodb_dedicated_server
-|name|value|
-|----|-----|
-|Name|`innodb_dedicated_server`|
-|Command line|`--innodb-dedicated-server[={OFF|ON}]`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|dev.mysql.com|[sysvar_innodb_dedicated_server](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_dedicated_server)|
 
 ## innodb_directories
 |name|value|
@@ -33744,6 +33780,22 @@
 |source|anchor name|
 |------|----|
 |dev.mysql.com|[sysvar_innodb_segment_reserve_factor](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_segment_reserve_factor)|
+
+## innodb_spin_wait_delay
+|name|value|
+|----|-----|
+|Name|`innodb_spin_wait_delay`|
+|Command line|`--innodb-spin-wait-delay=#`|
+|Type of variable|`integer`|
+|Scope|`global`|
+|Default value|`6`|
+|Dynamic|`true`|
+|Range|from: `0`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|dev.mysql.com|[sysvar_innodb_spin_wait_delay](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_spin_wait_delay)|
 
 ## innodb_spin_wait_pause_multiplier
 |name|value|

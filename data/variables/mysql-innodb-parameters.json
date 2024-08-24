@@ -13,6 +13,17 @@
       ]
     },
     {
+      "cli": "--innodb-dedicated-server[={OFF|ON}]",
+      "default": "OFF",
+      "dynamic": false,
+      "id": "option_mysqld_innodb-dedicated-server",
+      "name": "innodb_dedicated_server",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-status-file[={OFF|ON}]",
       "default": "OFF",
       "id": "option_mysqld_innodb-status-file",
@@ -660,17 +671,6 @@
       "dynamic": true,
       "id": "sysvar_innodb_deadlock_detect",
       "name": "innodb_deadlock_detect",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--innodb-dedicated-server[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "sysvar_innodb_dedicated_server",
-      "name": "innodb_dedicated_server",
       "scope": [
         "global"
       ],

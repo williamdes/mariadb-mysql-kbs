@@ -243,6 +243,17 @@
       "type": "string"
     },
     {
+      "cli": "--binlog-legacy-event-pos{=0|1}",
+      "default": "OFF",
+      "dynamic": true,
+      "id": "binlog_legacy_event_pos",
+      "name": "binlog_legacy_event_pos",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--binlog-optimize-thread-scheduling or --skip-binlog-optimize-thread-scheduling",
       "default": "ON",
       "dynamic": false,
@@ -305,6 +316,10 @@
         "MINIMAL",
         "FULL"
       ]
+    },
+    {
+      "id": "binlog_space_limit",
+      "name": "binlog_space_limit"
     },
     {
       "cli": "--binlog-stmt-cache-size=#",

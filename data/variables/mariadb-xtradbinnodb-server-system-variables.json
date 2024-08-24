@@ -157,6 +157,16 @@
       "type": "integer"
     },
     {
+      "default": "ON",
+      "dynamic": true,
+      "id": "innodb_alter_copy_bulk",
+      "name": "innodb_alter_copy_bulk",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-api-bk-commit-interval=#",
       "default": "5",
       "dynamic": true,
@@ -2037,9 +2047,24 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-log-write-ahead-size=#",
-      "default": "8192",
+      "cli": "--innodb-log-spin-wait-delay=#",
+      "default": "0",
       "dynamic": true,
+      "id": "innodb_log_spin_wait_delay",
+      "name": "innodb_log_spin_wait_delay",
+      "range": {
+        "from": 0,
+        "to": 6000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--innodb-log-write-ahead-size=#",
+      "default": "512 (>= MariaDB 10.11.9), 8192 (<= MariaDB 10.7)",
+      "dynamic": false,
       "id": "innodb_log_write_ahead_size",
       "name": "innodb_log_write_ahead_size",
       "scope": [
@@ -2722,11 +2747,11 @@
       "type": "integer"
     },
     {
-      "cli": "--innodb-spin-wait-delay=#",
+      "cli": "--innodb-log-spin-wait-delay=#",
       "default": "4 (>= MariaDB 10.3.5), 6 (<= MariaDB 10.3.4)",
       "dynamic": true,
-      "id": "innodb_spin_wait_delay",
-      "name": "innodb_spin_wait_delay",
+      "id": "innodb_log_spin_wait_delay",
+      "name": "innodb_log_spin_wait_delay",
       "range": {
         "from": 0,
         "to": 4294967295

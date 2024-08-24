@@ -9060,6 +9060,19 @@
                 "37#option_mysqld_binlog-ignore-db"
             ]
         },
+        "binlog_legacy_event_pos": {
+            "cli": "--binlog-legacy-event-pos{=0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "binlog_legacy_event_pos",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "15#binlog_legacy_event_pos"
+            ]
+        },
         "binlog_optimize_thread_scheduling": {
             "cli": "--binlog-optimize-thread-scheduling or --skip-binlog-optimize-thread-scheduling",
             "default": "ON",
@@ -9129,6 +9142,12 @@
             "ids": [
                 "15#binlog_row_metadata",
                 "36#sysvar_binlog_row_metadata"
+            ]
+        },
+        "binlog_space_limit": {
+            "name": "binlog_space_limit",
+            "ids": [
+                "15#binlog_space_limit"
             ]
         },
         "binlog_stmt_cache_size": {
@@ -25501,6 +25520,18 @@
                 "62#innodb_additional_mem_pool_size"
             ]
         },
+        "innodb_alter_copy_bulk": {
+            "default": "ON",
+            "dynamic": true,
+            "name": "innodb_alter_copy_bulk",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "62#innodb_alter_copy_bulk"
+            ]
+        },
         "innodb_api_bk_commit_interval": {
             "cli": "--innodb-api-bk-commit-interval=#",
             "default": "5",
@@ -27659,10 +27690,23 @@
                 "62#innodb_log_optimize_ddl"
             ]
         },
+        "innodb_log_spin_wait_delay": {
+            "cli": "--innodb-log-spin-wait-delay=#",
+            "dynamic": true,
+            "name": "innodb_log_spin_wait_delay",
+            "range": {
+                "from": 0
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "62#innodb_log_spin_wait_delay"
+            ]
+        },
         "innodb_log_write_ahead_size": {
             "cli": "--innodb-log-write-ahead-size=#",
-            "default": "8192",
-            "dynamic": true,
             "name": "innodb_log_write_ahead_size",
             "range": {
                 "from": 512
@@ -28476,23 +28520,6 @@
             "ids": [
                 "62#innodb_sort_buffer_size",
                 "63#sysvar_innodb_sort_buffer_size"
-            ]
-        },
-        "innodb_spin_wait_delay": {
-            "cli": "--innodb-spin-wait-delay=#",
-            "dynamic": true,
-            "name": "innodb_spin_wait_delay",
-            "range": {
-                "from": 0,
-                "to": 4294967295
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                "62#innodb_spin_wait_delay",
-                "63#sysvar_innodb_spin_wait_delay"
             ]
         },
         "innodb_stats_auto_recalc": {
@@ -30093,6 +30120,19 @@
                 "63#option_mysqld_innodb"
             ]
         },
+        "innodb_dedicated_server": {
+            "cli": "--innodb-dedicated-server[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "innodb_dedicated_server",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                "63#option_mysqld_innodb-dedicated-server"
+            ]
+        },
         "innodb_status_file": {
             "cli": "--innodb-status-file[={OFF|ON}]",
             "default": "OFF",
@@ -30304,19 +30344,6 @@
             "type": "integer",
             "ids": [
                 "63#sysvar_innodb_ddl_threads"
-            ]
-        },
-        "innodb_dedicated_server": {
-            "cli": "--innodb-dedicated-server[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": false,
-            "name": "innodb_dedicated_server",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                "63#sysvar_innodb_dedicated_server"
             ]
         },
         "innodb_directories": {
@@ -30664,6 +30691,22 @@
             "type": "numeric",
             "ids": [
                 "63#sysvar_innodb_segment_reserve_factor"
+            ]
+        },
+        "innodb_spin_wait_delay": {
+            "cli": "--innodb-spin-wait-delay=#",
+            "default": "6",
+            "dynamic": true,
+            "name": "innodb_spin_wait_delay",
+            "range": {
+                "from": 0
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                "63#sysvar_innodb_spin_wait_delay"
             ]
         },
         "innodb_spin_wait_pause_multiplier": {

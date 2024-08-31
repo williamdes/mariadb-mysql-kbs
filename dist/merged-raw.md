@@ -10634,7 +10634,7 @@
 |Command line|`--slave-transaction_retry-errors=[error_code1,error_code2,...]`|
 |Type of variable|`string`|
 |Scope|`global`|
-|Default value|`1158,1159,1160,1161,1205,1213,1429,2013,12701 (>= MariaDB 10.4.5), 1213,1205 (>= MariaDB 10.3.3)`|
+|Default value|`1158,1159,1160,1161,1205,1213,1020,1429,2013,12701 (>= MariaDB 10.6.18, MariaDB 10.11.8, MariaDB 11.0.6, MariaDB 11.1.5, MariaDB 11.2.4, MariaDB 11.4.2), 1158,1159,1160,1161,1205,1213,1429,2013,12701 (>= MariaDB 10.4.5)`|
 |Dynamic|`false`|
 |Valid value(s)|`comma-separated list of error codes`|
 
@@ -11877,10 +11877,10 @@
 |mariadb.com|[rpl_semi_sync_slave_trace_level](https://mariadb.com/kb/en/semisynchronous-replication/#rpl_semi_sync_slave_trace_level)|
 |dev.mysql.com|[sysvar_rpl_semi_sync_slave_trace_level](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_rpl_semi_sync_slave_trace_level)|
 
-## rpl_semi_sync_master
+## rpl-semi-sync_master
 |name|value|
 |----|-----|
-|Name|`rpl_semi_sync_master`|
+|Name|`rpl-semi-sync_master`|
 |Command line|`--rpl-semi-sync-master=value`|
 |Type of variable|`enumeration`|
 |Default value|`ON`|
@@ -11889,12 +11889,12 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[rpl_semi_sync_master](https://mariadb.com/kb/en/semisynchronous-replication/#rpl_semi_sync_master)|
+|mariadb.com|[rpl-semi-sync_master](https://mariadb.com/kb/en/semisynchronous-replication/#rpl-semi-sync_master)|
 
-## rpl_semi_sync_slave
+## rpl-semi-sync_slave
 |name|value|
 |----|-----|
-|Name|`rpl_semi_sync_slave`|
+|Name|`rpl-semi-sync_slave`|
 |Command line|`--rpl-semi-sync-slave=value`|
 |Type of variable|`enumeration`|
 |Default value|`ON`|
@@ -11903,7 +11903,7 @@
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[rpl_semi_sync_slave](https://mariadb.com/kb/en/semisynchronous-replication/#rpl_semi_sync_slave)|
+|mariadb.com|[rpl-semi-sync_slave](https://mariadb.com/kb/en/semisynchronous-replication/#rpl-semi-sync_slave)|
 
 ## Aborted_clients
 |name|value|
@@ -31160,6 +31160,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[innodb_simulate_comp_failures](https://mariadb.com/kb/en/innodb-system-variables/#innodb_simulate_comp_failures)|
+
+## innodb_snapshot_isolation
+|name|value|
+|----|-----|
+|Name|`innodb_snapshot_isolation`|
+|Command line|`--innodb-snapshot-isolation={0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`, `session`|
+|Default value|`OFF`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_snapshot_isolation](https://mariadb.com/kb/en/innodb-system-variables/#innodb_snapshot_isolation)|
 
 ## innodb_sort_buffer_size
 |name|value|

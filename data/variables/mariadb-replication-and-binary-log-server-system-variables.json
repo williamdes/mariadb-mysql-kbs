@@ -1074,7 +1074,7 @@
     },
     {
       "cli": "--slave-transaction_retry-errors=[error_code1,error_code2,...]",
-      "default": "1158,1159,1160,1161,1205,1213,1429,2013,12701 (>= MariaDB 10.4.5), 1213,1205 (>= MariaDB 10.3.3)",
+      "default": "1158,1159,1160,1161,1205,1213,1020,1429,2013,12701 (>= MariaDB 10.6.18, MariaDB 10.11.8, MariaDB 11.0.6, MariaDB 11.1.5, MariaDB 11.2.4, MariaDB 11.4.2), 1158,1159,1160,1161,1205,1213,1429,2013,12701 (>= MariaDB 10.4.5)",
       "dynamic": false,
       "id": "slave_transaction_retry_errors",
       "name": "slave_transaction_retry_errors",

@@ -10003,7 +10003,7 @@
         },
         "slave_transaction_retry_errors": {
             "cli": "--slave-transaction_retry-errors=[error_code1,error_code2,...]",
-            "default": "1158,1159,1160,1161,1205,1213,1429,2013,12701 (>= MariaDB 10.4.5), 1213,1205 (>= MariaDB 10.3.3)",
+            "default": "1158,1159,1160,1161,1205,1213,1020,1429,2013,12701 (>= MariaDB 10.6.18, MariaDB 10.11.8, MariaDB 11.0.6, MariaDB 11.1.5, MariaDB 11.2.4, MariaDB 11.4.2), 1158,1159,1160,1161,1205,1213,1429,2013,12701 (>= MariaDB 10.4.5)",
             "dynamic": false,
             "name": "slave_transaction_retry_errors",
             "scope": [
@@ -11086,10 +11086,10 @@
                 "38#sysvar_rpl_semi_sync_slave_trace_level"
             ]
         },
-        "rpl_semi_sync_master": {
+        "rpl-semi-sync_master": {
             "cli": "--rpl-semi-sync-master=value",
             "default": "ON",
-            "name": "rpl_semi_sync_master",
+            "name": "rpl-semi-sync_master",
             "type": "enumeration",
             "validValues": [
                 "OFF",
@@ -11098,13 +11098,13 @@
                 "FORCE_PLUS_PERMANENT"
             ],
             "ids": [
-                "44#rpl_semi_sync_master"
+                "44#rpl-semi-sync_master"
             ]
         },
-        "rpl_semi_sync_slave": {
+        "rpl-semi-sync_slave": {
             "cli": "--rpl-semi-sync-slave=value",
             "default": "ON",
-            "name": "rpl_semi_sync_slave",
+            "name": "rpl-semi-sync_slave",
             "type": "enumeration",
             "validValues": [
                 "OFF",
@@ -11113,7 +11113,7 @@
                 "FORCE_PLUS_PERMANENT"
             ],
             "ids": [
-                "44#rpl_semi_sync_slave"
+                "44#rpl-semi-sync_slave"
             ]
         },
         "Aborted_clients": {
@@ -28502,6 +28502,20 @@
             "type": "integer",
             "ids": [
                 "62#innodb_simulate_comp_failures"
+            ]
+        },
+        "innodb_snapshot_isolation": {
+            "cli": "--innodb-snapshot-isolation={0|1}",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "innodb_snapshot_isolation",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "boolean",
+            "ids": [
+                "62#innodb_snapshot_isolation"
             ]
         },
         "innodb_sort_buffer_size": {

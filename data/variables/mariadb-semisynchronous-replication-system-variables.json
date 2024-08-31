@@ -122,8 +122,8 @@
     {
       "cli": "--rpl-semi-sync-master=value",
       "default": "ON",
-      "id": "rpl_semi_sync_master",
-      "name": "rpl_semi_sync_master",
+      "id": "rpl-semi-sync_master",
+      "name": "rpl-semi-sync_master",
       "type": "enumeration",
       "validValues": [
         "OFF",
@@ -135,8 +135,8 @@
     {
       "cli": "--rpl-semi-sync-slave=value",
       "default": "ON",
-      "id": "rpl_semi_sync_slave",
-      "name": "rpl_semi_sync_slave",
+      "id": "rpl-semi-sync_slave",
+      "name": "rpl-semi-sync_slave",
       "type": "enumeration",
       "validValues": [
         "OFF",

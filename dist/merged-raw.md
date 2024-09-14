@@ -17644,6 +17644,22 @@
 |------|----|
 |mariadb.com|[log_slow_filter](https://mariadb.com/kb/en/server-system-variables/#log_slow_filter)|
 
+## log_slow_max_warnings
+|name|value|
+|----|-----|
+|Name|`log_slow_max_warnings`|
+|Command line|`log-slow-max-warnings=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`10`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[log_slow_max_warnings](https://mariadb.com/kb/en/server-system-variables/#log_slow_max_warnings)|
+
 ## log_slow_min_examined_row_limit
 |name|value|
 |----|-----|
@@ -17752,22 +17768,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[log_slow_verbosity](https://mariadb.com/kb/en/server-system-variables/#log_slow_verbosity)|
-
-## log_slow_max_warnings
-|name|value|
-|----|-----|
-|Name|`log_slow_max_warnings`|
-|Command line|`log-slow-max-warnings=#`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`10`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1000`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[log_slow_max_warnings](https://mariadb.com/kb/en/server-system-variables/#log_slow_max_warnings)|
 
 ## log_tc_size
 |name|value|
@@ -18552,7 +18552,7 @@
 |name|value|
 |----|-----|
 |Name|`optimizer_extra_pruning_depth`|
-|Command line|`--optimizer-extra-pruning-depthl[=#]`|
+|Command line|`--optimizer-extra-pruning-depth[=#]`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Default value|`8`|
@@ -18564,21 +18564,21 @@
 |------|----|
 |mariadb.com|[optimizer_extra_pruning_depth](https://mariadb.com/kb/en/server-system-variables/#optimizer_extra_pruning_depth)|
 
-## optimizer_max_sel_args
+## optimizer_join_limit_pref_ratio
 |name|value|
 |----|-----|
-|Name|`optimizer_max_sel_args`|
-|Command line|`--optimizer-max-sel-args=#`|
+|Name|`optimizer_join_limit_pref_ratio`|
+|Command line|`--optimizer-join-limit-pref-ratio[=#]`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`16000`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[optimizer_max_sel_args](https://mariadb.com/kb/en/server-system-variables/#optimizer_max_sel_args)|
+|mariadb.com|[optimizer_join_limit_pref_ratio](https://mariadb.com/kb/en/server-system-variables/#optimizer_join_limit_pref_ratio)|
 
 ## optimizer_max_sel_arg_weight
 |name|value|
@@ -18595,6 +18595,22 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[optimizer_max_sel_arg_weight](https://mariadb.com/kb/en/server-system-variables/#optimizer_max_sel_arg_weight)|
+
+## optimizer_max_sel_args
+|name|value|
+|----|-----|
+|Name|`optimizer_max_sel_args`|
+|Command line|`--optimizer-max-sel-args=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`16000`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[optimizer_max_sel_args](https://mariadb.com/kb/en/server-system-variables/#optimizer_max_sel_args)|
 
 ## optimizer_prune_level
 |name|value|

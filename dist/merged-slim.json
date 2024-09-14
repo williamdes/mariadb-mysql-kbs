@@ -16170,6 +16170,24 @@
                 "47#log_slow_filter"
             ]
         },
+        "log_slow_max_warnings": {
+            "cli": "log-slow-max-warnings=#",
+            "default": "10",
+            "dynamic": true,
+            "name": "log_slow_max_warnings",
+            "range": {
+                "from": 0,
+                "to": 1000
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "47#log_slow_max_warnings"
+            ]
+        },
         "log_slow_min_examined_row_limit": {
             "cli": "--log-slow-min-examined-row-limit=#",
             "default": "0",
@@ -16293,24 +16311,6 @@
             ],
             "ids": [
                 "47#log_slow_verbosity"
-            ]
-        },
-        "log_slow_max_warnings": {
-            "cli": "log-slow-max-warnings=#",
-            "default": "10",
-            "dynamic": true,
-            "name": "log_slow_max_warnings",
-            "range": {
-                "from": 0,
-                "to": 1000
-            },
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                "47#log_slow_max_warnings"
             ]
         },
         "log_tc_size": {
@@ -17132,7 +17132,7 @@
             ]
         },
         "optimizer_extra_pruning_depth": {
-            "cli": "--optimizer-extra-pruning-depthl[=#]",
+            "cli": "--optimizer-extra-pruning-depth[=#]",
             "default": "8",
             "dynamic": true,
             "name": "optimizer_extra_pruning_depth",
@@ -17149,11 +17149,11 @@
                 "47#optimizer_extra_pruning_depth"
             ]
         },
-        "optimizer_max_sel_args": {
-            "cli": "--optimizer-max-sel-args=#",
-            "default": "16000",
+        "optimizer_join_limit_pref_ratio": {
+            "cli": "--optimizer-join-limit-pref-ratio[=#]",
+            "default": "0",
             "dynamic": true,
-            "name": "optimizer_max_sel_args",
+            "name": "optimizer_join_limit_pref_ratio",
             "range": {
                 "from": 0,
                 "to": 4294967295
@@ -17164,7 +17164,7 @@
             ],
             "type": "integer",
             "ids": [
-                "47#optimizer_max_sel_args"
+                "47#optimizer_join_limit_pref_ratio"
             ]
         },
         "optimizer_max_sel_arg_weight": {
@@ -17183,6 +17183,24 @@
             "type": "integer",
             "ids": [
                 "47#optimizer_max_sel_arg_weight"
+            ]
+        },
+        "optimizer_max_sel_args": {
+            "cli": "--optimizer-max-sel-args=#",
+            "default": "16000",
+            "dynamic": true,
+            "name": "optimizer_max_sel_args",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                "47#optimizer_max_sel_args"
             ]
         },
         "optimizer_prune_level": {

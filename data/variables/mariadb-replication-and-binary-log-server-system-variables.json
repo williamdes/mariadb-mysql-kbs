@@ -57,17 +57,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--binlog-do-db=#",
-      "default": "NULL",
-      "dynamic": false,
-      "id": "binlog_do_db",
-      "name": "binlog_do_db",
-      "scope": [
-        "global"
-      ],
-      "type": "string"
-    },
-    {
       "cli": "--binlog-cache-size=#",
       "default": "32768",
       "dynamic": true,
@@ -140,6 +129,17 @@
         "session"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--binlog-do-db=#",
+      "default": "NULL",
+      "dynamic": false,
+      "id": "binlog_do_db",
+      "name": "binlog_do_db",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
     },
     {
       "cli": "--binlog-expire-logs-seconds=#",

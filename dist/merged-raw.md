@@ -9422,20 +9422,6 @@
 |------|----|
 |mariadb.com|[binlog_annotate_row_events](https://mariadb.com/kb/en/replication-and-binary-log-system-variables/#binlog_annotate_row_events)|
 
-## binlog_do_db
-|name|value|
-|----|-----|
-|Name|`binlog_do_db`|
-|Command line|`--binlog-do-db=name`|
-|Type of variable|`string`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[binlog_do_db](https://mariadb.com/kb/en/replication-and-binary-log-system-variables/#binlog_do_db)|
-|dev.mysql.com|[option_mysqld_binlog-do-db](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-do-db)|
-|dev.mysql.com|[option_mysqld_binlog-do-db](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-do-db)|
-
 ## binlog_cache_size
 |name|value|
 |----|-----|
@@ -9518,6 +9504,20 @@
 |mariadb.com|[binlog_direct_non_transactional_updates](https://mariadb.com/kb/en/replication-and-binary-log-system-variables/#binlog_direct_non_transactional_updates)|
 |dev.mysql.com|[sysvar_binlog_direct_non_transactional_updates](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_direct_non_transactional_updates)|
 |dev.mysql.com|[sysvar_binlog_direct_non_transactional_updates](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_direct_non_transactional_updates)|
+
+## binlog_do_db
+|name|value|
+|----|-----|
+|Name|`binlog_do_db`|
+|Command line|`--binlog-do-db=name`|
+|Type of variable|`string`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_do_db](https://mariadb.com/kb/en/replication-and-binary-log-system-variables/#binlog_do_db)|
+|dev.mysql.com|[option_mysqld_binlog-do-db](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-do-db)|
+|dev.mysql.com|[option_mysqld_binlog-do-db](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-do-db)|
 
 ## binlog_expire_logs_seconds
 |name|value|
@@ -10824,6 +10824,18 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[binlog_commits](https://mariadb.com/kb/en/replication-and-binary-log-status-variables/#binlog_commits)|
+
+## Binlog_disk_use
+|name|value|
+|----|-----|
+|Name|`Binlog_disk_use`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_disk_use](https://mariadb.com/kb/en/replication-and-binary-log-status-variables/#binlog_disk_use)|
 
 ## Binlog_group_commit_trigger_count
 |name|value|
@@ -17644,6 +17656,22 @@
 |------|----|
 |mariadb.com|[log_slow_filter](https://mariadb.com/kb/en/server-system-variables/#log_slow_filter)|
 
+## log_slow_max_warnings
+|name|value|
+|----|-----|
+|Name|`log_slow_max_warnings`|
+|Command line|`log-slow-max-warnings=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`10`|
+|Dynamic|`true`|
+|Range|from: `0` to: `1000`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[log_slow_max_warnings](https://mariadb.com/kb/en/server-system-variables/#log_slow_max_warnings)|
+
 ## log_slow_min_examined_row_limit
 |name|value|
 |----|-----|
@@ -17752,22 +17780,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[log_slow_verbosity](https://mariadb.com/kb/en/server-system-variables/#log_slow_verbosity)|
-
-## log_slow_max_warnings
-|name|value|
-|----|-----|
-|Name|`log_slow_max_warnings`|
-|Command line|`log-slow-max-warnings=#`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`10`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1000`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[log_slow_max_warnings](https://mariadb.com/kb/en/server-system-variables/#log_slow_max_warnings)|
 
 ## log_tc_size
 |name|value|
@@ -18552,7 +18564,7 @@
 |name|value|
 |----|-----|
 |Name|`optimizer_extra_pruning_depth`|
-|Command line|`--optimizer-extra-pruning-depthl[=#]`|
+|Command line|`--optimizer-extra-pruning-depth[=#]`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
 |Default value|`8`|
@@ -18564,21 +18576,21 @@
 |------|----|
 |mariadb.com|[optimizer_extra_pruning_depth](https://mariadb.com/kb/en/server-system-variables/#optimizer_extra_pruning_depth)|
 
-## optimizer_max_sel_args
+## optimizer_join_limit_pref_ratio
 |name|value|
 |----|-----|
-|Name|`optimizer_max_sel_args`|
-|Command line|`--optimizer-max-sel-args=#`|
+|Name|`optimizer_join_limit_pref_ratio`|
+|Command line|`--optimizer-join-limit-pref-ratio[=#]`|
 |Type of variable|`integer`|
 |Scope|`global`, `session`|
-|Default value|`16000`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
-|mariadb.com|[optimizer_max_sel_args](https://mariadb.com/kb/en/server-system-variables/#optimizer_max_sel_args)|
+|mariadb.com|[optimizer_join_limit_pref_ratio](https://mariadb.com/kb/en/server-system-variables/#optimizer_join_limit_pref_ratio)|
 
 ## optimizer_max_sel_arg_weight
 |name|value|
@@ -18595,6 +18607,22 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[optimizer_max_sel_arg_weight](https://mariadb.com/kb/en/server-system-variables/#optimizer_max_sel_arg_weight)|
+
+## optimizer_max_sel_args
+|name|value|
+|----|-----|
+|Name|`optimizer_max_sel_args`|
+|Command line|`--optimizer-max-sel-args=#`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+|Default value|`16000`|
+|Dynamic|`true`|
+|Range|from: `0` to: `4294967295`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[optimizer_max_sel_args](https://mariadb.com/kb/en/server-system-variables/#optimizer_max_sel_args)|
 
 ## optimizer_prune_level
 |name|value|
@@ -22083,7 +22111,7 @@
 |Command line|`--spider-table-crd-thread-count=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`10`|
+|Default value|`1 (>= MariaDB 10.4.33, MariaDB 10.5.24, MariaDB 10.6.17, MariaDB 10.11.7, MariaDB 11.0.5, MariaDB 11.1.4, MariaDB 11.2.3), 10 (<= MariaDB 10.4.32, MariaDB 10.5.23, MariaDB 10.6.16, MariaDB 10.11.6, MariaDB 11.0.4, MariaDB 11.1.3, MariaDB 11.2.2)`|
 |Dynamic|`false`|
 |Range|from: `1` to: `4294967295`|
 
@@ -22112,9 +22140,7 @@
 |----|-----|
 |Name|`spider_table_sts_thread_count`|
 |Command line|`--spider-table-sts-thread-count=#`|
-|Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`10`|
 |Dynamic|`false`|
 |Range|from: `1` to: `4294967295`|
 
@@ -26366,6 +26392,18 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[innodb_buffered_aio_submitted](https://mariadb.com/kb/en/innodb-status-variables/#innodb_buffered_aio_submitted)|
+
+## Innodb_bulk_operations
+|name|value|
+|----|-----|
+|Name|`Innodb_bulk_operations`|
+|Type of variable|`integer`|
+|Scope|`global`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_bulk_operations](https://mariadb.com/kb/en/innodb-status-variables/#innodb_bulk_operations)|
 
 ## Innodb_checkpoint_age
 |name|value|

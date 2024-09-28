@@ -1433,6 +1433,22 @@
       ]
     },
     {
+      "cli": "log-slow-max-warnings=#",
+      "default": "10",
+      "dynamic": true,
+      "id": "log_slow_max_warnings",
+      "name": "log_slow_max_warnings",
+      "range": {
+        "from": 0,
+        "to": 1000
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--log-slow-min-examined-row-limit=#",
       "default": "0",
       "dynamic": true,
@@ -1542,22 +1558,6 @@
         "innodb",
         "explain"
       ]
-    },
-    {
-      "cli": "log-slow-max-warnings=#",
-      "default": "10",
-      "dynamic": true,
-      "id": "log_slow_max_warnings",
-      "name": "log_slow_max_warnings",
-      "range": {
-        "from": 0,
-        "to": 1000
-      },
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
     },
     {
       "cli": "log-tc-size=#",
@@ -2212,7 +2212,7 @@
       "type": "integer"
     },
     {
-      "cli": "--optimizer-extra-pruning-depthl[=#]",
+      "cli": "--optimizer-extra-pruning-depth[=#]",
       "default": "8",
       "dynamic": true,
       "id": "optimizer_extra_pruning_depth",
@@ -2228,11 +2228,11 @@
       "type": "integer"
     },
     {
-      "cli": "--optimizer-max-sel-args=#",
-      "default": "16000",
+      "cli": "--optimizer-join-limit-pref-ratio[=#]",
+      "default": "0",
       "dynamic": true,
-      "id": "optimizer_max_sel_args",
-      "name": "optimizer_max_sel_args",
+      "id": "optimizer_join_limit_pref_ratio",
+      "name": "optimizer_join_limit_pref_ratio",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -2252,6 +2252,22 @@
       "range": {
         "from": 0,
         "to": 18446744073709551615
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--optimizer-max-sel-args=#",
+      "default": "16000",
+      "dynamic": true,
+      "id": "optimizer_max_sel_args",
+      "name": "optimizer_max_sel_args",
+      "range": {
+        "from": 0,
+        "to": 4294967295
       },
       "scope": [
         "global",

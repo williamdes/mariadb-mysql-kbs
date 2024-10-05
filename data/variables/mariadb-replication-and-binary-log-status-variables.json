@@ -33,6 +33,14 @@
       "type": "integer"
     },
     {
+      "id": "binlog_disk_use",
+      "name": "Binlog_disk_use",
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "binlog_group_commit_trigger_count",
       "name": "Binlog_group_commit_trigger_count",
       "scope": [

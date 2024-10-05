@@ -11077,25 +11077,6 @@
                 }
             ]
         },
-        "binlog_do_db": {
-            "cli": "--binlog-do-db=name",
-            "name": "binlog_do_db",
-            "type": "string",
-            "ids": [
-                {
-                    "anchor": "binlog_do_db",
-                    "url": "https://mariadb.com/kb/en/replication-and-binary-log-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_binlog-do-db",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
-                },
-                {
-                    "anchor": "option_mysqld_binlog-do-db",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
-                }
-            ]
-        },
         "binlog_cache_size": {
             "cli": "--binlog-cache-size=#",
             "default": "32768",
@@ -11211,6 +11192,25 @@
                 },
                 {
                     "anchor": "sysvar_binlog_direct_non_transactional_updates",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "binlog_do_db": {
+            "cli": "--binlog-do-db=name",
+            "name": "binlog_do_db",
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "binlog_do_db",
+                    "url": "https://mariadb.com/kb/en/replication-and-binary-log-system-variables/"
+                },
+                {
+                    "anchor": "option_mysqld_binlog-do-db",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html"
+                },
+                {
+                    "anchor": "option_mysqld_binlog-do-db",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
                 }
             ]
@@ -12307,6 +12307,26 @@
                 }
             ]
         },
+        "slave_abort_blocking_timeout": {
+            "cli": "--slave-abort-blocking-timeout=num",
+            "default": "31536000.000000",
+            "dynamic": true,
+            "name": "slave_abort_blocking_timeout",
+            "range": {
+                "from": 0,
+                "to": 31536000
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "slave_abort_blocking_timeout",
+                    "url": "https://mariadb.com/kb/en/replication-and-binary-log-system-variables/"
+                }
+            ]
+        },
         "slave_compressed_protocol": {
             "cli": "--slave-compressed-protocol[={OFF|ON}]",
             "default": "0",
@@ -12933,6 +12953,19 @@
             "ids": [
                 {
                     "anchor": "binlog_commits",
+                    "url": "https://mariadb.com/kb/en/replication-and-binary-log-status-variables/"
+                }
+            ]
+        },
+        "Binlog_disk_use": {
+            "name": "Binlog_disk_use",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "binlog_disk_use",
                     "url": "https://mariadb.com/kb/en/replication-and-binary-log-status-variables/"
                 }
             ]
@@ -21687,6 +21720,27 @@
                 }
             ]
         },
+        "log_slow_max_warnings": {
+            "cli": "log-slow-max-warnings=#",
+            "default": "10",
+            "dynamic": true,
+            "name": "log_slow_max_warnings",
+            "range": {
+                "from": 0,
+                "to": 1000
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "log_slow_max_warnings",
+                    "url": "https://mariadb.com/kb/en/server-system-variables/"
+                }
+            ]
+        },
         "log_slow_min_examined_row_limit": {
             "cli": "--log-slow-min-examined-row-limit=#",
             "default": "0",
@@ -21829,27 +21883,6 @@
             "ids": [
                 {
                     "anchor": "log_slow_verbosity",
-                    "url": "https://mariadb.com/kb/en/server-system-variables/"
-                }
-            ]
-        },
-        "log_slow_max_warnings": {
-            "cli": "log-slow-max-warnings=#",
-            "default": "10",
-            "dynamic": true,
-            "name": "log_slow_max_warnings",
-            "range": {
-                "from": 0,
-                "to": 1000
-            },
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "log_slow_max_warnings",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
                 }
             ]
@@ -23018,7 +23051,7 @@
             ]
         },
         "optimizer_extra_pruning_depth": {
-            "cli": "--optimizer-extra-pruning-depthl[=#]",
+            "cli": "--optimizer-extra-pruning-depth[=#]",
             "default": "8",
             "dynamic": true,
             "name": "optimizer_extra_pruning_depth",
@@ -23038,11 +23071,11 @@
                 }
             ]
         },
-        "optimizer_max_sel_args": {
-            "cli": "--optimizer-max-sel-args=#",
-            "default": "16000",
+        "optimizer_join_limit_pref_ratio": {
+            "cli": "--optimizer-join-limit-pref-ratio[=#]",
+            "default": "0",
             "dynamic": true,
-            "name": "optimizer_max_sel_args",
+            "name": "optimizer_join_limit_pref_ratio",
             "range": {
                 "from": 0,
                 "to": 4294967295
@@ -23054,7 +23087,7 @@
             "type": "integer",
             "ids": [
                 {
-                    "anchor": "optimizer_max_sel_args",
+                    "anchor": "optimizer_join_limit_pref_ratio",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
                 }
             ]
@@ -23076,6 +23109,27 @@
             "ids": [
                 {
                     "anchor": "optimizer_max_sel_arg_weight",
+                    "url": "https://mariadb.com/kb/en/server-system-variables/"
+                }
+            ]
+        },
+        "optimizer_max_sel_args": {
+            "cli": "--optimizer-max-sel-args=#",
+            "default": "16000",
+            "dynamic": true,
+            "name": "optimizer_max_sel_args",
+            "range": {
+                "from": 0,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "optimizer_max_sel_args",
                     "url": "https://mariadb.com/kb/en/server-system-variables/"
                 }
             ]
@@ -27818,7 +27872,7 @@
         },
         "spider_table_crd_thread_count": {
             "cli": "--spider-table-crd-thread-count=#",
-            "default": "10",
+            "default": "1 (>= MariaDB 10.4.33, MariaDB 10.5.24, MariaDB 10.6.17, MariaDB 10.11.7, MariaDB 11.0.5, MariaDB 11.1.4, MariaDB 11.2.3), 10 (<= MariaDB 10.4.32, MariaDB 10.5.23, MariaDB 10.6.16, MariaDB 10.11.6, MariaDB 11.0.4, MariaDB 11.1.3, MariaDB 11.2.2)",
             "dynamic": false,
             "name": "spider_table_crd_thread_count",
             "range": {
@@ -27857,7 +27911,6 @@
         },
         "spider_table_sts_thread_count": {
             "cli": "--spider-table-sts-thread-count=#",
-            "default": "10",
             "dynamic": false,
             "name": "spider_table_sts_thread_count",
             "range": {
@@ -27867,7 +27920,6 @@
             "scope": [
                 "global"
             ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "spider_table_sts_thread_count",
@@ -32567,6 +32619,19 @@
             "ids": [
                 {
                     "anchor": "innodb_buffered_aio_submitted",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_bulk_operations": {
+            "name": "Innodb_bulk_operations",
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_bulk_operations",
                     "url": "https://mariadb.com/kb/en/innodb-status-variables/"
                 }
             ]

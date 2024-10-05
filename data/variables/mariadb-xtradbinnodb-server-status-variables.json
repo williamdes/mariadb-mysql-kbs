@@ -249,6 +249,14 @@
       "type": "integer"
     },
     {
+      "id": "innodb_bulk_operations",
+      "name": "Innodb_bulk_operations",
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "innodb_checkpoint_age",
       "name": "Innodb_checkpoint_age",
       "scope": [

@@ -40,6 +40,23 @@
       "type": "integer"
     },
     {
+      "cli": "query-response-time-session-stats=val]",
+      "default": "GLOBAL",
+      "dynamic": true,
+      "id": "query_response_time_session_stats",
+      "name": "query_response_time_session_stats",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "GLOBAL",
+        "ON",
+        "OFF"
+      ]
+    },
+    {
       "cli": "query-response-time-stats[={0|1}]",
       "default": "OFF",
       "dynamic": true,

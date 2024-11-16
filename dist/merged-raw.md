@@ -2227,7 +2227,9 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_debug`|
-|Command line|`--wsrep-debug[={0|1}]`|
+|Command line|`MariaDB starting with 10.4.3--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}]
+
+MariaDB until 10.4.2--wsrep-debug[={0|1}]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)`|

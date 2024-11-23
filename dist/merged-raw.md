@@ -2227,7 +2227,9 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_debug`|
-|Command line|`--wsrep-debug[={0|1}]`|
+|Command line|`MariaDB starting with 10.4.3--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}]
+
+MariaDB until 10.4.2--wsrep-debug[={0|1}]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)`|
@@ -33235,6 +33237,26 @@
 |------|----|
 |docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
 
+## aurora_temptable_max_ram_allocation
+|name|value|
+|----|-----|
+|Name|`aurora_temptable_max_ram_allocation`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
+
+## aurora_temptable_ram_allocation
+|name|value|
+|----|-----|
+|Name|`aurora_temptable_ram_allocation`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
+
 ## Aurora_thread_pool_thread_count
 |name|value|
 |----|-----|
@@ -39961,6 +39983,7 @@
 |Name|`default_collation_for_utf8mb4`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
+|Default value|`utf8mb4_0900_ai_ci`|
 |Dynamic|`true`|
 |Valid value(s)|`utf8mb4_0900_ai_ci`, `utf8mb4_general_ci`|
 

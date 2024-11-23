@@ -2459,7 +2459,7 @@
             ]
         },
         "wsrep_debug": {
-            "cli": "--wsrep-debug[={0|1}]",
+            "cli": "MariaDB starting with 10.4.3--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}]\n\nMariaDB until 10.4.2--wsrep-debug[={0|1}]",
             "default": "NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)",
             "dynamic": true,
             "name": "wsrep_debug",
@@ -40764,6 +40764,24 @@
                 }
             ]
         },
+        "aurora_temptable_max_ram_allocation": {
+            "name": "aurora_temptable_max_ram_allocation",
+            "ids": [
+                {
+                    "anchor": null,
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html"
+                }
+            ]
+        },
+        "aurora_temptable_ram_allocation": {
+            "name": "aurora_temptable_ram_allocation",
+            "ids": [
+                {
+                    "anchor": null,
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html"
+                }
+            ]
+        },
         "Aurora_thread_pool_thread_count": {
             "name": "Aurora_thread_pool_thread_count",
             "type": "integer",
@@ -48034,6 +48052,7 @@
             ]
         },
         "default_collation_for_utf8mb4": {
+            "default": "utf8mb4_0900_ai_ci",
             "dynamic": true,
             "name": "default_collation_for_utf8mb4",
             "scope": [

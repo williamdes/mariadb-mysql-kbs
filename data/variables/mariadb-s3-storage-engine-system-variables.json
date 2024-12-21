@@ -38,7 +38,7 @@
       "type": "string"
     },
     {
-      "cli": "--s3-debug{=0|1}",
+      "cli": "--s3-debug=[0|1]",
       "default": "0",
       "dynamic": false,
       "id": "s3_debug",
@@ -58,8 +58,21 @@
       "dynamic": false,
       "id": "s3_host_name",
       "name": "s3_host_name",
-      "scope": [],
+      "scope": [
+        "global"
+      ],
       "type": "string"
+    },
+    {
+      "cli": "--s3-no-content-type=[0|1]",
+      "default": "0",
+      "dynamic": false,
+      "id": "s3_no_content_type",
+      "name": "s3_no_content_type",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--s3-pagecache-age-threshold=val",
@@ -148,15 +161,32 @@
       "type": "enumeration",
       "validValues": [
         "Auto",
+        "0",
         "Original",
+        "1",
         "Amazon",
+        "2",
         "Legacy",
+        "3",
         "Path",
+        "4",
         "Domain",
+        "5",
         "Auto",
         "Original",
         "Amazon"
       ]
+    },
+    {
+      "cli": "--s3-provider=val",
+      "default": "Default",
+      "dynamic": true,
+      "id": "s3_provider",
+      "name": "s3_provider",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration"
     },
     {
       "cli": "--s3-region=val",
@@ -170,7 +200,7 @@
       "type": "string"
     },
     {
-      "cli": "--s3-replicate-alter-as-create-select{=0|1}",
+      "cli": "--s3-replicate-alter-as-create-select=[0|1]",
       "default": "1",
       "dynamic": false,
       "id": "s3_replicate_alter_as_create_select",
@@ -192,7 +222,7 @@
       "type": "string"
     },
     {
-      "cli": "--s3-slave-ignore-updates{=0|1}",
+      "cli": "--s3-slave-ignore-updates=[0|1]",
       "default": "0",
       "dynamic": false,
       "id": "s3_slave_ignore_updates",
@@ -203,7 +233,18 @@
       "type": "boolean"
     },
     {
-      "cli": "--s3-use-http{=0|1}",
+      "cli": "--s3-ssl-no-verify=[0|1]",
+      "default": "0",
+      "dynamic": false,
+      "id": "s3_ssl_no_verify",
+      "name": "s3_ssl_no_verify",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--s3-use-http=[0|1]",
       "default": "0",
       "dynamic": false,
       "id": "s3_use_http",

@@ -2347,6 +2347,7 @@
         "default",
         "derived_merge={on|off}",
         "derived_with_keys={on|off}",
+        "duplicateweedout={on|off}",
         "engine_condition_pushdown={on|off}",
         "exists_to_in={on|off}",
         "extended_keys={on|off}",

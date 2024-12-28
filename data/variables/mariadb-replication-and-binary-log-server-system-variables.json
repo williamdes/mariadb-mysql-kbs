@@ -149,7 +149,7 @@
       "name": "binlog_expire_logs_seconds",
       "range": {
         "from": 0,
-        "to": 4294967295
+        "to": 8553600
       },
       "scope": [
         "global",
@@ -241,6 +241,20 @@
         "global"
       ],
       "type": "string"
+    },
+    {
+      "cli": "--binlog-large-commit-threshold=val",
+      "default": "134217728",
+      "dynamic": true,
+      "id": "binlog_large_commit_threshold",
+      "name": "binlog_large_commit_threshold",
+      "range": {
+        "from": 10485760,
+        "to": 18446744073709551615
+      },
+      "scope": [
+        "global"
+      ]
     },
     {
       "cli": "--binlog-legacy-event-pos{=0|1}",

@@ -2524,6 +2524,15 @@
       "type": "integer"
     },
     {
+      "id": "query_time",
+      "name": "Query_time",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "questions",
       "name": "Questions",
       "scope": [

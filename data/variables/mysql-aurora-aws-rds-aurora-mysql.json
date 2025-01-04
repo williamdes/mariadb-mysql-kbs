@@ -304,6 +304,12 @@
       "type": "integer"
     },
     {
+      "name": "aurora_temptable_max_ram_allocation"
+    },
+    {
+      "name": "aurora_temptable_ram_allocation"
+    },
+    {
       "name": "Aurora_thread_pool_thread_count",
       "type": "integer"
     },

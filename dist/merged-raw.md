@@ -2227,7 +2227,9 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_debug`|
-|Command line|`--wsrep-debug[={0|1}]`|
+|Command line|`MariaDB starting with 10.4.3--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}]
+
+MariaDB until 10.4.2--wsrep-debug[={0|1}]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
 |Default value|`NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)`|
@@ -9542,7 +9544,7 @@
 |Command line|`--binlog-expire-logs-seconds=#`|
 |Type of variable|`integer`|
 |Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
+|Range|from: `0`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -9644,6 +9646,21 @@
 |mariadb.com|[binlog_ignore_db](https://mariadb.com/kb/en/replication-and-binary-log-system-variables/#binlog_ignore_db)|
 |dev.mysql.com|[option_mysqld_binlog-ignore-db](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#option_mysqld_binlog-ignore-db)|
 |dev.mysql.com|[option_mysqld_binlog-ignore-db](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#option_mysqld_binlog-ignore-db)|
+
+## binlog_large_commit_threshold
+|name|value|
+|----|-----|
+|Name|`binlog_large_commit_threshold`|
+|Command line|`--binlog-large-commit-threshold=val`|
+|Scope|`global`|
+|Default value|`134217728`|
+|Dynamic|`true`|
+|Range|from: `10485760` to: `1.844674407371E+19`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[binlog_large_commit_threshold](https://mariadb.com/kb/en/replication-and-binary-log-system-variables/#binlog_large_commit_threshold)|
 
 ## binlog_legacy_event_pos
 |name|value|
@@ -11369,7 +11386,7 @@
 |name|value|
 |----|-----|
 |Name|`s3_debug`|
-|Command line|`--s3-debug{=0|1}`|
+|Command line|`--s3-debug=[0|1]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`0`|
@@ -11387,7 +11404,7 @@
 |Name|`s3_host_name`|
 |Command line|`--s3-host-name=val`|
 |Type of variable|`string`|
-|Scope|``|
+|Scope|`global`|
 |Default value|`s3.amazonaws.com`|
 |Dynamic|`false`|
 
@@ -11395,6 +11412,21 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[s3_host_name](https://mariadb.com/kb/en/s3-storage-engine-system-variables/#s3_host_name)|
+
+## s3_no_content_type
+|name|value|
+|----|-----|
+|Name|`s3_no_content_type`|
+|Command line|`--s3-no-content-type=[0|1]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_no_content_type](https://mariadb.com/kb/en/s3-storage-engine-system-variables/#s3_no_content_type)|
 
 ## s3_pagecache_age_threshold
 |name|value|
@@ -11485,12 +11517,27 @@
 |Scope|`global`|
 |Default value|`Auto`|
 |Dynamic|`true`|
-|Valid value(s)|`Auto`, `Original`, `Amazon`, `Legacy`, `Path`, `Domain`, `Auto`, `Original`, `Amazon`|
+|Valid value(s)|`Auto`, `0`, `Original`, `1`, `Amazon`, `2`, `Legacy`, `3`, `Path`, `4`, `Domain`, `5`, `Auto`, `Original`, `Amazon`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[s3_protocol_version](https://mariadb.com/kb/en/s3-storage-engine-system-variables/#s3_protocol_version)|
+
+## s3_provider
+|name|value|
+|----|-----|
+|Name|`s3_provider`|
+|Command line|`--s3-provider=val`|
+|Type of variable|`enumeration`|
+|Scope|`global`|
+|Default value|`Default`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_provider](https://mariadb.com/kb/en/s3-storage-engine-system-variables/#s3_provider)|
 
 ## s3_region
 |name|value|
@@ -11511,7 +11558,7 @@
 |name|value|
 |----|-----|
 |Name|`s3_replicate_alter_as_create_select`|
-|Command line|`--s3-replicate-alter-as-create-select{=0|1}`|
+|Command line|`--s3-replicate-alter-as-create-select=[0|1]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`1`|
@@ -11541,7 +11588,7 @@
 |name|value|
 |----|-----|
 |Name|`s3_slave_ignore_updates`|
-|Command line|`--s3-slave-ignore-updates{=0|1}`|
+|Command line|`--s3-slave-ignore-updates=[0|1]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`0`|
@@ -11552,11 +11599,26 @@
 |------|----|
 |mariadb.com|[s3_slave_ignore_updates](https://mariadb.com/kb/en/s3-storage-engine-system-variables/#s3_slave_ignore_updates)|
 
+## s3_ssl_no_verify
+|name|value|
+|----|-----|
+|Name|`s3_ssl_no_verify`|
+|Command line|`--s3-ssl-no-verify=[0|1]`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[s3_ssl_no_verify](https://mariadb.com/kb/en/s3-storage-engine-system-variables/#s3_ssl_no_verify)|
+
 ## s3_use_http
 |name|value|
 |----|-----|
 |Name|`s3_use_http`|
-|Command line|`--s3-use-http{=0|1}`|
+|Command line|`--s3-use-http=[0|1]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
 |Default value|`0`|
@@ -15090,6 +15152,18 @@
 |------|----|
 |mariadb.com|[maria_](https://mariadb.com/kb/en/server-status-variables/#maria_)|
 
+## Max_memory_used
+|name|value|
+|----|-----|
+|Name|`Max_memory_used`|
+|Type of variable|`integer`|
+|Scope|`session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[max_memory_used](https://mariadb.com/kb/en/server-status-variables/#max_memory_used)|
+
 ## Max_statement_time_exceeded
 |name|value|
 |----|-----|
@@ -15393,6 +15467,18 @@
 |mariadb.com|[queries](https://mariadb.com/kb/en/server-status-variables/#queries)|
 |dev.mysql.com|[statvar_Queries](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Queries)|
 |dev.mysql.com|[statvar_Queries](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Queries)|
+
+## Query_time
+|name|value|
+|----|-----|
+|Name|`Query_time`|
+|Type of variable|`integer`|
+|Scope|`global`, `session`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[query_time](https://mariadb.com/kb/en/server-status-variables/#query_time)|
 
 ## Questions
 |name|value|
@@ -30371,6 +30457,21 @@
 |------|----|
 |mariadb.com|[innodb_log_file_buffering](https://mariadb.com/kb/en/innodb-system-variables/#innodb_log_file_buffering)|
 
+## innodb_log_file_mmap
+|name|value|
+|----|-----|
+|Name|`innodb_log_file_mmap`|
+|Command line|`--innodb-log-file-mmap{=0|1}`|
+|Type of variable|`boolean`|
+|Scope|`global`|
+|Default value|`ON (Linux, FreeBSD), OFF (Other platforms)`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_log_file_mmap](https://mariadb.com/kb/en/innodb-system-variables/#innodb_log_file_mmap)|
+
 ## innodb_log_file_size
 |name|value|
 |----|-----|
@@ -31265,7 +31366,7 @@
 |Command line|`--innodb-snapshot-isolation={0|1}`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`OFF`|
+|Default value|`ON (>= MariaDB 11.6.2), OFF (<= MariaDB 11.6.1)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -33229,6 +33330,26 @@
 |----|-----|
 |Name|`Aurora_reserved_mem_exceeded_incidents`|
 |Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
+
+## aurora_temptable_max_ram_allocation
+|name|value|
+|----|-----|
+|Name|`aurora_temptable_max_ram_allocation`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|docs.aws.amazon.com|[](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html#)|
+
+## aurora_temptable_ram_allocation
+|name|value|
+|----|-----|
+|Name|`aurora_temptable_ram_allocation`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -39961,6 +40082,7 @@
 |Name|`default_collation_for_utf8mb4`|
 |Type of variable|`enumeration`|
 |Scope|`global`, `session`|
+|Default value|`utf8mb4_0900_ai_ci`|
 |Dynamic|`true`|
 |Valid value(s)|`utf8mb4_0900_ai_ci`, `utf8mb4_general_ci`|
 

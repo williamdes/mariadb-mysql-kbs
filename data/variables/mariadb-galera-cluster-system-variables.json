@@ -113,7 +113,7 @@
       "type": "string"
     },
     {
-      "cli": "--wsrep-debug[={0|1}]",
+      "cli": "MariaDB starting with 10.4.3--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}]\n\nMariaDB until 10.4.2--wsrep-debug[={0|1}]",
       "default": "NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)",
       "dynamic": true,
       "id": "wsrep_debug",

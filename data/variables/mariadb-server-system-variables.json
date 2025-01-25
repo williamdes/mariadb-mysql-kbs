@@ -346,6 +346,10 @@
       "dynamic": true,
       "id": "connect_timeout",
       "name": "connect_timeout",
+      "range": {
+        "from": 2,
+        "to": 31536000
+      },
       "scope": [
         "global"
       ],
@@ -1981,7 +1985,7 @@
       "id": "max_write_lock_count",
       "name": "max_write_lock_count",
       "range": {
-        "from": 0,
+        "from": 1,
         "to": 4294967295
       },
       "scope": [
@@ -2043,7 +2047,7 @@
       "name": "mrr_buffer_size",
       "range": {
         "from": 8192,
-        "to": 2147483648
+        "to": 2147483647
       },
       "scope": [
         "global",
@@ -2103,7 +2107,7 @@
       "name": "net_read_timeout",
       "range": {
         "from": 1,
-        "to": "upwards"
+        "to": 31536000
       },
       "scope": [
         "global",
@@ -2347,6 +2351,7 @@
         "default",
         "derived_merge={on|off}",
         "derived_with_keys={on|off}",
+        "duplicateweedout={on|off}",
         "engine_condition_pushdown={on|off}",
         "exists_to_in={on|off}",
         "extended_keys={on|off}",
@@ -2757,7 +2762,7 @@
       "id": "read_buffer_size",
       "name": "read_buffer_size",
       "range": {
-        "from": 8200,
+        "from": 8192,
         "to": 2147479552
       },
       "scope": [
@@ -2961,8 +2966,8 @@
       "type": "string"
     },
     {
-      "cli": "--skip-external-locking",
-      "default": "1",
+      "cli": "--external-locking",
+      "default": "1 (for the variable, that is 0 for the command line option)",
       "dynamic": false,
       "id": "skip_external_locking",
       "name": "skip_external_locking",
@@ -3548,7 +3553,7 @@
       "name": "transaction_alloc_block_size",
       "range": {
         "from": 1024,
-        "to": 4294967295
+        "to": 134217728
       },
       "scope": [
         "global",
@@ -3582,7 +3587,7 @@
       "name": "transaction_prealloc_size",
       "range": {
         "from": 1024,
-        "to": 4294967295
+        "to": 134217728
       },
       "scope": [
         "global",
@@ -3591,7 +3596,6 @@
       "type": "integer"
     },
     {
-      "cli": "--transaction-read-only=#",
       "default": "OFF",
       "dynamic": true,
       "id": "transaction_read_only",

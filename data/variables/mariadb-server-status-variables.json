@@ -2312,6 +2312,14 @@
       "name": "Maria_*"
     },
     {
+      "id": "max_memory_used",
+      "name": "Max_memory_used",
+      "scope": [
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "id": "max_statement_time_exceeded",
       "name": "Max_statement_time_exceeded",
       "type": "integer"
@@ -2517,6 +2525,15 @@
     {
       "id": "queries",
       "name": "Queries",
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "id": "query_time",
+      "name": "Query_time",
       "scope": [
         "global",
         "session"

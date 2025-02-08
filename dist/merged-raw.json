@@ -237,6 +237,22 @@
                 }
             ]
         },
+        "aria_log_dir_path": {
+            "cli": "--aria-log-dir-path=value",
+            "default": "Same as DATADIR",
+            "dynamic": false,
+            "name": "aria_log_dir_path",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "aria_log_dir_path",
+                    "url": "https://mariadb.com/kb/en/aria-system-variables/"
+                }
+            ]
+        },
         "aria_log_file_size": {
             "cli": "--aria-log-file-size=#",
             "default": "1073741824",
@@ -2459,7 +2475,7 @@
             ]
         },
         "wsrep_debug": {
-            "cli": "--wsrep-debug[={0|1}]",
+            "cli": "MariaDB starting with 10.4.3--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}]\n\nMariaDB until 10.4.2--wsrep-debug[={0|1}]",
             "default": "NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)",
             "dynamic": true,
             "name": "wsrep_debug",
@@ -11242,9 +11258,11 @@
             "dynamic": true,
             "name": "binlog_expire_logs_seconds",
             "range": {
-                "from": 0,
-                "to": 4294967295
+                "from": 0
             },
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -11380,6 +11398,25 @@
                 {
                     "anchor": "option_mysqld_binlog-ignore-db",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
+                }
+            ]
+        },
+        "binlog_large_commit_threshold": {
+            "cli": "--binlog-large-commit-threshold=val",
+            "default": "134217728",
+            "dynamic": true,
+            "name": "binlog_large_commit_threshold",
+            "range": {
+                "from": 10485760,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "binlog_large_commit_threshold",
+                    "url": "https://mariadb.com/kb/en/replication-and-binary-log-system-variables/"
                 }
             ]
         },
@@ -13562,7 +13599,7 @@
             ]
         },
         "s3_debug": {
-            "cli": "--s3-debug{=0|1}",
+            "cli": "--s3-debug=[0|1]",
             "default": "0",
             "dynamic": false,
             "name": "s3_debug",
@@ -13586,11 +13623,29 @@
             "default": "s3.amazonaws.com",
             "dynamic": false,
             "name": "s3_host_name",
-            "scope": [],
+            "scope": [
+                "global"
+            ],
             "type": "string",
             "ids": [
                 {
                     "anchor": "s3_host_name",
+                    "url": "https://mariadb.com/kb/en/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_no_content_type": {
+            "cli": "--s3-no-content-type=[0|1]",
+            "default": "0",
+            "dynamic": false,
+            "name": "s3_no_content_type",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "s3_no_content_type",
                     "url": "https://mariadb.com/kb/en/s3-storage-engine-system-variables/"
                 }
             ]
@@ -13706,11 +13761,17 @@
             "type": "enumeration",
             "validValues": [
                 "Auto",
+                "0",
                 "Original",
+                "1",
                 "Amazon",
+                "2",
                 "Legacy",
+                "3",
                 "Path",
+                "4",
                 "Domain",
+                "5",
                 "Auto",
                 "Original",
                 "Amazon"
@@ -13718,6 +13779,22 @@
             "ids": [
                 {
                     "anchor": "s3_protocol_version",
+                    "url": "https://mariadb.com/kb/en/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
+        "s3_provider": {
+            "cli": "--s3-provider=val",
+            "default": "Default",
+            "dynamic": true,
+            "name": "s3_provider",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "ids": [
+                {
+                    "anchor": "s3_provider",
                     "url": "https://mariadb.com/kb/en/s3-storage-engine-system-variables/"
                 }
             ]
@@ -13739,7 +13816,7 @@
             ]
         },
         "s3_replicate_alter_as_create_select": {
-            "cli": "--s3-replicate-alter-as-create-select{=0|1}",
+            "cli": "--s3-replicate-alter-as-create-select=[0|1]",
             "default": "1",
             "dynamic": false,
             "name": "s3_replicate_alter_as_create_select",
@@ -13771,7 +13848,7 @@
             ]
         },
         "s3_slave_ignore_updates": {
-            "cli": "--s3-slave-ignore-updates{=0|1}",
+            "cli": "--s3-slave-ignore-updates=[0|1]",
             "default": "0",
             "dynamic": false,
             "name": "s3_slave_ignore_updates",
@@ -13786,8 +13863,24 @@
                 }
             ]
         },
+        "s3_ssl_no_verify": {
+            "cli": "--s3-ssl-no-verify=[0|1]",
+            "default": "0",
+            "dynamic": false,
+            "name": "s3_ssl_no_verify",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "s3_ssl_no_verify",
+                    "url": "https://mariadb.com/kb/en/s3-storage-engine-system-variables/"
+                }
+            ]
+        },
         "s3_use_http": {
-            "cli": "--s3-use-http{=0|1}",
+            "cli": "--s3-use-http=[0|1]",
             "default": "0",
             "dynamic": false,
             "name": "s3_use_http",
@@ -18083,6 +18176,19 @@
                 }
             ]
         },
+        "Max_memory_used": {
+            "name": "Max_memory_used",
+            "scope": [
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "max_memory_used",
+                    "url": "https://mariadb.com/kb/en/server-status-variables/"
+                }
+            ]
+        },
         "Max_statement_time_exceeded": {
             "name": "Max_statement_time_exceeded",
             "type": "integer",
@@ -18470,6 +18576,20 @@
                 {
                     "anchor": "statvar_Queries",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
+                }
+            ]
+        },
+        "Query_time": {
+            "name": "Query_time",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "query_time",
+                    "url": "https://mariadb.com/kb/en/server-status-variables/"
                 }
             ]
         },
@@ -22640,7 +22760,8 @@
             "dynamic": true,
             "name": "max_write_lock_count",
             "range": {
-                "from": 1
+                "from": 1,
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -22753,7 +22874,7 @@
             "name": "mrr_buffer_size",
             "range": {
                 "from": 8192,
-                "to": 2147483648
+                "to": 2147483647
             },
             "scope": [
                 "global",
@@ -37489,6 +37610,22 @@
                 }
             ]
         },
+        "innodb_log_file_mmap": {
+            "cli": "--innodb-log-file-mmap{=0|1}",
+            "default": "ON (Linux, FreeBSD), OFF (Other platforms)",
+            "dynamic": false,
+            "name": "innodb_log_file_mmap",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "innodb_log_file_mmap",
+                    "url": "https://mariadb.com/kb/en/innodb-system-variables/"
+                }
+            ]
+        },
         "innodb_log_file_size": {
             "cli": "--innodb-log-file-size=#",
             "dynamic": false,
@@ -38643,7 +38780,7 @@
         },
         "innodb_snapshot_isolation": {
             "cli": "--innodb-snapshot-isolation={0|1}",
-            "default": "OFF",
+            "default": "ON (>= MariaDB 11.6.2), OFF (<= MariaDB 11.6.1)",
             "dynamic": true,
             "name": "innodb_snapshot_isolation",
             "scope": [
@@ -40757,6 +40894,24 @@
         "Aurora_reserved_mem_exceeded_incidents": {
             "name": "Aurora_reserved_mem_exceeded_incidents",
             "type": "integer",
+            "ids": [
+                {
+                    "anchor": null,
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html"
+                }
+            ]
+        },
+        "aurora_temptable_max_ram_allocation": {
+            "name": "aurora_temptable_max_ram_allocation",
+            "ids": [
+                {
+                    "anchor": null,
+                    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.GlobalStatusVars.html"
+                }
+            ]
+        },
+        "aurora_temptable_ram_allocation": {
+            "name": "aurora_temptable_ram_allocation",
             "ids": [
                 {
                     "anchor": null,
@@ -46289,6 +46444,22 @@
                 }
             ]
         },
+        "check_table_functions": {
+            "cli": "--check-table-functions=value",
+            "default": "ABORT",
+            "name": "check_table_functions",
+            "type": "enumeration",
+            "validValues": [
+                "WARN",
+                "ABORT"
+            ],
+            "ids": [
+                {
+                    "anchor": "option_mysqld_check-table-functions",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
         "chroot": {
             "cli": "--chroot=dir_name",
             "name": "chroot",
@@ -48034,6 +48205,7 @@
             ]
         },
         "default_collation_for_utf8mb4": {
+            "default": "utf8mb4_0900_ai_ci",
             "dynamic": true,
             "name": "default_collation_for_utf8mb4",
             "scope": [

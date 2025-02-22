@@ -113,7 +113,7 @@
       "type": "string"
     },
     {
-      "cli": "--wsrep-debug[={0|1}]",
+      "cli": "--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}], --wsrep-debug[={0|1}]",
       "default": "NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)",
       "dynamic": true,
       "id": "wsrep_debug",
@@ -512,7 +512,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--wsrep-slave-threads=#",
+      "cli": "--wsrep-slave-threads=",
       "default": "1",
       "dynamic": true,
       "id": "wsrep_slave_threads",
@@ -648,7 +648,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--wsrep-sync-wait=#",
+      "cli": "--wsrep-sync-wait=",
       "default": "0",
       "dynamic": true,
       "id": "wsrep_sync_wait",
@@ -663,7 +663,7 @@
       "type": "integer"
     },
     {
-      "cli": "--wsrep-trx-fragment-size=#",
+      "cli": "--wsrep-trx-fragment-size=",
       "default": "0",
       "dynamic": true,
       "id": "wsrep_trx_fragment_size",

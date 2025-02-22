@@ -125,7 +125,8 @@
       "type": "integer"
     },
     {
-      "name": "Aurora_lockmgr_buffer_pool_memory_used"
+      "name": "Aurora_lockmgr_buffer_pool_memory_used",
+      "type": "byte"
     },
     {
       "name": "Aurora_lockmgr_memory_used",
@@ -304,6 +305,14 @@
       "type": "integer"
     },
     {
+      "name": "aurora_temptable_max_ram_allocation",
+      "type": "byte"
+    },
+    {
+      "name": "aurora_temptable_ram_allocation",
+      "type": "byte"
+    },
+    {
       "name": "Aurora_thread_pool_thread_count",
       "type": "integer"
     },
@@ -312,7 +321,8 @@
       "type": "string"
     },
     {
-      "name": "Aurora_zdr_oom_threshold"
+      "name": "Aurora_zdr_oom_threshold",
+      "type": "integer"
     },
     {
       "name": "server_aurora_das_running",

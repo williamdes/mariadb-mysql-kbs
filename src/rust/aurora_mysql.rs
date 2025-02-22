@@ -45,6 +45,8 @@ fn process_table_row(tr: Node) -> KbParsedEntry {
             d if d.contains("The amount of memory in bytes") => Some("byte".to_string()),
             d if d.contains("The number of bytes") => Some("byte".to_string()),
             d if d.contains("Number of bytes replicated") => Some("byte".to_string()),
+            d if d.contains("in bytes") => Some("byte".to_string()),
+            d if d.contains("in kilobyte") => Some("integer".to_string()),
             d if d.contains("The maximum number of parallel query sessions") => {
                 Some("integer".to_string())
             }
@@ -143,6 +145,45 @@ mod tests {
         });
         assert_eq!(
             vec![
+                KbParsedEntry {
+                    has_description: true,
+                    is_removed: false,
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    name: Some("Aurora_zdr_oom_threshold".to_string()),
+                    id: None,
+                    scope: None,
+                    r#type: Some("integer".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    has_description: true,
+                    is_removed: false,
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    name: Some("aurora_temptable_max_ram_allocation".to_string()),
+                    id: None,
+                    scope: None,
+                    r#type: Some("byte".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
+                KbParsedEntry {
+                    has_description: true,
+                    is_removed: false,
+                    cli: None,
+                    default: None,
+                    dynamic: None,
+                    name: Some("aurora_temptable_ram_allocation".to_string()),
+                    id: None,
+                    scope: None,
+                    r#type: Some("byte".to_string()),
+                    valid_values: None,
+                    range: None,
+                },
                 KbParsedEntry {
                     has_description: true,
                     is_removed: false,

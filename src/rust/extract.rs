@@ -3,7 +3,7 @@ use crate::{aurora_mysql, mariadb, mysql};
 use serde::Serialize;
 use std::time::Duration;
 use std::{env, fs};
-use ureq::{Agent, AgentBuilder, Error};
+use ureq::{Agent, Error, ResponseExt};
 
 const UA_FROM: &str = "williamdes+mariadb-mysql-kbs@wdes.fr";
 const UA: &str = "mariadb-mysql-kbs-bot (+https://github.com/williamdes/mariadb-mysql-kbs; williamdes+mariadb-mysql-kbs@wdes.fr)";
@@ -45,18 +45,21 @@ pub fn extract(only: ExtractionPreference) {
 pub fn get_html_from_url(agent: Agent, url: &str) -> Result<QueryResponse, QueryErrorResponse> {
     match agent
         .get(url)
-        .set("From", UA_FROM)
-        .set("User-Agent", UA)
+        .header("From", UA_FROM)
+        .header("User-Agent", UA)
         .call()
     {
-        Ok(response) => Ok(QueryResponse {
-            url: response.get_url().to_owned(),
-            body: response.into_string().expect("Should have text"),
+        Ok(mut response) => Ok(QueryResponse {
+            url: response.get_uri().to_string(),
+            body: response
+                .body_mut()
+                .read_to_string()
+                .expect("Should have text"),
         }),
-        Err(Error::Status(code, response)) => Err(QueryErrorResponse {
-            url: Some(response.get_url().to_owned()),
+        Err(Error::StatusCode(code)) => Err(QueryErrorResponse {
+            url: Some(url.to_string()),
             code: Some(code),
-            message: response.into_string().expect("Should have text"),
+            message: "".to_string(),
         }),
         Err(err) => Err(QueryErrorResponse {
             url: None,
@@ -67,10 +70,10 @@ pub fn get_html_from_url(agent: Agent, url: &str) -> Result<QueryResponse, Query
 }
 
 fn extract_page(page: PageProcess) {
-    let agent: Agent = AgentBuilder::new()
-        .timeout_read(Duration::from_secs(5))
-        .timeout_write(Duration::from_secs(5))
-        .build();
+    let agent: Agent = Agent::config_builder()
+        .timeout_global(Some(Duration::from_secs(5)))
+        .build()
+        .into();
     match get_html_from_url(agent, &page.url) {
         Ok(response) => {
             let final_url = response.url.clone();

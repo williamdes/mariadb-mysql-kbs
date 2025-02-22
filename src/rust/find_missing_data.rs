@@ -4,7 +4,7 @@ use crate::{
 };
 use mariadb_mysql_kbs::{merged_ultraslim::SearchType, search};
 use std::time::Duration;
-use ureq::{Agent, AgentBuilder};
+use ureq::Agent;
 
 pub fn run(only: ExtractionPreference) {
     println!("Run checking...");
@@ -30,10 +30,10 @@ fn check_mariadb() {
 }
 
 fn check_mariadb_url(url: &str) {
-    let agent: Agent = AgentBuilder::new()
-        .timeout_read(Duration::from_secs(5))
-        .timeout_write(Duration::from_secs(5))
-        .build();
+    let agent: Agent = Agent::config_builder()
+        .timeout_global(Some(Duration::from_secs(5)))
+        .build()
+        .into();
 
     match get_html_from_url(agent, url) {
         Ok(response) => {

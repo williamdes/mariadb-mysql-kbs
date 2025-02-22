@@ -43,6 +43,17 @@
       "type": "boolean"
     },
     {
+      "cli": "--check-table-functions=value",
+      "default": "ABORT",
+      "id": "option_mysqld_check-table-functions",
+      "name": "check_table_functions",
+      "type": "enumeration",
+      "validValues": [
+        "WARN",
+        "ABORT"
+      ]
+    },
+    {
       "cli": "--chroot=dir_name",
       "id": "option_mysqld_chroot",
       "name": "chroot",

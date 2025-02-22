@@ -229,12 +229,25 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
             }
         }
         "commandline" | "command-line" => {
-            if row_value.to_lowercase() != "no"
-                && row_value.to_lowercase() != "none"
-                && row_value.to_lowercase() != "n/a"
-                && row_value.to_lowercase() != "no commandline option"
-            {
-                entry.cli = cleaner::clean_cli(row_value, true);
+            if li_node.find(Name("code")).count() >= 1 {
+                entry.cli = Some(
+                    li_node
+                        .find(Name("code"))
+                        .map(|code_node| code_node.text().trim().to_string())
+                        .map(|code| cleaner::clean_cli(code, true))
+                        .filter(|code| code.is_some())
+                        .map(|code| code.unwrap())
+                        .collect::<Vec<String>>()
+                        .join(", "),
+                );
+            } else {
+                if row_value.to_lowercase() != "no"
+                    && row_value.to_lowercase() != "none"
+                    && row_value.to_lowercase() != "n/a"
+                    && row_value.to_lowercase() != "no commandline option"
+                {
+                    entry.cli = cleaner::clean_cli(row_value, true);
+                }
             }
         }
 
@@ -850,7 +863,7 @@ mod tests {
             vec![KbParsedEntry {
                 has_description: true,
                 is_removed: false,
-                cli: Some("--wsrep-sync-wait=#".to_string()),
+                cli: Some("--wsrep-sync-wait=".to_string()),
                 default: Some("0".to_string()),
                 dynamic: Some(true),
                 id: Some("wsrep_sync_wait".to_string()),
@@ -1198,6 +1211,37 @@ mod tests {
                     range: None,
                 },
             ],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_20() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_20.html"),
+            url: "https://example.com".to_string(),
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                has_description: true,
+                is_removed: false,
+                cli: Some("--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}], --wsrep-debug[={0|1}]".to_string()),
+                default: Some("NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)".to_string()),
+                dynamic: Some(true),
+                id: Some("wsrep_debug".to_string()),
+                name: Some("wsrep_debug".to_string()),
+                scope: Some(vec!["global".to_string()]),
+                r#type: Some("enumeration".to_string()),
+                valid_values: Some(vec![
+                    "NONE".to_string(),
+                    "SERVER".to_string(),
+                    "TRANSACTION".to_string(),
+                    "STREAMING".to_string(),
+                    "CLIENT".to_string()
+                ]),
+                range: None,
+            },],
             entries
         );
     }

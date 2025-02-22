@@ -1,0 +1,53 @@
+<html>
+   <body>
+      <div>
+         <h4 class="anchored_heading" id="wsrep_debug"><code>wsrep_debug</code></h4>
+         <ul start="1">
+            <li>
+               <strong>Description:</strong> WSREP debug level logging.
+               <ul start="1">
+                  <li>Before <a href="/kb/en/mariadb-1061-release-notes/">MariaDB 10.6.1</a>, DDL logging was only logged on the originating node. From <a href="/kb/en/mariadb-1061-release-notes/">MariaDB 10.6.1</a>, it is logged on other nodes as well.</li>
+               </ul>
+            </li>
+         </ul>
+         <div class="mariadb_to_10_4_2 mariadb to_10_4_2 product indent1">
+            <h5 class="product_title">MariaDB until <a href="/kb/en/mariadb-1042-release-notes/">10.4.2</a></h5>
+            <p>Before <a href="/kb/en/mariadb-1043-release-notes/">MariaDB 10.4.3</a> was a boolean, which when set to <code>ON</code> (<code>OFF</code> was default), ensured debug messages would be logged to the <a href="/kb/en/error-log/">error log</a> as well</p>
+         </div>
+         <div class="mariadb_from_10_4_3 mariadb from_10_4_3 product indent1">
+            <h5 class="product_title">MariaDB starting with <a href="/kb/en/mariadb-1043-release-notes/">10.4.3</a></h5>
+            <p>From <a href="/kb/en/mariadb-1043-release-notes/">MariaDB 10.4.3</a> is an enum. Valid values are: <br>
+               <code>0: NONE</code>: Off (default)<br>
+               <code>1: SERVER</code>: MariaDB server code contains WSREP_DEBUG log writes, and these will be added to server error log<br>
+               <code>2: TRANSACTION</code>: Logging from wsrep-lib transaction is added to the error log<br>
+               <code>3: STREAMING</code>: Logging from streaming transactions in wsrep-lib is added to the error log<br>
+               <code>4: CLIENT</code>: Logging from wsrep-lib client state is added to the error log
+            </p>
+         </div>
+         <ul start="1">
+            <li>
+               <strong>Commandline:</strong>
+               <ul start="1">
+                  <li>
+                     <div class="mariadb_from_10_4_3 mariadb from_10_4_3 product">
+                        <h5 class="product_title">MariaDB starting with <a href="/kb/en/mariadb-1043-release-notes/">10.4.3</a></h5>
+                        <p><code>--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}]</code></p>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="mariadb_to_10_4_2 mariadb to_10_4_2 product">
+                        <h5 class="product_title">MariaDB until <a href="/kb/en/mariadb-1042-release-notes/">10.4.2</a></h5>
+                        <p><code>--wsrep-debug[={0|1}]</code></p>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+            <li><strong>Scope:</strong> Global</li>
+            <li><strong>Dynamic:</strong> Yes</li>
+            <li><strong>Data Type:</strong> Enumeration (&gt;= <a href="/kb/en/mariadb-1043-release-notes/">MariaDB 10.4.3</a>), Boolean (&lt;= <a href="/kb/en/mariadb-1042-release-notes/">MariaDB 10.4.2</a>)</li>
+            <li><strong>Default Value:</strong> <code>NONE</code> (&gt;= <a href="/kb/en/mariadb-1043-release-notes/">MariaDB 10.4.3</a>),  <code>OFF</code> (&lt;= <a href="/kb/en/mariadb-1042-release-notes/">MariaDB 10.4.2</a>)</li>
+            <li><strong>Valid Values</strong>: (&gt;= <a href="/kb/en/mariadb-1043-release-notes/">MariaDB 10.4.3</a>) <code>NONE</code>, <code>SERVER</code>, <code>TRANSACTION</code>, <code>STREAMING</code>, <code>CLIENT</code></li>
+         </ul>
+      </div>
+   </body>
+</html>

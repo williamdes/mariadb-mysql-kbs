@@ -237,9 +237,18 @@ fn process_li(mut entry: KbParsedEntry, li_node: Node) -> KbParsedEntry {
                         .map(|code| cleaner::clean_cli(code, true))
                         .filter(|code| code.is_some())
                         .map(|code| code.unwrap())
+                        .filter(|row_value| {
+                            row_value.to_lowercase() != "no"
+                                && row_value.to_lowercase() != "none"
+                                && row_value.to_lowercase() != "n/a"
+                                && row_value.to_lowercase() != "no commandline option"
+                        })
                         .collect::<Vec<String>>()
                         .join(", "),
                 );
+                if entry.cli == Some("".to_string()) {
+                    entry.cli = None;
+                }
             } else {
                 if row_value.to_lowercase() != "no"
                     && row_value.to_lowercase() != "none"
@@ -1240,6 +1249,31 @@ mod tests {
                     "STREAMING".to_string(),
                     "CLIENT".to_string()
                 ]),
+                range: None,
+            },],
+            entries
+        );
+    }
+
+    #[test]
+    fn test_case_21() {
+        let entries = extract_mariadb_from_text(QueryResponse {
+            body: get_test_data("mariadb_test_case_21.html"),
+            url: "https://example.com".to_string(),
+        });
+
+        assert_eq!(
+            vec![KbParsedEntry {
+                has_description: true,
+                is_removed: false,
+                cli: Some("--transaction-read-only=#".to_string()),
+                default: Some("OFF".to_string()),
+                dynamic: Some(true),
+                id: Some("tx_read_only".to_string()),
+                name: Some("tx_read_only".to_string()),
+                scope: Some(vec!["global".to_string(), "session".to_string()]),
+                r#type: Some("boolean".to_string()),
+                valid_values: None,
                 range: None,
             },],
             entries

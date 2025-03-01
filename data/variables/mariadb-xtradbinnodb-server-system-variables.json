@@ -1922,7 +1922,7 @@
       "name": "innodb_log_buffer_size",
       "range": {
         "from": 262144,
-        "to": 2147482624
+        "to": 18446744073709551615
       },
       "scope": [
         "global"

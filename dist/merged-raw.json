@@ -12407,7 +12407,7 @@
             ]
         },
         "slave_connections_needed_for_purge": {
-            "cli": "--max-binlog-size=#",
+            "cli": "--slave-connections-needed-for-purge=#",
             "default": "1",
             "dynamic": true,
             "name": "slave_connections_needed_for_purge",
@@ -32369,6 +32369,126 @@
             "ids": [
                 {
                     "anchor": "innodb_adaptive_hash_non_hash_searches",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_reads_pending": {
+            "name": "Innodb_async_reads_pending",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_reads_pending",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_reads_queue_size": {
+            "name": "Innodb_async_reads_queue_size",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_reads_queue_size",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_reads_tasks_running": {
+            "name": "Innodb_async_reads_tasks_running",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_reads_tasks_running",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_reads_total_count": {
+            "name": "Innodb_async_reads_total_count",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_reads_total_count",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_reads_total_enqueues": {
+            "name": "Innodb_async_reads_total_enqueues",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_reads_total_enqueues",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_reads_wait_slot_sec": {
+            "name": "Innodb_async_reads_wait_slot_sec",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_reads_wait_slot_sec",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_writes_pending": {
+            "name": "Innodb_async_writes_pending",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_writes_pending",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_writes_queue_size": {
+            "name": "Innodb_async_writes_queue_size",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_writes_queue_size",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_writes_tasks_running": {
+            "name": "Innodb_async_writes_tasks_running",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_writes_tasks_running",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_writes_total_count": {
+            "name": "Innodb_async_writes_total_count",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_writes_total_count",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_writes_total_enqueues": {
+            "name": "Innodb_async_writes_total_enqueues",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_writes_total_enqueues",
+                    "url": "https://mariadb.com/kb/en/innodb-status-variables/"
+                }
+            ]
+        },
+        "Innodb_async_writes_wait_slot_sec": {
+            "name": "Innodb_async_writes_wait_slot_sec",
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_async_writes_wait_slot_sec",
                     "url": "https://mariadb.com/kb/en/innodb-status-variables/"
                 }
             ]

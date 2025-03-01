@@ -10439,7 +10439,7 @@
 |name|value|
 |----|-----|
 |Name|`slave_connections_needed_for_purge`|
-|Command line|`--max-binlog-size=#`|
+|Command line|`--slave-connections-needed-for-purge=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
 |Default value|`1`|
@@ -26228,6 +26228,138 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[innodb_adaptive_hash_non_hash_searches](https://mariadb.com/kb/en/innodb-status-variables/#innodb_adaptive_hash_non_hash_searches)|
+
+## Innodb_async_reads_pending
+|name|value|
+|----|-----|
+|Name|`Innodb_async_reads_pending`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_reads_pending](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_reads_pending)|
+
+## Innodb_async_reads_queue_size
+|name|value|
+|----|-----|
+|Name|`Innodb_async_reads_queue_size`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_reads_queue_size](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_reads_queue_size)|
+
+## Innodb_async_reads_tasks_running
+|name|value|
+|----|-----|
+|Name|`Innodb_async_reads_tasks_running`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_reads_tasks_running](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_reads_tasks_running)|
+
+## Innodb_async_reads_total_count
+|name|value|
+|----|-----|
+|Name|`Innodb_async_reads_total_count`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_reads_total_count](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_reads_total_count)|
+
+## Innodb_async_reads_total_enqueues
+|name|value|
+|----|-----|
+|Name|`Innodb_async_reads_total_enqueues`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_reads_total_enqueues](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_reads_total_enqueues)|
+
+## Innodb_async_reads_wait_slot_sec
+|name|value|
+|----|-----|
+|Name|`Innodb_async_reads_wait_slot_sec`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_reads_wait_slot_sec](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_reads_wait_slot_sec)|
+
+## Innodb_async_writes_pending
+|name|value|
+|----|-----|
+|Name|`Innodb_async_writes_pending`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_writes_pending](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_writes_pending)|
+
+## Innodb_async_writes_queue_size
+|name|value|
+|----|-----|
+|Name|`Innodb_async_writes_queue_size`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_writes_queue_size](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_writes_queue_size)|
+
+## Innodb_async_writes_tasks_running
+|name|value|
+|----|-----|
+|Name|`Innodb_async_writes_tasks_running`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_writes_tasks_running](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_writes_tasks_running)|
+
+## Innodb_async_writes_total_count
+|name|value|
+|----|-----|
+|Name|`Innodb_async_writes_total_count`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_writes_total_count](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_writes_total_count)|
+
+## Innodb_async_writes_total_enqueues
+|name|value|
+|----|-----|
+|Name|`Innodb_async_writes_total_enqueues`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_writes_total_enqueues](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_writes_total_enqueues)|
+
+## Innodb_async_writes_wait_slot_sec
+|name|value|
+|----|-----|
+|Name|`Innodb_async_writes_wait_slot_sec`|
+|Type of variable|`integer`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[innodb_async_writes_wait_slot_sec](https://mariadb.com/kb/en/innodb-status-variables/#innodb_async_writes_wait_slot_sec)|
 
 ## Innodb_available_undo_logs
 |name|value|

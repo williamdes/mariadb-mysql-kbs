@@ -875,7 +875,7 @@
       "type": "boolean"
     },
     {
-      "cli": "--max-binlog-size=#",
+      "cli": "--slave-connections-needed-for-purge=#",
       "default": "1",
       "dynamic": true,
       "id": "slave_connections_needed_for_purge",

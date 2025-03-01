@@ -33,6 +33,66 @@
       "type": "integer"
     },
     {
+      "id": "innodb_async_reads_pending",
+      "name": "Innodb_async_reads_pending",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_reads_queue_size",
+      "name": "Innodb_async_reads_queue_size",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_reads_tasks_running",
+      "name": "Innodb_async_reads_tasks_running",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_reads_total_count",
+      "name": "Innodb_async_reads_total_count",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_reads_total_enqueues",
+      "name": "Innodb_async_reads_total_enqueues",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_reads_wait_slot_sec",
+      "name": "Innodb_async_reads_wait_slot_sec",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_writes_pending",
+      "name": "Innodb_async_writes_pending",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_writes_queue_size",
+      "name": "Innodb_async_writes_queue_size",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_writes_tasks_running",
+      "name": "Innodb_async_writes_tasks_running",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_writes_total_count",
+      "name": "Innodb_async_writes_total_count",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_writes_total_enqueues",
+      "name": "Innodb_async_writes_total_enqueues",
+      "type": "integer"
+    },
+    {
+      "id": "innodb_async_writes_wait_slot_sec",
+      "name": "Innodb_async_writes_wait_slot_sec",
+      "type": "integer"
+    },
+    {
       "id": "innodb_available_undo_logs",
       "name": "Innodb_available_undo_logs",
       "scope": [

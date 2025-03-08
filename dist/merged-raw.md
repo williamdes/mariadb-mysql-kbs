@@ -26234,6 +26234,7 @@
 |----|-----|
 |Name|`Innodb_async_reads_pending`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26245,6 +26246,7 @@
 |----|-----|
 |Name|`Innodb_async_reads_queue_size`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26256,6 +26258,7 @@
 |----|-----|
 |Name|`Innodb_async_reads_tasks_running`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26267,6 +26270,7 @@
 |----|-----|
 |Name|`Innodb_async_reads_total_count`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26278,6 +26282,7 @@
 |----|-----|
 |Name|`Innodb_async_reads_total_enqueues`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26289,6 +26294,7 @@
 |----|-----|
 |Name|`Innodb_async_reads_wait_slot_sec`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26300,6 +26306,7 @@
 |----|-----|
 |Name|`Innodb_async_writes_pending`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26311,6 +26318,7 @@
 |----|-----|
 |Name|`Innodb_async_writes_queue_size`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26322,6 +26330,7 @@
 |----|-----|
 |Name|`Innodb_async_writes_tasks_running`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26333,6 +26342,7 @@
 |----|-----|
 |Name|`Innodb_async_writes_total_count`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26344,6 +26354,7 @@
 |----|-----|
 |Name|`Innodb_async_writes_total_enqueues`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -26355,6 +26366,7 @@
 |----|-----|
 |Name|`Innodb_async_writes_wait_slot_sec`|
 |Type of variable|`integer`|
+|Scope|`global`|
 
 ### Documentation(s)
 |source|anchor name|

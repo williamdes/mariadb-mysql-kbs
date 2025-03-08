@@ -32375,6 +32375,9 @@
         },
         "Innodb_async_reads_pending": {
             "name": "Innodb_async_reads_pending",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32385,6 +32388,9 @@
         },
         "Innodb_async_reads_queue_size": {
             "name": "Innodb_async_reads_queue_size",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32395,6 +32401,9 @@
         },
         "Innodb_async_reads_tasks_running": {
             "name": "Innodb_async_reads_tasks_running",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32405,6 +32414,9 @@
         },
         "Innodb_async_reads_total_count": {
             "name": "Innodb_async_reads_total_count",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32415,6 +32427,9 @@
         },
         "Innodb_async_reads_total_enqueues": {
             "name": "Innodb_async_reads_total_enqueues",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32425,6 +32440,9 @@
         },
         "Innodb_async_reads_wait_slot_sec": {
             "name": "Innodb_async_reads_wait_slot_sec",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32435,6 +32453,9 @@
         },
         "Innodb_async_writes_pending": {
             "name": "Innodb_async_writes_pending",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32445,6 +32466,9 @@
         },
         "Innodb_async_writes_queue_size": {
             "name": "Innodb_async_writes_queue_size",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32455,6 +32479,9 @@
         },
         "Innodb_async_writes_tasks_running": {
             "name": "Innodb_async_writes_tasks_running",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32465,6 +32492,9 @@
         },
         "Innodb_async_writes_total_count": {
             "name": "Innodb_async_writes_total_count",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32475,6 +32505,9 @@
         },
         "Innodb_async_writes_total_enqueues": {
             "name": "Innodb_async_writes_total_enqueues",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {
@@ -32485,6 +32518,9 @@
         },
         "Innodb_async_writes_wait_slot_sec": {
             "name": "Innodb_async_writes_wait_slot_sec",
+            "scope": [
+                "global"
+            ],
             "type": "integer",
             "ids": [
                 {

@@ -2242,10 +2242,10 @@
 |name|value|
 |----|-----|
 |Name|`wsrep_debug`|
-|Command line|`--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}], --wsrep-debug[={0|1}]`|
+|Command line|`--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}]`|
 |Type of variable|`enumeration`|
 |Scope|`global`|
-|Default value|`NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)`|
+|Default value|`NONE`|
 |Dynamic|`true`|
 |Valid value(s)|`NONE`, `SERVER`, `TRANSACTION`, `STREAMING`, `CLIENT`|
 
@@ -2384,7 +2384,7 @@
 |Command line|`--wsrep-load-data-splitting[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`|
-|Default value|`OFF (>= MariaDB 10.4.3), ON (<= MariaDB 10.4.2)`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -2414,7 +2414,7 @@
 |Command line|`--wsrep-max-ws-rows=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`0 (>= MariaDB Galera 10.0.27, MariaDB 10.1.17), 131072 (<= MariaDB Galera 10.0.26, MariaDB 10.1.16)`|
+|Default value|`0`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1048576`|
 
@@ -2430,7 +2430,7 @@
 |Command line|`--wsrep-max-ws-size=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`2147483647 (2GB, >= MariaDB Galera 10.0.27, MariaDB 10.1.17), 1073741824 (1GB, <= MariaDB Galera 10.0.26, MariaDB 10.1.16)`|
+|Default value|`2147483647`|
 |Dynamic|`true`|
 |Range|from: `1024` to: `2147483647`|
 
@@ -2538,7 +2538,7 @@
 |Command line|`--wsrep-on[={0|1}]`|
 |Type of variable|`boolean`|
 |Scope|`global`, `session`|
-|Default value|`OFF (>= MariaDB 10.1), ON (<= MariaDB Galera Cluster 10.0),`|
+|Default value|`OFF`|
 |Dynamic|`true`|
 |Valid value(s)|`ON`, `OFF`|
 

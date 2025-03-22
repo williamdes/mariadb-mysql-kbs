@@ -2475,8 +2475,8 @@
             ]
         },
         "wsrep_debug": {
-            "cli": "--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}], --wsrep-debug[={0|1}]",
-            "default": "NONE (>= MariaDB 10.4.3),  OFF (<= MariaDB 10.4.2)",
+            "cli": "--wsrep-debug[={NONE|SERVER|TRANSACTION|STREAMING|CLIENT}]",
+            "default": "NONE",
             "dynamic": true,
             "name": "wsrep_debug",
             "scope": [
@@ -2648,7 +2648,7 @@
         },
         "wsrep_load_data_splitting": {
             "cli": "--wsrep-load-data-splitting[={0|1}]",
-            "default": "OFF (>= MariaDB 10.4.3), ON (<= MariaDB 10.4.2)",
+            "default": "OFF",
             "dynamic": true,
             "name": "wsrep_load_data_splitting",
             "scope": [
@@ -2680,7 +2680,7 @@
         },
         "wsrep_max_ws_rows": {
             "cli": "--wsrep-max-ws-rows=#",
-            "default": "0 (>= MariaDB Galera 10.0.27, MariaDB 10.1.17), 131072 (<= MariaDB Galera 10.0.26, MariaDB 10.1.16)",
+            "default": "0",
             "dynamic": true,
             "name": "wsrep_max_ws_rows",
             "range": {
@@ -2700,7 +2700,7 @@
         },
         "wsrep_max_ws_size": {
             "cli": "--wsrep-max-ws-size=#",
-            "default": "2147483647 (2GB, >= MariaDB Galera 10.0.27, MariaDB 10.1.17), 1073741824 (1GB, <= MariaDB Galera 10.0.26, MariaDB 10.1.16)",
+            "default": "2147483647",
             "dynamic": true,
             "name": "wsrep_max_ws_size",
             "range": {
@@ -2828,7 +2828,7 @@
         },
         "wsrep_on": {
             "cli": "--wsrep-on[={0|1}]",
-            "default": "OFF (>= MariaDB 10.1), ON (<= MariaDB Galera Cluster 10.0),",
+            "default": "OFF",
             "dynamic": true,
             "name": "wsrep_on",
             "scope": [

@@ -12408,7 +12408,7 @@
         },
         "slave_connections_needed_for_purge": {
             "cli": "--slave-connections-needed-for-purge=#",
-            "default": "1",
+            "default": "1; 0 on Galera cluster nodes.",
             "dynamic": true,
             "name": "slave_connections_needed_for_purge",
             "range": {

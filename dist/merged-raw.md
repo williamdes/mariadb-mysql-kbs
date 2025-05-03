@@ -10442,7 +10442,7 @@
 |Command line|`--slave-connections-needed-for-purge=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`1`|
+|Default value|`1; 0 on Galera cluster nodes.`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.844674407371E+19`|
 

@@ -4531,411 +4531,6 @@
                 }
             ]
         },
-        "key_buffer_size": {
-            "cli": "--key-buffer-size=#",
-            "default": "8388608",
-            "dynamic": true,
-            "name": "key_buffer_size",
-            "range": {
-                "from": 0
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "key_buffer_size",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_key_buffer_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_key_buffer_size",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "key_cache_age_threshold": {
-            "cli": "--key-cache-age-threshold=#",
-            "default": "300",
-            "dynamic": true,
-            "name": "key_cache_age_threshold",
-            "range": {
-                "from": 100,
-                "to": 4294967295
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "key_cache_age_threshold",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_key_cache_age_threshold",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_key_cache_age_threshold",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "key_cache_block_size": {
-            "cli": "--key-cache-block-size=#",
-            "default": "1024",
-            "dynamic": true,
-            "name": "key_cache_block_size",
-            "range": {
-                "from": 512,
-                "to": 16384
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "key_cache_block_size",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_key_cache_block_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_key_cache_block_size",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "key_cache_division_limit": {
-            "cli": "--key-cache-division-limit=#",
-            "default": "100",
-            "dynamic": true,
-            "name": "key_cache_division_limit",
-            "range": {
-                "from": 1,
-                "to": 100
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "key_cache_division_limit",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_key_cache_division_limit",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_key_cache_division_limit",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "key_cache_file_hash_size": {
-            "cli": "--key-cache-file-hash-size=#",
-            "default": "512",
-            "dynamic": true,
-            "name": "key_cache_file_hash_size",
-            "range": {
-                "from": 128,
-                "to": 16384
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "key_cache_file_hash_size",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                }
-            ]
-        },
-        "key_cache_segments": {
-            "cli": "--key-cache-segments=#",
-            "default": "0",
-            "dynamic": true,
-            "name": "key_cache_segments",
-            "range": {
-                "from": 0,
-                "to": 64
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "key_cache_segments",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                }
-            ]
-        },
-        "myisam_block_size": {
-            "cli": "--myisam-block-size=#",
-            "default": "1024",
-            "name": "myisam_block_size",
-            "range": {
-                "from": 1024,
-                "to": 16384
-            },
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "myisam_block_size",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "option_mysqld_myisam-block-size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
-                }
-            ]
-        },
-        "myisam_data_pointer_size": {
-            "cli": "--myisam-data-pointer-size=#",
-            "default": "6",
-            "dynamic": true,
-            "name": "myisam_data_pointer_size",
-            "range": {
-                "from": 2,
-                "to": 7
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "myisam_data_pointer_size",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_myisam_data_pointer_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_myisam_data_pointer_size",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "myisam_max_extra_sort_file_size": {
-            "name": "myisam_max_extra_sort_file_size",
-            "ids": [
-                {
-                    "anchor": "myisam_max_extra_sort_file_size",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                }
-            ]
-        },
-        "myisam_max_sort_file_size": {
-            "cli": "--myisam-max-sort-file-size=#",
-            "dynamic": true,
-            "name": "myisam_max_sort_file_size",
-            "range": {
-                "from": 0
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "myisam_max_sort_file_size",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_myisam_max_sort_file_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_myisam_max_sort_file_size",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "myisam_mmap_size": {
-            "cli": "--myisam-mmap-size=#",
-            "dynamic": false,
-            "name": "myisam_mmap_size",
-            "range": {
-                "from": 7,
-                "to": 1.8446744073709548e+19
-            },
-            "scope": [
-                "global"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "myisam_mmap_size",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_myisam_mmap_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_myisam_mmap_size",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "myisam_recover_options": {
-            "cli": "--myisam-recover-options[=list]",
-            "default": "0",
-            "dynamic": false,
-            "name": "myisam_recover_options",
-            "scope": [
-                "global"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "DEFAULT",
-                "BACKUP",
-                "BACKUP_ALL",
-                "FORCE",
-                "QUICK"
-            ],
-            "ids": [
-                {
-                    "anchor": "myisam_recover_options",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_myisam_recover_options",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_myisam_recover_options",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "myisam_repair_threads": {
-            "cli": "--myisam-repair-threads=#",
-            "default": "1",
-            "dynamic": true,
-            "name": "myisam_repair_threads",
-            "range": {
-                "from": 1,
-                "to": 1.8446744073709548e+19
-            },
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "myisam_repair_threads",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_myisam_repair_threads",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_myisam_repair_threads",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "myisam_sort_buffer_size": {
-            "cli": "--myisam-sort-buffer-size=#",
-            "default": "8388608",
-            "dynamic": true,
-            "name": "myisam_sort_buffer_size",
-            "range": {
-                "from": 4096,
-                "to": 1.8446744073709548e+19
-            },
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
-            "ids": [
-                {
-                    "anchor": "myisam_sort_buffer_size",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_myisam_sort_buffer_size",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_myisam_sort_buffer_size",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "myisam_stats_method": {
-            "cli": "--myisam-stats-method=name",
-            "default": "nulls_unequal",
-            "dynamic": true,
-            "name": "myisam_stats_method",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "enumeration",
-            "validValues": [
-                "nulls_unequal",
-                "nulls_equal",
-                "nulls_ignored"
-            ],
-            "ids": [
-                {
-                    "anchor": "myisam_stats_method",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_myisam_stats_method",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_myisam_stats_method",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
-        "myisam_use_mmap": {
-            "cli": "--myisam-use-mmap[={OFF|ON}]",
-            "default": "OFF",
-            "dynamic": true,
-            "name": "myisam_use_mmap",
-            "scope": [
-                "global"
-            ],
-            "type": "boolean",
-            "ids": [
-                {
-                    "anchor": "myisam_use_mmap",
-                    "url": "https://mariadb.com/kb/en/myisam-system-variables/"
-                },
-                {
-                    "anchor": "sysvar_myisam_use_mmap",
-                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
-                },
-                {
-                    "anchor": "sysvar_myisam_use_mmap",
-                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
-                }
-            ]
-        },
         "Rocksdb_block_cache_add": {
             "name": "Rocksdb_block_cache_add",
             "scope": [
@@ -42709,7 +42304,17 @@
         },
         "ndb_optimized_node_selection": {
             "cli": "--ndb-optimized-node-selection",
+            "default": "3",
+            "dynamic": true,
             "name": "ndb_optimized_node_selection",
+            "range": {
+                "from": 0,
+                "to": 3
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
             "ids": [
                 {
                     "anchor": "option_mysqld_ndb-optimized-node-selection",
@@ -46879,6 +46484,22 @@
                 }
             ]
         },
+        "myisam_block_size": {
+            "cli": "--myisam-block-size=#",
+            "default": "1024",
+            "name": "myisam_block_size",
+            "range": {
+                "from": 1024,
+                "to": 16384
+            },
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "option_mysqld_myisam-block-size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-options.html"
+                }
+            ]
+        },
         "no_dd_upgrade": {
             "cli": "--no-dd-upgrade[={OFF|ON}]",
             "default": "OFF",
@@ -48678,6 +48299,100 @@
                 }
             ]
         },
+        "key_buffer_size": {
+            "cli": "--key-buffer-size=#",
+            "default": "8388608",
+            "dynamic": true,
+            "name": "key_buffer_size",
+            "range": {
+                "from": 0
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_key_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_key_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "key_cache_age_threshold": {
+            "cli": "--key-cache-age-threshold=#",
+            "default": "300",
+            "dynamic": true,
+            "name": "key_cache_age_threshold",
+            "range": {
+                "from": 100
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_key_cache_age_threshold",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_key_cache_age_threshold",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "key_cache_block_size": {
+            "cli": "--key-cache-block-size=#",
+            "default": "1024",
+            "dynamic": true,
+            "name": "key_cache_block_size",
+            "range": {
+                "from": 512,
+                "to": 16384
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_key_cache_block_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_key_cache_block_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "key_cache_division_limit": {
+            "cli": "--key-cache-division-limit=#",
+            "default": "100",
+            "dynamic": true,
+            "name": "key_cache_division_limit",
+            "range": {
+                "from": 1,
+                "to": 100
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_key_cache_division_limit",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_key_cache_division_limit",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
         "log_error_services": {
             "cli": "--log-error-services=value",
             "default": "log_filter_internal; log_sink_internal",
@@ -48957,6 +48672,195 @@
                 },
                 {
                     "anchor": "sysvar_mecab_rc_file",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "myisam_data_pointer_size": {
+            "cli": "--myisam-data-pointer-size=#",
+            "default": "6",
+            "dynamic": true,
+            "name": "myisam_data_pointer_size",
+            "range": {
+                "from": 2,
+                "to": 7
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_myisam_data_pointer_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_data_pointer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "myisam_max_sort_file_size": {
+            "cli": "--myisam-max-sort-file-size=#",
+            "dynamic": true,
+            "name": "myisam_max_sort_file_size",
+            "range": {
+                "from": 0
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_myisam_max_sort_file_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_max_sort_file_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "myisam_mmap_size": {
+            "cli": "--myisam-mmap-size=#",
+            "dynamic": false,
+            "name": "myisam_mmap_size",
+            "range": {
+                "from": 7
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_myisam_mmap_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_mmap_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "myisam_recover_options": {
+            "cli": "--myisam-recover-options[=list]",
+            "default": "OFF",
+            "dynamic": false,
+            "name": "myisam_recover_options",
+            "scope": [
+                "global"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "OFF",
+                "DEFAULT",
+                "BACKUP",
+                "FORCE",
+                "QUICK"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_myisam_recover_options",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_recover_options",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "myisam_repair_threads": {
+            "cli": "--myisam-repair-threads=#",
+            "default": "1",
+            "dynamic": true,
+            "name": "myisam_repair_threads",
+            "range": {
+                "from": 1
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_myisam_repair_threads",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_repair_threads",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "myisam_sort_buffer_size": {
+            "cli": "--myisam-sort-buffer-size=#",
+            "default": "8388608",
+            "dynamic": true,
+            "name": "myisam_sort_buffer_size",
+            "range": {
+                "from": 4096
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "sysvar_myisam_sort_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_sort_buffer_size",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "myisam_stats_method": {
+            "cli": "--myisam-stats-method=name",
+            "default": "nulls_unequal",
+            "dynamic": true,
+            "name": "myisam_stats_method",
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "enumeration",
+            "validValues": [
+                "nulls_unequal",
+                "nulls_equal",
+                "nulls_ignored"
+            ],
+            "ids": [
+                {
+                    "anchor": "sysvar_myisam_stats_method",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_stats_method",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
+                }
+            ]
+        },
+        "myisam_use_mmap": {
+            "cli": "--myisam-use-mmap[={OFF|ON}]",
+            "default": "OFF",
+            "dynamic": true,
+            "name": "myisam_use_mmap",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "sysvar_myisam_use_mmap",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html"
+                },
+                {
+                    "anchor": "sysvar_myisam_use_mmap",
                     "url": "https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html"
                 }
             ]

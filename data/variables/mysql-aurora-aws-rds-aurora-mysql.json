@@ -313,6 +313,18 @@
       "type": "byte"
     },
     {
+      "name": "Aurora_in_memory_relaylog_status"
+    },
+    {
+      "name": "Aurora_in_memory_relaylog_disabled_reason"
+    },
+    {
+      "name": "Aurora_in_memory_relaylog_fallback_count"
+    },
+    {
+      "name": "Aurora_in_memory_relaylog_recovery_count"
+    },
+    {
       "name": "Aurora_thread_pool_thread_count",
       "type": "integer"
     },

@@ -290,8 +290,18 @@
     },
     {
       "cli": "--ndb-optimized-node-selection",
+      "default": "3",
+      "dynamic": true,
       "id": "option_mysqld_ndb-optimized-node-selection",
-      "name": "ndb_optimized_node_selection"
+      "name": "ndb_optimized_node_selection",
+      "range": {
+        "from": 0,
+        "to": 3
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     },
     {
       "cli": "--ndb-transid-mysql-connection-map[=state]",

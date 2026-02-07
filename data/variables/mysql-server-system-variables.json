@@ -931,7 +931,7 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "TRADITIONAL (DEFAULT)",
+        "TRADITIONAL",
         "JSON",
         "TREE"
       ]
@@ -2892,19 +2892,6 @@
       ]
     },
     {
-      "default": "100000.000000",
-      "dynamic": true,
-      "id": "sysvar_secondary_engine_cost_threshold",
-      "name": "secondary_engine_cost_threshold",
-      "range": {
-        "from": 0
-      },
-      "scope": [
-        "session"
-      ],
-      "type": "numeric"
-    },
-    {
       "cli": "--schema-definition-cache=#",
       "default": "256",
       "dynamic": true,
@@ -3118,17 +3105,6 @@
         "global"
       ],
       "type": "string"
-    },
-    {
-      "cli": "--show-create-table-skip-secondary-engine[={OFF|ON}]",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "sysvar_show_create_table_skip_secondary_engine",
-      "name": "show_create_table_skip_secondary_engine",
-      "scope": [
-        "session"
-      ],
-      "type": "boolean"
     },
     {
       "cli": "--show-create-table-verbosity[={OFF|ON}]",
@@ -4114,21 +4090,6 @@
         "session"
       ],
       "type": "boolean"
-    },
-    {
-      "default": "ON",
-      "dynamic": true,
-      "id": "sysvar_use_secondary_engine",
-      "name": "use_secondary_engine",
-      "scope": [
-        "session"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "ON",
-        "FORCED"
-      ]
     },
     {
       "dynamic": false,

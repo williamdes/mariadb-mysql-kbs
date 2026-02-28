@@ -789,10 +789,6 @@
       "name": "Rsa_public_key"
     },
     {
-      "id": "statvar_Secondary_engine_execution_count",
-      "name": "Secondary_engine_execution_count"
-    },
-    {
       "id": "statvar_Select_full_join",
       "name": "Select_full_join"
     },

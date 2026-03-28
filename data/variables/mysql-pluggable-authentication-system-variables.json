@@ -42,7 +42,12 @@
       "scope": [
         "global"
       ],
-      "type": "string"
+      "type": "string",
+      "validValues": [
+        "SCRAM-SHA-1",
+        "SCRAM-SHA-256",
+        "GSSAPI"
+      ]
     },
     {
       "cli": "--authentication-ldap-sasl-bind-base-dn=value",
@@ -132,7 +137,8 @@
       "id": "sysvar_authentication_ldap_sasl_log_status",
       "name": "authentication_ldap_sasl_log_status",
       "range": {
-        "from": 1
+        "from": 1,
+        "to": 6
       },
       "scope": [
         "global"
@@ -315,7 +321,8 @@
       "id": "sysvar_authentication_ldap_simple_log_status",
       "name": "authentication_ldap_simple_log_status",
       "range": {
-        "from": 1
+        "from": 1,
+        "to": 6
       },
       "scope": [
         "global"

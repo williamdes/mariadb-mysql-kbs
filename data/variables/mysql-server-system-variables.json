@@ -126,6 +126,7 @@
     },
     {
       "cli": "--admin-tls-version=protocol_list",
+      "default": "TLSv1.2,TLSv1.3",
       "dynamic": true,
       "id": "sysvar_admin_tls_version",
       "name": "admin_tls_version",
@@ -303,7 +304,7 @@
     {
       "cli": "--caching-sha2-password-digest-rounds=#",
       "default": "5000",
-      "dynamic": false,
+      "dynamic": true,
       "id": "sysvar_caching_sha2_password_digest_rounds",
       "name": "caching_sha2_password_digest_rounds",
       "range": {
@@ -547,6 +548,7 @@
     },
     {
       "cli": "--connection-memory-chunk-size=#",
+      "default": "8192",
       "dynamic": true,
       "id": "sysvar_connection_memory_chunk_size",
       "name": "connection_memory_chunk_size",
@@ -1254,21 +1256,6 @@
       "type": "integer"
     },
     {
-      "cli": "--internal-tmp-disk-storage-engine=#",
-      "default": "INNODB",
-      "dynamic": true,
-      "id": "sysvar_internal_tmp_disk_storage_engine",
-      "name": "internal_tmp_disk_storage_engine",
-      "scope": [
-        "global"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "MYISAM",
-        "INNODB"
-      ]
-    },
-    {
       "cli": "--internal-tmp-mem-storage-engine=#",
       "default": "TempTable",
       "dynamic": true,
@@ -1560,8 +1547,12 @@
     {
       "cli": "--log-raw[={OFF|ON}]",
       "default": "OFF",
+      "dynamic": true,
       "id": "sysvar_log_raw",
       "name": "log_raw",
+      "scope": [
+        "global"
+      ],
       "type": "boolean"
     },
     {
@@ -1585,50 +1576,6 @@
         "global"
       ],
       "type": "boolean"
-    },
-    {
-      "cli": "--log-syslog[={OFF|ON}]",
-      "default": "ON (when error logging to system log is enabled)",
-      "dynamic": true,
-      "id": "sysvar_log_syslog",
-      "name": "log_syslog",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--log-syslog-facility=value",
-      "default": "daemon",
-      "dynamic": true,
-      "id": "sysvar_log_syslog_facility",
-      "name": "log_syslog_facility",
-      "scope": [
-        "global"
-      ],
-      "type": "string"
-    },
-    {
-      "cli": "--log-syslog-include-pid[={OFF|ON}]",
-      "default": "ON",
-      "dynamic": true,
-      "id": "sysvar_log_syslog_include_pid",
-      "name": "log_syslog_include_pid",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--log-syslog-tag=tag",
-      "default": "empty string",
-      "dynamic": true,
-      "id": "sysvar_log_syslog_tag",
-      "name": "log_syslog_tag",
-      "scope": [
-        "global"
-      ],
-      "type": "string"
     },
     {
       "cli": "--log-timestamps=#",
@@ -1915,7 +1862,8 @@
       "id": "sysvar_max_prepared_stmt_count",
       "name": "max_prepared_stmt_count",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 4194304
       },
       "scope": [
         "global"
@@ -2008,36 +1956,6 @@
       "type": "file name"
     },
     {
-      "cli": "--metadata-locks-cache-size=#",
-      "default": "1024",
-      "dynamic": false,
-      "id": "sysvar_metadata_locks_cache_size",
-      "name": "metadata_locks_cache_size",
-      "range": {
-        "from": 1,
-        "to": 1048576
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--metadata-locks-hash-instances=#",
-      "default": "8",
-      "dynamic": false,
-      "id": "sysvar_metadata_locks_hash_instances",
-      "name": "metadata_locks_hash_instances",
-      "range": {
-        "from": 1,
-        "to": 1024
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--min-examined-row-limit=#",
       "default": "0",
       "dynamic": true,
@@ -2110,21 +2028,6 @@
         "FORCE",
         "QUICK"
       ]
-    },
-    {
-      "cli": "--myisam-repair-threads=#",
-      "default": "1",
-      "dynamic": true,
-      "id": "sysvar_myisam_repair_threads",
-      "name": "myisam_repair_threads",
-      "range": {
-        "from": 1
-      },
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
     },
     {
       "cli": "--myisam-sort-buffer-size=#",
@@ -2386,7 +2289,34 @@
         "global",
         "session"
       ],
-      "type": "set"
+      "type": "set",
+      "validValues": [
+        "batched_key_access={on|off}",
+        "block_nested_loop={on|off}",
+        "condition_fanout_filter={on|off}",
+        "derived_condition_pushdown={on|off}",
+        "derived_merge={on|off}",
+        "duplicateweedout={on|off}",
+        "engine_condition_pushdown={on|off}",
+        "firstmatch={on|off}",
+        "hash_join={on|off}",
+        "index_condition_pushdown={on|off}",
+        "index_merge={on|off}",
+        "index_merge_intersection={on|off}",
+        "index_merge_sort_union={on|off}",
+        "index_merge_union={on|off}",
+        "loosescan={on|off}",
+        "materialization={on|off}",
+        "mrr={on|off}",
+        "mrr_cost_based={on|off}",
+        "prefer_ordering_index={on|off}",
+        "semijoin={on|off}",
+        "skip_scan={on|off}",
+        "subquery_materialization_cost_based={on|off}",
+        "subquery_to_derived={on|off}",
+        "use_index_extensions={on|off}",
+        "use_invisible_indexes={on|off}"
+      ]
     },
     {
       "cli": "--optimizer-trace=value",
@@ -3415,6 +3345,7 @@
     {
       "cli": "--ssl-ca=file_name",
       "default": "NULL",
+      "dynamic": true,
       "id": "sysvar_ssl_ca",
       "name": "ssl_ca",
       "scope": [
@@ -3425,6 +3356,7 @@
     {
       "cli": "--ssl-capath=dir_name",
       "default": "NULL",
+      "dynamic": true,
       "id": "sysvar_ssl_capath",
       "name": "ssl_capath",
       "scope": [
@@ -3435,6 +3367,7 @@
     {
       "cli": "--ssl-cert=file_name",
       "default": "NULL",
+      "dynamic": true,
       "id": "sysvar_ssl_cert",
       "name": "ssl_cert",
       "scope": [
@@ -3445,6 +3378,7 @@
     {
       "cli": "--ssl-cipher=name",
       "default": "NULL",
+      "dynamic": true,
       "id": "sysvar_ssl_cipher",
       "name": "ssl_cipher",
       "scope": [
@@ -3455,6 +3389,7 @@
     {
       "cli": "--ssl-crl=file_name",
       "default": "NULL",
+      "dynamic": true,
       "id": "sysvar_ssl_crl",
       "name": "ssl_crl",
       "scope": [
@@ -3465,6 +3400,7 @@
     {
       "cli": "--ssl-crlpath=dir_name",
       "default": "NULL",
+      "dynamic": true,
       "id": "sysvar_ssl_crlpath",
       "name": "ssl_crlpath",
       "scope": [
@@ -3491,6 +3427,7 @@
     {
       "cli": "--ssl-key=file_name",
       "default": "NULL",
+      "dynamic": true,
       "id": "sysvar_ssl_key",
       "name": "ssl_key",
       "scope": [
@@ -3885,7 +3822,8 @@
       "id": "sysvar_thread_pool_size",
       "name": "thread_pool_size",
       "range": {
-        "from": 1
+        "from": 1,
+        "to": 512
       },
       "scope": [
         "global"
@@ -3924,6 +3862,7 @@
     },
     {
       "cli": "--thread-stack=#",
+      "default": "1048576",
       "dynamic": false,
       "id": "sysvar_thread_stack",
       "name": "thread_stack",
@@ -3973,6 +3912,8 @@
     },
     {
       "cli": "--tls-version=protocol_list",
+      "default": "TLSv1.2,TLSv1.3",
+      "dynamic": true,
       "id": "sysvar_tls_version",
       "name": "tls_version",
       "scope": [
@@ -4211,8 +4152,40 @@
       "name": "insert_id"
     },
     {
+      "id": "sysvar_internal_tmp_disk_storage_engine",
+      "name": "internal_tmp_disk_storage_engine"
+    },
+    {
       "id": "sysvar_last_insert_id",
       "name": "last_insert_id"
+    },
+    {
+      "id": "sysvar_log_syslog",
+      "name": "log_syslog"
+    },
+    {
+      "id": "sysvar_log_syslog_facility",
+      "name": "log_syslog_facility"
+    },
+    {
+      "id": "sysvar_log_syslog_include_pid",
+      "name": "log_syslog_include_pid"
+    },
+    {
+      "id": "sysvar_log_syslog_tag",
+      "name": "log_syslog_tag"
+    },
+    {
+      "id": "sysvar_metadata_locks_cache_size",
+      "name": "metadata_locks_cache_size"
+    },
+    {
+      "id": "sysvar_metadata_locks_hash_instances",
+      "name": "metadata_locks_hash_instances"
+    },
+    {
+      "id": "sysvar_myisam_repair_threads",
+      "name": "myisam_repair_threads"
     },
     {
       "id": "sysvar_profiling",

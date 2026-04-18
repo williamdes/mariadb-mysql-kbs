@@ -239,8 +239,12 @@
     {
       "cli": "--log-raw[={OFF|ON}]",
       "default": "OFF",
+      "dynamic": true,
       "id": "option_mysqld_log-raw",
       "name": "log_raw",
+      "scope": [
+        "global"
+      ],
       "type": "boolean"
     },
     {

@@ -249,11 +249,18 @@
     },
     {
       "cli": "--audit-log-read-buffer-size=#",
+      "default": "32768",
+      "dynamic": true,
       "id": "sysvar_audit_log_read_buffer_size",
       "name": "audit_log_read_buffer_size",
       "range": {
+        "from": 32768,
         "to": 4194304
       },
+      "scope": [
+        "global",
+        "session"
+      ],
       "type": "integer"
     },
     {

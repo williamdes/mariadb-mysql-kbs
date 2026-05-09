@@ -1,17 +1,5 @@
 {
-  "data": [
-    {
-      "cli": "--userstat=1",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "userstat",
-      "name": "userstat",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    }
-  ],
+  "data": [],
   "name": "user-statistics-variables",
-  "url": "https://mariadb.com/kb/en/user-statistics/"
+  "url": "https://mariadb.com/docs?q=library/documentation/user-statistics"
 }

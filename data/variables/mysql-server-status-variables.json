@@ -1007,38 +1007,6 @@
     {
       "id": "statvar_Uptime_since_flush_status",
       "name": "Uptime_since_flush_status"
-    },
-    {
-      "id": "statvar_Com_xxx",
-      "name": "Com_stmt_prepare"
-    },
-    {
-      "id": "statvar_Com_xxx",
-      "name": "Com_stmt_execute"
-    },
-    {
-      "id": "statvar_Com_xxx",
-      "name": "Com_stmt_fetch"
-    },
-    {
-      "id": "statvar_Com_xxx",
-      "name": "Com_stmt_send_long_data"
-    },
-    {
-      "id": "statvar_Com_xxx",
-      "name": "Com_stmt_reset"
-    },
-    {
-      "id": "statvar_Com_xxx",
-      "name": "Com_stmt_close"
-    },
-    {
-      "id": "statvar_Innodb_redo_log_resize_status",
-      "name": "OK"
-    },
-    {
-      "id": "statvar_Innodb_redo_log_resize_status",
-      "name": "Resizing down"
     }
   ],
   "name": "server-status-variables",

@@ -419,7 +419,12 @@
         "global",
         "session"
       ],
-      "type": "enumeration"
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "MURMUR32",
+        "XXHASH64"
+      ]
     },
     {
       "id": "sysvar_max_connections",

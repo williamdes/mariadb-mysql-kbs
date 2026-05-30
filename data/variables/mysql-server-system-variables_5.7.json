@@ -390,6 +390,7 @@
     },
     {
       "cli": "--default-password-lifetime=#",
+      "default": "0",
       "dynamic": true,
       "id": "sysvar_default_password_lifetime",
       "name": "default_password_lifetime",
@@ -1657,21 +1658,6 @@
       ]
     },
     {
-      "cli": "--myisam-repair-threads=#",
-      "default": "1",
-      "dynamic": true,
-      "id": "sysvar_myisam_repair_threads",
-      "name": "myisam_repair_threads",
-      "range": {
-        "from": 1
-      },
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--myisam-sort-buffer-size=#",
       "default": "8388608",
       "dynamic": true,
@@ -1947,7 +1933,29 @@
         "global",
         "session"
       ],
-      "type": "set"
+      "type": "set",
+      "validValues": [
+        "batched_key_access={on|off}",
+        "block_nested_loop={on|off}",
+        "condition_fanout_filter={on|off}",
+        "derived_merge={on|off}",
+        "duplicateweedout={on|off}",
+        "engine_condition_pushdown={on|off}",
+        "firstmatch={on|off}",
+        "index_condition_pushdown={on|off}",
+        "index_merge={on|off}",
+        "index_merge_intersection={on|off}",
+        "index_merge_sort_union={on|off}",
+        "index_merge_union={on|off}",
+        "loosescan={on|off}",
+        "materialization={on|off}",
+        "mrr={on|off}",
+        "mrr_cost_based={on|off}",
+        "prefer_ordering_index={on|off}",
+        "semijoin={on|off}",
+        "subquery_materialization_cost_based={on|off}",
+        "use_index_extensions={on|off}"
+      ]
     },
     {
       "cli": "--optimizer-trace=value",
@@ -2265,6 +2273,7 @@
     },
     {
       "cli": "--range-optimizer-max-mem-size=#",
+      "default": "8388608",
       "dynamic": true,
       "id": "sysvar_range_optimizer_max_mem_size",
       "name": "range_optimizer_max_mem_size",
@@ -3108,6 +3117,7 @@
     },
     {
       "cli": "--tls-version=protocol_list",
+      "default": "TLSv1,TLSv1.1,TLSv1.2",
       "dynamic": false,
       "id": "sysvar_tls_version",
       "name": "tls_version",
@@ -3161,8 +3171,13 @@
     {
       "cli": "--transaction-isolation=name",
       "default": "REPEATABLE-READ",
+      "dynamic": true,
       "id": "sysvar_transaction_isolation",
       "name": "transaction_isolation",
+      "scope": [
+        "global",
+        "session"
+      ],
       "type": "enumeration",
       "validValues": [
         "READ-UNCOMMITTED",
@@ -3190,8 +3205,13 @@
     {
       "cli": "--transaction-read-only[={OFF|ON}]",
       "default": "OFF",
+      "dynamic": true,
       "id": "sysvar_transaction_read_only",
       "name": "transaction_read_only",
+      "scope": [
+        "global",
+        "session"
+      ],
       "type": "boolean"
     },
     {
@@ -3350,6 +3370,10 @@
     {
       "id": "sysvar_max_tmp_tables",
       "name": "max_tmp_tables"
+    },
+    {
+      "id": "sysvar_myisam_repair_threads",
+      "name": "myisam_repair_threads"
     },
     {
       "id": "sysvar_profiling",

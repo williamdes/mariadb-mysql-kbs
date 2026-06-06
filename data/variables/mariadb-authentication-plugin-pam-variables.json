@@ -1,52 +1,5 @@
 {
-  "data": [
-    {
-      "cli": "--pam-debug",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "pam_debug",
-      "name": "pam_debug",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--pam-use-cleartext-plugin",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "pam_use_cleartext_plugin",
-      "name": "pam_use_cleartext_plugin",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--pam-winbind-workaround",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "pam_winbind_workaround",
-      "name": "pam_winbind_workaround",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--pam=value",
-      "default": "ON",
-      "id": "pam",
-      "name": "pam",
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "ON",
-        "FORCE",
-        "FORCE_PLUS_PERMANENT"
-      ]
-    }
-  ],
+  "data": [],
   "name": "authentication-plugin-pam-variables",
-  "url": "https://mariadb.com/docs/server/reference/plugins/authentication-plugins/authentication-with-pluggable-authentication-modules-pam/authentication-plugin-pam"
+  "url": "https://mariadb.com/docs?q=library/documentation/authentication-plugin-pam"
 }

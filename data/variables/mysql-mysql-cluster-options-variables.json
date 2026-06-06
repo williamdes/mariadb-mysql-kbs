@@ -53,8 +53,12 @@
     {
       "cli": "--ndb-cluster-connection-pool-nodeids",
       "default": "",
+      "dynamic": false,
       "id": "option_mysqld_ndb-cluster-connection-pool-nodeids",
       "name": "ndb_cluster_connection_pool_nodeids",
+      "scope": [
+        "global"
+      ],
       "type": "set"
     },
     {
@@ -97,6 +101,7 @@
     },
     {
       "cli": "--ndb-default-column-format={FIXED|DYNAMIC}",
+      "default": "FIXED",
       "dynamic": true,
       "id": "option_mysqld_ndb-default-column-format",
       "name": "ndb_default_column_format",
@@ -571,6 +576,7 @@
     },
     {
       "cli": "--ndb-report-thresh-binlog-epoch-slip=#",
+      "default": "10",
       "dynamic": true,
       "id": "sysvar_ndb_report_thresh_binlog_epoch_slip",
       "name": "ndb_report_thresh_binlog_epoch_slip",

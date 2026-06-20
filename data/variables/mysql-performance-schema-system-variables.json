@@ -193,11 +193,13 @@
     },
     {
       "cli": "--performance-schema-max-cond-classes=#",
+      "default": "150",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_cond_classes",
       "name": "performance_schema_max_cond_classes",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 1024
       },
       "scope": [
         "global"
@@ -256,7 +258,8 @@
       "id": "sysvar_performance_schema_max_file_classes",
       "name": "performance_schema_max_file_classes",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 1024
       },
       "scope": [
         "global"
@@ -340,11 +343,13 @@
     },
     {
       "cli": "--performance-schema-max-mutex-classes=#",
+      "default": "350",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_mutex_classes",
       "name": "performance_schema_max_mutex_classes",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 1024
       },
       "scope": [
         "global"
@@ -383,11 +388,13 @@
     },
     {
       "cli": "--performance-schema-max-rwlock-classes=#",
+      "default": "100",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_rwlock_classes",
       "name": "performance_schema_max_rwlock_classes",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 1024
       },
       "scope": [
         "global"
@@ -431,7 +438,8 @@
       "id": "sysvar_performance_schema_max_socket_classes",
       "name": "performance_schema_max_socket_classes",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 1024
       },
       "scope": [
         "global"
@@ -470,11 +478,13 @@
     },
     {
       "cli": "--performance-schema-max-stage-classes=#",
+      "default": "175",
       "dynamic": false,
       "id": "sysvar_performance_schema_max_stage_classes",
       "name": "performance_schema_max_stage_classes",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 1024
       },
       "scope": [
         "global"
@@ -562,7 +572,8 @@
       "id": "sysvar_performance_schema_max_thread_classes",
       "name": "performance_schema_max_thread_classes",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 1024
       },
       "scope": [
         "global"

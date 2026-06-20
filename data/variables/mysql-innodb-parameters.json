@@ -715,13 +715,15 @@
       "type": "boolean"
     },
     {
-      "cli": "--innodb-doublewrite=value (≥ 8.0.30)--innodb-doublewrite[={OFF|ON}] (≤ 8.0.29)",
+      "cli": "--innodb-doublewrite=value",
       "default": "ON",
+      "dynamic": true,
       "id": "sysvar_innodb_doublewrite",
       "name": "innodb_doublewrite",
       "scope": [
         "global"
       ],
+      "type": "enumeration",
       "validValues": [
         "ON",
         "OFF",
@@ -1586,6 +1588,7 @@
     {
       "cli": "--innodb-open-files=#",
       "default": "-1 (signifies autosizing; do not assign this literal value)",
+      "dynamic": true,
       "id": "sysvar_innodb_open_files",
       "name": "innodb_open_files",
       "range": {
@@ -1793,7 +1796,8 @@
       "id": "sysvar_innodb_redo_log_capacity",
       "name": "innodb_redo_log_capacity",
       "range": {
-        "from": 8388608
+        "from": 8388608,
+        "to": 549755813888
       },
       "scope": [
         "global"
@@ -1903,7 +1907,8 @@
       "id": "sysvar_innodb_spin_wait_delay",
       "name": "innodb_spin_wait_delay",
       "range": {
-        "from": 0
+        "from": 0,
+        "to": 1000
       },
       "scope": [
         "global"

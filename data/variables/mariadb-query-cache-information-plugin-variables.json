@@ -1,19 +1,5 @@
 {
-  "data": [
-    {
-      "cli": "--query-cache-info=value",
-      "default": "ON",
-      "id": "query_cache_info",
-      "name": "query_cache_info",
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "ON",
-        "FORCE",
-        "FORCE_PLUS_PERMANENT"
-      ]
-    }
-  ],
+  "data": [],
   "name": "query-cache-information-plugin-variables",
-  "url": "https://mariadb.com/docs/server/reference/plugins/other-plugins/query-cache-information-plugin"
+  "url": "https://mariadb.com/docs?q=library/documentation/query-cache-information-plugin"
 }

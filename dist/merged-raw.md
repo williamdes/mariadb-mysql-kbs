@@ -768,200 +768,6 @@
 |------|----|
 |mariadb.com|[aws_key_management](https://mariadb.com/docs/server/security/encryption/data-at-rest-encryption/key-management-and-encryption-plugins/aws-key-management-encryption-plugin#aws_key_management)|
 
-## Cassandra_multiget_keys_scanned
-|name|value|
-|----|-----|
-|Name|`Cassandra_multiget_keys_scanned`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_multiget_keys_scanned](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-status-variables#cassandra_multiget_keys_scanned)|
-
-## Cassandra_multiget_reads
-|name|value|
-|----|-----|
-|Name|`Cassandra_multiget_reads`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_multiget_reads](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-status-variables#cassandra_multiget_reads)|
-
-## Cassandra_multiget_rows_read
-|name|value|
-|----|-----|
-|Name|`Cassandra_multiget_rows_read`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_multiget_rows_read](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-status-variables#cassandra_multiget_rows_read)|
-
-## Cassandra_network_exceptions
-|name|value|
-|----|-----|
-|Name|`Cassandra_network_exceptions`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_network_exceptions](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-status-variables#cassandra_network_exceptions)|
-
-## Cassandra_row_insert_batches
-|name|value|
-|----|-----|
-|Name|`Cassandra_row_insert_batches`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_row_insert_batches](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-status-variables#cassandra_row_insert_batches)|
-
-## Cassandra_row_inserts
-|name|value|
-|----|-----|
-|Name|`Cassandra_row_inserts`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_row_inserts](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-status-variables#cassandra_row_inserts)|
-
-## Cassandra_timeout_exceptions
-|name|value|
-|----|-----|
-|Name|`Cassandra_timeout_exceptions`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_timeout_exceptions](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-status-variables#cassandra_timeout_exceptions)|
-
-## Cassandra_unavailable_exceptions
-|name|value|
-|----|-----|
-|Name|`Cassandra_unavailable_exceptions`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_unavailable_exceptions](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-status-variables#cassandra_unavailable_exceptions)|
-
-## cassandra_default_thrift_host
-|name|value|
-|----|-----|
-|Name|`cassandra_default_thrift_host`|
-|Type of variable|`string`|
-|Scope|`global`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_default_thrift_host](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-system-variables#cassandra_default_thrift_host)|
-
-## cassandra_failure_retries
-|name|value|
-|----|-----|
-|Name|`cassandra_failure_retries`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`3`|
-|Dynamic|`true`|
-|Valid value(s)|`1`, `1073741824`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_failure_retries](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-system-variables#cassandra_failure_retries)|
-
-## cassandra_insert_batch_size
-|name|value|
-|----|-----|
-|Name|`cassandra_insert_batch_size`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`100`|
-|Dynamic|`true`|
-|Valid value(s)|`1`, `1073741824`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_insert_batch_size](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-system-variables#cassandra_insert_batch_size)|
-
-## cassandra_multiget_batch_size
-|name|value|
-|----|-----|
-|Name|`cassandra_multiget_batch_size`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`100`|
-|Dynamic|`true`|
-|Valid value(s)|`1`, `1073741824`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_multiget_batch_size](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-system-variables#cassandra_multiget_batch_size)|
-
-## cassandra_read_consistency
-|name|value|
-|----|-----|
-|Name|`cassandra_read_consistency`|
-|Scope|`global`, `session`|
-|Default value|`ONE`|
-|Valid value(s)|`ONE`, `TWO`, `THREE`, `ANY`, `ALL`, `QUORUM`, `EACH_QUORUM`, `LOCAL_QUORUM`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_read_consistency](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-system-variables#cassandra_read_consistency)|
-
-## cassandra_rnd_batch_size
-|name|value|
-|----|-----|
-|Name|`cassandra_rnd_batch_size`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`10000`|
-|Valid value(s)|`1`, `1073741824`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_rnd_batch_size](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-system-variables#cassandra_rnd_batch_size)|
-
-## cassandra_write_consistency
-|name|value|
-|----|-----|
-|Name|`cassandra_write_consistency`|
-|Scope|`global`, `session`|
-|Default value|`ONE`|
-|Valid value(s)|`ONE`, `TWO`, `THREE`, `ANY`, `ALL`, `QUORUM`, `EACH_QUORUM`, `LOCAL_QUORUM`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[cassandra_write_consistency](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/cassandra/cassandra-system-variables#cassandra_write_consistency)|
-
 ## connect_class_path
 |name|value|
 |----|-----|
@@ -12519,1825 +12325,1825 @@
 |name|value|
 |----|-----|
 |Name|`Com_admin_commands`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_admin_commands](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_admin_commands)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_db
 |name|value|
 |----|-----|
 |Name|`Com_alter_db`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_db](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_db)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_db_upgrade
 |name|value|
 |----|-----|
 |Name|`Com_alter_db_upgrade`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_db_upgrade](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_db_upgrade)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_event
 |name|value|
 |----|-----|
 |Name|`Com_alter_event`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_event](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_event)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_function
 |name|value|
 |----|-----|
 |Name|`Com_alter_function`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_function](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_function)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_procedure
 |name|value|
 |----|-----|
 |Name|`Com_alter_procedure`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_procedure](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_procedure)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_sequence
 |name|value|
 |----|-----|
 |Name|`Com_alter_sequence`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_sequence](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_sequence)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_server
 |name|value|
 |----|-----|
 |Name|`Com_alter_server`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_server](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_server)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_table
 |name|value|
 |----|-----|
 |Name|`Com_alter_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_tablespace
 |name|value|
 |----|-----|
 |Name|`Com_alter_tablespace`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_tablespace](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_tablespace)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_user
 |name|value|
 |----|-----|
 |Name|`Com_alter_user`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_user](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_user)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_analyze
 |name|value|
 |----|-----|
 |Name|`Com_analyze`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_analyze](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_analyze)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_assign_to_keycache
 |name|value|
 |----|-----|
 |Name|`Com_assign_to_keycache`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_assign_to_keycache](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_assign_to_keycache)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_backup
 |name|value|
 |----|-----|
 |Name|`Com_backup`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_backup](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_backup)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_backup_lock
 |name|value|
 |----|-----|
 |Name|`Com_backup_lock`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_backup_lock](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_backup_lock)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_backup_table
 |name|value|
 |----|-----|
 |Name|`Com_backup_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_backup_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_backup_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_begin
 |name|value|
 |----|-----|
 |Name|`Com_begin`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_begin](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_begin)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_binlog
 |name|value|
 |----|-----|
 |Name|`Com_binlog`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_binlog](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_binlog)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_call_procedure
 |name|value|
 |----|-----|
 |Name|`Com_call_procedure`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_call_procedure](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_call_procedure)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_change_db
 |name|value|
 |----|-----|
 |Name|`Com_change_db`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_change_db](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_change_db)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_check
 |name|value|
 |----|-----|
 |Name|`Com_check`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_check](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_check)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_checksum
 |name|value|
 |----|-----|
 |Name|`Com_checksum`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_checksum](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_checksum)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_commit
 |name|value|
 |----|-----|
 |Name|`Com_commit`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_commit](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_commit)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_compound_sql
 |name|value|
 |----|-----|
 |Name|`Com_compound_sql`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_compound_sql](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_compound_sql)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_db
 |name|value|
 |----|-----|
 |Name|`Com_create_db`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_db](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_db)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_event
 |name|value|
 |----|-----|
 |Name|`Com_create_event`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_event](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_event)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_function
 |name|value|
 |----|-----|
 |Name|`Com_create_function`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_function](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_function)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_index
 |name|value|
 |----|-----|
 |Name|`Com_create_index`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_index](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_index)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_package
 |name|value|
 |----|-----|
 |Name|`Com_create_package`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_package](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_package)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_package_body
 |name|value|
 |----|-----|
 |Name|`Com_create_package_body`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_package_body](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_package_body)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_procedure
 |name|value|
 |----|-----|
 |Name|`Com_create_procedure`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_procedure](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_procedure)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_role
 |name|value|
 |----|-----|
 |Name|`Com_create_role`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_role](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_role)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_sequence
 |name|value|
 |----|-----|
 |Name|`Com_create_sequence`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_sequence](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_sequence)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_server
 |name|value|
 |----|-----|
 |Name|`Com_create_server`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_server](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_server)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_table
 |name|value|
 |----|-----|
 |Name|`Com_create_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_temporary_table
 |name|value|
 |----|-----|
 |Name|`Com_create_temporary_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_temporary_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_temporary_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_trigger
 |name|value|
 |----|-----|
 |Name|`Com_create_trigger`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_trigger](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_trigger)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_udf
 |name|value|
 |----|-----|
 |Name|`Com_create_udf`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_udf](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_udf)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_user
 |name|value|
 |----|-----|
 |Name|`Com_create_user`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_user](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_user)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_view
 |name|value|
 |----|-----|
 |Name|`Com_create_view`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_view](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_view)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_dealloc_sql
 |name|value|
 |----|-----|
 |Name|`Com_dealloc_sql`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_dealloc_sql](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_dealloc_sql)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_delete
 |name|value|
 |----|-----|
 |Name|`Com_delete`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_delete](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_delete)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_delete_multi
 |name|value|
 |----|-----|
 |Name|`Com_delete_multi`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_delete_multi](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_delete_multi)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_do
 |name|value|
 |----|-----|
 |Name|`Com_do`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_do](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_do)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_db
 |name|value|
 |----|-----|
 |Name|`Com_drop_db`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_db](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_db)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_event
 |name|value|
 |----|-----|
 |Name|`Com_drop_event`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_event](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_event)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_function
 |name|value|
 |----|-----|
 |Name|`Com_drop_function`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_function](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_function)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_index
 |name|value|
 |----|-----|
 |Name|`Com_drop_index`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_index](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_index)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_package
 |name|value|
 |----|-----|
 |Name|`Com_drop_package`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_package](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_package)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_package_body
 |name|value|
 |----|-----|
 |Name|`Com_drop_package_body`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_package_body](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_package_body)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_procedure
 |name|value|
 |----|-----|
 |Name|`Com_drop_procedure`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_procedure](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_procedure)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_role
 |name|value|
 |----|-----|
 |Name|`Com_drop_role`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_role](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_role)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_sequence
 |name|value|
 |----|-----|
 |Name|`Com_drop_sequence`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_sequence](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_sequence)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_server
 |name|value|
 |----|-----|
 |Name|`Com_drop_server`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_server](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_server)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_table
 |name|value|
 |----|-----|
 |Name|`Com_drop_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_temporary_table
 |name|value|
 |----|-----|
 |Name|`Com_drop_temporary_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_temporary_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_temporary_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_trigger
 |name|value|
 |----|-----|
 |Name|`Com_drop_trigger`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_trigger](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_trigger)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_user
 |name|value|
 |----|-----|
 |Name|`Com_drop_user`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_user](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_user)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_view
 |name|value|
 |----|-----|
 |Name|`Com_drop_view`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_view](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_view)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_empty_query
 |name|value|
 |----|-----|
 |Name|`Com_empty_query`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_empty_query](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_empty_query)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_execute_immediate
 |name|value|
 |----|-----|
 |Name|`Com_execute_immediate`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_execute_immediate](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_execute_immediate)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_execute_sql
 |name|value|
 |----|-----|
 |Name|`Com_execute_sql`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_execute_sql](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_execute_sql)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_flush
 |name|value|
 |----|-----|
 |Name|`Com_flush`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_flush](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_flush)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_get_diagnostics
 |name|value|
 |----|-----|
 |Name|`Com_get_diagnostics`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_get_diagnostics](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_get_diagnostics)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_grant
 |name|value|
 |----|-----|
 |Name|`Com_grant`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_grant](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_grant)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_grant_role
 |name|value|
 |----|-----|
 |Name|`Com_grant_role`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_grant_role](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_grant_role)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_ha_close
 |name|value|
 |----|-----|
 |Name|`Com_ha_close`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_ha_close](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_ha_close)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_ha_open
 |name|value|
 |----|-----|
 |Name|`Com_ha_open`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_ha_open](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_ha_open)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_ha_read
 |name|value|
 |----|-----|
 |Name|`Com_ha_read`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_ha_read](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_ha_read)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_help
 |name|value|
 |----|-----|
 |Name|`Com_help`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_help](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_help)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_insert
 |name|value|
 |----|-----|
 |Name|`Com_insert`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_insert](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_insert)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_insert_select
 |name|value|
 |----|-----|
 |Name|`Com_insert_select`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_insert_select](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_insert_select)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_install_plugin
 |name|value|
 |----|-----|
 |Name|`Com_install_plugin`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_install_plugin](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_install_plugin)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_kill
 |name|value|
 |----|-----|
 |Name|`Com_kill`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_kill](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_kill)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_load
 |name|value|
 |----|-----|
 |Name|`Com_load`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_load](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_load)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_load_master_data
 |name|value|
 |----|-----|
 |Name|`Com_load_master_data`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_load_master_data](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_load_master_data)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_load_master_table
 |name|value|
 |----|-----|
 |Name|`Com_load_master_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_load_master_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_load_master_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_multi
 |name|value|
 |----|-----|
 |Name|`Com_multi`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_multi](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_multi)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_lock_tables
 |name|value|
 |----|-----|
 |Name|`Com_lock_tables`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_lock_tables](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_lock_tables)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_optimize
 |name|value|
 |----|-----|
 |Name|`Com_optimize`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_optimize](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_optimize)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_preload_keys
 |name|value|
 |----|-----|
 |Name|`Com_preload_keys`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_preload_keys](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_preload_keys)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_prepare_sql
 |name|value|
 |----|-----|
 |Name|`Com_prepare_sql`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_prepare_sql](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_prepare_sql)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_purge
 |name|value|
 |----|-----|
 |Name|`Com_purge`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_purge](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_purge)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_purge_before_date
 |name|value|
 |----|-----|
 |Name|`Com_purge_before_date`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_purge_before_date](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_purge_before_date)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_release_savepoint
 |name|value|
 |----|-----|
 |Name|`Com_release_savepoint`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_release_savepoint](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_release_savepoint)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_rename_table
 |name|value|
 |----|-----|
 |Name|`Com_rename_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_rename_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_rename_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_rename_user
 |name|value|
 |----|-----|
 |Name|`Com_rename_user`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_rename_user](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_rename_user)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_repair
 |name|value|
 |----|-----|
 |Name|`Com_repair`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_repair](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_repair)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_replace
 |name|value|
 |----|-----|
 |Name|`Com_replace`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_replace](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_replace)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_replace_select
 |name|value|
 |----|-----|
 |Name|`Com_replace_select`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_replace_select](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_replace_select)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_reset
 |name|value|
 |----|-----|
 |Name|`Com_reset`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_reset](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_reset)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_resignal
 |name|value|
 |----|-----|
 |Name|`Com_resignal`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_resignal](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_resignal)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_restore_table
 |name|value|
 |----|-----|
 |Name|`Com_restore_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_restore_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_restore_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_revoke
 |name|value|
 |----|-----|
 |Name|`Com_revoke`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_revoke](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_revoke)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_revoke_all
 |name|value|
 |----|-----|
 |Name|`Com_revoke_all`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_revoke_all](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_revoke_all)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_revoke_grant
 |name|value|
 |----|-----|
 |Name|`Com_revoke_grant`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_revoke_grant](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_revoke_grant)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_rollback
 |name|value|
 |----|-----|
 |Name|`Com_rollback`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_rollback](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_rollback)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_rollback_to_savepoint
 |name|value|
 |----|-----|
 |Name|`Com_rollback_to_savepoint`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_rollback_to_savepoint](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_rollback_to_savepoint)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_savepoint
 |name|value|
 |----|-----|
 |Name|`Com_savepoint`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_savepoint](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_savepoint)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_select
 |name|value|
 |----|-----|
 |Name|`Com_select`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_select](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_select)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_set_option
 |name|value|
 |----|-----|
 |Name|`Com_set_option`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_set_option](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_set_option)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_signal
 |name|value|
 |----|-----|
 |Name|`Com_signal`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_signal](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_signal)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_authors
 |name|value|
 |----|-----|
 |Name|`Com_show_authors`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_authors](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_authors)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_binlog_events
 |name|value|
 |----|-----|
 |Name|`Com_show_binlog_events`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_binlog_events](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_binlog_events)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_binlogs
 |name|value|
 |----|-----|
 |Name|`Com_show_binlogs`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_binlogs](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_binlogs)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_charsets
 |name|value|
 |----|-----|
 |Name|`Com_show_charsets`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_charsets](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_charsets)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_client_statistics
 |name|value|
 |----|-----|
 |Name|`Com_show_client_statistics`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_client_statistics](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_client_statistics)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_collations
 |name|value|
 |----|-----|
 |Name|`Com_show_collations`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_collations](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_collations)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_column_types
 |name|value|
 |----|-----|
 |Name|`Com_show_column_types`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_column_types](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_column_types)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_contributors
 |name|value|
 |----|-----|
 |Name|`Com_show_contributors`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_contributors](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_contributors)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_db
 |name|value|
 |----|-----|
 |Name|`Com_show_create_db`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_db](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_db)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_event
 |name|value|
 |----|-----|
 |Name|`Com_show_create_event`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_event](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_event)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_func
 |name|value|
 |----|-----|
 |Name|`Com_show_create_func`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_func](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_func)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_package
 |name|value|
 |----|-----|
 |Name|`Com_show_create_package`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_package](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_package)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_package_body
 |name|value|
 |----|-----|
 |Name|`Com_show_create_package_body`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_package_body](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_package_body)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_proc
 |name|value|
 |----|-----|
 |Name|`Com_show_create_proc`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_proc](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_proc)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_table
 |name|value|
 |----|-----|
 |Name|`Com_show_create_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_trigger
 |name|value|
 |----|-----|
 |Name|`Com_show_create_trigger`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_trigger](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_trigger)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_user
 |name|value|
 |----|-----|
 |Name|`Com_show_create_user`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_user](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_user)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_databases
 |name|value|
 |----|-----|
 |Name|`Com_show_databases`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_databases](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_databases)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_engine_logs
 |name|value|
 |----|-----|
 |Name|`Com_show_engine_logs`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_engine_logs](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_engine_logs)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_engine_mutex
 |name|value|
 |----|-----|
 |Name|`Com_show_engine_mutex`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_engine_mutex](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_engine_mutex)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_engine_status
 |name|value|
 |----|-----|
 |Name|`Com_show_engine_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_engine_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_engine_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_events
 |name|value|
 |----|-----|
 |Name|`Com_show_events`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_events](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_events)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_errors
 |name|value|
 |----|-----|
 |Name|`Com_show_errors`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_errors](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_errors)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_explain
 |name|value|
 |----|-----|
 |Name|`Com_show_explain`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_explain](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_explain)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_fields
 |name|value|
 |----|-----|
 |Name|`Com_show_fields`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_fields](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_fields)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_function_status
 |name|value|
 |----|-----|
 |Name|`Com_show_function_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_function_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_function_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_generic
 |name|value|
 |----|-----|
 |Name|`Com_show_generic`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_generic](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_generic)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_grants
 |name|value|
 |----|-----|
 |Name|`Com_show_grants`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_grants](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_grants)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_keys
 |name|value|
 |----|-----|
 |Name|`Com_show_keys`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_keys](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_keys)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_index_statistics
 |name|value|
 |----|-----|
 |Name|`Com_show_index_statistics`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_index_statistics](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_index_statistics)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_open_tables
 |name|value|
 |----|-----|
 |Name|`Com_show_open_tables`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_open_tables](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_open_tables)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_package_status
 |name|value|
 |----|-----|
 |Name|`Com_show_package_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_package_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_package_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_package_body_status
 |name|value|
 |----|-----|
 |Name|`Com_show_package_body_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_package_body_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_package_body_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_plugins
 |name|value|
 |----|-----|
 |Name|`Com_show_plugins`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_plugins](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_plugins)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_privileges
 |name|value|
 |----|-----|
 |Name|`Com_show_privileges`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_privileges](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_privileges)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_procedure_status
 |name|value|
 |----|-----|
 |Name|`Com_show_procedure_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_procedure_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_procedure_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_processlist
 |name|value|
 |----|-----|
 |Name|`Com_show_processlist`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_processlist](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_processlist)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_profile
 |name|value|
 |----|-----|
 |Name|`Com_show_profile`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_profile](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_profile)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_profiles
 |name|value|
 |----|-----|
 |Name|`Com_show_profiles`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_profiles](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_profiles)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_relaylog_events
 |name|value|
 |----|-----|
 |Name|`Com_show_relaylog_events`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_relaylog_events](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_relaylog_events)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_status
 |name|value|
 |----|-----|
 |Name|`Com_show_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_storage_engines
 |name|value|
 |----|-----|
 |Name|`Com_show_storage_engines`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_storage_engines](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_storage_engines)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_table_statistics
 |name|value|
 |----|-----|
 |Name|`Com_show_table_statistics`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_table_statistics](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_table_statistics)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_table_status
 |name|value|
 |----|-----|
 |Name|`Com_show_table_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_table_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_table_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_tables
 |name|value|
 |----|-----|
 |Name|`Com_show_tables`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_tables](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_tables)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_triggers
 |name|value|
 |----|-----|
 |Name|`Com_show_triggers`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_triggers](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_triggers)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_user_statistics
 |name|value|
 |----|-----|
 |Name|`Com_show_user_statistics`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_user_statistics](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_user_statistics)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_variable
 |name|value|
 |----|-----|
 |Name|`Com_show_variable`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_variable](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_variable)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_warnings
 |name|value|
 |----|-----|
 |Name|`Com_show_warnings`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_warnings](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_warnings)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_shutdown
 |name|value|
 |----|-----|
 |Name|`Com_shutdown`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_shutdown](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_shutdown)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_stmt_close
 |name|value|
@@ -14391,13 +14197,13 @@
 |name|value|
 |----|-----|
 |Name|`Com_stmt_reprepare`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_stmt_reprepare](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_stmt_reprepare)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_stmt_reset
 |name|value|
@@ -14427,133 +14233,133 @@
 |name|value|
 |----|-----|
 |Name|`Com_truncate`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_truncate](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_truncate)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_uninstall_plugin
 |name|value|
 |----|-----|
 |Name|`Com_uninstall_plugin`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_uninstall_plugin](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_uninstall_plugin)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_unlock_tables
 |name|value|
 |----|-----|
 |Name|`Com_unlock_tables`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_unlock_tables](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_unlock_tables)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_update
 |name|value|
 |----|-----|
 |Name|`Com_update`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_update](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_update)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_update_multi
 |name|value|
 |----|-----|
 |Name|`Com_update_multi`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_update_multi](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_update_multi)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_commit
 |name|value|
 |----|-----|
 |Name|`Com_xa_commit`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_commit](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_commit)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_end
 |name|value|
 |----|-----|
 |Name|`Com_xa_end`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_end](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_end)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_prepare
 |name|value|
 |----|-----|
 |Name|`Com_xa_prepare`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_prepare](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_prepare)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_recover
 |name|value|
 |----|-----|
 |Name|`Com_xa_recover`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_recover](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_recover)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_rollback
 |name|value|
 |----|-----|
 |Name|`Com_xa_rollback`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_rollback](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_rollback)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_start
 |name|value|
 |----|-----|
 |Name|`Com_xa_start`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_start](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_start)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Compression
 |name|value|
@@ -18987,7 +18793,7 @@
 |Command line|`--old-mode`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`UTF8_IS_UTF8MB3 (>= MariaDB 10.6) (empty string) (<= MariaDB 10.5)`|
+|Default value|`(empty string) (>= MariaDB 13.1), UTF8_IS_UTF8MB3 (MariaDB 10.6 to MariaDB 13.0), (empty string) (<= MariaDB 10.5)`|
 |Dynamic|`true`|
 
 ### Documentation(s)
@@ -23868,2611 +23674,6 @@
 |source|anchor name|
 |------|----|
 |mariadb.com|[threadpool_threads](https://mariadb.com/docs/server/ha-and-performance/optimization-and-tuning/buffers-caches-and-threads/thread-pool/thread-pool-system-status-variables#threadpool_threads)|
-
-## Tokudb_basement_deserialization_fixed_key
-|name|value|
-|----|-----|
-|Name|`Tokudb_basement_deserialization_fixed_key`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basement_deserialization_fixed_key](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basement_deserialization_fixed_key)|
-
-## Tokudb_basement_deserialization_variable_key
-|name|value|
-|----|-----|
-|Name|`Tokudb_basement_deserialization_variable_key`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basement_deserialization_variable_key](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basement_deserialization_variable_key)|
-
-## Tokudb_basements_decompressed_for_write
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_decompressed_for_write`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_decompressed_for_write](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_decompressed_for_write)|
-
-## Tokudb_basements_decompressed_prefetch
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_decompressed_prefetch`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_decompressed_prefetch](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_decompressed_prefetch)|
-
-## Tokudb_basements_decompressed_prelocked_range
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_decompressed_prelocked_range`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_decompressed_prelocked_range](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_decompressed_prelocked_range)|
-
-## Tokudb_basements_decompressed_target_query
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_decompressed_target_query`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_decompressed_target_query](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_decompressed_target_query)|
-
-## Tokudb_basements_fetched_for_write
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_for_write`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_for_write](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_for_write)|
-
-## Tokudb_basements_fetched_for_write_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_for_write_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_for_write_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_for_write_bytes)|
-
-## Tokudb_basements_fetched_for_write_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_for_write_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_for_write_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_for_write_seconds)|
-
-## Tokudb_basements_fetched_prefetch
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_prefetch`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_prefetch](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_prefetch)|
-
-## Tokudb_basements_fetched_prefetch_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_prefetch_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_prefetch_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_prefetch_bytes)|
-
-## Tokudb_basements_fetched_prefetch_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_prefetch_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_prefetch_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_prefetch_seconds)|
-
-## Tokudb_basements_fetched_prelocked_range
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_prelocked_range`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_prelocked_range](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_prelocked_range)|
-
-## Tokudb_basements_fetched_prelocked_range_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_prelocked_range_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_prelocked_range_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_prelocked_range_bytes)|
-
-## Tokudb_basements_fetched_prelocked_range_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_prelocked_range_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_prelocked_range_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_prelocked_range_seconds)|
-
-## Tokudb_basements_fetched_target_query
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_target_query`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_target_query](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_target_query)|
-
-## Tokudb_basements_fetched_target_query_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_target_query_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_target_query_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_target_query_bytes)|
-
-## Tokudb_basements_fetched_target_query_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_basements_fetched_target_query_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_basements_fetched_target_query_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_basements_fetched_target_query_seconds)|
-
-## Tokudb_broadcase_messages_injected_at_root
-|name|value|
-|----|-----|
-|Name|`Tokudb_broadcase_messages_injected_at_root`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_broadcase_messages_injected_at_root](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_broadcase_messages_injected_at_root)|
-
-## Tokudb_buffers_decompressed_for_write
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_decompressed_for_write`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_decompressed_for_write](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_decompressed_for_write)|
-
-## Tokudb_buffers_decompressed_prefetch
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_decompressed_prefetch`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_decompressed_prefetch](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_decompressed_prefetch)|
-
-## Tokudb_buffers_decompressed_prelocked_range
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_decompressed_prelocked_range`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_decompressed_prelocked_range](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_decompressed_prelocked_range)|
-
-## Tokudb_buffers_decompressed_target_query
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_decompressed_target_query`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_decompressed_target_query](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_decompressed_target_query)|
-
-## Tokudb_buffers_fetched_for_write
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_for_write`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_for_write](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_for_write)|
-
-## Tokudb_buffers_fetched_for_write_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_for_write_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_for_write_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_for_write_bytes)|
-
-## Tokudb_buffers_fetched_for_write_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_for_write_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_for_write_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_for_write_seconds)|
-
-## Tokudb_buffers_fetched_prefetch
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_prefetch`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_prefetch](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_prefetch)|
-
-## Tokudb_buffers_fetched_prefetch_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_prefetch_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_prefetch_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_prefetch_bytes)|
-
-## Tokudb_buffers_fetched_prefetch_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_prefetch_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_prefetch_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_prefetch_seconds)|
-
-## Tokudb_buffers_fetched_prelocked_range
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_prelocked_range`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_prelocked_range](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_prelocked_range)|
-
-## Tokudb_buffers_fetched_prelocked_range_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_prelocked_range_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_prelocked_range_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_prelocked_range_bytes)|
-
-## Tokudb_buffers_fetched_prelocked_range_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_prelocked_range_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_prelocked_range_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_prelocked_range_seconds)|
-
-## Tokudb_buffers_fetched_target_query
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_target_query`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_target_query](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_target_query)|
-
-## Tokudb_buffers_fetched_target_query_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_target_query_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_target_query_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_target_query_bytes)|
-
-## Tokudb_buffers_fetched_target_query_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_buffers_fetched_target_query_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_buffers_fetched_target_query_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_buffers_fetched_target_query_seconds)|
-
-## Tokudb_cachetable_cleaner_executions
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_cleaner_executions`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_cleaner_executions](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_cleaner_executions)|
-
-## Tokudb_cachetable_cleaner_iterations
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_cleaner_iterations`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_cleaner_iterations](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_cleaner_iterations)|
-
-## Tokudb_cachetable_cleaner_period
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_cleaner_period`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_cleaner_period](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_cleaner_period)|
-
-## Tokudb_cachetable_evictions
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_evictions`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_evictions](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_evictions)|
-
-## Tokudb_cachetable_long_wait_pressure_count
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_long_wait_pressure_count`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_long_wait_pressure_count](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_long_wait_pressure_count)|
-
-## Tokudb_cachetable_long_wait_pressure_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_long_wait_pressure_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_long_wait_pressure_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_long_wait_pressure_time)|
-
-## Tokudb_cachetable_miss
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_miss`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_miss](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_miss)|
-
-## Tokudb_cachetable_miss_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_miss_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_miss_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_miss_time)|
-
-## Tokudb_cachetable_prefetches
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_prefetches`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_prefetches](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_prefetches)|
-
-## Tokudb_cachetable_size_cachepressure
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_size_cachepressure`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_size_cachepressure](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_size_cachepressure)|
-
-## Tokudb_cachetable_size_cloned
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_size_cloned`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_size_cloned](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_size_cloned)|
-
-## Tokudb_cachetable_size_current
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_size_current`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_size_current](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_size_current)|
-
-## Tokudb_cachetable_size_leaf
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_size_leaf`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_size_leaf](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_size_leaf)|
-
-## Tokudb_cachetable_size_limit
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_size_limit`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_size_limit](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_size_limit)|
-
-## Tokudb_cachetable_size_nonleaf
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_size_nonleaf`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_size_nonleaf](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_size_nonleaf)|
-
-## Tokudb_cachetable_size_rollback
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_size_rollback`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_size_rollback](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_size_rollback)|
-
-## Tokudb_cachetable_size_writing
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_size_writing`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_size_writing](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_size_writing)|
-
-## Tokudb_cachetable_wait_pressure_count
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_wait_pressure_count`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_wait_pressure_count](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_wait_pressure_count)|
-
-## Tokudb_cachetable_wait_pressure_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_cachetable_wait_pressure_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cachetable_wait_pressure_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cachetable_wait_pressure_time)|
-
-## Tokudb_checkpoint_begin_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_begin_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_begin_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_begin_time)|
-
-## Tokudb_checkpoint_duration
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_duration`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_duration](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_duration)|
-
-## Tokudb_checkpoint_duration_last
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_duration_last`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_duration_last](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_duration_last)|
-
-## Tokudb_checkpoint_failed
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_failed`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_failed](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_failed)|
-
-## Tokudb_checkpoint_last_began
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_last_began`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_last_began](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_last_began)|
-
-## Tokudb_checkpoint_last_complete_began
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_last_complete_began`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_last_complete_began](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_last_complete_began)|
-
-## Tokudb_checkpoint_last_complete_ended
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_last_complete_ended`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_last_complete_ended](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_last_complete_ended)|
-
-## Tokudb_checkpoint_long_begin_count
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_long_begin_count`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_long_begin_count](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_long_begin_count)|
-
-## Tokudb_checkpoint_long_begin_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_long_begin_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_long_begin_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_long_begin_time)|
-
-## Tokudb_checkpoint_period
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_period`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_period](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_period)|
-
-## Tokudb_checkpoint_taken
-|name|value|
-|----|-----|
-|Name|`Tokudb_checkpoint_taken`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_taken](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_checkpoint_taken)|
-
-## Tokudb_cursor_skip_deleted_leaf_entry
-|name|value|
-|----|-----|
-|Name|`Tokudb_cursor_skip_deleted_leaf_entry`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cursor_skip_deleted_leaf_entry](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_cursor_skip_deleted_leaf_entry)|
-
-## Tokudb_db_closes
-|name|value|
-|----|-----|
-|Name|`Tokudb_db_closes`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_db_closes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_db_closes)|
-
-## Tokudb_db_open_current
-|name|value|
-|----|-----|
-|Name|`Tokudb_db_open_current`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_db_open_current](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_db_open_current)|
-
-## Tokudb_db_open_max
-|name|value|
-|----|-----|
-|Name|`Tokudb_db_open_max`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_db_open_max](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_db_open_max)|
-
-## Tokudb_db_opens
-|name|value|
-|----|-----|
-|Name|`Tokudb_db_opens`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_db_opens](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_db_opens)|
-
-## Tokudb_descriptor_set
-|name|value|
-|----|-----|
-|Name|`Tokudb_descriptor_set`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_descriptor_set](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_descriptor_set)|
-
-## Tokudb_dictionary_broadcast_updates
-|name|value|
-|----|-----|
-|Name|`Tokudb_dictionary_broadcast_updates`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_dictionary_broadcast_updates](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_dictionary_broadcast_updates)|
-
-## Tokudb_dictionary_updates
-|name|value|
-|----|-----|
-|Name|`Tokudb_dictionary_updates`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_dictionary_updates](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_dictionary_updates)|
-
-## Tokudb_filesystem_fsync_num
-|name|value|
-|----|-----|
-|Name|`Tokudb_filesystem_fsync_num`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_filesystem_fsync_num](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_filesystem_fsync_num)|
-
-## Tokudb_filesystem_fsync_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_filesystem_fsync_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_filesystem_fsync_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_filesystem_fsync_time)|
-
-## Tokudb_filesystem_long_fsync_num
-|name|value|
-|----|-----|
-|Name|`Tokudb_filesystem_long_fsync_num`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_filesystem_long_fsync_num](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_filesystem_long_fsync_num)|
-
-## Tokudb_filesystem_long_fsync_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_filesystem_long_fsync_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_filesystem_long_fsync_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_filesystem_long_fsync_time)|
-
-## Tokudb_filesystem_threads_blocked_by_full_disk
-|name|value|
-|----|-----|
-|Name|`Tokudb_filesystem_threads_blocked_by_full_disk`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_filesystem_threads_blocked_by_full_disk](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_filesystem_threads_blocked_by_full_disk)|
-
-## Tokudb_leaf_compression_to_memory_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_compression_to_memory_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_compression_to_memory_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_compression_to_memory_seconds)|
-
-## Tokudb_leaf_decompression_to_memory_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_decompression_to_memory_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_decompression_to_memory_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_decompression_to_memory_seconds)|
-
-## Tokudb_leaf_deserialization_to_memory_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_deserialization_to_memory_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_deserialization_to_memory_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_deserialization_to_memory_seconds)|
-
-## Tokudb_leaf_node_compression_ratio
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_node_compression_ratio`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_node_compression_ratio](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_node_compression_ratio)|
-
-## Tokudb_leaf_node_full_evictions
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_node_full_evictions`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_node_full_evictions](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_node_full_evictions)|
-
-## Tokudb_leaf_node_full_evictions_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_node_full_evictions_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_node_full_evictions_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_node_full_evictions_bytes)|
-
-## Tokudb_leaf_node_partial_evictions
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_node_partial_evictions`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_node_partial_evictions](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_node_partial_evictions)|
-
-## Tokudb_leaf_node_partial_evictions_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_node_partial_evictions_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_node_partial_evictions_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_node_partial_evictions_bytes)|
-
-## Tokudb_leaf_nodes_created
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_nodes_created`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_nodes_created](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_nodes_created)|
-
-## Tokudb_leaf_nodes_destroyed
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_nodes_destroyed`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_nodes_destroyed](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_nodes_destroyed)|
-
-## Tokudb_leaf_nodes_flushed_checkpoint
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_nodes_flushed_checkpoint`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_nodes_flushed_checkpoint](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_nodes_flushed_checkpoint)|
-
-## Tokudb_leaf_nodes_flushed_checkpoint_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_nodes_flushed_checkpoint_bytes`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_nodes_flushed_checkpoint_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_nodes_flushed_checkpoint_bytes)|
-
-## Tokudb_leaf_nodes_flushed_checkpoint_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_nodes_flushed_checkpoint_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_nodes_flushed_checkpoint_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_nodes_flushed_checkpoint_seconds)|
-
-## Tokudb_leaf_nodes_flushed_checkpoint_uncompressed_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_nodes_flushed_checkpoint_uncompressed_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_nodes_flushed_checkpoint_uncompressed_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_nodes_flushed_checkpoint_uncompressed_bytes)|
-
-## Tokudb_leaf_nodes_flushed_not_checkpoint
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_nodes_flushed_not_checkpoint`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_nodes_flushed_not_checkpoint](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_nodes_flushed_not_checkpoint)|
-
-## Tokudb_leaf_nodes_flushed_not_checkpoint_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_nodes_flushed_not_checkpoint_bytes`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_nodes_flushed_not_checkpoint_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_nodes_flushed_not_checkpoint_bytes)|
-
-## Tokudb_leaf_nodes_flushed_not_checkpoint_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_nodes_flushed_not_checkpoint_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_nodes_flushed_not_checkpoint_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_nodes_flushed_not_checkpoint_seconds)|
-
-## Tokudb_leaf_nodes_flushed_not_checkpoint_uncompressed_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_nodes_flushed_not_checkpoint_uncompressed_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_nodes_flushed_not_checkpoint_uncompressed_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_nodes_flushed_not_checkpoint_uncompressed_bytes)|
-
-## Tokudb_leaf_serialization_to_memory_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_leaf_serialization_to_memory_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_leaf_serialization_to_memory_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_leaf_serialization_to_memory_seconds)|
-
-## Tokudb_loader_num_created
-|name|value|
-|----|-----|
-|Name|`Tokudb_loader_num_created`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_loader_num_created](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_loader_num_created)|
-
-## Tokudb_loader_num_current
-|name|value|
-|----|-----|
-|Name|`Tokudb_loader_num_current`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_loader_num_current](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_loader_num_current)|
-
-## Tokudb_loader_num_max
-|name|value|
-|----|-----|
-|Name|`Tokudb_loader_num_max`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_loader_num_max](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_loader_num_max)|
-
-## Tokudb_locktree_escalation_num
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_escalation_num`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_escalation_num](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_escalation_num)|
-
-## Tokudb_locktree_escalation_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_escalation_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_escalation_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_escalation_seconds)|
-
-## Tokudb_locktree_latest_post_escalation_memory_size
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_latest_post_escalation_memory_size`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_latest_post_escalation_memory_size](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_latest_post_escalation_memory_size)|
-
-## Tokudb_locktree_long_wait_count
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_long_wait_count`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_long_wait_count](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_long_wait_count)|
-
-## Tokudb_locktree_long_wait_escalation_count
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_long_wait_escalation_count`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_long_wait_escalation_count](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_long_wait_escalation_count)|
-
-## Tokudb_locktree_long_wait_escalation_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_long_wait_escalation_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_long_wait_escalation_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_long_wait_escalation_time)|
-
-## Tokudb_locktree_long_wait_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_long_wait_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_long_wait_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_long_wait_time)|
-
-## Tokudb_locktree_memory_size
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_memory_size`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_memory_size](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_memory_size)|
-
-## Tokudb_locktree_memory_size_limit
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_memory_size_limit`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_memory_size_limit](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_memory_size_limit)|
-
-## Tokudb_locktree_open_current
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_open_current`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_open_current](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_open_current)|
-
-## Tokudb_locktree_pending_lock_requests
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_pending_lock_requests`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_pending_lock_requests](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_pending_lock_requests)|
-
-## Tokudb_locktree_sto_eligible_num
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_sto_eligible_num`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_sto_eligible_num](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_sto_eligible_num)|
-
-## Tokudb_locktree_sto_ended_num
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_sto_ended_num`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_sto_ended_num](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_sto_ended_num)|
-
-## Tokudb_locktree_sto_ended_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_sto_ended_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_sto_ended_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_sto_ended_seconds)|
-
-## Tokudb_locktree_timeout_count
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_timeout_count`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_timeout_count](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_timeout_count)|
-
-## Tokudb_locktree_wait_count
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_wait_count`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_wait_count](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_wait_count)|
-
-## Tokudb_locktree_wait_escalation_count
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_wait_escalation_count`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_wait_escalation_count](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_wait_escalation_count)|
-
-## Tokudb_locktree_wait_escalation_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_wait_escalation_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_wait_escalation_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_wait_escalation_time)|
-
-## Tokudb_locktree_wait_time
-|name|value|
-|----|-----|
-|Name|`Tokudb_locktree_wait_time`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_locktree_wait_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_locktree_wait_time)|
-
-## Tokudb_logger_wait_long
-|name|value|
-|----|-----|
-|Name|`Tokudb_logger_wait_long`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_logger_wait_long](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_logger_wait_long)|
-
-## Tokudb_logger_writes
-|name|value|
-|----|-----|
-|Name|`Tokudb_logger_writes`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_logger_writes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_logger_writes)|
-
-## Tokudb_logger_writes_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_logger_writes_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_logger_writes_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_logger_writes_bytes)|
-
-## Tokudb_logger_writes_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_logger_writes_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_logger_writes_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_logger_writes_seconds)|
-
-## Tokudb_logger_writes_uncompressed_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_logger_writes_uncompressed_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_logger_writes_uncompressed_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_logger_writes_uncompressed_bytes)|
-
-## Tokudb_mem_estimated_maximum_memory_footprint
-|name|value|
-|----|-----|
-|Name|`Tokudb_mem_estimated_maximum_memory_footprint`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_mem_estimated_maximum_memory_footprint](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_mem_estimated_maximum_memory_footprint)|
-
-## Tokudb_messages_flushed_from_h1_to_leaves_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_messages_flushed_from_h1_to_leaves_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_messages_flushed_from_h1_to_leaves_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_messages_flushed_from_h1_to_leaves_bytes)|
-
-## Tokudb_messages_ignored_by_leaf_due_to_msn
-|name|value|
-|----|-----|
-|Name|`Tokudb_messages_ignored_by_leaf_due_to_msn`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_messages_ignored_by_leaf_due_to_msn](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_messages_ignored_by_leaf_due_to_msn)|
-
-## Tokudb_messages_in_trees_estimate_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_messages_in_trees_estimate_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_messages_in_trees_estimate_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_messages_in_trees_estimate_bytes)|
-
-## Tokudb_messages_injected_at_root
-|name|value|
-|----|-----|
-|Name|`Tokudb_messages_injected_at_root`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_messages_injected_at_root](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_messages_injected_at_root)|
-
-## Tokudb_messages_injected_at_root_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_messages_injected_at_root_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_messages_injected_at_root_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_messages_injected_at_root_bytes)|
-
-## Tokudb_nonleaf_compression_to_memory_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_compression_to_memory_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_compression_to_memory_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_compression_to_memory_seconds)|
-
-## Tokudb_nonleaf_decompression_to_memory_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_decompression_to_memory_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_decompression_to_memory_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_decompression_to_memory_seconds)|
-
-## Tokudb_nonleaf_deserialization_to_memory_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_deserialization_to_memory_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_deserialization_to_memory_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_deserialization_to_memory_seconds)|
-
-## Tokudb_nonleaf_node_compression_ratio
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_node_compression_ratio`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_node_compression_ratio](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_node_compression_ratio)|
-
-## Tokudb_nonleaf_node_full_evictions
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_node_full_evictions`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_node_full_evictions](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_node_full_evictions)|
-
-## Tokudb_nonleaf_node_full_evictions_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_node_full_evictions_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_node_full_evictions_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_node_full_evictions_bytes)|
-
-## Tokudb_nonleaf_node_partial_evictions
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_node_partial_evictions`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_node_partial_evictions](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_node_partial_evictions)|
-
-## Tokudb_nonleaf_node_partial_evictions_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_node_partial_evictions_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_node_partial_evictions_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_node_partial_evictions_bytes)|
-
-## Tokudb_nonleaf_nodes_created
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_nodes_created`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_nodes_created](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_nodes_created)|
-
-## Tokudb_nonleaf_nodes_destroyed
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_nodes_destroyed`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_nodes_destroyed](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_nodes_destroyed)|
-
-## Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_nodes_flushed_to_disk_checkpoint](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_nodes_flushed_to_disk_checkpoint)|
-
-## Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_bytes`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_bytes)|
-
-## Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_seconds)|
-
-## Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_uncompressed_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_uncompressed_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_uncompressed_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_nodes_flushed_to_disk_checkpoint_uncompressed_bytes)|
-
-## Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint)|
-
-## Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_bytes`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_bytes)|
-
-## Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_seconds)|
-
-## Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_uncompressed_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_uncompressed_bytes`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_uncompressed_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_nodes_flushed_to_disk_not_checkpoint_uncompressed_bytes)|
-
-## Tokudb_nonleaf_serialization_to_memory_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_nonleaf_serialization_to_memory_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_nonleaf_serialization_to_memory_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_nonleaf_serialization_to_memory_seconds)|
-
-## Tokudb_overall_node_compression_ratio
-|name|value|
-|----|-----|
-|Name|`Tokudb_overall_node_compression_ratio`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_overall_node_compression_ratio](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_overall_node_compression_ratio)|
-
-## Tokudb_pivots_fetched_for_query
-|name|value|
-|----|-----|
-|Name|`Tokudb_pivots_fetched_for_query`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_pivots_fetched_for_query](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_pivots_fetched_for_query)|
-
-## Tokudb_pivots_fetched_for_query_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_pivots_fetched_for_query_bytes`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_pivots_fetched_for_query_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_pivots_fetched_for_query_bytes)|
-
-## Tokudb_pivots_fetched_for_query_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_pivots_fetched_for_query_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_pivots_fetched_for_query_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_pivots_fetched_for_query_seconds)|
-
-## Tokudb_pivots_fetched_for_prefetch
-|name|value|
-|----|-----|
-|Name|`Tokudb_pivots_fetched_for_prefetch`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_pivots_fetched_for_prefetch](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_pivots_fetched_for_prefetch)|
-
-## Tokudb_pivots_fetched_for_prefetch_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_pivots_fetched_for_prefetch_bytes`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_pivots_fetched_for_prefetch_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_pivots_fetched_for_prefetch_bytes)|
-
-## Tokudb_pivots_fetched_for_prefetch_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_pivots_fetched_for_prefetch_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_pivots_fetched_for_prefetch_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_pivots_fetched_for_prefetch_seconds)|
-
-## Tokudb_pivots_fetched_for_write
-|name|value|
-|----|-----|
-|Name|`Tokudb_pivots_fetched_for_write`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_pivots_fetched_for_write](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_pivots_fetched_for_write)|
-
-## Tokudb_pivots_fetched_for_write_bytes
-|name|value|
-|----|-----|
-|Name|`Tokudb_pivots_fetched_for_write_bytes`|
-|Type of variable|`byte`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_pivots_fetched_for_write_bytes](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_pivots_fetched_for_write_bytes)|
-
-## Tokudb_pivots_fetched_for_write_seconds
-|name|value|
-|----|-----|
-|Name|`Tokudb_pivots_fetched_for_write_seconds`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_pivots_fetched_for_write_seconds](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_pivots_fetched_for_write_seconds)|
-
-## Tokudb_promotion_h1_roots_injected_into
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_h1_roots_injected_into`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_h1_roots_injected_into](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_h1_roots_injected_into)|
-
-## Tokudb_promotion_injections_at_depth_0
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_injections_at_depth_0`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_injections_at_depth_0](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_injections_at_depth_0)|
-
-## Tokudb_promotion_injections_at_depth_1
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_injections_at_depth_1`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_injections_at_depth_1](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_injections_at_depth_1)|
-
-## Tokudb_promotion_injections_at_depth_2
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_injections_at_depth_2`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_injections_at_depth_2](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_injections_at_depth_2)|
-
-## Tokudb_promotion_injections_at_depth_3
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_injections_at_depth_3`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_injections_at_depth_3](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_injections_at_depth_3)|
-
-## Tokudb_promotion_injections_lower_than_depth_3
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_injections_lower_than_depth_3`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_injections_lower_than_depth_3](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_injections_lower_than_depth_3)|
-
-## Tokudb_promotion_leaf_roots_injected_into
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_leaf_roots_injected_into`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_leaf_roots_injected_into](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_leaf_roots_injected_into)|
-
-## Tokudb_promotion_roots_split
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_roots_split`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_roots_split](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_roots_split)|
-
-## Tokudb_promotion_stopped_after_locking_child
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_stopped_after_locking_child`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_stopped_after_locking_child](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_stopped_after_locking_child)|
-
-## Tokudb_promotion_stopped_at_height_1
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_stopped_at_height_1`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_stopped_at_height_1](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_stopped_at_height_1)|
-
-## Tokudb_promotion_stopped_child_locked_or_not_in_memory
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_stopped_child_locked_or_not_in_memory`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_stopped_child_locked_or_not_in_memory](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_stopped_child_locked_or_not_in_memory)|
-
-## Tokudb_promotion_stopped_child_not_fully_in_memory
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_stopped_child_not_fully_in_memory`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_stopped_child_not_fully_in_memory](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_stopped_child_not_fully_in_memory)|
-
-## Tokudb_promotion_stopped_nonempty_buffer
-|name|value|
-|----|-----|
-|Name|`Tokudb_promotion_stopped_nonempty_buffer`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_promotion_stopped_nonempty_buffer](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_promotion_stopped_nonempty_buffer)|
-
-## Tokudb_txn_aborts
-|name|value|
-|----|-----|
-|Name|`Tokudb_txn_aborts`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_txn_aborts](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_txn_aborts)|
-
-## Tokudb_txn_begin
-|name|value|
-|----|-----|
-|Name|`Tokudb_txn_begin`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_txn_begin](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_txn_begin)|
-
-## Tokudb_txn_begin_read_only
-|name|value|
-|----|-----|
-|Name|`Tokudb_txn_begin_read_only`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_txn_begin_read_only](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_txn_begin_read_only)|
-
-## Tokudb_txn_commits
-|name|value|
-|----|-----|
-|Name|`Tokudb_txn_commits`|
-|Type of variable|`integer`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_txn_commits](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-status-variables#tokudb_txn_commits)|
-
-## tokudb_alter_print_error
-|name|value|
-|----|-----|
-|Name|`tokudb_alter_print_error`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_alter_print_error](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_alter_print_error)|
-
-## tokudb_analyze_time
-|name|value|
-|----|-----|
-|Name|`tokudb_analyze_time`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`5`|
-|Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_analyze_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_analyze_time)|
-
-## tokudb_block_size
-|name|value|
-|----|-----|
-|Name|`tokudb_block_size`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`4194304`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_block_size](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_block_size)|
-
-## tokudb_bulk_fetch
-|name|value|
-|----|-----|
-|Name|`tokudb_bulk_fetch`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`ON`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_bulk_fetch](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_bulk_fetch)|
-
-## tokudb_cache_size
-|name|value|
-|----|-----|
-|Name|`tokudb_cache_size`|
-|Type of variable|`integer`|
-|Default value|`Half of the total system memory`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cache_size](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_cache_size)|
-
-## tokudb_check_jemalloc
-|name|value|
-|----|-----|
-|Name|`tokudb_check_jemalloc`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1`|
-|Dynamic|`true`|
-|Valid value(s)|`0`, `1`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_check_jemalloc](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_check_jemalloc)|
-
-## tokudb_checkpoint_lock
-|name|value|
-|----|-----|
-|Name|`tokudb_checkpoint_lock`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_lock](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_checkpoint_lock)|
-
-## tokudb_checkpoint_on_flush_logs
-|name|value|
-|----|-----|
-|Name|`tokudb_checkpoint_on_flush_logs`|
-|Type of variable|`boolean`|
-|Scope|`global`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpoint_on_flush_logs](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_checkpoint_on_flush_logs)|
-
-## tokudb_checkpointing_period
-|name|value|
-|----|-----|
-|Name|`tokudb_checkpointing_period`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`60`|
-|Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_checkpointing_period](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_checkpointing_period)|
-
-## tokudb_cleaner_iterations
-|name|value|
-|----|-----|
-|Name|`tokudb_cleaner_iterations`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`5`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cleaner_iterations](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_cleaner_iterations)|
-
-## tokudb_cleaner_period
-|name|value|
-|----|-----|
-|Name|`tokudb_cleaner_period`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_cleaner_period](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_cleaner_period)|
-
-## tokudb_commit_sync
-|name|value|
-|----|-----|
-|Name|`tokudb_commit_sync`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`ON`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_commit_sync](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_commit_sync)|
-
-## tokudb_create_index_online
-|name|value|
-|----|-----|
-|Name|`tokudb_create_index_online`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`ON`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_create_index_online](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_create_index_online)|
-
-## tokudb_data_dir
-|name|value|
-|----|-----|
-|Name|`tokudb_data_dir`|
-|Type of variable|`string`|
-|Default value|`Empty (the MariaDB datadir is used)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_data_dir](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_data_dir)|
-
-## tokudb_debug
-|name|value|
-|----|-----|
-|Name|`tokudb_debug`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`0`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_debug](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_debug)|
-
-## tokudb_directio
-|name|value|
-|----|-----|
-|Name|`tokudb_directio`|
-|Type of variable|`boolean`|
-|Default value|`OFF`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_directio](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_directio)|
-
-## tokudb_disable_hot_alter
-|name|value|
-|----|-----|
-|Name|`tokudb_disable_hot_alter`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_disable_hot_alter](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_disable_hot_alter)|
-
-## tokudb_disable_prefetching
-|name|value|
-|----|-----|
-|Name|`tokudb_disable_prefetching`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_disable_prefetching](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_disable_prefetching)|
-
-## tokudb_disable_slow_alter
-|name|value|
-|----|-----|
-|Name|`tokudb_disable_slow_alter`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`OFF`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_disable_slow_alter](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_disable_slow_alter)|
-
-## tokudb_empty_scan
-|name|value|
-|----|-----|
-|Name|`tokudb_empty_scan`|
-|Type of variable|`enumeration`|
-|Scope|`global`, `session`|
-|Default value|`rl`|
-|Dynamic|`true`|
-|Valid value(s)|`lr`, `rl`, `disabled`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_empty_scan](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_empty_scan)|
-
-## tokudb_fs_reserve_percent
-|name|value|
-|----|-----|
-|Name|`tokudb_fs_reserve_percent`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`5`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_fs_reserve_percent](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_fs_reserve_percent)|
-
-## tokudb_fsync_log_period
-|name|value|
-|----|-----|
-|Name|`tokudb_fsync_log_period`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`0`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_fsync_log_period](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_fsync_log_period)|
-
-## tokudb_hide_default_row_format
-|name|value|
-|----|-----|
-|Name|`tokudb_hide_default_row_format`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`ON`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_hide_default_row_format](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_hide_default_row_format)|
-
-## tokudb_killed_time
-|name|value|
-|----|-----|
-|Name|`tokudb_killed_time`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`4000`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_killed_time](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_killed_time)|
-
-## tokudb_last_lock_timeout
-|name|value|
-|----|-----|
-|Name|`tokudb_last_lock_timeout`|
-|Type of variable|`string`|
-|Scope|`global`, `session`|
-|Default value|`Empty`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_last_lock_timeout](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_last_lock_timeout)|
-
-## tokudb_load_save_space
-|name|value|
-|----|-----|
-|Name|`tokudb_load_save_space`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`ON`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_load_save_space](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_load_save_space)|
-
-## tokudb_loader_memory_size
-|name|value|
-|----|-----|
-|Name|`tokudb_loader_memory_size`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`100000000`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_loader_memory_size](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_loader_memory_size)|
-
-## tokudb_lock_timeout
-|name|value|
-|----|-----|
-|Name|`tokudb_lock_timeout`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`4000`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_lock_timeout](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_lock_timeout)|
-
-## tokudb_lock_timeout_debug
-|name|value|
-|----|-----|
-|Name|`tokudb_lock_timeout_debug`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`1`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_lock_timeout_debug](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_lock_timeout_debug)|
-
-## tokudb_log_dir
-|name|value|
-|----|-----|
-|Name|`tokudb_log_dir`|
-|Type of variable|`string`|
-|Default value|`Empty (the MariaDB datadir is used)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_log_dir](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_log_dir)|
-
-## tokudb_max_lock_memory
-|name|value|
-|----|-----|
-|Name|`tokudb_max_lock_memory`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`130653952`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_max_lock_memory](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_max_lock_memory)|
-
-## tokudb_optimize_index_fraction
-|name|value|
-|----|-----|
-|Name|`tokudb_optimize_index_fraction`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`1.000000`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_optimize_index_fraction](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_optimize_index_fraction)|
-
-## tokudb_optimize_index_name
-|name|value|
-|----|-----|
-|Name|`tokudb_optimize_index_name`|
-|Type of variable|`string`|
-|Scope|`global`, `session`|
-|Default value|`None`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_optimize_index_name](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_optimize_index_name)|
-
-## tokudb_optimize_throttle
-|name|value|
-|----|-----|
-|Name|`tokudb_optimize_throttle`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`0`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_optimize_throttle](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_optimize_throttle)|
-
-## tokudb_pk_insert_mode
-|name|value|
-|----|-----|
-|Name|`tokudb_pk_insert_mode`|
-|Type of variable|`enumeration`|
-|Scope|`global`, `session`|
-|Default value|`1`|
-|Dynamic|`true`|
-|Valid value(s)|`0`, `1`, `2`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_pk_insert_mode](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_pk_insert_mode)|
-
-## tokudb_prelock_empty
-|name|value|
-|----|-----|
-|Name|`tokudb_prelock_empty`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`ON`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_prelock_empty](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_prelock_empty)|
-
-## tokudb_read_block_size
-|name|value|
-|----|-----|
-|Name|`tokudb_read_block_size`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`65536`|
-|Dynamic|`true`|
-|Range|from: `4096` to: `4294967295`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_read_block_size](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_read_block_size)|
-
-## tokudb_read_buf_size
-|name|value|
-|----|-----|
-|Name|`tokudb_read_buf_size`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`131072`|
-|Dynamic|`true`|
-|Range|from: `0` to: `1048576`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_read_buf_size](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_read_buf_size)|
-
-## tokudb_read_status_frequency
-|name|value|
-|----|-----|
-|Name|`tokudb_read_status_frequency`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`10000`|
-|Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_read_status_frequency](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_read_status_frequency)|
-
-## tokudb_row_format
-|name|value|
-|----|-----|
-|Name|`tokudb_row_format`|
-|Type of variable|`enumeration`|
-|Scope|`global`, `session`|
-|Default value|`tokudb_zlib`|
-|Dynamic|`true`|
-|Valid value(s)|`tokudb_default`, `tokudb_fast`, `tokudb_small`, `tokudb_zlib`, `tokudb_quicklz`, `tokudb_lzma`, `tokudb_uncompressed`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_row_format](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_row_format)|
-
-## tokudb_rpl_check_readonly
-|name|value|
-|----|-----|
-|Name|`tokudb_rpl_check_readonly`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`ON`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_rpl_check_readonly](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_rpl_check_readonly)|
-
-## tokudb_rpl_lookup_rows
-|name|value|
-|----|-----|
-|Name|`tokudb_rpl_lookup_rows`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`ON`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_rpl_lookup_rows](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_rpl_lookup_rows)|
-
-## tokudb_rpl_lookup_rows_delay
-|name|value|
-|----|-----|
-|Name|`tokudb_rpl_lookup_rows_delay`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`0`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_rpl_lookup_rows_delay](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_rpl_lookup_rows_delay)|
-
-## tokudb_rpl_unique_checks
-|name|value|
-|----|-----|
-|Name|`tokudb_rpl_unique_checks`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`ON`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_rpl_unique_checks](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_rpl_unique_checks)|
-
-## tokudb_rpl_unique_checks_delay
-|name|value|
-|----|-----|
-|Name|`tokudb_rpl_unique_checks_delay`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
-|Default value|`0`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_rpl_unique_checks_delay](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_rpl_unique_checks_delay)|
-
-## tokudb_support_xa
-|name|value|
-|----|-----|
-|Name|`tokudb_support_xa`|
-|Type of variable|`boolean`|
-|Scope|`global`, `session`|
-|Default value|`ON`|
-|Dynamic|`true`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_support_xa](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_support_xa)|
-
-## tokudb_tmp_dir
-|name|value|
-|----|-----|
-|Name|`tokudb_tmp_dir`|
-|Type of variable|`directory name`|
-|Default value|`Empty (the MariaDB datadir is used)`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_tmp_dir](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_tmp_dir)|
-
-## tokudb_version
-|name|value|
-|----|-----|
-|Name|`tokudb_version`|
-|Type of variable|`string`|
-|Dynamic|`false`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_version](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_version)|
-
-## tokudb_write_status_frequency
-|name|value|
-|----|-----|
-|Name|`tokudb_write_status_frequency`|
-|Type of variable|`integer`|
-|Scope|`global`|
-|Default value|`1000`|
-|Dynamic|`true`|
-|Range|from: `0` to: `4294967295`|
-
-### Documentation(s)
-|source|anchor name|
-|------|----|
-|mariadb.com|[tokudb_write_status_frequency](https://mariadb.com/docs/server/server-usage/storage-engines/legacy-storage-engines/tokudb/tokudb-system-variables#tokudb_write_status_frequency)|
 
 ## userstat
 |name|value|

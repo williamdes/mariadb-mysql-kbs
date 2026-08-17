@@ -2235,7 +2235,7 @@
     },
     {
       "cli": "--old-mode",
-      "default": "UTF8_IS_UTF8MB3 (>= MariaDB 10.6) (empty string) (<= MariaDB 10.5)",
+      "default": "(empty string) (>= MariaDB 13.1), UTF8_IS_UTF8MB3 (MariaDB 10.6 to MariaDB 13.0), (empty string) (<= MariaDB 10.5)",
       "dynamic": true,
       "id": "old_mode",
       "name": "old_mode",

@@ -11664,1674 +11664,1218 @@
         },
         "Com_admin_commands": {
             "name": "Com_admin_commands",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_admin_commands"
+                "46#com_admin_commands",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_alter_db": {
             "name": "Com_alter_db",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_alter_db"
+                "46#com_alter_db",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_alter_db_upgrade": {
             "name": "Com_alter_db_upgrade",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_alter_db_upgrade"
+                "46#com_alter_db_upgrade",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_alter_event": {
             "name": "Com_alter_event",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_alter_event"
+                "46#com_alter_event",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_alter_function": {
             "name": "Com_alter_function",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_alter_function"
+                "46#com_alter_function",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_alter_procedure": {
             "name": "Com_alter_procedure",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_alter_procedure"
+                "46#com_alter_procedure",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_alter_sequence": {
             "name": "Com_alter_sequence",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_alter_sequence"
+                "46#com_alter_sequence",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_alter_server": {
             "name": "Com_alter_server",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_alter_server"
+                "46#com_alter_server",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_alter_table": {
             "name": "Com_alter_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_alter_table"
+                "46#com_alter_table",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_alter_tablespace": {
             "name": "Com_alter_tablespace",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_alter_tablespace"
+                "46#com_alter_tablespace",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_alter_user": {
             "name": "Com_alter_user",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_alter_user"
+                "46#com_alter_user",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_analyze": {
             "name": "Com_analyze",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_analyze"
+                "46#com_analyze",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_assign_to_keycache": {
             "name": "Com_assign_to_keycache",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_assign_to_keycache"
+                "46#com_assign_to_keycache",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_backup": {
             "name": "Com_backup",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_backup"
+                "46#com_backup",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_backup_lock": {
             "name": "Com_backup_lock",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_backup_lock"
+                "46#com_backup_lock",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_backup_table": {
             "name": "Com_backup_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_backup_table"
+                "46#com_backup_table",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_begin": {
             "name": "Com_begin",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_begin"
+                "46#com_begin",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_binlog": {
             "name": "Com_binlog",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_binlog"
+                "46#com_binlog",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_call_procedure": {
             "name": "Com_call_procedure",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_call_procedure"
+                "46#com_call_procedure",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_change_db": {
             "name": "Com_change_db",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_change_db"
+                "46#com_change_db",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_check": {
             "name": "Com_check",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_check"
+                "46#com_check",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_checksum": {
             "name": "Com_checksum",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_checksum"
+                "46#com_checksum",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_commit": {
             "name": "Com_commit",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_commit"
+                "46#com_commit",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_compound_sql": {
             "name": "Com_compound_sql",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_compound_sql"
+                "46#com_compound_sql",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_db": {
             "name": "Com_create_db",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_db"
+                "46#com_create_db",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_event": {
             "name": "Com_create_event",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_event"
+                "46#com_create_event",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_function": {
             "name": "Com_create_function",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_function"
+                "46#com_create_function",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_index": {
             "name": "Com_create_index",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_index"
+                "46#com_create_index",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_package": {
             "name": "Com_create_package",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_package"
+                "46#com_create_package",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_package_body": {
             "name": "Com_create_package_body",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_package_body"
+                "46#com_create_package_body",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_procedure": {
             "name": "Com_create_procedure",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_procedure"
+                "46#com_create_procedure",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_role": {
             "name": "Com_create_role",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_role"
+                "46#com_create_role",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_sequence": {
             "name": "Com_create_sequence",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_sequence"
+                "46#com_create_sequence",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_server": {
             "name": "Com_create_server",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_server"
+                "46#com_create_server",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_table": {
             "name": "Com_create_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_table"
+                "46#com_create_table",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_temporary_table": {
             "name": "Com_create_temporary_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_temporary_table"
+                "46#com_create_temporary_table",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_trigger": {
             "name": "Com_create_trigger",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_trigger"
+                "46#com_create_trigger",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_udf": {
             "name": "Com_create_udf",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_udf"
+                "46#com_create_udf",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_user": {
             "name": "Com_create_user",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_user"
+                "46#com_create_user",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_create_view": {
             "name": "Com_create_view",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_create_view"
+                "46#com_create_view",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_dealloc_sql": {
             "name": "Com_dealloc_sql",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_dealloc_sql"
+                "46#com_dealloc_sql",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_delete": {
             "name": "Com_delete",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_delete"
+                "46#com_delete",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_delete_multi": {
             "name": "Com_delete_multi",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_delete_multi"
+                "46#com_delete_multi",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_do": {
             "name": "Com_do",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_do"
+                "46#com_do",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_db": {
             "name": "Com_drop_db",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_db"
+                "46#com_drop_db",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_event": {
             "name": "Com_drop_event",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_event"
+                "46#com_drop_event",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_function": {
             "name": "Com_drop_function",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_function"
+                "46#com_drop_function",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_index": {
             "name": "Com_drop_index",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_index"
+                "46#com_drop_index",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_package": {
             "name": "Com_drop_package",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_package"
+                "46#com_drop_package",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_package_body": {
             "name": "Com_drop_package_body",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_package_body"
+                "46#com_drop_package_body",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_procedure": {
             "name": "Com_drop_procedure",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_procedure"
+                "46#com_drop_procedure",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_role": {
             "name": "Com_drop_role",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_role"
+                "46#com_drop_role",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_sequence": {
             "name": "Com_drop_sequence",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_sequence"
+                "46#com_drop_sequence",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_server": {
             "name": "Com_drop_server",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_server"
+                "46#com_drop_server",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_table": {
             "name": "Com_drop_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_table"
+                "46#com_drop_table",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_temporary_table": {
             "name": "Com_drop_temporary_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_temporary_table"
+                "46#com_drop_temporary_table",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_trigger": {
             "name": "Com_drop_trigger",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_trigger"
+                "46#com_drop_trigger",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_user": {
             "name": "Com_drop_user",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_user"
+                "46#com_drop_user",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_drop_view": {
             "name": "Com_drop_view",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_drop_view"
+                "46#com_drop_view",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_empty_query": {
             "name": "Com_empty_query",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_empty_query"
+                "46#com_empty_query",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_execute_immediate": {
             "name": "Com_execute_immediate",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_execute_immediate"
+                "46#com_execute_immediate",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_execute_sql": {
             "name": "Com_execute_sql",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_execute_sql"
+                "46#com_execute_sql",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_flush": {
             "name": "Com_flush",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_flush"
+                "46#com_flush",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_get_diagnostics": {
             "name": "Com_get_diagnostics",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_get_diagnostics"
+                "46#com_get_diagnostics",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_grant": {
             "name": "Com_grant",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_grant"
+                "46#com_grant",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_grant_role": {
             "name": "Com_grant_role",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_grant_role"
+                "46#com_grant_role",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_ha_close": {
             "name": "Com_ha_close",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_ha_close"
+                "46#com_ha_close",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_ha_open": {
             "name": "Com_ha_open",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_ha_open"
+                "46#com_ha_open",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_ha_read": {
             "name": "Com_ha_read",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_ha_read"
+                "46#com_ha_read",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_help": {
             "name": "Com_help",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_help"
+                "46#com_help",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_insert": {
             "name": "Com_insert",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_insert"
+                "46#com_insert",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_insert_select": {
             "name": "Com_insert_select",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_insert_select"
+                "46#com_insert_select",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_install_plugin": {
             "name": "Com_install_plugin",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_install_plugin"
+                "46#com_install_plugin",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_kill": {
             "name": "Com_kill",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_kill"
+                "46#com_kill",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_load": {
             "name": "Com_load",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_load"
+                "46#com_load",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_load_master_data": {
             "name": "Com_load_master_data",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_load_master_data"
+                "46#com_load_master_data",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_load_master_table": {
             "name": "Com_load_master_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_load_master_table"
+                "46#com_load_master_table",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_multi": {
             "name": "Com_multi",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_multi"
+                "46#com_multi",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_lock_tables": {
             "name": "Com_lock_tables",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_lock_tables"
+                "46#com_lock_tables",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_optimize": {
             "name": "Com_optimize",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_optimize"
+                "46#com_optimize",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_preload_keys": {
             "name": "Com_preload_keys",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_preload_keys"
+                "46#com_preload_keys",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_prepare_sql": {
             "name": "Com_prepare_sql",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_prepare_sql"
+                "46#com_prepare_sql",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_purge": {
             "name": "Com_purge",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_purge"
+                "46#com_purge",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_purge_before_date": {
             "name": "Com_purge_before_date",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_purge_before_date"
+                "46#com_purge_before_date",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_release_savepoint": {
             "name": "Com_release_savepoint",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_release_savepoint"
+                "46#com_release_savepoint",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_rename_table": {
             "name": "Com_rename_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_rename_table"
+                "46#com_rename_table",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_rename_user": {
             "name": "Com_rename_user",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_rename_user"
+                "46#com_rename_user",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_repair": {
             "name": "Com_repair",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_repair"
+                "46#com_repair",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_replace": {
             "name": "Com_replace",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_replace"
+                "46#com_replace",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_replace_select": {
             "name": "Com_replace_select",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_replace_select"
+                "46#com_replace_select",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_reset": {
             "name": "Com_reset",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_reset"
+                "46#com_reset",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_resignal": {
             "name": "Com_resignal",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_resignal"
+                "46#com_resignal",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_restore_table": {
             "name": "Com_restore_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_restore_table"
+                "46#com_restore_table",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_revoke": {
             "name": "Com_revoke",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_revoke"
+                "46#com_revoke",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_revoke_all": {
             "name": "Com_revoke_all",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_revoke_all"
+                "46#com_revoke_all",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_revoke_grant": {
             "name": "Com_revoke_grant",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_revoke_grant"
+                "46#com_revoke_grant",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_rollback": {
             "name": "Com_rollback",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_rollback"
+                "46#com_rollback",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_rollback_to_savepoint": {
             "name": "Com_rollback_to_savepoint",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_rollback_to_savepoint"
+                "46#com_rollback_to_savepoint",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_savepoint": {
             "name": "Com_savepoint",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_savepoint"
+                "46#com_savepoint",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_select": {
             "name": "Com_select",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_select"
+                "46#com_select",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_set_option": {
             "name": "Com_set_option",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_set_option"
+                "46#com_set_option",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_signal": {
             "name": "Com_signal",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_signal"
+                "46#com_signal",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_authors": {
             "name": "Com_show_authors",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_authors"
+                "46#com_show_authors",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_binlog_events": {
             "name": "Com_show_binlog_events",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_binlog_events"
+                "46#com_show_binlog_events",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_binlogs": {
             "name": "Com_show_binlogs",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_binlogs"
+                "46#com_show_binlogs",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_charsets": {
             "name": "Com_show_charsets",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_charsets"
+                "46#com_show_charsets",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_client_statistics": {
             "name": "Com_show_client_statistics",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_client_statistics"
+                "46#com_show_client_statistics",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_collations": {
             "name": "Com_show_collations",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_collations"
+                "46#com_show_collations",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_column_types": {
             "name": "Com_show_column_types",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_column_types"
+                "46#com_show_column_types",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_contributors": {
             "name": "Com_show_contributors",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_contributors"
+                "46#com_show_contributors",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_create_db": {
             "name": "Com_show_create_db",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_create_db"
+                "46#com_show_create_db",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_create_event": {
             "name": "Com_show_create_event",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_create_event"
+                "46#com_show_create_event",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_create_func": {
             "name": "Com_show_create_func",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_create_func"
+                "46#com_show_create_func",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_create_package": {
             "name": "Com_show_create_package",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_create_package"
+                "46#com_show_create_package",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_create_package_body": {
             "name": "Com_show_create_package_body",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_create_package_body"
+                "46#com_show_create_package_body",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_create_proc": {
             "name": "Com_show_create_proc",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_create_proc"
+                "46#com_show_create_proc",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_create_table": {
             "name": "Com_show_create_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_create_table"
+                "46#com_show_create_table",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_create_trigger": {
             "name": "Com_show_create_trigger",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_create_trigger"
+                "46#com_show_create_trigger",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_create_user": {
             "name": "Com_show_create_user",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_create_user"
+                "46#com_show_create_user",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_databases": {
             "name": "Com_show_databases",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_databases"
+                "46#com_show_databases",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_engine_logs": {
             "name": "Com_show_engine_logs",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_engine_logs"
+                "46#com_show_engine_logs",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_engine_mutex": {
             "name": "Com_show_engine_mutex",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_engine_mutex"
+                "46#com_show_engine_mutex",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_engine_status": {
             "name": "Com_show_engine_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_engine_status"
+                "46#com_show_engine_status",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_events": {
             "name": "Com_show_events",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_events"
+                "46#com_show_events",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_errors": {
             "name": "Com_show_errors",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_errors"
+                "46#com_show_errors",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_explain": {
             "name": "Com_show_explain",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_explain"
+                "46#com_show_explain",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_fields": {
             "name": "Com_show_fields",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_fields"
+                "46#com_show_fields",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_function_status": {
             "name": "Com_show_function_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_function_status"
+                "46#com_show_function_status",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_generic": {
             "name": "Com_show_generic",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_generic"
+                "46#com_show_generic",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_grants": {
             "name": "Com_show_grants",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_grants"
+                "46#com_show_grants",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_keys": {
             "name": "Com_show_keys",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_keys"
+                "46#com_show_keys",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_index_statistics": {
             "name": "Com_show_index_statistics",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_index_statistics"
+                "46#com_show_index_statistics",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_open_tables": {
             "name": "Com_show_open_tables",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_open_tables"
+                "46#com_show_open_tables",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_package_status": {
             "name": "Com_show_package_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_package_status"
+                "46#com_show_package_status",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_package_body_status": {
             "name": "Com_show_package_body_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_package_body_status"
+                "46#com_show_package_body_status",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_plugins": {
             "name": "Com_show_plugins",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_plugins"
+                "46#com_show_plugins",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_privileges": {
             "name": "Com_show_privileges",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_privileges"
+                "46#com_show_privileges",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_procedure_status": {
             "name": "Com_show_procedure_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_procedure_status"
+                "46#com_show_procedure_status",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_processlist": {
             "name": "Com_show_processlist",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_processlist"
+                "46#com_show_processlist",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_profile": {
             "name": "Com_show_profile",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_profile"
+                "46#com_show_profile",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_profiles": {
             "name": "Com_show_profiles",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_profiles"
+                "46#com_show_profiles",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_relaylog_events": {
             "name": "Com_show_relaylog_events",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_relaylog_events"
+                "46#com_show_relaylog_events",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_status": {
             "name": "Com_show_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_status"
+                "46#com_show_status",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_storage_engines": {
             "name": "Com_show_storage_engines",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_storage_engines"
+                "46#com_show_storage_engines",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_table_statistics": {
             "name": "Com_show_table_statistics",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_table_statistics"
+                "46#com_show_table_statistics",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_table_status": {
             "name": "Com_show_table_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_table_status"
+                "46#com_show_table_status",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_tables": {
             "name": "Com_show_tables",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_tables"
+                "46#com_show_tables",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_triggers": {
             "name": "Com_show_triggers",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_triggers"
+                "46#com_show_triggers",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_user_statistics": {
             "name": "Com_show_user_statistics",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_user_statistics"
+                "46#com_show_user_statistics",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_variable": {
             "name": "Com_show_variable",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_variable"
+                "46#com_show_variable",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_show_warnings": {
             "name": "Com_show_warnings",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_show_warnings"
+                "46#com_show_warnings",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_shutdown": {
             "name": "Com_shutdown",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_shutdown"
+                "46#com_shutdown",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_stmt_close": {
@@ -13368,13 +12912,10 @@
         },
         "Com_stmt_reprepare": {
             "name": "Com_stmt_reprepare",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_stmt_reprepare"
+                "46#com_stmt_reprepare",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_stmt_reset": {
@@ -13395,123 +12936,90 @@
         },
         "Com_truncate": {
             "name": "Com_truncate",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_truncate"
+                "46#com_truncate",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_uninstall_plugin": {
             "name": "Com_uninstall_plugin",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_uninstall_plugin"
+                "46#com_uninstall_plugin",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_unlock_tables": {
             "name": "Com_unlock_tables",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_unlock_tables"
+                "46#com_unlock_tables",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_update": {
             "name": "Com_update",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_update"
+                "46#com_update",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_update_multi": {
             "name": "Com_update_multi",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_update_multi"
+                "46#com_update_multi",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_xa_commit": {
             "name": "Com_xa_commit",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_xa_commit"
+                "46#com_xa_commit",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_xa_end": {
             "name": "Com_xa_end",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_xa_end"
+                "46#com_xa_end",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_xa_prepare": {
             "name": "Com_xa_prepare",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_xa_prepare"
+                "46#com_xa_prepare",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_xa_recover": {
             "name": "Com_xa_recover",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_xa_recover"
+                "46#com_xa_recover",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_xa_rollback": {
             "name": "Com_xa_rollback",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_xa_rollback"
+                "46#com_xa_rollback",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Com_xa_start": {
             "name": "Com_xa_start",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
-                "46#com_xa_start"
+                "46#com_xa_start",
+                "41#statvar_Com_xxx",
+                "42#statvar_Com_xxx"
             ]
         },
         "Compression": {
@@ -17525,7 +17033,7 @@
         },
         "old_mode": {
             "cli": "--old-mode",
-            "default": "UTF8_IS_UTF8MB3 (>= MariaDB 10.6) (empty string) (<= MariaDB 10.5)",
+            "default": "(empty string) (>= MariaDB 13.1), UTF8_IS_UTF8MB3 (MariaDB 10.6 to MariaDB 13.0), (empty string) (<= MariaDB 10.5)",
             "dynamic": true,
             "name": "old_mode",
             "scope": [

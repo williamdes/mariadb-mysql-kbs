@@ -12519,1825 +12519,1825 @@
 |name|value|
 |----|-----|
 |Name|`Com_admin_commands`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_admin_commands](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_admin_commands)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_db
 |name|value|
 |----|-----|
 |Name|`Com_alter_db`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_db](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_db)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_db_upgrade
 |name|value|
 |----|-----|
 |Name|`Com_alter_db_upgrade`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_db_upgrade](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_db_upgrade)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_event
 |name|value|
 |----|-----|
 |Name|`Com_alter_event`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_event](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_event)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_function
 |name|value|
 |----|-----|
 |Name|`Com_alter_function`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_function](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_function)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_procedure
 |name|value|
 |----|-----|
 |Name|`Com_alter_procedure`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_procedure](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_procedure)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_sequence
 |name|value|
 |----|-----|
 |Name|`Com_alter_sequence`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_sequence](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_sequence)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_server
 |name|value|
 |----|-----|
 |Name|`Com_alter_server`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_server](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_server)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_table
 |name|value|
 |----|-----|
 |Name|`Com_alter_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_tablespace
 |name|value|
 |----|-----|
 |Name|`Com_alter_tablespace`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_tablespace](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_tablespace)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_alter_user
 |name|value|
 |----|-----|
 |Name|`Com_alter_user`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_alter_user](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_alter_user)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_analyze
 |name|value|
 |----|-----|
 |Name|`Com_analyze`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_analyze](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_analyze)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_assign_to_keycache
 |name|value|
 |----|-----|
 |Name|`Com_assign_to_keycache`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_assign_to_keycache](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_assign_to_keycache)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_backup
 |name|value|
 |----|-----|
 |Name|`Com_backup`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_backup](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_backup)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_backup_lock
 |name|value|
 |----|-----|
 |Name|`Com_backup_lock`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_backup_lock](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_backup_lock)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_backup_table
 |name|value|
 |----|-----|
 |Name|`Com_backup_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_backup_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_backup_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_begin
 |name|value|
 |----|-----|
 |Name|`Com_begin`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_begin](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_begin)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_binlog
 |name|value|
 |----|-----|
 |Name|`Com_binlog`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_binlog](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_binlog)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_call_procedure
 |name|value|
 |----|-----|
 |Name|`Com_call_procedure`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_call_procedure](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_call_procedure)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_change_db
 |name|value|
 |----|-----|
 |Name|`Com_change_db`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_change_db](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_change_db)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_check
 |name|value|
 |----|-----|
 |Name|`Com_check`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_check](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_check)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_checksum
 |name|value|
 |----|-----|
 |Name|`Com_checksum`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_checksum](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_checksum)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_commit
 |name|value|
 |----|-----|
 |Name|`Com_commit`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_commit](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_commit)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_compound_sql
 |name|value|
 |----|-----|
 |Name|`Com_compound_sql`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_compound_sql](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_compound_sql)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_db
 |name|value|
 |----|-----|
 |Name|`Com_create_db`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_db](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_db)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_event
 |name|value|
 |----|-----|
 |Name|`Com_create_event`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_event](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_event)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_function
 |name|value|
 |----|-----|
 |Name|`Com_create_function`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_function](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_function)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_index
 |name|value|
 |----|-----|
 |Name|`Com_create_index`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_index](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_index)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_package
 |name|value|
 |----|-----|
 |Name|`Com_create_package`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_package](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_package)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_package_body
 |name|value|
 |----|-----|
 |Name|`Com_create_package_body`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_package_body](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_package_body)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_procedure
 |name|value|
 |----|-----|
 |Name|`Com_create_procedure`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_procedure](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_procedure)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_role
 |name|value|
 |----|-----|
 |Name|`Com_create_role`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_role](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_role)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_sequence
 |name|value|
 |----|-----|
 |Name|`Com_create_sequence`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_sequence](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_sequence)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_server
 |name|value|
 |----|-----|
 |Name|`Com_create_server`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_server](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_server)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_table
 |name|value|
 |----|-----|
 |Name|`Com_create_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_temporary_table
 |name|value|
 |----|-----|
 |Name|`Com_create_temporary_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_temporary_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_temporary_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_trigger
 |name|value|
 |----|-----|
 |Name|`Com_create_trigger`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_trigger](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_trigger)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_udf
 |name|value|
 |----|-----|
 |Name|`Com_create_udf`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_udf](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_udf)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_user
 |name|value|
 |----|-----|
 |Name|`Com_create_user`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_user](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_user)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_create_view
 |name|value|
 |----|-----|
 |Name|`Com_create_view`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_create_view](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_create_view)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_dealloc_sql
 |name|value|
 |----|-----|
 |Name|`Com_dealloc_sql`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_dealloc_sql](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_dealloc_sql)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_delete
 |name|value|
 |----|-----|
 |Name|`Com_delete`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_delete](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_delete)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_delete_multi
 |name|value|
 |----|-----|
 |Name|`Com_delete_multi`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_delete_multi](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_delete_multi)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_do
 |name|value|
 |----|-----|
 |Name|`Com_do`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_do](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_do)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_db
 |name|value|
 |----|-----|
 |Name|`Com_drop_db`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_db](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_db)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_event
 |name|value|
 |----|-----|
 |Name|`Com_drop_event`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_event](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_event)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_function
 |name|value|
 |----|-----|
 |Name|`Com_drop_function`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_function](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_function)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_index
 |name|value|
 |----|-----|
 |Name|`Com_drop_index`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_index](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_index)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_package
 |name|value|
 |----|-----|
 |Name|`Com_drop_package`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_package](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_package)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_package_body
 |name|value|
 |----|-----|
 |Name|`Com_drop_package_body`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_package_body](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_package_body)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_procedure
 |name|value|
 |----|-----|
 |Name|`Com_drop_procedure`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_procedure](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_procedure)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_role
 |name|value|
 |----|-----|
 |Name|`Com_drop_role`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_role](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_role)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_sequence
 |name|value|
 |----|-----|
 |Name|`Com_drop_sequence`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_sequence](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_sequence)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_server
 |name|value|
 |----|-----|
 |Name|`Com_drop_server`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_server](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_server)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_table
 |name|value|
 |----|-----|
 |Name|`Com_drop_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_temporary_table
 |name|value|
 |----|-----|
 |Name|`Com_drop_temporary_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_temporary_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_temporary_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_trigger
 |name|value|
 |----|-----|
 |Name|`Com_drop_trigger`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_trigger](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_trigger)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_user
 |name|value|
 |----|-----|
 |Name|`Com_drop_user`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_user](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_user)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_drop_view
 |name|value|
 |----|-----|
 |Name|`Com_drop_view`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_drop_view](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_drop_view)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_empty_query
 |name|value|
 |----|-----|
 |Name|`Com_empty_query`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_empty_query](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_empty_query)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_execute_immediate
 |name|value|
 |----|-----|
 |Name|`Com_execute_immediate`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_execute_immediate](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_execute_immediate)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_execute_sql
 |name|value|
 |----|-----|
 |Name|`Com_execute_sql`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_execute_sql](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_execute_sql)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_flush
 |name|value|
 |----|-----|
 |Name|`Com_flush`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_flush](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_flush)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_get_diagnostics
 |name|value|
 |----|-----|
 |Name|`Com_get_diagnostics`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_get_diagnostics](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_get_diagnostics)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_grant
 |name|value|
 |----|-----|
 |Name|`Com_grant`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_grant](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_grant)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_grant_role
 |name|value|
 |----|-----|
 |Name|`Com_grant_role`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_grant_role](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_grant_role)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_ha_close
 |name|value|
 |----|-----|
 |Name|`Com_ha_close`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_ha_close](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_ha_close)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_ha_open
 |name|value|
 |----|-----|
 |Name|`Com_ha_open`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_ha_open](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_ha_open)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_ha_read
 |name|value|
 |----|-----|
 |Name|`Com_ha_read`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_ha_read](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_ha_read)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_help
 |name|value|
 |----|-----|
 |Name|`Com_help`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_help](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_help)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_insert
 |name|value|
 |----|-----|
 |Name|`Com_insert`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_insert](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_insert)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_insert_select
 |name|value|
 |----|-----|
 |Name|`Com_insert_select`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_insert_select](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_insert_select)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_install_plugin
 |name|value|
 |----|-----|
 |Name|`Com_install_plugin`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_install_plugin](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_install_plugin)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_kill
 |name|value|
 |----|-----|
 |Name|`Com_kill`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_kill](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_kill)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_load
 |name|value|
 |----|-----|
 |Name|`Com_load`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_load](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_load)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_load_master_data
 |name|value|
 |----|-----|
 |Name|`Com_load_master_data`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_load_master_data](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_load_master_data)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_load_master_table
 |name|value|
 |----|-----|
 |Name|`Com_load_master_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_load_master_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_load_master_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_multi
 |name|value|
 |----|-----|
 |Name|`Com_multi`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_multi](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_multi)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_lock_tables
 |name|value|
 |----|-----|
 |Name|`Com_lock_tables`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_lock_tables](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_lock_tables)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_optimize
 |name|value|
 |----|-----|
 |Name|`Com_optimize`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_optimize](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_optimize)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_preload_keys
 |name|value|
 |----|-----|
 |Name|`Com_preload_keys`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_preload_keys](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_preload_keys)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_prepare_sql
 |name|value|
 |----|-----|
 |Name|`Com_prepare_sql`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_prepare_sql](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_prepare_sql)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_purge
 |name|value|
 |----|-----|
 |Name|`Com_purge`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_purge](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_purge)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_purge_before_date
 |name|value|
 |----|-----|
 |Name|`Com_purge_before_date`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_purge_before_date](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_purge_before_date)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_release_savepoint
 |name|value|
 |----|-----|
 |Name|`Com_release_savepoint`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_release_savepoint](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_release_savepoint)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_rename_table
 |name|value|
 |----|-----|
 |Name|`Com_rename_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_rename_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_rename_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_rename_user
 |name|value|
 |----|-----|
 |Name|`Com_rename_user`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_rename_user](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_rename_user)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_repair
 |name|value|
 |----|-----|
 |Name|`Com_repair`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_repair](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_repair)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_replace
 |name|value|
 |----|-----|
 |Name|`Com_replace`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_replace](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_replace)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_replace_select
 |name|value|
 |----|-----|
 |Name|`Com_replace_select`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_replace_select](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_replace_select)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_reset
 |name|value|
 |----|-----|
 |Name|`Com_reset`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_reset](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_reset)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_resignal
 |name|value|
 |----|-----|
 |Name|`Com_resignal`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_resignal](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_resignal)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_restore_table
 |name|value|
 |----|-----|
 |Name|`Com_restore_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_restore_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_restore_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_revoke
 |name|value|
 |----|-----|
 |Name|`Com_revoke`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_revoke](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_revoke)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_revoke_all
 |name|value|
 |----|-----|
 |Name|`Com_revoke_all`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_revoke_all](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_revoke_all)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_revoke_grant
 |name|value|
 |----|-----|
 |Name|`Com_revoke_grant`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_revoke_grant](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_revoke_grant)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_rollback
 |name|value|
 |----|-----|
 |Name|`Com_rollback`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_rollback](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_rollback)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_rollback_to_savepoint
 |name|value|
 |----|-----|
 |Name|`Com_rollback_to_savepoint`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_rollback_to_savepoint](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_rollback_to_savepoint)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_savepoint
 |name|value|
 |----|-----|
 |Name|`Com_savepoint`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_savepoint](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_savepoint)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_select
 |name|value|
 |----|-----|
 |Name|`Com_select`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_select](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_select)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_set_option
 |name|value|
 |----|-----|
 |Name|`Com_set_option`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_set_option](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_set_option)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_signal
 |name|value|
 |----|-----|
 |Name|`Com_signal`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_signal](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_signal)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_authors
 |name|value|
 |----|-----|
 |Name|`Com_show_authors`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_authors](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_authors)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_binlog_events
 |name|value|
 |----|-----|
 |Name|`Com_show_binlog_events`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_binlog_events](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_binlog_events)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_binlogs
 |name|value|
 |----|-----|
 |Name|`Com_show_binlogs`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_binlogs](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_binlogs)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_charsets
 |name|value|
 |----|-----|
 |Name|`Com_show_charsets`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_charsets](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_charsets)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_client_statistics
 |name|value|
 |----|-----|
 |Name|`Com_show_client_statistics`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_client_statistics](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_client_statistics)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_collations
 |name|value|
 |----|-----|
 |Name|`Com_show_collations`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_collations](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_collations)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_column_types
 |name|value|
 |----|-----|
 |Name|`Com_show_column_types`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_column_types](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_column_types)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_contributors
 |name|value|
 |----|-----|
 |Name|`Com_show_contributors`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_contributors](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_contributors)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_db
 |name|value|
 |----|-----|
 |Name|`Com_show_create_db`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_db](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_db)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_event
 |name|value|
 |----|-----|
 |Name|`Com_show_create_event`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_event](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_event)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_func
 |name|value|
 |----|-----|
 |Name|`Com_show_create_func`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_func](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_func)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_package
 |name|value|
 |----|-----|
 |Name|`Com_show_create_package`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_package](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_package)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_package_body
 |name|value|
 |----|-----|
 |Name|`Com_show_create_package_body`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_package_body](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_package_body)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_proc
 |name|value|
 |----|-----|
 |Name|`Com_show_create_proc`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_proc](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_proc)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_table
 |name|value|
 |----|-----|
 |Name|`Com_show_create_table`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_table](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_table)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_trigger
 |name|value|
 |----|-----|
 |Name|`Com_show_create_trigger`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_trigger](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_trigger)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_create_user
 |name|value|
 |----|-----|
 |Name|`Com_show_create_user`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_create_user](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_create_user)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_databases
 |name|value|
 |----|-----|
 |Name|`Com_show_databases`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_databases](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_databases)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_engine_logs
 |name|value|
 |----|-----|
 |Name|`Com_show_engine_logs`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_engine_logs](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_engine_logs)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_engine_mutex
 |name|value|
 |----|-----|
 |Name|`Com_show_engine_mutex`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_engine_mutex](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_engine_mutex)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_engine_status
 |name|value|
 |----|-----|
 |Name|`Com_show_engine_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_engine_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_engine_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_events
 |name|value|
 |----|-----|
 |Name|`Com_show_events`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_events](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_events)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_errors
 |name|value|
 |----|-----|
 |Name|`Com_show_errors`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_errors](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_errors)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_explain
 |name|value|
 |----|-----|
 |Name|`Com_show_explain`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_explain](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_explain)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_fields
 |name|value|
 |----|-----|
 |Name|`Com_show_fields`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_fields](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_fields)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_function_status
 |name|value|
 |----|-----|
 |Name|`Com_show_function_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_function_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_function_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_generic
 |name|value|
 |----|-----|
 |Name|`Com_show_generic`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_generic](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_generic)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_grants
 |name|value|
 |----|-----|
 |Name|`Com_show_grants`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_grants](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_grants)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_keys
 |name|value|
 |----|-----|
 |Name|`Com_show_keys`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_keys](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_keys)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_index_statistics
 |name|value|
 |----|-----|
 |Name|`Com_show_index_statistics`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_index_statistics](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_index_statistics)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_open_tables
 |name|value|
 |----|-----|
 |Name|`Com_show_open_tables`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_open_tables](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_open_tables)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_package_status
 |name|value|
 |----|-----|
 |Name|`Com_show_package_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_package_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_package_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_package_body_status
 |name|value|
 |----|-----|
 |Name|`Com_show_package_body_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_package_body_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_package_body_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_plugins
 |name|value|
 |----|-----|
 |Name|`Com_show_plugins`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_plugins](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_plugins)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_privileges
 |name|value|
 |----|-----|
 |Name|`Com_show_privileges`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_privileges](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_privileges)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_procedure_status
 |name|value|
 |----|-----|
 |Name|`Com_show_procedure_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_procedure_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_procedure_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_processlist
 |name|value|
 |----|-----|
 |Name|`Com_show_processlist`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_processlist](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_processlist)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_profile
 |name|value|
 |----|-----|
 |Name|`Com_show_profile`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_profile](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_profile)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_profiles
 |name|value|
 |----|-----|
 |Name|`Com_show_profiles`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_profiles](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_profiles)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_relaylog_events
 |name|value|
 |----|-----|
 |Name|`Com_show_relaylog_events`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_relaylog_events](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_relaylog_events)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_status
 |name|value|
 |----|-----|
 |Name|`Com_show_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_storage_engines
 |name|value|
 |----|-----|
 |Name|`Com_show_storage_engines`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_storage_engines](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_storage_engines)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_table_statistics
 |name|value|
 |----|-----|
 |Name|`Com_show_table_statistics`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_table_statistics](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_table_statistics)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_table_status
 |name|value|
 |----|-----|
 |Name|`Com_show_table_status`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_table_status](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_table_status)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_tables
 |name|value|
 |----|-----|
 |Name|`Com_show_tables`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_tables](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_tables)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_triggers
 |name|value|
 |----|-----|
 |Name|`Com_show_triggers`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_triggers](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_triggers)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_user_statistics
 |name|value|
 |----|-----|
 |Name|`Com_show_user_statistics`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_user_statistics](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_user_statistics)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_variable
 |name|value|
 |----|-----|
 |Name|`Com_show_variable`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_variable](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_variable)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_show_warnings
 |name|value|
 |----|-----|
 |Name|`Com_show_warnings`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_show_warnings](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_show_warnings)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_shutdown
 |name|value|
 |----|-----|
 |Name|`Com_shutdown`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_shutdown](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_shutdown)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_stmt_close
 |name|value|
@@ -14391,13 +14391,13 @@
 |name|value|
 |----|-----|
 |Name|`Com_stmt_reprepare`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_stmt_reprepare](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_stmt_reprepare)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_stmt_reset
 |name|value|
@@ -14427,133 +14427,133 @@
 |name|value|
 |----|-----|
 |Name|`Com_truncate`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_truncate](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_truncate)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_uninstall_plugin
 |name|value|
 |----|-----|
 |Name|`Com_uninstall_plugin`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_uninstall_plugin](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_uninstall_plugin)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_unlock_tables
 |name|value|
 |----|-----|
 |Name|`Com_unlock_tables`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_unlock_tables](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_unlock_tables)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_update
 |name|value|
 |----|-----|
 |Name|`Com_update`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_update](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_update)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_update_multi
 |name|value|
 |----|-----|
 |Name|`Com_update_multi`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_update_multi](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_update_multi)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_commit
 |name|value|
 |----|-----|
 |Name|`Com_xa_commit`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_commit](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_commit)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_end
 |name|value|
 |----|-----|
 |Name|`Com_xa_end`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_end](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_end)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_prepare
 |name|value|
 |----|-----|
 |Name|`Com_xa_prepare`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_prepare](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_prepare)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_recover
 |name|value|
 |----|-----|
 |Name|`Com_xa_recover`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_recover](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_recover)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_rollback
 |name|value|
 |----|-----|
 |Name|`Com_xa_rollback`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_rollback](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_rollback)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Com_xa_start
 |name|value|
 |----|-----|
 |Name|`Com_xa_start`|
-|Type of variable|`integer`|
-|Scope|`global`, `session`|
 
 ### Documentation(s)
 |source|anchor name|
 |------|----|
 |mariadb.com|[com_xa_start](https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables#com_xa_start)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html#statvar_Com_xxx)|
+|dev.mysql.com|[statvar_Com_xxx](https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html#statvar_Com_xxx)|
 
 ## Compression
 |name|value|
@@ -18987,7 +18987,7 @@
 |Command line|`--old-mode`|
 |Type of variable|`string`|
 |Scope|`global`, `session`|
-|Default value|`UTF8_IS_UTF8MB3 (>= MariaDB 10.6) (empty string) (<= MariaDB 10.5)`|
+|Default value|`(empty string) (>= MariaDB 13.1), UTF8_IS_UTF8MB3 (MariaDB 10.6 to MariaDB 13.0), (empty string) (<= MariaDB 10.5)`|
 |Dynamic|`true`|
 
 ### Documentation(s)

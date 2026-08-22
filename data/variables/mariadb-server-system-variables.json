@@ -1457,6 +1457,22 @@
       ]
     },
     {
+      "cli": "--log-slow-max-query-length=#",
+      "default": "4294967295",
+      "dynamic": true,
+      "id": "log_slow_max_query_length",
+      "name": "log_slow_max_query_length",
+      "range": {
+        "from": 1,
+        "to": 4294967295
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "log-slow-max-warnings=#",
       "default": "10",
       "dynamic": true,
@@ -2235,7 +2251,7 @@
     },
     {
       "cli": "--old-mode",
-      "default": "UTF8_IS_UTF8MB3 (>= MariaDB 10.6) (empty string) (<= MariaDB 10.5)",
+      "default": "(empty string) (>= MariaDB 13.1), UTF8_IS_UTF8MB3 (MariaDB 10.6 to MariaDB 13.0), (empty string) (<= MariaDB 10.5)",
       "dynamic": true,
       "id": "old_mode",
       "name": "old_mode",

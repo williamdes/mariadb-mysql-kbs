@@ -45,7 +45,7 @@ pub fn extract(only: ExtractionPreference) {
     println!("End !");
 }
 
-pub fn get_html_from_url(agent: Agent, url: &str) -> Result<QueryResponse, QueryErrorResponse> {
+fn call_url(agent: &Agent, url: &str) -> Result<ureq::http::Response<ureq::Body>, Error> {
     let request = agent.get(url);
     // dev.mysql.com blocks the bot User-Agent, so send browser headers there;
     // every other source keeps the original self-identifying bot request.
@@ -68,7 +68,11 @@ pub fn get_html_from_url(agent: Agent, url: &str) -> Result<QueryResponse, Query
     } else {
         request.header("From", UA_FROM).header("User-Agent", UA)
     };
-    match request.call() {
+    request.call()
+}
+
+pub fn get_html_from_url(agent: Agent, url: &str) -> Result<QueryResponse, QueryErrorResponse> {
+    match call_url(&agent, url) {
         Ok(mut response) => Ok(QueryResponse {
             url: response.get_uri().to_string(),
             body: response.body_mut().read_to_string().expect("Should have text"),
@@ -83,6 +87,32 @@ pub fn get_html_from_url(agent: Agent, url: &str) -> Result<QueryResponse, Query
             code: None,
             message: err.to_string(),
         }),
+    }
+}
+
+/// Fetch a URL exactly as the extractor does (same client and headers) and
+/// print the raw HTTP response — status code, version, headers and body — to
+/// make debugging what a page returns easy from the CLI.
+pub fn debug_url(url: &str) {
+    let agent: Agent = Agent::config_builder()
+        .timeout_global(Some(Duration::from_secs(30)))
+        .build()
+        .into();
+    match call_url(&agent, url) {
+        Ok(mut response) => {
+            let final_url = response.get_uri().to_string();
+            println!("{:?} {}", response.version(), response.status());
+            println!("URL: {final_url}");
+            for (name, value) in response.headers() {
+                println!("{name}: {}", value.to_str().unwrap_or("<non-utf8>"));
+            }
+            println!();
+            match response.body_mut().read_to_string() {
+                Ok(body) => println!("{body}"),
+                Err(err) => eprintln!("<failed to read body: {err}>"),
+            }
+        }
+        Err(err) => eprintln!("Request failed: {err}"),
     }
 }
 

@@ -40,6 +40,11 @@ enum Commands {
         )]
         dataset: ExtractCommands,
     },
+    #[command(about = "Fetch a URL and print the raw HTTP response (code, version, headers, body)")]
+    Fetch {
+        #[arg(value_name = "url", help = "The URL to fetch and dump")]
+        url: String,
+    },
     #[command(args_conflicts_with_subcommands = true, about = "Find missing data")]
     FindMissingData {
         #[arg(
@@ -82,6 +87,9 @@ fn main() {
                 extract::extract(extract::ExtractionPreference::MariaDB);
             }
         },
+        Commands::Fetch { url } => {
+            extract::debug_url(&url);
+        }
         Commands::FindMissingData { source } => match source {
             ExtractCommands::All => {
                 find_missing_data::run(extract::ExtractionPreference::All);

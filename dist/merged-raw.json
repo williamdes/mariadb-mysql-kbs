@@ -14727,42 +14727,6 @@
                 }
             ]
         },
-        "rpl-semi-sync_master": {
-            "cli": "--rpl-semi-sync-master=value",
-            "default": "ON",
-            "name": "rpl-semi-sync_master",
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "ON",
-                "FORCE",
-                "FORCE_PLUS_PERMANENT"
-            ],
-            "ids": [
-                {
-                    "anchor": "rpl-semi-sync_master",
-                    "url": "https://mariadb.com/docs/server/ha-and-performance/standard-replication/semisynchronous-replication"
-                }
-            ]
-        },
-        "rpl-semi-sync_slave": {
-            "cli": "--rpl-semi-sync-slave=value",
-            "default": "ON",
-            "name": "rpl-semi-sync_slave",
-            "type": "enumeration",
-            "validValues": [
-                "OFF",
-                "ON",
-                "FORCE",
-                "FORCE_PLUS_PERMANENT"
-            ],
-            "ids": [
-                {
-                    "anchor": "rpl-semi-sync_slave",
-                    "url": "https://mariadb.com/docs/server/ha-and-performance/standard-replication/semisynchronous-replication"
-                }
-            ]
-        },
         "Aborted_clients": {
             "name": "Aborted_clients",
             "ids": [
@@ -15015,2129 +14979,2585 @@
         },
         "Com_admin_commands": {
             "name": "Com_admin_commands",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_admin_commands",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_alter_db": {
             "name": "Com_alter_db",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_alter_db",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_alter_db_upgrade": {
             "name": "Com_alter_db_upgrade",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_alter_db_upgrade",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_alter_event": {
             "name": "Com_alter_event",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_alter_event",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_alter_function": {
             "name": "Com_alter_function",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_alter_function",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_alter_procedure": {
             "name": "Com_alter_procedure",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_alter_procedure",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_alter_sequence": {
             "name": "Com_alter_sequence",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_alter_sequence",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_alter_server": {
             "name": "Com_alter_server",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_alter_server",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_alter_table": {
             "name": "Com_alter_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_alter_table",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_alter_tablespace": {
             "name": "Com_alter_tablespace",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_alter_tablespace",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_alter_user": {
             "name": "Com_alter_user",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_alter_user",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_analyze": {
             "name": "Com_analyze",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_analyze",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_assign_to_keycache": {
             "name": "Com_assign_to_keycache",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_assign_to_keycache",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_backup": {
             "name": "Com_backup",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_backup",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_backup_lock": {
             "name": "Com_backup_lock",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_backup_lock",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_backup_table": {
             "name": "Com_backup_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_backup_table",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_begin": {
             "name": "Com_begin",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_begin",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_binlog": {
             "name": "Com_binlog",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_binlog",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_call_procedure": {
             "name": "Com_call_procedure",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_call_procedure",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_change_db": {
             "name": "Com_change_db",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_change_db",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_check": {
             "name": "Com_check",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_check",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_checksum": {
             "name": "Com_checksum",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_checksum",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_commit": {
             "name": "Com_commit",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_commit",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_compound_sql": {
             "name": "Com_compound_sql",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_compound_sql",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_db": {
             "name": "Com_create_db",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_db",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_event": {
             "name": "Com_create_event",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_event",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_function": {
             "name": "Com_create_function",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_function",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_index": {
             "name": "Com_create_index",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_index",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_package": {
             "name": "Com_create_package",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_package",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_package_body": {
             "name": "Com_create_package_body",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_package_body",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_procedure": {
             "name": "Com_create_procedure",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_procedure",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_role": {
             "name": "Com_create_role",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_role",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_sequence": {
             "name": "Com_create_sequence",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_sequence",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_server": {
             "name": "Com_create_server",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_server",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_table": {
             "name": "Com_create_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_table",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_temporary_table": {
             "name": "Com_create_temporary_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_temporary_table",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_trigger": {
             "name": "Com_create_trigger",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_trigger",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_udf": {
             "name": "Com_create_udf",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_udf",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_user": {
             "name": "Com_create_user",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_user",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_create_view": {
             "name": "Com_create_view",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_create_view",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_dealloc_sql": {
             "name": "Com_dealloc_sql",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_dealloc_sql",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_delete": {
             "name": "Com_delete",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_delete",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_delete_multi": {
             "name": "Com_delete_multi",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_delete_multi",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_do": {
             "name": "Com_do",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_do",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_db": {
             "name": "Com_drop_db",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_db",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_event": {
             "name": "Com_drop_event",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_event",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_function": {
             "name": "Com_drop_function",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_function",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_index": {
             "name": "Com_drop_index",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_index",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_package": {
             "name": "Com_drop_package",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_package",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_package_body": {
             "name": "Com_drop_package_body",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_package_body",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_procedure": {
             "name": "Com_drop_procedure",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_procedure",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_role": {
             "name": "Com_drop_role",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_role",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_sequence": {
             "name": "Com_drop_sequence",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_sequence",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_server": {
             "name": "Com_drop_server",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_server",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_table": {
             "name": "Com_drop_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_table",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_temporary_table": {
             "name": "Com_drop_temporary_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_temporary_table",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_trigger": {
             "name": "Com_drop_trigger",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_trigger",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_user": {
             "name": "Com_drop_user",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_user",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_drop_view": {
             "name": "Com_drop_view",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_drop_view",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_empty_query": {
             "name": "Com_empty_query",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_empty_query",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_execute_immediate": {
             "name": "Com_execute_immediate",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_execute_immediate",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_execute_sql": {
             "name": "Com_execute_sql",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_execute_sql",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_flush": {
             "name": "Com_flush",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_flush",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_get_diagnostics": {
             "name": "Com_get_diagnostics",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_get_diagnostics",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_grant": {
             "name": "Com_grant",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_grant",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_grant_role": {
             "name": "Com_grant_role",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_grant_role",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_ha_close": {
             "name": "Com_ha_close",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_ha_close",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_ha_open": {
             "name": "Com_ha_open",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_ha_open",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_ha_read": {
             "name": "Com_ha_read",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_ha_read",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_help": {
             "name": "Com_help",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_help",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_insert": {
             "name": "Com_insert",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_insert",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_insert_select": {
             "name": "Com_insert_select",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_insert_select",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_install_plugin": {
             "name": "Com_install_plugin",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_install_plugin",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_kill": {
             "name": "Com_kill",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_kill",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_load": {
             "name": "Com_load",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_load",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_load_master_data": {
             "name": "Com_load_master_data",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_load_master_data",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_load_master_table": {
             "name": "Com_load_master_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_load_master_table",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_multi": {
             "name": "Com_multi",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_multi",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_lock_tables": {
             "name": "Com_lock_tables",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_lock_tables",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_optimize": {
             "name": "Com_optimize",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_optimize",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_preload_keys": {
             "name": "Com_preload_keys",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_preload_keys",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_prepare_sql": {
             "name": "Com_prepare_sql",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_prepare_sql",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_purge": {
             "name": "Com_purge",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_purge",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_purge_before_date": {
             "name": "Com_purge_before_date",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_purge_before_date",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_release_savepoint": {
             "name": "Com_release_savepoint",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_release_savepoint",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_rename_table": {
             "name": "Com_rename_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_rename_table",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_rename_user": {
             "name": "Com_rename_user",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_rename_user",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_repair": {
             "name": "Com_repair",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_repair",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_replace": {
             "name": "Com_replace",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_replace",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_replace_select": {
             "name": "Com_replace_select",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_replace_select",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_reset": {
             "name": "Com_reset",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_reset",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_resignal": {
             "name": "Com_resignal",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_resignal",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_restore_table": {
             "name": "Com_restore_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_restore_table",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_revoke": {
             "name": "Com_revoke",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_revoke",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_revoke_all": {
             "name": "Com_revoke_all",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_revoke_all",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_revoke_grant": {
             "name": "Com_revoke_grant",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_revoke_grant",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_rollback": {
             "name": "Com_rollback",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_rollback",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_rollback_to_savepoint": {
             "name": "Com_rollback_to_savepoint",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_rollback_to_savepoint",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_savepoint": {
             "name": "Com_savepoint",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_savepoint",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_select": {
             "name": "Com_select",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_select",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_set_option": {
             "name": "Com_set_option",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_set_option",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_signal": {
             "name": "Com_signal",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_signal",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_authors": {
             "name": "Com_show_authors",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_authors",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_binlog_events": {
             "name": "Com_show_binlog_events",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_binlog_events",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_binlogs": {
             "name": "Com_show_binlogs",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_binlogs",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_charsets": {
             "name": "Com_show_charsets",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_charsets",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_client_statistics": {
             "name": "Com_show_client_statistics",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_client_statistics",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_collations": {
             "name": "Com_show_collations",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_collations",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_column_types": {
             "name": "Com_show_column_types",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_column_types",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_contributors": {
             "name": "Com_show_contributors",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_contributors",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_create_db": {
             "name": "Com_show_create_db",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_create_db",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_create_event": {
             "name": "Com_show_create_event",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_create_event",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_create_func": {
             "name": "Com_show_create_func",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_create_func",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_create_package": {
             "name": "Com_show_create_package",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_create_package",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_create_package_body": {
             "name": "Com_show_create_package_body",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_create_package_body",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_create_proc": {
             "name": "Com_show_create_proc",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_create_proc",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_create_table": {
             "name": "Com_show_create_table",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_create_table",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_create_trigger": {
             "name": "Com_show_create_trigger",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_create_trigger",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_create_user": {
             "name": "Com_show_create_user",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_create_user",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_databases": {
             "name": "Com_show_databases",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_databases",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_engine_logs": {
             "name": "Com_show_engine_logs",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_engine_logs",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_engine_mutex": {
             "name": "Com_show_engine_mutex",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_engine_mutex",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_engine_status": {
             "name": "Com_show_engine_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_engine_status",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_events": {
             "name": "Com_show_events",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_events",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_errors": {
             "name": "Com_show_errors",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_errors",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_explain": {
             "name": "Com_show_explain",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_explain",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_fields": {
             "name": "Com_show_fields",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_fields",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_function_status": {
             "name": "Com_show_function_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_function_status",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_generic": {
             "name": "Com_show_generic",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_generic",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_grants": {
             "name": "Com_show_grants",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_grants",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_keys": {
             "name": "Com_show_keys",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_keys",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_index_statistics": {
             "name": "Com_show_index_statistics",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_index_statistics",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_open_tables": {
             "name": "Com_show_open_tables",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_open_tables",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_package_status": {
             "name": "Com_show_package_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_package_status",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_package_body_status": {
             "name": "Com_show_package_body_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_package_body_status",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_plugins": {
             "name": "Com_show_plugins",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_plugins",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_privileges": {
             "name": "Com_show_privileges",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_privileges",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_procedure_status": {
             "name": "Com_show_procedure_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_procedure_status",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_processlist": {
             "name": "Com_show_processlist",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_processlist",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_profile": {
             "name": "Com_show_profile",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_profile",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_profiles": {
             "name": "Com_show_profiles",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_profiles",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_relaylog_events": {
             "name": "Com_show_relaylog_events",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_relaylog_events",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_status": {
             "name": "Com_show_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_status",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_storage_engines": {
             "name": "Com_show_storage_engines",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_storage_engines",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_table_statistics": {
             "name": "Com_show_table_statistics",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_table_statistics",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_table_status": {
             "name": "Com_show_table_status",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_table_status",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_tables": {
             "name": "Com_show_tables",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_tables",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_triggers": {
             "name": "Com_show_triggers",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_triggers",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_user_statistics": {
             "name": "Com_show_user_statistics",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_user_statistics",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_variable": {
             "name": "Com_show_variable",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_variable",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_show_warnings": {
             "name": "Com_show_warnings",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_show_warnings",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_shutdown": {
             "name": "Com_shutdown",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_shutdown",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
@@ -17211,15 +17631,18 @@
         },
         "Com_stmt_reprepare": {
             "name": "Com_stmt_reprepare",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_stmt_reprepare",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
@@ -17259,155 +17682,188 @@
         },
         "Com_truncate": {
             "name": "Com_truncate",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_truncate",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_uninstall_plugin": {
             "name": "Com_uninstall_plugin",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_uninstall_plugin",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_unlock_tables": {
             "name": "Com_unlock_tables",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_unlock_tables",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_update": {
             "name": "Com_update",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_update",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_update_multi": {
             "name": "Com_update_multi",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_update_multi",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_xa_commit": {
             "name": "Com_xa_commit",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_xa_commit",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_xa_end": {
             "name": "Com_xa_end",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_xa_end",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_xa_prepare": {
             "name": "Com_xa_prepare",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_xa_prepare",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_xa_recover": {
             "name": "Com_xa_recover",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_xa_recover",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_xa_rollback": {
             "name": "Com_xa_rollback",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_xa_rollback",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
         "Com_xa_start": {
             "name": "Com_xa_start",
-            "scope": [
-                "global",
-                "session"
-            ],
-            "type": "integer",
             "ids": [
                 {
                     "anchor": "com_xa_start",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-status-variables"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html"
+                },
+                {
+                    "anchor": "statvar_Com_xxx",
+                    "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
                 }
             ]
         },
@@ -22266,6 +22722,27 @@
                 }
             ]
         },
+        "log_slow_max_query_length": {
+            "cli": "--log-slow-max-query-length=#",
+            "default": "4294967295",
+            "dynamic": true,
+            "name": "log_slow_max_query_length",
+            "range": {
+                "from": 1,
+                "to": 4294967295
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "log_slow_max_query_length",
+                    "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables"
+                }
+            ]
+        },
         "log_slow_max_warnings": {
             "cli": "log-slow-max-warnings=#",
             "default": "10",
@@ -23585,7 +24062,7 @@
         },
         "old_mode": {
             "cli": "--old-mode",
-            "default": "UTF8_IS_UTF8MB3 (>= MariaDB 10.6) (empty string) (<= MariaDB 10.5)",
+            "default": "(empty string) (>= MariaDB 13.1), UTF8_IS_UTF8MB3 (MariaDB 10.6 to MariaDB 13.0), (empty string) (<= MariaDB 10.5)",
             "dynamic": true,
             "name": "old_mode",
             "scope": [
@@ -23653,10 +24130,31 @@
             ]
         },
         "optimizer_extra_pruning_depth": {
+            "cli": "--optimizer-extra-pruning-depth[=#]",
+            "default": "8",
+            "dynamic": true,
+            "name": "optimizer_extra_pruning_depth",
+            "range": {
+                "from": 0,
+                "to": 62
+            },
+            "scope": [
+                "global",
+                "session"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "optimizer_extra_pruning_depth",
+                    "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables"
+                }
+            ]
+        },
+        "optimizer_join_limit_pref_ratio": {
             "cli": "--optimizer-join-limit-pref-ratio[=#]",
             "default": "0",
             "dynamic": true,
-            "name": "optimizer_extra_pruning_depth",
+            "name": "optimizer_join_limit_pref_ratio",
             "range": {
                 "from": 0,
                 "to": 4294967295
@@ -23668,7 +24166,7 @@
             "type": "integer",
             "ids": [
                 {
-                    "anchor": "optimizer_extra_pruning_depth",
+                    "anchor": "optimizer_join_limit_pref_ratio",
                     "url": "https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables"
                 }
             ]
@@ -37990,6 +38488,22 @@
                 }
             ]
         },
+        "innodb_index_shrink": {
+            "cli": "--innodb-index-shrink={0|1}",
+            "default": "ON",
+            "dynamic": true,
+            "name": "innodb_index_shrink",
+            "scope": [
+                "global"
+            ],
+            "type": "boolean",
+            "ids": [
+                {
+                    "anchor": "innodb_index_shrink",
+                    "url": "https://mariadb.com/docs/server/server-usage/storage-engines/innodb/innodb-system-variables"
+                }
+            ]
+        },
         "innodb_instant_alter_column_allowed": {
             "cli": "--innodb-instant-alter-column-allowed=value",
             "default": "<= MariaDB 10.3: add_last= MariaDB 10.4: add_drop_reorder",
@@ -40013,6 +40527,46 @@
                 {
                     "anchor": "sysvar_innodb_table_locks",
                     "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html"
+                }
+            ]
+        },
+        "innodb_tablespace_size_warning_pct": {
+            "cli": "--innodb-tablespace-size-warning-pct=#",
+            "default": "85",
+            "dynamic": true,
+            "name": "innodb_tablespace_size_warning_pct",
+            "range": {
+                "from": 0,
+                "to": 100
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_tablespace_size_warning_pct",
+                    "url": "https://mariadb.com/docs/server/server-usage/storage-engines/innodb/innodb-system-variables"
+                }
+            ]
+        },
+        "innodb_tablespace_size_warning_threshold": {
+            "cli": "--innodb-tablespace-size-warning-threshold=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "innodb_tablespace_size_warning_threshold",
+            "range": {
+                "from": 0,
+                "to": 1.8446744073709552e+19
+            },
+            "scope": [
+                "global"
+            ],
+            "type": "integer",
+            "ids": [
+                {
+                    "anchor": "innodb_tablespace_size_warning_threshold",
+                    "url": "https://mariadb.com/docs/server/server-usage/storage-engines/innodb/innodb-system-variables"
                 }
             ]
         },

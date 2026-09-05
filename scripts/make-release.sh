@@ -111,13 +111,20 @@ jq --indent 4 --arg a "$version" '.version = $a' package.json > "$tmp" && mv "$t
 if [ -f package-lock.json ]; then
     jq --indent 4 --arg a "$version" '.version = $a' package-lock.json > "$tmp" && mv "$tmp" package-lock.json
 fi
+
+# Rust crate: bump the [package] version in Cargo.toml (the only line-anchored
+# `version =`) and the crate's own entry in Cargo.lock. `cargo publish` reads
+# these, so they must match the release version.
+sed -i -E 's/^version = ".*"/version = "'"$version"'"/' Cargo.toml
+sed -i -E '/^name = "mariadb-mysql-kbs"$/{n;s/^version = ".*"/version = "'"$version"'"/;}' Cargo.lock
+
 echo "Here is the diff"
 git diff
 
 read -r -p "Are you sure to commit the diff? [Y/n]" response
 response=${response,,} # tolower
 if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
-    git add package.json
+    git add package.json Cargo.toml Cargo.lock
     if [ -f package-lock.json ]; then
         git add package-lock.json
     fi

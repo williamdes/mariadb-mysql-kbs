@@ -467,7 +467,7 @@
       "type": "integer"
     },
     {
-      "cli": "--log-bin[=name]",
+      "cli": "--log-bin[=name], --skip-log-bin, --disable-log-bin",
       "default": "OFF",
       "dynamic": false,
       "id": "log_bin",
@@ -1304,6 +1304,10 @@
       "dynamic": true,
       "id": "sync_relay_log",
       "name": "sync_relay_log",
+      "range": {
+        "from": 0,
+        "to": 4294967295
+      },
       "scope": [
         "global"
       ],

@@ -153,5 +153,11 @@ pub const fn skip_serialize_range(data: &std::option::Option<Range>) -> bool {
 pub struct DataFile<'a> {
     pub data: Vec<KbParsedEntry>,
     pub name: &'a str,
+    // When `Some(false)`, the page opts out of following redirects: if the URL
+    // redirects elsewhere (e.g. EOL MySQL 5.7 docs redirect to the current
+    // version) the existing data is kept instead of being overwritten. Absent
+    // means the default (redirects are followed).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub redirects: Option<bool>,
     pub url: &'a str,
 }

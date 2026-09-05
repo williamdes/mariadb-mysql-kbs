@@ -125,6 +125,19 @@ fn extract_page(page: PageProcess) {
         Ok(response) => {
             let final_url = response.url.clone();
             println!("URL : {} -> {}", page.url, final_url);
+            let path = data_file_path(page.data_type, page.get_data_prefix(), &page.name);
+            let flags = read_data_flags(&path);
+            // A page can opt out of redirects (`"redirects": false`): if the URL
+            // redirected elsewhere (e.g. the EOL MySQL 5.7 docs redirect to the
+            // current version), keep the existing data instead of overwriting a
+            // version-pinned file with another version's content.
+            if flags.redirects == Some(false) && final_url != page.url {
+                eprintln!(
+                    "SKIP : {} redirected to {}; redirects disabled, keeping existing data",
+                    page.url, final_url
+                );
+                return;
+            }
             let entries = match page.get_data_type() {
                 ExtractionType::MariaDB => mariadb::extract_mariadb_from_text(response),
                 ExtractionType::MySQL => mysql::extract_mysql_from_text(response),
@@ -140,13 +153,14 @@ fn extract_page(page: PageProcess) {
                     "SKIP : {} produced 0 entries; marking source removed and keeping existing data",
                     page.url
                 );
-                mark_source_removed(&data_file_path(page.data_type, page.get_data_prefix(), &page.name));
+                mark_source_removed(&path);
                 return;
             }
             let data = DataFile {
                 data: entries,
                 url: final_url.as_str(),
                 name: &page.name,
+                redirects: flags.redirects,
             };
             write_page(page.data_type, page.get_data_prefix(), data);
         }
@@ -186,21 +200,31 @@ fn write_page(data_type: &str, file_prefix: &str, data: DataFile) {
     write_json(data_file_path(data_type, file_prefix, data.name), data);
 }
 
-/// Partial view of a data file, used to read the `removed` marker without
-/// deserializing the whole payload.
+/// Partial view of a data file, used to read its flags without deserializing
+/// the whole payload.
 #[derive(Deserialize)]
 struct DataFileFlags {
     #[serde(default)]
     removed: bool,
+    redirects: Option<bool>,
+}
+
+/// Read a data file's flags, defaulting to "not removed, redirects allowed"
+/// when the file is missing or unreadable.
+fn read_data_flags(path: &str) -> DataFileFlags {
+    fs::read_to_string(path)
+        .ok()
+        .and_then(|contents| serde_json::from_str::<DataFileFlags>(&contents).ok())
+        .unwrap_or(DataFileFlags {
+            removed: false,
+            redirects: None,
+        })
 }
 
 /// Whether a page's data file is already flagged as removed upstream, so it
 /// should no longer be fetched.
 fn is_source_removed(path: &str) -> bool {
-    fs::read_to_string(path)
-        .ok()
-        .and_then(|contents| serde_json::from_str::<DataFileFlags>(&contents).ok())
-        .is_some_and(|flags| flags.removed)
+    read_data_flags(path).removed
 }
 
 /// Flag a page's data file as removed upstream while preserving its existing

@@ -436,5 +436,6 @@
     }
   ],
   "name": "replication-options-binary-log_5.7",
+  "redirects": false,
   "url": "https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html"
 }

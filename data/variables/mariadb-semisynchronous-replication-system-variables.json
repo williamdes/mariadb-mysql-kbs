@@ -118,32 +118,6 @@
         "global"
       ],
       "type": "integer"
-    },
-    {
-      "cli": "--rpl-semi-sync-master=value",
-      "default": "ON",
-      "id": "rpl-semi-sync_master",
-      "name": "rpl-semi-sync_master",
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "ON",
-        "FORCE",
-        "FORCE_PLUS_PERMANENT"
-      ]
-    },
-    {
-      "cli": "--rpl-semi-sync-slave=value",
-      "default": "ON",
-      "id": "rpl-semi-sync_slave",
-      "name": "rpl-semi-sync_slave",
-      "type": "enumeration",
-      "validValues": [
-        "OFF",
-        "ON",
-        "FORCE",
-        "FORCE_PLUS_PERMANENT"
-      ]
     }
   ],
   "name": "semisynchronous-replication-system-variables",

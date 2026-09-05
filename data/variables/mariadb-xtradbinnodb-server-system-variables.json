@@ -1766,6 +1766,17 @@
       "type": "integer"
     },
     {
+      "cli": "--innodb-index-shrink={0|1}",
+      "default": "ON",
+      "dynamic": true,
+      "id": "innodb_index_shrink",
+      "name": "innodb_index_shrink",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--innodb-instant-alter-column-allowed=value",
       "default": "<= MariaDB 10.3: add_last= MariaDB 10.4: add_drop_reorder",
       "dynamic": true,
@@ -3075,6 +3086,36 @@
         "session"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--innodb-tablespace-size-warning-pct=#",
+      "default": "85",
+      "dynamic": true,
+      "id": "innodb_tablespace_size_warning_pct",
+      "name": "innodb_tablespace_size_warning_pct",
+      "range": {
+        "from": 0,
+        "to": 100
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--innodb-tablespace-size-warning-threshold=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "innodb_tablespace_size_warning_threshold",
+      "name": "innodb_tablespace_size_warning_threshold",
+      "range": {
+        "from": 0,
+        "to": 18446744073709551615
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     },
     {
       "cli": "--innodb-thread-concurrency=#",

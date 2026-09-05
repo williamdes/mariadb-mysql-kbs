@@ -2,10 +2,14 @@
   "data": [
     {
       "cli": "--ndbcluster[=value]",
-      "default": "OFF",
+      "default": "ON",
       "id": "option_mysqld_ndbcluster",
       "name": "ndbcluster",
-      "type": "boolean"
+      "type": "enumeration",
+      "validValues": [
+        "OFF",
+        "FORCE"
+      ]
     },
     {
       "cli": "--ndb-allow-copying-alter-table[={OFF|ON}]",
@@ -20,6 +24,15 @@
       "type": "boolean"
     },
     {
+      "cli": "--ndb-applier-allow-skip-epoch",
+      "dynamic": false,
+      "id": "option_mysqld_ndb-applier-allow-skip-epoch",
+      "name": "ndb_applier_allow_skip_epoch",
+      "scope": [
+        "global"
+      ]
+    },
+    {
       "cli": "--ndb-batch-size",
       "default": "32768",
       "dynamic": true,
@@ -27,7 +40,7 @@
       "name": "ndb_batch_size",
       "range": {
         "from": 0,
-        "to": 31536000
+        "to": 2147483648
       },
       "scope": [
         "global",
@@ -131,6 +144,21 @@
       "type": "integer"
     },
     {
+      "cli": "--ndb-schema-dist-timeout=#",
+      "default": "120",
+      "dynamic": false,
+      "id": "option_mysqld_ndb-schema-dist-timeout",
+      "name": "ndb_schema_dist_timeout",
+      "range": {
+        "from": 5,
+        "to": 1200
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--ndb-distribution={KEYHASH|LINHASH}",
       "default": "KEYHASH",
       "dynamic": true,
@@ -213,6 +241,47 @@
       "type": "boolean"
     },
     {
+      "cli": "--ndb-log-row-slice-count=#",
+      "default": "1",
+      "dynamic": false,
+      "id": "option_mysqld_ndb-log-row-slice-count",
+      "name": "ndb_log_row_slice_count",
+      "range": {
+        "from": 1,
+        "to": 256
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--ndb-log-row-slice-id=#",
+      "default": "0",
+      "dynamic": false,
+      "id": "option_mysqld_ndb-log-row-slice-id",
+      "name": "ndb_log_row_slice_id",
+      "range": {
+        "from": 0,
+        "to": 255
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--ndb-log-transaction-dependency={true|false}",
+      "default": "false",
+      "dynamic": false,
+      "id": "option_mysqld_ndb-log-transaction-dependency",
+      "name": "ndb_log_transaction_dependency",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
       "cli": "--ndb-log-transaction-id[={OFF|ON}]",
       "default": "OFF",
       "dynamic": false,
@@ -257,6 +326,21 @@
       "type": "boolean"
     },
     {
+      "cli": "--ndb-mgm-tls=[strict|relaxed]",
+      "default": "relaxed",
+      "dynamic": false,
+      "id": "option_mysqld_ndb-mgm-tls",
+      "name": "ndb_mgm_tls",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "relaxed",
+        "strict"
+      ]
+    },
+    {
       "cli": "--ndb-mgmd-host=host_name[:port_num]",
       "default": "localhost:1186",
       "id": "option_mysqld_ndb-mgmd-host",
@@ -277,6 +361,18 @@
         "global"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--ndbinfo[=value]",
+      "default": "ON",
+      "id": "option_mysqld_ndbinfo",
+      "name": "ndbinfo",
+      "type": "enumeration",
+      "validValues": [
+        "ON",
+        "OFF",
+        "FORCE"
+      ]
     },
     {
       "cli": "--ndb-optimization-delay=#",
@@ -307,6 +403,16 @@
         "global"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--ndb-tls-search-path=path",
+      "dynamic": false,
+      "id": "option_mysqld_ndb-tls-search-path",
+      "name": "ndb_tls_search_path",
+      "scope": [
+        "global"
+      ],
+      "type": "directory name"
     },
     {
       "cli": "--ndb-transid-mysql-connection-map[=state]",
@@ -357,7 +463,7 @@
     },
     {
       "cli": "--ndb-autoincrement-prefetch-sz=#",
-      "default": "1",
+      "default": "512",
       "dynamic": true,
       "id": "sysvar_ndb_autoincrement_prefetch_sz",
       "name": "ndb_autoincrement_prefetch_sz",
@@ -368,21 +474,6 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--ndb-cache-check-time=#",
-      "default": "0",
-      "dynamic": true,
-      "id": "sysvar_ndb_cache_check_time",
-      "name": "ndb_cache_check_time",
-      "range": {
-        "from": 0,
-        "to": 31536000
-      },
-      "scope": [
-        "global"
       ],
       "type": "integer"
     },
@@ -398,6 +489,23 @@
       "type": "boolean"
     },
     {
+      "cli": "--ndb-conflict-role=value",
+      "default": "NONE",
+      "dynamic": true,
+      "id": "sysvar_ndb_conflict_role",
+      "name": "ndb_conflict_role",
+      "scope": [
+        "global"
+      ],
+      "type": "enumeration",
+      "validValues": [
+        "NONE",
+        "PRIMARY",
+        "SECONDARY",
+        "PASS"
+      ]
+    },
+    {
       "cli": "--ndb-data-node-neighbour=#",
       "default": "0",
       "dynamic": true,
@@ -409,6 +517,22 @@
       },
       "scope": [
         "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--ndb-dbg-check-shares=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "sysvar_ndb_dbg_check_shares",
+      "name": "ndb_dbg_check_shares",
+      "range": {
+        "from": 0,
+        "to": 1
+      },
+      "scope": [
+        "global",
+        "session"
       ],
       "type": "integer"
     },
@@ -435,7 +559,7 @@
       "name": "ndb_eventbuffer_max_alloc",
       "range": {
         "from": 0,
-        "to": 4294967295
+        "to": 9223372036854775807
       },
       "scope": [
         "global"
@@ -517,7 +641,7 @@
     },
     {
       "cli": "--ndb-log-bin[={OFF|ON}]",
-      "default": "ON",
+      "default": "OFF",
       "dynamic": false,
       "id": "sysvar_ndb_log_bin",
       "name": "ndb_log_bin",
@@ -539,8 +663,85 @@
       "type": "boolean"
     },
     {
-      "cli": "--ndb-read-backup[={OFF|ON}]",
+      "cli": "--ndb-log-cache-size=#",
+      "default": "64M",
+      "dynamic": true,
+      "id": "sysvar_ndb_log_cache_size",
+      "name": "ndb_log_cache_size",
+      "range": {
+        "from": 4096,
+        "to": 18446744073709551615
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--ndb-log-transaction-compression",
       "default": "OFF",
+      "dynamic": true,
+      "id": "sysvar_ndb_log_transaction_compression",
+      "name": "ndb_log_transaction_compression",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--ndb-log-transaction-compression-level-zstd=#",
+      "default": "3",
+      "dynamic": true,
+      "id": "sysvar_ndb_log_transaction_compression_level_zstd",
+      "name": "ndb_log_transaction_compression_level_zstd",
+      "range": {
+        "from": 1,
+        "to": 22
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--ndb-metadata-check[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": true,
+      "id": "sysvar_ndb_metadata_check",
+      "name": "ndb_metadata_check",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--ndb-metadata-check-interval=#",
+      "default": "60",
+      "dynamic": true,
+      "id": "sysvar_ndb_metadata_check_interval",
+      "name": "ndb_metadata_check_interval",
+      "range": {
+        "from": 0,
+        "to": 31536000
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "default": "false",
+      "dynamic": true,
+      "id": "sysvar_ndb_metadata_sync",
+      "name": "ndb_metadata_sync",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--ndb-read-backup[={OFF|ON}]",
+      "default": "ON",
       "dynamic": true,
       "id": "sysvar_ndb_read_backup",
       "name": "ndb_read_backup",
@@ -619,6 +820,32 @@
         "session"
       ],
       "type": "integer"
+    },
+    {
+      "cli": "--ndb-schema-dist-lock-wait-timeout=value",
+      "default": "30",
+      "dynamic": true,
+      "id": "sysvar_ndb_schema_dist_lock_wait_timeout",
+      "name": "ndb_schema_dist_lock_wait_timeout",
+      "range": {
+        "from": 0,
+        "to": 1200
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--ndb-schema-dist-upgrade-allowed=value",
+      "default": "true",
+      "dynamic": false,
+      "id": "sysvar_ndb_schema_dist_upgrade_allowed",
+      "name": "ndb_schema_dist_upgrade_allowed",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
     },
     {
       "cli": "--ndb-show-foreign-key-mock-tables[={OFF|ON}]",
@@ -721,6 +948,47 @@
       "type": "string"
     },
     {
+      "cli": "--replica-allow-batching[={OFF|ON}]",
+      "default": "ON",
+      "dynamic": true,
+      "id": "sysvar_replica_allow_batching",
+      "name": "replica_allow_batching",
+      "scope": [
+        "global"
+      ],
+      "type": "boolean"
+    },
+    {
+      "cli": "--ndb-replica-batch-size=#",
+      "default": "2097152",
+      "dynamic": true,
+      "id": "sysvar_ndb_replica_batch_size",
+      "name": "ndb_replica_batch_size",
+      "range": {
+        "from": 0,
+        "to": 2147483648
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--ndb-replica-blob-write-batch-bytes=#",
+      "default": "2097152",
+      "dynamic": true,
+      "id": "sysvar_ndb_replica_blob_write_batch_bytes",
+      "name": "ndb_replica_blob_write_batch_bytes",
+      "range": {
+        "from": 0,
+        "to": 2147483648
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "--server-id-bits=#",
       "default": "32",
       "dynamic": false,
@@ -737,7 +1005,7 @@
     },
     {
       "cli": "--slave-allow-batching[={OFF|ON}]",
-      "default": "OFF",
+      "default": "ON",
       "dynamic": true,
       "id": "sysvar_slave_allow_batching",
       "name": "slave_allow_batching",
@@ -861,6 +1129,10 @@
       "name": "Ndb_api_adaptive_send_deferred_count_session"
     },
     {
+      "id": "statvar_Ndb_api_adaptive_send_deferred_count_replica",
+      "name": "Ndb_api_adaptive_send_deferred_count_replica"
+    },
+    {
       "id": "statvar_Ndb_api_adaptive_send_deferred_count_slave",
       "name": "Ndb_api_adaptive_send_deferred_count_slave"
     },
@@ -871,6 +1143,10 @@
     {
       "id": "statvar_Ndb_api_adaptive_send_forced_count_session",
       "name": "Ndb_api_adaptive_send_forced_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_adaptive_send_forced_count_replica",
+      "name": "Ndb_api_adaptive_send_forced_count_replica"
     },
     {
       "id": "statvar_Ndb_api_adaptive_send_forced_count_slave",
@@ -885,12 +1161,20 @@
       "name": "Ndb_api_adaptive_send_unforced_count_session"
     },
     {
+      "id": "statvar_Ndb_api_adaptive_send_unforced_count_replica",
+      "name": "Ndb_api_adaptive_send_unforced_count_replica"
+    },
+    {
       "id": "statvar_Ndb_api_adaptive_send_unforced_count_slave",
       "name": "Ndb_api_adaptive_send_unforced_count_slave"
     },
     {
       "id": "statvar_Ndb_api_bytes_sent_count_session",
       "name": "Ndb_api_bytes_sent_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_bytes_sent_count_replica",
+      "name": "Ndb_api_bytes_sent_count_replica"
     },
     {
       "id": "statvar_Ndb_api_bytes_sent_count_slave",
@@ -903,6 +1187,10 @@
     {
       "id": "statvar_Ndb_api_bytes_received_count_session",
       "name": "Ndb_api_bytes_received_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_bytes_received_count_replica",
+      "name": "Ndb_api_bytes_received_count_replica"
     },
     {
       "id": "statvar_Ndb_api_bytes_received_count_slave",
@@ -941,6 +1229,10 @@
       "name": "Ndb_api_pk_op_count_session"
     },
     {
+      "id": "statvar_Ndb_api_pk_op_count_replica",
+      "name": "Ndb_api_pk_op_count_replica"
+    },
+    {
       "id": "statvar_Ndb_api_pk_op_count_slave",
       "name": "Ndb_api_pk_op_count_slave"
     },
@@ -951,6 +1243,10 @@
     {
       "id": "statvar_Ndb_api_pruned_scan_count_session",
       "name": "Ndb_api_pruned_scan_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_pruned_scan_count_replica",
+      "name": "Ndb_api_pruned_scan_count_replica"
     },
     {
       "id": "statvar_Ndb_api_pruned_scan_count_slave",
@@ -965,6 +1261,10 @@
       "name": "Ndb_api_range_scan_count_session"
     },
     {
+      "id": "statvar_Ndb_api_range_scan_count_replica",
+      "name": "Ndb_api_range_scan_count_replica"
+    },
+    {
       "id": "statvar_Ndb_api_range_scan_count_slave",
       "name": "Ndb_api_range_scan_count_slave"
     },
@@ -975,6 +1275,10 @@
     {
       "id": "statvar_Ndb_api_read_row_count_session",
       "name": "Ndb_api_read_row_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_read_row_count_replica",
+      "name": "Ndb_api_read_row_count_replica"
     },
     {
       "id": "statvar_Ndb_api_read_row_count_slave",
@@ -989,6 +1293,10 @@
       "name": "Ndb_api_scan_batch_count_session"
     },
     {
+      "id": "statvar_Ndb_api_scan_batch_count_replica",
+      "name": "Ndb_api_scan_batch_count_replica"
+    },
+    {
       "id": "statvar_Ndb_api_scan_batch_count_slave",
       "name": "Ndb_api_scan_batch_count_slave"
     },
@@ -999,6 +1307,10 @@
     {
       "id": "statvar_Ndb_api_table_scan_count_session",
       "name": "Ndb_api_table_scan_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_table_scan_count_replica",
+      "name": "Ndb_api_table_scan_count_replica"
     },
     {
       "id": "statvar_Ndb_api_table_scan_count_slave",
@@ -1013,6 +1325,10 @@
       "name": "Ndb_api_trans_abort_count_session"
     },
     {
+      "id": "statvar_Ndb_api_trans_abort_count_replica",
+      "name": "Ndb_api_trans_abort_count_replica"
+    },
+    {
       "id": "statvar_Ndb_api_trans_abort_count_slave",
       "name": "Ndb_api_trans_abort_count_slave"
     },
@@ -1023,6 +1339,10 @@
     {
       "id": "statvar_Ndb_api_trans_close_count_session",
       "name": "Ndb_api_trans_close_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_close_count_replica",
+      "name": "Ndb_api_trans_close_count_replica"
     },
     {
       "id": "statvar_Ndb_api_trans_close_count_slave",
@@ -1037,6 +1357,10 @@
       "name": "Ndb_api_trans_commit_count_session"
     },
     {
+      "id": "statvar_Ndb_api_trans_commit_count_replica",
+      "name": "Ndb_api_trans_commit_count_replica"
+    },
+    {
       "id": "statvar_Ndb_api_trans_commit_count_slave",
       "name": "Ndb_api_trans_commit_count_slave"
     },
@@ -1047,6 +1371,10 @@
     {
       "id": "statvar_Ndb_api_trans_local_read_row_count_session",
       "name": "Ndb_api_trans_local_read_row_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_trans_local_read_row_count_replica",
+      "name": "Ndb_api_trans_local_read_row_count_replica"
     },
     {
       "id": "statvar_Ndb_api_trans_local_read_row_count_slave",
@@ -1061,6 +1389,10 @@
       "name": "Ndb_api_trans_start_count_session"
     },
     {
+      "id": "statvar_Ndb_api_trans_start_count_replica",
+      "name": "Ndb_api_trans_start_count_replica"
+    },
+    {
       "id": "statvar_Ndb_api_trans_start_count_slave",
       "name": "Ndb_api_trans_start_count_slave"
     },
@@ -1071,6 +1403,10 @@
     {
       "id": "statvar_Ndb_api_uk_op_count_session",
       "name": "Ndb_api_uk_op_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_uk_op_count_replica",
+      "name": "Ndb_api_uk_op_count_replica"
     },
     {
       "id": "statvar_Ndb_api_uk_op_count_slave",
@@ -1085,6 +1421,10 @@
       "name": "Ndb_api_wait_exec_complete_count_session"
     },
     {
+      "id": "statvar_Ndb_api_wait_exec_complete_count_replica",
+      "name": "Ndb_api_wait_exec_complete_count_replica"
+    },
+    {
       "id": "statvar_Ndb_api_wait_exec_complete_count_slave",
       "name": "Ndb_api_wait_exec_complete_count_slave"
     },
@@ -1095,6 +1435,10 @@
     {
       "id": "statvar_Ndb_api_wait_meta_request_count_session",
       "name": "Ndb_api_wait_meta_request_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_meta_request_count_replica",
+      "name": "Ndb_api_wait_meta_request_count_replica"
     },
     {
       "id": "statvar_Ndb_api_wait_meta_request_count_slave",
@@ -1109,6 +1453,10 @@
       "name": "Ndb_api_wait_nanos_count_session"
     },
     {
+      "id": "statvar_Ndb_api_wait_nanos_count_replica",
+      "name": "Ndb_api_wait_nanos_count_replica"
+    },
+    {
       "id": "statvar_Ndb_api_wait_nanos_count_slave",
       "name": "Ndb_api_wait_nanos_count_slave"
     },
@@ -1119,6 +1467,10 @@
     {
       "id": "statvar_Ndb_api_wait_scan_result_count_session",
       "name": "Ndb_api_wait_scan_result_count_session"
+    },
+    {
+      "id": "statvar_Ndb_api_wait_scan_result_count_replica",
+      "name": "Ndb_api_wait_scan_result_count_replica"
     },
     {
       "id": "statvar_Ndb_api_wait_scan_result_count_slave",
@@ -1139,6 +1491,10 @@
     {
       "id": "statvar_Ndb_config_from_port",
       "name": "Ndb_config_from_port"
+    },
+    {
+      "id": "statvar_Ndb_config_generation",
+      "name": "Ndb_config_generation"
     },
     {
       "id": "statvar_Ndb_conflict_fn_epoch",
@@ -1163,6 +1519,14 @@
     {
       "id": "statvar_Ndb_conflict_fn_max_del_win",
       "name": "Ndb_conflict_fn_max_del_win"
+    },
+    {
+      "id": "statvar_Ndb_conflict_fn_max_del_win_ins",
+      "name": "Ndb_conflict_fn_max_del_win_ins"
+    },
+    {
+      "id": "statvar_Ndb_conflict_fn_max_ins",
+      "name": "Ndb_conflict_fn_max_ins"
     },
     {
       "id": "statvar_Ndb_conflict_fn_old",
@@ -1217,12 +1581,28 @@
       "name": "Ndb_execute_count"
     },
     {
+      "id": "statvar_Ndb_fetch_table_stats",
+      "name": "Ndb_fetch_table_stats"
+    },
+    {
       "id": "statvar_Ndb_last_commit_epoch_server",
       "name": "Ndb_last_commit_epoch_server"
     },
     {
       "id": "statvar_Ndb_last_commit_epoch_session",
       "name": "Ndb_last_commit_epoch_session"
+    },
+    {
+      "id": "statvar_Ndb_metadata_detected_count",
+      "name": "Ndb_metadata_detected_count"
+    },
+    {
+      "id": "statvar_Ndb_metadata_excluded_count",
+      "name": "Ndb_metadata_excluded_count"
+    },
+    {
+      "id": "statvar_Ndb_metadata_synced_count",
+      "name": "Ndb_metadata_synced_count"
     },
     {
       "id": "statvar_Ndb_number_of_data_nodes",
@@ -1245,8 +1625,16 @@
       "name": "Ndb_pruned_scan_count"
     },
     {
+      "id": "statvar_Ndb_replica_max_replicated_epoch",
+      "name": "Ndb_replica_max_replicated_epoch"
+    },
+    {
       "id": "statvar_Ndb_scan_count",
       "name": "Ndb_scan_count"
+    },
+    {
+      "id": "statvar_Ndb_schema_participant_count",
+      "name": "Ndb_schema_participant_count"
     },
     {
       "id": "statvar_Ndb_slave_max_replicated_epoch",
@@ -1255,8 +1643,12 @@
     {
       "id": "statvar_Ndb_system_name",
       "name": "Ndb_system_name"
+    },
+    {
+      "id": "statvar_Ndb_trans_hint_count_session",
+      "name": "Ndb_trans_hint_count_session"
     }
   ],
   "name": "mysql-cluster-options-variables",
-  "url": "https://dev.mysql.com/doc/refman/5.7/en/mysql-cluster-options-variables.html"
+  "url": "https://dev.mysql.com/doc/refman/9.7/en/mysql-cluster-options-variables.html"
 }

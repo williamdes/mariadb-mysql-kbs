@@ -9,8 +9,16 @@
       "name": "Aborted_connects"
     },
     {
+      "id": "statvar_Authentication_ldap_sasl_supported_methods",
+      "name": "Authentication_ldap_sasl_supported_methods"
+    },
+    {
       "id": "statvar_Binlog_cache_disk_use",
       "name": "Binlog_cache_disk_use"
+    },
+    {
+      "id": "statvar_Acl_cache_items_count",
+      "name": "Acl_cache_items_count"
     },
     {
       "id": "statvar_Binlog_cache_use",
@@ -33,8 +41,28 @@
       "name": "Bytes_sent"
     },
     {
+      "id": "statvar_Caching_sha2_password_rsa_public_key",
+      "name": "Caching_sha2_password_rsa_public_key"
+    },
+    {
       "id": "statvar_Compression",
       "name": "Compression"
+    },
+    {
+      "id": "statvar_Compression_algorithm",
+      "name": "Compression_algorithm"
+    },
+    {
+      "id": "statvar_Compression_level",
+      "name": "Compression_level"
+    },
+    {
+      "id": "statvar_Component_connection_control_delay_generated",
+      "name": "Component_connection_control_delay_generated"
+    },
+    {
+      "id": "statvar_Component_connection_control_exempted_unknown_users",
+      "name": "Component_connection_control_exempted_unknown_users"
     },
     {
       "id": "statvar_Connection_errors_xxx",
@@ -69,6 +97,18 @@
       "name": "Connections"
     },
     {
+      "id": "statvar_Count_hit_query_past_global_connection_memory_status_limit",
+      "name": "Count_hit_query_past_global_connection_memory_status_limit"
+    },
+    {
+      "id": "statvar_Count_hit_query_past_connection_memory_status_limit",
+      "name": "Count_hit_query_past_connection_memory_status_limit"
+    },
+    {
+      "id": "statvar_Count_hit_tmp_table_size",
+      "name": "Count_hit_tmp_table_size"
+    },
+    {
       "id": "statvar_Created_tmp_disk_tables",
       "name": "Created_tmp_disk_tables"
     },
@@ -79,6 +119,42 @@
     {
       "id": "statvar_Created_tmp_tables",
       "name": "Created_tmp_tables"
+    },
+    {
+      "id": "statvar_Current_tls_ca",
+      "name": "Current_tls_ca"
+    },
+    {
+      "id": "statvar_Current_tls_capath",
+      "name": "Current_tls_capath"
+    },
+    {
+      "id": "statvar_Current_tls_cert",
+      "name": "Current_tls_cert"
+    },
+    {
+      "id": "statvar_Current_tls_cipher",
+      "name": "Current_tls_cipher"
+    },
+    {
+      "id": "statvar_Current_tls_ciphersuites",
+      "name": "Current_tls_ciphersuites"
+    },
+    {
+      "id": "statvar_Current_tls_crl",
+      "name": "Current_tls_crl"
+    },
+    {
+      "id": "statvar_Current_tls_crlpath",
+      "name": "Current_tls_crlpath"
+    },
+    {
+      "id": "statvar_Current_tls_key",
+      "name": "Current_tls_key"
+    },
+    {
+      "id": "statvar_Current_tls_version",
+      "name": "Current_tls_version"
     },
     {
       "id": "statvar_Delayed_errors",
@@ -93,12 +169,40 @@
       "name": "Delayed_writes"
     },
     {
+      "id": "statvar_Deprecated_use_i_s_processlist_count",
+      "name": "Deprecated_use_i_s_processlist_count"
+    },
+    {
+      "id": "statvar_Deprecated_use_i_s_processlist_last_timestamp",
+      "name": "Deprecated_use_i_s_processlist_last_timestamp"
+    },
+    {
+      "id": "statvar_dragnet.Status",
+      "name": "dragnet.Status"
+    },
+    {
+      "id": "statvar_Error_log_buffered_bytes",
+      "name": "Error_log_buffered_bytes"
+    },
+    {
+      "id": "statvar_Error_log_buffered_events",
+      "name": "Error_log_buffered_events"
+    },
+    {
+      "id": "statvar_Error_log_expired_events",
+      "name": "Error_log_expired_events"
+    },
+    {
+      "id": "statvar_Error_log_latest_write",
+      "name": "Error_log_latest_write"
+    },
+    {
       "id": "statvar_Flush_commands",
       "name": "Flush_commands"
     },
     {
-      "id": "statvar_group_replication_primary_member",
-      "name": "group_replication_primary_member"
+      "id": "statvar_Global_connection_memory",
+      "name": "Global_connection_memory"
     },
     {
       "id": "statvar_Handler_commit",
@@ -169,10 +273,6 @@
       "name": "Handler_write"
     },
     {
-      "id": "statvar_Innodb_available_undo_logs",
-      "name": "Innodb_available_undo_logs"
-    },
-    {
       "id": "statvar_Innodb_buffer_pool_dump_status",
       "name": "Innodb_buffer_pool_dump_status"
     },
@@ -239,6 +339,14 @@
     {
       "id": "statvar_Innodb_buffer_pool_resize_status",
       "name": "Innodb_buffer_pool_resize_status"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_resize_status_code",
+      "name": "Innodb_buffer_pool_resize_status_code"
+    },
+    {
+      "id": "statvar_Innodb_buffer_pool_resize_status_progress",
+      "name": "Innodb_buffer_pool_resize_status_progress"
     },
     {
       "id": "statvar_Innodb_buffer_pool_wait_free",
@@ -341,6 +449,46 @@
       "name": "Innodb_pages_written"
     },
     {
+      "id": "statvar_Innodb_redo_log_enabled",
+      "name": "Innodb_redo_log_enabled"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_capacity_resized",
+      "name": "Innodb_redo_log_capacity_resized"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_checkpoint_lsn",
+      "name": "Innodb_redo_log_checkpoint_lsn"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_current_lsn",
+      "name": "Innodb_redo_log_current_lsn"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_flushed_to_disk_lsn",
+      "name": "Innodb_redo_log_flushed_to_disk_lsn"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_logical_size",
+      "name": "Innodb_redo_log_logical_size"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_physical_size",
+      "name": "Innodb_redo_log_physical_size"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_read_only",
+      "name": "Innodb_redo_log_read_only"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_resize_status",
+      "name": "Innodb_redo_log_resize_status"
+    },
+    {
+      "id": "statvar_Innodb_redo_log_uuid",
+      "name": "Innodb_redo_log_uuid"
+    },
+    {
       "id": "statvar_Innodb_row_lock_current_waits",
       "name": "Innodb_row_lock_current_waits"
     },
@@ -377,8 +525,40 @@
       "name": "Innodb_rows_updated"
     },
     {
+      "id": "statvar_Innodb_system_rows_deleted",
+      "name": "Innodb_system_rows_deleted"
+    },
+    {
+      "id": "statvar_Innodb_system_rows_inserted",
+      "name": "Innodb_system_rows_inserted"
+    },
+    {
+      "id": "statvar_Innodb_system_rows_updated",
+      "name": "Innodb_system_rows_updated"
+    },
+    {
+      "id": "statvar_Innodb_system_rows_read",
+      "name": "Innodb_system_rows_read"
+    },
+    {
       "id": "statvar_Innodb_truncated_status_writes",
       "name": "Innodb_truncated_status_writes"
+    },
+    {
+      "id": "statvar_Innodb_undo_tablespaces_active",
+      "name": "Innodb_undo_tablespaces_active"
+    },
+    {
+      "id": "statvar_Innodb_undo_tablespaces_explicit",
+      "name": "Innodb_undo_tablespaces_explicit"
+    },
+    {
+      "id": "statvar_Innodb_undo_tablespaces_implicit",
+      "name": "Innodb_undo_tablespaces_implicit"
+    },
+    {
+      "id": "statvar_Innodb_undo_tablespaces_total",
+      "name": "Innodb_undo_tablespaces_total"
     },
     {
       "id": "statvar_Key_blocks_not_flushed",
@@ -453,10 +633,6 @@
       "name": "Ongoing_anonymous_transaction_count"
     },
     {
-      "id": "statvar_Ongoing_anonymous_gtid_violating_transaction_count",
-      "name": "Ongoing_anonymous_gtid_violating_transaction_count"
-    },
-    {
       "id": "statvar_Ongoing_automatic_gtid_violating_transaction_count",
       "name": "Ongoing_automatic_gtid_violating_transaction_count"
     },
@@ -493,44 +669,20 @@
       "name": "Prepared_stmt_count"
     },
     {
-      "id": "statvar_Qcache_free_blocks",
-      "name": "Qcache_free_blocks"
-    },
-    {
-      "id": "statvar_Qcache_free_memory",
-      "name": "Qcache_free_memory"
-    },
-    {
-      "id": "statvar_Qcache_hits",
-      "name": "Qcache_hits"
-    },
-    {
-      "id": "statvar_Qcache_inserts",
-      "name": "Qcache_inserts"
-    },
-    {
-      "id": "statvar_Qcache_lowmem_prunes",
-      "name": "Qcache_lowmem_prunes"
-    },
-    {
-      "id": "statvar_Qcache_not_cached",
-      "name": "Qcache_not_cached"
-    },
-    {
-      "id": "statvar_Qcache_queries_in_cache",
-      "name": "Qcache_queries_in_cache"
-    },
-    {
-      "id": "statvar_Qcache_total_blocks",
-      "name": "Qcache_total_blocks"
-    },
-    {
       "id": "statvar_Queries",
       "name": "Queries"
     },
     {
       "id": "statvar_Questions",
       "name": "Questions"
+    },
+    {
+      "id": "statvar_Replica_open_temp_tables",
+      "name": "Replica_open_temp_tables"
+    },
+    {
+      "id": "statvar_Resource_group_supported",
+      "name": "Resource_group_supported"
     },
     {
       "id": "statvar_Rpl_semi_sync_master_clients",
@@ -589,6 +741,66 @@
       "name": "Rpl_semi_sync_master_yes_tx"
     },
     {
+      "id": "statvar_Rpl_semi_sync_source_clients",
+      "name": "Rpl_semi_sync_source_clients"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_net_avg_wait_time",
+      "name": "Rpl_semi_sync_source_net_avg_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_net_wait_time",
+      "name": "Rpl_semi_sync_source_net_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_net_waits",
+      "name": "Rpl_semi_sync_source_net_waits"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_no_times",
+      "name": "Rpl_semi_sync_source_no_times"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_no_tx",
+      "name": "Rpl_semi_sync_source_no_tx"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_status",
+      "name": "Rpl_semi_sync_source_status"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_timefunc_failures",
+      "name": "Rpl_semi_sync_source_timefunc_failures"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_tx_avg_wait_time",
+      "name": "Rpl_semi_sync_source_tx_avg_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_tx_wait_time",
+      "name": "Rpl_semi_sync_source_tx_wait_time"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_tx_waits",
+      "name": "Rpl_semi_sync_source_tx_waits"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_wait_pos_backtraverse",
+      "name": "Rpl_semi_sync_source_wait_pos_backtraverse"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_wait_sessions",
+      "name": "Rpl_semi_sync_source_wait_sessions"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_source_yes_tx",
+      "name": "Rpl_semi_sync_source_yes_tx"
+    },
+    {
+      "id": "statvar_Rpl_semi_sync_replica_status",
+      "name": "Rpl_semi_sync_replica_status"
+    },
+    {
       "id": "statvar_Rpl_semi_sync_slave_status",
       "name": "Rpl_semi_sync_slave_status"
     },
@@ -617,32 +829,12 @@
       "name": "Select_scan"
     },
     {
-      "id": "statvar_Slave_heartbeat_period",
-      "name": "Slave_heartbeat_period"
-    },
-    {
-      "id": "statvar_Slave_last_heartbeat",
-      "name": "Slave_last_heartbeat"
-    },
-    {
       "id": "statvar_Slave_open_temp_tables",
       "name": "Slave_open_temp_tables"
     },
     {
-      "id": "statvar_Slave_received_heartbeats",
-      "name": "Slave_received_heartbeats"
-    },
-    {
-      "id": "statvar_Slave_retried_transactions",
-      "name": "Slave_retried_transactions"
-    },
-    {
       "id": "statvar_Slave_rows_last_search_algorithm_used",
       "name": "Slave_rows_last_search_algorithm_used"
-    },
-    {
-      "id": "statvar_Slave_running",
-      "name": "Slave_running"
     },
     {
       "id": "statvar_Slow_launch_threads",
@@ -745,6 +937,10 @@
       "name": "Ssl_session_cache_size"
     },
     {
+      "id": "statvar_Ssl_session_cache_timeout",
+      "name": "Ssl_session_cache_timeout"
+    },
+    {
       "id": "statvar_Ssl_session_cache_timeouts",
       "name": "Ssl_session_cache_timeouts"
     },
@@ -789,6 +985,18 @@
       "name": "Table_open_cache_overflows"
     },
     {
+      "id": "statvar_Table_open_cache_triggers_hits",
+      "name": "Table_open_cache_triggers_hits"
+    },
+    {
+      "id": "statvar_Table_open_cache_triggers_misses",
+      "name": "Table_open_cache_triggers_misses"
+    },
+    {
+      "id": "statvar_Table_open_cache_triggers_overflows",
+      "name": "Table_open_cache_triggers_overflows"
+    },
+    {
       "id": "statvar_Tc_log_max_pages_used",
       "name": "Tc_log_max_pages_used"
     },
@@ -799,6 +1007,34 @@
     {
       "id": "statvar_Tc_log_page_waits",
       "name": "Tc_log_page_waits"
+    },
+    {
+      "id": "statvar_Telemetry_metrics_supported",
+      "name": "Telemetry_metrics_supported"
+    },
+    {
+      "id": "statvar_Telemetry_logs_supported",
+      "name": "Telemetry_logs_supported"
+    },
+    {
+      "id": "statvar_telemetry.live_sessions",
+      "name": "telemetry.live_sessions"
+    },
+    {
+      "id": "statvar_Telemetry_traces_supported",
+      "name": "Telemetry_traces_supported"
+    },
+    {
+      "id": "statvar_telemetry.run_level",
+      "name": "telemetry.run_level"
+    },
+    {
+      "id": "sysvar_telemetry.secret_provider",
+      "name": "telemetry.secret_provider"
+    },
+    {
+      "id": "statvar_TempTable_count_hit_max_ram",
+      "name": "TempTable_count_hit_max_ram"
     },
     {
       "id": "statvar_Threads_cached",
@@ -815,6 +1051,14 @@
     {
       "id": "statvar_Threads_running",
       "name": "Threads_running"
+    },
+    {
+      "id": "statvar_Tls_library_version",
+      "name": "Tls_library_version"
+    },
+    {
+      "id": "statvar_Tls_sni_server_name",
+      "name": "Tls_sni_server_name"
     },
     {
       "id": "statvar_Uptime",
@@ -1506,5 +1750,5 @@
     }
   ],
   "name": "server-status-variables_5.7",
-  "url": "https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html"
+  "url": "https://dev.mysql.com/doc/refman/9.7/en/server-status-variables.html"
 }

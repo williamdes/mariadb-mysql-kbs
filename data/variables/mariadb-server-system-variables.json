@@ -1457,6 +1457,22 @@
       ]
     },
     {
+      "cli": "--log-slow-max-query-length=#",
+      "default": "4294967295",
+      "dynamic": true,
+      "id": "log_slow_max_query_length",
+      "name": "log_slow_max_query_length",
+      "range": {
+        "from": 1,
+        "to": 4294967295
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
       "cli": "log-slow-max-warnings=#",
       "default": "10",
       "dynamic": true,
@@ -2235,7 +2251,7 @@
     },
     {
       "cli": "--old-mode",
-      "default": "UTF8_IS_UTF8MB3 (>= MariaDB 10.6) (empty string) (<= MariaDB 10.5)",
+      "default": "(empty string) (>= MariaDB 13.1), UTF8_IS_UTF8MB3 (MariaDB 10.6 to MariaDB 13.0), (empty string) (<= MariaDB 10.5)",
       "dynamic": true,
       "id": "old_mode",
       "name": "old_mode",
@@ -2272,11 +2288,27 @@
       "type": "integer"
     },
     {
-      "cli": "--optimizer-join-limit-pref-ratio[=#]",
-      "default": "0",
+      "cli": "--optimizer-extra-pruning-depth[=#]",
+      "default": "8",
       "dynamic": true,
       "id": "optimizer_extra_pruning_depth",
       "name": "optimizer_extra_pruning_depth",
+      "range": {
+        "from": 0,
+        "to": 62
+      },
+      "scope": [
+        "global",
+        "session"
+      ],
+      "type": "integer"
+    },
+    {
+      "cli": "--optimizer-join-limit-pref-ratio[=#]",
+      "default": "0",
+      "dynamic": true,
+      "id": "optimizer_join_limit_pref_ratio",
+      "name": "optimizer_join_limit_pref_ratio",
       "range": {
         "from": 0,
         "to": 4294967295
@@ -2727,12 +2759,12 @@
       ],
       "type": "enumeration",
       "validValues": [
-        "0",
         "OFF",
-        "1",
+        "0",
         "ON",
-        "2",
-        "DEMAND"
+        "1",
+        "DEMAND",
+        "2"
       ]
     },
     {

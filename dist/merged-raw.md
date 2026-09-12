@@ -19510,7 +19510,7 @@
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Valid value(s)|`0`, `OFF`, `1`, `ON`, `2`, `DEMAND`|
+|Valid value(s)|`OFF`, `0`, `ON`, `1`, `DEMAND`, `2`|
 
 ### Documentation(s)
 |source|anchor name|

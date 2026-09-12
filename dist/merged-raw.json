@@ -24873,12 +24873,12 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "0",
                 "OFF",
-                "1",
+                "0",
                 "ON",
-                "2",
-                "DEMAND"
+                "1",
+                "DEMAND",
+                "2"
             ],
             "ids": [
                 {

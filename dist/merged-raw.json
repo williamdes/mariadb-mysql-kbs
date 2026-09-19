@@ -2431,6 +2431,37 @@
                 }
             ]
         },
+        "wsrep_black_box_name": {
+            "cli": "--wsrep-black-box-name=name",
+            "default": "bb-mariadb",
+            "dynamic": false,
+            "name": "wsrep_black_box_name",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                {
+                    "anchor": "wsrep_black_box_name",
+                    "url": "https://mariadb.com/docs/galera-cluster/reference/galera-cluster-system-variables"
+                }
+            ]
+        },
+        "wsrep_black_box_size": {
+            "cli": "--wsrep-black-box-size=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "wsrep_black_box_size",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                {
+                    "anchor": "wsrep_black_box_size",
+                    "url": "https://mariadb.com/docs/galera-cluster/reference/galera-cluster-system-variables"
+                }
+            ]
+        },
         "wsrep_causal_reads": {
             "cli": "--wsrep-causal-reads[={0|1}]",
             "default": "OFF",
@@ -12771,7 +12802,7 @@
             "name": "slave_connections_needed_for_purge",
             "range": {
                 "from": 0,
-                "to": 1.8446744073709552e+19
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -24873,12 +24904,12 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "0",
                 "OFF",
-                "1",
+                "0",
                 "ON",
-                "2",
-                "DEMAND"
+                "1",
+                "DEMAND",
+                "2"
             ],
             "ids": [
                 {

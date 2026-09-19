@@ -2191,6 +2191,35 @@
 |------|----|
 |mariadb.com|[wsrep_auto_increment_control](https://mariadb.com/docs/galera-cluster/reference/galera-cluster-system-variables#wsrep_auto_increment_control)|
 
+## wsrep_black_box_name
+|name|value|
+|----|-----|
+|Name|`wsrep_black_box_name`|
+|Command line|`--wsrep-black-box-name=name`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`bb-mariadb`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_black_box_name](https://mariadb.com/docs/galera-cluster/reference/galera-cluster-system-variables#wsrep_black_box_name)|
+
+## wsrep_black_box_size
+|name|value|
+|----|-----|
+|Name|`wsrep_black_box_size`|
+|Command line|`--wsrep-black-box-size=#`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_black_box_size](https://mariadb.com/docs/galera-cluster/reference/galera-cluster-system-variables#wsrep_black_box_size)|
+
 ## wsrep_causal_reads
 |name|value|
 |----|-----|
@@ -10716,7 +10745,7 @@
 |Scope|`global`|
 |Default value|`1; 0 on Galera cluster nodes.`|
 |Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -19510,7 +19539,7 @@
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Valid value(s)|`0`, `OFF`, `1`, `ON`, `2`, `DEMAND`|
+|Valid value(s)|`OFF`, `0`, `ON`, `1`, `DEMAND`, `2`|
 
 ### Documentation(s)
 |source|anchor name|

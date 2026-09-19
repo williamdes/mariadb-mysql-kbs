@@ -1927,6 +1927,31 @@
                 "13#wsrep_auto_increment_control"
             ]
         },
+        "wsrep_black_box_name": {
+            "cli": "--wsrep-black-box-name=name",
+            "default": "bb-mariadb",
+            "dynamic": false,
+            "name": "wsrep_black_box_name",
+            "scope": [
+                "global"
+            ],
+            "type": "string",
+            "ids": [
+                "13#wsrep_black_box_name"
+            ]
+        },
+        "wsrep_black_box_size": {
+            "cli": "--wsrep-black-box-size=#",
+            "default": "0",
+            "dynamic": true,
+            "name": "wsrep_black_box_size",
+            "scope": [
+                "global"
+            ],
+            "ids": [
+                "13#wsrep_black_box_size"
+            ]
+        },
         "wsrep_causal_reads": {
             "cli": "--wsrep-causal-reads[={0|1}]",
             "default": "OFF",
@@ -10050,7 +10075,7 @@
             "name": "slave_connections_needed_for_purge",
             "range": {
                 "from": 0,
-                "to": 1.8446744073709552e+19
+                "to": 4294967295
             },
             "scope": [
                 "global"
@@ -17616,12 +17641,12 @@
             ],
             "type": "enumeration",
             "validValues": [
-                "0",
                 "OFF",
-                "1",
+                "0",
                 "ON",
-                "2",
-                "DEMAND"
+                "1",
+                "DEMAND",
+                "2"
             ],
             "ids": [
                 "48#query_cache_type",

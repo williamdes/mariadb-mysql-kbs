@@ -393,7 +393,7 @@
         "global",
         "session"
       ],
-      "type": "enumeration",
+      "type": "set",
       "validValues": [
         "STATEMENT",
         "MIXED,STATEMENT"
@@ -990,7 +990,7 @@
       "name": "slave_connections_needed_for_purge",
       "range": {
         "from": 0,
-        "to": 18446744073709551615
+        "to": 4294967295
       },
       "scope": [
         "global"

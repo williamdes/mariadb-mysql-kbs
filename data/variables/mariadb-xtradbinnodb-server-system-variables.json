@@ -551,7 +551,7 @@
     },
     {
       "cli": "--innodb-buffer-pool-size-auto-min=#",
-      "default": "134217728",
+      "default": "0, which is replaced at startup by innodb_buffer_pool_size_max. A value greater than innodb_buffer_pool_size_max is also replaced by it.",
       "dynamic": true,
       "id": "innodb_buffer_pool_size_auto_min",
       "name": "innodb_buffer_pool_size_auto_min",
@@ -566,7 +566,7 @@
     },
     {
       "cli": "--innodb-buffer-pool-size-max=#",
-      "default": "specified by the initial value of innodb_buffer_pool_size, rounded up to the block size of that variable. See the section about buffer pool changes in MariaDB 10.11.12, 11.4.6, and 11.8.2.",
+      "default": "8796093022208 (8 TiB) on 64-bit systems other than IBM AIX, from MariaDB 10.11.17, 11.4.11, 11.8.7 and 12.3.2. Otherwise 0, which is replaced at startup by the initial innodb_buffer_pool_size rounded up to the block size of that variable. See the section about buffer pool changes.",
       "dynamic": false,
       "id": "innodb_buffer_pool_size_max",
       "name": "innodb_buffer_pool_size_max",

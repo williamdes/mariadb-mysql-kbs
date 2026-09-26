@@ -38,6 +38,27 @@
       "type": "boolean"
     },
     {
+      "cli": "--wsrep-black-box-name=name",
+      "default": "bb-mariadb",
+      "dynamic": false,
+      "id": "wsrep_black_box_name",
+      "name": "wsrep_black_box_name",
+      "scope": [
+        "global"
+      ],
+      "type": "string"
+    },
+    {
+      "cli": "--wsrep-black-box-size=#",
+      "default": "0",
+      "dynamic": true,
+      "id": "wsrep_black_box_size",
+      "name": "wsrep_black_box_size",
+      "scope": [
+        "global"
+      ]
+    },
+    {
       "cli": "--wsrep-causal-reads[={0|1}]",
       "default": "OFF",
       "dynamic": true,

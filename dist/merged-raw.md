@@ -2191,6 +2191,35 @@
 |------|----|
 |mariadb.com|[wsrep_auto_increment_control](https://mariadb.com/docs/galera-cluster/reference/galera-cluster-system-variables#wsrep_auto_increment_control)|
 
+## wsrep_black_box_name
+|name|value|
+|----|-----|
+|Name|`wsrep_black_box_name`|
+|Command line|`--wsrep-black-box-name=name`|
+|Type of variable|`string`|
+|Scope|`global`|
+|Default value|`bb-mariadb`|
+|Dynamic|`false`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_black_box_name](https://mariadb.com/docs/galera-cluster/reference/galera-cluster-system-variables#wsrep_black_box_name)|
+
+## wsrep_black_box_size
+|name|value|
+|----|-----|
+|Name|`wsrep_black_box_size`|
+|Command line|`--wsrep-black-box-size=#`|
+|Scope|`global`|
+|Default value|`0`|
+|Dynamic|`true`|
+
+### Documentation(s)
+|source|anchor name|
+|------|----|
+|mariadb.com|[wsrep_black_box_size](https://mariadb.com/docs/galera-cluster/reference/galera-cluster-system-variables#wsrep_black_box_size)|
+
 ## wsrep_causal_reads
 |name|value|
 |----|-----|
@@ -9978,7 +10007,7 @@
 |----|-----|
 |Name|`create_tmp_table_binlog_formats`|
 |Command line|`--create-tmp-table-binlog-formats=#`|
-|Type of variable|`enumeration`|
+|Type of variable|`set`|
 |Scope|`global`, `session`|
 |Default value|`STATEMENT`|
 |Dynamic|`true`|
@@ -10716,7 +10745,7 @@
 |Scope|`global`|
 |Default value|`1; 0 on Galera cluster nodes.`|
 |Dynamic|`true`|
-|Range|from: `0` to: `1.844674407371E+19`|
+|Range|from: `0` to: `4294967295`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -19510,7 +19539,7 @@
 |Scope|`global`, `session`|
 |Default value|`0`|
 |Dynamic|`true`|
-|Valid value(s)|`0`, `OFF`, `1`, `ON`, `2`, `DEMAND`|
+|Valid value(s)|`OFF`, `0`, `ON`, `1`, `DEMAND`, `2`|
 
 ### Documentation(s)
 |source|anchor name|
@@ -29376,7 +29405,7 @@
 |Command line|`--innodb-buffer-pool-size-auto-min=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`134217728`|
+|Default value|`0, which is replaced at startup by innodb_buffer_pool_size_max. A value greater than innodb_buffer_pool_size_max is also replaced by it.`|
 |Dynamic|`true`|
 |Range|from: `0` to: `1.8446744073701E+19`|
 
@@ -29392,7 +29421,7 @@
 |Command line|`--innodb-buffer-pool-size-max=#`|
 |Type of variable|`integer`|
 |Scope|`global`|
-|Default value|`specified by the initial value of innodb_buffer_pool_size, rounded up to the block size of that variable. See the section about buffer pool changes in MariaDB 10.11.12, 11.4.6, and 11.8.2.`|
+|Default value|`8796093022208 (8 TiB) on 64-bit systems other than IBM AIX, from MariaDB 10.11.17, 11.4.11, 11.8.7 and 12.3.2. Otherwise 0, which is replaced at startup by the initial innodb_buffer_pool_size rounded up to the block size of that variable. See the section about buffer pool changes.`|
 |Dynamic|`false`|
 |Range|from: `0` to: `1.8446744073701E+19`|
 

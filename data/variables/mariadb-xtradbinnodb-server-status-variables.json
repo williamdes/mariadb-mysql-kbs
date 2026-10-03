@@ -1,24 +1,8 @@
 {
   "data": [
     {
-      "id": "innodb_adaptive_hash_cells",
-      "name": "Innodb_adaptive_hash_cells",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "innodb_adaptive_hash_hash_searches",
       "name": "Innodb_adaptive_hash_hash_searches",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_adaptive_hash_heap_buffers",
-      "name": "Innodb_adaptive_hash_heap_buffers",
       "scope": [
         "global"
       ],
@@ -337,14 +321,6 @@
       "type": "integer"
     },
     {
-      "id": "innodb_buffered_aio_submitted",
-      "name": "Innodb_buffered_aio_submitted",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "innodb_bulk_operations",
       "name": "Innodb_bulk_operations",
       "scope": [
@@ -363,22 +339,6 @@
     {
       "id": "innodb_checkpoint_max_age",
       "name": "Innodb_checkpoint_max_age",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_checkpoint_target_age",
-      "name": "Innodb_checkpoint_target_age",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_current_row_locks",
-      "name": "Innodb_current_row_locks",
       "scope": [
         "global"
       ],
@@ -497,8 +457,8 @@
       "type": "integer"
     },
     {
-      "id": "innodb_dict_tables",
-      "name": "Innodb_dict_tables",
+      "id": "innodb_encryption_key_rotation_list_length",
+      "name": "Innodb_encryption_key_rotation_list_length",
       "scope": [
         "global"
       ],
@@ -599,14 +559,6 @@
         "global"
       ],
       "type": "integer"
-    },
-    {
-      "id": "innodb_have_atomic_builtins",
-      "name": "Innodb_have_atomic_builtins",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
     },
     {
       "id": "innodb_have_bzip2",
@@ -809,22 +761,6 @@
       "type": "integer"
     },
     {
-      "id": "innodb_master_thread_1_second_loops",
-      "name": "Innodb_master_thread_1_second_loops",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_master_thread_10_second_loops",
-      "name": "Innodb_master_thread_10_second_loops",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "innodb_master_thread_active_loops",
       "name": "Innodb_master_thread_active_loops",
       "scope": [
@@ -833,32 +769,8 @@
       "type": "integer"
     },
     {
-      "id": "innodb_master_thread_background_loops",
-      "name": "Innodb_master_thread_background_loops",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "innodb_master_thread_idle_loops",
       "name": "Innodb_master_thread_idle_loops",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_master_thread_main_flush_loops",
-      "name": "Innodb_master_thread_main_flush_loops",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_master_thread_sleeps",
-      "name": "Innodb_master_thread_sleeps",
       "scope": [
         "global"
       ],
@@ -889,45 +801,19 @@
       "type": "integer"
     },
     {
-      "id": "innodb_mem_total",
-      "name": "Innodb_mem_total",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_mutex_os_waits",
-      "name": "Innodb_mutex_os_waits",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_mutex_spin_rounds",
-      "name": "Innodb_mutex_spin_rounds",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_mutex_spin_waits",
-      "name": "Innodb_mutex_spin_waits",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "innodb_num_index_pages_written",
       "name": "Innodb_num_index_pages_written",
+      "scope": [
+        "global"
+      ],
       "type": "integer"
     },
     {
       "id": "innodb_num_non_index_pages_written",
       "name": "Innodb_num_non_index_pages_written",
+      "scope": [
+        "global"
+      ],
       "type": "integer"
     },
     {
@@ -941,14 +827,6 @@
     {
       "id": "innodb_num_page_compressed_trim_op",
       "name": "Innodb_num_page_compressed_trim_op",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_num_page_compressed_trim_op_saved",
-      "name": "Innodb_num_page_compressed_trim_op_saved",
       "scope": [
         "global"
       ],
@@ -989,22 +867,6 @@
     {
       "id": "innodb_num_pages_page_decompressed",
       "name": "Innodb_num_pages_page_decompressed",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_num_pages_page_encryption_error",
-      "name": "Innodb_num_pages_page_encryption_error",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_oldest_view_low_limit_trx_id",
-      "name": "Innodb_oldest_view_low_limit_trx_id",
       "scope": [
         "global"
       ],
@@ -1071,41 +933,6 @@
       "name": "Innodb_page_compression_saved"
     },
     {
-      "id": "innodb_page_compression_trim_sect512",
-      "name": "Innodb_page_compression_trim_sect512",
-      "type": "integer"
-    },
-    {
-      "id": "innodb_page_compression_trim_sect1024",
-      "name": "Innodb_page_compression_trim_sect1024",
-      "type": "integer"
-    },
-    {
-      "id": "innodb_page_compression_trim_sect2048",
-      "name": "Innodb_page_compression_trim_sect2048",
-      "type": "integer"
-    },
-    {
-      "id": "innodb_page_compression_trim_sect4096",
-      "name": "Innodb_page_compression_trim_sect4096",
-      "type": "integer"
-    },
-    {
-      "id": "innodb_page_compression_trim_sect8192",
-      "name": "Innodb_page_compression_trim_sect8192",
-      "type": "integer"
-    },
-    {
-      "id": "innodb_page_compression_trim_sect16384",
-      "name": "Innodb_page_compression_trim_sect16384",
-      "type": "integer"
-    },
-    {
-      "id": "innodb_page_compression_trim_sect32768",
-      "name": "Innodb_page_compression_trim_sect32768",
-      "type": "integer"
-    },
-    {
       "id": "innodb_page_size",
       "name": "Innodb_page_size",
       "scope": [
@@ -1130,14 +957,6 @@
       "type": "integer"
     },
     {
-      "id": "innodb_pages0_read",
-      "name": "Innodb_pages0_read",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "innodb_pages_written",
       "name": "Innodb_pages_written",
       "scope": [
@@ -1146,40 +965,8 @@
       "type": "integer"
     },
     {
-      "id": "innodb_purge_trx_id",
-      "name": "Innodb_purge_trx_id",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_purge_undo_no",
-      "name": "Innodb_purge_undo_no",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_read_views_memory",
-      "name": "Innodb_read_views_memory",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "innodb_row_lock_current_waits",
       "name": "Innodb_row_lock_current_waits",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_row_lock_numbers",
-      "name": "Innodb_row_lock_numbers",
       "scope": [
         "global"
       ],
@@ -1250,86 +1037,6 @@
       "type": "integer"
     },
     {
-      "id": "innodb_s_lock_os_waits",
-      "name": "Innodb_s_lock_os_waits",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_s_lock_spin_rounds",
-      "name": "Innodb_s_lock_spin_rounds",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_s_lock_spin_waits",
-      "name": "Innodb_s_lock_spin_waits",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_scrub_background_page_reorganizations",
-      "name": "Innodb_scrub_background_page_reorganizations",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_scrub_background_page_split_failures_missing_index",
-      "name": "Innodb_scrub_background_page_split_failures_missing_index",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_scrub_background_page_split_failures_out_of_filespace",
-      "name": "Innodb_scrub_background_page_split_failures_out_of_filespace",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_scrub_background_page_split_failures_underflow",
-      "name": "Innodb_scrub_background_page_split_failures_underflow",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_scrub_background_page_split_failures_unknown",
-      "name": "Innodb_scrub_background_page_split_failures_unknown",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_scrub_background_page_splits",
-      "name": "Innodb_scrub_background_page_splits",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_scrub_log",
-      "name": "Innodb_scrub_log",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "innodb_secondary_index_triggered_cluster_reads",
       "name": "Innodb_secondary_index_triggered_cluster_reads",
       "scope": [
@@ -1388,30 +1095,6 @@
     {
       "id": "innodb_undo_truncations",
       "name": "Innodb_undo_truncations",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_x_lock_os_waits",
-      "name": "Innodb_x_lock_os_waits",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_x_lock_spin_rounds",
-      "name": "Innodb_x_lock_spin_rounds",
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "innodb_x_lock_spin_waits",
-      "name": "Innodb_x_lock_spin_waits",
       "scope": [
         "global"
       ],

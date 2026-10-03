@@ -281,15 +281,6 @@
       "type": "integer"
     },
     {
-      "id": "com_backup_table",
-      "name": "Com_backup_table",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "com_begin",
       "name": "Com_begin",
       "scope": [
@@ -821,33 +812,6 @@
       "type": "integer"
     },
     {
-      "id": "com_load_master_data",
-      "name": "Com_load_master_data",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "com_load_master_table",
-      "name": "Com_load_master_table",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "com_multi",
-      "name": "Com_multi",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "com_lock_tables",
       "name": "Com_lock_tables",
       "scope": [
@@ -974,15 +938,6 @@
       "type": "integer"
     },
     {
-      "id": "com_restore_table",
-      "name": "Com_restore_table",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "com_revoke",
       "name": "Com_revoke",
       "scope": [
@@ -1001,8 +956,8 @@
       "type": "integer"
     },
     {
-      "id": "com_revoke_grant",
-      "name": "Com_revoke_grant",
+      "id": "com_revoke_role",
+      "name": "Com_revoke_role",
       "scope": [
         "global",
         "session"
@@ -1100,26 +1055,8 @@
       "type": "integer"
     },
     {
-      "id": "com_show_client_statistics",
-      "name": "Com_show_client_statistics",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "com_show_collations",
       "name": "Com_show_collations",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "com_show_column_types",
-      "name": "Com_show_column_types",
       "scope": [
         "global",
         "session"
@@ -1325,15 +1262,6 @@
       "type": "integer"
     },
     {
-      "id": "com_show_index_statistics",
-      "name": "Com_show_index_statistics",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "com_show_open_tables",
       "name": "Com_show_open_tables",
       "scope": [
@@ -1442,15 +1370,6 @@
       "type": "integer"
     },
     {
-      "id": "com_show_table_statistics",
-      "name": "Com_show_table_statistics",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "com_show_table_status",
       "name": "Com_show_table_status",
       "scope": [
@@ -1478,17 +1397,8 @@
       "type": "integer"
     },
     {
-      "id": "com_show_user_statistics",
-      "name": "Com_show_user_statistics",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "com_show_variable",
-      "name": "Com_show_variable",
+      "id": "com_show_variables",
+      "name": "Com_show_variables",
       "scope": [
         "global",
         "session"
@@ -1982,14 +1892,6 @@
       "scope": [
         "global",
         "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "flush_commands",
-      "name": "Flush_commands",
-      "scope": [
-        "global"
       ],
       "type": "integer"
     },

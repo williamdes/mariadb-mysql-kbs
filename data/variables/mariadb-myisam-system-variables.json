@@ -117,10 +117,6 @@
       "type": "integer"
     },
     {
-      "id": "myisam_max_extra_sort_file_size",
-      "name": "myisam_max_extra_sort_file_size"
-    },
-    {
       "cli": "--myisam-max-sort-file-size=#",
       "default": "9223372036854775807",
       "dynamic": true,
@@ -148,7 +144,7 @@
     },
     {
       "cli": "--myisam-recover-options[=name]",
-      "default": "BACKUP,QUICK (>= MariaDB 10.2.4)DEFAULT (<= MariaDB 10.2.3)OFF",
+      "default": "BACKUP,QUICK",
       "dynamic": false,
       "id": "myisam_recover_options",
       "name": "myisam_recover_options",

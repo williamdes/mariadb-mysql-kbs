@@ -198,7 +198,7 @@
       "type": "string"
     },
     {
-      "default": ">= MariaDB 11.6: utf8mb4>= MariaDB 10.6: utf8mb3<= MariaDB 10.5: utf8",
+      "default": ">= MariaDB 11.6: utf8mb4>= MariaDB 10.6: utf8mb3",
       "dynamic": true,
       "id": "character_set_connection",
       "name": "character_set_connection",
@@ -232,7 +232,7 @@
       "type": "string"
     },
     {
-      "default": "utf8mb3 (>= MariaDB 10.6), utf8 (<= MariaDB 10.5)",
+      "default": "utf8mb3",
       "dynamic": true,
       "id": "character_set_results",
       "name": "character_set_results",
@@ -255,7 +255,7 @@
       "type": "string"
     },
     {
-      "default": "utf8mb3 (>= MariaDB 10.6), utf8 (<= MariaDB 10.5)",
+      "default": "utf8mb3",
       "dynamic": false,
       "id": "character_set_system",
       "name": "character_set_system",
@@ -373,7 +373,7 @@
     },
     {
       "cli": "--core-file",
-      "default": "Windows >= MariaDB 10.4.3: ONAll other systems: OFF",
+      "default": "Windows: ONAll other systems: OFF",
       "dynamic": false,
       "id": "core_file",
       "name": "core_file",
@@ -402,7 +402,7 @@
     },
     {
       "cli": "-#, --debug[=debug_options]",
-      "default": "= MariaDB 10.5: d:t:i:o,/tmp/mariadbd.trace (Unix) or d:t:i:O,\\mariadbd.trace (Windows)",
+      "default": "d:t:i:o,/tmp/mariadbd.trace (Unix) or d:t:i:O,\\mariadbd.trace (Windows)",
       "dynamic": true,
       "id": "debug-debug_dbug",
       "name": "debug/debug_dbug",
@@ -479,16 +479,6 @@
         "session"
       ],
       "type": "enumeration"
-    },
-    {
-      "cli": "--default-table-type=name",
-      "dynamic": true,
-      "id": "default_table_type",
-      "name": "default_table_type",
-      "scope": [
-        "global",
-        "session"
-      ]
     },
     {
       "cli": "--default-tmp-storage-engine=name",
@@ -625,23 +615,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--encryption-algorithm=value",
-      "default": "none",
-      "dynamic": false,
-      "id": "encryption_algorithm",
-      "name": "encryption_algorithm",
-      "scope": [
-        "global"
-      ],
-      "type": "enumeration",
-      "validValues": [
-        "none",
-        "aes_ecb",
-        "aes_cbc",
-        "aes_ctr"
-      ]
-    },
-    {
       "default": "none",
       "dynamic": true,
       "id": "enforce_storage_engine",
@@ -650,18 +623,6 @@
         "session"
       ],
       "type": "string"
-    },
-    {
-      "cli": "--engine-condition-pushdown",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "engine_condition_pushdown",
-      "name": "engine_condition_pushdown",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
     },
     {
       "cli": "--eq-range-index-dive-limit=#",
@@ -899,14 +860,6 @@
     },
     {
       "dynamic": false,
-      "id": "have_csv",
-      "name": "have_csv",
-      "scope": [
-        "global"
-      ]
-    },
-    {
-      "dynamic": false,
       "id": "have_dynamic_loading",
       "name": "have_dynamic_loading",
       "scope": [
@@ -917,22 +870,6 @@
       "dynamic": false,
       "id": "have_geometry",
       "name": "have_geometry",
-      "scope": [
-        "global"
-      ]
-    },
-    {
-      "dynamic": false,
-      "id": "have_ndbcluster",
-      "name": "have_ndbcluster",
-      "scope": [
-        "global"
-      ]
-    },
-    {
-      "dynamic": false,
-      "id": "have_partitioning",
-      "name": "have_partitioning",
       "scope": [
         "global"
       ]
@@ -987,7 +924,7 @@
     },
     {
       "cli": "--histogram-type=value",
-      "default": "JSON_HB (>= MariaDB 11.0)DOUBLE_PREC_HB (<= MariaDB 10.11, >= MariaDB 10.4.3)",
+      "default": "JSON_HB (>= MariaDB 11.0)DOUBLE_PREC_HB (<= MariaDB 10.11)",
       "dynamic": true,
       "id": "histogram_type",
       "name": "histogram_type",
@@ -1227,7 +1164,7 @@
       ]
     },
     {
-      "default": "0 (zero, from MariaDB 10.5.3)",
+      "default": "0",
       "dynamic": false,
       "id": "large_page_size",
       "name": "large_page_size",
@@ -1336,17 +1273,6 @@
         "global"
       ],
       "type": "boolean"
-    },
-    {
-      "cli": "-l [filename],--log[=filename]",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "log",
-      "name": "log",
-      "scope": [
-        "global"
-      ],
-      "type": "string"
     },
     {
       "cli": "--log-disabled_statements=value",
@@ -1503,17 +1429,6 @@
         "session"
       ],
       "type": "integer"
-    },
-    {
-      "cli": "--log-slow-queries[=name]",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "log_slow_queries",
-      "name": "log_slow_queries",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
     },
     {
       "cli": "--slow-query-log",
@@ -1829,21 +1744,6 @@
       "type": "integer"
     },
     {
-      "cli": "--max-long-data-size=#",
-      "default": "16777216",
-      "dynamic": false,
-      "id": "max_long_data_size",
-      "name": "max_long_data_size",
-      "range": {
-        "from": 1024,
-        "to": 4294967295
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--max-open-cursors=#",
       "default": "50",
       "dynamic": true,
@@ -1887,7 +1787,7 @@
     },
     {
       "cli": "--max-recursive-iterations=#",
-      "default": "1000 (>= MariaDB 10.6.0), 4294967295 (<= MariaDB 10.5)",
+      "default": "1000",
       "dynamic": true,
       "id": "max_recursive_iterations",
       "name": "max_recursive_iterations",
@@ -1955,6 +1855,10 @@
       "dynamic": true,
       "id": "max_sort_length",
       "name": "max_sort_length",
+      "range": {
+        "from": 64,
+        "to": 8388608
+      },
       "scope": [
         "global",
         "session"
@@ -2106,12 +2010,6 @@
       "type": "integer"
     },
     {
-      "cli": "--multi-range-count=#",
-      "default": "256",
-      "id": "multi_range_count",
-      "name": "multi_range_count"
-    },
-    {
       "cli": "--mysql56-temporal-format",
       "default": "ON",
       "dynamic": true,
@@ -2251,7 +2149,7 @@
     },
     {
       "cli": "--old-mode",
-      "default": "(empty string) (>= MariaDB 13.1), UTF8_IS_UTF8MB3 (MariaDB 10.6 to MariaDB 13.0), (empty string) (<= MariaDB 10.5)",
+      "default": "(empty string) (>= MariaDB 13.1), UTF8_IS_UTF8MB3 (MariaDB 10.6 to MariaDB 13.0)",
       "dynamic": true,
       "id": "old_mode",
       "name": "old_mode",
@@ -2918,20 +2816,6 @@
       "type": "integer"
     },
     {
-      "id": "rpl_recovery_rank",
-      "name": "rpl_recovery_rank"
-    },
-    {
-      "cli": "--safe-show-database",
-      "dynamic": true,
-      "id": "safe_show_database",
-      "name": "safe_show_database",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--secure-auth",
       "default": "ON",
       "dynamic": true,
@@ -3190,18 +3074,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--sql-big-tables",
-      "default": "0",
-      "dynamic": true,
-      "id": "sql_big_tables",
-      "name": "sql_big_tables",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
       "default": "0",
       "dynamic": true,
       "id": "sql_buffer_result",
@@ -3234,26 +3106,6 @@
         "session"
       ],
       "type": "boolean"
-    },
-    {
-      "id": "sql_log_update",
-      "name": "sql_log_update"
-    },
-    {
-      "cli": "--sql-low-priority-updates",
-      "default": "0",
-      "dynamic": true,
-      "id": "sql_low_priority_updates",
-      "name": "sql_low_priority_updates",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
-      "id": "sql_max_join_size",
-      "name": "sql_max_join_size"
     },
     {
       "cli": "--sql-mode=value[,value[,value...]]",
@@ -3401,21 +3253,6 @@
       "type": "integer"
     },
     {
-      "cli": "--table-lock-wait-timeout=#",
-      "default": "50",
-      "dynamic": true,
-      "id": "table_lock_wait_timeout",
-      "name": "table_lock_wait_timeout",
-      "range": {
-        "from": 1,
-        "to": 1073741824
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--table-open-cache=#",
       "default": "2000",
       "dynamic": true,
@@ -3431,7 +3268,7 @@
       "type": "integer"
     },
     {
-      "default": "8 (>= MariaDB 10.2.2)",
+      "default": "8",
       "dynamic": false,
       "id": "table_open_cache_instances",
       "name": "table_open_cache_instances",
@@ -3520,21 +3357,6 @@
       "type": "integer"
     },
     {
-      "cli": "--thread-concurrency=#",
-      "default": "10",
-      "dynamic": false,
-      "id": "thread_concurrency",
-      "name": "thread_concurrency",
-      "range": {
-        "from": 1,
-        "to": 512
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--thread-stack=#",
       "default": "299008",
       "dynamic": false,
@@ -3564,17 +3386,6 @@
         "session"
       ],
       "type": "string"
-    },
-    {
-      "cli": "--timed-mutexes",
-      "default": "OFF",
-      "dynamic": true,
-      "id": "timed_mutexes",
-      "name": "timed_mutexes",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
     },
     {
       "dynamic": true,
@@ -3616,6 +3427,7 @@
       "id": "tmp_table_size",
       "name": "tmp_table_size",
       "range": {
+        "from": 0,
         "to": 4294967295
       },
       "scope": [

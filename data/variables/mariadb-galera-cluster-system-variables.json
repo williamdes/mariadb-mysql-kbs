@@ -638,10 +638,9 @@
       "type": "string",
       "validValues": [
         "rsync",
+        "rsync_wan",
         "mysqldump",
-        "xtrabackup",
-        "xtrabackup-v2",
-        "mariadb-backup"
+        "mariabackup"
       ]
     },
     {

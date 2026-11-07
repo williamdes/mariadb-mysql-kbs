@@ -370,24 +370,6 @@
       "type": "integer"
     },
     {
-      "id": "rocksdb_l0_num_files_stall_micros",
-      "name": "Rocksdb_l0_num_files_stall_micros",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "rocksdb_l0_slowdown_micros",
-      "name": "Rocksdb_l0_slowdown_micros",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "rocksdb_manual_compactions_processed",
       "name": "Rocksdb_manual_compactions_processed",
       "scope": [
@@ -399,15 +381,6 @@
     {
       "id": "rocksdb_manual_compactions_running",
       "name": "Rocksdb_manual_compactions_running",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "rocksdb_memtable_compaction_micros",
-      "name": "Rocksdb_memtable_compaction_micros",
       "scope": [
         "global",
         "session"

@@ -25,7 +25,7 @@
     },
     {
       "cli": "--connect-conv-size=#",
-      "default": "= MariaDB 10.4.8: 1024<= MariaDB 10.4.7: 8192",
+      "default": "1024",
       "dynamic": true,
       "id": "connect_conv_size",
       "name": "connect_conv_size",
@@ -73,7 +73,7 @@
     },
     {
       "cli": "--connect-enable-mongo={0|1}",
-      "default": "OFF",
+      "default": "ON",
       "dynamic": false,
       "id": "connect_enable_mongo",
       "name": "connect_enable_mongo",

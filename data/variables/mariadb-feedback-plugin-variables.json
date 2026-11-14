@@ -1,6 +1,48 @@
 {
   "data": [
     {
+      "cli": "--feedback-debug-first-interval=#",
+      "default": "86400",
+      "id": "feedback_debug_first_interval",
+      "name": "feedback_debug_first_interval",
+      "scope": [
+        "global"
+      ],
+      "type": "integer",
+      "validValues": [
+        "1",
+        "2147483647"
+      ]
+    },
+    {
+      "cli": "--feedback-debug-interval=#",
+      "default": "604800",
+      "id": "feedback_debug_interval",
+      "name": "feedback_debug_interval",
+      "scope": [
+        "global"
+      ],
+      "type": "integer",
+      "validValues": [
+        "1",
+        "2147483647"
+      ]
+    },
+    {
+      "cli": "--feedback-debug-startup-interval=#",
+      "default": "300",
+      "id": "feedback_debug_startup_interval",
+      "name": "feedback_debug_startup_interval",
+      "scope": [
+        "global"
+      ],
+      "type": "integer",
+      "validValues": [
+        "1",
+        "2147483647"
+      ]
+    },
+    {
       "cli": "--feedback-http=proxy=value",
       "default": "''",
       "id": "feedback_http_proxy",

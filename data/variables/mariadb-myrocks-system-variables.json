@@ -71,32 +71,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--rocksdb-background-sync={0|1}",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "rocksdb_background_sync",
-      "name": "rocksdb_background_sync",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--rocksdb-base-background-compactions=#",
-      "default": "1",
-      "dynamic": false,
-      "id": "rocksdb_base_background_compactions",
-      "name": "rocksdb_base_background_compactions",
-      "range": {
-        "from": -1,
-        "to": 64
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--rocksdb-blind-delete-primary-key={0|1}",
       "default": "OFF",
       "dynamic": true,
@@ -415,17 +389,6 @@
         "global"
       ],
       "type": "integer"
-    },
-    {
-      "cli": "--rocksdb-coconcurrent-prepare={0|1}",
-      "default": "1",
-      "dynamic": false,
-      "id": "rocksdb_concurrent_prepare",
-      "name": "rocksdb_concurrent_prepare",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
     },
     {
       "cli": "--rocksdb-create-checkpoint=value",
@@ -763,18 +726,6 @@
       "type": "integer"
     },
     {
-      "cli": "--rocksdb-flush-memtable-on-analyze={0|1}",
-      "default": "ON",
-      "dynamic": true,
-      "id": "rocksdb_flush_memtable_on_analyze",
-      "name": "rocksdb_flush_memtable_on_analyze",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "boolean"
-    },
-    {
       "cli": "--rocksdb-force-compute-memtable-stats={0|1}",
       "default": "ON",
       "dynamic": true,
@@ -859,6 +810,21 @@
         "global"
       ],
       "type": "boolean"
+    },
+    {
+      "cli": "--rocksdb-ignore-datadic-errors=#",
+      "default": "0",
+      "dynamic": false,
+      "id": "rocksdb_ignore_datadic_errors",
+      "name": "rocksdb_ignore_datadic_errors",
+      "range": {
+        "from": 0,
+        "to": 1
+      },
+      "scope": [
+        "global"
+      ],
+      "type": "integer"
     },
     {
       "cli": "--rocksdb-ignore-unknown-options={0|1}",
@@ -1065,36 +1031,6 @@
       "type": "boolean"
     },
     {
-      "cli": "--rocksdb-max-background-compactions=#",
-      "default": "1",
-      "dynamic": true,
-      "id": "rocksdb_max_background_compactions",
-      "name": "rocksdb_max_background_compactions",
-      "range": {
-        "from": 1,
-        "to": 64
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
-      "cli": "--rocksdb-max-background-flushes=#",
-      "default": "1",
-      "dynamic": false,
-      "id": "rocksdb_max_background_flushes",
-      "name": "rocksdb_max_background_flushes",
-      "range": {
-        "from": 1,
-        "to": 64
-      },
-      "scope": [
-        "global"
-      ],
-      "type": "integer"
-    },
-    {
       "cli": "--rocksdb-max-background-jobs=#",
       "default": "2",
       "dynamic": true,
@@ -1191,7 +1127,8 @@
       "id": "rocksdb_max_row_locks",
       "name": "rocksdb_max_row_locks",
       "range": {
-        "from": 1
+        "from": 1,
+        "to": 1073741824
       },
       "scope": [
         "global",
@@ -1410,18 +1347,6 @@
         "global"
       ],
       "type": "integer"
-    },
-    {
-      "cli": "--rocksdb-read-free-rpl-tables=value",
-      "default": "(Empty)",
-      "dynamic": true,
-      "id": "rocksdb_read_free_rpl_tables",
-      "name": "rocksdb_read_free_rpl_tables",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "string"
     },
     {
       "cli": "--rocksdb-records-in-range=#",
@@ -1781,17 +1706,6 @@
       "dynamic": false,
       "id": "rocksdb_use_direct_reads",
       "name": "rocksdb_use_direct_reads",
-      "scope": [
-        "global"
-      ],
-      "type": "boolean"
-    },
-    {
-      "cli": "--rocksdb-use-direct-reads={0|1}",
-      "default": "OFF",
-      "dynamic": false,
-      "id": "rocksdb_use_direct_writes",
-      "name": "rocksdb_use_direct_writes",
       "scope": [
         "global"
       ],

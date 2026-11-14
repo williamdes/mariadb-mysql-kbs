@@ -139,24 +139,6 @@
       "type": "integer"
     },
     {
-      "id": "com_show_master_status",
-      "name": "Com_show_master_status",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "com_show_new_master",
-      "name": "Com_show_new_master",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
       "id": "com_show_slave_hosts",
       "name": "Com_show_slave_hosts",
       "scope": [
@@ -168,24 +150,6 @@
     {
       "id": "com_show_slave_status",
       "name": "Com_show_slave_status",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "com_slave_start",
-      "name": "Com_slave_start",
-      "scope": [
-        "global",
-        "session"
-      ],
-      "type": "integer"
-    },
-    {
-      "id": "com_slave_stop",
-      "name": "Com_slave_stop",
       "scope": [
         "global",
         "session"
